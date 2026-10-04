@@ -4,7 +4,7 @@ Everything the README says about the pool can be recomputed from public code and
 
 ## The live pool
 
-Base Sepolia test network (chain id 84532), contract commit `489f01a` of [microcredit-contract](https://github.com/scottonchain/microcredit-contract).
+Base Sepolia test network (chain id 84532), contract commit `19b166e` of [microcredit-contract](https://github.com/scottonchain/microcredit-contract).
 
 | Contract | Address |
 | --- | --- |
