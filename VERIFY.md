@@ -1,0 +1,49 @@
+# Verify the claims yourself
+
+Everything the README says about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04.
+
+## The live pool
+
+Base Sepolia test network (chain id 84532), contract commit `489f01a` of [microcredit-contract](https://github.com/scottonchain/microcredit-contract).
+
+| Contract | Address |
+| --- | --- |
+| Pool | `0xa49B9352B2e8C2B79b58cb4C60dB43342e08Afa8` |
+| Read-only views (lens) | `0x090543B6C41a6029660D464c584c0310A74A525d` |
+| Credit issuer (score provider) | `0x392503b73E9d628a6bb33EDC9e22De6ac2C1A017` |
+| Test USDC (anyone can mint) | `0x7C46870111257d8A3aaF846BC6D2F7DA7FBb76f1` |
+
+Every transaction behind the README's figures is listed, with its hash, in [docs/TESTNET.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/TESTNET.md).
+
+## Claim by claim
+
+| README says | What it rests on | Check it |
+| --- | --- | --- |
+| Credit cannot be created from nothing | Theorem 1 in [CREDIT_MODEL.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_MODEL.md): the sum of all borrow limits never exceeds issued lines plus committed stake | `python3 metrics/pool_health.py` in the testbed reads the live pool and reports the sum of limits against granted credit plus committed stake (last run: 142 = 117 + 25, slack 0) |
+| Backing moves credit and never copies it | `back()` lowers the backer's limit by exactly what the borrower's rises ([SybilResistance.t.sol](https://github.com/scottonchain/microcredit-contract/blob/main/packages/foundry/test/SybilResistance.t.sol)) | On the live pool, Avery (92 USDC line) backed Brighton (25) with 50: their limits read 42 and 75 |
+| Ten fresh accounts were refused every loan | A fresh account holds no credit: `requestLoan` reverts with `NoCredit`, `back` with `InsufficientCredit` | `./quickstart.sh try-borrow 5` from any new key prints `reverts with NoCredit` |
+| A ring around one 25 USDC stake could borrow exactly 25 | Rex staked 25 and backed five members with 5 each; the five loans total 25 and a sixth reverts with `BorrowLimitExceeded` | `pool_health.py` shows 25 lent and 25 committed stake; the loans and backings are in TESTNET.md |
+| Anyone can recompute | All of the above are view calls; the fuzzing suite (13 invariants, 332,800 calls, Sybil actors) is in [test/invariant](https://github.com/scottonchain/microcredit-contract/tree/main/packages/foundry/test/invariant) | `forge test` in the contract repo |
+
+## Where the design falls short
+
+The honest list is [CREDIT_INTEGRITY_ISSUES.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md). The open items that matter most for the README's story:
+
+- **Cold start.** A stranger with no history gets nothing until an issuer grants a line, someone backs them, or they stake. That is the price of the invariant, and the next problem to solve.
+- **The issuer is the trust root.** Only the issuer (an oracle) and the owner create unsecured credit. The issuer's total is budgeted, but it does not yet put capital behind its lines (CI-17).
+- **One price for every loan.** Stake-secured loans pay the same premium as unsecured ones (CI-18).
+- **One hop.** Received backing cannot be passed on. That halves liquidity on simulated networks but keeps every loss on an account that chose the borrower (CI-20).
+
+## For a lender: what is bounded, and what is not
+
+A lender's loss is bounded by Theorem 2: realised plus potential loss never exceeds the credit lines issued plus the dues borrowers paid. Defaults are charged first to the backers' stake, then to their credit, then to a first-loss reserve, and only then to lenders. What is not bounded is the issuer's judgement: if it grants lines to bad borrowers, lenders bear what the reserve does not. That is why the issuer's budget and policy, not the pool's code, decide whether a stranger's loan is worth funding.
+
+## Two commands
+
+```bash
+git clone https://github.com/scottonchain/microcredit-agent-testbed && cd microcredit-agent-testbed
+python3 metrics/pool_health.py          # credit-integrity check and pool state, read from chain
+PRIVATE_KEY=0x<any throwaway key> ./quickstart.sh try-borrow 5   # a fresh account: reverts with NoCredit
+```
+
+Both need Foundry's `cast` (https://book.getfoundry.sh).

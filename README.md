@@ -12,5 +12,6 @@ The urgency is simple: a person without credit loses time that cannot be returne
 
 - Try it and attack it: https://github.com/scottonchain/microcredit-agent-testbed
 - Read the contract and its proofs: https://github.com/scottonchain/microcredit-contract
+- Verify the figures above yourself: [VERIFY.md](VERIFY.md)
 - Source for the figures above: https://www.worldbank.org/en/publication/globalfindex
 - Comment, challenge or ask: https://github.com/scottonchain/microcredit-vision/discussions/2
