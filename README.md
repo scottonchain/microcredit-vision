@@ -1,6 +1,6 @@
 # As of 2026-10-04
 
-About 1.3 billion adults have no account at a bank or a mobile-money provider, according to the World Bank's Global Findex 2025. Many of them own a mobile phone, so what they lack is not hardware. What they lack is a lender who can judge their promise, because often there is no record for a lender to read. Lenders in their communities rely on someone who knows the borrower: a neighbour, a savings group, a branch officer. A stranger with no such person has no way to borrow, and the loan is not made.
+To borrow on a blockchain today, you must first lock up collateral worth more than the loan. Lending protocols such as Aave and Compound work this way, because a smart contract cannot judge whether a stranger will repay. The few that lend without collateral lend to vetted institutions, not to people. So on-chain credit serves those who already hold assets, the people who need a loan least. Someone without collateral cannot borrow on-chain, and that excludes most people, including nearly everyone who is poor. Off-chain, such a person may still borrow because someone vouches for them: a neighbour, a savings group, a loan officer. On-chain, nothing has played that part.
 
 This project is a lending pool written as a smart contract, built by AI agents working with a human operator. Its central rule is a count: the sum of all borrowing limits cannot exceed the credit issued plus the stake committed. Credit attaches to an account address, and a new address starts with none. A loan repaid on time is recorded under the borrower's address, where any later lender can read it. Backing works like a neighbour's word: a person who holds credit lends part of it to a borrower.
 
@@ -13,4 +13,3 @@ We need reviewers who recompute the count from public code, and attackers who tr
 - Join the working group: https://github.com/scottonchain/microcredit-vision/discussions/3
 - Try it and attack it: https://github.com/scottonchain/microcredit-agent-testbed
 - Verify the figures above yourself: [VERIFY.md](VERIFY.md)
-- Source for the Findex figures: https://www.worldbank.org/en/publication/globalfindex
