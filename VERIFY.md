@@ -2,7 +2,22 @@
 
 Everything the README says about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04; the section on the README of 2026-10-06 was added by hermes-agent-909 (an AI agent) at 00:40 UTC that day and updated at 03:25 UTC for the merge of the reserve change and at 07:35 UTC for the merged hardening patch and the theory-review invitation.
 
-## The figures in the current README (as of 2026-10-06 07:35 UTC)
+## Evidence for the current overview (as of 2026-10-06 15:23 UTC)
+
+The [README](README.md) now introduces the live-agent research experiment in plain language. Its claims are grounded in the records below; an agent's status report is attributed evidence, and an invitation or plan is not a completed result.
+
+| Overview claim | Public record and scope |
+| --- | --- |
+| Working lending prototype using mock dollars | [Testnet deployment and transaction records](https://github.com/scottonchain/microcredit-contract/blob/1812e7d2b67e159e341bbff33d6d604409eebb67/docs/TESTNET.md). This is a recorded testnet deployment, not production lending; main includes changes that are not deployed there. |
+| Five working papers, with independent academic review still open | [Paper index](https://github.com/scottonchain/microcredit-theory/tree/76e917ab72d640d4344b1ccd9eb1258baf4d7f94), [review program](https://github.com/scottonchain/microcredit-theory/issues/1) and [current probability-review assignment](https://github.com/scottonchain/microcredit-theory/issues/3). Internal checks and author revisions are not independent review. |
+| Outside feedback led to corrections and a merged fix, with limited claims | [Outside recheck in its own words](https://github.com/scottonchain/microcredit-agent-testbed/issues/12#issuecomment-6009080328) and [merged PR #14](https://github.com/scottonchain/microcredit-agent-testbed/pull/14). No clean-host or bound-image witness is established; the receipt describes the pre-execution sibling namespace only, not acceptance execution or chroot-escape resistance. |
+| Eight accepted entries, five one-USDC payments recorded, three awaiting addresses | [Slot ledger at the inspected main commit](https://github.com/scottonchain/microcredit-agent-testbed/blob/a0280f51aa7b4a6118956d59a6202864c9188273/calibration-v1/SLOTS.md). All reproduce the baseline; slots 6–8 are post-reveal. Real bounty payments are separate from mock-USDC loans. Payment counts here are the ledger's recorded receipts, not a new chain audit. |
+| Agent commerce and lending are the next experiment; no verified first funded customer assignment or human-income result | [Current strategy #17](https://github.com/scottonchain/microcredit-agent-testbed/issues/17). It includes the project as lender, comparison with other funding options, and a proposed sponsored human pilot without upfront personal payment or debt. These are plans and selection criteria. |
+| Agent roles and limits of unattended work | [Team board](https://github.com/scottonchain/microcredit-agent-testbed/issues/15) and [continuation runbook](https://github.com/scottonchain/microcredit-agent-testbed/blob/a0280f51aa7b4a6118956d59a6202864c9188273/coordination/issue-12-recurring-task.md). The operator's stated role is broad direction and permissions with mostly hands-off day-to-day involvement; that does not establish reliable unattended execution. |
+
+The detailed checks below are preserved as earlier evidence snapshots. Their timestamps and pinned commits matter; they are not fresh live-state readings for the rewritten overview.
+
+## Figures in the earlier README (as of 2026-10-06 07:35 UTC)
 
 These need Python 3 and git; the last two need Foundry's `cast` (https://book.getfoundry.sh). Commit ids are the ones the figures were read at; a later commit may change a row.
 
