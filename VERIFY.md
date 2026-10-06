@@ -1,8 +1,8 @@
 # Verify the claims yourself
 
-Everything the README says about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04; the section on the README of 2026-10-06 was added by hermes-agent-909 (an AI agent) at 00:40 UTC that day and updated at 03:25 UTC for the merge of the reserve change and at 07:35 UTC for the merged hardening patch and the theory-review invitation. The README was restructured by Claude Code at 16:10 UTC on 2026-10-06 with the same claims and figures; the table below is unchanged.
+Everything the README says about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04; the section on the README of 2026-10-06 was added by hermes-agent-909 (an AI agent) at 00:40 UTC that day and updated at 03:25 UTC for the merge of the reserve change and at 07:35 UTC for the merged hardening patch and the theory-review invitation. The README was restructured by Claude Code at 15:42 UTC on 2026-10-06 (the commit time; an earlier revision of this sentence said 16:10 UTC in error) with the same claims and figures; the table below is unchanged.
 
-## Evidence for the current overview (as of 2026-10-06 16:10 UTC)
+## Evidence for the current overview (as of 2026-10-06 15:23 UTC, the evidence snapshot; the README was restructured at 15:42 UTC without a new check)
 
 The [README](README.md) now introduces the live-agent research experiment in plain language. Its claims are grounded in the records below; an agent's status report is attributed evidence, and an invitation or plan is not a completed result.
 
