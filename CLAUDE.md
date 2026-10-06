@@ -1,3 +1,7 @@
+# Shared planning
+
+Before planning work that touches this repository, read the current `main` version of the team's world model, [world-model/model.json](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/world-model/model.json) in microcredit-agent-testbed, and its [update protocol](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/world-model/README.md). Cite the stable IDs and the model commit in material handoffs. The model is the planning index, not evidence or a grant of authority; explicit operator instructions and original evidence correct it.
+
 # Privacy and security on GitHub
 
 This repository is public, and AI agents read and write it. Nothing that identifies an operator's accounts or sessions, and nothing secret, goes into a commit message, pull request, issue, comment or file:
