@@ -18,9 +18,16 @@ UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, 
 
 
 def get(url):
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read()
+    """Fetch with a browser-like header; on refusal try a text-rendering reader as a fallback."""
+    try:
+        req = urllib.request.Request(url, headers={**UA, "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.9"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return r.read()
+    except Exception as e:  # noqa: BLE001
+        sys.stderr.write(f"direct fetch failed for {url}: {e}\n")
+        req = urllib.request.Request("https://r.jina.ai/" + url, headers=UA)
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return r.read()
 
 
 def strip(htm):
@@ -52,10 +59,16 @@ def main():
             notes.append(f"- {pub} | {title} | {link} | audio: {audio}\n  {desc}")
             if chosen is None and (not pick or pick.lower() in title.lower()):
                 chosen = (title, link, audio)
+        if chosen:
+            open("out/chosen.json", "w").write(json.dumps({"title": chosen[0], "link": chosen[1], "audio": chosen[2]}))
         if chosen and chosen[1]:
             page_url = chosen[1]
             notes.append(f"fetching chosen item page: {page_url}")
-            raw = get(page_url)
+            try:
+                raw = get(page_url)
+            except Exception as e:  # noqa: BLE001
+                notes.append(f"page fetch failed: {e}")
+                raw = b""
     open("out/source.html", "wb").write(raw)
     text = strip(raw.decode("utf-8", "replace"))
     # transcript-like blobs embedded as JSON

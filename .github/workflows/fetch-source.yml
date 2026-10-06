@@ -10,6 +10,10 @@ on:
         description: For an RSS feed, a word from the title of the item to open (newest matching); empty means newest
         required: false
         default: ""
+      transcribe:
+        description: For an RSS item with audio, download it and transcribe with a local speech model
+        required: false
+        default: "false"
 
 permissions:
   contents: read
@@ -17,10 +21,36 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - run: python3 tools/fetch_source.py "${{ inputs.url }}" "${{ inputs.pick }}"
+      - if: inputs.transcribe == 'true'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          python3 -m pip install -q faster-whisper
+          python3 - <<'PY'
+          import json, os, subprocess, urllib.request
+          c = json.load(open("out/chosen.json"))
+          audio = c.get("audio")
+          if not audio:
+              print("no audio enclosure"); raise SystemExit(0)
+          req = urllib.request.Request(audio, headers={"User-Agent": "Mozilla/5.0"})
+          with urllib.request.urlopen(req, timeout=300) as r, open("out/audio.bin", "wb") as f:
+              f.write(r.read())
+          subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "out/audio.bin", "-ac", "1", "-ar", "16000", "out/audio.wav"], check=True)
+          from faster_whisper import WhisperModel
+          model = WhisperModel("small.en", device="cpu", compute_type="int8")
+          segments, info = model.transcribe("out/audio.wav", beam_size=1, vad_filter=True)
+          with open("out/transcript.txt", "w") as f:
+              f.write(f"# {c['title']}\n# {c['link']}\n# duration {info.duration:.0f}s, model small.en\n\n")
+              for s in segments:
+                  f.write(f"[{s.start:7.1f}] {s.text.strip()}\n")
+          os.remove("out/audio.bin"); os.remove("out/audio.wav")
+          print("transcribed", info.duration)
+          PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: source
           path: out/
