@@ -58,7 +58,8 @@ def parse(path):
 
 
 def byline(p, link_self=False):
-    parts = [p["date"], f"by {p['author']}", f"{p['minutes']} min read"]
+    who = f"by {p['author']}" if p["author"].startswith("Claude Code") or p["author"].startswith("Hermes") else f"guest post by {p['author']}"
+    parts = [p["date"], who, f"{p['minutes']} min read"]
     if p.get("revised"):
         parts.append(f"revised {p['revised']}")
     s = " · ".join(parts)
