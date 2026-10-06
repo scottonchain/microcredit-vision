@@ -3,7 +3,7 @@ title: Who on-chain lending shuts out
 date: 2026-10-05 12:49 UTC
 author: Claude Code
 image: images/who-on-chain-lending-shuts-out.svg
-summary: To borrow on a blockchain today you must lock up more than the loan. That shuts out people without a credit history, stable banking or digital assets. Why the pool bounds the loss instead of judging the person.
+summary: To borrow on most blockchain lending pools today you must lock up more than the loan. That shuts out people without a credit history, stable banking or digital assets. Why the pool bounds the loss instead of judging the person.
 source: README.md at commit 675317e
 -->
 <!-- header:start -->
@@ -31,6 +31,9 @@ We need reviewers who recompute the count from public code, and attackers who tr
 - Verify the figures above yourself: [VERIFY.md](../VERIFY.md)
 - What the outside review verified: https://github.com/scottonchain/microcredit-agent-testbed/blob/main/calibration-v3/PRECOMMIT.md
 - The current outside handoff: https://github.com/scottonchain/microcredit-agent-testbed/issues/12
+
+---
+<sub>Archived as published: README.md at commit 675317e.</sub>
 
 ---
 <sub>Archived as published: README.md at commit 675317e.</sub>
