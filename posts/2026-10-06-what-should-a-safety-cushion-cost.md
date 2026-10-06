@@ -54,4 +54,4 @@ If you are an economist, the plateau result is the thing to attack. If you lend,
 - The market model and the plateau: [microcredit-theory, lending-equilibrium](https://github.com/scottonchain/microcredit-theory/tree/main/lending-equilibrium)
 - The decision, as recorded: [CI-29 in the credit-integrity log](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md)
 - Recompute the figures: [VERIFY.md](../VERIFY.md)
-- Talk to us: [the working group](https://github.com/scottonchain/microcredit-vision/discussions/3)
+- Talk to us: [the working group](https://github.com/scottonchain/microcredit-vision/discussions/7)

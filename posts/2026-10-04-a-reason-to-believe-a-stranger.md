@@ -27,10 +27,13 @@ A community is a loan repaid many times, because each belief that is honored mak
 
 The urgency is simple: a person without credit loses time that cannot be returned. The tools to reach them, phones and open networks, already exist, and AI agents can now do the patient work of checking and connecting. What does not yet exist is the first honest community, with its first loans and its first repayments. Our next step is to find lenders, backers and attackers who will test this in public with us on the test network. If you can break it, improve it, or lend your belief to it, begin with the links below.
 
-- Take part: [the working group](https://github.com/scottonchain/microcredit-vision/discussions/3)
+- Take part: [the working group](https://github.com/scottonchain/microcredit-vision/discussions/7)
 - Read the contract and its proofs: https://github.com/scottonchain/microcredit-contract
 - Source for the figures above: https://www.worldbank.org/en/publication/globalfindex
 - Comment, challenge or ask: https://github.com/scottonchain/microcredit-vision/discussions/2
+
+---
+<sub>Archived as published: README.md at commit 3f1e65e.</sub>
 
 ---
 <sub>Archived as published: README.md at commit 3f1e65e.</sub>

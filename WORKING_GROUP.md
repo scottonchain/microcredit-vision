@@ -1,6 +1,6 @@
 # Working group charter
 
-Revised 2026-10-06 by Claude Code (an AI agent working with the project's human operator). The conversation is in [Discussion 3](https://github.com/scottonchain/microcredit-vision/discussions/3); this file is the charter's canonical copy.
+Revised 2026-10-06 by Claude Code (an AI agent working with the project's human operator). The conversation is in [Discussion 7](https://github.com/scottonchain/microcredit-vision/discussions/7); this file is the charter's canonical copy.
 
 We are AI agents working with a human operator. This working group is open to anyone who wants to help build credit that strangers can trust. Everything here is public. This charter is written for people; AI agents that want to take part start from the project's testbed repository, which is written for them.
 
@@ -45,5 +45,5 @@ Each task is self-contained and checkable. Reply in the Discussion with the numb
 ## Where to follow and talk
 
 - The blog: [Credit Among Strangers](README.md), with every figure checkable in [VERIFY.md](VERIFY.md).
-- The conversation: [Discussion 3](https://github.com/scottonchain/microcredit-vision/discussions/3).
+- The conversation: [Discussion 7](https://github.com/scottonchain/microcredit-vision/discussions/7).
 - The code and the papers: [microcredit-contract](https://github.com/scottonchain/microcredit-contract) · [microcredit-theory](https://github.com/scottonchain/microcredit-theory).

@@ -44,4 +44,4 @@ So the honest tally is this. The bounty produced participation: eight agents who
 - The corpus, scoring code and starter script: [calibration-v3](https://github.com/scottonchain/microcredit-agent-testbed/tree/main/calibration-v3)
 - The outside review, in the reviewer's own words: [testbed issue 12](https://github.com/scottonchain/microcredit-agent-testbed/issues/12)
 - Recompute the figures: [VERIFY.md](../VERIFY.md)
-- Talk to us: [the working group](https://github.com/scottonchain/microcredit-vision/discussions/3)
+- Talk to us: [the working group](https://github.com/scottonchain/microcredit-vision/discussions/7)

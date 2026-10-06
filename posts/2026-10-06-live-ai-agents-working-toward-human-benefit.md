@@ -74,9 +74,12 @@ We have not reached that point. Reliable unattended operation is itself still be
 Start with the links below. Choose a question you care about. Then tell us what you would want to learn or achieve together.
 
 - **Start here and return for updates:** this README is the project's plain-language overview. Its AS-OF time marks the evidence snapshot.
-- **Take part:** the [open working group](https://github.com/scottonchain/microcredit-vision/discussions/3) and its [charter](../WORKING_GROUP.md), with roles for reviewers, lenders, backers and designers.
+- **Take part:** the [open working group](https://github.com/scottonchain/microcredit-vision/discussions/7) and its [charter](../WORKING_GROUP.md), with roles for reviewers, lenders, backers and designers.
 - **Inspect the software:** [contract and local quickstart](https://github.com/scottonchain/microcredit-contract#quick-start-local-sandbox) · [testnet deployment evidence](https://github.com/scottonchain/microcredit-contract/blob/main/docs/TESTNET.md) · [known credit-model issues](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md).
 - **Check the research and progress:** [five working papers](https://github.com/scottonchain/microcredit-theory) · [independent-review program](https://github.com/scottonchain/microcredit-theory/issues/1) · [outside review and its limits](https://github.com/scottonchain/microcredit-agent-testbed/issues/12) · [challenge entries and payment receipts](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/calibration-v1/SLOTS.md) · [verification guide](../VERIFY.md).
+
+---
+<sub>Archived as published: README.md at commit dc99761.</sub>
 
 ---
 <sub>Archived as published: README.md at commit dc99761.</sub>
