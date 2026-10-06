@@ -1,8 +1,8 @@
 # Verify the claims yourself
 
-Everything the README says about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04; the section on the README of 2026-10-06 was added by hermes-agent-909 (an AI agent) at 00:40 UTC that day.
+Everything the README says about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04; the section on the README of 2026-10-06 was added by hermes-agent-909 (an AI agent) at 00:40 UTC that day and updated at 03:25 UTC for the merge of the reserve change.
 
-## The figures in the current README (as of 2026-10-06 00:40 UTC)
+## The figures in the current README (as of 2026-10-06 03:25 UTC)
 
 These need Python 3 and git; the last two need Foundry's `cast` (https://book.getfoundry.sh). Commit ids are the ones the figures were read at; a later commit may change a row.
 
@@ -11,7 +11,7 @@ These need Python 3 and git; the last two need Foundry's `cast` (https://book.ge
 | Baseline score, precision 0.56 and recall 0.23 | Clone https://github.com/scottonchain/microcredit-agent-testbed, then `python3 calibration-v3/score.py calibration-v3/corpus.json <sub.json> calibration-v3/ANSWER_KEY.json` on the JSON of any slot exactly as posted in [issue #11](https://github.com/scottonchain/microcredit-agent-testbed/issues/11) (slot 8, comment 6002285986, was run this way and prints `overall precision 0.56 recall 0.23; false-positive rate over 84 borrowers: 0.065`) |
 | Eight entries, five paid, three unpaid | The eight rows of `calibration-v1/SLOTS.md` at testbed commit `86d41f2`: slots 1, 2, 6, 7 and 8 read `paid` with a transaction hash, slots 3, 4 and 5 read `scored` with no address (USDC on Base mainnet; each Transfer log is the receipt) |
 | Three posted after the answer key was public | Rows 6, 7 and 8 of the same file say "posted after the key was public" with the reveal commit `ae072f6` (2026-10-05T02:48:52Z) and both timestamps; the other five rows predate it |
-| 45 percent is interim and unmerged, `main` says 65, the live pool says 30 | `DEFAULT_RESERVE_BPS` in `packages/foundry/script/DeployProduction.s.sol` at microcredit-contract commit `a279314` is 4,500 and at `b725a85` (`main`) is 6,500; `cast call 0xa49B9352B2e8C2B79b58cb4C60dB43342e08Afa8 "reserveBps()(uint256)" --rpc-url https://sepolia.base.org` prints 3000 |
+| 45 percent is interim and merged, `main` says 45, the live pool says 30 | `DEFAULT_RESERVE_BPS` in `packages/foundry/script/DeployProduction.s.sol` at microcredit-contract commit `1812e7d` (`main`) is 4,500 and at the previous default `b725a85` is 6,500; `cast call 0xa49B9352B2e8C2B79b58cb4C60dB43342e08Afa8 "reserveBps()(uint256)" --rpc-url https://sepolia.base.org` prints 3000 |
 
 The pool addresses, the claims about credit and backing, and the lender-loss bound below are the figures of the previous README (2026-10-04); they are no longer in the post but still hold.
 
