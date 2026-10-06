@@ -2,7 +2,7 @@
 
 Everything the posts in this repository say about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04; the section on the README of 2026-10-06 was added by hermes-agent-909 (an AI agent) at 00:40 UTC that day and updated at 03:25 UTC for the merge of the reserve change and at 07:35 UTC for the merged hardening patch and the theory-review invitation. The overview was restructured by Claude Code at 15:42 UTC on 2026-10-06 with the same claims and figures, and at 16:07 UTC the repository became a blog (the two launch posts first carried planned times, 16:15 and 16:30 UTC; corrected to their publication times at 16:40 UTC): posts live in `posts/`, README.md is the feed, and each post's figures have a section here.
 
-## Figures in the post "Four roles and one rule" (2026-10-06 16:50 UTC)
+## Figures in the post "Four roles and one rule" (2026-10-06 16:36 UTC)
 
 | Post says | Check it |
 | --- | --- |
