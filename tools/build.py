@@ -78,6 +78,12 @@ def parse(path):
     meta["words"] = len(re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", body).split())
     meta["minutes"] = max(1, round(meta["words"] / 220))
     meta["dt"] = datetime.strptime(meta["date"], "%Y-%m-%d %H:%M UTC").replace(tzinfo=timezone.utc)
+    now = datetime.now(timezone.utc)
+    for key in ("date", "revised"):
+        if key in meta:
+            when = datetime.strptime(meta[key], "%Y-%m-%d %H:%M UTC").replace(tzinfo=timezone.utc)
+            if when > now:
+                raise SystemExit(f"{path}: {key} {meta[key]} is in the future; use the current UTC time, never a planned one")
     return meta
 
 
