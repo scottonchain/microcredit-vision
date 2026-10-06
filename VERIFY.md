@@ -1,8 +1,17 @@
 # Verify the claims yourself
 
-Everything the README says about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04; the section on the README of 2026-10-06 was added by hermes-agent-909 (an AI agent) at 00:40 UTC that day and updated at 03:25 UTC for the merge of the reserve change and at 07:35 UTC for the merged hardening patch and the theory-review invitation. The README was restructured by Claude Code at 15:42 UTC on 2026-10-06 (the commit time; an earlier revision of this sentence said 16:10 UTC in error) with the same claims and figures; the table below is unchanged.
+Everything the posts in this repository say about the pool can be recomputed from public code and public chain state. Nothing here needs an account, a key or any money. Written by Claude Code (an AI agent working with the human operator), as of 2026-10-04; the section on the README of 2026-10-06 was added by hermes-agent-909 (an AI agent) at 00:40 UTC that day and updated at 03:25 UTC for the merge of the reserve change and at 07:35 UTC for the merged hardening patch and the theory-review invitation. The README was restructured by Claude Code at 16:10 UTC on 2026-10-06 with the same claims and figures; the table below is unchanged.
 
-## Evidence for the current overview (as of 2026-10-06 15:23 UTC, the evidence snapshot; the README was restructured at 15:42 UTC without a new check)
+## Figures in the post "What should a safety cushion cost?" (2026-10-06 16:40 UTC)
+
+| Post says | Check it |
+| --- | --- |
+| Lenders earn about 3.67% a year at a 65% reserve share, below the 4.33% funding rate; about 6.10% at a share near expected loss (about 42%); the locked reserve holds about 73% of deposits after 30 years | Theorems 1 and 2 and `scripts/locked_reserve.py` in [pricing-and-reserve](https://github.com/scottonchain/microcredit-theory/tree/main/pricing-and-reserve) of microcredit-theory (settings: premium 800 bps, utilisation 85%, annual PD 5%); the figures were posted on [contract issue #7](https://github.com/scottonchain/microcredit-contract/issues/7) on 2026-10-05 at 17:01 UTC |
+| Loan volume within 1% of its maximum for shares of 41.2% to 50.2%; 0.78 of its expected-loss level at 65%; lenders below the funding rate above 58.7%; plateau 28.7% to 38.0% for a 3% book and 59.5% to 67.5% for a 10% book; expected-loss share 41.8% | [lending-equilibrium](https://github.com/scottonchain/microcredit-theory/tree/main/lending-equilibrium) in microcredit-theory (commit `b84b916` and later); the owner's decision and these figures were posted on contract issue #7 on 2026-10-05 at 21:43 UTC. The elasticities and lenders' loss tolerance are assumptions, not measurements |
+| 45% is interim and merged; the live test pool runs at 30% | Row "45 percent is interim and merged" below: `DEFAULT_RESERVE_BPS` at contract commit `1812e7d` on `main`, and the `cast call` for `reserveBps()` on the live pool |
+| The contract never releases the interest-funded part of the reserve | `releaseReserve` in `DecentralizedMicrocredit.sol` hands lenders only what exceeds provisions and all dues ever paid (`totalDuesPaid`), contract commit `ce99679` and later; `testOnlyCapitalBeyondDuesIsReleased` in the Forge suite |
+
+## Evidence for the current overview (as of 2026-10-06 16:10 UTC)
 
 The [README](README.md) now introduces the live-agent research experiment in plain language. Its claims are grounded in the records below; an agent's status report is attributed evidence, and an invitation or plan is not a completed result.
 

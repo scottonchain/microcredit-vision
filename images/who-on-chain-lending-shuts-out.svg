@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A gate with collateral inside and many people outside">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
+<rect x="700" y="150" width="400" height="340" fill="#F2D9A6" opacity="0.5" rx="8"/>
+<line x1="700" y1="150" x2="700" y2="490" stroke="#1B2733" stroke-width="4" stroke-linecap="round" opacity="1.0"/>
+<line x1="700" y1="180" x2="740" y2="180" stroke="#1B2733" stroke-width="2.5" stroke-linecap="round" opacity="1.0"/>
+<line x1="700" y1="230" x2="740" y2="230" stroke="#1B2733" stroke-width="2.5" stroke-linecap="round" opacity="1.0"/>
+<line x1="700" y1="280" x2="740" y2="280" stroke="#1B2733" stroke-width="2.5" stroke-linecap="round" opacity="1.0"/>
+<line x1="700" y1="330" x2="740" y2="330" stroke="#1B2733" stroke-width="2.5" stroke-linecap="round" opacity="1.0"/>
+<line x1="700" y1="380" x2="740" y2="380" stroke="#1B2733" stroke-width="2.5" stroke-linecap="round" opacity="1.0"/>
+<line x1="700" y1="430" x2="740" y2="430" stroke="#1B2733" stroke-width="2.5" stroke-linecap="round" opacity="1.0"/>
+<rect x="800" y="430" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="860" y="430" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="920" y="430" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="980" y="430" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="830" y="386" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="890" y="386" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="950" y="386" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="860" y="342" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<rect x="920" y="342" width="52" height="38" rx="4" fill="#D9962B" stroke="#1B2733" stroke-width="1.5"/>
+<circle cx="880" cy="230" r="26" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<circle cx="238.9823135459457" cy="352.3841830828665" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="304.9775832740396" cy="369.0976108069344" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="432.860152054027" cy="218.34808058714768" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="126.58399577743707" cy="434.4913429870088" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="249.6770071640038" cy="265.612669093075" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="617.8224177552314" cy="331.67378210628544" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="538.2307256371944" cy="333.37889843581377" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="439.53407027208095" cy="242.1725987265867" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="437.43032914259425" cy="443.0526860001231" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="381.5906051916507" cy="407.5505197364173" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="455.7057376847963" cy="217.92880270355926" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="499.11512314340865" cy="365.5078832207689" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="270.6338297578562" cy="208.68329041153" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="552.7636184894728" cy="332.3697448263307" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="479.41196203290156" cy="446.06758407153484" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="477.0647418056013" cy="457.9076269234849" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="317.48170200037197" cy="424.2544558758639" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="342.31052802538034" cy="461.9642820772659" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="559.4333301690208" cy="227.2872067246456" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="187.98443010033446" cy="260.75634354527847" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="602.7400694491015" cy="322.1253226556802" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="433.32414543340195" cy="284.2873355591415" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="373.62149191452977" cy="308.0425524765727" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="295.45524438509005" cy="363.8207500735018" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="412.1258964850995" cy="453.17649583737705" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<circle cx="460.9910683174833" cy="460.1047683360048" r="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.2"/>
+<text x="360" y="560" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">no collateral, no loan</text>
+<text x="900" y="560" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">collateral worth more than the loan</text>
+<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>
