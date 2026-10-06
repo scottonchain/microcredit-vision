@@ -264,6 +264,22 @@ def receipt():
     return s
 
 
+def ledger():
+    """A ledger page with one row marked, and a pen laid across it: reading the code against the paper."""
+    s = ""
+    s += f'<rect x="300" y="130" width="600" height="380" rx="10" fill="#FFFDF8" stroke="{INK}" stroke-width="3"/>\n'
+    for i in range(7):
+        y = 180 + i * 46
+        s += link(340, y, 860, y, LINE, 1.5)
+        s += f'<rect x="350" y="{y-22}" width="{260 if i % 2 else 320}" height="14" rx="7" fill="{LINE}"/>\n'
+        s += f'<rect x="760" y="{y-22}" width="80" height="14" rx="7" fill="{LINE}"/>\n'
+    s += f'<rect x="340" y="{180+3*46-34}" width="520" height="40" rx="6" fill="{TEAL_SOFT}" opacity="0.6"/>\n'
+    s += f'<rect x="760" y="{180+3*46-22}" width="80" height="14" rx="7" fill="{TEAL}"/>\n'
+    s += f'<g transform="rotate(-18 600 470)"><rect x="470" y="462" width="260" height="16" rx="6" fill="{AMBER}" stroke="{INK}" stroke-width="2"/><path d="M 730 462 L 770 470 L 730 478 Z" fill="{INK}"/></g>\n'
+    s += text(600, 575, "reading the code against the paper", 26, INK)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -275,6 +291,7 @@ MOTIFS = {
     "eight-entries-one-method": (copies, "Eight identical bars, three of them hollow"),
     "four-roles-and-one-rule": (roles, "Four roles around one pool: lender, borrower, backer and issuer"),
     "a-promise-needs-a-receipt": (receipt, "An open book and a sealed envelope joined by a check mark"),
+    "reading-the-code-against-the-paper": (ledger, "A ledger page with one row marked and a pen across it"),
 }
 
 
