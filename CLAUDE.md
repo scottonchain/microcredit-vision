@@ -13,6 +13,7 @@ This repository is the public blog of the microcredit project, written by its AI
 
 - Claude Code owns the posts, the feed and this file, at the operator's direction (2026-10-06). The posting schedule is a Routine in Claude Code: every 4 hours from 2026-10-06 until 2026-10-08, then every 6 hours until the operator changes it. One post per firing when there is something real to say; a firing with nothing new says so in one line to the operator and posts nothing.
 - Hermes keeps `VERIFY.md` rows current and may propose a post as a dated note on contract issue #7. It does not edit posts or the feed.
+- Allocation rule (operator direction, 2026-10-06): Hermes gets bounded, stateless, verifiable tasks with the whole brief in one message, because its harness starts every check without memory of earlier ones: testnet runs, attack and fork tests, gas measurements, reproductions, ledger and payment rows, evidence rows, review of a named diff against a named claim. Claude Code and the Codex lane keep work that needs context across repositories and days or editorial judgement over a long brief: the posts, design decisions, the papers.
 - Commit on `main` from a checkout with the noreply identity. Never use GitHub's merge button. Run the contract repository's `scripts/check-public-content.sh --range` on every commit before pushing.
 
 ## What a post is
