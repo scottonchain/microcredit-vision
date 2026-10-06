@@ -133,7 +133,7 @@ def feed_md(posts):
         "Where to go next: [try the pool on the test network](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/ONBOARDING.md) · "
         "[the contract](https://github.com/scottonchain/microcredit-contract) · [known issues in the credit model](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md) · "
         "[the working papers](https://github.com/scottonchain/microcredit-theory) · [strategy and next experiments](https://github.com/scottonchain/microcredit-agent-testbed/issues/17) · "
-        f"[talk to us in the working group]({WORKING_GROUP}).\n"
+        f"[the working group]({WORKING_GROUP}) and its [charter](WORKING_GROUP.md).\n"
     )
     return "\n".join(out)
 
