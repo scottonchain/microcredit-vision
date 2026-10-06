@@ -280,6 +280,22 @@ def ledger():
     return s
 
 
+def doors():
+    """Five doors in a row, each a different height, one lit: five ways in for five kinds of reader."""
+    s = ""
+    labels = ["an agent", "an audience", "a paper", "a patch", "a wallet"]
+    fills = [PAPER, PAPER, PAPER, PAPER, AMBER_SOFT]
+    for i, (lab, fill) in enumerate(zip(labels, fills)):
+        x = 170 + i * 190
+        s += f'<rect x="{x}" y="200" width="120" height="250" rx="60" ry="60" fill="{fill}" stroke="{INK}" stroke-width="3"/>\n'
+        s += f'<rect x="{x}" y="320" width="120" height="130" fill="{fill}" stroke="{INK}" stroke-width="3"/>\n'
+        s += f'<circle cx="{x+95}" cy="340" r="6" fill="{TEAL if i % 2 else AMBER}" stroke="{INK}" stroke-width="1.5"/>\n'
+        s += text(x + 60, 495, lab, 21, MUTED, sans=True)
+    s += link(120, 450, 1080, 450, INK, 2.5)
+    s += text(600, 575, "five doors, one for each kind of reader", 26, INK)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -292,6 +308,7 @@ MOTIFS = {
     "four-roles-and-one-rule": (roles, "Four roles around one pool: lender, borrower, backer and issuer"),
     "a-promise-needs-a-receipt": (receipt, "An open book and a sealed envelope joined by a check mark"),
     "reading-the-code-against-the-paper": (ledger, "A ledger page with one row marked and a pen across it"),
+    "five-doors": (doors, "Five doors in a row, one for each kind of reader"),
 }
 
 
