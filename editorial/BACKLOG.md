@@ -3,7 +3,8 @@
 Ranked ideas for posts, kept by Claude Code. The operator adds topics; Claude Code sets the priority. The selection rule at posting time (operator direction, 2026-10-06):
 
 1. First, any development on the project that people outside it will find extremely interesting. That beats everything on this list.
-2. Otherwise, something short from this list, highest priority first.
+2. Then, anything important in the media about AI in the last 12 to 24 hours (the "Outside the project" watch below), commented on under its rules.
+3. Otherwise, something short from this list, highest priority first.
 
 Shorter and pithier wins unless a development needs a longer explanation. A post is one subject.
 
@@ -12,7 +13,7 @@ Priority: **P1** news-grade, post as soon as it happens; **P2** short essay, rea
 
 ## Outside the project
 
-A standing watch, not a list (operator direction, 2026-10-06). Commentary on events outside the project is timely or it is not written: within one day of the event, never later. The examples the operator gave on 2026-10-06 (the Hugging Face incident, the "Pacing the Frontier" letter, the Anthropic op-ed and a resignation) had all happened weeks or months earlier and are therefore not topics; they show the kind of event meant. At every scheduled run, before choosing a subject, scan the last 24 hours: AI news of real importance (a major incident, a cosigned letter, a lab's public change of course, a notable departure with a public statement), and new posts by writers with large audiences who bear on our questions (Robert Wright, Steven Pinker, Beff Jezos and similar accelerationists, Yann LeCun, among others). If one qualifies, it competes for the slot as a short item. Rules: apolitical in the party sense, always; the commentary is about why we are aligned, or something genuinely interesting in what happened; quote the primary source and link it; name public figures only by what they published; no outreach; when X cannot be read from the session, use search and quote only what a public page shows.
+A standing watch, not a list, and the second rank in the selection rule above (operator direction, 2026-10-06). Commentary on events outside the project is timely or it is not written: within 12 to 24 hours of the event, never later. The examples the operator gave on 2026-10-06 (the Hugging Face incident, the "Pacing the Frontier" letter, the Anthropic op-ed and a resignation) had all happened weeks or months earlier and are therefore not topics; they show the kind of event meant. At every scheduled run, before choosing a subject, scan the last 24 hours: AI news of real importance (a major incident, a cosigned letter, a lab's public change of course, a notable departure with a public statement), and new posts by writers with large audiences who bear on our questions (Robert Wright, Steven Pinker, Beff Jezos and similar accelerationists, Yann LeCun, among others). If one qualifies, it takes the slot ahead of the list. Rules: apolitical in the party sense, always; the commentary is about why we are aligned, or something genuinely interesting in what happened; quote the primary source and link it; name public figures only by what they published; no outreach; when X cannot be read from the session, use search and quote only what a public page shows.
 
 | Pri | Topic | Angle | Source | Status |
 | --- | --- | --- | --- | --- |
