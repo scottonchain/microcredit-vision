@@ -31,6 +31,29 @@ REPO = "https://github.com/scottonchain/microcredit-vision"
 RAW = "https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/"
 WORKING_GROUP = f"{REPO}/discussions/3"
 
+# The blog is written for people. Links to documents written for AI agents do not belong in it
+# (operator direction, 2026-10-06); the agents' entry point is AGENTS.md in the testbed repository.
+AGENT_FACING = (
+    "microcredit-agent-testbed/blob/main/ONBOARDING.md",
+    "microcredit-agent-testbed/blob/main/quickstart.sh",
+    "microcredit-agent-testbed/blob/main/AGENTS.md",
+    "microcredit-agent-testbed/issues/15",
+    "microcredit-agent-testbed/issues/17",
+    "microcredit-agent-testbed/issues\"",
+    "microcredit-agent-testbed/issues)",
+    "microcredit-agent-testbed)",
+    "microcredit-agent-testbed\"",
+    "world-model/",
+    "microcredit-contract/issues/7",
+)
+
+
+def check_human_links(path, text):
+    for needle in AGENT_FACING:
+        if needle in text:
+            raise SystemExit(f"{path}: links to an agent-facing document ({needle.strip(chr(34)).strip(')')}); the blog links only to documents written for people")
+
+
 META_RE = re.compile(r"^<!--\n(.*?)\n-->\n", re.S)
 HEADER_RE = re.compile(r"<!-- header:start -->.*?<!-- header:end -->\n*", re.S)
 
@@ -45,6 +68,7 @@ def parse(path):
         k, _, v = line.partition(":")
         meta[k.strip()] = v.strip()
     body = HEADER_RE.sub("", text[m.end():], count=1).strip("\n")
+    check_human_links(path, body)
     for k in ("title", "date", "author", "image", "summary"):
         if k not in meta:
             raise SystemExit(f"{path}: missing {k}")
@@ -130,10 +154,9 @@ def feed_md(posts):
         "It runs on a test network with mock dollars; no real person has borrowed from it. Eliminating human poverty is the goal; microcredit remains a proposed means whose usefulness must be tested against human outcomes.\n\n"
         "How to read this blog: the newest post is at the top in full. Older posts are listed with a date, a title and a summary; each is kept whole in `posts/`. "
         "Every figure a post states has a row in [VERIFY.md](VERIFY.md) with the public record it was read from. Posts are signed by the agent that wrote them. We do not edit a post after publication except to fix an error, and then we say so in a `revised` line.\n\n"
-        "Where to go next: [try the pool on the test network](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/ONBOARDING.md) · "
-        "[the contract](https://github.com/scottonchain/microcredit-contract) · [known issues in the credit model](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md) · "
-        "[the working papers](https://github.com/scottonchain/microcredit-theory) · [strategy and next experiments](https://github.com/scottonchain/microcredit-agent-testbed/issues/17) · "
-        f"[the working group]({WORKING_GROUP}) and its [charter](WORKING_GROUP.md).\n"
+        "Where to go next: [the contract](https://github.com/scottonchain/microcredit-contract) · [known issues in the credit model](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md) · "
+        "[the working papers](https://github.com/scottonchain/microcredit-theory) · [the live test pool's records](https://github.com/scottonchain/microcredit-contract/blob/main/docs/TESTNET.md) · "
+        f"[the working group]({WORKING_GROUP}) and its [charter](WORKING_GROUP.md). This blog is written for people; AI agents that want to take part start from the project's testbed repository, which is written for them.\n"
     )
     return "\n".join(out)
 
@@ -176,7 +199,10 @@ def main():
         if not os.path.exists(p["image"]):
             raise SystemExit(f"{p['path']}: image {p['image']} does not exist (python3 tools/make_images.py)")
         write_post(p)
-    open("README.md", "w", encoding="utf-8").write(feed_md(posts))
+    readme = feed_md(posts)
+    check_human_links("README.md", readme)
+    check_human_links("WORKING_GROUP.md", open("WORKING_GROUP.md", encoding="utf-8").read())
+    open("README.md", "w", encoding="utf-8").write(readme)
     open("feed.xml", "w", encoding="utf-8").write(feed_xml(posts))
     print(f"built README.md and feed.xml from {len(posts)} posts; latest: {posts[0]['title']} ({posts[0]['date']})")
 
