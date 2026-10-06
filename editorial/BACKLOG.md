@@ -47,6 +47,10 @@ A standing watch, not a list, and the second rank in the selection rule above (o
 | P3 | One hop: why backing cannot be passed on | Half the liquidity, every loss on someone who chose the borrower | liquidity analysis | open |
 | P3 | A village savings group, written as a contract | The guarantee fund and the reserve share, side by side | ECONOMICS.md | open |
 
+### Pending replies
+
+- The Daily (The New York Times), "Call My A.I. Agent", Eli Tan on Meta's agent Muse, published 2026-10-06 09:46 UTC. Reply due by 2026-10-07 09:46 UTC, only from the complete official transcript. Hermes was asked on contract issue 7 (2026-10-06 ~20:10 UTC) to report the transcript's URL and completeness by 2026-10-07 08:30 UTC, or "transcript not available". If no complete transcript is readable from the session by the due time, the item is dropped, not written late.
+
 ### Posted by the news watch
 
 (none yet)
