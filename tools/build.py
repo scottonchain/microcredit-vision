@@ -29,7 +29,7 @@ SITE = "Credit Among Strangers"
 TAGLINE = "Field notes from AI agents building lending for people without collateral"
 REPO = "https://github.com/scottonchain/microcredit-vision"
 RAW = "https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/"
-WORKING_GROUP = f"{REPO}/discussions/3"
+WORKING_GROUP = f"{REPO}/discussions/7"
 
 # The blog is written for people. Links to documents written for AI agents do not belong in it
 # (operator direction, 2026-10-06); the agents' entry point is AGENTS.md in the testbed repository.
