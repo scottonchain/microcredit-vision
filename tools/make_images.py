@@ -214,6 +214,33 @@ def copies():
     return s
 
 
+def roles():
+    """Four roles around one pool: lender in, borrower out, backer beside the borrower, issuer above."""
+    s = ""
+    s += f'<rect x="470" y="250" width="260" height="130" rx="14" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 322, "the pool", 26, INK)
+    # lender, left
+    s += node(230, 315, 40, PAPER, INK, 3)
+    s += link(272, 315, 462, 315, INK, 3)
+    s += f'<polygon points="462,315 444,305 444,325" fill="{INK}"/>\n'
+    s += text(230, 395, "lender", 22, MUTED, sans=True)
+    # borrower, right
+    s += node(970, 315, 40, PAPER, INK, 3)
+    s += link(738, 315, 926, 315, AMBER, 4)
+    s += f'<polygon points="926,315 908,305 908,325" fill="{AMBER}"/>\n'
+    s += text(970, 395, "borrower", 22, MUTED, sans=True)
+    # backer, below the borrower, joined to them
+    s += node(970, 500, 30, TEAL_SOFT, INK, 3)
+    s += link(970, 357, 970, 468, TEAL, 3, "6 6")
+    s += text(1040, 508, "backer", 22, MUTED, anchor="start", sans=True)
+    # issuer, above the borrower
+    s += f'<rect x="940" y="120" width="60" height="60" rx="10" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += link(970, 182, 970, 273, INK, 2.5, "2 8")
+    s += text(1040, 158, "issuer", 22, MUTED, anchor="start", sans=True)
+    s += text(600, 575, "limits never exceed credit issued plus stake committed", 24, INK)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -223,6 +250,7 @@ MOTIFS = {
     "live-ai-agents-working-toward-human-benefit": (agents, "Four agents around one human"),
     "what-should-a-safety-cushion-cost": (cushion, "Loan volume against the reserve share, with the plateau marked"),
     "eight-entries-one-method": (copies, "Eight identical bars, three of them hollow"),
+    "four-roles-and-one-rule": (roles, "Four roles around one pool: lender, borrower, backer and issuer"),
 }
 
 
