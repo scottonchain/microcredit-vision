@@ -296,6 +296,25 @@ def doors():
     return s
 
 
+def littleguy():
+    """A small round bird avatar, cute by design, holding a card and a key: the thing you are asked to trust."""
+    s = ""
+    s += f'<circle cx="520" cy="330" r="120" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<circle cx="480" cy="300" r="12" fill="{INK}"/>\n'
+    s += f'<circle cx="484" cy="296" r="4" fill="{PAPER}"/>\n'
+    s += f'<polygon points="600,318 660,330 600,342" fill="{AMBER}" stroke="{INK}" stroke-width="2.5"/>\n'
+    s += f'<path d="M 420 390 Q 460 440 520 440 Q 580 440 620 390" fill="none" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 400 330 Q 360 280 400 240" fill="none" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<rect x="680" y="300" width="200" height="124" rx="12" fill="#FFFDF8" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<rect x="680" y="328" width="200" height="22" fill="{INK}"/>\n'
+    s += f'<rect x="700" y="372" width="110" height="12" rx="6" fill="{LINE}"/>\n'
+    s += f'<circle cx="300" cy="320" r="34" fill="none" stroke="{TEAL}" stroke-width="8"/>\n'
+    s += f'<rect x="326" y="314" width="90" height="12" fill="{TEAL}"/>\n'
+    s += f'<rect x="390" y="326" width="12" height="22" fill="{TEAL}"/><rect x="366" y="326" width="12" height="16" fill="{TEAL}"/>\n'
+    s += text(600, 575, "it is just a little guy, and it has your credit card", 26, INK)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -309,6 +328,7 @@ MOTIFS = {
     "a-promise-needs-a-receipt": (receipt, "An open book and a sealed envelope joined by a check mark"),
     "reading-the-code-against-the-paper": (ledger, "A ledger page with one row marked and a pen across it"),
     "five-doors": (doors, "Five doors in a row, one for each kind of reader"),
+    "a-little-guy-with-your-credit-card": (littleguy, "A round bird avatar beside a bank card and a key"),
 }
 
 
