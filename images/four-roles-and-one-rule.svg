@@ -22,7 +22,7 @@
 <circle cx="970" cy="315" r="40" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
 <line x1="738" y1="315" x2="926" y2="315" stroke="#D9962B" stroke-width="4" stroke-linecap="round" opacity="1.0"/>
 <polygon points="926,315 908,305 908,325" fill="#D9962B"/>
-<text x="970" y="395" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">borrower</text>
+<text x="1040" y="322" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="start" font-weight="normal" opacity="1.0">borrower</text>
 <circle cx="970" cy="500" r="30" fill="#BFE0DA" stroke="#1B2733" stroke-width="3"/>
 <line x1="970" y1="357" x2="970" y2="468" stroke="#2A8C82" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 6" opacity="1.0"/>
 <text x="1040" y="508" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="start" font-weight="normal" opacity="1.0">backer</text>

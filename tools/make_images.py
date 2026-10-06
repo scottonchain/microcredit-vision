@@ -228,7 +228,7 @@ def roles():
     s += node(970, 315, 40, PAPER, INK, 3)
     s += link(738, 315, 926, 315, AMBER, 4)
     s += f'<polygon points="926,315 908,305 908,325" fill="{AMBER}"/>\n'
-    s += text(970, 395, "borrower", 22, MUTED, sans=True)
+    s += text(1040, 322, "borrower", 22, MUTED, anchor="start", sans=True)
     # backer, below the borrower, joined to them
     s += node(970, 500, 30, TEAL_SOFT, INK, 3)
     s += link(970, 357, 970, 468, TEAL, 3, "6 6")
