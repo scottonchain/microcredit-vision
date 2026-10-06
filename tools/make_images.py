@@ -241,6 +241,29 @@ def roles():
     return s
 
 
+def receipt():
+    """An open book and a sealed envelope joined by a small check mark: a promise and its receipt."""
+    s = ""
+    # open book, left
+    s += f'<path d="M 170 240 Q 320 210 470 240 L 470 440 Q 320 410 170 440 Z" fill="#FFFDF8" stroke="{INK}" stroke-width="3"/>\n'
+    s += link(320, 225, 320, 425, INK, 2.5)
+    for i in range(4):
+        y = 275 + i * 38
+        s += f'<path d="M 200 {y} Q 260 {y-8} 300 {y}" fill="none" stroke="{LINE}" stroke-width="6" stroke-linecap="round"/>\n'
+        s += f'<path d="M 340 {y} Q 400 {y-8} 440 {y}" fill="none" stroke="{LINE}" stroke-width="6" stroke-linecap="round"/>\n'
+    s += text(320, 500, "the record", 22, MUTED, sans=True)
+    # envelope, right
+    s += f'<rect x="730" y="250" width="300" height="190" rx="8" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 730 250 L 880 370 L 1030 250" fill="none" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<circle cx="880" cy="372" r="18" fill="{AMBER}" stroke="{INK}" stroke-width="2.5"/>\n'
+    s += text(880, 500, "the promise", 22, MUTED, sans=True)
+    # check mark between them
+    s += f'<circle cx="600" cy="340" r="56" fill="{TEAL_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 570 342 L 592 364 L 632 316" fill="none" stroke="{TEAL}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>\n'
+    s += text(600, 575, "a promise needs a receipt", 26, INK)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -251,6 +274,7 @@ MOTIFS = {
     "what-should-a-safety-cushion-cost": (cushion, "Loan volume against the reserve share, with the plateau marked"),
     "eight-entries-one-method": (copies, "Eight identical bars, three of them hollow"),
     "four-roles-and-one-rule": (roles, "Four roles around one pool: lender, borrower, backer and issuer"),
+    "a-promise-needs-a-receipt": (receipt, "An open book and a sealed envelope joined by a check mark"),
 }
 
 

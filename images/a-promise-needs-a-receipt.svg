@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An open book and a sealed envelope joined by a check mark">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
+<path d="M 170 240 Q 320 210 470 240 L 470 440 Q 320 410 170 440 Z" fill="#FFFDF8" stroke="#1B2733" stroke-width="3"/>
+<line x1="320" y1="225" x2="320" y2="425" stroke="#1B2733" stroke-width="2.5" stroke-linecap="round" opacity="1.0"/>
+<path d="M 200 275 Q 260 267 300 275" fill="none" stroke="#D7CFC0" stroke-width="6" stroke-linecap="round"/>
+<path d="M 340 275 Q 400 267 440 275" fill="none" stroke="#D7CFC0" stroke-width="6" stroke-linecap="round"/>
+<path d="M 200 313 Q 260 305 300 313" fill="none" stroke="#D7CFC0" stroke-width="6" stroke-linecap="round"/>
+<path d="M 340 313 Q 400 305 440 313" fill="none" stroke="#D7CFC0" stroke-width="6" stroke-linecap="round"/>
+<path d="M 200 351 Q 260 343 300 351" fill="none" stroke="#D7CFC0" stroke-width="6" stroke-linecap="round"/>
+<path d="M 340 351 Q 400 343 440 351" fill="none" stroke="#D7CFC0" stroke-width="6" stroke-linecap="round"/>
+<path d="M 200 389 Q 260 381 300 389" fill="none" stroke="#D7CFC0" stroke-width="6" stroke-linecap="round"/>
+<path d="M 340 389 Q 400 381 440 389" fill="none" stroke="#D7CFC0" stroke-width="6" stroke-linecap="round"/>
+<text x="320" y="500" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">the record</text>
+<rect x="730" y="250" width="300" height="190" rx="8" fill="#F2D9A6" stroke="#1B2733" stroke-width="3"/>
+<path d="M 730 250 L 880 370 L 1030 250" fill="none" stroke="#1B2733" stroke-width="3"/>
+<circle cx="880" cy="372" r="18" fill="#D9962B" stroke="#1B2733" stroke-width="2.5"/>
+<text x="880" y="500" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">the promise</text>
+<circle cx="600" cy="340" r="56" fill="#BFE0DA" stroke="#1B2733" stroke-width="3"/>
+<path d="M 570 342 L 592 364 L 632 316" fill="none" stroke="#2A8C82" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="600" y="575" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">a promise needs a receipt</text>
+<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>
