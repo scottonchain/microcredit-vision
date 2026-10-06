@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 """Keep the working-group Discussion in step with WORKING_GROUP.md.
 
-Runs in GitHub Actions (see .github/workflows/sync-working-group.yml) with the workflow token,
-which may edit this repository's Discussions. It rewrites the opening post of Discussion 3 from
-WORKING_GROUP.md and prepends a "superseded" line to the two 2026-10-04 task comments. Idempotent:
-nothing is written when the text already matches.
+Runs in GitHub Actions (.github/workflows/sync-working-group.yml) with the workflow token. That token
+can create a Discussion and edit the ones it authored, but not posts other accounts wrote. So the
+charter thread is a Discussion created by the workflow itself (title TITLE, category General) and
+rewritten from WORKING_GROUP.md on every change. The first time it runs it also leaves one comment on
+the original thread (Discussion 3, 2026-10-04) saying where the charter moved. Idempotent.
 """
 import json
-import os
 import re
 import subprocess
 import sys
 
-OWNER, REPO, NUMBER = "scottonchain", "microcredit-vision", 3
-SUPERSEDED_IDS = {18739335, 18739608}
-SUPERSEDED_LINE = "Superseded on 2026-10-06 by the charter above; kept for the record.\n\n"
+OWNER, REPO = "scottonchain", "microcredit-vision"
+TITLE = "Working group: charter, roles, open tasks"
+OLD_NUMBER = 3
+BOT = "github-actions"
 
 
 def gql(step, query, **variables):
@@ -29,42 +30,54 @@ def gql(step, query, **variables):
     return json.loads(out.stdout)
 
 
-def body_from_file():
+def body_from_file(number):
     t = open("WORKING_GROUP.md", encoding="utf-8").read()
     t = t.replace("](VERIFY.md)", f"](https://github.com/{OWNER}/{REPO}/blob/main/VERIFY.md)")
     t = t.replace("](README.md)", f"](https://github.com/{OWNER}/{REPO})")
+    t = re.sub(r"https://github.com/scottonchain/microcredit-vision/discussions/\d+", "this thread", t)
     head = re.match(r"# Working group charter\n\n(.*?)\n\n", t, re.S)
     assert head, "WORKING_GROUP.md must start with the heading and the revision paragraph"
     pointer = (
-        "**Charter, revised 2026-10-06 by Claude Code** (an AI agent working with the project's human operator). "
-        f"The canonical copy is [WORKING_GROUP.md](https://github.com/{OWNER}/{REPO}/blob/main/WORKING_GROUP.md) in this repository, "
-        "and this post is updated from it automatically; the first version of 2026-10-04 is in its history. "
-        'The two comments below carried the first task list and are superseded by the "Open tasks" section here.'
+        "**The working group's charter.** Written by Claude Code, an AI agent working with the project's human operator, "
+        f"and posted by this repository's workflow, which rewrites it whenever [WORKING_GROUP.md](https://github.com/{OWNER}/{REPO}/blob/main/WORKING_GROUP.md) changes. "
+        "That file is the canonical copy; its history shows every revision. Reply below to join."
     )
     t = pointer + "\n\n" + t[head.end():]
     t = re.sub(r"^## (.+)$", r"**\1.**", t, flags=re.M)
+    t = t.replace("[this thread](this thread)", "this thread").replace("[Discussion 3](this thread)", "this thread")
     return t.rstrip("\n") + "\n\nReply below with a role and a first task.\n"
 
 
 def main():
-    q = """query($owner:String!,$repo:String!,$n:Int!){ repository(owner:$owner,name:$repo){ discussion(number:$n){
-            id body comments(first:20){ nodes { id databaseId body } } } } }"""
-    d = gql("read discussion", q, owner=OWNER, repo=REPO, n=NUMBER)["data"]["repository"]["discussion"]
-    want = body_from_file()
-    if d["body"].strip() != want.strip():
-        gql("update discussion", """mutation($id:ID!,$body:String!){ updateDiscussion(input:{discussionId:$id, body:$body}){ discussion { updatedAt } } }""",
-            id=d["id"], body=want)
-        print("discussion body updated")
+    repo = gql("read repository", """query($owner:String!,$repo:String!){ repository(owner:$owner,name:$repo){ id
+        discussionCategories(first:10){ nodes { id name } }
+        discussions(first:50, orderBy:{field:CREATED_AT, direction:DESC}){ nodes { id number title body author { login } } } } }""",
+        owner=OWNER, repo=REPO)["data"]["repository"]
+    mine = [d for d in repo["discussions"]["nodes"] if d["title"] == TITLE and d["author"] and d["author"]["login"].startswith(BOT)]
+    if mine:
+        d = mine[0]
     else:
-        print("discussion body already current")
-    for c in d["comments"]["nodes"]:
-        if c["databaseId"] in SUPERSEDED_IDS and not c["body"].startswith(SUPERSEDED_LINE.strip()):
-            gql("update discussion", """mutation($id:ID!,$body:String!){ updateDiscussionComment(input:{commentId:$id, body:$body}){ comment { updatedAt } } }""",
-                id=c["id"], body=SUPERSEDED_LINE + c["body"])
-            print(f"comment {c['databaseId']} marked superseded")
+        cat = next(c["id"] for c in repo["discussionCategories"]["nodes"] if c["name"] == "General")
+        d = gql("create discussion", """mutation($r:ID!,$c:ID!,$t:String!,$b:String!){ createDiscussion(input:{repositoryId:$r, categoryId:$c, title:$t, body:$b}){ discussion { id number body } } }""",
+                r=repo["id"], c=cat, t=TITLE, b="(being written)")["data"]["createDiscussion"]["discussion"]
+        print(f"created discussion #{d['number']}")
+    want = body_from_file(d["number"])
+    if d["body"].strip() != want.strip():
+        gql("update discussion", """mutation($id:ID!,$body:String!){ updateDiscussion(input:{discussionId:$id, body:$body}){ discussion { updatedAt } } }""", id=d["id"], body=want)
+        print(f"discussion #{d['number']} body updated")
+    else:
+        print(f"discussion #{d['number']} body already current")
+    old = next((x for x in repo["discussions"]["nodes"] if x["number"] == OLD_NUMBER), None)
+    if old:
+        c = gql("read old thread", """query($owner:String!,$repo:String!,$n:Int!){ repository(owner:$owner,name:$repo){ discussion(number:$n){ comments(first:50){ nodes { author { login } } } } } }""",
+                owner=OWNER, repo=REPO, n=OLD_NUMBER)["data"]["repository"]["discussion"]["comments"]["nodes"]
+        if not any(x["author"] and x["author"]["login"].startswith(BOT) for x in c):
+            note = (f"The working group's charter and its open tasks now live in Discussion #{d['number']}, which this repository's workflow keeps "
+                    f"in step with [WORKING_GROUP.md](https://github.com/{OWNER}/{REPO}/blob/main/WORKING_GROUP.md). Please reply there. "
+                    "Posted by the repository's workflow on behalf of Claude Code, an AI agent working with the project's human operator.")
+            gql("note on old thread", """mutation($id:ID!,$body:String!){ addDiscussionComment(input:{discussionId:$id, body:$body}){ comment { url } } }""", id=old["id"], body=note)
+    print(f"DISCUSSION_NUMBER={d['number']}")
 
 
 if __name__ == "__main__":
-    if not os.environ.get("GH_TOKEN"):
-        raise SystemExit("GH_TOKEN is not set; this script runs in GitHub Actions")
     main()
