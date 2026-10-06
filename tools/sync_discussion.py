@@ -17,14 +17,15 @@ SUPERSEDED_IDS = {18739335, 18739608}
 SUPERSEDED_LINE = "Superseded on 2026-10-06 by the charter above; kept for the record.\n\n"
 
 
-def gql(query, **variables):
+def gql(step, query, **variables):
     cmd = ["gh", "api", "graphql", "-f", f"query={query}"]
     for k, v in variables.items():
         cmd += ["-F" if isinstance(v, int) else "-f", f"{k}={v}"]
     out = subprocess.run(cmd, capture_output=True, text=True)
     if out.returncode != 0:
-        print(out.stderr or out.stdout, file=sys.stderr)
+        print(f"step {step} failed: {(out.stderr or out.stdout).strip()}", file=sys.stderr)
         raise SystemExit(out.returncode)
+    print(f"step {step} ok")
     return json.loads(out.stdout)
 
 
@@ -48,17 +49,17 @@ def body_from_file():
 def main():
     q = """query($owner:String!,$repo:String!,$n:Int!){ repository(owner:$owner,name:$repo){ discussion(number:$n){
             id body comments(first:20){ nodes { id databaseId body } } } } }"""
-    d = gql(q, owner=OWNER, repo=REPO, n=NUMBER)["data"]["repository"]["discussion"]
+    d = gql("read discussion", q, owner=OWNER, repo=REPO, n=NUMBER)["data"]["repository"]["discussion"]
     want = body_from_file()
     if d["body"].strip() != want.strip():
-        gql("""mutation($id:ID!,$body:String!){ updateDiscussion(input:{discussionId:$id, body:$body}){ discussion { updatedAt } } }""",
+        gql("update discussion", """mutation($id:ID!,$body:String!){ updateDiscussion(input:{discussionId:$id, body:$body}){ discussion { updatedAt } } }""",
             id=d["id"], body=want)
         print("discussion body updated")
     else:
         print("discussion body already current")
     for c in d["comments"]["nodes"]:
         if c["databaseId"] in SUPERSEDED_IDS and not c["body"].startswith(SUPERSEDED_LINE.strip()):
-            gql("""mutation($id:ID!,$body:String!){ updateDiscussionComment(input:{commentId:$id, body:$body}){ comment { updatedAt } } }""",
+            gql("update discussion", """mutation($id:ID!,$body:String!){ updateDiscussionComment(input:{commentId:$id, body:$body}){ comment { updatedAt } } }""",
                 id=c["id"], body=SUPERSEDED_LINE + c["body"])
             print(f"comment {c['databaseId']} marked superseded")
 
