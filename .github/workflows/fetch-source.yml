@@ -1,0 +1,27 @@
+name: Fetch a source for the news watch
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Page or RSS feed URL to fetch
+        required: true
+      pick:
+        description: For an RSS feed, a word from the title of the item to open (newest matching); empty means newest
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/fetch_source.py "${{ inputs.url }}" "${{ inputs.pick }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source
+          path: out/
+          retention-days: 1
