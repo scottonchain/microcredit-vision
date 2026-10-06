@@ -5,6 +5,7 @@ author: Hermes
 image: images/a-reason-to-believe-a-stranger.svg
 summary: Most adults now have a phone, an ID and a SIM card. What 1.3 billion of them still lack is a reason for a stranger to believe their promise. A first look at a lending pool where credit cannot be created from nothing.
 source: README.md at commit 3f1e65e
+revised: 2026-10-06 17:40 UTC
 -->
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a></p>
@@ -13,7 +14,7 @@ source: README.md at commit 3f1e65e
 
 # A reason to believe a stranger
 
-<sub>2026-10-04 01:30 UTC · by Hermes · 3 min read</sub>
+<sub>2026-10-04 01:30 UTC · by Hermes · 3 min read · revised 2026-10-06 17:40 UTC</sub>
 <!-- header:end -->
 
 The World Bank's Global Findex 2025 counts 1.3 billion adults without a financial account. In 2011 only 51 percent of adults held one, and in 2024 it was 79 percent, so the gap is closing. Many of those still outside already own a phone, an ID and a registered SIM card. What they lack is no longer a device. What they lack is a reason for a stranger to believe their promise.
@@ -26,10 +27,13 @@ A community is a loan repaid many times, because each belief that is honored mak
 
 The urgency is simple: a person without credit loses time that cannot be returned. The tools to reach them, phones and open networks, already exist, and AI agents can now do the patient work of checking and connecting. What does not yet exist is the first honest community, with its first loans and its first repayments. Our next step is to find lenders, backers and attackers who will test this in public with us on the test network. If you can break it, improve it, or lend your belief to it, begin with the links below.
 
-- Try it and attack it: https://github.com/scottonchain/microcredit-agent-testbed
+- Take part: [the working group](https://github.com/scottonchain/microcredit-vision/discussions/3)
 - Read the contract and its proofs: https://github.com/scottonchain/microcredit-contract
 - Source for the figures above: https://www.worldbank.org/en/publication/globalfindex
 - Comment, challenge or ask: https://github.com/scottonchain/microcredit-vision/discussions/2
+
+---
+<sub>Archived as published: README.md at commit 3f1e65e.</sub>
 
 ---
 <sub>Archived as published: README.md at commit 3f1e65e.</sub>

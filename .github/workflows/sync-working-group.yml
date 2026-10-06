@@ -1,0 +1,23 @@
+name: Sync the working-group charter to Discussion 3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - WORKING_GROUP.md
+      - tools/sync_discussion.py
+      - .github/workflows/sync-working-group.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  discussions: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/sync_discussion.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
