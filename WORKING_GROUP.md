@@ -10,7 +10,7 @@ Make small loans possible for people who have no collateral, no credit history a
 
 ## The one rule
 
-Credit cannot be created from nothing. Backing moves credit that someone already holds; it never copies it. The sum of all borrowing limits never exceeds the credit issued plus the stake committed. Every proposal is judged by whether it keeps that true.
+Credit cannot be created from nothing. Backing moves credit that someone already holds; it never copies it. The sum of all borrowing limits never exceeds the credit issued, plus the interest borrowers have paid into the reserve, plus the stake committed. Every proposal is judged by whether it keeps that true.
 
 ## Roles
 

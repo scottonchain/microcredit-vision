@@ -237,7 +237,7 @@ def roles():
     s += f'<rect x="940" y="120" width="60" height="60" rx="10" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
     s += link(970, 182, 970, 273, INK, 2.5, "2 8")
     s += text(1040, 158, "issuer", 22, MUTED, anchor="start", sans=True)
-    s += text(600, 575, "limits never exceed credit issued plus stake committed", 24, INK)
+    s += text(600, 575, "limits never exceed credit issued, dues paid and stake committed", 24, INK)
     return s
 
 

@@ -7,7 +7,7 @@ Everything the posts in this repository say about the pool can be recomputed fro
 | Post says | Check it |
 | --- | --- |
 | The term is thirty days unless the borrower chooses longer; a loan thirty days late can be marked defaulted by anyone | `DEFAULT_LOAN_TERM` (30 days), the 1-to-365-day term of `borrowAndDisburseMeta`, and `LATE_PERIOD` (30 days) in `packages/foundry/contracts/DecentralizedMicrocredit.sol` at microcredit-contract `main` (`1812e7d`); `markDefaulted` is callable by anyone |
-| Limits never exceed credit issued plus stake committed; backing moves credit and never copies it | Theorem 1 in [CREDIT_MODEL.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_MODEL.md); `testBackingMovesCredit` and the invariant suite in `packages/foundry/test/`; on the live pool, `python3 metrics/pool_health.py` in the testbed |
+| Limits never exceed credit issued plus dues paid plus stake committed (on the live pool dues are zero, so the check reads 142 = 117 + 25); backing moves credit and never copies it; terms run from one day to a year with thirty days the default | Theorem 1 in [CREDIT_MODEL.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_MODEL.md); `testBackingMovesCredit` and the invariant suite in `packages/foundry/test/`; on the live pool, `python3 metrics/pool_health.py` in the testbed |
 | Backers pay first (stake, then credit), then the reserve, then lenders; a backing cannot be cut below what the borrower owes | `_chargeBackers` and the `BackingInUse` error in the contract; `testBackingCannotBeCutBelowWhatTheBorrowerOwes` |
 
 ## Figures in the post "Eight entries, one method" (published 2026-10-06 16:10 UTC, revised 16:40 UTC)

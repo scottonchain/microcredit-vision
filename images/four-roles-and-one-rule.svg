@@ -29,6 +29,6 @@
 <rect x="940" y="120" width="60" height="60" rx="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
 <line x1="970" y1="182" x2="970" y2="273" stroke="#1B2733" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 8" opacity="1.0"/>
 <text x="1040" y="158" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="start" font-weight="normal" opacity="1.0">issuer</text>
-<text x="600" y="575" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">limits never exceed credit issued plus stake committed</text>
+<text x="600" y="575" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">limits never exceed credit issued, dues paid and stake committed</text>
 <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
 </svg>
