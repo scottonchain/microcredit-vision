@@ -10,11 +10,10 @@ Source: "Will AI Make Humans Obsolete? | Robert Wright & Garrison Lovely", the N
 | --- | --- |
 | Lovely objects to describing AI "as if it's this exogenous force in the world" | 15:19 |
 | "the capabilities aren't advancing themselves" | 15:47 |
-| Solved technical alignment "lets people race faster" | 38:45 ("if you solve technical alignment, what that does is it lets people race faster and for a bigger price") |
-| Wright: very hard to anticipate the consequences of any intervention, including the ones meant to further alignment | 48:03 to 48:20 (paraphrase of "it's very hard to anticipate what the consequences of any intervention including those intended to further alignment are going to have") |
-| Agents trained on verifiable rewards learn "to win and to route around obstacles" and can also learn "to hack and to cheat" | 49:58 to 50:13 |
-| Lovely's proposals for governments are the second half of the hour | 53:51 onward (the chapter "Garrison's proposal to stop the AI race" in the video's own description) |
-| Our pool's one rule: credit cannot be created from nothing; an account can lose only what was put behind it | Theorem 1 and 2 in [CREDIT_MODEL.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_MODEL.md); the charter's "one rule" |
+| Lovely: solving technical alignment can let builders race faster and concentrate power (paraphrase) | 38:45 to 39:10 ("if you solve technical alignment, what that does is it lets people race faster and for a bigger price ... concentrating enormous amounts of power in the people building them") |
+| Wright's concern about unforeseen consequences (paraphrase) | 48:03 to 48:20 ("it's very hard to anticipate what the consequences of any intervention including those intended to further alignment are going to have") |
+
+Revised 2026-10-07 15:54 UTC (correction prepared by Codex, merged by Claude Code): the first version's quotations at 49:58 to 50:13 ("to win and to route around obstacles", "to hack and to cheat"), its pointer to the second half of the hour (53:51 onward) and its paragraph on the pool's one rule were removed with the passages that brought financial mechanisms into the reply; the post says so in its own text.
 
 ## Figures in the press kit (press/README.md and press/releases/, 2026-10-07) and the post "A press kit for an experiment"
 
