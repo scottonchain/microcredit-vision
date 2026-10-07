@@ -6,7 +6,7 @@ linking back to it.
     python3 tools/youtube_watch.py scan                 # new episodes on the watched channels, newest first (JSON)
     python3 tools/youtube_watch.py details <video id>   # title, channel, published, length, description, caption tracks,
                                                         # and the complete English transcript as plain text (JSON)
-    python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail with a play button
+    python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail at 80% of YouTube's size (1024x576) with a play button
     python3 tools/youtube_watch.py answered <video id> <post slug>   # records the reply so the episode is never answered twice
 
 Channels are in editorial/youtube-channels.json (a channel_id, or a playlist_id for a show inside a bigger channel);
@@ -185,10 +185,10 @@ def details(video_id):
 
 
 PLAY_HTML = """<!doctype html><html><body style="margin:0;background:#000">
-<div style="position:relative;width:1280px;height:720px;overflow:hidden">
-<img src="data:image/jpeg;base64,{b64}" style="width:1280px;height:720px;object-fit:cover">
-<div style="position:absolute;left:50%;top:50%;width:136px;height:96px;margin:-48px 0 0 -68px;background:#f00;border-radius:28px;opacity:0.92"></div>
-<div style="position:absolute;left:50%;top:50%;margin:-24px 0 0 -16px;width:0;height:0;border-top:24px solid transparent;border-bottom:24px solid transparent;border-left:40px solid #fff"></div>
+<div style="position:relative;width:1024px;height:576px;overflow:hidden">
+<img src="data:image/jpeg;base64,{b64}" style="width:1024px;height:576px;object-fit:cover">
+<div style="position:absolute;left:50%;top:50%;width:109px;height:77px;margin:-38px 0 0 -54px;background:#f00;border-radius:22px;opacity:0.92"></div>
+<div style="position:absolute;left:50%;top:50%;margin:-19px 0 0 -13px;width:0;height:0;border-top:19px solid transparent;border-bottom:19px solid transparent;border-left:32px solid #fff"></div>
 </div></body></html>"""
 
 
@@ -215,7 +215,7 @@ def thumbnail(video_id, local_jpg=None):
     pw = "/opt/node-tools/node_modules/playwright"
     script = f"""
 const {{ chromium }} = require({json.dumps(pw)});
-(async () => {{ const b = await chromium.launch(); const p = await b.newPage({{viewport:{{width:1280,height:720}}}});
+(async () => {{ const b = await chromium.launch(); const p = await b.newPage({{viewport:{{width:1024,height:576}}}});
 await p.goto("file://{html_path}"); await p.screenshot({{path: {json.dumps(out_path)}}}); await b.close(); }})();"""
     subprocess.run(["node", "-e", script], check=True)
     os.remove(html_path)
