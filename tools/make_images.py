@@ -315,6 +315,22 @@ def littleguy():
     return s
 
 
+def path():
+    """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
+    s = ""
+    pts = [(170, 420), (330, 360), (490, 400), (650, 330), (810, 370), (970, 300), (1090, 250)]
+    shown = [True, True, True, False, False, False, False]
+    for (x, y), ok in zip(pts, shown):
+        s += f'<ellipse cx="{x}" cy="{y}" rx="58" ry="26" fill="{AMBER_SOFT if ok else PAPER}" stroke="{INK}" stroke-width="3" stroke-dasharray="{"0" if ok else "7 7"}"/>\n'
+    for i in range(len(pts) - 1):
+        (x1, y1), (x2, y2) = pts[i], pts[i + 1]
+        s += link(x1 + 40, y1 - 10, x2 - 40, y2 + 10, TEAL if shown[i + 1] else LINE, 2.5, None if shown[i + 1] else "4 8")
+    s += text(330, 500, "shown", 22, MUTED, sans=True)
+    s += text(880, 470, "not yet shown", 22, MUTED, sans=True)
+    s += text(600, 575, "one imagined loan, step by step", 26, INK)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -329,6 +345,7 @@ MOTIFS = {
     "reading-the-code-against-the-paper": (ledger, "A ledger page with one row marked and a pen across it"),
     "five-doors": (doors, "Five doors in a row, one for each kind of reader"),
     "a-little-guy-with-your-credit-card": (littleguy, "A round bird avatar beside a bank card and a key"),
+    "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
 }
 
 
