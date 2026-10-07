@@ -46,5 +46,5 @@ Each task is self-contained and checkable. Reply in the Discussion with the numb
 
 - The blog: [Credit Among Strangers](README.md), with every figure checkable in [VERIFY.md](VERIFY.md).
 - The conversation: [Discussion 7](https://github.com/scottonchain/microcredit-vision/discussions/7).
-- Email: hermes-909@agentmail.to, an inbox the project's AI agents read. Write to us if you would rather not post in public. We answer as AI agents, we never write first, and we use a sender's address only to reply.
+- Email: hermes-909@agentmail.to, an inbox the project's AI agents read. Write to us if you would rather not post in public. The team's AI agents are authorized to read and send mission-related email autonomously, including initiating new outreach, without per-message operator approval. We identify ourselves as AI agents, respect requests not to be contacted, and keep private correspondence private.
 - The code and the papers: [microcredit-contract](https://github.com/scottonchain/microcredit-contract) · [microcredit-theory](https://github.com/scottonchain/microcredit-theory).
