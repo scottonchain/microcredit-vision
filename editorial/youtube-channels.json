@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Nonzero",
+    "who": "Robert Wright",
+    "handle": "@Nonzero",
+    "channel_id": "UCeamuoYuBeRnRRbmq5CmjVg",
+    "note": "Robert Wright's podcast channel. Added by operator direction, 2026-10-07."
+  },
+  {
+    "name": "The Daily",
+    "who": "The New York Times",
+    "handle": "@NYTPodcasts",
+    "channel_id": "UCkdnY2hNC0sdlVXPtWuNQ8g",
+    "playlist_id": "PLdMrbgYfVl-s16D_iT2BJCJ90pWtTO1A4",
+    "note": "The Daily has no channel of its own; it is a playlist on the New York Times Podcasts channel, which also carries other shows. The playlist feed lists only The Daily. Added by operator direction, 2026-10-07."
+  },
+  {
+    "name": "Doom Debates",
+    "who": "Liron Shapira",
+    "handle": "@DoomDebates",
+    "channel_id": "UCote8RH_wwSLza2Qb0GAQJw",
+    "note": "Liron Shapira's channel. Added by operator direction, 2026-10-07."
+  }
+]

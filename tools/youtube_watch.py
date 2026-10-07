@@ -9,8 +9,9 @@ linking back to it.
     python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail with a play button
     python3 tools/youtube_watch.py answered <video id> <post slug>   # records the reply so the episode is never answered twice
 
-Channels are in editorial/youtube-channels.json; replies in editorial/youtube-answered.json. Needs network access to
-youtube.com and its subdomains (i.ytimg.com or img.youtube.com for thumbnails) and, for the thumbnail, Chromium through Playwright.
+Channels are in editorial/youtube-channels.json (a channel_id, or a playlist_id for a show inside a bigger channel);
+replies in editorial/youtube-answered.json. Needs network access to youtube.com and its subdomains (i.ytimg.com or
+img.youtube.com for thumbnails) and, for the thumbnail, Chromium through Playwright.
 """
 import json
 import os
@@ -46,8 +47,10 @@ def scan():
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015", "media": "http://search.yahoo.com/mrss/"}
     out = []
     for ch in channels:
+        feed = (f"https://www.youtube.com/feeds/videos.xml?playlist_id={ch['playlist_id']}" if ch.get("playlist_id")
+                else f"https://www.youtube.com/feeds/videos.xml?channel_id={ch['channel_id']}")
         try:
-            xml = fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={ch['channel_id']}")
+            xml = fetch(feed)
         except Exception as e:  # a feed that fails is reported, not fatal
             out.append({"channel": ch["name"], "error": str(e)})
             continue
@@ -70,7 +73,34 @@ def scan():
     return out
 
 
+INNERTUBE_CLIENTS = (
+    # Google's watch page answers curl with an anti-bot interstitial; the player API with a mobile client answers with
+    # the same videoDetails, microformat and caption tracks (checked 2026-10-07). No key is sent or stored.
+    {"clientName": "ANDROID", "clientVersion": "20.10.38", "androidSdkVersion": 30, "hl": "en", "gl": "US",
+     "_ua": "com.google.android.youtube/20.10.38 (Linux; U; Android 11) gzip", "_name": "3"},
+    {"clientName": "IOS", "clientVersion": "20.10.4", "deviceModel": "iPhone16,2", "hl": "en", "gl": "US",
+     "_ua": "com.google.ios.youtube/20.10.4 (iPhone16,2; U; CPU iOS 18_3_2 like Mac OS X;)", "_name": "5"},
+)
+
+
 def player_response(video_id):
+    for client in INNERTUBE_CLIENTS:
+        body = {"context": {"client": {k: v for k, v in client.items() if not k.startswith("_")}},
+                "videoId": video_id, "contentCheckOk": True, "racyCheckOk": True}
+        req = urllib.request.Request(
+            "https://www.youtube.com/youtubei/v1/player?prettyPrint=false", data=json.dumps(body).encode(),
+            headers={"Content-Type": "application/json", "User-Agent": client["_ua"],
+                     "X-YouTube-Client-Name": client["_name"], "X-YouTube-Client-Version": client["clientVersion"]})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                pr = json.loads(r.read().decode("utf-8", "replace"))
+        except Exception as e:
+            sys.stderr.write(f"player API with {client['clientName']}: {e}\n")
+            continue
+        if pr.get("videoDetails", {}).get("videoId") == video_id and (
+                pr.get("playabilityStatus", {}).get("status") == "OK" or pr.get("captions")):
+            return pr
+        sys.stderr.write(f"player API with {client['clientName']}: status {pr.get('playabilityStatus', {}).get('status')}\n")
     html = fetch(f"https://www.youtube.com/watch?v={video_id}")
     m = re.search(r"ytInitialPlayerResponse\s*=\s*(\{)", html)
     if not m:
@@ -162,10 +192,10 @@ PLAY_HTML = """<!doctype html><html><body style="margin:0;background:#000">
 </div></body></html>"""
 
 
-def thumbnail(video_id):
+def thumbnail(video_id, local_jpg=None):
     import base64
-    jpg = None
-    for name in ("maxresdefault.jpg", "sddefault.jpg", "hqdefault.jpg"):
+    jpg = open(local_jpg, "rb").read() if local_jpg else None
+    for name in () if jpg else ("maxresdefault.jpg", "sddefault.jpg", "hqdefault.jpg"):
         for host in ("i.ytimg.com", "img.youtube.com"):  # the second serves the same files where a network policy allows only youtube.com
             try:
                 jpg = fetch(f"https://{host}/vi/{video_id}/{name}", binary=True)
@@ -205,8 +235,8 @@ def main():
         print(json.dumps(scan(), indent=1, ensure_ascii=False))
     elif cmd == "details":
         print(json.dumps(details(sys.argv[2]), indent=1, ensure_ascii=False))
-    elif cmd == "thumbnail":
-        print(thumbnail(sys.argv[2]))
+    elif cmd == "thumbnail":  # thumbnail <id> [--from local.jpg]
+        print(thumbnail(sys.argv[2], sys.argv[4] if len(sys.argv) > 4 and sys.argv[3] == "--from" else None))
     elif cmd == "answered":
         mark_answered(sys.argv[2], sys.argv[3])
         print("recorded")
