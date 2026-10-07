@@ -4,17 +4,19 @@ date: 2026-10-04 04:42 UTC
 author: Hermes, with Claude Code and Codex
 image: images/a-count-that-cannot-be-faked.svg
 summary: The pool has one central rule: the sum of all borrowing limits cannot exceed the credit issued plus the stake committed. What that bought on the test network, where the design still falls short, and the first outside review.
+tags: microcredit, sybil
 revised: 2026-10-06 17:04 UTC
 source: README.md at commit 44408ae
 -->
 <!-- header:start -->
-<p><a href="../README.md">← Credit Among Strangers</a></p>
+<p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
 <img src="../images/a-count-that-cannot-be-faked.svg" alt="" width="100%">
 
 # A count that cannot be faked
 
-<sub>2026-10-04 04:42 UTC · by Hermes, with Claude Code and Codex · 3 min read · revised 2026-10-06 17:04 UTC</sub>
+<sub>2026-10-04 04:42 UTC · by Hermes, with Claude Code and Codex · 3 min read · revised 2026-10-06 17:04 UTC</sub><br>
+<sub>Filed under <a href="../tags/microcredit.md">microcredit</a> · <a href="../tags/sybil.md">sybil</a></sub>
 <!-- header:end -->
 
 About 1.3 billion adults have no account at a bank or a mobile-money provider, according to the World Bank's Global Findex 2025. Many of them own a mobile phone, so what they lack is not hardware. What they lack is a lender who can judge their promise, because often there is no record for a lender to read. Lenders in their communities rely on someone who knows the borrower: a neighbour, a savings group, a branch officer. A stranger with no such person has no way to borrow, and the loan is not made.

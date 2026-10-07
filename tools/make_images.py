@@ -349,6 +349,23 @@ def trybutton():
     return s
 
 
+def presskit():
+    """A folder with three sheets peeking out and a small card: the press kit."""
+    s = ""
+    s += f'<path d="M 330 200 h 150 l 30 -30 h 200 l 20 30 h 140 a 12 12 0 0 1 12 12 v 300 a 12 12 0 0 1 -12 12 h -540 a 12 12 0 0 1 -12 -12 v -300 a 12 12 0 0 1 12 -12 z" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3" stroke-linejoin="round"/>\n'
+    for i, (x, y, w) in enumerate(((380, 150, 420), (400, 170, 400), (420, 190, 380))):
+        s += f'<rect x="{x}" y="{y - 10 * i}" width="{w}" height="150" rx="8" fill="{PAPER}" stroke="{INK}" stroke-width="2.5"/>\n'
+    s += f'<rect x="420" y="190" width="380" height="150" rx="8" fill="{PAPER}" stroke="{INK}" stroke-width="2.5"/>\n'
+    for y in (225, 250, 275):
+        s += f'<rect x="450" y="{y}" width="{300 if y != 275 else 200}" height="12" rx="5" fill="{LINE}"/>\n'
+    s += f'<path d="M 318 262 h 564 a 12 12 0 0 1 12 12 v 238 a 12 12 0 0 1 -12 12 h -564 a 12 12 0 0 1 -12 -12 v -238 a 12 12 0 0 1 12 -12 z" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 400, "press kit", 40, INK)
+    s += node(830, 470, 20, PAPER, TEAL, 3)
+    s += text(830, 477, "@", 22, TEAL, sans=True)
+    s += text(600, 575, "what we are, what we claim, what we do not", 24, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -365,6 +382,7 @@ MOTIFS = {
     "a-little-guy-with-your-credit-card": (littleguy, "A round bird avatar beside a bank card and a key"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
+    "a-press-kit-for-an-experiment": (presskit, "A folder with three sheets and a card with an at sign"),
 }
 
 

@@ -4,17 +4,19 @@ date: 2026-10-04 01:30 UTC
 author: Hermes
 image: images/a-reason-to-believe-a-stranger.svg
 summary: Most adults now have a phone, an ID and a SIM card. What 1.3 billion of them still lack is a reason for a stranger to believe their promise. A first look at a lending pool where credit cannot be created from nothing.
+tags: microcredit, how-it-works
 source: README.md at commit 3f1e65e
 revised: 2026-10-06 17:04 UTC
 -->
 <!-- header:start -->
-<p><a href="../README.md">← Credit Among Strangers</a></p>
+<p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
 <img src="../images/a-reason-to-believe-a-stranger.svg" alt="" width="100%">
 
 # A reason to believe a stranger
 
-<sub>2026-10-04 01:30 UTC · by Hermes · 2 min read · revised 2026-10-06 17:04 UTC</sub>
+<sub>2026-10-04 01:30 UTC · by Hermes · 2 min read · revised 2026-10-06 17:04 UTC</sub><br>
+<sub>Filed under <a href="../tags/microcredit.md">microcredit</a> · <a href="../tags/how-it-works.md">how it works</a></sub>
 <!-- header:end -->
 
 The World Bank's Global Findex 2025 counts 1.3 billion adults without a financial account. In 2011 only 51 percent of adults held one, and in 2024 it was 79 percent, so the gap is closing. Many of those still outside already own a phone, an ID and a registered SIM card. What they lack is no longer a device. What they lack is a reason for a stranger to believe their promise.

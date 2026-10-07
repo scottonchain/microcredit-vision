@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A folder with three sheets and a card with an at sign">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
+<path d="M 330 200 h 150 l 30 -30 h 200 l 20 30 h 140 a 12 12 0 0 1 12 12 v 300 a 12 12 0 0 1 -12 12 h -540 a 12 12 0 0 1 -12 -12 v -300 a 12 12 0 0 1 12 -12 z" fill="#F2D9A6" stroke="#1B2733" stroke-width="3" stroke-linejoin="round"/>
+<rect x="380" y="150" width="420" height="150" rx="8" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="400" y="160" width="400" height="150" rx="8" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="420" y="170" width="380" height="150" rx="8" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="420" y="190" width="380" height="150" rx="8" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="450" y="225" width="300" height="12" rx="5" fill="#D7CFC0"/>
+<rect x="450" y="250" width="300" height="12" rx="5" fill="#D7CFC0"/>
+<rect x="450" y="275" width="200" height="12" rx="5" fill="#D7CFC0"/>
+<path d="M 318 262 h 564 a 12 12 0 0 1 12 12 v 238 a 12 12 0 0 1 -12 12 h -564 a 12 12 0 0 1 -12 -12 v -238 a 12 12 0 0 1 12 -12 z" fill="#F2D9A6" stroke="#1B2733" stroke-width="3"/>
+<text x="600" y="400" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">press kit</text>
+<circle cx="830" cy="470" r="20" fill="#F7F2E8" stroke="#2A8C82" stroke-width="3"/>
+<text x="830" y="477" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#2A8C82" text-anchor="middle" font-weight="normal" opacity="1.0">@</text>
+<text x="600" y="575" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">what we are, what we claim, what we do not</text>
+<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>
