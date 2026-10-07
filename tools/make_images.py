@@ -331,6 +331,24 @@ def path():
     return s
 
 
+def trybutton():
+    """A browser window with one button and a cursor on it: the page a stranger can use."""
+    s = ""
+    s += f'<rect x="250" y="120" width="700" height="400" rx="18" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<line x1="250" y1="172" x2="950" y2="172" stroke="{INK}" stroke-width="2.5"/>\n'
+    for i, cx in enumerate((282, 308, 334)):
+        s += f'<circle cx="{cx}" cy="146" r="7" fill="{TEAL if i == 2 else PAPER}" stroke="{INK}" stroke-width="2"/>\n'
+    s += f'<rect x="420" y="230" width="360" height="22" rx="6" fill="{LINE}"/>\n'
+    s += f'<rect x="470" y="270" width="260" height="22" rx="6" fill="{LINE}"/>\n'
+    s += f'<rect x="440" y="340" width="320" height="84" rx="14" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 393, "Try it", 34, INK)
+    s += f'<path d="M 700 410 l 0 48 l 12 -10 l 10 22 l 10 -5 l -10 -21 l 16 -1 z" fill="{PAPER}" stroke="{INK}" stroke-width="2.5" stroke-linejoin="round"/>\n'
+    s += node(880, 470, 22, PAPER, TEAL, 3)
+    s += text(880, 477, "0", 20, TEAL, sans=True)
+    s += text(600, 575, "a test network: real steps, no real money", 24, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -346,6 +364,7 @@ MOTIFS = {
     "five-doors": (doors, "Five doors in a row, one for each kind of reader"),
     "a-little-guy-with-your-credit-card": (littleguy, "A round bird avatar beside a bank card and a key"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
+    "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
 }
 
 

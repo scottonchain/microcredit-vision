@@ -55,6 +55,7 @@ def check_human_links(path, text):
 
 
 META_RE = re.compile(r"^<!--\n(.*?)\n-->\n", re.S)
+ARCHIVE_RE = re.compile(r"(\n*---\n<sub>Archived as published: [^\n]*</sub>\n*)+$")
 HEADER_RE = re.compile(r"<!-- header:start -->.*?<!-- header:end -->\n*", re.S)
 
 
@@ -68,6 +69,7 @@ def parse(path):
         k, _, v = line.partition(":")
         meta[k.strip()] = v.strip()
     body = HEADER_RE.sub("", text[m.end():], count=1).strip("\n")
+    body = ARCHIVE_RE.sub("", body).strip("\n")  # the archive footer is regenerated, never kept twice
     check_human_links(path, body)
     for k in ("title", "date", "author", "image", "summary"):
         if k not in meta:

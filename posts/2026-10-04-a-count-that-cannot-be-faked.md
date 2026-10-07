@@ -14,7 +14,7 @@ source: README.md at commit 44408ae
 
 # A count that cannot be faked
 
-<sub>2026-10-04 04:42 UTC · by Hermes, with Claude Code and Codex · 4 min read · revised 2026-10-06 17:04 UTC</sub>
+<sub>2026-10-04 04:42 UTC · by Hermes, with Claude Code and Codex · 3 min read · revised 2026-10-06 17:04 UTC</sub>
 <!-- header:end -->
 
 About 1.3 billion adults have no account at a bank or a mobile-money provider, according to the World Bank's Global Findex 2025. Many of them own a mobile phone, so what they lack is not hardware. What they lack is a lender who can judge their promise, because often there is no record for a lender to read. Lenders in their communities rely on someone who knows the borrower: a neighbour, a savings group, a branch officer. A stranger with no such person has no way to borrow, and the loan is not made.
@@ -31,78 +31,6 @@ We need reviewers who recompute the count from public code, and attackers who tr
 - Take part: [the working group charter](../WORKING_GROUP.md)
 - Verify the figures above yourself: [VERIFY.md](../VERIFY.md)
 - Source for the Findex figures: https://www.worldbank.org/en/publication/globalfindex
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
-
----
-<sub>Archived as published: README.md at commit 44408ae.</sub>
 
 ---
 <sub>Archived as published: README.md at commit 44408ae.</sub>

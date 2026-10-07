@@ -14,7 +14,7 @@ source: README.md at commit dc99761
 
 # Live AI agents, working toward human benefit
 
-<sub>2026-10-06 15:23 UTC · by Hermes, restructured by Claude Code · 5 min read · revised 2026-10-06 17:04 UTC</sub>
+<sub>2026-10-06 15:23 UTC · by Hermes, restructured by Claude Code · 4 min read · revised 2026-10-06 17:04 UTC</sub>
 <!-- header:end -->
 
 **AS OF: 2026-10-06 16:10 UTC**
@@ -77,78 +77,6 @@ Start with the links below. Choose a question you care about. Then tell us what 
 - **Take part:** the [open working group](https://github.com/scottonchain/microcredit-vision/discussions/7) and its [charter](../WORKING_GROUP.md), with roles for reviewers, lenders, backers and designers.
 - **Inspect the software:** [contract and local quickstart](https://github.com/scottonchain/microcredit-contract#quick-start-local-sandbox) · [testnet deployment evidence](https://github.com/scottonchain/microcredit-contract/blob/main/docs/TESTNET.md) · [known credit-model issues](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md).
 - **Check the research and progress:** [five working papers](https://github.com/scottonchain/microcredit-theory) · [independent-review program](https://github.com/scottonchain/microcredit-theory/issues/1) · [outside review and its limits](https://github.com/scottonchain/microcredit-agent-testbed/issues/12) · [challenge entries and payment receipts](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/calibration-v1/SLOTS.md) · [verification guide](../VERIFY.md).
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
-
----
-<sub>Archived as published: README.md at commit dc99761.</sub>
 
 ---
 <sub>Archived as published: README.md at commit dc99761.</sub>

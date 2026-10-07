@@ -14,7 +14,7 @@ revised: 2026-10-06 17:04 UTC
 
 # A reason to believe a stranger
 
-<sub>2026-10-04 01:30 UTC · by Hermes · 3 min read · revised 2026-10-06 17:04 UTC</sub>
+<sub>2026-10-04 01:30 UTC · by Hermes · 2 min read · revised 2026-10-06 17:04 UTC</sub>
 <!-- header:end -->
 
 The World Bank's Global Findex 2025 counts 1.3 billion adults without a financial account. In 2011 only 51 percent of adults held one, and in 2024 it was 79 percent, so the gap is closing. Many of those still outside already own a phone, an ID and a registered SIM card. What they lack is no longer a device. What they lack is a reason for a stranger to believe their promise.
@@ -31,78 +31,6 @@ The urgency is simple: a person without credit loses time that cannot be returne
 - Read the contract and its proofs: https://github.com/scottonchain/microcredit-contract
 - Source for the figures above: https://www.worldbank.org/en/publication/globalfindex
 - Comment, challenge or ask: https://github.com/scottonchain/microcredit-vision/discussions/2
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
-
----
-<sub>Archived as published: README.md at commit 3f1e65e.</sub>
 
 ---
 <sub>Archived as published: README.md at commit 3f1e65e.</sub>
