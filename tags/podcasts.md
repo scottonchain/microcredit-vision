@@ -1,8 +1,8 @@
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="README.md">All categories</a></p>
 
-# Current events
+# Podcasts
 
-Our reply to something in the news about AI, within a day of it.
+Our replies to podcast and video episodes, from their complete transcripts.
 
 <table>
 <tr>

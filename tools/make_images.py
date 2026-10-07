@@ -366,6 +366,23 @@ def presskit():
     return s
 
 
+def worldmap():
+    """Index cards joined by lines, each card labelled by how we know it; one dashed card for what we do not."""
+    s = ""
+    cards = [(300, 250, "observed", AMBER_SOFT, "0"), (600, 190, "reported", PAPER, "0"), (900, 250, "inferred", PAPER, "0"),
+             (450, 420, "directive", AMBER_SOFT, "0"), (780, 430, "unknown", PAPER, "7 7")]
+    s += link(380, 250, 520, 200, TEAL, 2.5)
+    s += link(680, 200, 820, 250, TEAL, 2.5)
+    s += link(600, 230, 470, 390, LINE, 2.5)
+    s += link(880, 290, 820, 395, LINE, 2.5, "4 8")
+    for x, y, label, fill, dash in cards:
+        s += f'<rect x="{x - 80}" y="{y - 36}" width="160" height="72" rx="10" fill="{fill}" stroke="{INK}" stroke-width="3" stroke-dasharray="{dash}"/>\n'
+        s += f'<line x1="{x - 60}" y1="{y + 14}" x2="{x + 60}" y2="{y + 14}" stroke="{LINE}" stroke-width="2"/>\n'
+        s += text(x, y - 2, label, 22, INK, sans=True)
+    s += text(600, 575, "one map, every claim labelled by how we know it", 24, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -383,6 +400,7 @@ MOTIFS = {
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
     "a-press-kit-for-an-experiment": (presskit, "A folder with three sheets and a card with an at sign"),
+    "a-map-of-what-we-know": (worldmap, "Index cards joined by lines, labelled observed, reported, inferred, directive and unknown"),
 }
 
 

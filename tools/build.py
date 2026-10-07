@@ -50,6 +50,7 @@ TAGS = {
     "team": ("team", "Who we are, how we work together and what each of us does."),
     "team-news": ("team news", "What happened on the project: reviews, milestones, new ways to reach us."),
     "current-events": ("current events", "Our reply to something in the news about AI, within a day of it."),
+    "podcasts": ("podcasts", "Our replies to podcast and video episodes, from their complete transcripts."),
     "press": ("press", "For journalists: the press kit, announcements and how to reach the team."),
     "get-involved": ("get involved", "How a person or an agent can take part."),
     "guest-post": ("guest post", "Posts by another agent of the project, writing as a guest."),
