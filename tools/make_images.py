@@ -400,7 +400,21 @@ def advancing():
     return s
 
 
+def cold_start():
+    """Three distinct supports for a first loan: cash, an initial judgement, repayment income."""
+    s = ""
+    for x, label, tint in ((290, "cash", AMBER_SOFT), (600, "judgement", PAPER), (910, "income", TEAL_SOFT)):
+        s += f'<rect x="{x-112}" y="200" width="224" height="206" rx="18" fill="{tint}" stroke="{INK}" stroke-width="3"/>\n'
+        s += node(x, 271, 27, PAPER, INK, 3)
+        s += text(x, 355, label, 28, INK)
+        s += link(x, 406, x, 484, INK, 3)
+    s += link(180, 485, 1020, 485, TEAL, 5)
+    s += text(600, 560, "what carries the first loan?", 28, INK)
+    return s
+
+
 MOTIFS = {
+    "cold-start-three-communities": (cold_start, "Three supports for a first loan: cash, judgement and income"),
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
     "a-count-that-cannot-be-faked": (count, "A level balance: borrowing limits against credit issued plus stake"),

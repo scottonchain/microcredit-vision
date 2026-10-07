@@ -60,6 +60,10 @@ WIDGET_SIZE = 6
 SPACING_FROM = datetime(2026, 10, 7, 13, 0, tzinfo=timezone.utc)
 SPACING = timedelta(hours=18)
 SPACING_EXEMPT = {"current-events"}
+# One named guest report, directly requested with autonomous publication authority.
+# Codex makes this narrow editorial exception; it still counts for later spacing.
+DIRECT_GUEST_SPACING_EXCEPTION = "2026-10-07-money-is-only-one-part-of-a-cold-start"
+
 
 # The blog is written for people. Links to documents written for AI agents do not belong in it
 # (operator direction, 2026-10-06); the agents' entry point is AGENTS.md in the testbed repository.
@@ -131,8 +135,11 @@ def spacing_exempt(p):
     """A reply to current events is exempt from the spacing rule in every category it carries, so that it can carry
     its true categories (a reply about AI alignment is filed under ai alignment whatever was posted there lately;
     operator direction, 2026-10-07). Only the rule is waived for it; it still counts as the last post in its categories
-    for the posts that follow."""
-    return bool(SPACING_EXEMPT & set(p["tag_list"]))
+    for the posts that follow. The one named direct guest report below is separately excepted."""
+    return bool(SPACING_EXEMPT & set(p["tag_list"])) or (
+        p["slug"] == DIRECT_GUEST_SPACING_EXCEPTION and p["author"] == "Codex"
+        and "guest-post" in p["tag_list"]
+    )
 
 
 def check_spacing(posts):
