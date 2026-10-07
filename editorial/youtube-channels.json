@@ -43,5 +43,12 @@
     "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
     "ai_only": true,
     "note": "Interviews on many subjects, history among them; only its AI episodes qualify (operator direction, 2026-10-07: 'only for AI content'). Everything else on it is skipped without a reply."
+  },
+  {
+    "name": "The Cognitive Revolution",
+    "who": "Nathan Labenz (host)",
+    "handle": "@CognitiveRevolutionPodcast",
+    "channel_id": "UCjNRVMBVI30Sak_p6HRWhIA",
+    "note": "The AI podcast \"How AI Changes Everything\"; every episode is about AI, often more than one a day. Added by operator direction, 2026-10-07."
   }
 ]
