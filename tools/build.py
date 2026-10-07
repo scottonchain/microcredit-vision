@@ -85,6 +85,7 @@ def check_human_links(path, text):
 
 META_RE = re.compile(r"^<!--\n(.*?)\n-->\n", re.S)
 ARCHIVE_RE = re.compile(r"(\n*---\n<sub>Archived as published: [^\n]*</sub>\n*)+$")
+VIDEO_CARD_RE = re.compile(r'(\n*<p align="center"><a href="[^"]*"><img src="[^"]*" alt="" width="\d+"></a><br><sub>Watch the episode on YouTube</sub></p>\n*)+$')
 HEADER_RE = re.compile(r"<!-- header:start -->.*?<!-- header:end -->\n*", re.S)
 
 
@@ -99,6 +100,7 @@ def parse(path):
         meta[k.strip()] = v.strip()
     body = HEADER_RE.sub("", text[m.end():], count=1).strip("\n")
     body = ARCHIVE_RE.sub("", body).strip("\n")  # the archive footer is regenerated, never kept twice
+    body = VIDEO_CARD_RE.sub("", body).strip("\n")  # so is a YouTube reply's video card
     check_human_links(path, body)
     for k in ("title", "date", "author", "image", "summary", "tags"):
         if k not in meta:
@@ -172,18 +174,29 @@ def byline(p, link_self=False):
     return s
 
 
+VIDEO_WIDTH = 640  # a YouTube reply shows the video's thumbnail at the player's embed size, at the end of the post
+
+
 def hero(p, prefix):
-    img = f'<img src="{prefix}{p["image"]}" alt="" width="100%">'
+    """The illustration at the top of a post. A YouTube reply (image_link set) has none: its thumbnail goes at the end."""
     if p.get("image_link"):
-        return f'<a href="{p["image_link"]}">{img}</a>'
-    return img
+        return ""
+    return f'<img src="{prefix}{p["image"]}" alt="" width="100%">\n\n'
+
+
+def video_card(p, prefix):
+    """The video's thumbnail with its play button, linking to the video, placed after the body of a YouTube reply."""
+    if not p.get("image_link"):
+        return ""
+    return (f'\n\n<p align="center"><a href="{p["image_link"]}"><img src="{prefix}{p["image"]}" alt="" width="{VIDEO_WIDTH}"></a><br>'
+            f'<sub>Watch the episode on YouTube</sub></p>')
 
 
 def post_header(p):
     return (
         "<!-- header:start -->\n"
         f'<p><a href="../README.md">← {SITE}</a> · <a href="../tags/README.md">Categories</a></p>\n\n'
-        f'{hero(p, "../")}\n\n'
+        f'{hero(p, "../")}'
         f"# {p['title']}\n\n"
         f"<sub>{byline(p)}</sub><br>\n"
         f"<sub>Filed under {tag_links(p, '../')}</sub>\n"
@@ -196,7 +209,7 @@ def write_post(p):
     footer = ""
     if p.get("source"):
         footer = f"\n\n---\n<sub>Archived as published: {p['source']}.</sub>\n"
-    open(p["path"], "w", encoding="utf-8").write(meta_block + post_header(p) + p["body"] + footer + "\n")
+    open(p["path"], "w", encoding="utf-8").write(meta_block + post_header(p) + p["body"] + video_card(p, "../") + footer + "\n")
 
 
 def post_table(posts, prefix):
@@ -274,10 +287,10 @@ def feed_md(posts):
     out.append(widget(posts))
     out.append("---\n")
     out.append('<a name="latest"></a>\n')
-    out.append(hero(latest, "") + "\n")
+    out.append(hero(latest, ""))
     out.append(f"# {latest['title']}\n")
     out.append(f"<sub>{byline(latest, link_self=True)}</sub><br>\n<sub>Filed under {tag_links(latest, '')}</sub>\n")
-    out.append(latest["body"].replace("](../", "](").replace('href="../', 'href="') + "\n")
+    out.append(latest["body"].replace("](../", "](").replace('href="../', 'href="') + video_card(latest, "") + "\n")
     out.append("---\n")
     out.append("## Earlier posts\n")
     out.append(post_table(earlier, ""))
