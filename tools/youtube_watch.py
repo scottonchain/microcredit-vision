@@ -55,7 +55,19 @@ def scan():
             out.append({"channel": ch["name"], "error": str(e)})
             continue
         root = ET.fromstring(xml)
-        for entry in root.findall("a:entry", ns):
+        entries = root.findall("a:entry", ns)
+        # A channel may carry min_hours_between_replies: its next reply is open only that long after the latest
+        # reply to any of its feed entries (the registry stores the reply time per video).
+        open_at = None
+        limit = ch.get("min_hours_between_replies")
+        if limit:
+            for entry in entries:
+                rec = answered.get(entry.findtext("yt:videoId", "", ns))
+                if rec and rec.get("answered"):
+                    t = datetime.strptime(rec["answered"], "%Y-%m-%d %H:%M UTC").replace(tzinfo=timezone.utc) + timedelta(hours=limit)
+                    if t > now and (open_at is None or t > open_at):
+                        open_at = t
+        for entry in entries:
             vid = entry.findtext("yt:videoId", "", ns)
             published = datetime.fromisoformat(entry.findtext("a:published", "", ns).replace("Z", "+00:00"))
             age = now - published
@@ -67,6 +79,8 @@ def scan():
                 "age_hours": round(age.total_seconds() / 3600, 1),
                 "in_window": age <= WINDOW,
                 "answered": answered.get(vid, {}).get("post"),
+                "channel_limit_hours": limit,
+                "channel_open_at": open_at.strftime("%Y-%m-%d %H:%M UTC") if open_at else None,
                 "description": (entry.findtext("media:group/media:description", "", ns) or "")[:400],
             })
     out.sort(key=lambda e: e.get("published", ""), reverse=True)
