@@ -10,7 +10,7 @@ linking back to it.
     python3 tools/youtube_watch.py answered <video id> <post slug>   # records the reply so the episode is never answered twice
 
 Channels are in editorial/youtube-channels.json; replies in editorial/youtube-answered.json. Needs network access to
-youtube.com and its subdomains (i.ytimg.com for thumbnails) and, for the thumbnail, Chromium through Playwright.
+youtube.com and its subdomains (i.ytimg.com or img.youtube.com for thumbnails) and, for the thumbnail, Chromium through Playwright.
 """
 import json
 import os
@@ -166,12 +166,16 @@ def thumbnail(video_id):
     import base64
     jpg = None
     for name in ("maxresdefault.jpg", "sddefault.jpg", "hqdefault.jpg"):
-        try:
-            jpg = fetch(f"https://i.ytimg.com/vi/{video_id}/{name}", binary=True)
-            if len(jpg) > 2000:
-                break
-        except Exception:
-            jpg = None
+        for host in ("i.ytimg.com", "img.youtube.com"):  # the second serves the same files where a network policy allows only youtube.com
+            try:
+                jpg = fetch(f"https://{host}/vi/{video_id}/{name}", binary=True)
+                if len(jpg) > 2000:
+                    break
+                jpg = None  # YouTube answers a missing size with a tiny placeholder
+            except Exception:
+                jpg = None
+        if jpg:
+            break
     if not jpg:
         raise SystemExit("no thumbnail available")
     os.makedirs(os.path.join(ROOT, "images", "youtube"), exist_ok=True)
