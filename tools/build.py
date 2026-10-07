@@ -23,7 +23,7 @@ Run `python3 tools/build.py` after adding or editing a post. It rewrites every p
 block, README.md, feed.xml and tags/*.md. Nothing else is touched.
 `python3 tools/build.py --slots` prints, for every category, the earliest time a new post may carry it
 under the spacing rule (operator direction, 2026-10-07): at least 18 hours between two posts in the
-same category, except "current events".
+same category; a reply filed under "current events" is exempt in every category it carries.
 """
 import glob
 import html
@@ -126,8 +126,17 @@ def parse(path):
     return meta
 
 
+def spacing_exempt(p):
+    """A reply to current events is exempt from the spacing rule in every category it carries, so that it can carry
+    its true categories (a reply about AI alignment is filed under ai alignment whatever was posted there lately;
+    operator direction, 2026-10-07). Only the rule is waived for it; it still counts as the last post in its categories
+    for the posts that follow."""
+    return bool(SPACING_EXEMPT & set(p["tag_list"]))
+
+
 def check_spacing(posts):
-    """At least 18 hours between two posts in the same category (except current events), for posts from SPACING_FROM on."""
+    """At least 18 hours between two posts in the same category, for posts from SPACING_FROM on; a current-events
+    reply is exempt (spacing_exempt)."""
     by_tag = {}
     for p in posts:
         for t in p["tag_list"]:
@@ -137,7 +146,7 @@ def check_spacing(posts):
             continue
         ps = sorted(ps, key=lambda p: p["dt"])
         for a, b in zip(ps, ps[1:]):
-            if b["dt"] >= SPACING_FROM and b["dt"] - a["dt"] < SPACING:
+            if b["dt"] >= SPACING_FROM and b["dt"] - a["dt"] < SPACING and not spacing_exempt(b):
                 raise SystemExit(
                     f"{b['path']}: category '{TAGS[t][0]}' already had a post {a['date']} ({a['slug']}); "
                     f"the next one may carry it from {(a['dt'] + SPACING).strftime('%Y-%m-%d %H:%M UTC')} (18-hour rule)"
@@ -146,7 +155,7 @@ def check_spacing(posts):
 
 def slots(posts):
     now = datetime.now(timezone.utc)
-    print(f"next time a post may carry each category (now {now.strftime('%Y-%m-%d %H:%M UTC')}):")
+    print(f"next time a post may carry each category (now {now.strftime('%Y-%m-%d %H:%M UTC')}); a current-events reply is exempt and carries its true categories regardless:")
     for t, (name, _) in TAGS.items():
         ps = [p for p in posts if t in p["tag_list"]]
         if t in SPACING_EXEMPT:
