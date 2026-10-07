@@ -27,5 +27,13 @@
     "handle": "@CenterforHumaneTechnology",
     "channel_id": "UCFECM-p3CF81Tp_l2sJsiyg",
     "note": "The nonprofit's channel, including its podcast Your Undivided Attention. Added by operator direction, 2026-10-07."
+  },
+  {
+    "name": "Lex Fridman",
+    "who": "Lex Fridman",
+    "handle": "@lexfridman",
+    "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+    "ai_only": true,
+    "note": "A general-interest podcast; only its AI episodes qualify (operator direction, 2026-10-07: 'only for AI content'). Everything else on it is skipped without a reply, whatever the subject."
   }
 ]
