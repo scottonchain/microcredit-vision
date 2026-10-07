@@ -15,15 +15,17 @@
 <rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
 <line x1="150" y1="430" x2="1050" y2="430" stroke="#1B2733" stroke-width="3"/>
 <rect x="640" y="300" width="180" height="130" rx="10" fill="#F2D9A6" stroke="#1B2733" stroke-width="3"/>
-<circle cx="330" cy="330" r="18" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
-<path d="M 348 330 q 60 -10 120 -5" stroke="#1B2733" stroke-width="7" stroke-linecap="round" fill="none"/>
-<path d="M 468 325 l 18 -6 l 4 14 l -18 2" fill="#1B2733"/>
-<circle cx="430" cy="380" r="18" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
-<path d="M 448 380 q 60 -10 120 -5" stroke="#1B2733" stroke-width="7" stroke-linecap="round" fill="none"/>
-<path d="M 568 375 l 18 -6 l 4 14 l -18 2" fill="#1B2733"/>
+<text x="730" y="372" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">AI</text>
+<circle cx="470" cy="300" r="18" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<path d="M 470 318 L 495 370 L 465 410" stroke="#1B2733" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 495 370 L 500 410" stroke="#1B2733" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M 478 340 L 640 355" stroke="#1B2733" stroke-width="7" stroke-linecap="round" fill="none"/>
+<circle cx="540" cy="320" r="18" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<path d="M 540 338 L 565 390 L 535 430" stroke="#1B2733" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 565 390 L 570 430" stroke="#1B2733" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M 548 360 L 640 375" stroke="#1B2733" stroke-width="7" stroke-linecap="round" fill="none"/>
 <line x1="840" y1="365" x2="960" y2="365" stroke="#2A8C82" stroke-width="4" stroke-linecap="round" opacity="1.0"/>
 <path d="M 960 353 l 26 12 l -26 12 z" fill="#2A8C82"/>
-<text x="730" y="372" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">AI</text>
 <text x="600" y="575" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">who is doing the advancing?</text>
 <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
 </svg>

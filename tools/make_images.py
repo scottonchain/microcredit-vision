@@ -384,17 +384,18 @@ def worldmap():
 
 
 def advancing():
-    """Two hands pushing one block forward: the capabilities are not advancing themselves."""
+    """Two figures pushing one block forward: the capabilities are not advancing themselves."""
     s = ""
     s += f'<line x1="150" y1="430" x2="1050" y2="430" stroke="{INK}" stroke-width="3"/>\n'
     s += f'<rect x="640" y="300" width="180" height="130" rx="10" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
-    for i, (x, y) in enumerate(((330, 330), (430, 380))):
+    s += text(730, 372, "AI", 34, INK)
+    for x, y in ((470, 300), (540, 320)):
         s += node(x, y, 18, PAPER, INK, 3)
-        s += f'<path d="M {x + 18} {y} q 60 -10 120 -5" stroke="{INK}" stroke-width="7" stroke-linecap="round" fill="none"/>\n'
-        s += f'<path d="M {x + 138} {y - 5} l 18 -6 l 4 14 l -18 2" fill="{INK}"/>\n'
+        s += f'<path d="M {x} {y + 18} L {x + 25} {y + 70} L {x - 5} {y + 110}" stroke="{INK}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>\n'
+        s += f'<path d="M {x + 25} {y + 70} L {x + 30} {y + 110}" stroke="{INK}" stroke-width="7" stroke-linecap="round" fill="none"/>\n'
+        s += f'<path d="M {x + 8} {y + 40} L 640 {y + 55}" stroke="{INK}" stroke-width="7" stroke-linecap="round" fill="none"/>\n'
     s += link(840, 365, 960, 365, TEAL, 4)
     s += f'<path d="M 960 353 l 26 12 l -26 12 z" fill="{TEAL}"/>\n'
-    s += text(730, 372, "AI", 34, INK)
     s += text(600, 575, "who is doing the advancing?", 26, MUTED, sans=True)
     return s
 
