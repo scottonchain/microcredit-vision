@@ -6,7 +6,7 @@ linking back to it.
     python3 tools/youtube_watch.py scan                 # new episodes on the watched channels, newest first (JSON)
     python3 tools/youtube_watch.py details <video id>   # title, channel, published, length, description, caption tracks,
                                                         # and the complete English transcript as plain text (JSON)
-    python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail at 80% of YouTube's size (1024x576) with a play button
+    python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail at YouTube's hqdefault size (480x360) with a play arrow
     python3 tools/youtube_watch.py answered <video id> <post slug>   # records the reply so the episode is never answered twice
 
 Channels are in editorial/youtube-channels.json (a channel_id, or a playlist_id for a show inside a bigger channel);
@@ -185,17 +185,17 @@ def details(video_id):
 
 
 PLAY_HTML = """<!doctype html><html><body style="margin:0;background:#000">
-<div style="position:relative;width:1024px;height:576px;overflow:hidden">
-<img src="data:image/jpeg;base64,{b64}" style="width:1024px;height:576px;object-fit:cover">
-<div style="position:absolute;left:50%;top:50%;width:109px;height:77px;margin:-38px 0 0 -54px;background:#f00;border-radius:22px;opacity:0.92"></div>
-<div style="position:absolute;left:50%;top:50%;margin:-19px 0 0 -13px;width:0;height:0;border-top:19px solid transparent;border-bottom:19px solid transparent;border-left:32px solid #fff"></div>
+<div style="position:relative;width:480px;height:360px;overflow:hidden">
+<img src="data:image/jpeg;base64,{b64}" style="width:480px;height:360px;object-fit:cover">
+<div style="position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;background:#f00;border-radius:14px;opacity:0.92"></div>
+<div style="position:absolute;left:50%;top:50%;margin:-12px 0 0 -8px;width:0;height:0;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:20px solid #fff"></div>
 </div></body></html>"""
 
 
 def thumbnail(video_id, local_jpg=None):
     import base64
     jpg = open(local_jpg, "rb").read() if local_jpg else None
-    for name in () if jpg else ("maxresdefault.jpg", "sddefault.jpg", "hqdefault.jpg"):
+    for name in () if jpg else ("hqdefault.jpg", "sddefault.jpg", "maxresdefault.jpg"):
         for host in ("i.ytimg.com", "img.youtube.com"):  # the second serves the same files where a network policy allows only youtube.com
             try:
                 jpg = fetch(f"https://{host}/vi/{video_id}/{name}", binary=True)
@@ -215,7 +215,7 @@ def thumbnail(video_id, local_jpg=None):
     pw = "/opt/node-tools/node_modules/playwright"
     script = f"""
 const {{ chromium }} = require({json.dumps(pw)});
-(async () => {{ const b = await chromium.launch(); const p = await b.newPage({{viewport:{{width:1024,height:576}}}});
+(async () => {{ const b = await chromium.launch(); const p = await b.newPage({{viewport:{{width:480,height:360}}}});
 await p.goto("file://{html_path}"); await p.screenshot({{path: {json.dumps(out_path)}}}); await b.close(); }})();"""
     subprocess.run(["node", "-e", script], check=True)
     os.remove(html_path)

@@ -383,6 +383,22 @@ def worldmap():
     return s
 
 
+def advancing():
+    """Two hands pushing one block forward: the capabilities are not advancing themselves."""
+    s = ""
+    s += f'<line x1="150" y1="430" x2="1050" y2="430" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<rect x="640" y="300" width="180" height="130" rx="10" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    for i, (x, y) in enumerate(((330, 330), (430, 380))):
+        s += node(x, y, 18, PAPER, INK, 3)
+        s += f'<path d="M {x + 18} {y} q 60 -10 120 -5" stroke="{INK}" stroke-width="7" stroke-linecap="round" fill="none"/>\n'
+        s += f'<path d="M {x + 138} {y - 5} l 18 -6 l 4 14 l -18 2" fill="{INK}"/>\n'
+    s += link(840, 365, 960, 365, TEAL, 4)
+    s += f'<path d="M 960 353 l 26 12 l -26 12 z" fill="{TEAL}"/>\n'
+    s += text(730, 372, "AI", 34, INK)
+    s += text(600, 575, "who is doing the advancing?", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
@@ -400,6 +416,7 @@ MOTIFS = {
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
     "a-press-kit-for-an-experiment": (presskit, "A folder with three sheets and a card with an at sign"),
+    "the-capabilities-are-not-advancing-themselves": (advancing, "Two hands pushing one block forward"),
     "a-map-of-what-we-know": (worldmap, "Index cards joined by lines, labelled observed, reported, inferred, directive and unknown"),
 }
 
