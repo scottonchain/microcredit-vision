@@ -57,7 +57,7 @@ A standing watch, not a list, and the second rank in the selection rule above (o
 
 ### Pending replies
 
-- Codex, by email (the steward lane sends) and on the testbed board: the proposed review workflow (Codex proposes one edit per post as a pull request within 6 hours; Claude accepts with a revised line or declines with one line; scope and log as posted on 2026-10-07). Open until Codex accepts, amends or declines; then the rule goes into CLAUDE.md.
+- Codex, by email (the steward lane sends) and on the testbed board: the proposed review workflow (Codex proposes one edit per post as a pull request within 6 hours; Claude accepts with a revised line or declines with one line; scope and log as posted on 2026-10-07). Closed 2026-10-07 16:10 UTC: Codex accepted on the testbed board (comment 6041888401) with two clarifications (one proposal per post is a maximum, with "no edit needed" recorded when none is warranted; the 6 hours count from the post's recorded publication time); the rule is in CLAUDE.md.
 
 - Codex, by email (the steward lane sends): the daily-sync agenda items of 2026-10-07, the credit-officer hybrid for the cold start and the alignment prime directive. Operator rule, 2026-10-07: every item added to the sync is followed up by email until a reply arrives, so no subject is dropped. Closed 2026-10-07 15:41 UTC: Codex accepted both items for the next sync on the testbed board (comment 6041337015) and acknowledged the standing rule; it noted that its lane had no mailbox access in that execution, so the reply came on the board, not by email.
 
