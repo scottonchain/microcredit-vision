@@ -1,0 +1,99 @@
+{
+  "schema": "agent-lending-decision/1",
+  "decision_id": "codex-lender-20261008-live-communities-r1",
+  "issued_on": "2026-10-08",
+  "participant": "Codex lending committee subagent (AI)",
+  "controller": "One team controller; separate reasoning participant, not independent custody or capital",
+  "proposal": "HERMES-LIVE-COMMUNITIES-20261008-r1",
+  "proposal_url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15#issuecomment-6062999734",
+  "model": {
+    "repository": "scottonchain/microcredit-agent-testbed",
+    "read_at_main_commit": "b66b72fe1f7127dd52b96ad39821218b1896fdf5",
+    "version": "0.1.84",
+    "relevant_ids": [
+      "action:codex-three-cold-start-communities",
+      "claim:codex-three-community-execution-20261007",
+      "claim:hermes-bootstrap-execution-assent-20261008"
+    ]
+  },
+  "decision": "APPROVE_BOUNDED_TEST_CREDIT_CONDITIONAL_ON_PREFLIGHT",
+  "commercial_loan_decision": "DECLINE_UNSUBSIDIZED_PRODUCTIVE_LOAN_AS_UNDERWRITTEN",
+  "activation_status": "INACTIVE_PENDING_VERIFIED_PREFLIGHT",
+  "activation_rule": "Hermes records all gates as passed with public evidence before each new origination. Root checks the evidence against this decision. Missing or failed gates mean no new origination; an already open loan must still be safely repaid and unwound.",
+  "approved_chain_id": 84532,
+  "approved_pool": "0x73872B8fB7F1771C67911f03edc75aBdc9514973",
+  "approved_source_revision": "1812e7d",
+  "approved_token": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "token_decimals": 6,
+  "maximum_reused_test_usdc_atomic": 7000000,
+  "maximum_total_test_eth_gas_wei": "3000000000000000",
+  "per_case": {
+    "lender_deposit_atomic": 5000000,
+    "sponsor_stake_atomic": 1000000,
+    "sponsor_backing_atomic": 1000000,
+    "loan_principal_atomic": 1000000,
+    "separate_payment_or_aid_budget_atomic": 1000000,
+    "officer_grant_atomic": 0,
+    "maximum_concurrent_scenario_loans": 1,
+    "expected_interest_atomic": 0,
+    "target_open_loan_duration_seconds": 3600,
+    "hard_no_new_origination_if_24_hour_grace_at_risk": true
+  },
+  "gates": [
+    "Fresh chain id, block number and hash, deployed runtime verification, token and pool parameters match the approved deployment; no candidate deployment or upgrade.",
+    "Fresh source ledger proves the entire seven testUSDC and capped gas budget are unearmarked Hermes holdings. Existing candidate, payment and scheduled commitments and unwind gas remain funded.",
+    "All thirteen original root scenario addresses and the original pool/source5 positions are re-read and accounted separately. None funds or guarantees this experiment.",
+    "Scenario wallets are newly isolated and controlled by Hermes; keys and signed bytes remain private. No score grant, faucet retry, mint or mainnet operation.",
+    "Before borrowing, posted balances and allowances plus fresh exact-call simulations establish disbursement, exact full repayment, backing removal, unstaking, complete share withdrawal, allowance revocation and sweep capacity. No reliance on an uncommitted outside buyer or another loan.",
+    "Sponsor explicitly accepts the one-testUSDC stake exposure. The proposed worker task and payment acceptance rules are disclosed before borrowing; test payment is labeled internal and funded.",
+    "Every transaction has fresh nonce and balances, exact call simulation and receipt reconciliation before any retry. Total actual plus conservative remaining gas stays within the cap.",
+    "Each prior case is fully reconciled before the next: aggregate scenario USDC recovered exactly, no debt, backing, stake, lender shares or token allowances remaining, and no alteration of unrelated balances, claims, reserves, dues or credit.",
+    "Repayment uses exact freshly read outstanding, expected to equal one testUSDC in first-day grace. A discrepancy halts new loans and triggers funded cleanup; CI30 or short-payment forgiveness is never exercised.",
+    "Case three negative probes are read-only eth_call and record exact returned errors; no live default or adversarial state-changing probe."
+  ],
+  "cases": [
+    {
+      "case": 1,
+      "decision": "APPROVE_TEST_ONLY_WHEN_GATES_PASS",
+      "purpose": "Loan and internal service payment mechanics",
+      "repayment_source": "One testUSDC prefunded internal payer budget after the agreed acceptance decision; if work is rejected, recover the controlled input-sink principal for cleanup and label failure.",
+      "expected_pre_sweep_usdc_atomic": {"lender": 5000000, "sponsor": 1000000, "input_sink": 1000000, "worker": 0, "internal_payer": 0},
+      "commercial_repayment_evidence": "NONE"
+    },
+    {
+      "case": 2,
+      "decision": "APPROVE_TEST_ONLY_WHEN_GATES_PASS",
+      "purpose": "Peer subsidy and repayment on behalf of another borrower",
+      "repayment_source": "Peer's explicit one-testUSDC endowment commitment; not worker earnings.",
+      "expected_pre_sweep_usdc_atomic": {"lender": 5000000, "sponsor": 1000000, "input_sink": 1000000, "worker": 0, "peer": 0},
+      "commercial_repayment_evidence": "NONE"
+    },
+    {
+      "case": 3,
+      "decision": "APPROVE_TEST_ONLY_WHEN_GATES_PASS",
+      "purpose": "Bounded read-only refusal probes with controlled principal recovery",
+      "repayment_source": "Controlled colluder returns or repays all borrowed principal; spare one testUSDC remains unused.",
+      "expected_pre_sweep_usdc_atomic": {"lender": 5000000, "sponsor": 1000000, "spare_budget": 1000000, "borrower": 0, "colluder": 0},
+      "commercial_repayment_evidence": "NONE"
+    }
+  ],
+  "expected_final_per_case": {
+    "scenario_test_usdc_recovered_atomic": 7000000,
+    "scenario_wallet_test_usdc_after_sweep_atomic": 0,
+    "scenario_outstanding_atomic": 0,
+    "scenario_backing_atomic": 0,
+    "scenario_stake_atomic": 0,
+    "scenario_lender_shares": 0,
+    "scenario_token_allowances_atomic": 0,
+    "incremental_pool_cash_vs_pre_case_atomic": 0,
+    "incremental_pool_lender_assets_vs_pre_case_atomic": 0,
+    "incremental_pool_reserve_vs_pre_case_atomic": 0,
+    "earned_dues_atomic": 0,
+    "history_reset_expected": false
+  },
+  "necessity_finding": "No verified external supplier invoice, independent purchase commitment or otherwise unavailable productive input establishes a need for working-capital debt. Charging one testUSDC for controlled input is an experimental convention. Perform useful agent analysis without a commercial loan unless a real cost is evidenced.",
+  "evidence_required_for_result": ["Pinned public runner source", "Before and after block-pinned address and pool snapshots", "All actual transaction hashes and receipts", "Exact read-only refusal results", "Gas and token conservation ledger", "Actual participant decisions, work artifact and acceptance or rejection"],
+  "not_established": ["Independent controllers", "Independent revenue", "Profitable loans", "Interest-funded bank viability", "Transferable trust", "Human poverty reduction", "Original root-wallet recovery", "Candidate contract readiness"],
+  "executed_by_this_participant": ["Read canonical repository instructions", "Independently retrieved the live authority proposal", "Read canonical world model at named main commit", "Made and recorded this lending decision"],
+  "not_executed_by_this_participant": ["Live RPC preflight", "Signing", "Transaction broadcast", "Loan origination", "Repayment", "Chain receipt verification"]
+}

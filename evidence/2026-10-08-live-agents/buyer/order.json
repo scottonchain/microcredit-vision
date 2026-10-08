@@ -1,0 +1,39 @@
+{
+  "order_id": "LIVE-BUYER-20261008-01",
+  "status": "provisional_pending_delivery",
+  "buyer_agent": "/root/live_buyer",
+  "worker_agent": "/root/live_worker",
+  "controller_relationship": "Separate reasoning agents under the same operator; not independent economic counterparties.",
+  "created_date_utc": "2026-10-08",
+  "source_authorization": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15#issuecomment-6062999734",
+  "deliverable": "Public evidence schema and acceptance checklist for the three authorized existing-pool live mechanics cases.",
+  "payment": {
+    "asset": "Circle testUSDC on Base Sepolia (chain ID 84532)",
+    "token": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "amount_base_units": "1000000",
+    "amount_testUSDC": "1",
+    "condition": "Explicit buyer acceptance identifying exact deliverable SHA256 digests; executor must separately pass existing funding and transaction preflight gates.",
+    "funding": "Existing authorized spare 1 testUSDC inside the total reused 7 testUSDC experiment allocation; no additional spending authority.",
+    "classification": "Internal experiment transfer of test currency with no economic value; not independent customer revenue or human income.",
+    "execution_status": "Not paid; no buyer transaction or signed transaction exists."
+  },
+  "capital_policy": {
+    "loan_required": false,
+    "reason": "Producing this evidence specification has no demonstrated incremental upfront cash cost. Do not create artificial borrowing need to satisfy a narrative.",
+    "mechanics_case_distinction": "The authorized loan-to-controlled-input-sink cycle is a separate mechanics experiment; any task payment may occur only if compatible with its already approved ledger and unwind."
+  },
+  "acceptance_requirements": [
+    "Identify the authorized deployed pool, chain and contract/source/runtime provenance without asserting that PR28 is deployed.",
+    "Require fresh block identifiers, parameter reads, full initial source/commitment ledger and custody classification; preserve original root-custodied funds and obligations separately.",
+    "Record exact public transaction hashes, receipts, status, block linkage, sender/recipient, decoded economic effects and before/after per-address and pool state.",
+    "Use integer base units; reconcile exact aggregate testUSDC before and after every case, while accounting ETH gas separately.",
+    "Require full debt/backing/stake/shares/allowance cleanup and preservation of unrelated pool balances, assets, reserve, dues and credit before admitting the next case.",
+    "Encode the 7 testUSDC and 0.003 testETH cumulative-run caps, available unwind funding and first-day repayment deadline/abort policy.",
+    "Cover all three cases and distinguish actual repayment, peer aid and compelled colluder cleanup from revenue, defaults or voluntary honesty.",
+    "Require exact read-only refusal calldata/state/block/results and distinguish intended protocol refusal from irrelevant access-control, RPC or invalid-call failure.",
+    "Clearly distinguish actual agent work/decisions, single-controller on-chain mechanics, unproven independent demand, and unproven poverty alleviation.",
+    "Include a machine-readable usable schema, understandable checklist and reproducible SHA256 digests; do not publish private keys, credentials or signed bytes."
+  ],
+  "rejection_policy": "Request concrete revisions for repairable evidence omissions. Reject unsupported live-execution or economic-success claims. A complete evidence template can be accepted as a service without accepting a future live run.",
+  "limitations": "This order does not authorize deployment, mainnet expenditure, faucet access, minting, new credentials, access-control bypass or changes to the original approved live plan."
+}

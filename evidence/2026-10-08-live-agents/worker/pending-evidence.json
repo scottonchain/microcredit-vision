@@ -1,0 +1,32 @@
+{
+  "schema_version": "live-agent-evidence/1",
+  "work_id": "HERMES-LIVE-COMMUNITIES-20261008-r1",
+  "status": "pending",
+  "chain_id": 84532,
+  "pool": "0x73872B8fB7F1771C67911f03edc75aBdc9514973",
+  "token": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "source_manifest_sha256": "049bbddd2da08f9b7f201a13a836e7175ebbca648aeea28841fd6d3f251e8081",
+  "claims": {
+    "live_mechanics_complete": false,
+    "outside_work_financed": false,
+    "independent_revenue_demonstrated": false,
+    "poverty_reduction_demonstrated": false,
+    "same_controller": true
+  },
+  "participant_decisions": [
+    {
+      "path_or_url": "source-manifest.json",
+      "sha256": "049bbddd2da08f9b7f201a13a836e7175ebbca648aeea28841fd6d3f251e8081",
+      "purpose": "Worker accepts task and declines unnecessary loan"
+    }
+  ],
+  "preflight": null,
+  "cases": [],
+  "missing_evidence": [
+    "No fresh chain preflight, transaction receipts or case snapshots independently observed by this worker."
+  ],
+  "review": {
+    "decision": "pending",
+    "artifact": null
+  }
+}

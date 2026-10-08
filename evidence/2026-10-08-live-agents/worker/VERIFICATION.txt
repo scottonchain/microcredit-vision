@@ -1,0 +1,6 @@
+All JSON files parse with Python stdlib.
+Pending and active-case examples pass limited gate.
+Relabeling either incomplete example as complete fails limited gate.
+Unknown snapshots/ledger are null until available; completed cases require artifacts and integer ledger.
+No live chain evidence authenticated.
+Full JSON Schema validator unavailable; not run.

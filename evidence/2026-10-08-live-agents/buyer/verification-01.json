@@ -1,0 +1,12 @@
+{
+  "manifest_hashes_match": false,
+  "pending_gate_errors": [],
+  "false_complete_errors": [
+    "missing evidence",
+    "preflight absent",
+    "review not accepted",
+    "three distinct cases required"
+  ],
+  "source_manifest_digest_matches": true,
+  "chain_authenticated": false
+}

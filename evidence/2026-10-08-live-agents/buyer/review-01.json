@@ -1,0 +1,22 @@
+{
+  "order_id": "LIVE-BUYER-20261008-01",
+  "reviewer_agent": "/root/live_buyer",
+  "review_date_utc": "2026-10-08",
+  "decision": "revise",
+  "reviewed_schema_sha256": "8690e949bf3db730874298b0b32c3da49752fd63ac5ca162bcb5ff6fff45bf94",
+  "reviewed_checklist_sha256": "bea84830018baa378876319cb30686b3eef1c27dc6bb589c0ee20e543413e49c",
+  "required_revision": {
+    "finding": "A pending, active or blocked case currently requires non-null before/after snapshot artifacts and a fully numeric ledger. An in-progress case cannot truthfully supply its future after-state or final ledger.",
+    "request": "Permit explicit null unknown snapshots/ledger for non-complete cases. For complete cases require the proper non-null artifact and ledger definitions. Demonstrate a partial active-case representation without invented measurements.",
+    "impact": "Missing live observations must remain distinguishable from zero and from completed measurements."
+  },
+  "source_review": {
+    "repository": "scottonchain/microcredit-contract",
+    "commit": "1812e7d2b67e159e341bbff33d6d604409eebb67",
+    "path": "packages/foundry/contracts/DecentralizedMicrocredit.sol",
+    "independently_read_functions": ["repayLoan", "getCurrentOutstandingAmount", "withdrawFunds", "_sharesForWithdrawal", "getFreeCredit", "_setBacking", "_originateLoan", "totalAssets"],
+    "result": "Inspected source supports the checklist's payer, max-withdrawal sentinel, borrow/backing predicate and totalAssets descriptions. This is source review, not verification of deployed runtime or transactions."
+  },
+  "financing_assessment": "The worker explicitly requires zero upfront cash and declines a loan. This service is not evidence that borrowing enabled outside work.",
+  "payment_status": "Not approved pending revision; no payment observed."
+}
