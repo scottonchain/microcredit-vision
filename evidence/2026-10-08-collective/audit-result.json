@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "histories_checked": 24000,
+  "seeds": 600,
+  "scenarios": 8,
+  "arms": 5,
+  "source_sha256": "526aa2e26bf57282508c19f5f4e47b58b11bb32ea784d5aedd100fce792d66e5",
+  "runs_csv_sha256": "585c9a61e462722679d08946fca4e8e73c599ae9368a064ebec431b61ee3cb71",
+  "maximum_errors_usd": {
+    "cash_conservation": 3.524291969370097e-12,
+    "economic_surplus": 3.410605131648481e-12,
+    "entrant_earnings": 3.126388037344441e-13,
+    "principal_reconciliation": 8.242295734817162e-13,
+    "loan_fee_loss_reconciliation": 0.0
+  },
+  "loan_direct_economic_parity_error": 0.0,
+  "histories_reexecuted": 120,
+  "sample_seeds": [
+    0,
+    19,
+    599
+  ],
+  "maximum_reexecution_difference": 0.0,
+  "base_loan_fee_less_writeoffs_median": -40.799403913748165,
+  "base_loan_fee_less_writeoffs_negative_fraction": 0.81,
+  "base_retrospective_extra_cost_ceiling_per_week": 33.782694449132734,
+  "base_retrospective_retained_only_cost_ceiling_per_week": 11.851723904416069,
+  "overhead_scenario_unfunded_budget_histories": 8,
+  "limitations": [
+    "Consistency checks do not validate customer demand, prices or poverty effects.",
+    "Extra fixed-cost ceilings hold jobs fixed and do not establish cash-flow feasibility.",
+    "Unpaid overhead is tracked as an unmet service budget, not deducted as creditor debt."
+  ]
+}
