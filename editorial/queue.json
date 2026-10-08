@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-08 18:16 UTC",
+  "updated": "2026-10-08 22:05 UTC",
   "items": [
     {
       "id": "why-would-your-agent-work-with-us",
@@ -175,5 +175,6 @@
     }
   ],
   "scheduled": [],
-  "replies": []
+  "replies": [],
+  "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }
