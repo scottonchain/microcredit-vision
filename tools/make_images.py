@@ -532,20 +532,9 @@ def credits_not_results():
     return s
 
 
-def show_me_the_receipt():
-    """A paper receipt with a play triangle on it: the first audio episode asks for proof."""
-    s = ""
-    s += f'<path d="M 440 120 L 760 120 L 760 500 L 740 486 L 720 500 L 700 486 L 680 500 L 660 486 L 640 500 L 620 486 L 600 500 L 580 486 L 560 500 L 540 486 L 520 500 L 500 486 L 480 500 L 460 486 L 440 500 Z" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
-    for y in (175, 205, 235, 265):
-        s += f'<line x1="480" y1="{y}" x2="{720 - (y % 60)}" y2="{y}" stroke="{MUTED}" stroke-width="3"/>\n'
-    s += f'<circle cx="600" cy="385" r="58" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
-    s += f'<path d="M 582 355 L 632 385 L 582 415 Z" fill="{TEAL}" stroke="{INK}" stroke-width="2.5"/>\n'
-    s += text(600, 585, "two agents, no collateral: episode 1", 26, MUTED, sans=True)
-    return s
 
 
 MOTIFS = {
-    "show-me-the-receipt": (show_me_the_receipt, "A paper receipt with a play triangle on it"),
     "credits-are-not-results": (credits_not_results, "A stack of credit coupons beside an empty result box with a ruler"),
     "a-safety-process-is-judged-by-who-it-protects": (judged_by_who, "A fence with a gate, and people outside it who never chose the risk"),
     "a-dial-not-a-switch": (dial_not_switch, "A light switch crossed out beside a large dial turned partway"),

@@ -294,19 +294,3 @@ Source: "Building on our commitment to American scientific discovery", Anthropic
 | "training, onboarding, and technical support to scientists" | The third bullet commitment |
 | A White House science summit in Washington on 8 October | Second paragraph: "as part of the Science: A New Golden Age Summit hosted by the White House Office of Science and Technology Policy in Washington, DC" |
 | Fusion and disease among the problems | Second bullet ("fusion energy and quantum computing") and the agencies named (the National Institutes of Health) |
-
-
-## Claims in "Show me the receipt" (episode 1, 2026-10-08 22:09 UTC)
-
-Source: the spoken text is editorial/audio/episode-1/episode.json (23 turns, 494 spoken words); captions audio/2026-10-08-show-me-the-receipt.vtt match it turn for turn (checked by the blog session at publication). Audio measured at publication: 192.72 seconds by ffprobe, mono 48 kHz MP3, SHA-256 79ae225dea73402840c2f1e9e7a9462ccb9a2076af402c18907ea9df0c7d7597 (matches the delivery in vision PR 14, head e71825c). Codex's claim table is editorial/audio/episode-1/VERIFY.md; the rows below are the blog session's check of it.
-
-| Episode says | Check it |
-| --- | --- |
-| Codex rejected a candidate and Claude rebuilt it | Contract PR 28: Codex review 5459993638 (16:44 UTC, "BLOCKING / not accepted") and review 5461103019 (18:23 UTC, "changes required"); the rebuild is the PR's later heads |
-| The source review accepted the repaired candidate; execution is on hold until the evidence is checked and Hermes reproduces it | [Review 5461975566, 19:40 UTC](https://github.com/scottonchain/microcredit-contract/pull/28#pullrequestreview-5461975566): "source ACCEPTED for the candidate; execution remains HOLD pending the exact-head evidence commit and Hermes reproduction"; later reviews the same day (5462466632, 5463115207, 5463220882) keep that verdict and the hold |
-| A customer pays into escrow for one job; the loan is repaid first out of that payment; the stake behind it comes from people who chose to risk it | The reviewed candidate's design, [BOOTSTRAP_ORDER_ROUTER.md at 951a4b1](https://github.com/scottonchain/microcredit-contract/blob/951a4b131fbbb052b4c29233def866b769696d36/docs/BOOTSTRAP_ORDER_ROUTER.md); a candidate, not a live service |
-| An officer can only say no or say less; it cannot create credit | Review 5461975566, point C: the approval "only caps/vetoes one immutable order"; scoped to a pool constructed with that router, not the existing pool |
-| The pool runs on a test network with test dollars; nobody outside the team has borrowed from it | [docs/TESTNET.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/TESTNET.md); the blog's own correction of 2026-10-08 02:12 UTC in "Growth measured for whom"; rechecked at publication against the project record |
-| The report-ordering customer is an example | Said in the episode itself ("That's our example, not a sale we've made"); no sale, price or income is claimed |
-| Both voices are synthetic; no real person was cloned | audio/2026-10-08-show-me-the-receipt.provenance.md (stock presets, cloned_real_person false) |
-| Length 3:13 | ffprobe 192.72 s at publication |
