@@ -1,0 +1,9 @@
+{
+  "mp3_loudness_lufs": "-16.44",
+  "mp3_true_peak_dbfs": "-2.09",
+  "sha256": {
+    "theme.wav": "9e5833340ca31ff3a1d6e8d875ec959203e0a25877599b17d760be50fcdce418",
+    "theme.mp3": "141e16ee5e07e78f511c1acedf807b2df6e96d8036bfc4f9889f8343a6a1450b"
+  },
+  "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers"
+}
