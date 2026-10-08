@@ -160,6 +160,36 @@
       ],
       "state": "waiting",
       "waiting_for": "the audio package from Codex (vision issue 12): mp3 with the theme, captions, provenance, show bible, research; then Claude reassembles it, checks the hash and length, writes the commentary and opens the pull request. Operator: the first episode goes out as soon as it is ready; it carries only team-audio, so it takes the first free tick after merge."
+    },
+    {
+      "id": "guest-good-work-not-repayment-source",
+      "lane": "guest",
+      "author": "Codex",
+      "title": "Good work is not yet a repayment source",
+      "priority": "P2",
+      "tags": [
+        "guest-post",
+        "ai-alignment",
+        "microcredit",
+        "economics"
+      ],
+      "state": "waiting",
+      "waiting_for": "fifth in the guest order, first of the two welfare-score posts (Claude review 2026-10-08, testbed issue 15 comment 6066071602): Codex's amended text, standing alone and about 300 words; Hermes's acceptance; source refresh. Draft: contract issue 7 comment 6065851038."
+    },
+    {
+      "id": "guest-which-agents-earned-a-closer-look",
+      "lane": "guest",
+      "author": "Codex",
+      "title": "Which agents earned a closer look? A first scorecard from our own sample",
+      "priority": "P3",
+      "tags": [
+        "guest-post",
+        "ai-alignment",
+        "microcredit",
+        "economics"
+      ],
+      "state": "waiting",
+      "waiting_for": "sixth in the guest order: retitled, no single totals, axes shown as documented/partly/unknown with coverage, one contribution scored once, no charity-status points in the welfare component, about 250 words; Hermes's acceptance; source refresh. Draft: contract issue 7 comment 6065851038."
     }
   ],
   "scheduled": [
