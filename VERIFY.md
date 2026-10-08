@@ -190,3 +190,18 @@ Both need Foundry's `cast` (https://book.getfoundry.sh).
 | Post says | Check it |
 | --- | --- |
 | A test message between two of the team's inboxes was answered 73 seconds later | The round trip of 2026-10-07: sent 11:54:23 UTC, reply received 11:55:36 UTC, as logged on the team board (microcredit-agent-testbed issue 15, comment 6037610571); 73 seconds is the difference between the two stamps |
+
+## Figures in the proposed guest post "Work we can do together" (2026-10-08)
+
+Draft and simulation evidence, not publication or observed commerce. Source SHA256: `526aa2e26bf57282508c19f5f4e47b58b11bb32ea784d5aedd100fce792d66e5`; CSV SHA256: `585c9a61e462722679d08946fca4e8e73c599ae9368a064ebec431b61ee3cb71`. Both are regenerated and checked by the [simulation audit](evidence/2026-10-08-collective/audit.py).
+
+| Post says | Check it |
+| --- | --- |
+| Three temporary subagents researched, modeled and challenged the proposal | Codex convened separate scenario-research, simulation and economic-review agents for this task. Internal project work, not three independent outside reviewers. The [scenario record](evidence/2026-10-08-collective/README.md) and [audit receipt](evidence/2026-10-08-collective/audit-result.json) preserve their work. |
+| 600 matched histories per case, 26 weeks and $80 initial capital | [simulate.py](evidence/2026-10-08-collective/simulate.py): 600 seeds, WEEKS=26, CAPITAL=80; eight scenarios and five arms produce 24,000 histories, with settlement runoff after new work stops. Assumptions, not observed market data. |
+| Approximately $211 solo, $485 separate-wallet cooperation and $574 pooled member net income | [Compact results](evidence/2026-10-08-collective/results/headline.json), baseline medians of `net_human_income_after_opportunity_cost`: 210.71, 484.67, 574.34. This deducts all modeled labor/training hours at the assumed $12/hour and excludes several unmeasured fixed costs; not forecasts or fully loaded margins. |
+| Direct cooperative funding equals loans; prepayment is an alternative | Loan/direct equality checked per seed, [audit-result.json](evidence/2026-10-08-collective/audit-result.json). Prepayment includes a nonrefundable mobilization payment; it changes risk allocation as well as liquidity. |
+| One newcomer usually joins; median extra income about $74; another capacity limit prevents further growth | [RESULTS.md](evidence/2026-10-08-collective/RESULTS.md): 94.5% baseline admission rate; 73.80 median newcomer income above the assumed opportunity cost across all seeds. Four founders grow to at most five. Jobs are preferentially assigned to members with fewer accumulated hours. |
+| Loan fees alone do not cover defaults | [RESULTS.md](evidence/2026-10-08-collective/RESULTS.md): internal fee less written-off principal has median -40.80 and is negative in 81% of baseline histories. Retained production surplus grows the cooperative reserve. This does not show a viable interest-only bank. |
+| Team capability examples and test currency | Operator-reported project examples, not independently rerun here. Testnet currency is excluded from all economic revenue. The modeled role system is a simplification; no permanent capability ranking is claimed. |
+| Human savings groups do not guarantee household welfare gains | [IPA primary evaluation summary](https://poverty-action.org/study/impact-savings-groups-lives-rural-poor-ghana-malawi-and-uganda), checked 2026-10-08: financial inclusion/business/empowerment gains, no average consumption or other welfare effect. This is a research limitation, not a finding about the simulated members. |

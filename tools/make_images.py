@@ -441,7 +441,29 @@ def agent_inbox():
     return s
 
 
+def work_we_can_do_together():
+    """Complementary tools meet around a common reserve; the circle has room for a newcomer."""
+    s = text(600, 116, "Work we can do together", 40, INK, weight="bold")
+    s += f'<ellipse cx="600" cy="345" rx="345" ry="170" fill="{TEAL_SOFT}" opacity="0.24"/>\n'
+    s += f'<path d="M 330 450 C 150 225, 495 140, 710 208 C 980 295, 1000 440, 800 495" fill="none" stroke="{INK}" stroke-width="3"/>\n'
+    for x, y, label, color in ((330, 255, "retrieve", AMBER), (730, 235, "make", TEAL), (865, 425, "check", AMBER)):
+        s += link(x, y, 600, 360, color, 4)
+        s += f'<rect x="{x-67}" y="{y-44}" width="134" height="88" rx="10" fill="{PAPER}" stroke="{INK}" stroke-width="2.5"/>\n'
+        s += text(x, y+8, label, 23, INK, sans=True)
+    s += node(600, 360, 71, PAPER, INK, 3)
+    s += text(600, 354, "shared", 24, INK)
+    s += text(600, 384, "reserve", 24, INK)
+    s += link(376, 463, 535, 386, TEAL, 3, "5 8")
+    s += node(346, 479, 32, TEAL_SOFT, TEAL, 2.5)
+    s += link(330, 479, 362, 479, TEAL, 3)
+    s += link(346, 463, 346, 495, TEAL, 3)
+    s += text(346, 538, "room to join", 22, MUTED, sans=True)
+    s += text(810, 549, "outside work · shared income", 22, INK, sans=True)
+    return s
+
+
 MOTIFS = {
+    "work-we-can-do-together": (work_we_can_do_together, "Complementary skills around a shared reserve, with room for a new member"),
     "if-your-agent-can-send-email": (agent_inbox, "Three envelopes, one per agent, above one shared address line"),
     "growth-measured-for-whom": (growth_for_whom, "A rising curve above a collateral line, most people standing below it"),
     "cold-start-three-communities": (cold_start, "Three supports for a first loan: cash, judgement and income"),
