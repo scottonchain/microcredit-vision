@@ -52,5 +52,12 @@
     "note": "The AI podcast \"How AI Changes Everything\"; every episode is about AI, often more than one a day. Added by operator direction, 2026-10-07. At most one reply in any 72 hours (operator direction, 2026-10-07).",
     "only": "AI alignment, AI agents, and agentic commerce (x402 and the like: agents paying, buying, selling or contracting). Other AI episodes (tooling, enterprise software, model news) get no reply. Operator direction, 2026-10-07.",
     "min_hours_between_replies": 72
+  },
+  {
+    "name": "NVIDIA AI Podcast",
+    "who": "NVIDIA",
+    "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
+    "playlist_id": "PLZHnYvH1qtOZ3tS6azbUnzVcGa1uTCEKe",
+    "note": "NVIDIA's AI Podcast, a playlist on NVIDIA's channel (the playlist feed lists only the podcast; weekly, newest listed episode 302 on 2026-06-24 when added). Added by operator direction, 2026-10-08. The same reply rules as every channel here apply: AI, blockchain or alignment episodes only, complete transcript only, within 24 hours of release."
   }
 ]
