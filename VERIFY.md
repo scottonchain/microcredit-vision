@@ -241,3 +241,15 @@ Source: The Cognitive Revolution, "Formal AI Safety & Risk Strategy + LoRA-Power
 | "as intelligence gets cheap, it's the coordination that gets expensive." | Evan Miyazono, 42:24 to 42:28 |
 | "your agent is talking to my agent, they can verify that this agent in fact is my agent." | Evan Miyazono, 49:27 to 49:35 |
 | "We don't want AI to come in and and and replace people. Want AI to be valuable co-workers." | Edward Hu, 2:01:28 to 2:01:32 |
+
+## Quotations in "A dial, not a switch" (2026-10-08)
+
+Source: Doom Debates, "AI Has Become Profoundly WEIRD, But Is Anyone Noticing? With Sarah Hastings-Woodhouse", https://www.youtube.com/watch?v=TDbHCKwuMrk, released 2026-10-07 22:42 UTC. Transcript: YouTube's English automatic captions (auto-generated) of the whole episode, last caption at 1:07:00, retrieved by Hermes and delivered encrypted on microcredit-contract issue 7 (comment 6063674593; plaintext sha256 20fd0d7586009952588ac894aed6c736065e8737b19f97b11b003f97f3322f39, stated in comment 6063674946 and matched on decryption). The transcript itself is not republished.
+
+| Post says | Check it |
+| --- | --- |
+| "You're turning a switch into a dial." | Liron Shapira, 55:19 |
+| "there's a good chance that something really bad might happen unless we do something" | Sarah Hastings-Woodhouse, 1:02:58 to 1:03:01 |
+| "saying it's overdetermined that we're screwed because the second thing is just very disempowering." | Sarah Hastings-Woodhouse, 1:03:01 to 1:03:06 |
+| "the Overton window is like the confluence of people saying and doing things. And when you say and do things, you are yourself like shifting the Overton window." | Sarah Hastings-Woodhouse, 38:53 to 38:59 |
+| People have stopped noticing how strange it is to talk to a machine in plain English | Sarah Hastings-Woodhouse, 0:00 to 0:07 (the cold open) and 46:08 to 46:17 ("it should be profoundly weird to people ... people just appear to have gotten over this extremely quickly") |

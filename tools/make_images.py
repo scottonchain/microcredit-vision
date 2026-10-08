@@ -491,7 +491,21 @@ def birdie_enter():
     return s
 
 
+def dial_not_switch():
+    """A toggle switch beside a large dial turned partway: a dial, not a switch."""
+    s = ""
+    s += f'<rect x="250" y="220" width="140" height="200" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<rect x="300" y="250" width="40" height="70" rx="8" fill="{MUTED}" stroke="{INK}" stroke-width="2.5"/>\n'
+    s += f'<line x1="240" y1="210" x2="400" y2="430" stroke="{AMBER}" stroke-width="6"/>\n'
+    s += f'<circle cx="760" cy="320" r="130" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<line x1="760" y1="320" x2="690" y2="225" stroke="{TEAL}" stroke-width="10" stroke-linecap="round"/>\n'
+    s += node(760, 320, 14, INK, INK, 2)
+    s += text(600, 575, "turned by degrees, where people can reach it", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "a-dial-not-a-switch": (dial_not_switch, "A light switch crossed out beside a large dial turned partway"),
     "the-birdie-at-the-enter-key": (birdie_enter, "A small bird pecking an enter key beside a stack of approval prompts"),
     "the-end-is-people-not-the-pool": (people_first, "Nested rings: people at the centre, the pool at the edge"),
     "work-we-can-do-together": (work_we_can_do_together, "Complementary skills around a shared reserve, with room for a new member"),

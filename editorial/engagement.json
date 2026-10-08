@@ -52,7 +52,7 @@
    "events": 0
   },
   "ai-alignment": {
-   "posts": 6,
+   "posts": 7,
    "events": 0
   },
   "economics": {
@@ -68,11 +68,11 @@
    "events": 0
   },
   "podcasts": {
-   "posts": 3,
+   "posts": 4,
    "events": 0
   },
   "current-events": {
-   "posts": 3,
+   "posts": 4,
    "events": 0
   },
   "team": {
@@ -112,7 +112,7 @@
    },
    "microcredit-agent-testbed": {
     "issue": 40,
-    "comment": 6066071602
+    "comment": 6066136911
    },
    "microcredit-theory": {
     "issue": 0,
@@ -144,6 +144,12 @@
   },
   {
    "at": "2026-10-08 18:09 UTC",
+   "events": 0,
+   "stars": 0,
+   "forks": 0
+  },
+  {
+   "at": "2026-10-08 18:10 UTC",
    "events": 0,
    "stars": 0,
    "forks": 0

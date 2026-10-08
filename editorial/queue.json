@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-08 18:12 UTC",
+  "updated": "2026-10-08 18:14 UTC",
   "items": [
     {
       "id": "guest-work-we-can-do-together",
@@ -194,20 +194,6 @@
   ],
   "scheduled": [],
   "replies": [
-    {
-      "id": "doom-debates-sarah-hastings-woodhouse",
-      "kind": "youtube",
-      "video_id": "TDbHCKwuMrk",
-      "release": "2026-10-07 22:42 UTC",
-      "tags": [
-        "podcasts",
-        "current-events",
-        "ai-alignment"
-      ],
-      "source": "in_hand",
-      "planned": "2026-10-08 19:15 UTC",
-      "note": "Transcript relayed by Hermes (contract issue 7). Planned after the alignment post (which needs ai-alignment open) and before publish-by 20:42 UTC."
-    },
     {
       "id": "sydney-speech",
       "kind": "news",
