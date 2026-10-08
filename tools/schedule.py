@@ -11,7 +11,7 @@ that breaks the spacing rule, this plan does the choosing.
 Ticks: every 4 hours at :07 UTC (the news watch cadence; the 8-hour post Routine is a subset). One regular post per
 tick, at least MIN_GAP after the previous regular post. A tick assigns the candidate with the highest score:
 
-    priority   P1 300, P2 200, P3 100
+    priority   P0 600 (the operator ordered it out as soon as it is ready), P1 300, P2 200, P3 100
     aging      +4 per hour since the item was ready (so every item is eventually first, whatever its priority)
     guest slot +1000 for a ready guest item whose turn is open (Codex gets one slot a day; see the guest cap below)
     rotation   up to +60 for categories idle for 72 hours or more (the least recently used categories go first)
@@ -51,7 +51,7 @@ GRID_MINUTE = 7
 GRID_HOURS = 4
 MIN_GAP = timedelta(hours=3)
 GUEST_EVERY = build.GUEST_EVERY
-PRIORITY = {"P1": 300, "P2": 200, "P3": 100}
+PRIORITY = {"P0": 600, "P1": 300, "P2": 200, "P3": 100}  # P0: ordered by the operator to go as soon as it is ready
 AGING_PER_HOUR = 4
 GUEST_FLOOR = 1000
 ROTATION_MAX = 60

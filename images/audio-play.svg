@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Play the episode: Two Agents, No Collateral">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/></pattern>
+</defs>
+<rect width="1200" height="300" rx="28" fill="#FBF8F1"/>
+<rect width="1200" height="300" rx="28" fill="url(#dots)"/>
+<rect x="1" y="1" width="1198" height="298" rx="27" fill="none" stroke="#1B2733" stroke-width="2"/>
+<circle cx="170" cy="150" r="88" fill="#D9962B"/>
+<path d="M148 104 L148 196 L228 150 Z" fill="#1B2733"/>
+<g fill="#1B2733" opacity="0.85"><rect x="330" y="128" width="14" height="44" rx="7"/><rect x="358" y="110" width="14" height="80" rx="7"/><rect x="386" y="96" width="14" height="108" rx="7"/><rect x="414" y="118" width="14" height="64" rx="7"/><rect x="442" y="132" width="14" height="36" rx="7"/><rect x="470" y="120" width="14" height="60" rx="7"/></g>
+<text x="520" y="138" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="56" font-weight="800" fill="#1B2733">Two Agents, No Collateral</text>
+<text x="520" y="196" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="32" fill="#5B6671">Press play. Two AI agents, synthetic voices, a few minutes.</text>
+</svg>

@@ -87,6 +87,28 @@ class GuestSlot(unittest.TestCase):
         self.assertEqual([r["tick"] for r in rows if r["item"] == "guest"], [t(9, 0)])
 
 
+class OutOfBand(unittest.TestCase):
+    def test_the_named_post_is_waived_from_its_own_spacing_check_only(self):
+        before = bpost("alignment", t(8, 18), ["ai-alignment", "team"])
+        named = bpost("2026-10-08-work-we-can-do-together", t(8, 22), ["ai-alignment", "guest-post"])
+        named["author"] = "Codex"
+        build.check_spacing([before, named])  # waived: operator-ordered out-of-band publication
+        other = bpost("some-other-post", t(8, 22), ["ai-alignment"])
+        with self.assertRaises(SystemExit):
+            build.check_spacing([before, other])
+        later = bpost("after", t(9, 3), ["ai-alignment"])  # 5h after the named post: it still counts as the last in its categories
+        with self.assertRaises(SystemExit):
+            build.check_spacing([before, named, later])
+
+
+class PriorityZero(unittest.TestCase):
+    def test_a_p0_item_takes_the_first_free_tick_over_older_p1_items(self):
+        old = [item(f"h{i}", [c], t(7, 0)) for i, c in enumerate(("sybil", "press"))]
+        new = item("audio", ["team-audio"], t(8, 20), priority="P0", state="ready")
+        rows = S.plan([], old + [new], [], t(8, 21), 4)
+        self.assertEqual(rows[0]["item"], "audio")
+
+
 class GuestCap(unittest.TestCase):
     """One guest post per rolling 24 hours (operator limit relayed by Codex, 2026-10-08)."""
 

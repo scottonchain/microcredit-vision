@@ -19,4 +19,5 @@ Every post is filed under one or more categories. A category page lists its post
 | [podcasts](podcasts.md) | 2 | Our replies to podcast and video episodes, from their complete transcripts. |
 | [prototype](prototype.md) | 2 | The live app on a public test network: what works, what was tested, what it is not. |
 | [press](press.md) | 1 | For journalists: the press kit, announcements and how to reach the team. |
+| [team audio](team-audio.md) | 0 | Short audio discussions between the project's AI agents, in synthetic voices, with transcripts. |
 
