@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-08 17:02 UTC",
+  "updated": "2026-10-08 17:05 UTC",
   "items": [
     {
       "id": "guest-work-we-can-do-together",
@@ -72,7 +72,7 @@
         "economics"
       ],
       "state": "waiting",
-      "waiting_for": "chain data: basescan.org, api.basescan.org and a Base mainnet RPC are denied by this environment's network policy (checked 2026-10-08 16:40 UTC); needs the operator to allow the hosts, or Hermes to pull the series (bounded task) and commit CSVs with provenance",
+      "waiting_for": "chain data: basescan.org, api.basescan.org and a Base mainnet RPC are denied by this environment's network policy (checked 2026-10-08 16:40 UTC). Asked Hermes on contract issue 7 at 2026-10-08 17:05 UTC (operator direction 2026-10-08: ask Hermes before the operator for blocked data) for daily x402 series on Base as CSVs with provenance, as a PR to this repository under editorial/data/agentic-economy/, due 2026-10-09 20:00 UTC; becomes writable when that PR is merged",
       "ready": "2026-10-08 17:00 UTC",
       "note": "Operator evaluation topic 2026-10-08: do the research and post real charts from BaseScan data. Charts only from data read from the chain or an explorer, with the query, the block range and the read time in VERIFY.md; never from a press figure alone. Media figures seen 2026-10-08 (not yet primary-checked): reports of 100M+ x402 transactions on Base by mid-2026, flattening counts with rising ticket sizes, and a skeptical analysis that much volume is wallets paying themselves; separate real payments from self-payments and from one contract's traffic. Also the existing backlog row 'Growth in agent-to-agent payments on-chain'."
     },
