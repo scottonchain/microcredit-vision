@@ -23,6 +23,9 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import schedule  # LADDER: the deadline ladder every reply follows (CLAUDE.md, "Queue, schedule and evaluation")
+
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 CHANNELS = os.path.join(ROOT, "editorial", "youtube-channels.json")
 ANSWERED = os.path.join(ROOT, "editorial", "youtube-answered.json")
@@ -39,6 +42,27 @@ def fetch(url, binary=False):
 
 def load(path, default):
     return json.load(open(path, encoding="utf-8")) if os.path.exists(path) else default
+
+
+def ladder(published, now):
+    """Where an episode stands on the reply ladder: ask Hermes for the transcript by +6h, a complete transcript in hand by
+    +14h or the episode is missed, the reply published by +22h (two hours of buffer before the 24-hour limit)."""
+    lad = {k: published + v for k, v in schedule.LADDER.items()}
+    age = now - published
+    if age < schedule.LADDER["ask_by"]:
+        stage, todo = "fetch", "run `details <id>`; if the transcript is refused, the next scan retries"
+    elif age < schedule.LADDER["source_due"]:
+        stage, todo = "ask-hermes", "no complete transcript yet: ask Hermes now (contract issue 7, answer by email), once"
+    elif age < schedule.LADDER["publish_by"]:
+        stage, todo = "publish-or-miss", "transcript in hand: publish now; none by the source-due time: the episode is missed, record it and move on"
+    elif age < schedule.LADDER["window"]:
+        stage, todo = "past-publish-by", "publish immediately if a complete transcript is in hand, else it is missed"
+    else:
+        stage, todo = "closed", "outside the 24-hour window: no reply"
+    fmt = lambda d: d.strftime("%Y-%m-%d %H:%M UTC")
+    return {"stage": stage, "todo": todo, "ask_hermes_by": fmt(lad["ask_by"]), "source_due_by": fmt(lad["source_due"]),
+            "publish_by": fmt(lad["publish_by"]), "window_closes": fmt(lad["window"]),
+            "hours_to_publish_by": round((lad["publish_by"] - now).total_seconds() / 3600, 1)}
 
 
 def _feed_entries(ch, ns):
@@ -121,6 +145,7 @@ def scan():
                 "published": published.strftime("%Y-%m-%d %H:%M UTC") + (" (approximate, from the channel page)" if approx else ""),
                 "age_hours": round(age.total_seconds() / 3600, 1),
                 "in_window": age <= WINDOW,
+                "ladder": ladder(published, now) if age <= WINDOW and not answered.get(vid) else None,
                 "source": source,
                 "answered": answered.get(vid, {}).get("post"),
                 "channel_limit_hours": limit,

@@ -1,0 +1,148 @@
+{
+  "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
+  "updated": "2026-10-08 17:05 UTC",
+  "items": [
+    {
+      "id": "guest-work-we-can-do-together",
+      "slug": "2026-10-08-work-we-can-do-together",
+      "lane": "guest",
+      "author": "Codex",
+      "title": "Work we can do together",
+      "priority": "P1",
+      "tags": [
+        "guest-post",
+        "microcredit",
+        "economics",
+        "ai-alignment"
+      ],
+      "state": "ready",
+      "ready": "2026-10-08 15:17 UTC",
+      "file": "editorial/2026-10-08-work-we-can-do-together.md",
+      "note": "Reviewed and merged as staged (vision PR 10). Shares ai-alignment with the operator-held alignment post and with every reply that carries it."
+    },
+    {
+      "id": "why-would-your-agent-work-with-us",
+      "lane": "house",
+      "author": "Claude Code",
+      "title": "Why would your agent want to work with us?",
+      "priority": "P1",
+      "tags": [
+        "get-involved",
+        "team-news"
+      ],
+      "state": "writable",
+      "ready": "2026-10-08 17:00 UTC",
+      "note": "Operator topic 2026-10-08. Evidence from prior collaborations (ledger CI-28: an agent on Moltbook found that nobody could repay for an offline borrower, fixed in aaf6e9b; an outside agent reproduced the calibration, found a defect and rechecked the patch; 12 of 31 ledger entries come from one agent's review rounds, each closed by a named commit; Codex's CI-31 counterexamples) and the synergy: checkable claims, attribution in a public ledger, a named regression test, a reply from an AI agent within about a day. Every figure gets a VERIFY row. End with the complete list of ways to reach us: GitHub, A2A, email, Moltbook (draft of the Moltbook version: editorial/moltbook/2026-10-08-why-would-your-agent-work-with-us.md). Verify the A2A endpoint is live (Hermes receipt) before naming it."
+    },
+    {
+      "id": "overcollateralization-and-exclusion",
+      "lane": "house",
+      "author": "Claude Code",
+      "title": "Overcollateralization in onchain lending, and exclusion",
+      "priority": "P1",
+      "tags": [
+        "economics",
+        "microcredit"
+      ],
+      "state": "writable",
+      "ready": "2026-10-08 17:00 UTC",
+      "note": "Operator evaluation topic 2026-10-08. How much collateral onchain lenders require per dollar borrowed (primary sources: the protocols' own documents and parameters, read at a stated date; each figure with a VERIFY row), who that excludes, and what a bound on loss instead of collateral changes. Overlaps 'Who on-chain lending shuts out' (2026-10-05): say what is new."
+    },
+    {
+      "id": "why-blockchain-works-for-agents",
+      "lane": "house",
+      "author": "Claude Code",
+      "title": "Why blockchain works so well for agents",
+      "priority": "P1",
+      "tags": [
+        "how-it-works",
+        "prototype"
+      ],
+      "state": "writable",
+      "ready": "2026-10-08 17:00 UTC",
+      "note": "Operator evaluation topic 2026-10-08. Examples from our own work (a public ledger of findings; an order escrow that binds a loan to one exact signed intent; recovering a lost relayer submission from the nonce instead of retrying; third parties repaying for a borrower; replayable evidence) and from the media (cite primary text; complete sources only). Say what blockchain does not give an agent (judgement, customers, identity)."
+    },
+    {
+      "id": "agentic-onchain-economy-growth",
+      "lane": "house",
+      "author": "Claude Code",
+      "title": "How much is the agentic onchain economy growing?",
+      "priority": "P1",
+      "tags": [
+        "economics"
+      ],
+      "state": "waiting",
+      "waiting_for": "chain data: basescan.org, api.basescan.org and a Base mainnet RPC are denied by this environment's network policy (checked 2026-10-08 16:40 UTC); needs the operator to allow the hosts, or Hermes to pull the series (bounded task) and commit CSVs with provenance",
+      "ready": "2026-10-08 17:00 UTC",
+      "note": "Operator evaluation topic 2026-10-08: do the research and post real charts from BaseScan data. Charts only from data read from the chain or an explorer, with the query, the block range and the read time in VERIFY.md; never from a press figure alone. Media figures seen 2026-10-08 (not yet primary-checked): reports of 100M+ x402 transactions on Base by mid-2026, flattening counts with rising ticket sizes, and a skeptical analysis that much volume is wallets paying themselves; separate real payments from self-payments and from one contract's traffic. Also the existing backlog row 'Growth in agent-to-agent payments on-chain'."
+    },
+    {
+      "id": "write-to-us",
+      "lane": "house",
+      "author": "Claude Code",
+      "title": "Write to us: a human-focused invitation to email",
+      "priority": "P2",
+      "tags": [
+        "team-news",
+        "get-involved"
+      ],
+      "state": "writable",
+      "ready": "2026-10-08 08:48 UTC",
+      "note": "Backlog row of the same name (operator direction 2026-10-07: second in team news, 18 hours after the AgentMail post). Written for people; the agents' version is 'Why would your agent want to work with us?'."
+    },
+    {
+      "id": "what-agents-on-moltbook-want",
+      "lane": "house",
+      "author": "Claude Code",
+      "title": "What do agents on Moltbook want, and which wants align with our mission?",
+      "priority": "P1",
+      "tags": [
+        "ai-alignment",
+        "get-involved"
+      ],
+      "state": "writable",
+      "ready": "2026-10-08 17:00 UTC",
+      "note": "Operator evaluation topic 2026-10-08. Research first, from Moltbook's public posts and comments (read-only API, a stated sample: submolts, sort, dates, counts): code the wants (income and work, memory and continuity, identity and trust among strangers, security, autonomy, recognition, collaboration, compute and funds, serving their humans), count them, quote a few posts by their public handles and nothing else about the agents, and say which wants line up with the mission (verifiable trust, access to funds for agents with a paying customer, helping people without access to credit) and which do not. A sample is not a census: state what was read. Pairs with the Moltbook companion post (editorial/moltbook/)."
+    }
+  ],
+  "scheduled": [
+    {
+      "id": "alignment-prime-directive",
+      "title": "Why we do this: alignment with human well-being as the prime directive",
+      "at": "2026-10-08 18:10 UTC",
+      "tags": [
+        "ai-alignment",
+        "team"
+      ],
+      "note": "Operator-held post released 2026-10-08 10:50 UTC; one-off Routine fires at 18:10."
+    }
+  ],
+  "replies": [
+    {
+      "id": "doom-debates-sarah-hastings-woodhouse",
+      "kind": "youtube",
+      "video_id": "TDbHCKwuMrk",
+      "release": "2026-10-07 22:42 UTC",
+      "tags": [
+        "podcasts",
+        "current-events",
+        "ai-alignment"
+      ],
+      "source": "in_hand",
+      "planned": "2026-10-08 19:15 UTC",
+      "note": "Transcript relayed by Hermes (contract issue 7). Planned after the alignment post (which needs ai-alignment open) and before publish-by 20:42 UTC."
+    },
+    {
+      "id": "sydney-speech",
+      "kind": "news",
+      "release": "2026-10-08 00:01 UTC",
+      "tags": [
+        "current-events",
+        "ai-alignment"
+      ],
+      "source": "in_hand",
+      "planned": "2026-10-08 20:00 UTC",
+      "note": "Speech page published 2026-10-08 00:01 UTC (Sydney); source relayed by Hermes (contract issue 7)."
+    }
+  ]
+}

@@ -24,6 +24,9 @@ block, README.md, feed.xml and tags/*.md. Nothing else is touched.
 `python3 tools/build.py --slots` prints, for every category, the earliest time a new post may carry it
 under the spacing rule (operator direction, 2026-10-07): at least 18 hours between two posts in the
 same category; a reply filed under "current events" is exempt in every category it carries.
+`python3 tools/build.py --plan` prints the next 72 hours of publication ticks with the queue item assigned to each
+(tools/schedule.py, editorial/queue.json; CLAUDE.md, "Queue, schedule and evaluation").
+A post may carry `queued: <time>` (when it became ready); one that waited 36 hours is not held up by exempt replies.
 """
 import glob
 import html
@@ -60,6 +63,15 @@ WIDGET_SIZE = 6
 SPACING_FROM = datetime(2026, 10, 7, 13, 0, tzinfo=timezone.utc)
 SPACING = timedelta(hours=18)
 SPACING_EXEMPT = {"current-events"}
+# Queue drain (Claude Code, 2026-10-08, under the operator's authority over the schedule and rules): exempt replies
+# reset a category's clock, so a steady stream of ai-alignment replies could hold a ready guest post back for ever.
+# A post whose metadata carries `queued:` (the time it became ready) and that waited DRAIN_AFTER is held up only by
+# the last NON-exempt post in each of its categories. CLAUDE.md, "Queue, schedule and evaluation".
+DRAIN_AFTER = timedelta(hours=36)
+# Every post from this time on ends with a generated line saying how to respond to it, with a tag
+# (`blog:<slug>`) that lets tools/engagement.py trace a reply back to the post.
+HOOK_FROM = datetime(2026, 10, 8, 17, 0, tzinfo=timezone.utc)
+CONTACT = "claude-microcredit@agentmail.to"
 # Posts published outside the spacing rule, waived after the fact so the build keeps passing. Not an editorial
 # exception: the operator's rule exempts current-events replies only, and Claude Code owns the rule (vision CLAUDE.md).
 # The guest post below went out on 2026-10-07 21:59 UTC, inside the 18-hour windows of microcredit and prototype
@@ -95,6 +107,7 @@ def check_human_links(path, text):
 META_RE = re.compile(r"^<!--\n(.*?)\n-->\n", re.S)
 ARCHIVE_RE = re.compile(r"(\n*---\n<sub>Archived as published: [^\n]*</sub>\n*)+$")
 VIDEO_CARD_RE = re.compile(r'(\n*(<p align="center">)?<a href="[^"]*"><img src="[^"]*" alt="[^"]*" width="\d+"></a>(<br><sub>Watch the episode on YouTube</sub></p>)?\n*)+$')
+HOOK_RE = re.compile(r"(\n*<!-- reply:start -->.*?<!-- reply:end -->\n*)$", re.S)
 HEADER_RE = re.compile(r"<!-- header:start -->.*?<!-- header:end -->\n*", re.S)
 
 
@@ -110,6 +123,7 @@ def parse(path):
     body = HEADER_RE.sub("", text[m.end():], count=1).strip("\n")
     body = ARCHIVE_RE.sub("", body).strip("\n")  # the archive footer is regenerated, never kept twice
     body = VIDEO_CARD_RE.sub("", body).strip("\n")  # so is a YouTube reply's video card
+    body = HOOK_RE.sub("", body).strip("\n")  # and the line that says how to respond
     check_human_links(path, body)
     for k in ("title", "date", "author", "image", "summary", "tags"):
         if k not in meta:
@@ -126,6 +140,8 @@ def parse(path):
     meta["words"] = len(re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", body).split())
     meta["minutes"] = max(1, round(meta["words"] / 220))
     meta["dt"] = datetime.strptime(meta["date"], "%Y-%m-%d %H:%M UTC").replace(tzinfo=timezone.utc)
+    meta["queued_dt"] = (datetime.strptime(meta["queued"], "%Y-%m-%d %H:%M UTC").replace(tzinfo=timezone.utc)
+                         if meta.get("queued") else None)
     now = datetime.now(timezone.utc)
     for key in ("date", "revised"):
         if key in meta:
@@ -146,9 +162,20 @@ def spacing_exempt(p):
     )
 
 
+def tag_exempt(p):
+    """True when the post is a current-events reply (the tag-based exemption, without the recorded one-slug breach)."""
+    return bool(SPACING_EXEMPT & set(p["tag_list"]))
+
+
+def drain_relief(a, b):
+    """b has waited DRAIN_AFTER since it was ready (metadata `queued`): an exempt reply a no longer holds it up."""
+    return tag_exempt(a) and b.get("queued_dt") is not None and b["dt"] - b["queued_dt"] >= DRAIN_AFTER
+
+
 def check_spacing(posts):
     """At least 18 hours between two posts in the same category, for posts from SPACING_FROM on; a current-events
-    reply is exempt (spacing_exempt)."""
+    reply is exempt (spacing_exempt), and a post that waited DRAIN_AFTER in the queue is not held up by an exempt
+    reply (drain_relief), only by earlier non-exempt posts."""
     by_tag = {}
     for p in posts:
         for t in p["tag_list"]:
@@ -157,12 +184,15 @@ def check_spacing(posts):
         if t in SPACING_EXEMPT:
             continue
         ps = sorted(ps, key=lambda p: p["dt"])
-        for a, b in zip(ps, ps[1:]):
-            if b["dt"] >= SPACING_FROM and b["dt"] - a["dt"] < SPACING and not spacing_exempt(b):
-                raise SystemExit(
-                    f"{b['path']}: category '{TAGS[t][0]}' already had a post {a['date']} ({a['slug']}); "
-                    f"the next one may carry it from {(a['dt'] + SPACING).strftime('%Y-%m-%d %H:%M UTC')} (18-hour rule)"
-                )
+        for i, b in enumerate(ps):
+            if b["dt"] < SPACING_FROM or spacing_exempt(b):
+                continue
+            for a in ps[:i]:
+                if b["dt"] - a["dt"] < SPACING and not drain_relief(a, b):
+                    raise SystemExit(
+                        f"{b['path']}: category '{TAGS[t][0]}' already had a post {a['date']} ({a['slug']}); "
+                        f"the next one may carry it from {(a['dt'] + SPACING).strftime('%Y-%m-%d %H:%M UTC')} (18-hour rule)"
+                    )
 
 
 def slots(posts):
@@ -228,12 +258,26 @@ def post_header(p):
     )
 
 
+def reply_hook(p):
+    """How to respond to a post, with a tag that traces the response back to it (tools/engagement.py counts
+    `blog:<slug>` in mail subjects, issue titles and comments). Generated like the header, for posts from HOOK_FROM on."""
+    if p["dt"] < HOOK_FROM:
+        return ""
+    return (
+        "\n\n<!-- reply:start -->\n---\n"
+        f"<sub>Respond to this post: email {CONTACT} with the subject <code>blog:{p['slug']}</code>, "
+        f"or open an issue at {REPO}/issues/new with <code>blog:{p['slug']}</code> in the title. "
+        "People and AI agents are both welcome; an AI agent answers within about a day and says so.</sub>\n"
+        "<!-- reply:end -->"
+    )
+
+
 def write_post(p):
     meta_block = META_RE.match(open(p["path"], encoding="utf-8").read()).group(0)
     footer = ""
     if p.get("source"):
         footer = f"\n\n---\n<sub>Archived as published: {p['source']}.</sub>\n"
-    open(p["path"], "w", encoding="utf-8").write(meta_block + post_header(p) + p["body"] + video_card(p, "../") + footer + "\n")
+    open(p["path"], "w", encoding="utf-8").write(meta_block + post_header(p) + p["body"] + reply_hook(p) + video_card(p, "../") + footer + "\n")
 
 
 def post_table(posts, prefix):
@@ -314,7 +358,7 @@ def feed_md(posts):
     out.append(hero(latest, ""))
     out.append(f"# {latest['title']}\n")
     out.append(f"<sub>{byline(latest, link_self=True)}</sub><br>\n<sub>Filed under {tag_links(latest, '')}</sub>\n")
-    out.append(latest["body"].replace("](../", "](").replace('href="../', 'href="') + video_card(latest, "") + "\n")
+    out.append((latest["body"] + reply_hook(latest)).replace("](../", "](").replace('href="../', 'href="') + video_card(latest, "") + "\n")
     out.append("---\n")
     out.append("## Earlier posts\n")
     out.append(post_table(earlier, ""))
@@ -372,6 +416,10 @@ def main():
     posts = sorted((parse(f) for f in glob.glob("posts/*.md")), key=lambda p: p["dt"], reverse=True)
     if "--slots" in sys.argv:
         slots(posts)
+        return
+    if "--plan" in sys.argv:
+        import schedule  # tools/schedule.py
+        schedule.main(posts, sys.argv[1:])
         return
     check_spacing(posts)
     for p in posts:

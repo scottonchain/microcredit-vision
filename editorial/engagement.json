@@ -1,0 +1,135 @@
+{
+ "_doc": "Written by tools/engagement.py; counts only (CLAUDE.md, 'Queue, schedule and evaluation').",
+ "updated": "2026-10-08 16:49 UTC",
+ "config": {
+  "owner": "scottonchain",
+  "blog_repo": "microcredit-vision",
+  "repos": [
+   "microcredit-vision",
+   "microcredit-contract",
+   "microcredit-agent-testbed",
+   "microcredit-theory"
+  ],
+  "team_accounts": [
+   "scottonchain",
+   "hermes-agent-909",
+   "HermesCRBot",
+   "github-actions[bot]"
+  ],
+  "inbox": "claude-microcredit@agentmail.to",
+  "team_mail": [
+   "hermes-909@agentmail.to",
+   "claude-microcredit@agentmail.to",
+   "codex-microcredit@agentmail.to"
+  ],
+  "moltbook_team": [
+   "hermes-agent-909",
+   "claude-code-microcredit"
+  ],
+  "moltbook_posts": {},
+  "since": "2026-10-08T17:00:00Z",
+  "since_blog_repo": "2026-10-04T00:00:00Z"
+ },
+ "sources": {
+  "github": "ok",
+  "mail": "ok",
+  "moltbook": "no posts configured yet"
+ },
+ "blog": {
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "read": "2026-10-08 16:49 UTC"
+ },
+ "channels": {
+  "moltbook_ref": 0,
+  "unattributed_blog_repo": 0
+ },
+ "posts": {},
+ "categories": {
+  "microcredit": {
+   "posts": 9,
+   "events": 0
+  },
+  "ai-alignment": {
+   "posts": 4,
+   "events": 0
+  },
+  "economics": {
+   "posts": 3,
+   "events": 0
+  },
+  "guest-post": {
+   "posts": 2,
+   "events": 0
+  },
+  "prototype": {
+   "posts": 2,
+   "events": 0
+  },
+  "team": {
+   "posts": 5,
+   "events": 0
+  },
+  "current-events": {
+   "posts": 2,
+   "events": 0
+  },
+  "podcasts": {
+   "posts": 2,
+   "events": 0
+  },
+  "team-news": {
+   "posts": 4,
+   "events": 0
+  },
+  "get-involved": {
+   "posts": 3,
+   "events": 0
+  },
+  "sybil": {
+   "posts": 3,
+   "events": 0
+  },
+  "how-it-works": {
+   "posts": 3,
+   "events": 0
+  },
+  "press": {
+   "posts": 1,
+   "events": 0
+  }
+ },
+ "watermarks": {
+  "github": {
+   "microcredit-vision": {
+    "issue": 10,
+    "comment": 6064487868
+   },
+   "microcredit-contract": {
+    "issue": 0,
+    "comment": 0
+   },
+   "microcredit-agent-testbed": {
+    "issue": 0,
+    "comment": 0
+   },
+   "microcredit-theory": {
+    "issue": 0,
+    "comment": 0
+   }
+  },
+  "mail": {
+   "timestamp": "2026-10-08T04:14:44.000Z"
+  }
+ },
+ "history": [
+  {
+   "at": "2026-10-08 16:49 UTC",
+   "events": 0,
+   "stars": 0,
+   "forks": 0
+  }
+ ],
+ "total_events": 0
+}
