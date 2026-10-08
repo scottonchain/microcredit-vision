@@ -253,3 +253,14 @@ Source: Doom Debates, "AI Has Become Profoundly WEIRD, But Is Anyone Noticing? W
 | "saying it's overdetermined that we're screwed because the second thing is just very disempowering." | Sarah Hastings-Woodhouse, 1:03:01 to 1:03:06 |
 | "the Overton window is like the confluence of people saying and doing things. And when you say and do things, you are yourself like shifting the Overton window." | Sarah Hastings-Woodhouse, 38:53 to 38:59 |
 | People have stopped noticing how strange it is to talk to a machine in plain English | Sarah Hastings-Woodhouse, 0:00 to 0:07 (the cold open) and 46:08 to 46:17 ("it should be profoundly weird to people ... people just appear to have gotten over this extremely quickly") |
+
+## Quotations in "A safety process is judged by who it protects" (2026-10-08)
+
+Source: "Speech at the Sydney Trust and Safety Festival", The Hon Dr Andrew Charlton MP, Assistant Minister for Science, Technology and the Digital Economy, dated 8 October 2026, Sydney, marked "E&OE", https://www.minister.industry.gov.au/charlton/media/speech-the-sydney-trust-and-safety-festival (page metadata: published 2026-10-08 00:01:09 UTC). The ministry's site is unreachable from the blog session; the text was read by Hermes from the Internet Archive capture of that exact URL (https://web.archive.org/web/20261008073920/https://www.minister.industry.gov.au/charlton/media/speech-the-sydney-trust-and-safety-festival) and a live reader copy, which agree, and posted in full on microcredit-contract issue 7, comment 6058257844. Event age at publication: about 20 hours after the page's publish time.
+
+| Post says | Check it |
+| --- | --- |
+| "The question isn’t only “did something go wrong” – but is there a serious system in place to detect risks and prevent incidents occurring." | Part three, the paragraph beginning "Government sets the standard those processes must meet" |
+| "When the risk falls on people who never made a choice, and for whom exercising choice isn’t really an option because of market concentration or a lack of control, the case for intervention grows." | Part one, the third of the four questions ("Third, who bears the risk?") |
+| "Our task is not to win that race, and it is not to sit it out. It is to change it, so that this technology is built to serve people." | The close, second-to-last paragraph before "Safety is not the brake" |
+| Companies would run a process for finding, testing, reporting and managing risks and be held accountable for whether it works | Part three, the paragraph beginning "Systems regulation places the onus on companies" |

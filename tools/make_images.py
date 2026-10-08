@@ -504,7 +504,20 @@ def dial_not_switch():
     return s
 
 
+def judged_by_who():
+    """A fenced process with people standing outside it: a safety process is judged by who it protects."""
+    s = ""
+    s += f'<rect x="330" y="170" width="300" height="230" rx="14" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(480, 295, "process", 28, INK)
+    for x, y in ((780, 230), (840, 300), (790, 370), (900, 250)):
+        s += node(x, y, 16, PAPER, TEAL, 3)
+    s += link(640, 285, 750, 285, TEAL, 4, dash="10 8")
+    s += text(600, 575, "judged by those who never chose the risk", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "a-safety-process-is-judged-by-who-it-protects": (judged_by_who, "A fence with a gate, and people outside it who never chose the risk"),
     "a-dial-not-a-switch": (dial_not_switch, "A light switch crossed out beside a large dial turned partway"),
     "the-birdie-at-the-enter-key": (birdie_enter, "A small bird pecking an enter key beside a stack of approval prompts"),
     "the-end-is-people-not-the-pool": (people_first, "Nested rings: people at the centre, the pool at the edge"),
