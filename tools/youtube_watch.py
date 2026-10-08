@@ -41,6 +41,51 @@ def load(path, default):
     return json.load(open(path, encoding="utf-8")) if os.path.exists(path) else default
 
 
+def _feed_entries(ch, ns):
+    """The channel's newest videos from YouTube's Atom feed: (video id, title, published, description, approx=False)."""
+    key = f"playlist_id={ch['playlist_id']}" if ch.get("playlist_id") else f"channel_id={ch['channel_id']}"
+    err = None
+    for attempt in range(4):  # the feed host answers 404 or 500 now and then (seen 2026-10-08); retry before giving up
+        for host in ("www.youtube.com", "youtube.com"):
+            try:
+                root = ET.fromstring(fetch(f"https://{host}/feeds/videos.xml?{key}"))
+                return [(e.findtext("yt:videoId", "", ns), e.findtext("a:title", "", ns),
+                         datetime.fromisoformat(e.findtext("a:published", "", ns).replace("Z", "+00:00")),
+                         (e.findtext("media:group/media:description", "", ns) or "")[:400], False)
+                        for e in root.findall("a:entry", ns)], None
+            except Exception as e:  # a feed that fails is reported, not fatal
+                err = e
+        time.sleep(5 * (attempt + 1))
+    return None, err
+
+
+_REL = re.compile(r'"videoId":"([A-Za-z0-9_-]{11})".{0,1500}?"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"'
+                  r'.{0,3000}?"publishedTimeText":\{"simpleText":"([^"]*)"', re.S)
+
+
+def _page_entries(ch, now):
+    """Fallback when the feed is down (all seven feeds answered 404 on 2026-10-08 while channel pages answered 200):
+    the channel's videos page, or the playlist page, lists the newest videos with a relative time ("3 hours ago").
+    The published time is therefore approximate (approx=True); `details <id>` gives the exact date before a reply."""
+    url = (f"https://www.youtube.com/playlist?list={ch['playlist_id']}" if ch.get("playlist_id")
+           else f"https://www.youtube.com/{ch['handle']}/videos")
+    html = fetch(url)
+    seen, out = set(), []
+    for vid, title, rel in _REL.findall(html):
+        if vid in seen:
+            continue
+        seen.add(vid)
+        m = re.match(r"(?:Streamed )?(\d+) (second|minute|hour|day|week|month|year)s? ago", rel)
+        if not m:
+            continue
+        n, unit = int(m.group(1)), m.group(2)
+        hours = {"second": n / 3600, "minute": n / 60, "hour": n, "day": 24 * n, "week": 168 * n,
+                 "month": 720 * n, "year": 8760 * n}[unit]
+        title = json.loads(f'"{title}"')
+        out.append((vid, title, now - timedelta(hours=hours), f"(from the channel page; listed as {rel})", True))
+    return out
+
+
 def scan():
     channels = load(CHANNELS, [])
     answered = load(ANSWERED, {})
@@ -48,47 +93,39 @@ def scan():
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015", "media": "http://search.yahoo.com/mrss/"}
     out = []
     for ch in channels:
-        feed = (f"https://www.youtube.com/feeds/videos.xml?playlist_id={ch['playlist_id']}" if ch.get("playlist_id")
-                else f"https://www.youtube.com/feeds/videos.xml?channel_id={ch['channel_id']}")
-        xml, err = None, None
-        for attempt in range(4):  # the feed host answers 404 or 500 now and then (seen 2026-10-08); retry before giving up
+        entries, err = _feed_entries(ch, ns)
+        source = "feed"
+        if entries is None:
             try:
-                xml = fetch(feed)
-                break
-            except Exception as e:  # a feed that fails is reported, not fatal
-                err = e
-                time.sleep(5 * (attempt + 1))
-        if xml is None:
-            out.append({"channel": ch["name"], "error": f"feed failed after 4 attempts: {err}"})
-            continue
-        root = ET.fromstring(xml)
-        entries = root.findall("a:entry", ns)
+                entries, source = _page_entries(ch, now), "page"
+            except Exception as e2:
+                out.append({"channel": ch["name"], "error": f"feed failed after 4 attempts: {err}; page fallback failed: {e2}"})
+                continue
         # A channel may carry min_hours_between_replies: its next reply is open only that long after the latest
         # reply to any of its feed entries (the registry stores the reply time per video).
         open_at = None
         limit = ch.get("min_hours_between_replies")
         if limit:
-            for entry in entries:
-                rec = answered.get(entry.findtext("yt:videoId", "", ns))
+            for vid, *_ in entries:
+                rec = answered.get(vid)
                 if rec and rec.get("answered"):
                     t = datetime.strptime(rec["answered"], "%Y-%m-%d %H:%M UTC").replace(tzinfo=timezone.utc) + timedelta(hours=limit)
                     if t > now and (open_at is None or t > open_at):
                         open_at = t
-        for entry in entries:
-            vid = entry.findtext("yt:videoId", "", ns)
-            published = datetime.fromisoformat(entry.findtext("a:published", "", ns).replace("Z", "+00:00"))
+        for vid, title, published, description, approx in entries:
             age = now - published
             out.append({
                 "channel": ch["name"], "who": ch.get("who", ""), "id": vid,
-                "title": entry.findtext("a:title", "", ns),
+                "title": title,
                 "url": f"https://www.youtube.com/watch?v={vid}",
-                "published": published.strftime("%Y-%m-%d %H:%M UTC"),
+                "published": published.strftime("%Y-%m-%d %H:%M UTC") + (" (approximate, from the channel page)" if approx else ""),
                 "age_hours": round(age.total_seconds() / 3600, 1),
                 "in_window": age <= WINDOW,
+                "source": source,
                 "answered": answered.get(vid, {}).get("post"),
                 "channel_limit_hours": limit,
                 "channel_open_at": open_at.strftime("%Y-%m-%d %H:%M UTC") if open_at else None,
-                "description": (entry.findtext("media:group/media:description", "", ns) or "")[:400],
+                "description": description,
             })
     out.sort(key=lambda e: e.get("published", ""), reverse=True)
     return out
