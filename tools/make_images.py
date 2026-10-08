@@ -413,7 +413,23 @@ def cold_start():
     return s
 
 
+def growth_for_whom():
+    """A rising curve with people under it: most of the curve stands on collateral; who is below the line."""
+    s = ""
+    s += f'<line x1="150" y1="470" x2="1050" y2="470" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 170 440 C 450 430, 700 380, 1030 140" stroke="{AMBER}" stroke-width="8" fill="none" stroke-linecap="round"/>\n'
+    s += f'<line x1="150" y1="300" x2="1050" y2="300" stroke="{TEAL}" stroke-width="3" stroke-dasharray="14 10"/>\n'
+    s += text(1040, 290, "collateral line", 22, TEAL, anchor="end", sans=True)
+    for x in (260, 330, 400, 470, 540):
+        s += node(x, 520, 14, PAPER, INK, 3)
+    for x in (820, 900):
+        s += node(x, 250, 14, PAPER, INK, 3)
+    s += text(600, 585, "growth measured in what, and for whom?", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "growth-measured-for-whom": (growth_for_whom, "A rising curve above a collateral line, most people standing below it"),
     "cold-start-three-communities": (cold_start, "Three supports for a first loan: cash, judgement and income"),
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
