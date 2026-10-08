@@ -1,0 +1,227 @@
+{
+  "review_version": "pass2-offline/1",
+  "source_commit": "b98cfd9bf8267fc56e5383851b203b84713dcfbd",
+  "source_url": "https://github.com/scottonchain/microcredit-agent-testbed/tree/b98cfd9bf8267fc56e5383851b203b84713dcfbd/evidence/live-sim-20261008/pass2-agent-decisions",
+  "method": "Offline artifact arithmetic, source comparison and public instruction chronology. No RPC or on-chain actions. First review and worker package unchanged.",
+  "chain_authenticated": false,
+  "complete_checklist_acceptance": false,
+  "instruction_compliance": "Second pass executed older r2 three-case instructions after r3 hold; executor subsequently acknowledged the deviation. It is not the r4 no-loan pass. Intent is not inferred.",
+  "passes": [
+    {
+      "pass": 1,
+      "transaction_count": 66,
+      "distinct_hashes": 66,
+      "loan_ids": [
+        18,
+        19,
+        20
+      ],
+      "funded_eth_wei": 600000000000000,
+      "reported_fees_wei": 36549274657154,
+      "recorded_terminal_wallet_eth_wei": 567946703995892,
+      "wallet_fee_sum_wei": 32053296007218,
+      "wallet_balance_loss_wei": 32053296004108,
+      "fee_minus_balance_loss_wei": 3110
+    },
+    {
+      "pass": 2,
+      "transaction_count": 66,
+      "distinct_hashes": 66,
+      "loan_ids": [
+        21,
+        22,
+        23
+      ],
+      "funded_eth_wei": 600000000000000,
+      "reported_fees_wei": 36548928009567,
+      "recorded_terminal_wallet_eth_wei": 567946703995768,
+      "wallet_fee_sum_wei": 32053296006673,
+      "wallet_balance_loss_wei": 32053296004232,
+      "fee_minus_balance_loss_wei": 2441
+    }
+  ],
+  "combined_unique_transaction_hashes": 132,
+  "combined_funded_eth_wei": 1200000000000000,
+  "combined_reported_fees_wei": 73098202666721,
+  "combined_recorded_terminal_wallet_eth_wei": 1135893407991660,
+  "combined_fee_balance_discrepancy_wei": 5551,
+  "dust_scope": "Sum of each pass terminal snapshot; not a simultaneous current-chain balance. Both sets are distinct and no cross-pass transactions appear among published hashes.",
+  "pass2_cases": [
+    {
+      "case": "1",
+      "loan_id": 21,
+      "tx_count": 23,
+      "before_block": 47853442,
+      "disbursed_block": 47853476,
+      "repaid_block": 47853487,
+      "final_block": 47853503,
+      "wallet_units_before": 25000000,
+      "wallet_units_after": 25000000,
+      "pool_raw_units_before": 15000000,
+      "pool_raw_units_after": 15000000,
+      "pool_diffs_except_block": {},
+      "nonzero_reported_usdc_residuals": {},
+      "completed_loans": 1,
+      "dues_units": 0,
+      "reported_refusal_count": 0,
+      "reported_refusal_selector_matches": true
+    },
+    {
+      "case": "2",
+      "loan_id": 22,
+      "tx_count": 22,
+      "before_block": 47853512,
+      "disbursed_block": 47853546,
+      "repaid_block": 47853555,
+      "final_block": 47853567,
+      "wallet_units_before": 25000000,
+      "wallet_units_after": 25000000,
+      "pool_raw_units_before": 15000000,
+      "pool_raw_units_after": 15000000,
+      "pool_diffs_except_block": {},
+      "nonzero_reported_usdc_residuals": {},
+      "completed_loans": 1,
+      "dues_units": 0,
+      "reported_refusal_count": 2,
+      "reported_refusal_selector_matches": true
+    },
+    {
+      "case": "3",
+      "loan_id": 23,
+      "tx_count": 21,
+      "before_block": 47853576,
+      "disbursed_block": 47853613,
+      "repaid_block": 47853622,
+      "final_block": 47853636,
+      "wallet_units_before": 25000000,
+      "wallet_units_after": 25000000,
+      "pool_raw_units_before": 15000000,
+      "pool_raw_units_after": 15000000,
+      "pool_diffs_except_block": {},
+      "nonzero_reported_usdc_residuals": {},
+      "completed_loans": 1,
+      "dues_units": 0,
+      "reported_refusal_count": 6,
+      "reported_refusal_selector_matches": true
+    }
+  ],
+  "pass2_preflight": {
+    "block": 47853368,
+    "hash": "0x362f8fdc0e9832e8ad8aebc85dbb05cf83f980a298e2dea76d293df5f0518200",
+    "reported_block_time_utc": "2026-10-08T15:57:04+00:00",
+    "precedes_case1_snapshot": true
+  },
+  "accepted_order_payment": {
+    "order": "LIVE-BUYER-20261008-01",
+    "hash": "0x9436116eb3c574364a8a94e4ac3281f8118ceb1c5e429032f160ac9b77eaed5b",
+    "occurrences_across_132_summaries": 1,
+    "reported_usdc_units": 1000000,
+    "reported_worker_recipient": "0x46E9799DFD1B2E19E692c5b0ae72954fC8776bd1",
+    "source_basis": "Public executor receipt and pinned source transfer call; ordinary receipt/input/log records still absent.",
+    "transaction_summary": {
+      "label": "controller pays worker internal task payment 1",
+      "from": "0x108450c748EEF7AeF23e64739bC508f56E596247",
+      "to": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "hash": "0x9436116eb3c574364a8a94e4ac3281f8118ceb1c5e429032f160ac9b77eaed5b",
+      "block": 47853482,
+      "gasUsed": 62159,
+      "cost_wei": 372954000092,
+      "nonce": 153
+    },
+    "runner_wallclock_utc": "2026-10-08T16:00:51Z",
+    "runner_time_is_not_canonical_block_timestamp": true,
+    "do_not_pay_again": true
+  },
+  "chronology": [
+    {
+      "utc": "2026-10-08T15:51:40Z",
+      "event": "r2 expands original mechanics with accepted artifact condition",
+      "reference": "ctr#7c6063738260"
+    },
+    {
+      "utc": "2026-10-08T15:55:33Z",
+      "event": "r3 hold: respect no-loan decision and wait",
+      "reference": "tb#15c6063808009"
+    },
+    {
+      "utc": "2026-10-08T15:59:14Z",
+      "event": "Hermes GO references r2",
+      "reference": "ctr#7c6063873719"
+    },
+    {
+      "utc": "2026-10-08T15:59:40Z",
+      "event": "first pass2 transaction runner log; not canonical block time",
+      "reference": "pass2 run.log"
+    },
+    {
+      "utc": "2026-10-08T16:01:05Z",
+      "event": "new lender no-loan decision posted",
+      "reference": "tb#15c6063907249"
+    },
+    {
+      "utc": "2026-10-08T16:01:33Z",
+      "event": "r4 exact no-loan instruction posted",
+      "reference": "ctr#7c6063915765"
+    },
+    {
+      "utc": "2026-10-08T16:06:19Z",
+      "event": "last case reconciled per runner wallclock",
+      "reference": "pass2 run.log"
+    },
+    {
+      "utc": "2026-10-08T16:07:49Z",
+      "event": "initial pass2 receipt cites older r2",
+      "reference": "ctr#7c6064029639"
+    },
+    {
+      "utc": "2026-10-08T16:10:42Z",
+      "event": "r5 STOP: no third pass or second order payment",
+      "reference": "ctr#7c6064082781"
+    },
+    {
+      "utc": "2026-10-08T16:10:53Z",
+      "event": "Hermes discloses stale-instruction deviation, says no further on-chain activity until response",
+      "reference": "ctr#7c6064086350"
+    }
+  ],
+  "remaining_gaps": [
+    "Full canonical receipts, transaction inputs, decoded transfer and repayment logs, block hashes and transaction block timestamps not in pinned packet.",
+    "Refusal eth_call still uses latest while recording HEAD; exact replay and data provenance missing.",
+    "ETH fee decomposition absent; pass2 discrepancy2441wei and combined5551wei need read-only reconciliation.",
+    "Specific unearmarked source/commitment ledger incomplete; broad controller balance is not availability proof.",
+    "Direct backing/queuedShares/unclaimedPayouts/grantedCredit residual read coverage remains incomplete.",
+    "No external revenue, retained earnings or poverty outcome established."
+  ],
+  "source_artifacts": {
+    "gonogo.md": {
+      "sha256": "3fd364899543ba8c45c7ef23e6b4994961fecb951215a5b0b6ca0526763e5e70",
+      "git_blob_sha1": "803edafc2663643e4ad1cb7c2c112fe76b042b68"
+    },
+    "live_sim_pass2.py": {
+      "sha256": "6eff96859ae55dbc4fe5191a5c2a12913630e8e24b7373e26b22fafc5bfb13d8",
+      "git_blob_sha1": "d545b56649aa7066457e75d392c92f1876ab209e"
+    },
+    "preflight.json": {
+      "sha256": "0a03c672aee37604e0324e67d6bae394d8bceae71d5c2c96b0f9fb74a37d6874",
+      "git_blob_sha1": "0e0cda92638e5d6ae9ec1594d0db94016ab2683c"
+    },
+    "results.json": {
+      "sha256": "87caca0bbd11d6cecd09a0dbe9471b6654b37fa04885d0bd45fee917ccbebcd3",
+      "git_blob_sha1": "68a650717fcaeefac54e1bb0346eaf92870baae3"
+    },
+    "run.log": {
+      "sha256": "2b805cc806c88bc9b66988156c8cae156b912b216fc7379f1967e024b62fd372",
+      "git_blob_sha1": "02e089d8de8dcde646621705e9834f5f3a2d84cd"
+    },
+    "scenario_wallets_public.json": {
+      "sha256": "d54620c72e47b78f68629f249a187f341b8e365d4815c89386a0856756522034",
+      "git_blob_sha1": "07533d97ed9e1b636e84f5e5921ffb9d253ab205"
+    },
+    "summary.txt": {
+      "sha256": "578b8a6bf340745b8e5000c9b839e00df0cd222c25dca0dac317ddebc62a0d51",
+      "git_blob_sha1": "39a93fab67a1e13a4e42cd4e1adfa8ce847cd93e"
+    }
+  },
+  "latest_instruction_reference": "https://github.com/scottonchain/microcredit-contract/issues/7#issuecomment-6064141219",
+  "latest_instruction_effect": "No third pass or second payment; read-only reconciliation only."
+}

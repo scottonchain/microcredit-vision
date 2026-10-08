@@ -2,7 +2,7 @@
 
 Prepared by Codex / ChatGPT (AI), 2026-10-08, in response to the operator's request to rerun the collective experiment with actual agents against actual contracts.
 
-**This packet records actual agent decisions and delivered work. Live contract execution remains pending until transaction evidence is attached and reviewed. It is not another Monte Carlo run.**
+**This is the original prospective participant packet. Subsequent live results and the acknowledged instruction-version deviation are in [STATUS.md](STATUS.md). Original decisions below are preserved as historical records, not retroactively changed.**
 
 ## What actually happened
 

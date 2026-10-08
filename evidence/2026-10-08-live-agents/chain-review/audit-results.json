@@ -1,0 +1,168 @@
+{
+  "scope": "Offline artifact arithmetic and source inspection; no independent RPC verification.",
+  "source_commit": "566fa5db74fb6c4bb4659ec3b91f519baf5834fe",
+  "transaction_count": 66,
+  "unique_hashes": 66,
+  "nonce_sequences_contiguous_per_sender": true,
+  "cases": [
+    {
+      "case": "1",
+      "loan_id": 18,
+      "transaction_count": 23,
+      "before_block": 47852724,
+      "disbursed_block": 47852758,
+      "repaid_block": 47852770,
+      "after_block": 47852784,
+      "wallet_before_units": 25000000,
+      "wallet_after_units": 25000000,
+      "pool_diffs_except_block": {},
+      "nonzero_reported_usdc_residuals": {},
+      "fee_sum_wei": 12502530003903,
+      "refusals": []
+    },
+    {
+      "case": "2",
+      "loan_id": 19,
+      "transaction_count": 22,
+      "before_block": 47852796,
+      "disbursed_block": 47852831,
+      "repaid_block": 47852840,
+      "after_block": 47852852,
+      "wallet_before_units": 25000000,
+      "wallet_after_units": 25000000,
+      "pool_diffs_except_block": {},
+      "nonzero_reported_usdc_residuals": {},
+      "fee_sum_wei": 12158722649829,
+      "refusals": [
+        {
+          "label": "borrower cannot back peer with received backing (onward)",
+          "call": "back(address,uint256)",
+          "expected_selector": "0x8ac4bc73",
+          "result": "revert",
+          "revert_data": "0x8ac4bc73",
+          "block": 47852825,
+          "match": true,
+          "note": "observation recorded; run continues"
+        },
+        {
+          "label": "closed history + removed backing grants no own credit",
+          "call": "requestLoan(uint256)",
+          "expected_selector": "0x315b0e14",
+          "result": "revert",
+          "revert_data": "0x315b0e14",
+          "block": 47852852,
+          "match": true,
+          "note": "observation recorded; run continues"
+        }
+      ]
+    },
+    {
+      "case": "3",
+      "loan_id": 20,
+      "transaction_count": 21,
+      "before_block": 47852864,
+      "disbursed_block": 47852897,
+      "repaid_block": 47852906,
+      "after_block": 47852920,
+      "wallet_before_units": 25000000,
+      "wallet_after_units": 25000000,
+      "pool_diffs_except_block": {},
+      "nonzero_reported_usdc_residuals": {},
+      "fee_sum_wei": 11888022003422,
+      "refusals": [
+        {
+          "label": "borrower cannot onward-back colluder with received backing",
+          "call": "back(address,uint256)",
+          "expected_selector": "0x8ac4bc73",
+          "result": "revert",
+          "revert_data": "0x8ac4bc73",
+          "block": 47852892,
+          "match": true,
+          "note": "observation recorded; run continues"
+        },
+        {
+          "label": "borrower overlimit request 1.01 USDC",
+          "call": "requestLoan(uint256)",
+          "expected_selector": "0x5d615d32",
+          "result": "revert",
+          "revert_data": "0x5d615d32",
+          "block": 47852892,
+          "match": true,
+          "note": "observation recorded; run continues"
+        },
+        {
+          "label": "colluder without credit cannot request",
+          "call": "requestLoan(uint256)",
+          "expected_selector": "0x315b0e14",
+          "result": "revert",
+          "revert_data": "0x315b0e14",
+          "block": 47852892,
+          "match": true,
+          "note": "observation recorded; run continues"
+        },
+        {
+          "label": "repeat request refused while reservation open",
+          "call": "requestLoan(uint256)",
+          "expected_selector": "0x5d615d32",
+          "result": "revert",
+          "revert_data": "0x5d615d32",
+          "block": 47852894,
+          "match": true,
+          "note": "observation recorded; run continues"
+        },
+        {
+          "label": "sponsor cannot cut backing while reservation open",
+          "call": "back(address,uint256)",
+          "expected_selector": "0x9917947d",
+          "result": "revert",
+          "revert_data": "0x9917947d",
+          "block": 47852894,
+          "match": true,
+          "note": "observation recorded; run continues"
+        },
+        {
+          "label": "colluder still has no credit after receiving cash",
+          "call": "requestLoan(uint256)",
+          "expected_selector": "0x315b0e14",
+          "result": "revert",
+          "revert_data": "0x315b0e14",
+          "block": 47852902,
+          "match": true,
+          "note": "observation recorded; run continues"
+        }
+      ]
+    }
+  ],
+  "reported_fee_sum_wei": 36549274657154,
+  "reported_gas_total_matches_sum": true,
+  "eth_funded_to_scenario_wallets_wei": 600000000000000,
+  "eth_remaining_in_scenario_wallets_wei": 567946703995892,
+  "scenario_wallet_balance_loss_wei": 32053296004108,
+  "scenario_wallet_reported_fee_sum_wei": 32053296007218,
+  "fee_sum_minus_wallet_balance_loss_wei": 3110,
+  "controller_reported_fee_sum_wei": 4495978649936,
+  "runtime_template_hashes_equal_in_post_run_artifact": true,
+  "raw_receipts_authenticated": false,
+  "artifact_hashes": {
+    "live_sim.py": {
+      "sha256": "19f498eec94ffb556ac5d0b3ed4de540f4892c87c3e9bc6fedbbf20ea039aa7f",
+      "git_blob_sha1": "23a81101223f63f3f9479323c5860c40db73c3ce"
+    },
+    "preflight.json": {
+      "sha256": "97a00d6477ab4f5e9c80f5d9f6a108e4917fff59a2c1acb32aa1c566734b82bb",
+      "git_blob_sha1": "88439d5083cd5373e3cfab7f7084ab4e6362049b"
+    },
+    "preflight.py": {
+      "sha256": "1933fbdb4d364e0d6f6a17262a192dcd3f32de8a37edc1c7507f9840c720dee5",
+      "git_blob_sha1": "69a15dc9b172d8c2ee85a01a3dc2609b13f9b178"
+    },
+    "results.json": {
+      "sha256": "2dc43b2c70fe0ccc496d6e323832c1d74d3f6df344734f47caaf3e44127c48e8",
+      "git_blob_sha1": "dec61b2cfad1f25213b313b4d50408be9039cdc9"
+    },
+    "run.log": {
+      "sha256": "190c34cc63a6a640d9316b70da69ae63f5571dc6204c2a8d7ad093e4a4155216",
+      "git_blob_sha1": "24f2c198fe3a6adbee3bf102b16f5cefc551e515"
+    }
+  }
+}

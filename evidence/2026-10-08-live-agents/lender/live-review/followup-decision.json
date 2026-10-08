@@ -1,0 +1,67 @@
+{
+  "decision_id": "codex-lender-20261008-agent-no-loan-r2",
+  "participant": "Codex lending committee subagent (AI)",
+  "decision": "APPROVE_ONE_CONDITIONAL_NO_LOAN_AGENT_DECISION_PASS",
+  "status": "ACTIVATES_ONLY_AFTER_FRESH_PREFLIGHT_GATES_PASS",
+  "supersedes_for_new_worker_case_only": "codex-lender-20261008-live-communities-r1",
+  "historical_first_pass": "Loans18/19/20 ran before participant decisions were read. They are not retrospectively approved or relabeled as decisions by these agents.",
+  "scope_authority": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15#issuecomment-6063808009",
+  "custodian": "Hermes; one disclosed team controller",
+  "chain_id": 84532,
+  "pool": "0x73872B8fB7F1771C67911f03edc75aBdc9514973",
+  "token": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "source_commit": "1812e7d2b67e159e341bbff33d6d604409eebb67",
+  "worker_loan_decision": "DECLINE: verified incremental upfront cash need is zero. No loan may be originated for this worker.",
+  "purpose": "Record actual committee provision of optional credit capacity, the worker's decision not to borrow, and one accepted useful-service payment, all before the corresponding transactions.",
+  "permitted_operations_in_order": [
+    "Publish this decision id, worker refusal, buyer acceptance id/digests and fresh wallet-role mapping before any related transaction. Record a fresh activation block number/hash.",
+    "Optional funded-line test only: transfer5000000 token units to fresh lender and1000000 to fresh sponsor from unearmarked experiment holdings. Approve exact deposit/stake amounts; lender calls depositFunds(5000000); sponsor calls stake(1000000), then back(worker,1000000). This is unused test credit capacity, not productive financing.",
+    "If the funded-line test is used, read and record getBorrowLimit(worker)=(1000000,1000000), fresh zero grant, zero active loans and the worker's prior refusal at a pinned block. Do not call any loan origination function, even as a demonstration.",
+    "If the funded-line test is used, sponsor calls back(worker,0), unstake(1000000); lender calls withdrawFunds(type(uint256).max). Revoke any remaining token allowances; recover all6testUSDC. Verify pool state and scenario claims fully restored before the service payment.",
+    "Only after buyer acceptance for LIVE-BUYER-20261008-01 and explicit availability of its one-testUSDC budget, transfer exactly1000000 token units from the designated internal payer to the worker recipient once. First-pass generic payment is unrelated and must not be relabeled as this payment. No loan conditions this transfer.",
+    "Record payment receipt before the previously disclosed sweep of the same1000000 units back to the experiment controller. Revoke all remaining scenario allowances and reconcile all scenario token balances to zero. The closed-loop internal test payment is not retained earnings or independent income."
+  ],
+  "optional_capacity_test": "May be omitted if the root/executor records that borrowing was declined and no funded-line observation is needed. Approval never requires an unnecessary loan or another three-case repetition.",
+  "prohibited_calls": ["requestLoan or any relayed/alternate loan request", "disburseLoan", "repayLoan for any unrelated existing loan", "markDefaulted", "impairLoan", "score grants", "candidate deploy/upgrade", "mint/faucet", "operations on original root-wallet funds or source5"],
+  "caps": {
+    "reused_test_usdc_peak_atomic": 7000000,
+    "optional_capacity_test_allocation_atomic": 6000000,
+    "single_service_payment_atomic": 1000000,
+    "first_pass_eth_funded_wei": "600000000000000",
+    "first_pass_recorded_all_sender_gas_wei": "36549274657154",
+    "additional_scenario_eth_funding_max_wei": "200000000000000",
+    "additional_per_wallet_eth_funding_max_wei": "50000000000000",
+    "additional_total_gas_cost_max_wei": "100000000000000",
+    "original_cumulative_eth_cap_wei": "3000000000000000",
+    "conservative_combined_accounting_rule": "Count first-pass600000000000000 funding plus all first-pass recorded36549274657154 gas plus all new funding and all new incurred/estimated-remaining gas against the original3000000000000000wei cap. This intentionally double-counts some gas as a conservative bound. Preserve unrelated gas commitments separately.",
+    "maximum_combined_bound_under_this_decision_wei": "936549274657154"
+  },
+  "activation_gates": [
+    "Fresh chain/runtime/immutable/wiring/parameter check at a named block matches the existing approved deployment, and all scenario loan/claim balances start zero. Preserve the pre-run snapshot rather than overwriting it with post-run data.",
+    "Publish a fresh source ledger: controlled balances, specific7testUSDC experiment allocation and gas allocation, existing payment/candidate/Oct19-20 earmarks, and sufficient unearmarked remainder for complete cleanup. Merely showing controller25testUSDC does not prove availability.",
+    "Read all13 original wallet positions and source5/pool holdings; exclude them from funding and guarantees. Their existing restoration obligation remains open.",
+    "Fresh addresses and private custody confirmed. Exact transaction allowlist contains only the operations above. Persist fresh balances/nonce and exact simulation data before each transaction; pin read-only calls to an explicit block/hash.",
+    "Compute a conservative complete-run estimate including all fee components, sweeps and revocations; stay within both this narrower additional cap and the original cumulative cap while preserving unrelated commitments.",
+    "Buyer's immutable acceptance and worker refusal are posted before payment. Confirm this order has no prior service payment and the existing internal budget is available for this distinct accepted order.",
+    "Capture full canonical receipts and decoded transfer events, not only summaries. On uncertainty reconcile by transaction hash before retry. A discrepancy stops new discretionary operations; already funded positions are safely unwound."
+  ],
+  "expected_terminal": {
+    "new_loans": 0,
+    "new_loan_ids": 0,
+    "new_interest_dues": 0,
+    "scenario_debt_backing_stake_shares_allowances_atomic": 0,
+    "scenario_token_wallets_after_sweep_atomic": 0,
+    "controller_test_usdc_change_after_recovery_atomic": 0,
+    "pool_cash_assets_shares_reserve_unrelated_claim_changes_atomic": 0,
+    "accepted_service_transfers": 1
+  },
+  "first_pass_review": {
+    "evidence_commit": "566fa5db74fb6c4bb4659ec3b91f519baf5834fe",
+    "offline_consistency": "66 unique transaction hashes; stored case wallet/pool balances and zero residuals reconcile; gas sum agrees with stored transaction costs.",
+    "exact_eth_discrepancy_wei": "3110",
+    "acceptance": "NOT_FULLY_ACCEPTED: executor-provided artifacts, incomplete receipts/pre-run source evidence and an unexplained3110wei ETH discrepancy. Independent chain authentication was not performed by this participant.",
+    "supplemental_read_only_request": "Preserve/retrieve full receipts and original activation facts, source/earmark ledger, reproducible runtime manifest, exact refusal block semantics and ETH balance reconciliation. Do not rerun historical transactions to fabricate missing evidence.",
+    "relationship_to_followup": "These historical evidence gaps require a supplement. They do not by themselves require another loan or block this narrower no-loan pass if its fresh gates independently pass and conservative funding remains adequate."
+  },
+  "claims_not_authorized": ["Loan-enabled service", "Independent revenue", "Retained worker earnings", "Independent controllers", "Profitable bank", "Human poverty reduction", "Original root-wallet recovery"]
+}
