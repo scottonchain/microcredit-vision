@@ -265,6 +265,14 @@ def main(argv):
     print("sources:", "; ".join(f"{k}: {v}" for k, v in led.sources.items()))
     for slug, rec in sorted(led.posts.items(), key=lambda kv: -kv[1]["events"])[:10]:
         print(f"  {slug}: {rec['events']} (github {rec['github']}, mail {rec['mail']}, moltbook {rec['moltbook']}, agent-declared {rec['agent_declared']})")
+    # The podcast is the series the operator evaluates (2026-10-08): per episode, the same traced counts, newest first.
+    eps = sorted((p for p in posts if p.get("audio")), key=lambda p: p["dt"], reverse=True)
+    out["podcast"] = {p["slug"]: dict(led.posts.get(p["slug"], {"events": 0, "agent_declared": 0, "github": 0, "mail": 0, "moltbook": 0}),
+                                      seconds=int(p["audio_seconds"]), published=p["date"]) for p in eps}
+    print(f"podcast: {len(eps)} episode(s), {sum(v['events'] for v in out['podcast'].values())} traced events"
+          + ("; plays are not countable (static host, no tracking)" if eps else ""))
+    for slug, rec in out["podcast"].items():
+        print(f"  episode {slug} ({rec['seconds']} s): {rec['events']} (github {rec['github']}, mail {rec['mail']}, moltbook {rec['moltbook']})")
     if "--dry-run" not in argv:
         json.dump(out, open(LEDGER, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
         open(LEDGER, "a").write("\n")
