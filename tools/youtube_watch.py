@@ -153,7 +153,9 @@ INNERTUBE_CLIENTS = (
 )
 
 
-def player_response(video_id):
+def player_responses(video_id):
+    """Every player response that carries this video, one per client that answers (YouTube's clients differ in what
+    they allow: some demand a login, some hand out caption URLs that then answer empty), newest first."""
     for client in INNERTUBE_CLIENTS:
         body = {"context": {"client": {k: v for k, v in client.items() if not k.startswith("_")}},
                 "videoId": video_id, "contentCheckOk": True, "racyCheckOk": True}
@@ -171,48 +173,46 @@ def player_response(video_id):
             continue
         if pr.get("videoDetails", {}).get("videoId") == video_id and (
                 pr.get("playabilityStatus", {}).get("status") == "OK" or pr.get("captions")):
-            return pr
-        sys.stderr.write(f"player API with {client['clientName']}: status {pr.get('playabilityStatus', {}).get('status')}\n")
-    html = fetch(f"https://www.youtube.com/watch?v={video_id}")
-    m = re.search(r"ytInitialPlayerResponse\s*=\s*(\{)", html)
-    if not m:
-        raise SystemExit("no ytInitialPlayerResponse in the page (consent wall or layout change)")
-    i = m.start(1)
-    depth = 0
-    in_str = False
-    esc = False
-    for j in range(i, len(html)):
-        c = html[j]
-        if in_str:
-            if esc:
-                esc = False
-            elif c == "\\":
-                esc = True
-            elif c == '"':
-                in_str = False
-        elif c == '"':
-            in_str = True
-        elif c == "{":
-            depth += 1
-        elif c == "}":
-            depth -= 1
-            if depth == 0:
-                return json.loads(html[i:j + 1])
-    raise SystemExit("unterminated player response")
+            sys.stderr.write(f"player API with {client['clientName']}: answered\n")
+            yield pr, client["_ua"]
+        else:
+            sys.stderr.write(f"player API with {client['clientName']}: status {pr.get('playabilityStatus', {}).get('status')}\n")
 
 
-def transcript_text(base_url):
-    url = base_url + ("&" if "?" in base_url else "?") + "fmt=json3"
-    data = json.loads(fetch(url))
+def player_response(video_id):
+    for pr, _ in player_responses(video_id):
+        return pr
+    raise SystemExit("no player client answered for this video (login wall or network policy)")
+
+
+def _caption_events(base_url, ua):
+    """(start ms, duration ms, text) for each caption event: the json3 form, else the XML form YouTube serves
+    without fmt (some clients' caption URLs answer json3 with an empty body, seen 2026-10-08)."""
+    headers = {"User-Agent": ua, "Accept-Language": "en-US,en;q=0.8"}
+    sep = "&" if "?" in base_url else "?"
+    with urllib.request.urlopen(urllib.request.Request(base_url + sep + "fmt=json3", headers=headers), timeout=60) as r:
+        body = r.read().decode("utf-8", "replace")
+    if body.strip():
+        for ev in json.loads(body).get("events", []):
+            segs = ev.get("segs")
+            if segs:
+                yield int(ev.get("tStartMs", 0)), int(ev.get("dDurationMs", 0)), "".join(s.get("utf8", "") for s in segs)
+        return
+    with urllib.request.urlopen(urllib.request.Request(base_url, headers=headers), timeout=60) as r:
+        body = r.read().decode("utf-8", "replace")
+    if not body.strip():
+        raise ValueError("caption URL answered an empty body in both forms")
+    import html as _html
+    for el in ET.fromstring(body).iter("text"):
+        yield int(float(el.get("start", "0")) * 1000), int(float(el.get("dur", "0")) * 1000), _html.unescape(el.text or "")
+
+
+def transcript_text(base_url, ua=UA):
     lines, current_minute, buf = [], -1, []
     last_ms = 0
-    for ev in data.get("events", []):
-        segs = ev.get("segs")
-        if not segs:
-            continue
-        t = int(ev.get("tStartMs", 0))
-        last_ms = max(last_ms, t + int(ev.get("dDurationMs", 0)))
-        text = "".join(s.get("utf8", "") for s in segs).replace("\n", " ").strip()
+    for t, d, raw in _caption_events(base_url, ua):
+        last_ms = max(last_ms, t + d)
+        text = raw.replace("\n", " ").strip()
         if not text:
             continue
         minute = t // 60000
@@ -229,7 +229,22 @@ def transcript_text(base_url):
 
 
 def details(video_id):
-    pr = player_response(video_id)
+    pr, text, last_ms, used = None, None, 0, None
+    for cand, ua in player_responses(video_id):
+        pr = pr or cand
+        tracks = cand.get("captions", {}).get("playerCaptionsTracklistRenderer", {}).get("captionTracks", [])
+        english = [t for t in tracks if (t.get("languageCode") or "").startswith("en")]
+        english.sort(key=lambda t: t.get("kind") == "asr")  # a human track first, then auto
+        if not english:
+            continue
+        try:
+            text, last_ms = transcript_text(english[0]["baseUrl"], ua)
+            used, pr = english[0], cand
+            break
+        except Exception as e:
+            sys.stderr.write(f"caption fetch via this client failed: {e}\n")
+    if pr is None:
+        raise SystemExit("no player client answered for this video (login wall or network policy)")
     vd = pr.get("videoDetails", {})
     mf = pr.get("microformat", {}).get("playerMicroformatRenderer", {})
     tracks = pr.get("captions", {}).get("playerCaptionsTracklistRenderer", {}).get("captionTracks", [])
@@ -244,9 +259,8 @@ def details(video_id):
         "description": vd.get("shortDescription", ""),
         "caption_tracks": track_list,
     }
-    if english:
-        text, last_ms = transcript_text(english[0]["baseUrl"])
-        result["transcript_auto_generated"] = english[0].get("kind") == "asr"
+    if used is not None:
+        result["transcript_auto_generated"] = used.get("kind") == "asr"
         result["transcript_words"] = len(text.split())
         result["transcript_last_second"] = last_ms // 1000
         result["transcript_complete"] = result["length_seconds"] == 0 or last_ms // 1000 >= result["length_seconds"] - 90
