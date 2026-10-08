@@ -138,6 +138,18 @@ INNERTUBE_CLIENTS = (
      "_ua": "com.google.android.youtube/20.10.38 (Linux; U; Android 11) gzip", "_name": "3"},
     {"clientName": "IOS", "clientVersion": "20.10.4", "deviceModel": "iPhone16,2", "hl": "en", "gl": "US",
      "_ua": "com.google.ios.youtube/20.10.4 (iPhone16,2; U; CPU iOS 18_3_2 like Mac OS X;)", "_name": "5"},
+    # The mobile clients began answering LOGIN_REQUIRED on 2026-10-08; these answer without a login for most videos.
+    {"clientName": "ANDROID_VR", "clientVersion": "1.62.27", "deviceMake": "Oculus", "deviceModel": "Quest 3",
+     "androidSdkVersion": 32, "osName": "Android", "osVersion": "12L", "hl": "en", "gl": "US",
+     "_ua": "com.google.android.apps.youtube.vr.oculus/1.62.27 (Linux; U; Android 12L; eureka-user Build/SQ3A.220605.009.A1) gzip",
+     "_name": "28"},
+    {"clientName": "TVHTML5", "clientVersion": "7.20250312.16.00", "hl": "en", "gl": "US",
+     "_ua": "Mozilla/5.0 (ChromiumStylePlatform) Cobalt/Version", "_name": "7"},
+    {"clientName": "WEB_EMBEDDED_PLAYER", "clientVersion": "1.20250310.01.00", "hl": "en", "gl": "US",
+     "_ua": UA, "_name": "56", "_embed": True},
+    {"clientName": "MWEB", "clientVersion": "2.20250311.03.00", "hl": "en", "gl": "US",
+     "_ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_10 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
+     "_name": "2"},
 )
 
 
@@ -145,6 +157,8 @@ def player_response(video_id):
     for client in INNERTUBE_CLIENTS:
         body = {"context": {"client": {k: v for k, v in client.items() if not k.startswith("_")}},
                 "videoId": video_id, "contentCheckOk": True, "racyCheckOk": True}
+        if client.get("_embed"):
+            body["context"]["thirdParty"] = {"embedUrl": "https://www.youtube.com/"}
         req = urllib.request.Request(
             "https://www.youtube.com/youtubei/v1/player?prettyPrint=false", data=json.dumps(body).encode(),
             headers={"Content-Type": "application/json", "User-Agent": client["_ua"],
