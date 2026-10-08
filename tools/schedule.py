@@ -89,6 +89,26 @@ def reply_ladder(release):
     return {k: release + v for k, v in LADDER.items()}
 
 
+GRID_STEP = timedelta(hours=GRID_HOURS)
+MARGIN = timedelta(minutes=30)  # a reply that must follow a regular post may use the buffer, never the last half hour
+
+
+def reply_flag(release, planned, source, now):
+    """What to say about a reply's timing: empty when fine."""
+    lad = reply_ladder(release)
+    if planned:
+        if planned <= lad["publish_by"]:
+            return "PUBLISH NOW" if (lad["publish_by"] - now) < timedelta(hours=4) and source == "in_hand" and planned <= now + GRID_STEP else ""
+        if planned <= lad["window"] - MARGIN:
+            return "after publish-by: allowed only to follow a regular post that shares a category; hard limit holds"
+        return "TOO LATE: planned inside the last 30 minutes of the 24-hour window or after it"
+    if now > lad["window"]:
+        return "WINDOW CLOSED"
+    if now > lad["publish_by"]:
+        return "PAST PUBLISH-BY: publish at once if the transcript is in hand"
+    return ""
+
+
 def post_from_build(p):
     return {"dt": p["dt"], "tags": set(p["tag_list"]), "exempt": build.tag_exempt(p), "slug": p["slug"],
             "author": p["author"], "kind": "published"}
@@ -295,8 +315,7 @@ def main(posts, argv):
         print("\nreply ladder (publish inside 24h of release; a complete transcript or no reply):")
         for r in replies:
             lad = reply_ladder(r["release_dt"])
-            left = hours(lad["publish_by"] - now)
-            flag = "PAST PUBLISH-BY" if left < 0 else ("PUBLISH NOW" if left < 4 and r.get("source") == "in_hand" else "")
+            flag = reply_flag(r["release_dt"], r["planned_dt"], r.get("source"), now)
             print(f"  {r.get('video_id') or r['id']}  release {fmt(r['release_dt'])}  ask by {fmt(lad['ask_by'])}  source due {fmt(lad['source_due'])}  "
                   f"publish by {fmt(lad['publish_by'])}  source: {r.get('source', '?')}  planned: {fmt(r['planned_dt']) if r['planned_dt'] else '-'}  {flag}")
     print("\nticks:")

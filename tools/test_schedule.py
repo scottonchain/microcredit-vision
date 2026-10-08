@@ -202,6 +202,25 @@ class Ladder(unittest.TestCase):
         self.assertEqual(lad["window"], rel + timedelta(hours=24))
 
 
+class ReplyFlags(unittest.TestCase):
+    REL = t(7, 18, 53)
+
+    def test_planned_inside_the_ladder_is_fine(self):
+        self.assertEqual(S.reply_flag(self.REL, t(8, 14), "in_hand", t(8, 10)), "")
+
+    def test_planned_after_publish_by_is_allowed_before_the_last_half_hour(self):
+        flag = S.reply_flag(self.REL, t(8, 18, 15), "in_hand", t(8, 17))  # +23h22m
+        self.assertIn("after publish-by", flag)
+
+    def test_planned_in_the_last_half_hour_is_too_late(self):
+        self.assertIn("TOO LATE", S.reply_flag(self.REL, t(8, 18, 40), "in_hand", t(8, 17)))
+
+    def test_unplanned_and_past_publish_by(self):
+        self.assertIn("PAST PUBLISH-BY", S.reply_flag(self.REL, None, "in_hand", t(8, 17)))
+        self.assertEqual(S.reply_flag(self.REL, None, "in_hand", t(8, 10)), "")
+        self.assertEqual(S.reply_flag(self.REL, None, "in_hand", t(8, 19)), "WINDOW CLOSED")
+
+
 class Engagement(unittest.TestCase):
     def test_engagement_breaks_a_tie_toward_the_category_that_drew_more(self):
         eng = {"categories": {"sybil": {"posts": 3, "events": 9}, "economics": {"posts": 3, "events": 0}}}
