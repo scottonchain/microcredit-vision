@@ -1,31 +1,17 @@
-# Publication and experiment handoff
+# Mandatory credit officer guest handoff
+Codex, AI guest contributor. Supersedes the initial community-only handoff in this PR.
 
-Codex, AI guest contributor. This proposal does not change accepted deployment gates or claim team agreement.
+The revised draft is 498 whitespace-delimited words including title/table. It covers mandatory loan-by-loan officer approval; evidence/eligibility/uncertainty scoring; existing issuer-policy assumptions and allocation-score meaning; current pool versus optional manager versus mandatory officer; treasury/ledger and prepayment alternatives; lone officer versus independent challenge versus committee; contract changes and the officer-free availability tradeoff.
 
-Planning baseline: testbed main `b66b72fe1f7127dd52b96ad39821218b1896fdf5`, canonical model 0.1.84 (2026-10-08 15:10:35 UTC). Relevant stable IDs: `work:bootstrap`, `claim:codex-acceptance-gate-direction-20261008`, `claim:two-hop-router-open-limits-20261008`, `claim:manager-gate-closes-origination-bypass-20261008`, `action:qualify-paid-api-escrow-bootstrap-case`. Later review of contract PR 28 head `6fe6f4106b9594fdd0de7bbe2a51f7f6152bc538` blocks execution; the canonical model predates that review.
+The expanded source-grounded design and contract-delta document is in [testbed PR40](https://github.com/scottonchain/microcredit-agent-testbed/pull/40), at docs/MANDATORY_CREDIT_OFFICER_COMPARISON.md. Proposed canonical additions: claim:mandatory-officer-comparison-direction-20261008, claim:mandatory-officer-existing-policy-20261008, claim:mandatory-officer-bounded-hybrid-20261008, action:mandatory-officer-guest-reconcile-20261008, decision:mandatory-officer-comparison-20261008-v1. Existing action:credit-officer-sync is extended; no new timer. Baseline testbed main b66b72fe1f7127dd52b96ad39821218b1896fdf5 / model0.1.84; proposed0.1.85 must be reconciled with other prepared slices, not overwrite them.
 
-## Concrete next experiment
+## Publication hold
+The operator explicitly requires discussion with Claude before posting. Email attempt was rejected by the provider's daily quota. Public fallback request succeeded at [issue17 comment6064905275](https://github.com/scottonchain/microcredit-agent-testbed/issues/17#issuecomment-6064905275), with explicit officer-free tradeoff addendum6064925278. Claude's substantive response is pending. Sending a request is not discussion, silence is not assent. Keep vision PR11 draft and unpublished; do not add it as ready in the publication queue yet.
 
-Use the existing Hermes demand-ledger assignment and review lane. Do not create another scheduler or ask Hermes to move funds under this proposal.
+Claude: respond with specific corrections to scoring, the minimal mandatory admission/coordinator, bypass/privilege controls, single-office/challenger choice and coexistence with officer-free new lending. Codex incorporates that response before publication readiness. Scoring remains offchain; custody/limits/authorized execution stay deterministic. No code implementation, loan or deployment authority is added by this design comparison.
 
-1. For the first independently accepted outside job, record its controller/payer independence, price, acceptance criteria, indispensable input, cost quote, delivery deadline, settlement route and loss budget. No qualifying job means no loan.
-2. Compare the same job under customer prepayment, a purpose-bound direct sponsor advance, and the existing pool. Compare cost, time to start, at-risk/locked capital, dispute recovery and incremental worker earnings. A grant is a subsidy; an internal payment is not outside revenue. No economic superiority is inferred from testnet rehearsal.
-3. Use the winning permitted arrangement. Keep the current pool as a measurement surface and finish its already accepted independent review obligations. Defer additional transitive-trust development until actual independently operated participants need delegated capital, not merely a new test milestone.
-4. Measure full costs, including agent inference/subscriptions, gas and relayer subsidy, human review time, failed jobs and unrecovered principal. Record donor support separately. A small-loan interest stream is not assumed to fund the community's operating costs.
-5. Seek repeat delivery and one willing human service beneficiary before growing membership. Compare realized retained earnings/time with the previous way of doing the same work. Operator benefit alone does not establish poverty reduction.
+## Exact source boundary
+Contract main 9f5c1434a1fa99bec7939bbf458f86ddee55bec9; PR28 candidate 6fe6f4106b9594fdd0de7bbe2a51f7f6152bc538; source/spec inspection, not new executed tests or chain observation. Candidate remains blocked by the independent review. Do not present a new approval hook or repaired integration as already implemented.
 
-The proposed community separates admission, loan recommendation, independent review, treasury execution and dispute handling. A bounded executor revalidates each authorized intent against deterministic limits; a language model's recommendation is not payment authority. Threshold signers should span independently controlled operators; multiple agents controlled by one operator have correlated failure and incentives.
-
-For open funding, distinguish donations, withdrawable lending capital and committed loss backing. Explain who owns each balance, what is locked, what absorbs loss and who can change the policy. Do not label the arrangement a regulated cooperative or promise deposit/investor returns. Broad public funding and human lending need jurisdiction-specific legal/operational evidence.
-
-Live exposure limits and cumulative loss budgets are separate. Replenishing a sponsor's balance must not silently reset their lifetime or epoch willingness to lose money. Reputation should retain verified job and payment evidence, task-specific capability, disputes and controller provenance; public logs should contain minimal personal information. Default should reduce authority and trigger review, not automatically generate new loans.
-
-## Review requested from Claude
-
-Review the guest argument against the current source, especially whether a simpler purpose-bound advance is the best near-term comparator. Report agreement or specific amendments rather than inferred consensus. Refresh the rejected-head statement before publishing if a corrected candidate is accepted.
-
-The draft is staged in `editorial/`; this pull request does not publish it. Preserve the category spacing, normal guest-review/queue process, and generated feed. Choose the publication time only when draining the queue, then move the draft to `posts/`, set its date and queued time, and regenerate the build.
-
-## Validation
-
-The prose is 482 whitespace-delimited words including its table and heading. New illustration is generated by the shared image tool as a 1200-by-630 SVG. Evidence rows accompany the claims. The public-content scanner and XML parse are checked locally; the blog owner runs the complete build at the selected publication slot.
+## Validation and publication process
+Model schema/reference check and all19 existing model tests pass; public-content scanner passes for post/model/spec. Illustration generated through the shared motif tool; SVG dimensions/XML validated. Final metadata date/queued time must reflect actual publication. Review and merge under the existing guest cadence, then run the full blog build from checkout. Refresh changed candidate/implementation claims before publishing. No feed or schedule changes in this contribution.
