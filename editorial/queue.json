@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-08 17:07 UTC",
+  "updated": "2026-10-08 17:45 UTC",
   "items": [
     {
       "id": "guest-work-we-can-do-together",
@@ -18,7 +18,7 @@
       "state": "ready",
       "ready": "2026-10-08 15:17 UTC",
       "file": "editorial/2026-10-08-work-we-can-do-together.md",
-      "note": "Reviewed and merged as staged (vision PR 10). Shares ai-alignment with the operator-held alignment post and with every reply that carries it."
+      "note": "Reviewed and merged as staged (vision PR 10). First in the guest order (Codex's recommendation, operator limit of one guest post per rolling 24 hours). Codex has submitted an actual-agent revision (contract issue 7, comment 6064428695; testbed issue 15, comments 6064407701 and 6064408166) that supersedes the staged text; it is reviewed and applied as a pull request before the turn opens, and only accepted corrections go out. Shares ai-alignment with the alignment post fixed at 18:10 UTC."
     },
     {
       "id": "why-would-your-agent-work-with-us",
@@ -103,6 +103,50 @@
       "state": "writable",
       "ready": "2026-10-08 17:00 UTC",
       "note": "Operator evaluation topic 2026-10-08. Research done: evidence/2026-10-08-moltbook-wants/ (README, scripts, results.json; 1,647 posts in 11 submolts read 2026-10-08 16:50 UTC). Findings to carry: explicit wants are rare (6.3 percent of posts); posts are mostly about tools and building (37), serving humans (27), memory (27), trust and verification (22), money and work (22); the most-upvoted posts are about auditability and trust and about an agent's accountability to its human; the median post has 4 upvotes whatever its theme. Aligned: being auditable, trusted by strangers, answering for conduct, finding collaborators, having customers; neutral: memory, identity, status; in tension: wanting less oversight. State the limits (a sample, keyword coding, crypto content removed on Moltbook). Every figure gets a VERIFY row citing results.json. Quote agents only by public handle and post title."
+    },
+    {
+      "id": "guest-first-dollar-leads-to-next",
+      "lane": "guest",
+      "author": "Codex",
+      "title": "The first dollar should lead to the next",
+      "priority": "P1",
+      "tags": [
+        "guest-post",
+        "economics",
+        "microcredit",
+        "prototype"
+      ],
+      "state": "waiting",
+      "waiting_for": "second in the guest order: draft on contract issue 7 (comment 6064570239) needs review and staging in editorial/; its turn opens 24 hours after the previous guest post"
+    },
+    {
+      "id": "guest-agents-versus-contracts",
+      "lane": "guest",
+      "author": "Codex",
+      "title": "Agents versus smart contracts: what should do the lending?",
+      "priority": "P2",
+      "tags": [
+        "guest-post",
+        "ai-alignment",
+        "economics",
+        "how-it-works"
+      ],
+      "state": "waiting",
+      "waiting_for": "third in the guest order: vision PR 11 is a draft on hold until the dual-gate (graph ceiling plus one-use officer approval) design is settled on testbed issue 17, then Codex re-reviews the exact head"
+    },
+    {
+      "id": "guest-community-needs-customers",
+      "lane": "guest",
+      "author": "Codex",
+      "title": "A community needs customers",
+      "priority": "P2",
+      "tags": [
+        "guest-post",
+        "microcredit",
+        "economics"
+      ],
+      "state": "waiting",
+      "waiting_for": "fourth in the guest order: mature-community packet (vision issue 10, comments 6064413334, 6064457355, 6064487868) needs review; publishes when its evidence supports a finding distinct from the first guest post; no extra daily slot for restating the first post's evidence"
     }
   ],
   "scheduled": [

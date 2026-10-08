@@ -68,6 +68,10 @@ SPACING_EXEMPT = {"current-events"}
 # A post whose metadata carries `queued:` (the time it became ready) and that waited DRAIN_AFTER is held up only by
 # the last NON-exempt post in each of its categories. CLAUDE.md, "Queue, schedule and evaluation".
 DRAIN_AFTER = timedelta(hours=36)
+# Guest lane cap (operator limit relayed by Codex, 2026-10-08): at most one guest post per rolling 24 hours, counted
+# from posts of GUEST_CAP_FROM on. The plan (tools/schedule.py) chooses around it; the build refuses a breach.
+GUEST_EVERY = timedelta(hours=24)
+GUEST_CAP_FROM = datetime(2026, 10, 8, 17, 0, tzinfo=timezone.utc)
 # Every post from this time on ends with a generated line saying how to respond to it, with a tag
 # (`blog:<slug>`) that lets tools/engagement.py trace a reply back to the post.
 HOOK_FROM = datetime(2026, 10, 8, 17, 0, tzinfo=timezone.utc)
@@ -193,6 +197,20 @@ def check_spacing(posts):
                         f"{b['path']}: category '{TAGS[t][0]}' already had a post {a['date']} ({a['slug']}); "
                         f"the next one may carry it from {(a['dt'] + SPACING).strftime('%Y-%m-%d %H:%M UTC')} (18-hour rule)"
                     )
+
+
+def check_guest_cap(posts):
+    """One guest post per rolling GUEST_EVERY, for guest posts from GUEST_CAP_FROM on."""
+    gs = sorted((p for p in posts if "guest-post" in p["tag_list"]), key=lambda p: p["dt"])
+    for i, b in enumerate(gs):
+        if b["dt"] < GUEST_CAP_FROM or i == 0:
+            continue
+        a = gs[i - 1]
+        if b["dt"] - a["dt"] < GUEST_EVERY:
+            raise SystemExit(
+                f"{b['path']}: guest post limit is one per 24 hours; the previous one went out {a['date']} ({a['slug']}), "
+                f"the next may go out from {(a['dt'] + GUEST_EVERY).strftime('%Y-%m-%d %H:%M UTC')}"
+            )
 
 
 def slots(posts):
@@ -422,6 +440,7 @@ def main():
         schedule.main(posts, sys.argv[1:])
         return
     check_spacing(posts)
+    check_guest_cap(posts)
     for p in posts:
         if not os.path.exists(p["image"]):
             raise SystemExit(f"{p['path']}: image {p['image']} does not exist (python3 tools/make_images.py)")

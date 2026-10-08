@@ -13,7 +13,7 @@ tick, at least MIN_GAP after the previous regular post. A tick assigns the candi
 
     priority   P1 300, P2 200, P3 100
     aging      +4 per hour since the item was ready (so every item is eventually first, whatever its priority)
-    guest slot +1000 for a ready guest item when no guest post went out in the last 24 hours (Codex gets one slot a day)
+    guest slot +1000 for a ready guest item whose turn is open (Codex gets one slot a day; see the guest cap below)
     rotation   up to +60 for categories idle for 72 hours or more (the least recently used categories go first)
     engagement up to +40 for categories whose posts drew the most traced engagement (editorial/engagement.json),
                +20 for a category with no post in 14 days (exploration)
@@ -22,6 +22,13 @@ Drain guarantee: an item that waited DRAIN_AFTER (36 hours) is held up only by t
 categories, and from then on reserves those categories: no other regular post may carry them. A ready item therefore
 publishes within DRAIN_AFTER + SPACING + one tick (58 hours) of becoming ready, whatever replies arrive meanwhile.
 (tools/test_schedule.py checks the bound against an adversarial stream.)
+
+Guest cap (operator limit relayed by Codex, 2026-10-08): at most one guest post per rolling GUEST_EVERY (24 hours); the
+build refuses a second one inside it. A guest item is a candidate only while its turn is open, and while its turn is
+open and it is ready it reserves its categories at once (a house item may not take them ahead of it). Its drain clock
+starts at the later of its ready time and the time its turn opened (the end of the previous guest post's 24 hours), so
+a backlog of ready guest items publishes one per day in score order and each is bounded by DRAIN_AFTER + SPACING + one
+tick from its turn, not from the day it became ready. The ready time itself is never rewritten.
 
 Replies (YouTube and news) are exempt from spacing and are never scheduled around; the plan only counts those already
 planned (queue.json, "replies") as posts, so regular items are not planned into categories a reply is about to reset,
@@ -43,7 +50,7 @@ ANSWERED = "editorial/youtube-answered.json"
 GRID_MINUTE = 7
 GRID_HOURS = 4
 MIN_GAP = timedelta(hours=3)
-GUEST_EVERY = timedelta(hours=24)
+GUEST_EVERY = build.GUEST_EVERY
 PRIORITY = {"P1": 300, "P2": 200, "P3": 100}
 AGING_PER_HOUR = 4
 GUEST_FLOOR = 1000
@@ -127,9 +134,29 @@ def last_in(posts, cat, t, skip_exempt=False):
     return max(ds) if ds else None
 
 
+def turn_open_at(posts, t):
+    """When the guest lane's turn opens: GUEST_EVERY after the latest guest post at or before t (None: open now)."""
+    last = last_in(posts, "guest-post", t)
+    return None if last is None else last + GUEST_EVERY
+
+
+def guest_turn_open(posts, t):
+    opens = turn_open_at(posts, t)
+    return opens is None or t >= opens
+
+
+def clock_start(item, posts, t):
+    """When the item's drain clock started: its ready time, or for a guest item the later of that and the time its
+    turn opened. The ready time is never rewritten; only the drain and relief clocks wait for the turn."""
+    if item["lane"] != "guest":
+        return item["ready_dt"]
+    opens = turn_open_at(posts, t)
+    return item["ready_dt"] if opens is None else max(item["ready_dt"], opens)
+
+
 def is_open(item, posts, t):
     """Whether every category of the item is open at t, and whether drain relief applied."""
-    relief = t - item["ready_dt"] >= build.DRAIN_AFTER
+    relief = t - clock_start(item, posts, t) >= build.DRAIN_AFTER
     for c in spaced(item["tags"]):
         last = last_in(posts, c, t, skip_exempt=relief)
         if last is not None and t - last < build.SPACING:
@@ -179,19 +206,19 @@ def engagement_points(item, posts, t, table):
 
 def score(item, posts, t, table):
     s = PRIORITY[item["priority"]] + AGING_PER_HOUR * hours(t - item["ready_dt"])
-    if item["lane"] == "guest":
-        last_guest = last_in(posts, "guest-post", t)
-        if last_guest is None or t - last_guest >= GUEST_EVERY:
-            s += GUEST_FLOOR
+    if item["lane"] == "guest" and guest_turn_open(posts, t):
+        s += GUEST_FLOOR
     return s + idle_points(item, posts, t) + engagement_points(item, posts, t, table)
 
 
-def reservations(pending, t):
-    """Categories reserved at t by items that waited DRAIN_AFTER. A due guest item outranks a due house item whatever
-    their ages (the guest lane is the one the operator asked to drain); otherwise the oldest keeps them."""
+def reservations(pending, t, posts=()):
+    """Categories reserved at t. An item that waited DRAIN_AFTER (from its clock start) reserves its categories, and
+    a ready guest item whose turn is open reserves them at once. A guest item outranks a house item, whatever their
+    ages (the guest lane is the one the operator asked to drain); otherwise the oldest keeps them."""
     reserved = {}
-    for it in sorted((i for i in pending if i["ready_dt"] <= t and t - i["ready_dt"] >= build.DRAIN_AFTER),
-                     key=lambda i: (i["lane"] != "guest", i["ready_dt"], i["id"])):
+    holders = [i for i in pending if i["ready_dt"] <= t and (
+        t - clock_start(i, posts, t) >= build.DRAIN_AFTER or (i["lane"] == "guest" and guest_turn_open(posts, t)))]
+    for it in sorted(holders, key=lambda i: (i["lane"] != "guest", i["ready_dt"], i["id"])):
         for c in spaced(it["tags"]):
             reserved.setdefault(c, it["id"])
     return reserved
@@ -217,11 +244,13 @@ def plan(posts, items, replies, now, horizon_h=72, eng=None, scheduled=()):
     while t <= end:
         regular = [p for p in virtual if not p["exempt"] and p["dt"] <= t]
         gap_ok = not regular or t - max(p["dt"] for p in regular) >= MIN_GAP
-        reserved = reservations(pending, t)
+        reserved = reservations(pending, t, virtual)
         best, best_score, best_relief = None, None, False
         if gap_ok:
             for it in pending:
                 if it["ready_dt"] > t:
+                    continue
+                if it["lane"] == "guest" and not guest_turn_open(virtual, t):
                     continue
                 ok, relief = is_open(it, virtual, t)
                 if not ok:
@@ -297,7 +326,7 @@ def main(posts, argv):
         return
     print(f"publication plan from {fmt(now)}: ticks every {GRID_HOURS}h at :{GRID_MINUTE:02d} UTC, one regular post per tick, "
           f"at least {int(hours(MIN_GAP))}h apart; replies are exempt and never wait for a tick\n")
-    print("queue (a ready item is published within 58h of its ready time, whatever replies arrive):")
+    print("queue (a ready item is published within 58h of its ready time, a guest item within 58h of its turn, whatever replies arrive):")
     if not items:
         print("  (empty)")
     for it in sorted(items, key=lambda i: (i["state"] == "waiting", i["ready_dt"] or now)):
@@ -305,9 +334,12 @@ def main(posts, argv):
             print(f"  {it['id']:34} {it['lane']:5} {it['priority']}  waiting: {it.get('waiting_for', '')}")
             continue
         waited = hours(now - it["ready_dt"])
-        bound = it["ready_dt"] + build.DRAIN_AFTER + build.SPACING + timedelta(hours=GRID_HOURS)
+        start = clock_start(it, published, now) if it["lane"] == "guest" else it["ready_dt"]
+        bound = start + build.DRAIN_AFTER + build.SPACING + timedelta(hours=GRID_HOURS)
+        waited = hours(now - start)
         due = "DUE (reserves its categories)" if waited >= hours(build.DRAIN_AFTER) else f"due in {hours(build.DRAIN_AFTER) - waited:.0f}h"
-        print(f"  {it['id']:34} {it['lane']:5} {it['priority']}  {it['state']:8} ready {fmt(it['ready_dt'])}, waited {waited:.0f}h, {due}, latest {fmt(bound)}")
+        turn = f", guest turn opens {fmt(start)}" if start > now else f", waited {waited:.0f}h"
+        print(f"  {it['id']:34} {it['lane']:5} {it['priority']}  {it['state']:8} ready {fmt(it['ready_dt'])}{turn}, {due}, latest {fmt(bound)}")
     for sc in scheduled:
         if sc["at_dt"] > now:
             print(f"  {sc['id']:34} fixed at {fmt(sc['at_dt'])} ({', '.join(sc['tags'])}): counted as a regular post")

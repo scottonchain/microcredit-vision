@@ -77,12 +77,92 @@ class GuestSlot(unittest.TestCase):
         rows = S.plan(posts, items, [], t(8, 8), 4)
         self.assertEqual(rows[0]["item"], "guest")
 
-    def test_no_floor_inside_24_hours_of_the_last_guest_post(self):
+    def test_no_guest_item_is_planned_inside_24_hours_of_the_last_guest_post(self):
         posts = [post(t(8, 0), ["guest-post"])]
         items = [item("house", ["sybil"], t(7, 0), priority="P1"),
                  item("guest", ["microcredit"], t(7, 0), lane="guest", priority="P3", state="ready")]
         rows = S.plan(posts, items, [], t(8, 18), 4)  # next tick 20:07, 20 hours after the last guest post
         self.assertEqual(rows[0]["item"], "house")
+        rows = S.plan(posts, items[1:], [], t(8, 18), 24)  # the guest alone: the first tick at or after 24h is 00:07 on the 9th
+        self.assertEqual([r["tick"] for r in rows if r["item"] == "guest"], [t(9, 0)])
+
+
+class GuestCap(unittest.TestCase):
+    """One guest post per rolling 24 hours (operator limit relayed by Codex, 2026-10-08)."""
+
+    def guests(self, n, ready, cats=("microcredit",), priority="P1"):
+        return [item(f"g{i}", list(cats) + ["guest-post"], ready, lane="guest", priority=priority, state="ready")
+                for i in range(n)]
+
+    def test_a_backlog_goes_out_at_most_one_per_24_hours(self):
+        rows = S.plan([], self.guests(3, t(8, 0), cats=("microcredit",)), [], t(8, 1), 120)
+        when = [r["tick"] for r in rows if r["item"]]
+        self.assertEqual(len(when), 3)
+        for a, b in zip(when, when[1:]):
+            self.assertGreaterEqual(b - a, timedelta(hours=24))
+
+    def test_the_cap_holds_across_lanes_of_other_categories(self):
+        # distinct categories, so only the cap (not the 18-hour rule) spaces the guests
+        gs = [item("a", ["sybil", "guest-post"], t(8, 0), lane="guest", state="ready"),
+              item("b", ["press", "guest-post"], t(8, 0), lane="guest", state="ready")]
+        rows = S.plan([], gs, [], t(8, 1), 72)
+        when = sorted(r["tick"] for r in rows if r["item"])
+        self.assertGreaterEqual(when[1] - when[0], timedelta(hours=24))
+
+    def test_an_open_ready_guest_reserves_its_categories_at_once(self):
+        # economics is free now but ai-alignment is held until 14:00; a house item must not take economics first
+        posts = [post(t(8, 20), ["ai-alignment"])]
+        g = item("g", ["ai-alignment", "economics", "guest-post"], t(8, 12), lane="guest", state="ready")
+        h = item("h", ["economics"], t(8, 12), priority="P1")
+        rows = S.plan(posts, [g, h], [], t(8, 21), 48)
+        placed = {r["item"]: r["tick"] for r in rows if r["item"]}
+        self.assertLess(placed["g"], placed["h"])
+
+    def test_a_closed_guest_turn_reserves_nothing(self):
+        # the previous guest post was 4 hours ago: the next guest is not a candidate and holds no categories
+        posts = [post(t(8, 16), ["guest-post", "sybil"])]
+        g = item("g", ["economics", "guest-post"], t(8, 0), lane="guest", state="ready")
+        h = item("h", ["economics"], t(8, 0), priority="P1")
+        rows = S.plan(posts, [g, h], [], t(8, 20), 8)
+        self.assertEqual(rows[0]["item"], "h")
+
+    def test_the_drain_clock_waits_for_the_turn_but_ready_time_is_not_rewritten(self):
+        posts = [post(t(8, 22), ["guest-post"])]
+        g = item("g", ["economics", "guest-post"], t(8, 0), lane="guest", state="ready")
+        self.assertEqual(S.clock_start(g, posts, t(9, 0)), t(9, 22))
+        self.assertEqual(g["ready_dt"], t(8, 0))
+        self.assertEqual(S.clock_start(g, [], t(9, 0)), t(8, 0))
+        self.assertEqual(S.clock_start(item("h", ["sybil"], t(8, 0)), posts, t(9, 0)), t(8, 0))
+
+    def test_each_backlog_item_publishes_within_the_bound_from_its_turn(self):
+        bound = build.DRAIN_AFTER + build.SPACING + timedelta(hours=S.GRID_HOURS)
+        rng = random.Random(7)
+        for seed in range(10):
+            rng.seed(seed)
+            cats = ["microcredit", "economics", "ai-alignment"]
+            gs = [item(f"g{i}", rng.sample(cats, 2) + ["guest-post"], t(8, 0), lane="guest", state="ready")
+                  for i in range(4)]
+            floods = [{"id": f"r{k}", "planned_dt": t(8, 6) + timedelta(hours=6 * k), "tags": ["current-events", rng.choice(cats)]}
+                      for k in range(20)]
+            rows = S.plan([], gs, floods, t(8, 1), 24 * 8)
+            when = sorted(r["tick"] for r in rows if r["item"] and r["lane"] == "guest")
+            self.assertEqual(len(when), 4, f"seed {seed}: a guest item was never planned")
+            turn = t(8, 0)
+            for w in when:
+                self.assertLessEqual(w - max(turn, t(8, 0)), bound, f"seed {seed}")
+                turn = w + build.GUEST_EVERY
+
+    def test_build_refuses_a_second_guest_post_inside_24_hours(self):
+        a = bpost("a", t(9, 0), ["guest-post", "sybil"])
+        b = bpost("b", t(9, 23), ["guest-post", "press"])
+        with self.assertRaises(SystemExit):
+            build.check_guest_cap([a, b])
+        build.check_guest_cap([a, bpost("c", t(10, 0), ["guest-post", "press"])])
+
+    def test_build_ignores_guest_posts_before_the_cap_started(self):
+        a = bpost("a", datetime(2026, 10, 6, 10, 0, tzinfo=UTC), ["guest-post"])
+        b = bpost("b", datetime(2026, 10, 7, 9, 0, tzinfo=UTC), ["guest-post"])
+        build.check_guest_cap([a, b])
 
 
 class Drain(unittest.TestCase):
