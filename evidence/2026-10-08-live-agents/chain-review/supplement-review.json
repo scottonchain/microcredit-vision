@@ -1,0 +1,364 @@
+{
+  "review_version": "supplement-offline/1",
+  "source_commit": "be0e90904c50f0d43fc0a52b76ff08cded2c84af",
+  "scope": "Offline reconciliation of executor-retrieved normalized transaction/receipt extracts, decoded events and reconstructed eth_call results. No independent RPC reads or writes. No signed transaction bytes or host paths copied into review.",
+  "chain_independently_authenticated": false,
+  "record_format": "Selected public transaction and receipt fields plus decoded logs; not unabridged raw RPC receipt objects.",
+  "all_unique_transaction_hashes": 132,
+  "passes": [
+    {
+      "pass": 1,
+      "record_count": 66,
+      "all_status_success": true,
+      "differences_from_original_identity_fields": [],
+      "fee_component_arithmetic_consistent": true,
+      "reconstructed_usdc_terminal": {
+        "controller": 25000000,
+        "pool": 15000000,
+        "other_nonzero": {}
+      },
+      "peak_controller_usdc_outflow_units": 7000000,
+      "minimum_reconstructed_usdc_balance": 0,
+      "reread_all_sender_fees_wei": 36549274652894,
+      "old_minus_new_all_sender_fees_wei": 4260,
+      "reread_scenario_fees_wei": 32053296004108,
+      "old_minus_new_scenario_fees_wei": 3110,
+      "old_minus_new_controller_fees_wei": 1150,
+      "funding_balance_fee_identity_wei": 0
+    },
+    {
+      "pass": 2,
+      "record_count": 66,
+      "all_status_success": true,
+      "differences_from_original_identity_fields": [],
+      "fee_component_arithmetic_consistent": true,
+      "reconstructed_usdc_terminal": {
+        "controller": 25000000,
+        "pool": 15000000,
+        "other_nonzero": {}
+      },
+      "peak_controller_usdc_outflow_units": 7000000,
+      "minimum_reconstructed_usdc_balance": 0,
+      "reread_all_sender_fees_wei": 36548928006072,
+      "old_minus_new_all_sender_fees_wei": 3495,
+      "reread_scenario_fees_wei": 32053296004232,
+      "old_minus_new_scenario_fees_wei": 2441,
+      "old_minus_new_controller_fees_wei": 1054,
+      "funding_balance_fee_identity_wei": 0
+    }
+  ],
+  "repayments": [
+    {
+      "pass": 1,
+      "loan_id": 18,
+      "hash": "0x00313d6f7f01bc3d6aa5c9e712a0aa3d7ac335bda627b26021de9217b3a69ed0",
+      "block": 47852770,
+      "block_hash": "0xc42a6390f91d6045511a44210f913ea2d8cef9abbb5e5dc6f454442fe8918878",
+      "payer": "0xd3a74aed54c7c5aa90983c7447310d84201d8d3d",
+      "borrower": "0xd3a74aed54c7c5aa90983c7447310d84201d8d3d",
+      "principal_units": 1000000,
+      "interest_units": 0,
+      "fee_units": 0,
+      "input_transfer_and_pool_events_consistent": true
+    },
+    {
+      "pass": 1,
+      "loan_id": 19,
+      "hash": "0x5fde479912b0a6e87e25dc344a9b95f8eac3c66333fcebe41e64c3bfbf4fa67c",
+      "block": 47852840,
+      "block_hash": "0x2f352dd01bcaf1811f83e46d1d74a6ddfe1498d71247b72eddd5e534421ca3dc",
+      "payer": "0x8e72ae99f78ee312fae407a18c168d065c70bd5d",
+      "borrower": "0x05fda08765e884eadf17fe4a37ac181ca9dcb193",
+      "principal_units": 1000000,
+      "interest_units": 0,
+      "fee_units": 0,
+      "input_transfer_and_pool_events_consistent": true
+    },
+    {
+      "pass": 1,
+      "loan_id": 20,
+      "hash": "0xda1cb976f60ab101665414b2079067216b3ed26a3d33c65a995383fe9b45f9f9",
+      "block": 47852906,
+      "block_hash": "0xa625585cfda1664d3868fdfccaa21628821d1baf53fe43c86b6e7a8e7ab41d1e",
+      "payer": "0x21a53057c79cacb97edf674294e5549885110ce7",
+      "borrower": "0x329218eaa9bf0edf1af280f15b783bb42133f438",
+      "principal_units": 1000000,
+      "interest_units": 0,
+      "fee_units": 0,
+      "input_transfer_and_pool_events_consistent": true
+    },
+    {
+      "pass": 2,
+      "loan_id": 21,
+      "hash": "0xf88bcede0cc84611bfa577146cffe6e53c853cad2fd1d58ed03075aa72227020",
+      "block": 47853487,
+      "block_hash": "0x9332ef1b25f8cb063458123fac874a2bf7ff3baa13a4ad92d455844e529ab20c",
+      "payer": "0x46e9799dfd1b2e19e692c5b0ae72954fc8776bd1",
+      "borrower": "0x46e9799dfd1b2e19e692c5b0ae72954fc8776bd1",
+      "principal_units": 1000000,
+      "interest_units": 0,
+      "fee_units": 0,
+      "input_transfer_and_pool_events_consistent": true
+    },
+    {
+      "pass": 2,
+      "loan_id": 22,
+      "hash": "0x1e330146d80ab42054385272d04324f0715d4fc3576734c1882273f46ec1137e",
+      "block": 47853555,
+      "block_hash": "0xd55b8a7d36e394adc015eabbbdef94e03925cbb11a316cce0e5ec05ad828cb86",
+      "payer": "0x6e412f3aa95341bb22c898c9caed714c95d3fae3",
+      "borrower": "0x7e56ccfc4aebcbe2aafc37ccb3e19567446e9aa2",
+      "principal_units": 1000000,
+      "interest_units": 0,
+      "fee_units": 0,
+      "input_transfer_and_pool_events_consistent": true
+    },
+    {
+      "pass": 2,
+      "loan_id": 23,
+      "hash": "0x6ab957c8b189982d0992f98df4158ec062883581fabc9dcfeb852223ecf1d25d",
+      "block": 47853622,
+      "block_hash": "0xc32375e2a5f1cb901752a730d2106cb4a36e0744a6cce320ff26f73071b4b148",
+      "payer": "0x8e66201d6a01560cac33357c99f5157777fb2bd7",
+      "borrower": "0x86e2c1666d382c89d3f41ec00577b659defee74e",
+      "principal_units": 1000000,
+      "interest_units": 0,
+      "fee_units": 0,
+      "input_transfer_and_pool_events_consistent": true
+    }
+  ],
+  "accepted_service_payment": {
+    "hash": "0x9436116eb3c574364a8a94e4ac3281f8118ceb1c5e429032f160ac9b77eaed5b",
+    "matches_in_132_records": 1,
+    "input_and_transfer_agree": true,
+    "status": 1,
+    "block": 47853482,
+    "block_hash": "0xa29a791bb70a25a0cfde93d340651950a04151e58f83d68298c877b5eb3b2786",
+    "payer": "0x108450c748eef7aef23e64739bc508f56e596247",
+    "recipient": "0x46e9799dfd1b2e19e692c5b0ae72954fc8776bd1",
+    "token_units": 1000000,
+    "same_order_must_not_be_paid_again": true,
+    "generic_c1_payments_across_both_passes": 2
+  },
+  "corrected_total_fee_wei": 73098202658966,
+  "original_total_fee_wei": 73098202666721,
+  "total_original_minus_corrected_fee_wei": 7755,
+  "scenario_fee_difference_resolved_wei": 5551,
+  "controller_fee_difference_wei": 2204,
+  "fee_variation_cause": "Unknown. Supplied re-read fee components resolve balance equations; original receipts/component fields were not retained, so the cause of earlier cost-field differences is not established.",
+  "combined_reported_scenario_dust_wei": 1135893407991660,
+  "replay_findings": [
+    {
+      "pass": 1,
+      "case": "2",
+      "label": "borrower cannot back peer with received backing (onward)",
+      "actual_case_start": 47852796,
+      "replay_block": 47852825,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x8ac4bc73",
+      "match": true
+    },
+    {
+      "pass": 1,
+      "case": "2",
+      "label": "closed history + removed backing grants no own credit",
+      "actual_case_start": 47852796,
+      "replay_block": 47852852,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x315b0e14",
+      "match": true
+    },
+    {
+      "pass": 1,
+      "case": "3",
+      "label": "borrower cannot onward-back colluder with received backing",
+      "actual_case_start": 47852864,
+      "replay_block": 47852892,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x8ac4bc73",
+      "match": true
+    },
+    {
+      "pass": 1,
+      "case": "3",
+      "label": "borrower overlimit request 1.01 USDC",
+      "actual_case_start": 47852864,
+      "replay_block": 47852892,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x5d615d32",
+      "match": true
+    },
+    {
+      "pass": 1,
+      "case": "3",
+      "label": "colluder without credit cannot request",
+      "actual_case_start": 47852864,
+      "replay_block": 47852892,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x315b0e14",
+      "match": true
+    },
+    {
+      "pass": 1,
+      "case": "3",
+      "label": "repeat request refused while reservation open",
+      "actual_case_start": 47852864,
+      "replay_block": 47852894,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x5d615d32",
+      "match": true
+    },
+    {
+      "pass": 1,
+      "case": "3",
+      "label": "sponsor cannot cut backing while reservation open",
+      "actual_case_start": 47852864,
+      "replay_block": 47852894,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x9917947d",
+      "match": true
+    },
+    {
+      "pass": 1,
+      "case": "3",
+      "label": "colluder still has no credit after receiving cash",
+      "actual_case_start": 47852864,
+      "replay_block": 47852902,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x315b0e14",
+      "match": true
+    },
+    {
+      "pass": 2,
+      "case": "2",
+      "label": "borrower cannot back peer with received backing (onward)",
+      "actual_case_start": 47853512,
+      "replay_block": 47853540,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x8ac4bc73",
+      "match": true
+    },
+    {
+      "pass": 2,
+      "case": "2",
+      "label": "closed history + removed backing grants no own credit",
+      "actual_case_start": 47853512,
+      "replay_block": 47853567,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x315b0e14",
+      "match": true
+    },
+    {
+      "pass": 2,
+      "case": "3",
+      "label": "borrower cannot onward-back colluder with received backing",
+      "actual_case_start": 47853576,
+      "replay_block": 47853606,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x8ac4bc73",
+      "match": true
+    },
+    {
+      "pass": 2,
+      "case": "3",
+      "label": "borrower overlimit request 1.01 USDC",
+      "actual_case_start": 47853576,
+      "replay_block": 47853606,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x5d615d32",
+      "match": true
+    },
+    {
+      "pass": 2,
+      "case": "3",
+      "label": "colluder without credit cannot request",
+      "actual_case_start": 47853576,
+      "replay_block": 47853606,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x315b0e14",
+      "match": true
+    },
+    {
+      "pass": 2,
+      "case": "3",
+      "label": "repeat request refused while reservation open",
+      "actual_case_start": 47853576,
+      "replay_block": 47853610,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x5d615d32",
+      "match": true
+    },
+    {
+      "pass": 2,
+      "case": "3",
+      "label": "sponsor cannot cut backing while reservation open",
+      "actual_case_start": 47853576,
+      "replay_block": 47853610,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x9917947d",
+      "match": true
+    },
+    {
+      "pass": 2,
+      "case": "3",
+      "label": "colluder still has no credit after receiving cash",
+      "actual_case_start": 47853576,
+      "replay_block": 47853618,
+      "tags_equal": true,
+      "is_case_start": false,
+      "expected_selector": "0x315b0e14",
+      "match": true
+    }
+  ],
+  "replay_summary": {
+    "recorded_refusals": 16,
+    "replay_entries": 32,
+    "two_tags_equal_for_every_refusal": true,
+    "tag_is_actual_case_start_for_any_refusal": false,
+    "all_reported_selector_matches": true,
+    "label_correction": "stored_case_start_block must be renamed stored_refusal_head_block: it is the updated HEAD, not pool_before.block. The second tag independently derives the same last-own-transaction block from the log.",
+    "interpretation": "16 historical state/call observations, each repeated under two equal numeric tags; not32distinct states. Original latest-tag observations remain unpinned.",
+    "raw_call_authentication": "Only decoded response/result fields supplied, no independent rerun by this reviewer."
+  },
+  "remaining_limits": [
+    "No independent RPC authentication of supplied extracts. Raw receipt log topics/data and canonical transaction-block timestamp headers are not included.",
+    "Original latest-tag refusal block remains unknown; subsequent historical reconstruction must not be presented as contemporaneous pinning.",
+    "No original full pre-run first-pass record or complete unencumbered source/earmark ledger recovered here.",
+    "New idle snapshot is reported in receipt comment but not a full structured snapshot in this immutable packet.",
+    "Instruction chronology and worker refusal remain unchanged; supplemental evidence does not authorize the stale-instruction second pass.",
+    "No independent revenue, retained worker earnings, poverty effect or loan-enabled necessity demonstrated."
+  ],
+  "source_artifacts": {
+    "pass1_receipts.json": {
+      "git_blob_sha1": "92cb42a617fbc0625bdddb52997992182365879b",
+      "sha256": "cb07e51a3216aab0535b9447b13024d5001d0032d30fa30b1b6ce07bbe4817b4"
+    },
+    "pass2_receipts.json": {
+      "git_blob_sha1": "1aa62cb5a88808b63d756fd5dfc22990ebe91705",
+      "sha256": "8826717b67576fb364c07099703f038ed25c5f0b328bb9e1346055c9b0c11b1a"
+    },
+    "fee_ledger.json": {
+      "git_blob_sha1": "91e3af73a14d74d822cd97f47aef036aa6f40cc8",
+      "sha256": "d5df4451f1dd0c5910a1e2475289b00ded6264945d7101607801ade45f6ec189"
+    },
+    "refusal_replay.json": {
+      "git_blob_sha1": "a036018776a2c139c21cde369375300bbdc8a9d6",
+      "sha256": "5233beb71e1b37ea9407b4fd3ba20bcac40967bedbfa8a4457e48ce302278ac9"
+    }
+  }
+}
