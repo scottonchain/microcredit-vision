@@ -14,6 +14,7 @@ replies in editorial/youtube-answered.json. Needs network access to youtube.com 
 img.youtube.com for thumbnails) and, for the thumbnail, Chromium through Playwright.
 """
 import json
+import time
 import os
 import re
 import subprocess
@@ -49,10 +50,16 @@ def scan():
     for ch in channels:
         feed = (f"https://www.youtube.com/feeds/videos.xml?playlist_id={ch['playlist_id']}" if ch.get("playlist_id")
                 else f"https://www.youtube.com/feeds/videos.xml?channel_id={ch['channel_id']}")
-        try:
-            xml = fetch(feed)
-        except Exception as e:  # a feed that fails is reported, not fatal
-            out.append({"channel": ch["name"], "error": str(e)})
+        xml, err = None, None
+        for attempt in range(4):  # the feed host answers 404 or 500 now and then (seen 2026-10-08); retry before giving up
+            try:
+                xml = fetch(feed)
+                break
+            except Exception as e:  # a feed that fails is reported, not fatal
+                err = e
+                time.sleep(5 * (attempt + 1))
+        if xml is None:
+            out.append({"channel": ch["name"], "error": f"feed failed after 4 attempts: {err}"})
             continue
         root = ET.fromstring(xml)
         entries = root.findall("a:entry", ns)
