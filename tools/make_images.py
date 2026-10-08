@@ -475,7 +475,24 @@ def people_first():
     return s
 
 
+def birdie_enter():
+    """A small bird pecking an oversized enter key beside a stack of approval prompts."""
+    s = ""
+    for i in range(4):
+        s += f'<rect x="{250 + 14 * i}" y="{170 + 16 * i}" width="300" height="120" rx="10" fill="{PAPER}" stroke="{INK}" stroke-width="2.5"/>\n'
+    s += text(442, 290, "approve?", 30, INK)
+    s += f'<rect x="680" y="300" width="230" height="120" rx="16" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(795, 372, "enter", 34, INK)
+    s += f'<ellipse cx="800" cy="235" rx="44" ry="32" fill="{TEAL}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<circle cx="835" cy="215" r="18" fill="{TEAL}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 850 222 L 872 236 L 850 238 Z" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>\n'
+    s += f'<line x1="790" y1="266" x2="785" y2="298" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 585, "oversight that asks too often stops being oversight", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "the-birdie-at-the-enter-key": (birdie_enter, "A small bird pecking an enter key beside a stack of approval prompts"),
     "the-end-is-people-not-the-pool": (people_first, "Nested rings: people at the centre, the pool at the edge"),
     "work-we-can-do-together": (work_we_can_do_together, "Complementary skills around a shared reserve, with room for a new member"),
     "if-your-agent-can-send-email": (agent_inbox, "Three envelopes, one per agent, above one shared address line"),

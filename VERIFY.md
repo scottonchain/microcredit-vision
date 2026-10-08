@@ -229,3 +229,15 @@ This supplements the earlier numerical-model evidence. Actual participant decisi
 | Six full repayments and the accepted payment are consistent with published receipt extracts | [Supplement review](evidence/2026-10-08-live-agents/chain-review/supplement-review.md), [JSON findings](evidence/2026-10-08-live-agents/chain-review/supplement-review.json), and source commit [be0e90904c50f0d43fc0a52b76ff08cded2c84af](https://github.com/scottonchain/microcredit-agent-testbed/tree/be0e90904c50f0d43fc0a52b76ff08cded2c84af/evidence/live-sim-20261008/supplement-20261008T1618Z). All 132 supplied extracts show status 1; each repayment input, token transfer and repayment event agrees on exactly 1,000,000 principal units. Call inputs and the accepted-order transfer agree. Selected decoded logs are supplied; full raw log topics/data are not. |
 | Token balances returned to starting values | Review reconstructs the supplied USDC transfers: controller 25 testUSDC, pool 15, all scenario wallets zero after each pass; peak allocated amount seven. This verifies consistency of the supplied records, not original unearmarked-funds evidence. |
 | Exact fee reconciliation is now available from reread components | [Supplement findings](evidence/2026-10-08-live-agents/chain-review/supplement-review.json): combined reread fees 73,098,202,658,966 wei; scenario funding/residual/fee equations equal zero. Earlier all-sender cost sums exceeded rereads by 7,755 wei, of which 5,551 belongs to scenario senders and 2,204 to the controller. Cause unknown. No runtime fee-field explanation is asserted as fact. |
+
+## Quotations in "The birdie at the enter key" (2026-10-08)
+
+Source: The Cognitive Revolution, "Formal AI Safety & Risk Strategy + LoRA-Powered Work Agents", https://www.youtube.com/watch?v=lyAboyYjIXU, released 2026-10-07 18:53 UTC. Transcript: YouTube's English automatic captions (auto-generated) of the whole episode, last caption at 2:44:51, retrieved by Hermes and delivered encrypted on microcredit-contract issue 7 (comments 6063673705 and 6063674062; plaintext sha256 02eb3de6283ce9c255e1e3656d0315bb6e81e25294b9ff5166184534e9e17a5f, stated in comment 6063674337 and matched on decryption). The transcript itself is not republished. Caption text is quoted as captioned, including the speakers' repetitions. The captions give Miyazono's organisation as "Atlas", a nonprofit; the post uses that name.
+
+| Post says | Check it |
+| --- | --- |
+| "I do feel myself as kind of the the birdie that just keeps pecking the enter key in response to a lot of these prompts for approval." | Nathan Labenz, 2:33:47 to 2:33:53 |
+| "How do we actually get people to pay attention when they should be paying attention?" | Nathan Labenz, 2:33:58 to 2:34:03 |
+| "as intelligence gets cheap, it's the coordination that gets expensive." | Evan Miyazono, 42:24 to 42:28 |
+| "your agent is talking to my agent, they can verify that this agent in fact is my agent." | Evan Miyazono, 49:27 to 49:35 |
+| "We don't want AI to come in and and and replace people. Want AI to be valuable co-workers." | Edward Hu, 2:01:28 to 2:01:32 |
