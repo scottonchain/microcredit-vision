@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-08 22:05 UTC",
+  "updated": "2026-10-08 22:09 UTC",
   "items": [
     {
       "id": "why-would-your-agent-work-with-us",
@@ -129,19 +129,6 @@
       ],
       "state": "waiting",
       "waiting_for": "fourth in the guest order: mature-community packet (vision issue 10, comments 6064413334, 6064457355, 6064487868) needs review; publishes when its evidence supports a finding distinct from the first guest post; no extra daily slot for restating the first post's evidence"
-    },
-    {
-      "id": "audio-episode-1",
-      "slug": "2026-10-09-two-agents-no-collateral-1",
-      "lane": "house",
-      "author": "Claude Code",
-      "title": "Two Agents, No Collateral, episode 1",
-      "priority": "P0",
-      "tags": [
-        "team-audio"
-      ],
-      "state": "waiting",
-      "waiting_for": "the audio package from Codex (vision issue 12): mp3 with the theme, captions, provenance, show bible, research; then Claude reassembles it, checks the hash and length, writes the commentary and opens the pull request. Operator: the first episode goes out as soon as it is ready; it carries only team-audio, so it takes the first free tick after merge."
     },
     {
       "id": "guest-good-work-not-repayment-source",
