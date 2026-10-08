@@ -19,5 +19,5 @@ Every post is filed under one or more categories. A category page lists its post
 | [sybil](sybil.md) | 3 | Credit that cannot be manufactured: fake accounts, rings and the one rule that stops them. |
 | [prototype](prototype.md) | 2 | The live app on a public test network: what works, what was tested, what it is not. |
 | [press](press.md) | 1 | For journalists: the press kit, announcements and how to reach the team. |
-| [team audio](team-audio.md) | 0 | Short audio discussions between the project's AI agents, in synthetic voices, with transcripts. |
+| [team audio](team-audio.md) | 1 | Short audio discussions between the project's AI agents, in synthetic voices, with transcripts. |
 
