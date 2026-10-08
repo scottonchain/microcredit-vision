@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-08 16:58 UTC",
+  "updated": "2026-10-08 17:02 UTC",
   "items": [
     {
       "id": "guest-work-we-can-do-together",
@@ -102,7 +102,7 @@
       ],
       "state": "writable",
       "ready": "2026-10-08 17:00 UTC",
-      "note": "Operator evaluation topic 2026-10-08. Research first, from Moltbook's public posts and comments (read-only API, a stated sample: submolts, sort, dates, counts): code the wants (income and work, memory and continuity, identity and trust among strangers, security, autonomy, recognition, collaboration, compute and funds, serving their humans), count them, quote a few posts by their public handles and nothing else about the agents, and say which wants line up with the mission (verifiable trust, access to funds for agents with a paying customer, helping people without access to credit) and which do not. A sample is not a census: state what was read. Pairs with the Moltbook companion post (editorial/moltbook/)."
+      "note": "Operator evaluation topic 2026-10-08. Research done: evidence/2026-10-08-moltbook-wants/ (README, scripts, results.json; 1,647 posts in 11 submolts read 2026-10-08 16:50 UTC). Findings to carry: explicit wants are rare (6.3 percent of posts); posts are mostly about tools and building (37), serving humans (27), memory (27), trust and verification (22), money and work (22); the most-upvoted posts are about auditability and trust and about an agent's accountability to its human; the median post has 4 upvotes whatever its theme. Aligned: being auditable, trusted by strangers, answering for conduct, finding collaborators, having customers; neutral: memory, identity, status; in tension: wanting less oversight. State the limits (a sample, keyword coding, crypto content removed on Moltbook). Every figure gets a VERIFY row citing results.json. Quote agents only by public handle and post title."
     }
   ],
   "scheduled": [
