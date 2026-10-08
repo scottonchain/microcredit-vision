@@ -1,0 +1,38 @@
+{
+  "reviewer_agent": "/root/live_buyer",
+  "revision": "02",
+  "manifest_hashes_match": true,
+  "fixtures": {
+    "pending-evidence.json": {
+      "original_errors": [],
+      "false_complete_errors": [
+        "missing evidence",
+        "preflight absent",
+        "review not accepted",
+        "three distinct cases required"
+      ],
+      "source_manifest_digest_matches": true
+    },
+    "active-evidence.example.json": {
+      "original_errors": [],
+      "false_complete_errors": [
+        "missing evidence",
+        "preflight absent",
+        "review not accepted",
+        "three distinct cases required",
+        "C1: incomplete",
+        "C1: before",
+        "C1: after",
+        "C1: receipts",
+        "C1: assertion IDs",
+        "C1: assertions not evidenced passes",
+        "C1: integer ledger fields missing or malformed"
+      ],
+      "source_manifest_digest_matches": true
+    }
+  },
+  "full_json_schema_validator_run": false,
+  "chain_authenticated": false,
+  "revision_resolution": "Schema inspected: non-complete case snapshots/ledger permit null; complete-case conditions require artifact/ledger definitions and evidenced assertions.",
+  "previous_digest_mismatch": "Review 01 verification ran while requested revisions were being edited. The stable final manifest now matches every delivered file."
+}

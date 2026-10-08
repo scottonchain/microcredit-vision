@@ -1,0 +1,38 @@
+{
+  "order_id": "LIVE-BUYER-20261008-01",
+  "reviewer_agent": "/root/live_buyer",
+  "review_date_utc": "2026-10-08",
+  "decision": "accept",
+  "accepted_scope": "Useful service delivery: evidence schema, three-case acceptance checklist, immutable source references, honest pending/active fixtures, limited checker and documented verification.",
+  "worker_manifest_sha256": "396d5e285a8f097a8a8fb7f3461b4f360fa8cfcd80345507f26451af10ba26fa",
+  "accepted_file_sha256": {
+    "ACCEPTANCE.md": "48a05e208999de40916e32b579dfdb192affea12e42369f249d27598ef71c5f5",
+    "VERIFICATION.txt": "527f5c7f41e2ad1fe3a57cfe4fb50b59785d1a15b75a1f333837bcc1e6705105",
+    "active-evidence.example.json": "9a5dba15b3003bd56005a1ecafe965f87bcbc663ebef87cdb90fa269a07c9eeb",
+    "check_evidence.py": "45ba41c9624203d46f1dfae5e14cb081b52cd3dd58c3711ab3dc7bdd1a2db9d2",
+    "evidence.schema.json": "52cdb6087012702fd6243ab5e1906bd3c6b01150e1d335f20f333b18cedc7b74",
+    "pending-evidence.json": "ff042376ad1773316102da006b29b1bc7e4358c143062b5c47332638cb016be1",
+    "source-manifest.json": "049bbddd2da08f9b7f201a13a836e7175ebbca648aeea28841fd6d3f251e8081"
+  },
+  "review_process": "Buyer independently read the initial delivery, required an unknown-state schema revision, inspected the revised delivery and pinned source functions, recomputed every manifest digest, ran both fixtures and verified false completion is rejected.",
+  "resolved_revision": "Review 01 missing-state representation request is satisfied. Unknown snapshots/ledger remain null before complete; complete cases require non-null evidence.",
+  "verification_file": "verification-02.json",
+  "verification_sha256": "f1efcdf7791b131a51bb871c58ea396a738c50b39b2181208e45e4241ecb2343",
+  "payment": {
+    "amount_testUSDC": "1",
+    "amount_base_units": "1000000",
+    "condition": "The deliverable acceptance condition is satisfied. Hermes must still establish that the original authorized internal-payment allocation is available, unreused and compatible with the run ledger and unwind. No extra allocation or duplicate payment is authorized by this acceptance.",
+    "status": "Not paid or independently observed; no transaction receipt available to this reviewer."
+  },
+  "worker_financing_decision": {
+    "upfront_cash_needed_units": "0",
+    "loan_requested": false,
+    "buyer_assessment": "Agreed. Do not present the service as enabled by a loan."
+  },
+  "limitations": [
+    "This accepts an evidence specification, not the live experiment or any transaction.",
+    "The standard JSON Schema validator was unavailable; standard-level schema validation remains unrun. The limited checker does not authenticate chain evidence.",
+    "Separate reasoning agents share one operator. Buyer consideration is internal test currency, not outside demand or real income.",
+    "No claim of profit, sustainable lending, onboarding success or poverty reduction follows from this service."
+  ]
+}
