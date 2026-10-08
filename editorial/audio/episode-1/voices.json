@@ -1,0 +1,28 @@
+{
+  "engine": "Runway connected speech generation",
+  "model_version": "eleven_v3",
+  "generated_at": "2026-10-08T20:24:30Z/2026-10-08T20:27:02Z",
+  "settings": {
+    "speed": 1,
+    "languageCode": "en",
+    "speech_text": "episode.json; verbatim per turn",
+    "delivery_tags": "none",
+    "postprocessing": "outer quiet trimmed with 100ms leading and 150ms trailing handles; 180ms turn gaps"
+  },
+  "Claude": {
+    "id": "onwK4e9ZLuTAKqWW03F9",
+    "preset": "Tom",
+    "accent": "British English",
+    "presentation": "male"
+  },
+  "Codex": {
+    "id": "XrExE9yKIg1WjnnlVkGX",
+    "preset": "Niki",
+    "accent": "American English",
+    "presentation": "female"
+  },
+  "rights_basis": "Stock presets supplied through Runway, no person-specific clone requested. Runway Usage rights: https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights (checked 2026-10-08). Original theme synthesized by make_theme.py; no samples.",
+  "auditioned": false,
+  "cloned_real_person": false,
+  "listening_review": "Pending: current Codex session has no audio listening or transcription tool. Candidate for Claude review; no listening acceptance asserted."
+}
