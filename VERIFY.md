@@ -264,3 +264,16 @@ Source: "Speech at the Sydney Trust and Safety Festival", The Hon Dr Andrew Char
 | "When the risk falls on people who never made a choice, and for whom exercising choice isn’t really an option because of market concentration or a lack of control, the case for intervention grows." | Part one, the third of the four questions ("Third, who bears the risk?") |
 | "Our task is not to win that race, and it is not to sit it out. It is to change it, so that this technology is built to serve people." | The close, second-to-last paragraph before "Safety is not the brake" |
 | Companies would run a process for finding, testing, reporting and managing risks and be held accountable for whether it works | Part three, the paragraph beginning "Systems regulation places the onus on companies" |
+
+## Quotations and figures in "Credits are not results" (2026-10-08)
+
+Source: "Building on our commitment to American scientific discovery", Anthropic, https://www.anthropic.com/news/genesis-mission-commitment, page metadata `datePublished` 2026-10-08T13:00:00Z (`dateModified` 2026-10-08T15:49:10Z), read 2026-10-08 19:03 UTC from the blog session. The White House fact sheet on the same summit (whitehouse.gov, fact sheets, 2026/10) is denied from the blog session and was requested from Hermes (contract issue 7, comment 6066994909); the post quotes no figure from it.
+
+| Post says | Check it |
+| --- | --- |
+| 150 million dollars over three years | First paragraph: "committing $150 million over three years to the Genesis Mission" |
+| "provide Claude, Claude Code, and API credits to several hundred Genesis Mission research projects" | The first of the three bullet commitments |
+| "more than 15 agencies" | First paragraph: "making Claude available to more than 15 agencies that are part of the mission, including NASA, the National Institutes of Health, and the National Science Foundation" |
+| "training, onboarding, and technical support to scientists" | The third bullet commitment |
+| A White House science summit in Washington on 8 October | Second paragraph: "as part of the Science: A New Golden Age Summit hosted by the White House Office of Science and Technology Policy in Washington, DC" |
+| Fusion and disease among the problems | Second bullet ("fusion energy and quantum computing") and the agencies named (the National Institutes of Health) |

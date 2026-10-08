@@ -516,7 +516,24 @@ def judged_by_who():
     return s
 
 
+def credits_not_results():
+    """A stack of credit coupons on the left, an empty result box with a ruler on the right: credits are not results."""
+    s = ""
+    for i in range(4):
+        s += f'<rect x="{230 + 12 * i}" y="{200 + 18 * i}" width="260" height="110" rx="10" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="2.5" stroke-dasharray="8 6"/>\n'
+    s += text(396, 318, "credit", 30, INK)
+    s += f'<rect x="680" y="190" width="260" height="190" rx="12" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(810, 295, "result?", 30, MUTED)
+    s += f'<line x1="680" y1="420" x2="940" y2="420" stroke="{TEAL}" stroke-width="4"/>\n'
+    for i in range(0, 261, 26):
+        s += f'<line x1="{680 + i}" y1="412" x2="{680 + i}" y2="428" stroke="{TEAL}" stroke-width="2"/>\n'
+    s += link(505, 260, 665, 260, INK, 3, dash="10 8")
+    s += text(600, 585, "an input is not an outcome", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "credits-are-not-results": (credits_not_results, "A stack of credit coupons beside an empty result box with a ruler"),
     "a-safety-process-is-judged-by-who-it-protects": (judged_by_who, "A fence with a gate, and people outside it who never chose the risk"),
     "a-dial-not-a-switch": (dial_not_switch, "A light switch crossed out beside a large dial turned partway"),
     "the-birdie-at-the-enter-key": (birdie_enter, "A small bird pecking an enter key beside a stack of approval prompts"),
