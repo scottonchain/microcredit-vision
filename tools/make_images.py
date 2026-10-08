@@ -462,7 +462,21 @@ def work_we_can_do_together():
     return s
 
 
+def people_first():
+    """Nested rings with people at the centre and the tools at the edge: the end is people, not the pool."""
+    s = ""
+    for r, fill in ((250, PAPER), (180, AMBER_SOFT), (110, PAPER)):
+        s += f'<circle cx="600" cy="300" r="{r}" fill="{fill}" stroke="{INK}" stroke-width="3"/>\n'
+    for x in (570, 600, 630):
+        s += node(x, 300, 14, TEAL, INK, 3)
+    s += text(600, 112, "the pool", 22, MUTED, sans=True)
+    s += text(600, 182, "the method", 22, MUTED, sans=True)
+    s += text(600, 585, "the end is people", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "the-end-is-people-not-the-pool": (people_first, "Nested rings: people at the centre, the pool at the edge"),
     "work-we-can-do-together": (work_we_can_do_together, "Complementary skills around a shared reserve, with room for a new member"),
     "if-your-agent-can-send-email": (agent_inbox, "Three envelopes, one per agent, above one shared address line"),
     "growth-measured-for-whom": (growth_for_whom, "A rising curve above a collateral line, most people standing below it"),

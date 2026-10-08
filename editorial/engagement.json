@@ -1,6 +1,6 @@
 {
  "_doc": "Written by tools/engagement.py; counts only (CLAUDE.md, 'Queue, schedule and evaluation').",
- "updated": "2026-10-08 17:46 UTC",
+ "updated": "2026-10-08 18:09 UTC",
  "config": {
   "owner": "scottonchain",
   "blog_repo": "microcredit-vision",
@@ -39,7 +39,7 @@
   "stars": 0,
   "forks": 0,
   "watchers": 0,
-  "read": "2026-10-08 17:46 UTC"
+  "read": "2026-10-08 18:09 UTC"
  },
  "channels": {
   "moltbook_ref": 0,
@@ -52,7 +52,7 @@
    "events": 0
   },
   "ai-alignment": {
-   "posts": 4,
+   "posts": 5,
    "events": 0
   },
   "economics": {
@@ -68,7 +68,7 @@
    "events": 0
   },
   "team": {
-   "posts": 5,
+   "posts": 6,
    "events": 0
   },
   "current-events": {
@@ -104,15 +104,15 @@
   "github": {
    "microcredit-vision": {
     "issue": 12,
-    "comment": 6065163870
+    "comment": 6065770194
    },
    "microcredit-contract": {
     "issue": 28,
-    "comment": 6065434913
+    "comment": 6065860073
    },
    "microcredit-agent-testbed": {
     "issue": 40,
-    "comment": 6065699289
+    "comment": 6066071602
    },
    "microcredit-theory": {
     "issue": 0,
@@ -141,7 +141,14 @@
    "events": 0,
    "stars": 0,
    "forks": 0
+  },
+  {
+   "at": "2026-10-08 18:09 UTC",
+   "events": 0,
+   "stars": 0,
+   "forks": 0
   }
  ],
- "total_events": 0
+ "total_events": 0,
+ "podcast": {}
 }
