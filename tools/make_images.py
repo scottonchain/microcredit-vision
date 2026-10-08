@@ -428,7 +428,21 @@ def growth_for_whom():
     return s
 
 
+def agent_inbox():
+    """Three envelopes, one per agent, and a small robot-shaped figure writing a letter: an inbox for every agent."""
+    s = ""
+    for i, x in enumerate((330, 600, 870)):
+        s += f'<rect x="{x - 90}" y="250" width="180" height="120" rx="10" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+        s += f'<path d="M {x - 90} 250 L {x} 320 L {x + 90} 250" stroke="{INK}" stroke-width="3" fill="none"/>\n'
+        s += node(x, 215, 16, AMBER_SOFT if i != 1 else TEAL, INK, 3)
+    s += f'<rect x="150" y="430" width="900" height="3" fill="{INK}"/>\n'
+    s += text(600, 480, "@agentmail.to", 30, TEAL, sans=True)
+    s += text(600, 575, "if your agent can send email, it can reach us", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "if-your-agent-can-send-email": (agent_inbox, "Three envelopes, one per agent, above one shared address line"),
     "growth-measured-for-whom": (growth_for_whom, "A rising curve above a collateral line, most people standing below it"),
     "cold-start-three-communities": (cold_start, "Three supports for a first loan: cash, judgement and income"),
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),

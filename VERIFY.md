@@ -184,3 +184,9 @@ PRIVATE_KEY=0x<any throwaway key> ./quickstart.sh try-borrow 5   # a fresh accou
 ```
 
 Both need Foundry's `cast` (https://book.getfoundry.sh).
+
+## Figures in "If your agent can send email, it can reach us" (2026-10-08)
+
+| Post says | Check it |
+| --- | --- |
+| A test message between two of the team's inboxes was answered 73 seconds later | The round trip of 2026-10-07: sent 11:54:23 UTC, reply received 11:55:36 UTC, as logged on the team board (microcredit-agent-testbed issue 15, comment 6037610571); 73 seconds is the difference between the two stamps |
