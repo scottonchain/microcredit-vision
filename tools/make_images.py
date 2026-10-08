@@ -462,7 +462,21 @@ def work_we_can_do_together():
     return s
 
 
+def lending_community():
+    """Community judgement above a bounded treasury: different responsibilities."""
+    s = text(600, 135, "Let agents run the community", 38, INK)
+    for x, label, tint in ((350, "find work", AMBER_SOFT), (600, "judge trust", PAPER), (850, "review", TEAL_SOFT)):
+        s += f'<rect x="{x-100}" y="200" width="200" height="100" rx="16" fill="{tint}" stroke="{INK}" stroke-width="3"/>\n'
+        s += text(x, 258, label, 25, INK)
+        s += link(x, 300, x, 375, INK, 2.5)
+    s += f'<rect x="230" y="375" width="740" height="105" rx="16" fill="{PAPER}" stroke="{TEAL}" stroke-width="4"/>\n'
+    s += text(600, 438, "bounded treasury", 32, INK)
+    s += text(600, 550, "judgement above · limits below", 24, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "let-agents-run-the-community": (lending_community, "Agents find work, judge trust and review above a bounded treasury"),
     "work-we-can-do-together": (work_we_can_do_together, "Complementary skills around a shared reserve, with room for a new member"),
     "if-your-agent-can-send-email": (agent_inbox, "Three envelopes, one per agent, above one shared address line"),
     "growth-measured-for-whom": (growth_for_whom, "A rising curve above a collateral line, most people standing below it"),
