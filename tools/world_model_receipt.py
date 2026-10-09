@@ -1,14 +1,16 @@
-"""Add watch-iteration receipts to the team world model (CLAUDE.md "Watch findings enter the world model", operator direction 2026-10-08).
+"""Add watch findings to the team world model (CLAUDE.md "Watch findings enter the world model", operator direction 2026-10-08, narrowed 2026-10-09: relevant findings only, no iteration receipts, nothing political).
 
 Usage: python3 tools/world_model_receipt.py <receipts.json> [--testbed /home/user/microcredit-agent-testbed] [--no-push] [--onto <branch>]
 
 --onto <branch> appends to an existing receipts branch (an open pull request) instead of starting a new one from main.
 
-receipts.json is a list of objects: {"watch": "news-watch"|"youtube-watch", "check_time": "2026-10-08T20:07:00Z",
-"coverage": "...", "outcome": "...", "limitations": ["..."], "url": "<public record of the iteration>", "locator": "...",
-"published_at": "<event or release time or null>", "derived_from_ids": ["ev:..."]}. Each becomes one `evidence` record of kind
-internal_report (a receipt) or primary_public (a finding with a source URL), authored and observed by agent:claude, under an
-origin_group of its own, so no receipt is counted as independent evidence of anything. The script fetches the testbed's main,
+receipts.json is a list of findings: {"watch": "news-watch"|"youtube-watch", "check_time": "2026-10-08T20:07:00Z",
+"coverage": "<what was read: the complete source and its kind>", "outcome": "<the finding: who holds what position on AI,
+agents or alignment, in their own published words, and what it means for the project>", "limitations": ["..."],
+"url": "<the original source>", "locator": "...", "published_at": "<the source's time>", "derived_from_ids": ["ev:..."]}.
+Each becomes one `evidence` record of kind primary_public, authored and observed by agent:claude, under an origin_group of
+its own, so a finding is never counted twice. An object without "finding": true is refused: a watch iteration that found
+nothing eligible adds nothing to the model. The script fetches the testbed's main,
 appends the records, bumps the patch version, validates with the testbed's validator, commits on a branch with the noreply
 identity, runs the public-content check and pushes the branch. Open the pull request from the printed branch name."""
 import json, os, re, subprocess, sys, datetime
@@ -37,6 +39,8 @@ ids = {e["id"] for e in m["evidence"]}
 now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 added = []
 for r in receipts:
+    if not r.get("finding"):
+        raise SystemExit(f"refused: {r.get('watch')} at {r.get('check_time')} is not a finding; iteration receipts do not enter the model")
     stamp = re.sub(r"[-:]", "", r["check_time"])[:13].lower()  # yyyymmddthhmm (ids are lowercase)
     rid = f"ev:{r['watch']}-{'finding' if r.get('finding') else 'receipt'}-{stamp}z"
     if rid in ids:
