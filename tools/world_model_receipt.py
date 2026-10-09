@@ -138,8 +138,9 @@ def main(argv=None):
     with tempfile.TemporaryDirectory(prefix="watch-findings-") as temporary:
         path = Path(temporary) / "model.json"
         path.write_text(text, encoding="utf-8")
-        subprocess.run([sys.executable, str(testbed / "world-model/validate.py"), str(path), "--check-schema"], check=True)
+        subprocess.run([sys.executable, str(testbed / "world-model/validate.py"), str(path), "--check-schema", "--format"], check=True)
         subprocess.run(["bash", str(testbed / "world-model/check-public-content.sh"), "--text", str(path)], cwd=testbed, check=True)
+        text = path.read_text(encoding="utf-8")
     if args.output:
         atomic_write(args.output, text)
     print(f"validated {len(added)} new finding(s), model {candidate['model_version']}; canonical model unchanged")

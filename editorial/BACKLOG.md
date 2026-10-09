@@ -1,25 +1,27 @@
-# Post backlog
+# Editorial topics and history
 
-**Topic gate (operator direction, 2026-10-08):** all future posts exclude political content, including White House/government political events, legislation and domestic or foreign political leaders. This replaces the former party-apolitical allowance. Apply the full Political-content exclusion in `CLAUDE.md` before ranking topics and again before publishing; it also covers news and YouTube replies, guest posts, podcast material and Moltbook companions. Remove political passages from unpublished drafts or skip the subject when politics is central. Historical publication notes below remain a record, not permission to repeat those subjects.
+`editorial/queue.json` is the executable queue. This file holds topic research,
+editorial decisions and dated history; it is not a second schedule or rulebook.
+Use [CLAUDE.md](../CLAUDE.md) for content boundaries, source completeness, timing,
+review, guest/audio rules and ownership, and `python3 tools/build.py --plan` for the
+next eligible item. Claude owns priorities; the operator adds topics.
 
-Ranked ideas for posts, kept by Claude Code. The operator adds topics; Claude Code sets the priority. The selection rule at posting time (operator direction, 2026-10-06):
-
-1. First, any development on the project that people outside it will find extremely interesting. That beats everything on this list.
-2. Then, anything important in the media about AI in the last 12 to 24 hours (the "Outside the project" watch below), commented on under its rules.
-3. Otherwise, something short from this list, highest priority first.
-
-Shorter and pithier wins unless a development needs a longer explanation. A post is one subject.
-
-Priority: **P1** news-grade, post as soon as it happens; **P2** short essay, ready any time; **P3** explainer, use when the week is quiet. Status: open, drafted, posted (with the date), dropped (with why).
-
+**Publication remains paused** by the operator's 2026-10-09 10:00 UTC direction
+recorded below. Preserve ready times and outstanding reviews. A later explicit
+operator direction is required to resume.
 
 ## Outside the project
 
-**Every watch iteration (operator direction, 2026-10-08):** both the news watch and the YouTube watch add their findings to the canonical world model, whether or not anything is published. Follow `CLAUDE.md`, "Watch findings enter the world model", and `world-model/README.md` in the testbed. Record the resulting model commit or pending PR here with the iteration outcome; a source failure or no-new-information run still gets a concise receipt. An unmerged update remains pending.
+Apply the current political exclusion and source/age checks in CLAUDE.md before
+selecting a topic. A video reply requires both the first-mention hyperlink and
+linked thumbnail. Only substantive, eligible watch findings enter the canonical
+world model; an empty iteration, failed source read or skipped episode creates
+no model record. Record an actual finding's model commit or pending PR here.
+Older watch instructions and statuses below are dated history, superseded by the
+2026-10-09 rule. Do not repeat completed posts, unanswered questionnaires or scans
+with unchanged inputs as progress.
 
-**YouTube reply links (operator direction, 2026-10-08):** make the first mention of the video or episode in the reply prose a direct hyperlink to that video. Also retain the linked thumbnail at the end. Verify both before publication.
-
-A standing watch, not a list, and the second rank in the selection rule above (operator direction, 2026-10-06). Commentary on events outside the project is timely or it is not written: within 12 to 24 hours of the event, never later. Operator direction, 2026-10-07 (testbed issue 15 comments 6042738382 and 6042766839): Claude may publish at once on an important timely development, without a scheduled run or further approval, only when the event itself happened within the 24 hours before publication; coverage, updates, indexing or syndication of an older event never qualify, and a report repeating an older warning is not a new event; for each such post record here the event's actual date, time and timezone, the original source and its provenance, the check time and the elapsed event age, and treat unknown event timing as not eligible; permission, not an obligation. The examples the operator gave on 2026-10-06 (the Hugging Face incident, the "Pacing the Frontier" letter, the Anthropic op-ed and a resignation) had all happened weeks or months earlier and are therefore not topics; they show the kind of event meant. An hourly news-watch Routine scans the last few hours for big news and posts a short piece at once when something qualifies; it records what it posted here. The scheduled run then treats that event as covered. At every scheduled run, before choosing a subject, scan the last 12 to 24 hours: AI news of real importance (a major incident, a cosigned letter, a lab's public change of course, a notable departure with a public statement), and new posts by writers with large audiences who bear on our questions (Robert Wright, Steven Pinker, Beff Jezos and similar accelerationists, Yann LeCun, Liron Shapira (Doom Debates), the podcast at https://open.spotify.com/show/4v2mFQwcDa8vQvCnYceCfs (name to be filled in once the show page is read), among others). A post or episode by one of these is answered within 24 hours of its publication or not at all, and only when it is complete content: a full episode or a full article, never a clip, a trailer, a teaser or a thread of fragments. For a podcast or video, the source is a complete transcript, nothing less (operator direction, 2026-10-06): if the session cannot obtain one, ask the team once (Hermes, as a bounded task) and otherwise move on; a description, a summary or a partial transcript is not a source. If one qualifies, it takes the slot ahead of the list. Rules: exclude all political content under CLAUDE.md's Political-content exclusion (operator direction, 2026-10-08), including government political events, legislation and domestic or foreign political leaders; neutral or nonpartisan treatment does not qualify; the commentary is about why we are aligned, or something genuinely interesting in what happened; a reply speaks at the level of alignment and human well-being, never of credit, money or technical mechanism, because that is what readers want to know about us (operator direction, 2026-10-07, after the Nonzero reply); quote the primary source and link it; name public figures only by what they published; no outreach; when X cannot be read from the session, use search and quote only what a public page shows. For a podcast or a talk, look for the complete transcript on YouTube first (operator direction, 2026-10-06): many publishers post full episodes there with a transcript; an automatic transcript of the whole episode counts as complete. YouTube channels watched directly (operator direction, 2026-10-07): Robert Wright's Nonzero, The Daily, Doom Debates, the Center for Humane Technology, Lex Fridman, Dwarkesh Patel and The Cognitive Revolution (the last four added 2026-10-07; Lex Fridman and Dwarkesh Patel for AI episodes only; The Cognitive Revolution for alignment, agents and agentic commerce such as x402 only, per its `only` note in the file, and at most one reply in any 72 hours, per its `min_hours_between_replies`), plus the NVIDIA AI Podcast playlist (added 2026-10-08), listed in editorial/youtube-channels.json and scanned every two hours by the YouTube watch Routine with tools/youtube_watch.py. Reply at once to an episode about AI, blockchain or alignment, from its complete transcript, filed under current events and every category that truly fits it (ai alignment for a conversation about AI and people; the spacing rule is waived for a current-events reply in all its categories), with the video's own thumbnail (play button added) linking back to it; never to an episode outside those subjects, never twice to one episode (editorial/youtube-answered.json), never more than 24 hours after its release.
+## Topic research and publication history
 
 | Pri | Topic | Angle | Source | Status |
 | --- | --- | --- | --- | --- |
