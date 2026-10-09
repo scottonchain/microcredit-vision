@@ -7,7 +7,8 @@ Usage: python3 tools/world_model_receipt.py <receipts.json> [--testbed /home/use
 receipts.json is a list of findings: {"watch": "news-watch"|"youtube-watch", "check_time": "2026-10-08T20:07:00Z",
 "coverage": "<what was read: the complete source and its kind>", "outcome": "<the finding: who holds what position on AI,
 agents or alignment, in their own published words, and what it means for the project>", "limitations": ["..."],
-"url": "<the original source>", "locator": "...", "published_at": "<the source's time>", "derived_from_ids": ["ev:..."]}.
+"url": "<the original source>", "locator": "...", "published_at": "<the source's time>", "derived_from_ids": ["ev:..."],
+"slug": "<a short tag, e.g. the video id, so two findings from one tick get distinct ids>"}.
 Each becomes one `evidence` record of kind primary_public, authored and observed by agent:claude, under an origin_group of
 its own, so a finding is never counted twice. An object without "finding": true is refused: a watch iteration that found
 nothing eligible adds nothing to the model. The script fetches the testbed's main,
@@ -42,7 +43,8 @@ for r in receipts:
     if not r.get("finding"):
         raise SystemExit(f"refused: {r.get('watch')} at {r.get('check_time')} is not a finding; iteration receipts do not enter the model")
     stamp = re.sub(r"[-:]", "", r["check_time"])[:13].lower()  # yyyymmddthhmm (ids are lowercase)
-    rid = f"ev:{r['watch']}-{'finding' if r.get('finding') else 'receipt'}-{stamp}z"
+    slug = re.sub(r"[^a-z0-9]+", "-", r.get("slug", "").lower()).strip("-")
+    rid = f"ev:{r['watch']}-finding-{stamp}z" + (f"-{slug}" if slug else "")
     if rid in ids:
         continue
     rec = {
@@ -73,7 +75,7 @@ branch = onto or f"claude/watch-receipts-{now[:13].replace('-', '').replace('T',
 if not onto:
     run("git", "checkout", "-q", "-b", branch)
 run("git", "add", "world-model/model.json")
-msg = f"World model: watch-iteration receipts, {len(added)} record(s), model {m['model_version']} (base {base})\n\n" + "\n".join(added) + "\n\nCo-Authored-By: Claude <noreply@anthropic.com>"
+msg = f"World model: watch findings, {len(added)} record(s), model {m['model_version']} (base {base})\n\n" + "\n".join(added) + "\n\nCo-Authored-By: Claude <noreply@anthropic.com>"
 run("git", "-c", "user.name=Claude", "-c", "user.email=noreply@anthropic.com", "commit", "-q", "-m", msg)
 subprocess.run(["/home/user/microcredit-contract/scripts/check-public-content.sh", "--range", "origin/main..HEAD"], cwd=testbed, check=True)
 if push:
