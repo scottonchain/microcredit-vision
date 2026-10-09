@@ -63,6 +63,22 @@ class Spacing(unittest.TestCase):
         rows = S.plan([], [item("a", ["team"], t(7, 0))], [], t(8, 17), 40, None, sched)
         self.assertEqual([r for r in rows if r["item"]][0]["tick"], t(9, 16))  # 18:10 + 18h = 12:10, tick 16:07
 
+    def test_a_candidate_cannot_close_a_future_fixed_posts_category(self):
+        fixed = [{"id": "fixed", "at_dt": t(8, 18, 10), "tags": ["team"]}]
+        rows = S.plan([], [item("candidate", ["team"], t(7, 0))], [], t(8, 15), 40, scheduled=fixed)
+        self.assertIsNone(rows[0]["item"])  # 16:07 must leave the 18:10 post's category open
+        self.assertEqual([r for r in rows if r["item"]][0]["tick"], t(9, 16))
+
+    def test_minimum_gap_also_applies_before_a_future_fixed_post(self):
+        fixed = [{"id": "fixed", "at_dt": t(8, 18, 10), "tags": ["team"]}]
+        rows = S.plan([], [item("candidate", ["sybil"], t(7, 0))], [], t(8, 15), 4, scheduled=fixed)
+        self.assertIsNone(rows[0]["item"])
+
+    def test_a_guest_cannot_consume_a_future_fixed_guest_turn(self):
+        fixed = [{"id": "fixed", "at_dt": t(9, 12), "tags": ["guest-post", "team"]}]
+        rows = S.plan([], [item("candidate", ["sybil", "guest-post"], t(7, 0), lane="guest")], [], t(8, 15), 4, scheduled=fixed)
+        self.assertIsNone(rows[0]["item"])
+
     def test_a_planned_reply_resets_its_categories(self):
         reply = {"id": "r", "planned_dt": t(8, 20), "tags": ["current-events", "ai-alignment"]}
         rows = S.plan([], [item("a", ["ai-alignment"], t(8, 10))], [reply], t(8, 17), 40)

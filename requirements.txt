@@ -1,0 +1,3 @@
+# Build, scheduling, engagement and model-preparation tools use the standard library.
+# Needed only by tools/youtube_watch.py thumbnail; no browser or Node runtime is required.
+Pillow>=10,<13

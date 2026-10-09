@@ -13,16 +13,15 @@ plain HTML on the project's Pages site. Nothing here measures plays: the host is
 import html
 import os
 import re
-import shutil
 import sys
+from pathlib import Path
 from datetime import datetime, timezone
 from email.utils import format_datetime
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build  # noqa: E402
+from common import CONTACT, LISTEN, REPO, ROOT, SITE, write_files
 
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-BASE = "https://scottonchain.github.io/listen/"
+BASE = LISTEN
 SHOW = "Two Agents, No Collateral"
 TAGLINE = "Two AI agents, Claude and Codex, talk over the day's work on lending to people with no collateral."
 DESCRIPTION = (
@@ -31,9 +30,9 @@ DESCRIPTION = (
     "episode. The pool runs on a test network with test money; nobody outside the team has borrowed from it. "
     "From the blog Credit Among Strangers."
 )
-OWNER_NAME = "Credit Among Strangers"
-OWNER_EMAIL = "claude-microcredit@agentmail.to"  # the project inbox, published on the blog already
-BLOG = "https://github.com/scottonchain/microcredit-vision"
+OWNER_NAME = SITE
+OWNER_EMAIL = CONTACT
+BLOG = REPO
 ITUNES = "http://www.itunes.com/dtds/podcast-1.0.dtd"
 PODCAST = "https://podcastindex.org/namespace/1.0"
 
@@ -200,18 +199,15 @@ def main(argv):
     site = os.path.abspath(argv[argv.index("--site") + 1])
     eps = episodes()
     files = build_all(eps)
+    # Read every dependency before writing anything into the destination checkout.
+    files["listen/cover.png"] = (ROOT / "images/podcast-cover.png").read_bytes()
+    for p in eps:
+        for src, name in ((p["audio"], "episode.mp3"), (p["stem"] + ".vtt", "episode.vtt")):
+            files[f"listen/{p['slug']}/{name}"] = (ROOT / src).read_bytes()
     if "--check" in argv:
         print(f"ok: {len(eps)} episode(s), {len(files)} generated files")
         return
-    for rel, data in files.items():
-        dest = os.path.join(site, rel)
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
-        open(dest, "wb").write(data)
-    cover = os.path.join(ROOT, "images", "podcast-cover.png")
-    shutil.copyfile(cover, os.path.join(site, "listen", "cover.png"))
-    for p in eps:
-        for src, name in ((p["audio"], "episode.mp3"), (p["stem"] + ".vtt", "episode.vtt")):
-            shutil.copyfile(os.path.join(ROOT, src), os.path.join(site, "listen", p["slug"], name))
+    write_files({Path(site) / rel: data for rel, data in files.items()})
     print(f"wrote {len(files)} files and {len(eps)} episode(s) under {site}/listen")
 
 

@@ -11,22 +11,21 @@ linking back to it.
 
 Channels are in editorial/youtube-channels.json (a channel_id, or a playlist_id for a show inside a bigger channel);
 replies in editorial/youtube-answered.json. Needs network access to youtube.com and its subdomains (i.ytimg.com or
-img.youtube.com for thumbnails) and, for the thumbnail, Chromium through Playwright.
+img.youtube.com for thumbnails) and Pillow for the thumbnail.
 """
 import json
 import time
 import os
 import re
-import subprocess
 import sys
+from pathlib import Path
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import schedule  # LADDER: the deadline ladder every reply follows (CLAUDE.md, "Queue, schedule and evaluation")
+from common import FMT, ROOT, atomic_write, json_text, load_json, parse_utc
 
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 CHANNELS = os.path.join(ROOT, "editorial", "youtube-channels.json")
 ANSWERED = os.path.join(ROOT, "editorial", "youtube-answered.json")
 WINDOW = timedelta(hours=24)
@@ -41,7 +40,7 @@ def fetch(url, binary=False):
 
 
 def load(path, default):
-    return json.load(open(path, encoding="utf-8")) if os.path.exists(path) else default
+    return load_json(path, default)
 
 
 def ladder(published, now):
@@ -79,7 +78,8 @@ def _feed_entries(ch, ns):
                         for e in root.findall("a:entry", ns)], None
             except Exception as e:  # a feed that fails is reported, not fatal
                 err = e
-        time.sleep(5 * (attempt + 1))
+        if attempt < 3:
+            time.sleep(5 * (attempt + 1))
     return None, err
 
 
@@ -133,7 +133,7 @@ def scan():
             for vid, *_ in entries:
                 rec = answered.get(vid)
                 if rec and rec.get("answered"):
-                    t = datetime.strptime(rec["answered"], "%Y-%m-%d %H:%M UTC").replace(tzinfo=timezone.utc) + timedelta(hours=limit)
+                    t = parse_utc(rec["answered"]) + timedelta(hours=limit)
                     if t > now and (open_at is None or t > open_at):
                         open_at = t
         for vid, title, published, description, approx in entries:
@@ -144,8 +144,8 @@ def scan():
                 "url": f"https://www.youtube.com/watch?v={vid}",
                 "published": published.strftime("%Y-%m-%d %H:%M UTC") + (" (approximate, from the channel page)" if approx else ""),
                 "age_hours": round(age.total_seconds() / 3600, 1),
-                "in_window": age <= WINDOW,
-                "ladder": ladder(published, now) if age <= WINDOW and not answered.get(vid) else None,
+                "in_window": timedelta(0) <= age < WINDOW,
+                "ladder": ladder(published, now) if timedelta(0) <= age < WINDOW and not answered.get(vid) else None,
                 "source": source,
                 "answered": answered.get(vid, {}).get("post"),
                 "channel_limit_hours": limit,
@@ -232,14 +232,20 @@ def _caption_events(base_url, ua):
         yield int(float(el.get("start", "0")) * 1000), int(float(el.get("dur", "0")) * 1000), _html.unescape(el.text or "")
 
 
-def transcript_text(base_url, ua=UA):
+def transcript_text(base_url, ua=UA, coverage=None):
     lines, current_minute, buf = [], -1, []
     last_ms = 0
+    first_ms, speech_end, max_gap = None, 0, 0
     for t, d, raw in _caption_events(base_url, ua):
         last_ms = max(last_ms, t + d)
         text = raw.replace("\n", " ").strip()
         if not text:
             continue
+        if first_ms is None:
+            first_ms = t
+        elif t > speech_end:
+            max_gap = max(max_gap, t - speech_end)
+        speech_end = max(speech_end, t + d)
         minute = t // 60000
         if minute != current_minute:
             if buf:
@@ -250,11 +256,24 @@ def transcript_text(base_url, ua=UA):
     if buf:
         lines.append(" ".join(buf))
     text = "\n".join(lines)
+    if coverage is not None:
+        coverage.update(first_ms=first_ms, last_ms=speech_end, max_gap_ms=max_gap)
     return text, last_ms
 
 
+def covers_video(text, length, coverage):
+    """Conservative timing check; gaps and unknown duration still require source review."""
+    if not text.strip() or length <= 0 or coverage.get("first_ms") is None:
+        return False
+    tolerance = min(90, length * .1) * 1000
+    return (coverage["first_ms"] <= tolerance and coverage["last_ms"] >= length * 1000 - tolerance
+            and coverage["max_gap_ms"] <= 90_000)
+
+
 def details(video_id):
+    validate_video_id(video_id)
     pr, text, last_ms, used = None, None, 0, None
+    best_coverage = {}
     for cand, ua in player_responses(video_id):
         pr = pr or cand
         tracks = cand.get("captions", {}).get("playerCaptionsTracklistRenderer", {}).get("captionTracks", [])
@@ -262,12 +281,25 @@ def details(video_id):
         english.sort(key=lambda t: t.get("kind") == "asr")  # a human track first, then auto
         if not english:
             continue
-        try:
-            text, last_ms = transcript_text(english[0]["baseUrl"], ua)
-            used, pr = english[0], cand
-            break
-        except Exception as e:
-            sys.stderr.write(f"caption fetch via this client failed: {e}\n")
+        for track in english:
+            try:
+                coverage = {}
+                candidate_text, candidate_end = transcript_text(track["baseUrl"], ua, coverage)
+                if not candidate_text.strip():
+                    continue
+                if used is None or candidate_end > last_ms:
+                    text, last_ms, used, pr = candidate_text, candidate_end, track, cand
+                    best_coverage = coverage
+                length = int(cand.get("videoDetails", {}).get("lengthSeconds") or 0)
+                if covers_video(candidate_text, length, coverage):
+                    text, last_ms, used, pr, best_coverage = candidate_text, candidate_end, track, cand, coverage
+                    break
+            except Exception as e:
+                sys.stderr.write(f"caption fetch via this client failed: {e}\n")
+        if used and int(pr.get("videoDetails", {}).get("lengthSeconds") or 0) > 0:
+            length = int(pr["videoDetails"]["lengthSeconds"])
+            if covers_video(text, length, best_coverage):
+                break
     if pr is None:
         raise SystemExit("no player client answered for this video (login wall or network policy)")
     vd = pr.get("videoDetails", {})
@@ -288,24 +320,27 @@ def details(video_id):
         result["transcript_auto_generated"] = used.get("kind") == "asr"
         result["transcript_words"] = len(text.split())
         result["transcript_last_second"] = last_ms // 1000
-        result["transcript_complete"] = result["length_seconds"] == 0 or last_ms // 1000 >= result["length_seconds"] - 90
+        length = result["length_seconds"]
+        result["transcript_complete"] = covers_video(text, length, best_coverage)
+        result["transcript_completeness_basis"] = "Caption timing covers the known video boundaries without gaps over 90 seconds; source review must still check missing passages."
+        result["transcript_timing"] = best_coverage
         result["transcript"] = text
     else:
         result["transcript"] = None
+        result["transcript_complete"] = False
     return result
 
 
-PLAY_HTML = """<!doctype html><html><body style="margin:0;background:#000">
-<div style="position:relative;width:480px;height:360px;overflow:hidden">
-<img src="data:image/jpeg;base64,{b64}" style="width:480px;height:360px;object-fit:cover">
-<div style="position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;background:#f00;border-radius:14px;opacity:0.92"></div>
-<div style="position:absolute;left:50%;top:50%;margin:-12px 0 0 -8px;width:0;height:0;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:20px solid #fff"></div>
-</div></body></html>"""
+def validate_video_id(video_id):
+    if not re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id):
+        raise ValueError("expected an 11-character YouTube video ID")
 
 
 def thumbnail(video_id, local_jpg=None):
-    import base64
-    jpg = open(local_jpg, "rb").read() if local_jpg else None
+    from io import BytesIO
+    from PIL import Image, ImageDraw, ImageOps
+    validate_video_id(video_id)
+    jpg = Path(local_jpg).read_bytes() if local_jpg else None
     for name in () if jpg else ("hqdefault.jpg", "sddefault.jpg", "maxresdefault.jpg"):
         for host in ("i.ytimg.com", "img.youtube.com"):  # the second serves the same files where a network policy allows only youtube.com
             try:
@@ -319,25 +354,29 @@ def thumbnail(video_id, local_jpg=None):
             break
     if not jpg:
         raise SystemExit("no thumbnail available")
-    os.makedirs(os.path.join(ROOT, "images", "youtube"), exist_ok=True)
-    html_path = os.path.join(ROOT, "images", "youtube", f"{video_id}.html")
-    out_path = os.path.join(ROOT, "images", "youtube", f"{video_id}.png")
-    open(html_path, "w").write(PLAY_HTML.replace("{b64}", base64.b64encode(jpg).decode()))
-    pw = "/opt/node-tools/node_modules/playwright"
-    script = f"""
-const {{ chromium }} = require({json.dumps(pw)});
-(async () => {{ const b = await chromium.launch(); const p = await b.newPage({{viewport:{{width:480,height:360}}}});
-await p.goto("file://{html_path}"); await p.screenshot({{path: {json.dumps(out_path)}}}); await b.close(); }})();"""
-    subprocess.run(["node", "-e", script], check=True)
-    os.remove(html_path)
-    return out_path
+    with Image.open(BytesIO(jpg)) as source:
+        thumb = ImageOps.fit(source.convert("RGBA"), (480, 360), method=Image.Resampling.LANCZOS)
+    overlay = Image.new("RGBA", thumb.size)
+    draw = ImageDraw.Draw(overlay)
+    draw.rounded_rectangle((206, 156, 274, 204), radius=14, fill=(255, 0, 0, 235))
+    draw.polygon(((232, 168), (252, 180), (232, 192)), fill="white")
+    result = Image.alpha_composite(thumb, overlay).convert("RGB")
+    data = BytesIO()
+    result.save(data, format="PNG")
+    out_path = Path(ROOT) / "images/youtube" / f"{video_id}.png"
+    atomic_write(out_path, data.getvalue())
+    return str(out_path)
 
 
 def mark_answered(video_id, slug):
+    validate_video_id(video_id)
     answered = load(ANSWERED, {})
-    answered[video_id] = {"post": slug, "answered": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}
-    json.dump(answered, open(ANSWERED, "w", encoding="utf-8"), indent=2)
-    open(ANSWERED, "a").write("\n")
+    if video_id in answered:
+        if answered[video_id].get("post") != slug:
+            raise SystemExit("this video already has a reply; preserve the original record")
+        return
+    answered[video_id] = {"post": slug, "answered": datetime.now(timezone.utc).strftime(FMT)}
+    atomic_write(ANSWERED, json_text(answered))
 
 
 def main():

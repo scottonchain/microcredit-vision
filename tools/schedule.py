@@ -35,17 +35,15 @@ planned (queue.json, "replies") as posts, so regular items are not planned into 
 and prints each reply's deadline ladder (LADDER).
 """
 import json
-import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build  # noqa: E402
+from common import FMT, ROOT, load_json, parse_utc
 
-FMT = "%Y-%m-%d %H:%M UTC"
-QUEUE = "editorial/queue.json"
-ENGAGEMENT = "editorial/engagement.json"
-ANSWERED = "editorial/youtube-answered.json"
+QUEUE = ROOT / "editorial/queue.json"
+ENGAGEMENT = ROOT / "editorial/engagement.json"
+ANSWERED = ROOT / "editorial/youtube-answered.json"
 
 GRID_MINUTE = 7
 GRID_HOURS = 4
@@ -73,7 +71,7 @@ LADDER = {
 
 
 def ts(s):
-    return datetime.strptime(s, FMT).replace(tzinfo=timezone.utc)
+    return parse_utc(s)
 
 
 def fmt(d):
@@ -224,6 +222,21 @@ def reservations(pending, t, posts=()):
     return reserved
 
 
+def preserves_scheduled(item, posts, t):
+    """A candidate before a fixed post must leave that post's spacing and guest turn intact."""
+    for post in posts:
+        if post.get("kind") != "scheduled" or post["dt"] <= t:
+            continue
+        gap = post["dt"] - t
+        if gap < MIN_GAP:
+            return False
+        if gap < build.SPACING and set(spaced(item["tags"])) & post["tags"]:
+            return False
+        if gap < GUEST_EVERY and item["lane"] == "guest" and "guest-post" in post["tags"]:
+            return False
+    return True
+
+
 def plan(posts, items, replies, now, horizon_h=72, eng=None, scheduled=()):
     """posts: dicts from post_from_build; items: queue items with ready_dt; replies: queue replies with tags and
     planned (datetime or None). Returns one row per tick."""
@@ -252,6 +265,8 @@ def plan(posts, items, replies, now, horizon_h=72, eng=None, scheduled=()):
                     continue
                 if it["lane"] == "guest" and not guest_turn_open(virtual, t):
                     continue
+                if not preserves_scheduled(it, virtual, t):
+                    continue
                 ok, relief = is_open(it, virtual, t)
                 if not ok:
                     continue
@@ -277,14 +292,24 @@ def plan(posts, items, replies, now, horizon_h=72, eng=None, scheduled=()):
 
 
 def load_queue(posts_slugs, answered):
-    if not os.path.exists(QUEUE):
+    q = load_json(QUEUE)
+    if q is None:
         raise SystemExit(f"{QUEUE} is missing")
-    q = json.load(open(QUEUE, encoding="utf-8"))
     items, replies, scheduled = [], [], []
+    seen = set()
     for it in q.get("items", []):
+        if it["id"] in seen:
+            raise SystemExit(f"{QUEUE}: duplicate item id {it['id']!r}")
+        seen.add(it["id"])
         if it.get("published") or slug_tail(it.get("slug", it["id"])) in posts_slugs:
             continue
         it = dict(it)
+        if it.get("lane") not in ("house", "guest", "reply") or it.get("state") not in ("ready", "writable", "waiting"):
+            raise SystemExit(f"{QUEUE}: item {it['id']} has an invalid lane or state")
+        if it.get("priority") not in PRIORITY:
+            raise SystemExit(f"{QUEUE}: item {it['id']} has an invalid priority")
+        if not it.get("tags") or len(set(it["tags"])) != len(it["tags"]):
+            raise SystemExit(f"{QUEUE}: item {it['id']} needs distinct categories")
         for c in it["tags"]:
             if c not in build.TAGS:
                 raise SystemExit(f"{QUEUE}: item {it['id']} has unknown tag '{c}'")
@@ -308,15 +333,14 @@ def load_queue(posts_slugs, answered):
 
 
 def main(posts, argv):
-    os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
     now = datetime.now(timezone.utc)
     horizon = 72
     if "--now" in argv:
         now = ts(argv[argv.index("--now") + 1])
     if "--hours" in argv:
         horizon = int(argv[argv.index("--hours") + 1])
-    answered = set(json.load(open(ANSWERED, encoding="utf-8"))) if os.path.exists(ANSWERED) else set()
-    eng = json.load(open(ENGAGEMENT, encoding="utf-8")) if os.path.exists(ENGAGEMENT) else None
+    answered = set(load_json(ANSWERED, {}))
+    eng = load_json(ENGAGEMENT)
     published = [post_from_build(p) for p in posts]
     q, items, replies, scheduled = load_queue({slug_tail(p["slug"]) for p in published}, answered)
     rows = plan(published, items, replies, now, horizon, eng, scheduled)
@@ -362,7 +386,8 @@ def main(posts, argv):
 
 
 if __name__ == "__main__":
-    os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+    import os
+    os.chdir(ROOT)
     import glob
     ps = sorted((build.parse(f) for f in glob.glob("posts/*.md")), key=lambda p: p["dt"], reverse=True)
     main(ps, sys.argv[1:])

@@ -24,7 +24,10 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
-      - run: python3 tools/fetch_source.py "${{ inputs.url }}" "${{ inputs.pick }}"
+      - run: python3 tools/fetch_source.py "$SOURCE_URL" "$SOURCE_PICK"
+        env:
+          SOURCE_URL: ${{ inputs.url }}
+          SOURCE_PICK: ${{ inputs.pick }}
       - if: inputs.transcribe == 'true'
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null

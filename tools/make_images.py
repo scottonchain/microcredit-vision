@@ -9,9 +9,11 @@ No raster, no fonts that need embedding; text is kept to a few words at most.
 Add a new post's image by adding a function to MOTIFS. Keep the shared palette and frame.
 """
 import math
-import os
+import html
 import random
 import sys
+
+from common import ROOT, atomic_write
 
 W, H = 1200, 630
 PAPER = "#F7F2E8"
@@ -51,7 +53,7 @@ SANS = "font-family=\"'Helvetica Neue', Helvetica, Arial, sans-serif\""
 def text(x, y, s, size=22, fill=INK, anchor="middle", weight="normal", sans=False, opacity=1.0):
     fam = SANS if sans else FONT
     return (f'<text x="{x}" y="{y}" {fam} font-size="{size}" fill="{fill}" text-anchor="{anchor}" '
-            f'font-weight="{weight}" opacity="{opacity}">{s}</text>\n')
+            f'font-weight="{weight}" opacity="{opacity}">{html.escape(str(s))}</text>\n')
 
 
 def node(x, y, r=14, fill=PAPER, stroke=INK, sw=2.5):
@@ -566,11 +568,11 @@ MOTIFS = {
 
 
 def write(name):
+    if name not in MOTIFS:
+        raise SystemExit(f"unknown illustration {name!r}; choose one of {', '.join(MOTIFS)}")
     fn, label = MOTIFS[name]
-    svg = HEAD.replace("{label}", label) + fn() + FOOT
-    os.makedirs("images", exist_ok=True)
-    with open(os.path.join("images", name + ".svg"), "w") as f:
-        f.write(svg)
+    svg = HEAD.replace("{label}", html.escape(label, quote=True)) + fn() + FOOT
+    atomic_write(ROOT / "images" / f"{name}.svg", svg)
     print("wrote images/%s.svg (%d bytes)" % (name, len(svg)))
 
 

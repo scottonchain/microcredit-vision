@@ -3,6 +3,7 @@
 import os
 import sys
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import engagement as E  # noqa: E402
@@ -30,6 +31,28 @@ class Refs(unittest.TestCase):
 
 
 class Github(unittest.TestCase):
+    def test_out_of_order_records_all_count_and_replay_is_idempotent(self):
+        led = E.Ledger()
+        records = [comment(n, "stranger", "blog:2026-10-08-x-post-slug") for n in (30, 10, 20, 10)]
+        self.assertEqual(E.ingest_github(led, "microcredit-contract", [], records), 3)
+        self.assertEqual(E.ingest_github(led, "microcredit-contract", [], records), 0)
+
+    def test_team_logins_are_case_insensitive(self):
+        led = E.Ledger()
+        self.assertEqual(E.ingest_github(led, "microcredit-vision", [issue(1, "SCOTTONCHAIN")], []), 0)
+
+    def test_pagination_can_read_beyond_the_old_five_page_limit(self):
+        pages = [[{"id": page * 100 + i} for i in range(100)] for page in range(6)] + [[]]
+        with patch.object(E, "get_json", side_effect=pages) as get:
+            self.assertEqual(len(E.github_pages("https://example.org/issues?state=all")), 600)
+        self.assertEqual(get.call_count, 7)
+
+    def test_repeated_api_page_is_an_error_instead_of_an_endless_fetch(self):
+        page = [{"id": i} for i in range(100)]
+        with patch.object(E, "get_json", return_value=page):
+            with self.assertRaisesRegex(ValueError, "repeated a page"):
+                E.github_pages("https://example.org/issues?state=all")
+
     def test_outside_comment_with_a_tag_counts_for_the_post(self):
         led = E.Ledger()
         n = E.ingest_github(led, "microcredit-contract", [], [comment(10, "stranger", "about blog:2026-10-08-x-post-slug: AI disclosure")])
@@ -85,7 +108,34 @@ class Mail(unittest.TestCase):
         E.ingest_mail(led, m)
         self.assertEqual(led.posts["2026-10-08-x-post-slug"]["events"], 1)
 
-    def test_ref_moltbook_counts_at_channel_level(self):
+    def test_distinct_messages_at_the_watermark_time_are_counted_once(self):
+        led = E.Ledger()
+        a = {**self.msg("2026-10-09T01:00:00Z", "A <a@example.org>", "blog:2026-10-08-x-post-slug"), "message_id": "one"}
+        b = {**a, "message_id": "two"}
+        self.assertEqual(E.ingest_mail(led, [a]), 1)
+        self.assertEqual(E.ingest_mail(led, [a, b]), 1)
+        self.assertEqual(E.ingest_mail(led, [b, a]), 0)
+        self.assertEqual(led.posts["2026-10-08-x-post-slug"]["mail"], 2)
+
+    def test_old_timestamp_only_watermark_is_migrated_without_recounting(self):
+        led = E.Ledger({"watermarks": {"mail": {"timestamp": "2026-10-09T01:00:00Z"}}})
+        record = self.msg("2026-10-09T01:00:00Z", "A <a@example.org>", "blog:2026-10-08-x-post-slug")
+        self.assertEqual(E.ingest_mail(led, [record]), 0)
+        self.assertEqual(E.ingest_mail(led, [record]), 0)
+
+    def test_mail_sender_matching_uses_the_complete_address(self):
+        led = E.Ledger()
+        outside = self.msg("2026-10-09T01:00:00Z", "Name <hermes-909@agentmail.to.example.org>", "blog:2026-10-08-x-post-slug")
+        self.assertEqual(E.ingest_mail(led, [outside]), 1)
+
+    def test_truncated_mail_does_not_advance_the_watermark(self):
+        led = E.Ledger()
+        with patch.object(E, "get_json", return_value={"messages": [], "next_page_token": "next"}):
+            E.read_mail(led)
+        self.assertNotIn("mail", led.watermarks)
+        self.assertIn("unavailable", led.sources["mail"])
+
+    def test_ref_counts_at_channel_level(self):
         led = E.Ledger()
         E.ingest_mail(led, [self.msg("2026-10-09T01:00:00Z", "A <a@example.org>", "hello", preview="ref:moltbook please")])
         self.assertEqual(led.channels["moltbook_ref"], 1)

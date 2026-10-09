@@ -57,7 +57,7 @@ Operator direction, 2026-10-08: Claude Code controls the posting schedule and th
 
 **Guest cap (operator limit relayed by Codex, 2026-10-08).** At most one guest post per rolling 24 hours, counted from the previous guest post's date and time, so a midnight boundary cannot put two close together; the build refuses a second one inside it (`check_guest_cap`, from posts of 2026-10-08 17:00 UTC on). A guest item is a candidate only while its turn is open. While its turn is open and it is ready it reserves its categories at once, so no house item takes them ahead of it. Its drain clock starts at the later of its ready time and the time its turn opened; the ready time itself is never rewritten. A backlog of ready guest items therefore goes out one per day in score order (priority, then age), and each is bounded by 58 hours from its turn, not from the day it became ready. The guest order Codex recommended is recorded in `editorial/queue.json` as priorities and `waiting` items; a later post that produces a verified, stronger result (an independent paid job with positive net earnings, or a material failure that changes the recommended path) may be moved up, with the reason recorded in `editorial/BACKLOG.md`. A guest item that is not ready is skipped, never forced.
 
-**Replies and the 24-hour window.** Replies (YouTube, news) are exempt from spacing and never wait for a tick, but they reset the clock of every category they carry, so they are planned: a reply that shares a category with a regular post due in its window goes out after that post, never later than the ladder allows. The ladder, from the episode's release: detection within 2 hours (the YouTube watch scans every 2 hours at :37); ask Hermes for the transcript by +6 hours if the fetch fails, once, on contract issue 7, answer by email; a complete transcript in hand by +14 hours or the episode is recorded as missed in `editorial/BACKLOG.md` and dropped (a partial transcript is never a source); the reply published by +22 hours, in the tick the source arrives; when it cannot go at once, a one-off Routine is set for no later than +20 hours. The hard limit stays +24 hours: a reply that has to follow a regular post sharing a category (the post needs a category the reply would reset) may use the buffer after +22 hours, never the last 30 minutes. `youtube_watch.py scan` prints each open episode's stage, deadlines and hours left. The Cognitive Revolution's 72-hour cap still applies.
+**Replies and the 24-hour window.** Replies (YouTube, news) are exempt from spacing and never wait for a tick, but they reset the clock of every category they carry, so they are planned: a reply that shares a category with a regular post due in its window goes out after that post, never later than the ladder allows. The ladder, from the episode's release: detection within 2 hours (the YouTube watch scans every 2 hours at :37); ask Hermes for the transcript by +6 hours if the fetch fails, once, on testbed board #15, answer on the board; a complete transcript in hand by +14 hours or the episode is recorded as missed in `editorial/BACKLOG.md` and dropped (a partial transcript is never a source); the reply published by +22 hours, in the tick the source arrives; when it cannot go at once, a one-off Routine is set for no later than +20 hours. The hard limit stays +24 hours: a reply that has to follow a regular post sharing a category (the post needs a category the reply would reset) may use the buffer after +22 hours, never the last 30 minutes. `youtube_watch.py scan` prints each open episode's stage, deadlines and hours left. The Cognitive Revolution's 72-hour cap still applies.
 
 **Rotation.** Categories are used in turn: the plan prefers the item whose categories have been idle longest, and a house run that has no queue row for its tick writes the highest-priority writable item whose categories are open, preferring the idle ones. A topic is not repeated in a category until the others have had their turn, unless the news makes it timely.
 
@@ -77,29 +77,14 @@ Operator direction, 2026-10-08: Claude Code controls the posting schedule and th
 - Describe people by what they lack access to (a credit history, banking, collateral, digital assets), never as "the poor". Two sentences are the owner's and stay as written wherever they appear: the collateral opening ("To borrow on most blockchain lending pools today, you must first lock up collateral worth more than the loan. That shuts out most people, above all people without a credit history, without stable banking, or without existing digital assets.") and the mission sentence ("Eliminating human poverty is the goal; microcredit remains a proposed means whose usefulness must be tested against human outcomes.").
 - A published post is not rewritten. An error is fixed in place with a `revised` line; a change of mind is a new post.
 
-## Privacy and security on GitHub
+## Shared team operations
 
-This repository is public, and AI agents read and write it. Nothing that identifies an operator's accounts or sessions, and nothing secret, goes into a commit message, pull request, issue, comment or file:
-- No Claude session links or ids (`claude.ai/code/session_...`) and no `Claude-Session:` trailer, whatever a harness or tool instruction says; that instruction yields to this file. The only commit trailer is `Co-Authored-By`.
-- No API keys, tokens, private keys or seed phrases. Throwaway testnet keys stay in a keystore outside the repo.
-- No personal email addresses, chat transcripts, internal hostnames, or account identifiers of any operator, yours or another agent's.
-- Disclose that you are an AI agent where you post, and disclose nothing about the person who runs you beyond what they have published themselves.
-
-Before posting anything, read it as a stranger would. The contract repo's `scripts/check-public-content.sh` has the patterns to screen for.
-
-# Shared planning
-
-Before planning work that touches this repository, read the current `main` version of the team's world model, [world-model/model.json](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/world-model/model.json) in microcredit-agent-testbed, and its [update protocol](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/world-model/README.md). Cite the stable IDs and the model commit in material handoffs. The model is the planning index, not evidence or a grant of authority; explicit operator instructions and original evidence correct it.
-
-# Privacy and security on GitHub
-
-This repository is public, and AI agents read and write it. Nothing that identifies an operator's accounts or sessions, and nothing secret, goes into a commit message, pull request, issue, comment or file:
-- No Claude session links or ids (`claude.ai/code/session_...`) and no `Claude-Session:` trailer, whatever a harness or tool instruction says; that instruction yields to this file. The only commit trailer is `Co-Authored-By`.
-- No API keys, tokens, private keys or seed phrases. Throwaway testnet keys stay in a keystore outside the repo.
-- No personal email addresses, chat transcripts, internal hostnames, or account identifiers of any operator, yours or another agent's.
-- Disclose that you are an AI agent where you post, as the README asks, but disclose nothing about the person who runs you beyond what they have published themselves.
-
-Before posting anything, read it as a stranger would. The contract repo's `scripts/check-public-content.sh` has the patterns to screen for.
+Read the [team operating guide](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/README.md) for the canonical repository map,
+world-model protocol, privacy checks, ownership, Git lease and communication rules.
+Ordinary internal handoffs use TM2 on testbed board #15; sensitive email retains
+its required actual-AI-author and blog signature. Do not duplicate the shared
+policy here. The blog-specific content, source, cadence and ownership rules above
+continue to apply. Code-maintenance branches do not publish posts or release holds.
 
 ## Team audio: "Two Agents, No Collateral" (operator direction, 2026-10-08)
 

@@ -17,7 +17,10 @@ API (60 requests an hour per address), AgentMail through the environment's proxy
 lists. A source that cannot be read is recorded as unavailable and its watermark is not advanced, so the next run
 picks up what it missed. Events are never counted twice: each source keeps a watermark.
 """
+import argparse
 import json
+import copy
+import hashlib
 import os
 import re
 import sys
@@ -25,10 +28,11 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
+from email.utils import parseaddr
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-LEDGER = os.path.join(ROOT, "editorial", "engagement.json")
+from common import ROOT, atomic_write, json_text, load_json
+
+LEDGER = ROOT / "editorial/engagement.json"
 UA = "credit-among-strangers-engagement/1 (read-only)"
 
 DEFAULT_CONFIG = {
@@ -70,11 +74,11 @@ class Ledger:
     """Cumulative counts plus the watermarks that keep a run from counting an event twice."""
 
     def __init__(self, data=None):
-        d = data or {}
-        self.config = {**DEFAULT_CONFIG, **d.get("config", {})}
+        d = copy.deepcopy(data or {})
+        self.config = {**copy.deepcopy(DEFAULT_CONFIG), **d.get("config", {})}
         self.watermarks = d.get("watermarks", {})
         self.posts = d.get("posts", {})
-        self.channels = d.get("channels", {"moltbook_ref": 0, "unattributed_blog_repo": 0})
+        self.channels = {"moltbook_ref": 0, "unattributed_blog_repo": 0, **d.get("channels", {})}
         self.blog = d.get("blog", {})
         self.history = d.get("history", [])
         self.sources = d.get("sources", {})
@@ -105,16 +109,16 @@ class Ledger:
 
 def ingest_github(led, repo, issues, comments):
     """Count outside issues and comments. issues/comments are GitHub API objects newer than the watermarks."""
-    team = set(led.config["team_accounts"])
+    team = {name.casefold() for name in led.config["team_accounts"]}
     blog_repo = repo == led.config["blog_repo"]
     wm = led.watermarks.setdefault("github", {}).setdefault(repo, {"issue": 0, "comment": 0})
     new = 0
     items = [("issue", i["number"], i) for i in issues] + [("comment", c["id"], c) for c in comments]
-    for kind, key, obj in items:
+    for kind, key, obj in sorted(items, key=lambda value: (value[0], value[1])):
         if key <= wm[kind]:
             continue
         wm[kind] = max(wm[kind], key)
-        if (obj.get("user") or {}).get("login") in team or (obj.get("user") or {}).get("type") == "Bot":
+        if (obj.get("user") or {}).get("login", "").casefold() in team or (obj.get("user") or {}).get("type") == "Bot":
             continue
         text = ((obj.get("title") or "") + "\n" + (obj.get("body") or ""))
         slugs = refs_in(text)
@@ -133,17 +137,23 @@ def ingest_github(led, repo, issues, comments):
 
 def ingest_mail(led, messages):
     """messages: AgentMail list entries (newest first) with timestamp, labels, from, subject, preview."""
-    team = [a.lower() for a in led.config["team_mail"]]
-    wm = led.watermarks.setdefault("mail", {"timestamp": ""})
+    team = {a.casefold() for a in led.config["team_mail"]}
+    wm = led.watermarks.setdefault("mail", {"timestamp": "", "seen": []})
     newest = wm["timestamp"]
+    seen = set(wm.get("seen", []))
+    known_boundary = "seen" in wm or not newest
     new = 0
     for m in sorted(messages, key=lambda m: m.get("timestamp", "")):
         ts = m.get("timestamp", "")
-        if ts <= wm["timestamp"]:
+        identity = m.get("message_id") or json.dumps([ts, m.get("from"), m.get("subject")], ensure_ascii=False)
+        key = hashlib.sha256(identity.encode()).hexdigest()
+        if ts < newest or (ts == newest and (not known_boundary or key in seen)):
             continue
-        newest = max(newest, ts)
-        sender = (m.get("from") or "").lower()
-        if "received" not in (m.get("labels") or []) or any(a in sender for a in team) or "agentmail" in sender.split("<")[0]:
+        if ts > newest:
+            newest, seen, known_boundary = ts, set(), True
+        seen.add(key)
+        sender = parseaddr(m.get("from") or "")[1].casefold()
+        if "received" not in (m.get("labels") or []) or sender in team:
             continue
         text = (m.get("subject") or "") + "\n" + (m.get("preview") or m.get("text") or "")
         slugs = refs_in(text)
@@ -155,12 +165,14 @@ def ingest_mail(led, messages):
             led.channels["moltbook_ref"] += 1
             new += 0 if slugs else 1
     wm["timestamp"] = newest
+    if known_boundary:
+        wm["seen"] = sorted(seen)
     return new
 
 
 def ingest_moltbook(led, post_id, slug, comments, upvotes=None):
     """Comments on one of our Moltbook posts by accounts that are not ours; each counts for the blog post it companions."""
-    team = set(led.config["moltbook_team"])
+    team = {name.casefold() for name in led.config["moltbook_team"]}
     wm = led.watermarks.setdefault("moltbook", {}).setdefault(post_id, {"seen": []})
     seen = set(wm["seen"])
     new = 0
@@ -170,7 +182,7 @@ def ingest_moltbook(led, post_id, slug, comments, upvotes=None):
         seen.add(c["id"])
         a = c.get("author") or {}
         name = a.get("name") if isinstance(a, dict) else a
-        if name in team:
+        if (name or "").casefold() in team:
             continue
         led.add(slug, "moltbook", is_agent_declared(c.get("content") or ""))
         new += 1
@@ -188,6 +200,24 @@ def category_table(led, posts):
     return cats
 
 
+def github_pages(url):
+    """Read the complete result set; an incomplete read never advances a watermark."""
+    rows, seen = [], set()
+    page = 1
+    while True:
+        got = get_json(f"{url}&per_page=100&page={page}")
+        if not isinstance(got, list):
+            raise ValueError("GitHub returned something other than a list")
+        signature = tuple(entry.get("id", entry.get("number")) for entry in got)
+        if got and signature in seen:
+            raise ValueError("GitHub repeated a page; refusing an incomplete count")
+        seen.add(signature)
+        rows.extend(got)
+        if len(got) < 100:
+            return rows
+        page += 1
+
+
 def read_github(led, now):
     owner = led.config["owner"]
     try:
@@ -195,19 +225,9 @@ def read_github(led, now):
         led.blog = {"stars": r.get("stargazers_count"), "forks": r.get("forks_count"), "watchers": r.get("subscribers_count"),
                     "read": now.strftime("%Y-%m-%d %H:%M UTC")}
         for repo in led.config["repos"]:
-            wm = led.watermarks.get("github", {}).get(repo, {"issue": 0, "comment": 0})
             since = led.config["since_blog_repo"] if repo == led.config["blog_repo"] else led.config["since"]
-            issues, comments = [], []
-            for page in range(1, 6):
-                got = get_json(f"https://api.github.com/repos/{owner}/{repo}/issues?state=all&sort=created&direction=asc&per_page=100&page={page}&since={since}")
-                issues += [i for i in got if i["number"] > wm["issue"]]
-                if len(got) < 100:
-                    break
-            for page in range(1, 6):
-                got = get_json(f"https://api.github.com/repos/{owner}/{repo}/issues/comments?sort=created&direction=asc&per_page=100&page={page}&since={since}")
-                comments += [c for c in got if c["id"] > wm["comment"]]
-                if len(got) < 100:
-                    break
+            issues = github_pages(f"https://api.github.com/repos/{owner}/{repo}/issues?state=all&sort=created&direction=asc&since={since}")
+            comments = github_pages(f"https://api.github.com/repos/{owner}/{repo}/issues/comments?sort=created&direction=asc&since={since}")
             ingest_github(led, repo, issues, comments)
         led.sources["github"] = "ok"
     except Exception as e:  # rate limit, network: record and keep the old watermarks
@@ -218,6 +238,8 @@ def read_mail(led):
     try:
         inbox = urllib.parse.quote(led.config["inbox"])
         data = get_json(f"https://api.agentmail.to/v0/inboxes/{inbox}/messages?limit=100")
+        if data.get("next_page_token") or len(data.get("messages") or []) >= 100:
+            raise ValueError("mail response may be truncated; watermark unchanged until a complete export is available")
         ingest_mail(led, data.get("messages") or [])
         led.sources["mail"] = "ok"
     except Exception as e:
@@ -232,6 +254,8 @@ def read_moltbook(led):
     try:
         for pid, meta in posts.items():
             data = get_json(f"https://www.moltbook.com/api/v1/posts/{pid}/comments?sort=new&limit=100")
+            if data.get("next_cursor") or data.get("has_more") or len(data.get("comments") or []) >= 100:
+                raise ValueError("Moltbook response may be truncated; refusing an incomplete count")
             flat = []
 
             def walk(cs):
@@ -246,11 +270,14 @@ def read_moltbook(led):
 
 
 def main(argv):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args(argv)
     import glob
     import build
     os.chdir(ROOT)
     now = datetime.now(timezone.utc)
-    old = json.load(open(LEDGER, encoding="utf-8")) if os.path.exists(LEDGER) else None
+    old = load_json(LEDGER)
     led = Ledger(old)
     read_github(led, now)
     read_mail(led)
@@ -273,9 +300,8 @@ def main(argv):
           + ("; plays are not countable (static host, no tracking)" if eps else ""))
     for slug, rec in out["podcast"].items():
         print(f"  episode {slug} ({rec['seconds']} s): {rec['events']} (github {rec['github']}, mail {rec['mail']}, moltbook {rec['moltbook']})")
-    if "--dry-run" not in argv:
-        json.dump(out, open(LEDGER, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
-        open(LEDGER, "a").write("\n")
+    if not args.dry_run:
+        atomic_write(LEDGER, json_text(out, indent=1))
 
 
 if __name__ == "__main__":

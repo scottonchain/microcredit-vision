@@ -5,6 +5,7 @@ import sys
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+from pathlib import Path
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -87,7 +88,7 @@ class AudioChecks(unittest.TestCase):
         os.chdir(self.tmp.name)
         os.makedirs("audio")
         for ext in (".mp3", ".vtt", ".provenance.md"):
-            open(f"audio/ep-1{ext}", "wb").write(b"x")
+            Path(f"audio/ep-1{ext}").write_bytes(b"x")
 
     def tearDown(self):
         os.chdir(self.cwd)
