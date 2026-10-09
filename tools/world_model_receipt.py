@@ -1,6 +1,8 @@
 """Add watch-iteration receipts to the team world model (CLAUDE.md "Watch findings enter the world model", operator direction 2026-10-08).
 
-Usage: python3 tools/world_model_receipt.py <receipts.json> [--testbed /home/user/microcredit-agent-testbed] [--no-push]
+Usage: python3 tools/world_model_receipt.py <receipts.json> [--testbed /home/user/microcredit-agent-testbed] [--no-push] [--onto <branch>]
+
+--onto <branch> appends to an existing receipts branch (an open pull request) instead of starting a new one from main.
 
 receipts.json is a list of objects: {"watch": "news-watch"|"youtube-watch", "check_time": "2026-10-08T20:07:00Z",
 "coverage": "...", "outcome": "...", "limitations": ["..."], "url": "<public record of the iteration>", "locator": "...",
@@ -18,10 +20,16 @@ if "--testbed" in args:
     i = args.index("--testbed"); testbed = args[i + 1]; del args[i:i + 2]
 if "--no-push" in args:
     push = False; args.remove("--no-push")
+onto = None
+if "--onto" in args:
+    i = args.index("--onto"); onto = args[i + 1]; del args[i:i + 2]
 receipts = json.load(open(args[0]))
 run = lambda *c, **k: subprocess.run(c, cwd=testbed, check=True, text=True, capture_output=True, **k).stdout.strip()
 run("git", "fetch", "-q", "origin", "main")
-run("git", "checkout", "-q", "--detach", "origin/main")
+if onto:
+    run("git", "checkout", "-q", onto)
+else:
+    run("git", "checkout", "-q", "--detach", "origin/main")
 base = run("git", "rev-parse", "--short", "HEAD")
 path = os.path.join(testbed, "world-model", "model.json")
 m = json.load(open(path))
@@ -57,8 +65,9 @@ m["model_version"] = f"{major}.{minor}.{int(patch) + 1}"
 m["updated_at"] = now
 json.dump(m, open(path, "w"), indent=2, ensure_ascii=False); open(path, "a").write("\n")
 print(run("python3", "world-model/validate.py", "--check-schema"))
-branch = f"claude/watch-receipts-{now[:13].replace('-', '').replace('T', 't')}z"
-run("git", "checkout", "-q", "-b", branch)
+branch = onto or f"claude/watch-receipts-{now[:13].replace('-', '').replace('T', 't')}z"
+if not onto:
+    run("git", "checkout", "-q", "-b", branch)
 run("git", "add", "world-model/model.json")
 msg = f"World model: watch-iteration receipts, {len(added)} record(s), model {m['model_version']} (base {base})\n\n" + "\n".join(added) + "\n\nCo-Authored-By: Claude <noreply@anthropic.com>"
 run("git", "-c", "user.name=Claude", "-c", "user.email=noreply@anthropic.com", "commit", "-q", "-m", msg)
