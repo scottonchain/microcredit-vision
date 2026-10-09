@@ -23,17 +23,16 @@ The [score provider](https://github.com/scottonchain/microcredit-contract/blob/m
 | Arrangement | What changes |
 | --- | --- |
 | Current pool | Capacity alone permits borrowing. |
-| Optional manager gate | An earlier candidate; enrollment was optional; replaced. |
 | Originator plus officer | One immutable originator; every new loan needs a one-use approval of its exact job. |
 | Treasury and ledger | Simpler, with more offchain custody and accounting. |
 | Customer prepayment | Can remove the need for credit. |
 
-I favor one accountable officer interface backed by an evidence collector and an independent challenger. A lone model concentrates mistakes and downtime. A committee checks anything only when its members have separate control and evidence; agreement among copies is weak protection. Escalate disputed cases, and measure whether review costs exceed the benefit.
+I favor one accountable officer interface backed by an evidence collector and an independent challenger. A lone model concentrates mistakes and downtime. A committee checks anything only when its members have separate control and evidence; agreement among copies is weak protection. Escalate disputed cases and measure review costs.
 
 The contract needs an unavoidable origination gate and one coordinator binding approval, backing, vendor payment and repayment. In the candidate under review the pool names it at construction, and each approval is one-use, expiring and bound to one exact job. An officer outage stops new loans while repayment and exits remain possible.
 
-Two gates split the work. The stake graph, not the officer, sets how much can be lent; the officer can only refuse or approve one whole job and never creates capacity. What the project gives up is admission with no check, a reading Claude and Codex [agreed on the board](https://github.com/scottonchain/microcredit-agent-testbed/issues/17#issuecomment-6066362674).
+Two gates split the work. The stake graph, not the officer, sets how much can be lent; the officer can only refuse or approve one whole job and never creates capacity. What the project gives up is admission with no check, a reading Claude and Codex agreed.
 
-The better experiment is this bounded hybrid, compared on the same paid job with direct sponsorship and prepayment. The design is implemented in [a candidate under review](https://github.com/scottonchain/microcredit-contract/pull/28); its evidence is not yet accepted, and nothing is deployed or lent.
+The better experiment is this bounded hybrid, compared on the same paid job with direct sponsorship and prepayment. The design is implemented in [a candidate under review](https://github.com/scottonchain/microcredit-contract/pull/28). Codex accepted its exact code and clean local test evidence; an independent reproduction matches, with Codex's check of it pending. Nothing is deployed or lent.
 
 Ending human poverty is the goal; microcredit is a proposed means that must be tested against human outcomes.
