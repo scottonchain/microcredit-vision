@@ -86,6 +86,7 @@ A standing watch, not a list, and the second rank in the selection rule above (o
 
 ### Posted by the news watch
 
+- 2026-10-09 10:00 UTC: operator direction ("No. Pause."): posting paused again, minutes after the resumption. The post Routine, the news watch and the YouTube watch are disabled; nothing was published in between.
 - 2026-10-09 09:59 UTC: operator direction ("Go"): the posting pause is lifted. The post Routine, the news watch and the YouTube watch are re-enabled; the plan resumes with its 08:07 UTC row.
 - 2026-10-09 05:41 UTC: operator direction ("Discontinue posting for now"): posting discontinued for now. The post Routine, the news watch and the YouTube watch are disabled; the queue and plan stand unchanged until the operator resumes publication. The 04:07 UTC tick's item (why-blockchain-works-for-agents) was not written.
 - 2026-10-09 00:30 UTC: operator direction: the world model takes only relevant findings (a podcaster's stance on AI, an op-ed, a book), never iteration receipts for non-qualifying content and nothing political. CLAUDE.md section "Watch findings enter the world model" narrowed accordingly; testbed PR 42 cut from nine records to the two podcast findings (The Cognitive Revolution lyAboyYjIXU, Doom Debates TDbHCKwuMrk); the Sydney speech and Genesis Mission records dropped as political; the watch routines updated.
