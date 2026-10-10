@@ -24,6 +24,7 @@ A cleanup merge, category opening or old one-off exception does not lift the pau
 | Topic research, decisions, dated publication and exception history | `editorial/BACKLOG.md` |
 | Publication timing and category eligibility | `tools/schedule.py`; inspect with `python3 tools/build.py --plan` and `--slots` |
 | Channel scope and per-channel reply caps | `editorial/youtube-channels.json` |
+| Newsletters watched beside the channels | `editorial/web-feeds.json` |
 | Previously answered episodes | `editorial/youtube-answered.json` |
 | Traced engagement counts | `editorial/engagement.json` |
 | Evidence for published figures and quotations | `VERIFY.md`, updated with the post |
@@ -160,6 +161,13 @@ This permission allows publication when active; it never requires an empty news
 slot to be filled. Quote only the primary text actually read. Search can locate
 public text when X or a publisher cannot be read, but it cannot supply missing
 source contents. A clip, teaser, description or partial transcript is insufficient.
+
+Robert Wright's Nonzero newsletter is watched beside his YouTube channel through its
+RSS feed: `python3 tools/youtube_watch.py feeds` lists articles from
+`editorial/web-feeds.json` with the same 24-hour window and ladder. A reply needs
+the complete article text, not a teaser or search snippet; an article counts as
+answered when a post links its URL. The political exclusion applies unchanged:
+answer only a non-political strand, or skip it.
 
 YouTube has one watch, every two hours at :37, using `tools/youtube_watch.py` and
 the channel scope/caps in `editorial/youtube-channels.json`. Only AI, blockchain or

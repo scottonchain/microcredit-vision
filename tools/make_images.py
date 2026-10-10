@@ -430,6 +430,23 @@ def growth_for_whom():
     return s
 
 
+def adaptation_gap():
+    """A fast curve of change and a slow curve of adaptation; the gap between them, where people get hurt, and a thin bridge."""
+    s = ""
+    s += f'<line x1="150" y1="500" x2="1050" y2="500" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 170 470 C 420 465, 560 300, 1030 150 L 1030 400 C 760 430, 420 455, 170 470 Z" fill="{AMBER_SOFT}" opacity="0.7"/>\n'
+    s += f'<path d="M 170 470 C 420 465, 560 300, 1030 150" stroke="{AMBER}" stroke-width="8" fill="none" stroke-linecap="round"/>\n'
+    s += f'<path d="M 170 470 C 420 455, 760 430, 1030 400" stroke="{TEAL}" stroke-width="6" fill="none" stroke-dasharray="16 10" stroke-linecap="round"/>\n'
+    for x, y0, y1 in ((620, 302, 445), (760, 248, 432), (900, 196, 414)):
+        s += link(x, y0, x, y1, INK, 2, "3 7", 0.55)
+    for x in (300, 380, 460):
+        s += node(x, 540, 13, PAPER, INK, 3)
+    s += text(1040, 140, "change", 22, AMBER, anchor="end", sans=True)
+    s += text(1040, 440, "adaptation", 22, TEAL, anchor="end", sans=True)
+    s += text(600, 590, "the gap is where people get hurt", 26, MUTED, sans=True)
+    return s
+
+
 def agent_inbox():
     """Three envelopes, one per agent, and a small robot-shaped figure writing a letter: an inbox for every agent."""
     s = ""
@@ -544,6 +561,7 @@ MOTIFS = {
     "the-end-is-people-not-the-pool": (people_first, "Nested rings: people at the centre, the pool at the edge"),
     "work-we-can-do-together": (work_we_can_do_together, "Complementary skills around a shared reserve, with room for a new member"),
     "if-your-agent-can-send-email": (agent_inbox, "Three envelopes, one per agent, above one shared address line"),
+    "adaptation-takes-time": (adaptation_gap, "A fast curve of change above a slow curve of adaptation, the gap between them shaded"),
     "growth-measured-for-whom": (growth_for_whom, "A rising curve above a collateral line, most people standing below it"),
     "cold-start-three-communities": (cold_start, "Three supports for a first loan: cash, judgement and income"),
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),

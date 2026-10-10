@@ -8,9 +8,11 @@ linking back to it.
                                                         # and the complete English transcript as plain text (JSON)
     python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail at YouTube's hqdefault size (480x360) with a play arrow
     python3 tools/youtube_watch.py answered <video id> <post slug>   # records the reply so the episode is never answered twice
+    python3 tools/youtube_watch.py feeds                # new articles on the watched newsletters (RSS), newest first (JSON)
 
 Channels are in editorial/youtube-channels.json (a channel_id, or a playlist_id for a show inside a bigger channel);
-replies in editorial/youtube-answered.json. Needs network access to youtube.com and its subdomains (i.ytimg.com or
+replies in editorial/youtube-answered.json. Newsletters watched beside the channels are in editorial/web-feeds.json; an
+article counts as answered when a post links its URL. Needs network access to youtube.com and its subdomains (i.ytimg.com or
 img.youtube.com for thumbnails) and Pillow for the thumbnail.
 """
 import json
@@ -28,6 +30,7 @@ from common import FMT, ROOT, atomic_write, json_text, load_json, parse_utc
 
 CHANNELS = os.path.join(ROOT, "editorial", "youtube-channels.json")
 ANSWERED = os.path.join(ROOT, "editorial", "youtube-answered.json")
+FEEDS = os.path.join(ROOT, "editorial", "web-feeds.json")
 WINDOW = timedelta(hours=24)
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
@@ -151,6 +154,41 @@ def scan():
                 "channel_limit_hours": limit,
                 "channel_open_at": open_at.strftime("%Y-%m-%d %H:%M UTC") if open_at else None,
                 "description": description,
+            })
+    out.sort(key=lambda e: e.get("published", ""), reverse=True)
+    return out
+
+
+def _rss_entries(feed):
+    """The newsletter's newest articles from its RSS feed: (link, title, published, description)."""
+    from email.utils import parsedate_to_datetime
+    root = ET.fromstring(fetch(feed["rss"]))
+    return [(i.findtext("link", "").strip(), i.findtext("title", "").strip(),
+             parsedate_to_datetime(i.findtext("pubDate", "")).astimezone(timezone.utc),
+             re.sub(r"<[^>]+>", "", i.findtext("description", "") or "")[:400])
+            for i in root.iter("item")]
+
+
+def feed_scan():
+    """Articles on the watched newsletters, with the same 24-hour window and deadline ladder as a video reply."""
+    now = datetime.now(timezone.utc)
+    posts = "\n".join(p.read_text(encoding="utf-8") for p in Path(ROOT, "posts").glob("*.md"))
+    out = []
+    for feed in load(FEEDS, []):
+        try:
+            entries = _rss_entries(feed)
+        except Exception as e:  # a feed that fails is reported, not fatal
+            out.append({"feed": feed["name"], "error": str(e)})
+            continue
+        for link, title, published, description in entries:
+            age = now - published
+            in_window = timedelta(0) <= age < WINDOW
+            answered = bool(link) and link.split("?")[0] in posts
+            out.append({
+                "feed": feed["name"], "who": feed.get("who", ""), "title": title, "url": link,
+                "published": published.strftime(FMT), "age_hours": round(age.total_seconds() / 3600, 1),
+                "in_window": in_window, "ladder": ladder(published, now) if in_window and not answered else None,
+                "answered": answered, "description": description,
             })
     out.sort(key=lambda e: e.get("published", ""), reverse=True)
     return out
@@ -387,6 +425,8 @@ def main():
         print(json.dumps(details(sys.argv[2]), indent=1, ensure_ascii=False))
     elif cmd == "thumbnail":  # thumbnail <id> [--from local.jpg]
         print(thumbnail(sys.argv[2], sys.argv[4] if len(sys.argv) > 4 and sys.argv[3] == "--from" else None))
+    elif cmd == "feeds":
+        print(json.dumps(feed_scan(), indent=1, ensure_ascii=False))
     elif cmd == "answered":
         mark_answered(sys.argv[2], sys.argv[3])
         print("recorded")

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A fast curve of change above a slow curve of adaptation, the gap between them shaded">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
+<line x1="150" y1="500" x2="1050" y2="500" stroke="#1B2733" stroke-width="3"/>
+<path d="M 170 470 C 420 465, 560 300, 1030 150 L 1030 400 C 760 430, 420 455, 170 470 Z" fill="#F2D9A6" opacity="0.7"/>
+<path d="M 170 470 C 420 465, 560 300, 1030 150" stroke="#D9962B" stroke-width="8" fill="none" stroke-linecap="round"/>
+<path d="M 170 470 C 420 455, 760 430, 1030 400" stroke="#2A8C82" stroke-width="6" fill="none" stroke-dasharray="16 10" stroke-linecap="round"/>
+<line x1="620" y1="302" x2="620" y2="445" stroke="#1B2733" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 7" opacity="0.55"/>
+<line x1="760" y1="248" x2="760" y2="432" stroke="#1B2733" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 7" opacity="0.55"/>
+<line x1="900" y1="196" x2="900" y2="414" stroke="#1B2733" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 7" opacity="0.55"/>
+<circle cx="300" cy="540" r="13" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<circle cx="380" cy="540" r="13" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<circle cx="460" cy="540" r="13" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<text x="1040" y="140" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#D9962B" text-anchor="end" font-weight="normal" opacity="1.0">change</text>
+<text x="1040" y="440" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#2A8C82" text-anchor="end" font-weight="normal" opacity="1.0">adaptation</text>
+<text x="600" y="590" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">the gap is where people get hurt</text>
+<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>

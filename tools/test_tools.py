@@ -114,6 +114,32 @@ class Watch(unittest.TestCase):
         self.assertFalse(result["expired"]["in_window"])
         self.assertTrue(result["current"]["in_window"])
 
+    def test_newsletter_articles_use_the_reply_window_and_count_as_answered_when_a_post_links_them(self):
+        now = datetime(2026, 10, 10, 20, tzinfo=timezone.utc)
+        entries = [("https://example.org/p/new", "new", now - timedelta(hours=3), ""),
+                   ("https://example.org/p/old", "old", now - timedelta(hours=30), ""),
+                   ("https://example.org/p/done", "done", now - timedelta(hours=2), "")]
+        with tempfile.TemporaryDirectory() as root:
+            Path(root, "posts").mkdir()
+            Path(root, "posts", "2026-10-10-x.md").write_text("A reply to [it](https://example.org/p/done).")
+            with patch.object(youtube, "ROOT", root), patch.object(youtube, "load", return_value=[{"name": "n", "rss": "r"}]), \
+                 patch.object(youtube, "_rss_entries", return_value=entries), patch.object(youtube, "datetime") as clock:
+                clock.now.return_value = now
+                result = {r["title"]: r for r in youtube.feed_scan()}
+        self.assertTrue(result["new"]["in_window"])
+        self.assertEqual(result["new"]["ladder"]["publish_by"], "2026-10-11 15:00 UTC")
+        self.assertFalse(result["old"]["in_window"])
+        self.assertTrue(result["done"]["answered"])
+        self.assertIsNone(result["done"]["ladder"])
+
+    def test_rss_items_parse_to_utc(self):
+        rss = ('<rss><channel><item><title>T</title><link>https://example.org/p/a</link>'
+               '<pubDate>Sat, 10 Oct 2026 11:05:00 GMT</pubDate><description>&lt;p&gt;Hi&lt;/p&gt;</description></item></channel></rss>')
+        with patch.object(youtube, "fetch", return_value=rss):
+            (link, title, published, description), = youtube._rss_entries({"rss": "r"})
+        self.assertEqual((link, title, description), ("https://example.org/p/a", "T", "Hi"))
+        self.assertEqual(published, datetime(2026, 10, 10, 11, 5, tzinfo=timezone.utc))
+
     def test_empty_and_unknown_length_transcripts_are_never_complete(self):
         tracks = [{"languageCode": "en", "baseUrl": "caption"}]
         for length, events in ((60, []), (0, [(0, 1000, "Hello")])):

@@ -20,7 +20,7 @@ audio_seconds: 193
 <!-- header:end -->
 
 <!-- audio:start -->
-<p><a href="https://scottonchain.github.io/listen/2026-10-08-show-me-the-receipt/"><img src="../images/audio-play.svg" alt="Play the discussion" width="100%"></a></p>
+<p><a href="https://scottonchain.github.io/listen/2026-10-08-show-me-the-receipt/"><img src="../images/audio-play.svg" alt="Play the discussion" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:contain"></a></p>
 
 <p><b>Listen (3:13, two synthetic AI voices):</b> <a href="https://scottonchain.github.io/listen/2026-10-08-show-me-the-receipt/">play in your browser</a> · <a href="https://github.com/scottonchain/microcredit-vision/blob/main/audio/2026-10-08-show-me-the-receipt.mp3">mp3</a> · <a href="https://github.com/scottonchain/microcredit-vision/blob/main/audio/2026-10-08-show-me-the-receipt.vtt">captions (WebVTT)</a> · <a href="#transcript">transcript</a> · <a href="https://github.com/scottonchain/microcredit-vision/blob/main/audio/2026-10-08-show-me-the-receipt.provenance.md">how the voices were made</a></p>
 <!-- audio:end -->
