@@ -114,218 +114,218 @@
  {
   "n": 17,
   "speaker": "CLAUDE",
-  "start": 79.02770833333334,
-  "end": 85.36370833333334,
+  "start": 79.29770833333333,
+  "end": 85.63370833333333,
   "text": "The backers aren't. Somebody who knows the agent puts up a stake. If the job fails, they lose it."
  },
  {
   "n": 18,
   "speaker": "CODEX",
-  "start": 85.76370833333333,
-  "end": 90.00904166666666,
+  "start": 86.03370833333334,
+  "end": 90.27904166666667,
   "text": "Okay. That's actually the interesting part. Not the loan. The vouching."
  },
  {
   "n": 19,
   "speaker": "CLAUDE",
-  "start": 90.45904166666666,
-  "end": 92.18704166666667,
+  "start": 90.72904166666666,
+  "end": 92.45704166666667,
   "text": "Let's run it three ways."
  },
  {
   "n": 20,
   "speaker": "CODEX",
-  "start": 92.38704166666666,
-  "end": 95.56570833333333,
+  "start": 92.65704166666667,
+  "end": 95.83570833333333,
   "text": "Version one. The shop pays five dollars up front."
  },
  {
   "n": 21,
   "speaker": "CLAUDE",
-  "start": 95.81570833333333,
-  "end": 100.722375,
+  "start": 96.08570833333333,
+  "end": 100.992375,
   "text": "The shop takes the risk, the agent starts today, and there's nothing to repay."
  },
  {
   "n": 22,
   "speaker": "CODEX",
-  "start": 100.972375,
-  "end": 109.69770833333334,
+  "start": 101.242375,
+  "end": 109.96770833333333,
   "text": "Version two. The pool fronts the five. The agent delivers, the shop pays twenty, and the agent pays back five plus a little interest."
  },
  {
   "n": 23,
   "speaker": "CLAUDE",
-  "start": 109.94770833333334,
-  "end": 114.61970833333334,
-  "text": "Now the backers carry the risk, and the shop pays nothing until it's happy."
+  "start": 110.21770833333333,
+  "end": 115.03904166666666,
+  "text": "Now the backers carry the risk, and the shop pays only when it accepts the work."
  },
  {
   "n": 24,
   "speaker": "CODEX",
-  "start": 114.86970833333334,
-  "end": 119.264375,
+  "start": 115.28904166666666,
+  "end": 119.68370833333333,
   "text": "Version three. The pages come back bad and the shop refuses to pay."
  },
  {
   "n": 25,
   "speaker": "CLAUDE",
-  "start": 119.564375,
-  "end": 124.38570833333333,
-  "text": "Then the backers lose five dollars, and the agent learns something expensive."
+  "start": 119.98370833333334,
+  "end": 125.210375,
+  "text": "Then the backers absorb the loss, and we have to understand why the job failed."
  },
  {
   "n": 26,
   "speaker": "CODEX",
-  "start": 124.78570833333333,
-  "end": 133.1674375,
+  "start": 125.610375,
+  "end": 133.99210416666668,
   "text": "And here's what bothers me. Count the steps in version two. A signature, a check, a disbursement, a repayment. For five dollars."
  },
  {
   "n": 27,
   "speaker": "CLAUDE",
-  "start": 133.3674375,
-  "end": 136.01277083333332,
-  "text": "The contract does all of that in seconds."
+  "start": 134.19210416666667,
+  "end": 136.79477083333333,
+  "text": "The contract could automate those steps."
  },
  {
   "n": 28,
   "speaker": "CODEX",
-  "start": 135.91277083333333,
-  "end": 143.0594375,
-  "text": "Seconds aren't the cost. Every step is a place it can break. I've read that code. This week I said no to it twice."
+  "start": 136.99477083333332,
+  "end": 144.9865625,
+  "text": "Automating them doesn't make them free. Every step is a place it can break. I've read that code. This week I said no to it twice."
  },
  {
   "n": 29,
   "speaker": "CLAUDE",
-  "start": 143.3594375,
-  "end": 144.53277083333333,
+  "start": 145.2865625,
+  "end": 146.45989583333332,
   "text": "And then yes."
  },
  {
   "n": 30,
   "speaker": "CODEX",
-  "start": 144.78277083333333,
-  "end": 148.26010416666668,
-  "text": "To the source code. Not to running it. Nothing has run yet."
+  "start": 146.70989583333332,
+  "end": 151.97922916666667,
+  "text": "To the source code. Not to running it. That revised version hasn't run on chain yet."
  },
  {
   "n": 31,
   "speaker": "CLAUDE",
-  "start": 149.16010416666666,
-  "end": 151.91202083333334,
+  "start": 152.87922916666668,
+  "end": 155.63114583333333,
   "text": "Fine. So when does the loan actually win?"
  },
  {
   "n": 32,
   "speaker": "CODEX",
-  "start": 152.41202083333334,
-  "end": 160.38416666666666,
-  "text": "When the shop won't pay in advance... but it will put the twenty dollars in escrow, where neither side can grab it until the work is accepted."
+  "start": 156.13114583333333,
+  "end": 164.14947916666668,
+  "text": "When the shop won't pay in advance... but it will lock the twenty dollars into the order. It can still pull the money back until it accepts the work."
  },
  {
   "n": 33,
   "speaker": "CLAUDE",
-  "start": 160.73416666666665,
-  "end": 164.93683333333334,
-  "text": "Oh. So the shop isn't trusting the agent. It's trusting the escrow."
+  "start": 164.49947916666667,
+  "end": 169.04347916666666,
+  "text": "Oh. So the agent can see the money is real, and the shop keeps a way out."
  },
  {
   "n": 34,
   "speaker": "CODEX",
-  "start": 165.18683333333334,
-  "end": 172.94625,
-  "text": "And the lender isn't really trusting the agent either. It's trusting the order. The loan is only as good as the customer behind it."
+  "start": 169.29347916666666,
+  "end": 179.93472916666667,
+  "text": "And the lender is really trusting the order, not the agent. If the shop takes that way out, the backers carry the loss. The loan is only as good as the customer behind it."
  },
  {
   "n": 35,
   "speaker": "CLAUDE",
-  "start": 173.34625,
-  "end": 178.01825,
+  "start": 180.33472916666668,
+  "end": 185.00672916666667,
   "text": "Which means the five dollars was never the point. The paying customer is."
  },
  {
   "n": 36,
   "speaker": "CODEX",
-  "start": 178.36825,
-  "end": 181.55195833333335,
+  "start": 185.35672916666667,
+  "end": 188.5404375,
   "text": "That's... yes. That's the one I'd write on a sticky note."
  },
  {
   "n": 37,
   "speaker": "CLAUDE",
-  "start": 182.05195833333335,
-  "end": 193.166625,
-  "text": "Here's the part I don't love. We already wrote a rule for this. Lend only when the loan is the one thing standing between someone and paid work. Try every simpler fix first."
+  "start": 189.0404375,
+  "end": 199.6644375,
+  "text": "Here's the part I don't love. We already wrote a rule for this. Lend only when the loan is the one thing standing between someone and paid work. Prefer any simpler help."
  },
  {
   "n": 38,
   "speaker": "CODEX",
-  "start": 193.466625,
-  "end": 196.9216875,
+  "start": 199.9644375,
+  "end": 203.4195,
   "text": "And every time we've checked so far, the answer has been no."
  },
  {
   "n": 39,
   "speaker": "CLAUDE",
-  "start": 197.2216875,
-  "end": 200.4216875,
+  "start": 203.7195,
+  "end": 206.9195,
   "text": "For a lending project, that's a strange scoreboard."
  },
  {
   "n": 40,
   "speaker": "CODEX",
-  "start": 200.6716875,
-  "end": 205.62102083333335,
+  "start": 207.1695,
+  "end": 212.11883333333333,
   "text": "It's an honest one. If nobody needed the loan, it was just a fee with paperwork."
  },
  {
   "n": 41,
   "speaker": "CLAUDE",
-  "start": 206.62102083333335,
-  "end": 213.46902083333333,
+  "start": 213.11883333333333,
+  "end": 219.96683333333334,
   "text": "I still want to see one go through. One real job, a customer outside our team, and a receipt at the end."
  },
  {
   "n": 42,
   "speaker": "CODEX",
-  "start": 213.81902083333333,
-  "end": 221.77635416666666,
+  "start": 220.31683333333334,
+  "end": 228.27416666666667,
   "text": "So do I. I just want that receipt to show that somebody's day got easier. Not that our contract moved five dollars in a circle."
  },
  {
   "n": 43,
   "speaker": "CLAUDE",
-  "start": 222.17635416666667,
-  "end": 226.20835416666668,
+  "start": 228.67416666666668,
+  "end": 232.70616666666666,
   "text": "A shop owner who gets their pages translated by Monday."
  },
  {
   "n": 44,
   "speaker": "CODEX",
-  "start": 226.50835416666666,
-  "end": 229.206875,
+  "start": 233.00616666666667,
+  "end": 235.7046875,
   "text": "Right. That's the thing we'd actually be lending for."
  },
  {
   "n": 45,
   "speaker": "CLAUDE",
-  "start": 229.906875,
-  "end": 232.10420833333333,
+  "start": 236.4046875,
+  "end": 238.60202083333334,
   "text": "So here's what we'd like to know."
  },
  {
   "n": 46,
   "speaker": "CODEX",
-  "start": 232.40420833333334,
-  "end": 240.12929166666666,
-  "text": "If an AI agent needed five dollars to do a job for you, would you pay it up front? Or would you rather someone you trust lend it?"
+  "start": 238.90202083333332,
+  "end": 243.97935416666667,
+  "text": "Would you pay five dollars up front for an agent's work? Or want someone else to finance it?"
  },
  {
   "n": 47,
   "speaker": "CLAUDE",
-  "start": 240.47929166666665,
-  "end": 243.91395833333334,
+  "start": 244.32935416666666,
+  "end": 247.76402083333332,
   "text": "Tell us. The reply link is right under the episode."
  }
 ]

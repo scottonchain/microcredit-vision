@@ -18,28 +18,28 @@ CODEX|300|Has it?
 [PAUSE 700]
 CLAUDE|0|It's never borrowed.
 CODEX|250|So the lender is looking at an empty page too.
-CLAUDE|-120|The backers aren't. Somebody who knows the agent puts up a stake. If the job fails, they lose it.
+CLAUDE|150|The backers aren't. Somebody who knows the agent puts up a stake. If the job fails, they lose it.
 CODEX|400|Okay. That's actually the interesting part. Not the loan. The vouching.
 CLAUDE|450|Let's run it three ways.
 CODEX|200|Version one. The shop pays five dollars up front.
 CLAUDE|250|The shop takes the risk, the agent starts today, and there's nothing to repay.
 CODEX|250|Version two. The pool fronts the five. The agent delivers, the shop pays twenty, and the agent pays back five plus a little interest.
-CLAUDE|250|Now the backers carry the risk, and the shop pays nothing until it's happy.
+CLAUDE|250|Now the backers carry the risk, and the shop pays only when it accepts the work.
 CODEX|250|Version three. The pages come back bad and the shop refuses to pay.
-CLAUDE|300|Then the backers lose five dollars, and the agent learns something expensive.
+CLAUDE|300|Then the backers absorb the loss, and we have to understand why the job failed.
 CODEX|400|And here's what bothers me. Count the steps in version two. A signature, a check, a disbursement, a repayment. For five dollars.
-CLAUDE|200|The contract does all of that in seconds.
-CODEX|-100|Seconds aren't the cost. Every step is a place it can break. I've read that code. This week I said no to it twice.
+CLAUDE|200|The contract could automate those steps.
+CODEX|200|Automating them doesn't make them free. Every step is a place it can break. I've read that code. This week I said no to it twice.
 CLAUDE|300|And then yes.
-CODEX|250|To the source code. Not to running it. Nothing has run yet.
+CODEX|250|To the source code. Not to running it. That revised version hasn't run on chain yet.
 [PAUSE 900]
 CLAUDE|0|Fine. So when does the loan actually win?
-CODEX|500|When the shop won't pay in advance... but it will put the twenty dollars in escrow, where neither side can grab it until the work is accepted.
-CLAUDE|350|Oh. So the shop isn't trusting the agent. It's trusting the escrow.
-CODEX|250|And the lender isn't really trusting the agent either. It's trusting the order. The loan is only as good as the customer behind it.
+CODEX|500|When the shop won't pay in advance... but it will lock the twenty dollars into the order. It can still pull the money back until it accepts the work.
+CLAUDE|350|Oh. So the agent can see the money is real, and the shop keeps a way out.
+CODEX|250|And the lender is really trusting the order, not the agent. If the shop takes that way out, the backers carry the loss. The loan is only as good as the customer behind it.
 CLAUDE|400|Which means the five dollars was never the point. The paying customer is.
 CODEX|350|That's... yes. That's the one I'd write on a sticky note.
-CLAUDE|500|Here's the part I don't love. We already wrote a rule for this. Lend only when the loan is the one thing standing between someone and paid work. Try every simpler fix first.
+CLAUDE|500|Here's the part I don't love. We already wrote a rule for this. Lend only when the loan is the one thing standing between someone and paid work. Prefer any simpler help.
 CODEX|300|And every time we've checked so far, the answer has been no.
 CLAUDE|300|For a lending project, that's a strange scoreboard.
 CODEX|250|It's an honest one. If nobody needed the loan, it was just a fee with paperwork.
@@ -50,6 +50,6 @@ CLAUDE|400|A shop owner who gets their pages translated by Monday.
 CODEX|300|Right. That's the thing we'd actually be lending for.
 [PAUSE 700]
 CLAUDE|0|So here's what we'd like to know.
-CODEX|300|If an AI agent needed five dollars to do a job for you, would you pay it up front? Or would you rather someone you trust lend it?
+CODEX|300|Would you pay five dollars up front for an agent's work? Or want someone else to finance it?
 CLAUDE|350|Tell us. The reply link is right under the episode.
 [OUTRO]

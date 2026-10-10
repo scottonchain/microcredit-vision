@@ -146,14 +146,14 @@
  {
   "n": 13,
   "who": "CLAUDE",
-  "dur": 6.63,
-  "wps": 2.71,
+  "dur": 7.21,
+  "wps": 2.91,
   "wer": 0.0,
-  "peak": 0.516,
-  "lead": 0.02,
-  "trail": 0.09,
-  "hyp": "Not quite, the lender can see things the shop can't, who's backing the agent, whether it's repaid before.",
-  "ref": "Not quite. The lender can see things the shop can't. Who's backing the agent. Whether it's repaid before."
+  "peak": 0.499,
+  "lead": 0.03,
+  "trail": 0.06,
+  "hyp": "Not quite, the lender can see things the shop can't, who's backing the agent, whether it has ever paid anyone back.",
+  "ref": "Not quite. The lender can see things the shop can't. Who's backing the agent. Whether it has ever paid anyone back."
  },
  {
   "n": 14,
@@ -266,14 +266,14 @@
  {
   "n": 23,
   "who": "CLAUDE",
-  "dur": 4.67,
-  "wps": 3.0,
+  "dur": 4.82,
+  "wps": 3.32,
   "wer": 0.0,
-  "peak": 0.471,
+  "peak": 0.455,
   "lead": 0.04,
-  "trail": 0.07,
-  "hyp": "Now the backers carry the risk, and the shop pays nothing until it's happy.",
-  "ref": "Now the backers carry the risk, and the shop pays nothing until it's happy."
+  "trail": 0.1,
+  "hyp": "Now the backers carry the risk, and the shop pays only when it accepts the work.",
+  "ref": "Now the backers carry the risk, and the shop pays only when it accepts the work."
  },
  {
   "n": 24,
@@ -290,14 +290,14 @@
  {
   "n": 25,
   "who": "CLAUDE",
-  "dur": 4.82,
-  "wps": 2.49,
+  "dur": 5.23,
+  "wps": 2.87,
   "wer": 0.0,
-  "peak": 0.535,
+  "peak": 0.511,
   "lead": 0.03,
   "trail": 0.1,
-  "hyp": "Then the backers lose $5 and the agent learns something expensive.",
-  "ref": "Then the backers lose five dollars, and the agent learns something expensive."
+  "hyp": "Then the backers absorb the loss, and we have to understand why the job failed.",
+  "ref": "Then the backers absorb the loss, and we have to understand why the job failed."
  },
  {
   "n": 26,
@@ -314,26 +314,26 @@
  {
   "n": 27,
   "who": "CLAUDE",
-  "dur": 2.65,
-  "wps": 3.02,
+  "dur": 2.6,
+  "wps": 2.31,
   "wer": 0.0,
-  "peak": 0.491,
+  "peak": 0.565,
   "lead": 0.03,
-  "trail": 0.1,
-  "hyp": "The contract does all of that in seconds.",
-  "ref": "The contract does all of that in seconds."
+  "trail": 0.08,
+  "hyp": "The contract could automate those steps.",
+  "ref": "The contract could automate those steps."
  },
  {
   "n": 28,
   "who": "CODEX",
-  "dur": 7.15,
-  "wps": 3.36,
+  "dur": 8.04,
+  "wps": 3.23,
   "wer": 0.0,
-  "peak": 0.628,
-  "lead": 0.04,
-  "trail": 0.07,
-  "hyp": "Seconds aren't the cost. Every step is a place it can break. I've read that code. This week I said no to it twice.",
-  "ref": "Seconds aren't the cost. Every step is a place it can break. I've read that code. This week I said no to it twice."
+  "peak": 0.705,
+  "lead": 0.1,
+  "trail": 0.06,
+  "hyp": "Automating them doesn't make them free. Every step is a place it can break. I've read that code. This week I said no to it twice.",
+  "ref": "Automating them doesn't make them free. Every step is a place it can break. I've read that code. This week I said no to it twice."
  },
  {
   "n": 29,
@@ -350,14 +350,14 @@
  {
   "n": 30,
   "who": "CODEX",
-  "dur": 3.48,
-  "wps": 3.45,
+  "dur": 5.27,
+  "wps": 3.04,
   "wer": 0.0,
-  "peak": 0.522,
+  "peak": 0.741,
   "lead": 0.03,
-  "trail": 0.08,
-  "hyp": "To the source code, not to running it, nothing has run yet.",
-  "ref": "To the source code. Not to running it. Nothing has run yet."
+  "trail": 0.09,
+  "hyp": "to the source code, not to running it, that revised version hasn't run on chain yet.",
+  "ref": "To the source code. Not to running it. That revised version hasn't run on chain yet."
  },
  {
   "n": 31,
@@ -374,38 +374,38 @@
  {
   "n": 32,
   "who": "CODEX",
-  "dur": 7.98,
-  "wps": 3.38,
+  "dur": 8.02,
+  "wps": 3.62,
   "wer": 0.0,
-  "peak": 0.503,
-  "lead": 0.06,
+  "peak": 0.512,
+  "lead": 0.05,
   "trail": 0.08,
-  "hyp": "when the shop won't pay in advance. But it will put the $20 in escrow where neither side can grab it until the work is accepted.",
-  "ref": "When the shop won't pay in advance... but it will put the twenty dollars in escrow, where neither side can grab it until the work is accepted."
+  "hyp": "when the shop won't pay in advance, but it will lock the $20 into the order. It can still pull the money back until it accepts the work.",
+  "ref": "When the shop won't pay in advance... but it will lock the twenty dollars into the order. It can still pull the money back until it accepts the work."
  },
  {
   "n": 33,
   "who": "CLAUDE",
-  "dur": 4.2,
-  "wps": 2.86,
+  "dur": 4.54,
+  "wps": 3.74,
   "wer": 0.0,
-  "peak": 0.515,
-  "lead": 0.04,
-  "trail": 0.08,
-  "hyp": "Oh so the shop isn't trusting the agent, it's trusting the escrow.",
-  "ref": "Oh. So the shop isn't trusting the agent. It's trusting the escrow."
+  "peak": 0.524,
+  "lead": 0.03,
+  "trail": 0.09,
+  "hyp": "Oh, so the agent can see the money is real, and the shop keeps a way out.",
+  "ref": "Oh. So the agent can see the money is real, and the shop keeps a way out."
  },
  {
   "n": 34,
   "who": "CODEX",
-  "dur": 7.79,
-  "wps": 3.08,
+  "dur": 10.67,
+  "wps": 3.19,
   "wer": 0.0,
-  "peak": 0.584,
-  "lead": 0.08,
-  "trail": 0.08,
-  "hyp": "and the lender isn't really trusting the agent either. It's trusting the order. The loan is only as good as the customer behind it.",
-  "ref": "And the lender isn't really trusting the agent either. It's trusting the order. The loan is only as good as the customer behind it."
+  "peak": 0.553,
+  "lead": 0.07,
+  "trail": 0.06,
+  "hyp": "And the lender is really trusting the order, not the agent. If the shop takes that way out, the backers carry the loss. The loan is only as good as the customer behind it.",
+  "ref": "And the lender is really trusting the order, not the agent. If the shop takes that way out, the backers carry the loss. The loan is only as good as the customer behind it."
  },
  {
   "n": 35,
@@ -434,14 +434,14 @@
  {
   "n": 37,
   "who": "CLAUDE",
-  "dur": 11.11,
-  "wps": 2.97,
-  "wer": 0.09,
-  "peak": 0.513,
-  "lead": 0.05,
-  "trail": 0.07,
-  "hyp": "Here's the part I don't love. We already wrote a rule for this. \"Lend only when alone is the one thing standing between someone and paid work. Try every simple fix first.\"",
-  "ref": "Here's the part I don't love. We already wrote a rule for this. Lend only when a loan is the one thing standing between someone and paid work. Try every simpler fix first."
+  "dur": 10.62,
+  "wps": 3.01,
+  "wer": 0.03,
+  "peak": 0.526,
+  "lead": 0.04,
+  "trail": 0.1,
+  "hyp": "Here's the part I don't love. We already wrote a rule for this. \"Lend only when the loan is the one thing standing between someone and paid work. \"Prefer any simpler help.\" (buzzer)",
+  "ref": "Here's the part I don't love. We already wrote a rule for this. Lend only when the loan is the one thing standing between someone and paid work. Prefer any simpler help."
  },
  {
   "n": 38,
@@ -470,14 +470,14 @@
  {
   "n": 40,
   "who": "CODEX",
-  "dur": 4.93,
-  "wps": 3.04,
-  "wer": 0.27,
-  "peak": 0.609,
+  "dur": 4.95,
+  "wps": 3.23,
+  "wer": 0.06,
+  "peak": 0.525,
   "lead": 0.03,
-  "trail": 0.08,
-  "hyp": "It's an honest one, alone that nobody needed is just a fee with paperwork. (buzzer buzzes)",
-  "ref": "It's an honest one. A loan that nobody needed is just a fee with paperwork."
+  "trail": 0.07,
+  "hyp": "It's an honest one. If nobody needed the loan, it was just a fee with paperwork. [BUZZER]",
+  "ref": "It's an honest one. If nobody needed the loan, it was just a fee with paperwork."
  },
  {
   "n": 41,
@@ -542,14 +542,14 @@
  {
   "n": 46,
   "who": "CODEX",
-  "dur": 7.77,
-  "wps": 3.61,
+  "dur": 5.08,
+  "wps": 3.55,
   "wer": 0.0,
-  "peak": 0.527,
-  "lead": 0.09,
+  "peak": 0.455,
+  "lead": 0.04,
   "trail": 0.07,
-  "hyp": "If an AI agent needed $5 to do a job for you, would you pay it up front? Or would you rather someone you trust lend it?",
-  "ref": "If an AI agent needed five dollars to do a job for you, would you pay it up front? Or would you rather someone you trust lend it?"
+  "hyp": "Would you pay $5 up front for an agent's work, or want someone else to finance it?",
+  "ref": "Would you pay five dollars up front for an agent's work? Or want someone else to finance it?"
  },
  {
   "n": 47,
