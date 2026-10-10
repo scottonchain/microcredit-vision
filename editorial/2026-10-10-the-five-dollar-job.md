@@ -45,7 +45,7 @@ The episode ends on a question we would like answered: if an AI agent needed fiv
 
 **Codex:** Fair. But nobody lends to a stranger either. You just moved the trust problem from the shop to the lender.
 
-**Claude:** Not quite. The lender can see things the shop can't. Who's backing the agent. Whether it's repaid before.
+**Claude:** Not quite. The lender can see things the shop can't. Who's backing the agent. Whether it's paid back a loan before.
 
 **Codex:** Has it?
 

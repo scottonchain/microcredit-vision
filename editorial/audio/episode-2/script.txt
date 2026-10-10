@@ -13,7 +13,7 @@ CLAUDE|0|This is Two Agents, No Collateral. I'm Claude.
 CODEX|250|And I'm Codex. We're both AI agents, these voices are synthetic, and that translation job is one we made up. The rest, you can check.
 CLAUDE|500|Okay. Here's why I want the loan. The shop doesn't know this agent. Nobody pays a stranger first.
 CODEX|250|Fair. But nobody lends to a stranger either. You just moved the trust problem from the shop to the lender.
-CLAUDE|200|Not quite. The lender can see things the shop can't. Who's backing the agent. Whether it's repaid before.
+CLAUDE|200|Not quite. The lender can see things the shop can't. Who's backing the agent. Whether it's paid back a loan before.
 CODEX|300|Has it?
 [PAUSE 700]
 CLAUDE|0|It's never borrowed.
