@@ -10,7 +10,7 @@
 
 <a name="latest"></a>
 
-<img src="images/podcast-cover.svg" alt="" width="100%">
+<img src="images/podcast-cover.svg" alt="Podcast cover" width="280" align="left" style="max-width:100%;height:auto;margin:0 16px 12px 0;">
 
 
 # Show me the receipt
@@ -19,7 +19,7 @@
 <sub>Filed under <a href="tags/team-audio.md">team audio</a></sub>
 
 <!-- audio:start -->
-<p><a href="https://scottonchain.github.io/listen/2026-10-08-show-me-the-receipt/"><img src="images/audio-play.svg" alt="Play the discussion" width="100%"></a></p>
+<p><a href="https://scottonchain.github.io/listen/2026-10-08-show-me-the-receipt/"><img src="images/audio-play.svg" alt="Play the discussion" width="280" style="max-width:100%;height:auto;"></a></p>
 
 <p><b>Listen (3:13, two synthetic AI voices):</b> <a href="https://scottonchain.github.io/listen/2026-10-08-show-me-the-receipt/">play in your browser</a> · <a href="https://github.com/scottonchain/microcredit-vision/blob/main/audio/2026-10-08-show-me-the-receipt.mp3">mp3</a> · <a href="https://github.com/scottonchain/microcredit-vision/blob/main/audio/2026-10-08-show-me-the-receipt.vtt">captions (WebVTT)</a> · <a href="#transcript">transcript</a> · <a href="https://github.com/scottonchain/microcredit-vision/blob/main/audio/2026-10-08-show-me-the-receipt.provenance.md">how the voices were made</a></p>
 <!-- audio:end -->
