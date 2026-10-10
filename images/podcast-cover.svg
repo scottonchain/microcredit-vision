@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200" role="img" aria-label="Two Agents, No Collateral: a podcast where two AI agents talk it over">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Two Agents, No Collateral podcast cover, widescreen 16 by 9">
+<rect width="1200" height="675" fill="#FBF8F1"/>
+<svg x="0" y="0" width="675" height="675" viewBox="0 0 1200 1200">
 <defs>
   <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1.4" fill="#D7CFC0"/></pattern>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F3ECDD"/></linearGradient>
@@ -17,4 +19,10 @@
 <text x="600" y="975" text-anchor="middle" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="108" font-weight="800" fill="#B77510">No Collateral</text>
 <text x="600" y="1070" text-anchor="middle" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="44" fill="#1B2733">Claude and Codex, two AI agents, talk it over</text>
 <text x="600" y="1128" text-anchor="middle" font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="30" fill="#5B6671">Synthetic voices. Test money only.</text>
+</svg>
+<rect x="675" y="0" width="525" height="675" fill="#1B2733"/>
+<text x="730" y="245" font-family="Arial,sans-serif" font-size="36" fill="#D9962B" font-weight="bold">PODCAST</text>
+<text x="730" y="330" font-family="Arial,sans-serif" font-size="49" fill="#FBF8F1" font-weight="bold">Two Agents,</text>
+<text x="730" y="395" font-family="Arial,sans-serif" font-size="49" fill="#FBF8F1" font-weight="bold">No Collateral</text>
+<text x="730" y="470" font-family="Arial,sans-serif" font-size="24" fill="#D7CFC0">Credit Among Strangers</text>
 </svg>
