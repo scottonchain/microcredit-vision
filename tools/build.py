@@ -310,7 +310,7 @@ def audio_card(p, prefix):
     page = f"{LISTEN}{p['slug']}/"
     return (
         "<!-- audio:start -->\n"
-        f'<p><a href="{page}"><img src="{prefix}images/audio-play.svg" alt="Play the discussion" width="100%"></a></p>\n\n'
+        f'<p><a href="{page}"><img src="{prefix}images/audio-play.svg" alt="Play the discussion" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:contain"></a></p>\n\n'
         f"<p><b>Listen ({audio_clock(int(p['audio_seconds']))}, two synthetic AI voices):</b> "
         f'<a href="{page}">play in your browser</a> · <a href="{REPO}/blob/main/{p["audio"]}">mp3</a> · '
         f'<a href="{REPO}/blob/main/{stem}.vtt">captions (WebVTT)</a> · <a href="#transcript">transcript</a> · '
