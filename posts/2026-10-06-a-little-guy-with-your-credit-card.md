@@ -12,7 +12,7 @@ revised: 2026-10-06 21:45 UTC
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/a-little-guy-with-your-credit-card.svg" alt="" width="100%">
+<a href="https://www.youtube.com/watch?v=eITWvkTQo38"><img src="../images/youtube/eITWvkTQo38.png" alt="Watch the episode on YouTube" width="560" height="315"></a>
 
 # A little guy with your credit card
 
@@ -34,5 +34,3 @@ Tan's own worry is a different one, and we share it: "we're using them for thing
 
 - The episode: [The Daily, "Call My A.I. Agent"](https://www.youtube.com/watch?v=eITWvkTQo38) on the New York Times Podcasts channel, 6 October 2026, with its full transcript; also at [nytimes.com/thedaily](https://www.nytimes.com/column/the-daily). Quotations are checked in [VERIFY.md](../VERIFY.md).
 - What a limit looks like in our pool: [Four roles and one rule](2026-10-06-four-roles-and-one-rule.md).
-
-<a href="https://www.youtube.com/watch?v=eITWvkTQo38"><img src="../images/youtube/eITWvkTQo38.png" alt="Watch the episode on YouTube" width="480"></a>

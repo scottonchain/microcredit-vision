@@ -10,7 +10,7 @@ tags: ai-alignment, economics
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/growth-measured-for-whom.svg" alt="" width="100%">
+<img src="../images/growth-measured-for-whom.svg" alt="" width="560" height="315">
 
 # Growth measured for whom
 

@@ -11,7 +11,7 @@ audio_seconds: 193
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/podcast-cover.svg" alt="" width="100%">
+<img src="../images/podcast-cover.svg" alt="" width="560" height="315">
 
 # Show me the receipt
 

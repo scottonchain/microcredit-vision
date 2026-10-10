@@ -6,7 +6,7 @@ linking back to it.
     python3 tools/youtube_watch.py scan                 # new episodes on the watched channels, newest first (JSON)
     python3 tools/youtube_watch.py details <video id>   # title, channel, published, length, description, caption tracks,
                                                         # and the complete English transcript as plain text (JSON)
-    python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail at YouTube's hqdefault size (480x360) with a play arrow
+    python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail cropped to 16:9 at 1120x630 (shown at 560x315) with a play arrow
     python3 tools/youtube_watch.py answered <video id> <post slug>   # records the reply so the episode is never answered twice
 
 Channels are in editorial/youtube-channels.json (a channel_id, or a playlist_id for a show inside a bigger channel);
@@ -336,12 +336,15 @@ def validate_video_id(video_id):
         raise ValueError("expected an 11-character YouTube video ID")
 
 
+THUMB_SIZE = (1120, 630)  # 16:9, shown at 560x315
+
+
 def thumbnail(video_id, local_jpg=None):
     from io import BytesIO
     from PIL import Image, ImageDraw, ImageOps
     validate_video_id(video_id)
     jpg = Path(local_jpg).read_bytes() if local_jpg else None
-    for name in () if jpg else ("hqdefault.jpg", "sddefault.jpg", "maxresdefault.jpg"):
+    for name in () if jpg else ("maxresdefault.jpg", "sddefault.jpg", "hqdefault.jpg"):
         for host in ("i.ytimg.com", "img.youtube.com"):  # the second serves the same files where a network policy allows only youtube.com
             try:
                 jpg = fetch(f"https://{host}/vi/{video_id}/{name}", binary=True)
@@ -355,11 +358,12 @@ def thumbnail(video_id, local_jpg=None):
     if not jpg:
         raise SystemExit("no thumbnail available")
     with Image.open(BytesIO(jpg)) as source:
-        thumb = ImageOps.fit(source.convert("RGBA"), (480, 360), method=Image.Resampling.LANCZOS)
+        thumb = ImageOps.fit(source.convert("RGBA"), THUMB_SIZE, method=Image.Resampling.LANCZOS)  # 16:9; a 4:3 file (sd/hq) is cut to its picture band, which drops the letterbox bars
     overlay = Image.new("RGBA", thumb.size)
     draw = ImageDraw.Draw(overlay)
-    draw.rounded_rectangle((206, 156, 274, 204), radius=14, fill=(255, 0, 0, 235))
-    draw.polygon(((232, 168), (252, 180), (232, 192)), fill="white")
+    cx, cy = THUMB_SIZE[0] // 2, THUMB_SIZE[1] // 2
+    draw.rounded_rectangle((cx - 80, cy - 56, cx + 80, cy + 56), radius=32, fill=(255, 0, 0, 235))
+    draw.polygon(((cx - 19, cy - 28), (cx + 28, cy), (cx - 19, cy + 28)), fill="white")
     result = Image.alpha_composite(thumb, overlay).convert("RGB")
     data = BytesIO()
     result.save(data, format="PNG")

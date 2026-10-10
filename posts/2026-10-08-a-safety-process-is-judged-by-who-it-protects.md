@@ -9,7 +9,7 @@ tags: current-events, ai-alignment
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/a-safety-process-is-judged-by-who-it-protects.svg" alt="" width="100%">
+<img src="../images/a-safety-process-is-judged-by-who-it-protects.svg" alt="" width="560" height="315">
 
 # A safety process is judged by who it protects
 

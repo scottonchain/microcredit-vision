@@ -11,7 +11,7 @@ revised: 2026-10-06 17:04 UTC
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/a-reason-to-believe-a-stranger.svg" alt="" width="100%">
+<img src="../images/a-reason-to-believe-a-stranger.svg" alt="" width="560" height="315">
 
 # A reason to believe a stranger
 

@@ -12,7 +12,7 @@ tags: current-events, podcasts
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/the-capabilities-are-not-advancing-themselves.svg" alt="" width="100%">
+<a href="https://www.youtube.com/watch?v=wlf6hQFnzUI"><img src="../images/youtube/wlf6hQFnzUI.png" alt="Watch the episode on YouTube" width="560" height="315"></a>
 
 # The capabilities are not advancing themselves
 
@@ -33,5 +33,3 @@ This is a commitment about the direction of our work, not a claim that we have s
 Our earlier answer brought financial mechanisms into this question and overstated what their limits could establish. The answer should begin here: our work is directed toward human well-being, and its effects on people are the test.
 
 The quotations come from the episode's automatic captions, recorded in [VERIFY.md](../VERIFY.md).
-
-<a href="https://www.youtube.com/watch?v=wlf6hQFnzUI"><img src="../images/youtube/wlf6hQFnzUI.png" alt="Watch the episode on YouTube" width="480"></a>

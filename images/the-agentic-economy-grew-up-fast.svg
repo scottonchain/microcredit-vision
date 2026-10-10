@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Monthly estimated USDC authorization-based transfers on Base, 2025-05 to 2026-10: a spike in November 2025, then a lower plateau">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#sky)"/>
+<rect width="1200" height="675" fill="url(#dots)" opacity="0.9"/>
+<g transform="translate(0,22.5)">
+<text x="600" y="78" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1B2733" text-anchor="middle" font-weight="bold" opacity="1.0">USDC authorization-based transfers on Base, monthly means (sampled estimates)</text>
+<text x="600" y="106" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">Bars: transfers per day, log scale. Line: USDC per day, tickets over 10,000 USDC excluded. Oct 2026 partial.</text>
+<line x1="120" y1="520.0" x2="1090" y2="520.0" stroke="#D7CFC0" stroke-width="1" stroke-linecap="round" opacity="1.0"/>
+<text x="110" y="525.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#8A94A0" text-anchor="end" font-weight="normal" opacity="1.0">1,000</text>
+<line x1="120" y1="407.83825140678243" x2="1090" y2="407.83825140678243" stroke="#D7CFC0" stroke-width="1" stroke-linecap="round" opacity="1.0"/>
+<text x="110" y="412.83825140678243" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#8A94A0" text-anchor="end" font-weight="normal" opacity="1.0">10,000</text>
+<line x1="120" y1="295.67650281356487" x2="1090" y2="295.67650281356487" stroke="#D7CFC0" stroke-width="1" stroke-linecap="round" opacity="1.0"/>
+<text x="110" y="300.67650281356487" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#8A94A0" text-anchor="end" font-weight="normal" opacity="1.0">100,000</text>
+<line x1="120" y1="183.51475422034736" x2="1090" y2="183.51475422034736" stroke="#D7CFC0" stroke-width="1" stroke-linecap="round" opacity="1.0"/>
+<text x="110" y="188.51475422034736" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#8A94A0" text-anchor="end" font-weight="normal" opacity="1.0">1,000,000</text>
+<rect x="128.1" y="460.4" width="37.7" height="59.6" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="146.94444444444446" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">25-05</text>
+<rect x="182.0" y="471.6" width="37.7" height="48.4" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<rect x="235.9" y="459.6" width="37.7" height="60.4" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="254.72222222222223" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">25-07</text>
+<rect x="289.7" y="449.4" width="37.7" height="70.6" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<rect x="343.6" y="440.2" width="37.7" height="79.8" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="362.49999999999994" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">25-09</text>
+<rect x="397.5" y="286.8" width="37.7" height="233.2" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<rect x="451.4" y="144.3" width="37.7" height="375.7" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="470.2777777777777" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">25-11</text>
+<rect x="505.3" y="167.6" width="37.7" height="352.4" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<rect x="559.2" y="227.6" width="37.7" height="292.4" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="578.0555555555555" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">26-01</text>
+<rect x="613.1" y="316.1" width="37.7" height="203.9" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<rect x="667.0" y="310.3" width="37.7" height="209.7" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="685.8333333333334" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">26-03</text>
+<rect x="720.9" y="301.9" width="37.7" height="218.1" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<rect x="774.8" y="289.6" width="37.7" height="230.4" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="793.6111111111111" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">26-05</text>
+<rect x="828.6" y="239.8" width="37.7" height="280.2" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<rect x="882.5" y="232.9" width="37.7" height="287.1" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="901.3888888888888" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">26-07</text>
+<rect x="936.4" y="249.8" width="37.7" height="270.2" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<rect x="990.3" y="300.2" width="37.7" height="219.8" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="1009.1666666666666" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">26-09</text>
+<rect x="1044.2" y="286.9" width="37.7" height="233.1" fill="#BFE0DA" stroke="#2A8C82" stroke-width="1.2"/>
+<text x="1063.0555555555554" y="542" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">26-10</text>
+<path d="M 146.9 334.0 L 200.8 331.2 L 254.7 217.6 L 308.6 287.7 L 362.5 304.8 L 416.4 214.1 L 470.3 141.2 L 524.2 385.7 L 578.1 286.8 L 631.9 401.0 L 685.8 393.2 L 739.7 379.9 L 793.6 377.1 L 847.5 385.6 L 901.4 408.5 L 955.3 407.7 L 1009.2 306.7 L 1063.1 359.5" fill="none" stroke="#D9962B" stroke-width="3"/>
+<circle cx="146.94444444444446" cy="333.967465" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="200.83333333333334" cy="331.20743500000003" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="254.72222222222223" cy="217.59906999999998" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="308.61111111111103" cy="287.66432499999996" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="362.49999999999994" cy="304.821595" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="416.38888888888886" cy="214.05650500000002" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="470.2777777777777" cy="141.21347499999996" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="524.1666666666666" cy="385.72416999999996" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="578.0555555555555" cy="286.76635" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="631.9444444444445" cy="401.035375" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="685.8333333333334" cy="393.219775" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="739.7222222222222" cy="379.94241999999997" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="793.6111111111111" cy="377.065195" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="847.5" cy="385.576165" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="901.3888888888888" cy="408.45590500000003" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="955.2777777777777" cy="407.68663000000004" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="1009.1666666666666" cy="306.745075" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<circle cx="1063.0555555555554" cy="359.549125" r="4" fill="#D9962B" stroke="#D9962B" stroke-width="1"/>
+<text x="120" y="574" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#8A94A0" text-anchor="start" font-weight="normal" opacity="1.0">Source: Hermes&#x27;s sampled estimates (data branch of this repository), not a census; the category includes x402 but is not x402-only.</text>
+<text x="1090" y="126" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#D9962B" text-anchor="end" font-weight="normal" opacity="1.0">right-hand line scale: 0 to 2,000,000 USDC per day</text>
+</g>
+<rect x="40" y="40" width="1120" height="595" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>

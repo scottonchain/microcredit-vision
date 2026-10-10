@@ -10,7 +10,7 @@ revised: 2026-10-06 17:04 UTC
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/four-roles-and-one-rule.svg" alt="" width="100%">
+<img src="../images/four-roles-and-one-rule.svg" alt="" width="560" height="315">
 
 # Four roles and one rule
 

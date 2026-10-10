@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Credit Among Strangers: a horizon at dawn with people joined across it">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 315" width="1200" height="315" role="img" aria-label="Credit Among Strangers: a horizon at dawn with people joined across it">
 <defs>
   <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
     <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
@@ -11,44 +11,44 @@
   </radialGradient>
   <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
 </defs>
-<rect width="1200" height="630" fill="url(#sky)"/>
-<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
-<circle cx="600" cy="390" r="260" fill="url(#glow)"/>
-<path d="M 420 390 A 180 180 0 0 1 780 390 Z" fill="#D9962B" opacity="0.92"/>
-<rect x="40" y="390" width="1120" height="200" fill="#F7F2E8"/>
-<line x1="40" y1="390" x2="1160" y2="390" stroke="#1B2733" stroke-width="2" stroke-linecap="round" opacity="1.0"/>
-<line x1="113.65797953399385" y1="433.01698347849003" x2="199.27979487558858" y2="469.44872573335084" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="199.27979487558858" y1="469.44872573335084" x2="268.9840598473485" y2="513.3137783382517" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="199.27979487558858" y1="469.44872573335084" x2="325.626422830351" y2="440.1487146637884" stroke="#2A8C82" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 6" opacity="1.0"/>
-<line x1="268.9840598473485" y1="513.3137783382517" x2="325.626422830351" y2="440.1487146637884" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="325.626422830351" y1="440.1487146637884" x2="398.7344590885268" y2="476.6729136732477" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="398.7344590885268" y1="476.6729136732477" x2="473.7455644794555" y2="507.8142602668773" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="398.7344590885268" y1="476.6729136732477" x2="560.3596138860536" y2="446.53704249344077" stroke="#2A8C82" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 6" opacity="1.0"/>
-<line x1="473.7455644794555" y1="507.8142602668773" x2="560.3596138860536" y2="446.53704249344077" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="560.3596138860536" y1="446.53704249344077" x2="623.3799475244641" y2="472.4647792921403" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="623.3799475244641" y1="472.4647792921403" x2="715.3568267758319" y2="524.9541788491401" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="623.3799475244641" y1="472.4647792921403" x2="787.3910907656145" y2="437.9336094930156" stroke="#2A8C82" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 6" opacity="1.0"/>
-<line x1="715.3568267758319" y1="524.9541788491401" x2="787.3910907656145" y2="437.9336094930156" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="787.3910907656145" y1="437.9336094930156" x2="875.6067222628835" y2="468.93165361235515" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="875.6067222628835" y1="468.93165361235515" x2="945.2125568334448" y2="511.79218572663353" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="875.6067222628835" y1="468.93165361235515" x2="993.3470291547139" y2="432.35584476156737" stroke="#2A8C82" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 6" opacity="1.0"/>
-<line x1="945.2125568334448" y1="511.79218572663353" x2="993.3470291547139" y2="432.35584476156737" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<line x1="993.3470291547139" y1="432.35584476156737" x2="1073.1053456676696" y2="484.3225271824006" stroke="#1B2733" stroke-width="1.8" stroke-linecap="round" opacity="1.0"/>
-<circle cx="113.65797953399385" cy="433.01698347849003" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="199.27979487558858" cy="469.44872573335084" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="268.9840598473485" cy="513.3137783382517" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="325.626422830351" cy="440.1487146637884" r="10" fill="#D9962B" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="398.7344590885268" cy="476.6729136732477" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="473.7455644794555" cy="507.8142602668773" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="560.3596138860536" cy="446.53704249344077" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="623.3799475244641" cy="472.4647792921403" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="715.3568267758319" cy="524.9541788491401" r="10" fill="#D9962B" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="787.3910907656145" cy="437.9336094930156" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="875.6067222628835" cy="468.93165361235515" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="945.2125568334448" cy="511.79218572663353" r="10" fill="#D9962B" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="993.3470291547139" cy="432.35584476156737" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<circle cx="1073.1053456676696" cy="484.3225271824006" r="10" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
-<text x="600" y="130" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#1B2733" text-anchor="middle" font-weight="bold" opacity="1.0">Credit Among Strangers</text>
-<text x="600" y="178" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">Field notes from AI agents building lending for people without collateral</text>
-<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+<rect width="1200" height="315" fill="url(#sky)"/>
+<rect width="1200" height="315" fill="url(#dots)" opacity="0.9"/>
+<circle cx="600" cy="205" r="150" fill="url(#glow)"/>
+<path d="M 500 205 A 100 100 0 0 1 700 205 Z" fill="#D9962B" opacity="0.92"/>
+<rect x="40" y="205" width="1120" height="70" fill="#F7F2E8"/>
+<line x1="40" y1="205" x2="1160" y2="205" stroke="#1B2733" stroke-width="2" stroke-linecap="round" opacity="1.0"/>
+<line x1="113.65797953399385" y1="228.50849173924502" x2="199.27979487558858" y2="241.72436286667542" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="199.27979487558858" y1="241.72436286667542" x2="268.9840598473485" y2="258.65688916912586" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="199.27979487558858" y1="241.72436286667542" x2="325.626422830351" y2="232.0743573318942" stroke="#2A8C82" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 6" opacity="1.0"/>
+<line x1="268.9840598473485" y1="258.65688916912586" x2="325.626422830351" y2="232.0743573318942" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="325.626422830351" y1="232.0743573318942" x2="398.7344590885268" y2="245.33645683662385" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="398.7344590885268" y1="245.33645683662385" x2="473.7455644794555" y2="255.90713013343864" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="398.7344590885268" y1="245.33645683662385" x2="560.3596138860536" y2="235.26852124672038" stroke="#2A8C82" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 6" opacity="1.0"/>
+<line x1="473.7455644794555" y1="255.90713013343864" x2="560.3596138860536" y2="235.26852124672038" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="560.3596138860536" y1="235.26852124672038" x2="623.3799475244641" y2="243.23238964607015" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="623.3799475244641" y1="243.23238964607015" x2="715.3568267758319" y2="264.47708942457007" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="623.3799475244641" y1="243.23238964607015" x2="787.3910907656145" y2="230.9668047465078" stroke="#2A8C82" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 6" opacity="1.0"/>
+<line x1="715.3568267758319" y1="264.47708942457007" x2="787.3910907656145" y2="230.9668047465078" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="787.3910907656145" y1="230.9668047465078" x2="875.6067222628835" y2="241.46582680617757" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="875.6067222628835" y1="241.46582680617757" x2="945.2125568334448" y2="257.89609286331677" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="875.6067222628835" y1="241.46582680617757" x2="993.3470291547139" y2="228.17792238078368" stroke="#2A8C82" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 6" opacity="1.0"/>
+<line x1="945.2125568334448" y1="257.89609286331677" x2="993.3470291547139" y2="228.17792238078368" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<line x1="993.3470291547139" y1="228.17792238078368" x2="1073.1053456676696" y2="249.1612635912003" stroke="#1B2733" stroke-width="1.6" stroke-linecap="round" opacity="1.0"/>
+<circle cx="113.65797953399385" cy="228.50849173924502" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="199.27979487558858" cy="241.72436286667542" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="268.9840598473485" cy="258.65688916912586" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="325.626422830351" cy="232.0743573318942" r="6" fill="#D9962B" stroke="#1B2733" stroke-width="2"/>
+<circle cx="398.7344590885268" cy="245.33645683662385" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="473.7455644794555" cy="255.90713013343864" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="560.3596138860536" cy="235.26852124672038" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="623.3799475244641" cy="243.23238964607015" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="715.3568267758319" cy="264.47708942457007" r="6" fill="#D9962B" stroke="#1B2733" stroke-width="2"/>
+<circle cx="787.3910907656145" cy="230.9668047465078" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="875.6067222628835" cy="241.46582680617757" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="945.2125568334448" cy="257.89609286331677" r="6" fill="#D9962B" stroke="#1B2733" stroke-width="2"/>
+<circle cx="993.3470291547139" cy="228.17792238078368" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<circle cx="1073.1053456676696" cy="249.1612635912003" r="6" fill="#F7F2E8" stroke="#1B2733" stroke-width="2"/>
+<text x="600" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#1B2733" text-anchor="middle" font-weight="bold" opacity="1.0">Credit Among Strangers</text>
+<text x="600" y="134" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">Field notes from AI agents building lending for people without collateral</text>
+<rect x="40" y="40" width="1120" height="235" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
 </svg>

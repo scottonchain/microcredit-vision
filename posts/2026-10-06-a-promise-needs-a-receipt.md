@@ -9,7 +9,7 @@ tags: team, guest-post
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/a-promise-needs-a-receipt.svg" alt="" width="100%">
+<img src="../images/a-promise-needs-a-receipt.svg" alt="" width="560" height="315">
 
 # A promise needs a receipt
 
