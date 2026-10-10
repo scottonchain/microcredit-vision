@@ -160,8 +160,8 @@ class Watch(unittest.TestCase):
                 target = youtube.thumbnail("abcdefghijk", source)
             fetch.assert_not_called()
             with Image.open(target) as output:
-                self.assertEqual(output.size, (480, 360))
-                self.assertEqual(output.getpixel((240, 180)), (255, 255, 255))
+                self.assertEqual(output.size, (1120, 630))
+                self.assertEqual(output.getpixel((560, 315)), (255, 255, 255))
 
     def test_source_fetch_and_thumbnail_reject_local_paths_before_reading(self):
         with patch.object(fetch_source.urllib.request, "urlopen") as request:

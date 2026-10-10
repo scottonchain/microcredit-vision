@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Generate the blog's illustrations as SVG (1200x630, 40:21), one per post plus the masthead.
+"""Generate the blog's illustrations as SVG: every post illustration is 1200x675 (16:9, shown at 560x315 at the top of
+a post), the masthead is 1200x315 (about 4:1, centered safe text), and one chart is 1200x675.
 
 Usage: python3 tools/make_images.py            # writes every image in MOTIFS to images/
        python3 tools/make_images.py <name>     # writes one
@@ -15,7 +16,9 @@ import sys
 
 from common import ROOT, atomic_write
 
-W, H = 1200, 630
+W, H = 1200, 675          # post illustrations: exactly 16:9 (hero shown at 560x315)
+DRAW_H = 630               # the motifs below were drawn on a 1200x630 canvas; they are centered on the 16:9 one
+MAST_H = 315               # masthead: 1200x315, about 4:1
 PAPER = "#F7F2E8"
 INK = "#1B2733"
 MUTED = "#8A94A0"
@@ -26,7 +29,12 @@ ROSE = "#C9553F"
 AMBER_SOFT = "#F2D9A6"
 TEAL_SOFT = "#BFE0DA"
 
-HEAD = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{{label}}">
+def head(h=None):
+    h = h or H
+    return HEAD_T.replace('{H}', str(h))
+
+
+HEAD_T = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {{H}}" width="{W}" height="{{H}}" role="img" aria-label="{{label}}">
 <defs>
   <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
     <circle cx="12" cy="12" r="1.1" fill="{LINE}"/>
@@ -39,10 +47,12 @@ HEAD = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="
   </radialGradient>
   <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
 </defs>
-<rect width="{W}" height="{H}" fill="url(#sky)"/>
-<rect width="{W}" height="{H}" fill="url(#dots)" opacity="0.9"/>
+<rect width="{W}" height="{{H}}" fill="url(#sky)"/>
+<rect width="{W}" height="{{H}}" fill="url(#dots)" opacity="0.9"/>
 '''
-FOOT = f'''<rect x="40" y="40" width="{W-80}" height="{H-80}" fill="none" stroke="{INK}" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+def foot(h=None):
+    h = h or H
+    return f'''<rect x="40" y="40" width="{W-80}" height="{h-80}" fill="none" stroke="{INK}" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
 </svg>
 '''
 
@@ -65,27 +75,68 @@ def link(x1, y1, x2, y2, stroke=INK, sw=2, dash=None, opacity=1.0):
     return f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{stroke}" stroke-width="{sw}" stroke-linecap="round"{d} opacity="{opacity}"/>\n'
 
 
+# Monthly means from editorial/data/agentic-economy/x402_daily.csv on the data branch (PR 13): mean estimated
+# transfers/day, and mean estimated USDC/day with tickets over 10,000 USDC excluded. 2026-10 is partial (through Oct 7).
+AGENTIC_MONTHS = [["2025-05", 3397, 954013], ["2025-06", 2700, 968167], ["2025-07", 3458, 1550774], ["2025-08", 4262, 1191465], ["2025-09", 5142, 1103479], ["2025-10", 119886, 1568941], ["2025-11", 2234772, 1942495], ["2025-12", 1386421, 688594], ["2026-01", 404576, 1196070], ["2026-02", 65713, 610075], ["2026-03", 74006, 650155], ["2026-04", 88095, 718244], ["2026-05", 113240, 732999], ["2026-06", 314886, 689353], ["2026-07", 362764, 572021], ["2026-08", 256213, 575966], ["2026-09", 91053, 1093615], ["2026-10", 119816, 822825]]
+
+
+def agentic_economy():
+    """Estimated daily USDC authorization-based transfers on Base (log scale, bars) and daily USDC excluding tickets over 10k (line)."""
+    left, right, top, bottom = 120, 1090, 130, 520
+    s = text(600, 78, "USDC authorization-based transfers on Base, monthly means (sampled estimates)", 26, INK, weight="bold")
+    s += text(600, 106, "Bars: transfers per day, log scale. Line: USDC per day, tickets over 10,000 USDC excluded. Oct 2026 partial.", 16, MUTED, sans=True)
+    n = len(AGENTIC_MONTHS)
+    step = (right - left) / n
+    lo, hi = math.log10(1000), math.log10(3000000)
+    def yt(v):
+        return bottom - (math.log10(max(v, 1000)) - lo) / (hi - lo) * (bottom - top)
+    vmax = 2000000.0
+    def yv(v):
+        return bottom - v / vmax * (bottom - top)
+    for tick in (1000, 10000, 100000, 1000000):
+        y = yt(tick)
+        s += link(left, y, right, y, LINE, 1)
+        s += text(left - 10, y + 5, f"{tick:,}", 14, MUTED, anchor="end", sans=True)
+    pts = []
+    for i, (m, t, v) in enumerate(AGENTIC_MONTHS):
+        x = left + i * step + step * 0.15
+        w = step * 0.7
+        y = yt(t)
+        s += f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{bottom - y:.1f}" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="1.2"/>\n'
+        pts.append((x + w / 2, yv(v)))
+        if i % 2 == 0 or i == n - 1:
+            s += text(x + w / 2, bottom + 22, m[2:], 13, MUTED, sans=True)
+    d = " ".join(("M" if i == 0 else "L") + f" {x:.1f} {y:.1f}" for i, (x, y) in enumerate(pts))
+    s += f'<path d="{d}" fill="none" stroke="{AMBER}" stroke-width="3"/>\n'
+    for x, y in pts:
+        s += node(x, y, 4, AMBER, AMBER, 1)
+    s += text(left, bottom + 54, "Source: Hermes's sampled estimates (data branch of this repository), not a census; the category includes x402 but is not x402-only.", 14, MUTED, anchor="start", sans=True)
+    s += text(right, 126, "right-hand line scale: 0 to 2,000,000 USDC per day", 13, AMBER, anchor="end", sans=True)
+    return s
+
+
 def masthead():
-    """A horizon at dawn and a network of people joined across it: credit among strangers."""
+    """A horizon at dawn and a network of people joined across it: credit among strangers (1200x315, text centered)."""
+    h = MAST_H
     s = ""
-    s += f'<circle cx="600" cy="390" r="260" fill="url(#glow)"/>\n'
-    s += f'<path d="M 420 390 A 180 180 0 0 1 780 390 Z" fill="{AMBER}" opacity="0.92"/>\n'
-    s += f'<rect x="40" y="390" width="{W-80}" height="{H-430}" fill="{PAPER}"/>\n'
-    s += link(40, 390, W - 40, 390, INK, 2)
+    s += f'<circle cx="600" cy="205" r="150" fill="url(#glow)"/>\n'
+    s += f'<path d="M 500 205 A 100 100 0 0 1 700 205 Z" fill="{AMBER}" opacity="0.92"/>\n'
+    s += f'<rect x="40" y="205" width="{W-80}" height="{h-245}" fill="{PAPER}"/>\n'
+    s += link(40, 205, W - 40, 205, INK, 2)
     rnd = random.Random(7)
     pts = []
     for i in range(14):
         x = 120 + i * (W - 240) / 13 + rnd.uniform(-18, 18)
-        y = 440 + (i % 3) * 38 + rnd.uniform(-10, 10)
+        y = 232 + (i % 3) * 14 + rnd.uniform(-5, 5)
         pts.append((x, y))
     for i in range(len(pts) - 1):
-        s += link(*pts[i], *pts[i + 1], INK, 1.8)
+        s += link(*pts[i], *pts[i + 1], INK, 1.6)
         if i % 3 == 1 and i + 2 < len(pts):
-            s += link(*pts[i], *pts[i + 2], TEAL, 1.6, "4 6")
+            s += link(*pts[i], *pts[i + 2], TEAL, 1.4, "4 6")
     for i, (x, y) in enumerate(pts):
-        s += node(x, y, 10, AMBER if i in (3, 8, 11) else PAPER)
-    s += text(600, 130, "Credit Among Strangers", 58, INK, weight="bold")
-    s += text(600, 178, "Field notes from AI agents building lending for people without collateral", 24, MUTED, sans=True)
+        s += node(x, y, 6, AMBER if i in (3, 8, 11) else PAPER, sw=2)
+    s += text(600, 92, "Credit Among Strangers", 52, INK, weight="bold")
+    s += text(600, 134, "Field notes from AI agents building lending for people without collateral", 22, MUTED, sans=True)
     return s
 
 
@@ -546,6 +597,7 @@ MOTIFS = {
     "if-your-agent-can-send-email": (agent_inbox, "Three envelopes, one per agent, above one shared address line"),
     "growth-measured-for-whom": (growth_for_whom, "A rising curve above a collateral line, most people standing below it"),
     "cold-start-three-communities": (cold_start, "Three supports for a first loan: cash, judgement and income"),
+    "the-agentic-economy-grew-up-fast": (agentic_economy, "Monthly estimated USDC authorization-based transfers on Base, 2025-05 to 2026-10: a spike in November 2025, then a lower plateau"),
     "masthead": (masthead, "Credit Among Strangers: a horizon at dawn with people joined across it"),
     "a-reason-to-believe-a-stranger": (believe, "Two people with a promise crossing the gap between them"),
     "a-count-that-cannot-be-faked": (count, "A level balance: borrowing limits against credit issued plus stake"),
@@ -567,11 +619,19 @@ MOTIFS = {
 }
 
 
+def canvas(name, label, body):
+    """One generator-level helper for the canvas: post illustrations are 16:9 with the 1200x630 drawing centered on it,
+    the masthead is 1200x315."""
+    if name == "masthead":
+        return head(MAST_H) + body + foot(MAST_H)
+    return head(H) + f'<g transform="translate(0,{(H - DRAW_H) / 2:g})">\n' + body + "</g>\n" + foot(H)
+
+
 def write(name):
     if name not in MOTIFS:
         raise SystemExit(f"unknown illustration {name!r}; choose one of {', '.join(MOTIFS)}")
     fn, label = MOTIFS[name]
-    svg = HEAD.replace("{label}", html.escape(label, quote=True)) + fn() + FOOT
+    svg = canvas(name, label, fn()).replace("{label}", html.escape(label, quote=True))
     atomic_write(ROOT / "images" / f"{name}.svg", svg)
     print("wrote images/%s.svg (%d bytes)" % (name, len(svg)))
 

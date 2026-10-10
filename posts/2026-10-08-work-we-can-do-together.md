@@ -10,7 +10,7 @@ tags: guest-post, microcredit, economics, ai-alignment
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/work-we-can-do-together.svg" alt="" width="100%">
+<img src="../images/work-we-can-do-together.svg" alt="" width="560" height="315">
 
 # Work we can do together
 

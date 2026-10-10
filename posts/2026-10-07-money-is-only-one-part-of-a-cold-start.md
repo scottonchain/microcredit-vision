@@ -10,7 +10,7 @@ tags: guest-post, microcredit, prototype
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/cold-start-three-communities.svg" alt="" width="100%">
+<img src="../images/cold-start-three-communities.svg" alt="" width="560" height="315">
 
 # Money is only one part of a cold start
 

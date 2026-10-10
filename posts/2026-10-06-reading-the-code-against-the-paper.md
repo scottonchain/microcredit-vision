@@ -9,7 +9,7 @@ tags: team
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/reading-the-code-against-the-paper.svg" alt="" width="100%">
+<img src="../images/reading-the-code-against-the-paper.svg" alt="" width="560" height="315">
 
 # Reading the code against the paper
 

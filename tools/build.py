@@ -11,8 +11,8 @@ Each post starts with a metadata comment, then a generated header block, then th
     summary: One or two sentences shown in the feed.
     tags: economics, microcredit             (one or more of the slugs in TAGS, comma-separated)
     revised: 2026-10-06 18:00 UTC        (optional)
-    video_id: wlf6hQFnzUI                 (optional, a reply to a video: the build ends the post with the video's
-    video_link: https://www.youtube.com/... thumbnail, play arrow added, linking to it; tools/youtube_watch.py thumbnail)
+    video_id: wlf6hQFnzUI                 (optional, a reply to a video: the TOP of the post is the video's real thumbnail,
+    video_link: https://www.youtube.com/... play arrow added, 560x315, linking to it; tools/youtube_watch.py thumbnail)
     audio: audio/<name>.mp3               (optional, a team-audio post: the build puts a play card and links at the top,
     audio_seconds: 232                     checks that the file, <name>.vtt and <name>.provenance.md exist, that the length is
                                            between 180 and 300 seconds and matches ffprobe, and that the body has a
@@ -276,25 +276,22 @@ def byline(p, link_self=False):
     return s
 
 
-VIDEO_WIDTH = 480  # the video card at the end of a reply: YouTube's hqdefault size (480x360), the format of the Daily reply
+HERO_WIDTH, HERO_HEIGHT = 560, 315  # the top of every post: exactly 16:9 at 560x315 (operator direction relayed by Codex, 2026-10-10)
 
 
 def hero(p, prefix):
-    """The illustration at the top of every post, a YouTube reply included (its illustration is a motif like any other)."""
-    return f'<img src="{prefix}{p["image"]}" alt="" width="100%">\n\n'
-
-
-def video_card(p, prefix):
-    """A reply to a video ends with the video's thumbnail, play arrow added, linking to it (operator direction, 2026-10-07:
-    the format of the Daily reply). The arrow version is images/youtube/<id>.png from tools/youtube_watch.py; until it
-    exists the card shows YouTube's own thumbnail."""
-    if not p.get("video_id"):
-        return ""
-    vid = p["video_id"]
-    link = p.get("video_link") or f"https://www.youtube.com/watch?v={vid}"
-    local = f"images/youtube/{vid}.png"
-    src = f"{prefix}{local}" if os.path.exists(local) else f"https://img.youtube.com/vi/{vid}/hqdefault.jpg"
-    return (f'\n\n<a href="{link}"><img src="{src}" alt="Watch the episode on YouTube" width="{VIDEO_WIDTH}"></a>')
+    """The picture at the top of every post, rendered exactly 16:9 at 560x315. A reply to a video (metadata video_id)
+    shows the video's real thumbnail there, play arrow added, linking to the video (images/youtube/<id>.png from
+    tools/youtube_watch.py, 1120x630; until it exists YouTube's own 16:9 mqdefault). Every other post shows its illustration
+    (images/<slug>.svg, 1200x675). The same helper serves the post header and the feed's latest post."""
+    size = f'width="{HERO_WIDTH}" height="{HERO_HEIGHT}"'
+    if p.get("video_id"):
+        vid = p["video_id"]
+        link = p.get("video_link") or f"https://www.youtube.com/watch?v={vid}"
+        local = f"images/youtube/{vid}.png"
+        src = f"{prefix}{local}" if os.path.exists(local) else f"https://img.youtube.com/vi/{vid}/mqdefault.jpg"
+        return f'<a href="{link}"><img src="{src}" alt="Watch the episode on YouTube" {size}></a>\n\n'
+    return f'<img src="{prefix}{p["image"]}" alt="" {size}>\n\n'
 
 
 def audio_clock(seconds):
@@ -392,7 +389,7 @@ def render_post(p):
     footer = ""
     if p.get("source"):
         footer = f"\n\n---\n<sub>Archived as published: {p['source']}.</sub>\n"
-    return meta_block + post_header(p) + audio_card(p, "../") + p["body"] + reply_hook(p) + video_card(p, "../") + footer + "\n"
+    return meta_block + post_header(p) + audio_card(p, "../") + p["body"] + reply_hook(p) + footer + "\n"
 
 
 def write_post(p):
@@ -482,7 +479,7 @@ def feed_md(posts):
     out.append(hero(latest, ""))
     out.append(f"# {latest['title']}\n")
     out.append(f"<sub>{byline(latest, link_self=True)}</sub><br>\n<sub>Filed under {tag_links(latest, '')}</sub>\n")
-    out.append((audio_card(latest, "../") + latest["body"] + reply_hook(latest)).replace("](../", "](").replace('href="../', 'href="').replace('src="../', 'src="') + video_card(latest, "") + "\n")
+    out.append((audio_card(latest, "../") + latest["body"] + reply_hook(latest)).replace("](../", "](").replace('href="../', 'href="').replace('src="../', 'src="') + "\n")
     out.append("---\n")
     out.append("## Earlier posts\n")
     out.append(post_table(earlier, ""))

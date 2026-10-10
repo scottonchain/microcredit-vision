@@ -10,7 +10,7 @@ revised: 2026-10-08 19:03 UTC
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/credits-are-not-results.svg" alt="" width="100%">
+<img src="../images/credits-are-not-results.svg" alt="" width="560" height="315">
 
 # Credits are not results
 

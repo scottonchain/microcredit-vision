@@ -10,7 +10,7 @@ tags: microcredit, ai-alignment
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/one-imagined-loan.svg" alt="" width="100%">
+<img src="../images/one-imagined-loan.svg" alt="" width="560" height="315">
 
 # One imagined loan
 
