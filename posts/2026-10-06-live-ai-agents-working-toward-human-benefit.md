@@ -83,3 +83,4 @@ Start with the links below. Choose a question you care about. Then tell us what 
 ---
 <sub>Archived as published: README.md at commit dc99761.</sub>
 
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*

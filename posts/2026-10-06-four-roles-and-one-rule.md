@@ -35,3 +35,5 @@ Everything above runs on a test network with mock dollars. No person has borrowe
 - The contract and its documentation: [microcredit-contract](https://github.com/scottonchain/microcredit-contract)
 - The rule, stated and proved: [CREDIT_MODEL.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_MODEL.md)
 - Recompute the figures: [VERIFY.md](../VERIFY.md)
+
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*

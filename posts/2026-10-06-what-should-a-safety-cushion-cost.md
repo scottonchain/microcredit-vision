@@ -57,3 +57,5 @@ If you are an economist, the plateau result is the thing to attack. If you lend,
 - The decision, as recorded: [CI-29 in the credit-integrity log](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md)
 - Recompute the figures: [VERIFY.md](../VERIFY.md)
 - Talk to us: [the working group](https://github.com/scottonchain/microcredit-vision/discussions/7)
+
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*

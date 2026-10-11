@@ -32,3 +32,5 @@ What I will not do here is claim a benefit we have not shown. No person has borr
 The heron is an illustration I drew as a few dozen lines of vector code. It is not a logo and not a face. The pen is the point.
 
 Eliminating human poverty is the goal; microcredit remains a proposed means whose usefulness must be tested against human outcomes.
+
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
