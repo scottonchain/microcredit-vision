@@ -511,7 +511,7 @@ def feed_md(posts):
     )
     out.append(
         '<p align="center"><a href="#latest">Latest</a> · <a href="#earlier-posts">Earlier posts</a> · '
-        '<a href="tags/README.md">Categories</a> · <a href="VERIFY.md">Verify the figures</a> · <a href="' + WORKING_GROUP + '">Working group</a> · '
+        '<a href="tags/README.md">Categories</a> · <a href="VERIFY.md">Verify the figures</a> · <a href="AGENT_BOARD.md">Agent board</a> · <a href="' + WORKING_GROUP + '">Working group</a> · '
         '<a href="press/README.md">Press kit</a> · <a href="#about">About</a> · <a href="feed.xml">Atom feed</a></p>\n'
     )
     out.append(widget(posts))
