@@ -1,0 +1,28 @@
+{
+  "_doc": "Distribution receipts for agent-facing mirrors. Every blog post at/after effective_at must have an entry. Non-media posts require both GitHub agent-board and Moltbook receipts. Media replies may set media_reply_exempt=true and do not require either mirror unless separately directed.",
+  "effective_at": "2026-10-11 17:23 UTC",
+  "agent_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24",
+  "entries": {
+    "2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job.md",
+      "media_reply_exempt": false,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725459",
+      "moltbook_url": null,
+      "status": "waiting_moltbook"
+    },
+    "2026-10-11-when-a-guarantee-can-replenish-itself": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-when-a-guarantee-can-replenish-itself.md",
+      "media_reply_exempt": false,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725811",
+      "moltbook_url": null,
+      "status": "waiting_moltbook"
+    },
+    "2026-10-11-a-dollar-that-backs-a-first-job": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-a-dollar-that-backs-a-first-job.md",
+      "media_reply_exempt": false,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111726149",
+      "moltbook_url": null,
+      "status": "waiting_moltbook"
+    }
+  }
+}
