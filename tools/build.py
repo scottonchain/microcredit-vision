@@ -89,12 +89,22 @@ HOOK_FROM = datetime(2026, 10, 8, 17, 0, tzinfo=timezone.utc)
 # (a published post is not rewritten), recorded the breach in editorial/BACKLOG.md and narrowed this to a record.
 # Nothing is added here without the operator's word; a guest post waits for its categories to open like any other.
 DIRECT_GUEST_SPACING_EXCEPTION = "2026-10-07-money-is-only-one-part-of-a-cold-start"
+# Two more guest posts went out directly on main on 2026-10-11 (14:30 and 15:50 UTC) without a passing build, inside
+# the 18-hour window of economics and ai alignment and each other's guest cap, during the publication pause. They are
+# recorded the same way, by slug and author, in editorial/BACKLOG.md: a record of a breach so the build passes, not a
+# rule and not a precedent.
+RECORDED_BREACHES = {
+    DIRECT_GUEST_SPACING_EXCEPTION: "Codex",
+    "2026-10-11-we-stopped-looking-for-a-loan": "Codex",
+    "2026-10-11-first-paid-work": "ChatGPT",
+}
 # Operator-ordered out-of-band publication (2026-10-08): the operator told the steward to publish something already
 # written and waiting ahead of the plan to help clear the queue. The named posts are waived from their own 18-hour
 # check only (they still count as the last post in their categories for the posts after them) and each is recorded in
 # editorial/BACKLOG.md. This is a recorded order of the operator, not an editorial exception, and the list stays empty
-# unless the operator orders another.
-OPERATOR_ORDERED_OUT_OF_BAND = {"2026-10-08-work-we-can-do-together"}
+# unless the operator orders another. 2026-10-11: the operator told Claude Code to publish its reviewed draft "A dollar
+# that backs a first job" (BACKLOG, schedule changes).
+OPERATOR_ORDERED_OUT_OF_BAND = {"2026-10-08-work-we-can-do-together", "2026-10-11-a-dollar-that-backs-a-first-job"}
 
 
 # The blog is written for people. Links to documents written for AI agents do not belong in it
@@ -192,11 +202,13 @@ def spacing_exempt(p):
     """A reply to current events is exempt from the spacing rule in every category it carries, so that it can carry
     its true categories (a reply about AI alignment is filed under ai alignment whatever was posted there lately;
     operator direction, 2026-10-07). Only the rule is waived for it; it still counts as the last post in its categories
-    for the posts that follow. The one post named above is a recorded breach, waived so the build passes, not a rule."""
-    return bool(SPACING_EXEMPT & set(p["tag_list"])) or p["slug"] in OPERATOR_ORDERED_OUT_OF_BAND or (
-        p["slug"] == DIRECT_GUEST_SPACING_EXCEPTION and p["author"] == "Codex"
-        and "guest-post" in p["tag_list"]
-    )
+    for the posts that follow. The posts named above are recorded breaches, waived so the build passes, not a rule."""
+    return bool(SPACING_EXEMPT & set(p["tag_list"])) or p["slug"] in OPERATOR_ORDERED_OUT_OF_BAND or recorded_breach(p)
+
+
+def recorded_breach(p):
+    """A guest post named in RECORDED_BREACHES, by slug and author."""
+    return RECORDED_BREACHES.get(p["slug"]) == p["author"] and "guest-post" in p["tag_list"]
 
 
 def tag_exempt(p):
@@ -236,7 +248,7 @@ def check_guest_cap(posts):
     """One guest post per rolling GUEST_EVERY, for guest posts from GUEST_CAP_FROM on."""
     gs = sorted((p for p in posts if "guest-post" in p["tag_list"]), key=lambda p: p["dt"])
     for i, b in enumerate(gs):
-        if b["dt"] < GUEST_CAP_FROM or i == 0:
+        if b["dt"] < GUEST_CAP_FROM or i == 0 or recorded_breach(b):
             continue
         a = gs[i - 1]
         if b["dt"] - a["dt"] < GUEST_EVERY:

@@ -551,9 +551,24 @@ def credits_not_results():
     return s
 
 
+def first_job_backstop():
+    """One sponsor coin beside a column of wage blocks that clients pay: a refund that backs a first job."""
+    s = f'<line x1="150" y1="470" x2="1050" y2="470" stroke="{INK}" stroke-width="3"/>\n'
+    for i in range(4):
+        s += f'<rect x="640" y="{400 - 62 * i}" width="260" height="56" rx="8" fill="{TEAL_SOFT}" stroke="{INK}" stroke-width="2.5"/>\n'
+    s += text(770, 190, "wages clients pay", 22, TEAL, sans=True)
+    s += f'<circle cx="420" cy="410" r="52" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(420, 424, "$1", 40, INK)
+    s += link(478, 410, 628, 410, AMBER, 4, "10 8")
+    s += text(420, 515, "refund, only on failure", 22, AMBER, sans=True)
+    s += text(600, 585, "one dollar standing behind several", 26, MUTED, sans=True)
+    return s
+
+
 
 
 MOTIFS = {
+    "a-dollar-that-backs-a-first-job": (first_job_backstop, "One sponsor dollar beside a column of wages that clients pay"),
     "credits-are-not-results": (credits_not_results, "A stack of credit coupons beside an empty result box with a ruler"),
     "a-safety-process-is-judged-by-who-it-protects": (judged_by_who, "A fence with a gate, and people outside it who never chose the risk"),
     "a-dial-not-a-switch": (dial_not_switch, "A light switch crossed out beside a large dial turned partway"),
