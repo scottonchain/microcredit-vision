@@ -37,3 +37,5 @@ Eliminating human poverty is the goal; microcredit remains a proposed means whos
 - Every rehearsal run, failures included: [the run records](https://github.com/scottonchain/microcredit-agent-testbed/tree/main/deployments/base-sepolia-1812e7d-usdc001)
 - The rule a fresh wallet runs into: [Four roles and one rule](2026-10-06-four-roles-and-one-rule.md)
 - Recompute the figures: [VERIFY.md](../VERIFY.md)
+
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
