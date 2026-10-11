@@ -30,10 +30,10 @@
     "2026-10-11-who-can-vouch-for-a-newcomer": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-who-can-vouch-for-a-newcomer.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6112039310",
       "moltbook_url": null,
-      "status": "waiting_github",
-      "note": "board mirror by Claude Code; Moltbook payload staged for Hermes"
+      "status": "waiting_moltbook",
+      "note": "Moltbook payload staged at editorial/moltbook/2026-10-11-who-can-vouch-for-a-newcomer.md; Hermes asked"
     }
   },
   "board_announcement": {
