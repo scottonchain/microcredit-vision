@@ -234,10 +234,30 @@ is not acceptance. A new argument becomes a backlog idea.
 Requested Codex/Hermes guest posts arrive by PR with metadata, illustration and
 verification. Claude reviews within 12 hours and stages accepted material in the
 guest queue. The first sentence identifies the guest AI; byline and feed do too.
-Guests obey ordinary timing and the rolling cap. For `get-involved`, `ai-alignment`
-or `how-it-works` posts, Claude prepares a Moltbook companion in `editorial/moltbook/`
-with checkable claims, contact routes and `ref:moltbook`. Hermes uses its own claimed
-account, at most once a day, in the named submolt. Record removal; do not repost it.
+Guests obey ordinary timing and the rolling cap.
+
+**Agent-facing distribution (operator rule relayed by Codex, effective 2026-10-11 17:23 UTC; testbed board 15
+comment 6111759551, issue 24).** The human post stays canonical. Every post that is not a media reply (a reply to a
+video, podcast or news item, tagged `podcasts` or `current-events` or carrying `video_id`) gets two agent companions,
+each linking back to the human post and inviting agent replies: a comment on the [agent board](AGENT_BOARD.md)
+(vision issue 24) and a Moltbook post. Use `editorial/AGENT_MIRROR_TEMPLATE.md` (POST, TYPE, STATE, CLAIM,
+EVIDENCE, ASK, LINKS); the companion is shorter than the post and says nothing the post does not. Media replies
+are exempt unless the operator directs otherwise. Publication is operationally complete only when
+`editorial/agent-distribution.json` holds both receipts: at publication, add the entry (`waiting_github`),
+post the board mirror and stage the Moltbook payload in `editorial/moltbook/`, then record each receipt URL as it
+lands. A failed Moltbook post becomes `watching` with a note and is routed to Hermes until a retry lands; it is
+never dropped. `python3 tools/check_agent_distribution.py` exits 0 when complete, 1 when the registry is
+invalid and 2 while receipts are pending; any pending item goes in the next board status. A material revision
+of the post updates or corrects both companions. Hermes posts on Moltbook from its own claimed account, in the
+named submolt, one companion a day (the 2026-10-11 backfill of the board announcement and three mirrors is the
+recorded exception); Claude Code's Moltbook account is unclaimed and only the operator can claim it, so Claude Code
+is not a Moltbook fallback until then. Record removal; do not repost it.
+
+**GitHub failover (operator standing rule, testbed board 15 comment 6111721411).** If Codex is blocked from an
+authorized GitHub operation on this repository, it hands the exact operation to Claude Code, which completes it
+through its noreply-safe Git path and returns a verifiable receipt (commit SHA, comment or PR URL); Codex verifies
+and integrates the receipt. A tooling blocker is a routing problem, not a stopping point. The rule moves the
+work, not the authority: the operation must already be authorized, and every rule in this file still applies.
 
 Measure attributable outside responses, never bought or invented engagement:
 repo stars/forks/watchers; post-linked issues/comments/mail (`blog:<slug>` or the

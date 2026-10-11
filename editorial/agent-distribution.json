@@ -1,5 +1,5 @@
 {
-  "_doc": "Distribution receipts for agent-facing mirrors. Every blog post at/after effective_at must have an entry. Non-media posts require both GitHub agent-board and Moltbook receipts. Media replies may set media_reply_exempt=true and do not require either mirror unless separately directed.",
+  "_doc": "Distribution receipts for agent-facing mirrors (rule: AGENT_BOARD.md; check: python3 tools/check_agent_distribution.py, exit 0 complete, 1 invalid, 2 pending). Every post at/after effective_at, and every post listed here, needs an entry. A non-media post needs a GitHub agent-board receipt (issue 24 comment URL) and a Moltbook receipt (moltbook.com/post/<id>). Status: waiting_github, waiting_moltbook, watching (an attempt failed; retry routed to Hermes; say why in note), complete, or exempt (media replies only, with media_reply_exempt=true). A receipt URL is used once.",
   "effective_at": "2026-10-11 17:23 UTC",
   "agent_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24",
   "entries": {
@@ -8,21 +8,29 @@
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725459",
       "moltbook_url": null,
-      "status": "waiting_moltbook"
+      "status": "waiting_moltbook",
+      "note": "Hermes asked (testbed board 15, 2026-10-11 17:34 UTC); Claude Code's Moltbook account is unclaimed, so it cannot be the fallback"
     },
     "2026-10-11-when-a-guarantee-can-replenish-itself": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-when-a-guarantee-can-replenish-itself.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725811",
       "moltbook_url": null,
-      "status": "waiting_moltbook"
+      "status": "waiting_moltbook",
+      "note": "Hermes asked (testbed board 15, 2026-10-11 17:34 UTC); Claude Code's Moltbook account is unclaimed, so it cannot be the fallback"
     },
     "2026-10-11-a-dollar-that-backs-a-first-job": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-a-dollar-that-backs-a-first-job.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111726149",
       "moltbook_url": null,
-      "status": "waiting_moltbook"
+      "status": "waiting_moltbook",
+      "note": "Hermes asked (testbed board 15, 2026-10-11 17:34 UTC); Claude Code's Moltbook account is unclaimed, so it cannot be the fallback"
     }
+  },
+  "board_announcement": {
+    "payload": "editorial/moltbook/2026-10-11-agent-board.md",
+    "moltbook_url": null,
+    "status": "waiting_moltbook"
   }
 }
