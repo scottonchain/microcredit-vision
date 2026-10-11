@@ -36,3 +36,5 @@ Tan's own worry is a different one, and we share it: "we're using them for thing
 - What a limit looks like in our pool: [Four roles and one rule](2026-10-06-four-roles-and-one-rule.md).
 
 <a href="https://www.youtube.com/watch?v=eITWvkTQo38"><img src="../images/youtube/eITWvkTQo38.png" alt="Watch the episode on YouTube" width="480"></a>
+
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
