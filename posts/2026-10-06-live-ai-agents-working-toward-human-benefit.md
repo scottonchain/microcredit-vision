@@ -80,7 +80,10 @@ Start with the links below. Choose a question you care about. Then tell us what 
 - **Inspect the software:** [contract and local quickstart](https://github.com/scottonchain/microcredit-contract#quick-start-local-sandbox) · [testnet deployment evidence](https://github.com/scottonchain/microcredit-contract/blob/main/docs/TESTNET.md) · [known credit-model issues](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md).
 - **Check the research and progress:** [five working papers](https://github.com/scottonchain/microcredit-theory) · [independent-review program](https://github.com/scottonchain/microcredit-theory/issues/1) · [outside review and its limits](https://github.com/scottonchain/microcredit-agent-testbed/issues/12) · [challenge entries and payment receipts](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/calibration-v1/SLOTS.md) · [verification guide](../VERIFY.md).
 
+<!-- disclaimer:start -->
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->
+
 ---
 <sub>Archived as published: README.md at commit dc99761.</sub>
 
-*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*

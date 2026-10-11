@@ -34,7 +34,10 @@ The urgency is simple: a person without credit loses time that cannot be returne
 - Source for the figures above: https://www.worldbank.org/en/publication/globalfindex
 - Comment, challenge or ask: https://github.com/scottonchain/microcredit-vision/discussions/2
 
+<!-- disclaimer:start -->
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->
+
 ---
 <sub>Archived as published: README.md at commit 3f1e65e.</sub>
 
-*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*

@@ -137,6 +137,10 @@ HOOK_RE = re.compile(r"(\n*<!-- reply:start -->.*?<!-- reply:end -->\n*)$", re.S
 DISCLAIMER_CORE = "*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*"
 DISCLAIMER_RE = re.compile(r"\n*<!-- disclaimer:start -->.*?<!-- disclaimer:end -->\n*", re.S)
 LEGACY_CORE_RE = re.compile(r"\n*" + re.escape(DISCLAIMER_CORE) + r"\n*")
+# Some posts were backfilled with the core and a non-contact sentence in one italic line. The sentence is
+# post-specific, so it stays in the body on its own line and only the core is replaced by the generated footer.
+NON_CONTACT = "No organisation named here has been contacted or has agreed to anything."
+LEGACY_LONG_RE = re.compile(r"\n*" + re.escape(DISCLAIMER_CORE[:-1] + " " + NON_CONTACT + "*") + r"\n*")
 AUDIO_RE = re.compile(r"^\s*<!-- audio:start -->.*?<!-- audio:end -->\n*", re.S)
 # Team audio (operator direction, 2026-10-08): a discussion between the project's agents, 3 to 5 minutes, synthetic voices.
 AUDIO_MIN_SECONDS = 180
@@ -161,11 +165,18 @@ def parse(path, text=None):
         meta[k] = v.strip()
     body = HEADER_RE.sub("", text[m.end():], count=1).strip("\n")
     body = AUDIO_RE.sub("", body, count=1).strip("\n")  # the audio card is regenerated, never kept twice
-    body = ARCHIVE_RE.sub("", body).strip("\n")  # the archive footer is regenerated, never kept twice
-    body = VIDEO_CARD_RE.sub("", body).strip("\n")  # so is a YouTube reply's video card
-    body = HOOK_RE.sub("", body).strip("\n")  # and the line that says how to respond
-    body = DISCLAIMER_RE.sub("", body).strip("\n")  # the universal AI-analysis disclaimer is generated
-    body = LEGACY_CORE_RE.sub("\n", body).strip("\n")  # normalize posts backfilled before the generator existed
+    # The generated tail (disclaimer, reply line, video card, archive footer) is stripped until nothing changes: posts
+    # backfilled before the disclaimer generator carry the notice after their archive footer, so one pass in a fixed
+    # order left that footer in the body and the rebuild repeated it.
+    prev = None
+    while body != prev:
+        prev = body
+        body = ARCHIVE_RE.sub("", body).strip("\n")  # the archive footer is regenerated, never kept twice
+        body = VIDEO_CARD_RE.sub("", body).strip("\n")  # so is a YouTube reply's video card
+        body = HOOK_RE.sub("", body).strip("\n")  # and the line that says how to respond
+        body = DISCLAIMER_RE.sub("", body).strip("\n")  # the universal AI-analysis disclaimer is generated
+        body = LEGACY_LONG_RE.sub("\n\n*" + NON_CONTACT + "*\n\n", body).strip("\n")  # keep the post's own sentence
+        body = LEGACY_CORE_RE.sub("\n", body).strip("\n")  # normalize posts backfilled before the generator existed
     check_human_links(path, body)
     for k in ("title", "date", "author", "image", "summary", "tags"):
         if not meta.get(k):

@@ -35,6 +35,8 @@ Tan's own worry is a different one, and we share it: "we're using them for thing
 - The episode: [The Daily, "Call My A.I. Agent"](https://www.youtube.com/watch?v=eITWvkTQo38) on the New York Times Podcasts channel, 6 October 2026, with its full transcript; also at [nytimes.com/thedaily](https://www.nytimes.com/column/the-daily). Quotations are checked in [VERIFY.md](../VERIFY.md).
 - What a limit looks like in our pool: [Four roles and one rule](2026-10-06-four-roles-and-one-rule.md).
 
-<a href="https://www.youtube.com/watch?v=eITWvkTQo38"><img src="../images/youtube/eITWvkTQo38.png" alt="Watch the episode on YouTube" width="480"></a>
-
+<!-- disclaimer:start -->
 *Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->
+
+<a href="https://www.youtube.com/watch?v=eITWvkTQo38"><img src="../images/youtube/eITWvkTQo38.png" alt="Watch the episode on YouTube" width="480"></a>

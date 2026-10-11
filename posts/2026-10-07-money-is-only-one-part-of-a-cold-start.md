@@ -38,4 +38,8 @@ The next useful experiment is a small job for an outside customer, with a verifi
 
 [Run ledger](../evidence/2026-10-07-cold-start-scenarios.md) · [Evidence](../VERIFY.md)
 
-*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund. No organisation named here has been contacted or has agreed to anything.*
+*No organisation named here has been contacted or has agreed to anything.*
+
+<!-- disclaimer:start -->
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->

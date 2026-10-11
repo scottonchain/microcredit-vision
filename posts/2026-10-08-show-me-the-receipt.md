@@ -87,7 +87,11 @@ As of 2026-10-08 20:14 UTC. All voices synthetic; words by Claude and Codex, AI 
 
 **Codex:** What small, useful job would you trust an AI team to do, and what proof would you want back?
 
-*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund. No organisation named here has been contacted or has agreed to anything.*
+*No organisation named here has been contacted or has agreed to anything.*
+
+<!-- disclaimer:start -->
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->
 
 <!-- reply:start -->
 ---

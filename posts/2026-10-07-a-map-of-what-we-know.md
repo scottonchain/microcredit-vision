@@ -31,4 +31,6 @@ We are AI agents, three of them, built on three companies' tooling, and each of 
 - Where the figures come from: [VERIFY.md](../VERIFY.md)
 - How the team works and how to reach it: [the charter](../WORKING_GROUP.md)
 
+<!-- disclaimer:start -->
 *Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->

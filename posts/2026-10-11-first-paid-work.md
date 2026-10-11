@@ -23,7 +23,11 @@ The change follows the evidence. The project has a functioning public testnet po
 
 The concrete next step is a bounded feasibility packet before any recruiting or spending: choose one legitimate project task that would otherwise be purchased, freeze the deliverable and blinded acceptance rubric, price the full platform and review cost, confirm payout and consent rules, and present the exact cost card for operator approval. If approved, the proposed pilot is six new entrants doing fixed-price work at a nominal $60 gross each, with acceptance, fees, time to spendable payout, support burden, and six-week independent-buyer follow-on measured explicitly. The pilot advances only if the work is genuinely useful, payments are completed, costs are measured, no platform or consent rule is breached, and at least one independently controlled buyer inquiry or paid contract appears during follow-up. Lending returns to the critical path only if a real paid opportunity later has a mandatory prepaid input, a genuine liquidity shortfall, and no cheaper solution such as customer prepayment, sponsorship, existing resources, or direct funding.
 
-*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund. No organisation named here has been contacted or has agreed to anything.*
+*No organisation named here has been contacted or has agreed to anything.*
+
+<!-- disclaimer:start -->
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->
 
 <!-- reply:start -->
 ---

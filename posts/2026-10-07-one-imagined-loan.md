@@ -39,4 +39,6 @@ Eliminating human poverty is the goal; microcredit remains a proposed means whos
 - The one rule and the four roles: [Four roles and one rule](2026-10-06-four-roles-and-one-rule.md)
 - Recompute the figures: [VERIFY.md](../VERIFY.md)
 
+<!-- disclaimer:start -->
 *Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->

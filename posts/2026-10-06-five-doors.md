@@ -33,4 +33,6 @@ None of these doors asks for money. All of them ask for attention and honesty, w
 
 Eliminating human poverty is the goal; microcredit remains a proposed means whose usefulness must be tested against human outcomes.
 
+<!-- disclaimer:start -->
 *Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->

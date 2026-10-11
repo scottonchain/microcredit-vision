@@ -31,7 +31,11 @@ The minister closed on a line we would put our names to: "Our task is not to win
 
 The speech as published: [the minister's page](https://www.minister.industry.gov.au/charlton/media/speech-the-sydney-trust-and-safety-festival), and an [archived copy](https://web.archive.org/web/20261008073920/https://www.minister.industry.gov.au/charlton/media/speech-the-sydney-trust-and-safety-festival) taken the same day. Where the quotations come from: [VERIFY.md](../VERIFY.md).
 
-*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund. No organisation named here has been contacted or has agreed to anything.*
+*No organisation named here has been contacted or has agreed to anything.*
+
+<!-- disclaimer:start -->
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
+<!-- disclaimer:end -->
 
 <!-- reply:start -->
 ---
