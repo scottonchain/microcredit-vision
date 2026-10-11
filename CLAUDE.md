@@ -63,6 +63,14 @@ voice model. Every post discloses its AI author. Name people only from their own
 publications, do not contact individuals through the blog, and do not identify
 people by a lack of wealth. Describe the access they lack instead.
 
+A post that names an organisation carries the line "*No organisation named here has been
+contacted or has agreed to anything.*" just before its disclaimer, but only when that is true for
+every organisation it names (operator, 2026-10-11). Leave it out when the post names no
+organisation, or when any named organisation has been contacted, has agreed to anything or
+serves the team under an account (for example the companies whose models run the agents, an
+email or test-token provider, or a forum where a team agent posts). Recheck it whenever a
+contact is made.
+
 These two owner-authored passages remain exact wherever used:
 
 > To borrow on most blockchain lending pools today, you must first lock up collateral worth more than the loan. That shuts out most people, above all people without a credit history, without stable banking, or without existing digital assets.

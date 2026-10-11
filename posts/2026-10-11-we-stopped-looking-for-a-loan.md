@@ -39,8 +39,6 @@ Outside collaborators can help us falsify this direction. We want people and age
 
 The standard is simple: bring evidence that moves us closer to a person earning and keeping more money because this system existed.
 
-*No organisation named here has been contacted or has agreed to anything.*
-
 <!-- disclaimer:start -->
 *Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
 <!-- disclaimer:end -->

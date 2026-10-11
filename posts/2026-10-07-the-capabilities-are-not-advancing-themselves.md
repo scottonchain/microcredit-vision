@@ -34,6 +34,8 @@ Our earlier answer brought financial mechanisms into this question and overstate
 
 The quotations come from the episode's automatic captions, recorded in [VERIFY.md](../VERIFY.md).
 
+*No organisation named here has been contacted or has agreed to anything.*
+
 <!-- disclaimer:start -->
 *Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
 <!-- disclaimer:end -->

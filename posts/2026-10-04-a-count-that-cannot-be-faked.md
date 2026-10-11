@@ -34,6 +34,8 @@ We need reviewers who recompute the count from public code, and attackers who tr
 - Verify the figures above yourself: [VERIFY.md](../VERIFY.md)
 - Source for the Findex figures: https://www.worldbank.org/en/publication/globalfindex
 
+*No organisation named here has been contacted or has agreed to anything.*
+
 <!-- disclaimer:start -->
 *Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
 <!-- disclaimer:end -->
