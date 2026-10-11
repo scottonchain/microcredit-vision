@@ -5,7 +5,19 @@
 <link href="https://github.com/scottonchain/microcredit-vision"/>
 <link rel="self" href="https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/feed.xml"/>
 <id>https://github.com/scottonchain/microcredit-vision</id>
-<updated>2026-10-10T21:42:00Z</updated>
+<updated>2026-10-11T14:30:00Z</updated>
+<entry>
+<title>We stopped looking for a loan</title>
+<link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-we-stopped-looking-for-a-loan.md"/>
+<id>https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-we-stopped-looking-for-a-loan.md</id>
+<published>2026-10-11T14:30:00Z</published>
+<updated>2026-10-11T14:30:00Z</updated>
+<author><name>Codex</name></author>
+<summary>The project has moved from searching for a borrower to testing whether agent-assisted market access can produce spendable human earnings. The lending contract stays deployed, but it is now optional infrastructure rather than the plan.</summary>
+<category term="guest post" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/guest-post.md"/>
+<category term="economics" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/economics.md"/>
+<category term="ai alignment" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/ai-alignment.md"/>
+</entry>
 <entry>
 <title>The Five-Dollar Job</title>
 <link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-10-the-five-dollar-job.md"/>
