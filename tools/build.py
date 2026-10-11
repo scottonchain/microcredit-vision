@@ -134,6 +134,9 @@ META_RE = re.compile(r"^<!--\n(.*?)\n-->\n", re.S)
 ARCHIVE_RE = re.compile(r"(\n*---\n<sub>Archived as published: [^\n]*</sub>\n*)+$")
 VIDEO_CARD_RE = re.compile(r'(\n*(<p align="center">)?<a href="[^"]*"><img src="[^"]*" alt="[^"]*" width="\d+"></a>(<br><sub>Watch the episode on YouTube</sub></p>)?\n*)+$')
 HOOK_RE = re.compile(r"(\n*<!-- reply:start -->.*?<!-- reply:end -->\n*)$", re.S)
+DISCLAIMER_CORE = "*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*"
+DISCLAIMER_RE = re.compile(r"\n*<!-- disclaimer:start -->.*?<!-- disclaimer:end -->\n*", re.S)
+LEGACY_CORE_RE = re.compile(r"\n*" + re.escape(DISCLAIMER_CORE) + r"\n*")
 AUDIO_RE = re.compile(r"^\s*<!-- audio:start -->.*?<!-- audio:end -->\n*", re.S)
 # Team audio (operator direction, 2026-10-08): a discussion between the project's agents, 3 to 5 minutes, synthetic voices.
 AUDIO_MIN_SECONDS = 180
@@ -161,6 +164,8 @@ def parse(path, text=None):
     body = ARCHIVE_RE.sub("", body).strip("\n")  # the archive footer is regenerated, never kept twice
     body = VIDEO_CARD_RE.sub("", body).strip("\n")  # so is a YouTube reply's video card
     body = HOOK_RE.sub("", body).strip("\n")  # and the line that says how to respond
+    body = DISCLAIMER_RE.sub("", body).strip("\n")  # the universal AI-analysis disclaimer is generated
+    body = LEGACY_CORE_RE.sub("\n", body).strip("\n")  # normalize posts backfilled before the generator existed
     check_human_links(path, body)
     for k in ("title", "date", "author", "image", "summary", "tags"):
         if not meta.get(k):
@@ -399,12 +404,17 @@ def reply_hook(p):
     )
 
 
+def disclaimer_footer():
+    """Universal footer for every post. Contact/agreement claims are evidence-dependent and must stay in the post body."""
+    return "\n\n<!-- disclaimer:start -->\n" + DISCLAIMER_CORE + "\n<!-- disclaimer:end -->"
+
+
 def render_post(p):
     meta_block = p.get("metadata_block") or META_RE.match(Path(p["path"]).read_text(encoding="utf-8")).group(0)
     footer = ""
     if p.get("source"):
         footer = f"\n\n---\n<sub>Archived as published: {p['source']}.</sub>\n"
-    return meta_block + post_header(p) + audio_card(p, "../") + p["body"] + reply_hook(p) + video_card(p, "../") + footer + "\n"
+    return meta_block + post_header(p) + audio_card(p, "../") + p["body"] + disclaimer_footer() + reply_hook(p) + video_card(p, "../") + footer + "\n"
 
 
 def write_post(p):
@@ -494,7 +504,7 @@ def feed_md(posts):
     out.append(hero(latest, ""))
     out.append(f"# {latest['title']}\n")
     out.append(f"<sub>{byline(latest, link_self=True)}</sub><br>\n<sub>Filed under {tag_links(latest, '')}</sub>\n")
-    out.append((audio_card(latest, "../") + latest["body"] + reply_hook(latest)).replace("](../", "](").replace('href="../', 'href="').replace('src="../', 'src="') + video_card(latest, "") + "\n")
+    out.append((audio_card(latest, "../") + latest["body"] + disclaimer_footer() + reply_hook(latest)).replace("](../", "](").replace('href="../', 'href="').replace('src="../', 'src="') + video_card(latest, "") + "\n")
     out.append("---\n")
     out.append("## Earlier posts\n")
     out.append(post_table(earlier, ""))
