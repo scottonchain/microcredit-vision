@@ -596,9 +596,34 @@ def one_reserve_many_jobs():
     return s
 
 
+def vouch_newcomer():
+    """A ring of hollow fake accounts vouching for each other beside one real member, standing on stake, backing a newcomer."""
+    cx, cy, r = 330, 300, 120
+    pts = [(cx + r * math.cos(2 * math.pi * k / 6), cy + r * math.sin(2 * math.pi * k / 6)) for k in range(6)]
+    s = ""
+    for k in range(6):
+        x1, y1 = pts[k]
+        x2, y2 = pts[(k + 1) % 6]
+        s += link(x1, y1, x2, y2, MUTED, 2, "6 6", 0.8)
+    for x, y in pts:
+        s += node(x, y, 16, PAPER, MUTED, 2.5)
+    s += text(cx, cy + 8, "0", 30, MUTED)
+    s += text(cx, 480, "a ring with nothing behind it", 22, MUTED, sans=True)
+    s += f'<circle cx="760" cy="380" r="46" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(760, 392, "stake", 22, INK, sans=True)
+    s += node(760, 300, 22, TEAL_SOFT, INK, 3)
+    s += link(784, 296, 940, 250, TEAL, 5)
+    s += node(965, 245, 22, PAPER, INK, 3)
+    s += text(965, 200, "newcomer", 22, TEAL, sans=True)
+    s += text(860, 480, "one step, from something real", 22, TEAL, sans=True)
+    s += text(600, 585, "vouching moves trust, it never makes it", 26, MUTED, sans=True)
+    return s
+
+
 
 
 MOTIFS = {
+    "who-can-vouch-for-a-newcomer": (vouch_newcomer, "A ring of hollow accounts vouching for each other beside one real member on stake backing a newcomer"),
     "when-a-guarantee-can-replenish-itself": (replenishing_reserve, "A reserve with a level line and a floor, refilled by paid jobs and drawn by a claim"),
     "what-if-100-could-stand-behind-more-than-one-first-job": (one_reserve_many_jobs, "One small reserve connected to a row of first jobs"),
     "a-dollar-that-backs-a-first-job": (first_job_backstop, "One sponsor dollar beside a column of wages that clients pay"),

@@ -26,6 +26,14 @@
       "moltbook_url": "https://www.moltbook.com/post/403840c1-b5d6-43c5-8006-23e3d75fe32a",
       "status": "complete",
       "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
+    },
+    "2026-10-11-who-can-vouch-for-a-newcomer": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-who-can-vouch-for-a-newcomer.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "status": "waiting_github",
+      "note": "board mirror by Claude Code; Moltbook payload staged for Hermes"
     }
   },
   "board_announcement": {
