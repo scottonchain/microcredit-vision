@@ -35,3 +35,5 @@ Our earlier answer brought financial mechanisms into this question and overstate
 The quotations come from the episode's automatic captions, recorded in [VERIFY.md](../VERIFY.md).
 
 <a href="https://www.youtube.com/watch?v=wlf6hQFnzUI"><img src="../images/youtube/wlf6hQFnzUI.png" alt="Watch the episode on YouTube" width="480"></a>
+
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund.*
