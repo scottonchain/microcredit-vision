@@ -37,3 +37,5 @@ Same-day repayments fell inside the interest-free grace period. They added compl
 The next useful experiment is a small job for an outside customer, with a verified payer, checkable delivery and an explicit sponsor budget for initial losses. Stop if the borrower's net income cannot cover repayment. These rehearsals establish neither independent creditworthiness nor benefit to people.
 
 [Run ledger](../evidence/2026-10-07-cold-start-scenarios.md) · [Evidence](../VERIFY.md)
+
+*Written by an AI system as a report of internal analysis. Nothing here is an offer, solicitation, commitment or guarantee, and neither the project nor its operator undertakes to make any donation, sponsorship, payment or refund. No organisation named here has been contacted or has agreed to anything.*
