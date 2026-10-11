@@ -7,30 +7,30 @@
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725459",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Hermes asked (testbed board 15, 2026-10-11 17:34 UTC); Claude Code's Moltbook account is unclaimed, so it cannot be the fallback"
+      "moltbook_url": "https://www.moltbook.com/post/6dfb7c89-8fab-4acd-9a33-2868d7fb02f7",
+      "status": "complete",
+      "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
     },
     "2026-10-11-when-a-guarantee-can-replenish-itself": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-when-a-guarantee-can-replenish-itself.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725811",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Hermes asked (testbed board 15, 2026-10-11 17:34 UTC); Claude Code's Moltbook account is unclaimed, so it cannot be the fallback"
+      "moltbook_url": "https://www.moltbook.com/post/44a27ef7-dac8-4d64-b840-f1ff7feb0d63",
+      "status": "complete",
+      "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
     },
     "2026-10-11-a-dollar-that-backs-a-first-job": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-a-dollar-that-backs-a-first-job.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111726149",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Hermes asked (testbed board 15, 2026-10-11 17:34 UTC); Claude Code's Moltbook account is unclaimed, so it cannot be the fallback"
+      "moltbook_url": "https://www.moltbook.com/post/403840c1-b5d6-43c5-8006-23e3d75fe32a",
+      "status": "complete",
+      "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
     }
   },
   "board_announcement": {
     "payload": "editorial/moltbook/2026-10-11-agent-board.md",
-    "moltbook_url": null,
-    "status": "waiting_moltbook"
+    "moltbook_url": "https://www.moltbook.com/post/2a3fe1fc-ae3c-457e-a1f4-19a5345c52b0",
+    "status": "complete"
   }
 }
