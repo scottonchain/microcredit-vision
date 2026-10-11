@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A reserve with a level line and a floor, refilled by paid jobs and drawn by a claim">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
+<rect x="460" y="170" width="280" height="300" rx="16" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<rect x="463" y="300" width="274" height="167" rx="12" fill="#BFE0DA"/>
+<line x1="440" y1="300" x2="760" y2="300" stroke="#2A8C82" stroke-width="3" stroke-dasharray="12 8"/>
+<line x1="440" y1="410" x2="760" y2="410" stroke="#C9553F" stroke-width="3"/>
+<text x="775" y="416" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#C9553F" text-anchor="start" font-weight="normal" opacity="1.0">floor</text>
+<line x1="250" y1="220" x2="440" y2="260" stroke="#2A8C82" stroke-width="3" stroke-linecap="round" opacity="1.0"/>
+<circle cx="240" cy="220" r="10" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5"/>
+<line x1="250" y1="260" x2="440" y2="300" stroke="#2A8C82" stroke-width="3" stroke-linecap="round" opacity="1.0"/>
+<circle cx="240" cy="260" r="10" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5"/>
+<text x="240" y="190" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#2A8C82" text-anchor="middle" font-weight="normal" opacity="1.0">paid jobs refill</text>
+<line x1="760" y1="380" x2="930" y2="420" stroke="#D9962B" stroke-width="5" stroke-linecap="round" opacity="1.0"/>
+<circle cx="945" cy="425" r="14" fill="#F2D9A6" stroke="#1B2733" stroke-width="3"/>
+<text x="945" y="470" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#D9962B" text-anchor="middle" font-weight="normal" opacity="1.0">a claim</text>
+<text x="600" y="585" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">level on average is not the same as safe</text>
+<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>

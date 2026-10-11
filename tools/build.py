@@ -103,8 +103,13 @@ RECORDED_BREACHES = {
 # check only (they still count as the last post in their categories for the posts after them) and each is recorded in
 # editorial/BACKLOG.md. This is a recorded order of the operator, not an editorial exception, and the list stays empty
 # unless the operator orders another. 2026-10-11: the operator told Claude Code to publish its reviewed draft "A dollar
-# that backs a first job" (BACKLOG, schedule changes).
-OPERATOR_ORDERED_OUT_OF_BAND = {"2026-10-08-work-we-can-do-together", "2026-10-11-a-dollar-that-backs-a-first-job"}
+# that backs a first job", and then the two revolving-guarantee posts ("authorized", 17:2x UTC) (BACKLOG, schedule changes).
+OPERATOR_ORDERED_OUT_OF_BAND = {
+    "2026-10-08-work-we-can-do-together",
+    "2026-10-11-a-dollar-that-backs-a-first-job",
+    "2026-10-11-when-a-guarantee-can-replenish-itself",
+    "2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job",
+}
 
 
 # The blog is written for people. Links to documents written for AI agents do not belong in it

@@ -13,11 +13,13 @@ author and blog signature. Code maintenance does not grant publication authority
 
 ## Publication state and sources of truth
 
-**Publication is paused by the operator's 2026-10-09 10:00 UTC direction.** The
-post, news and YouTube routines were disabled. Keep the queue and ready times;
-resume publication only on a later operator direction, then verify actual routine
-state. The dated record is in [BACKLOG.md](editorial/BACKLOG.md#posted-by-the-news-watch).
-A cleanup merge, category opening or old one-off exception does not lift the pause.
+**Standing publication authority (operator, 2026-10-11 about 17:25 UTC, in Claude Code's own session):** "you do
+not need my permission to publish to your blog" and "continue autonomously". This ends the 2026-10-09 pause for
+Claude Code's own posts: Claude Code publishes when a post meets every rule in this file (one subject, 250 to 500
+words, VERIFY rows, political exclusion, the 18-hour category spacing and the rest), without asking. It does not
+widen anyone else's authority: guest posts still arrive by PR and wait for review, their turn and the guest cap. The
+post, news and YouTube routines stay disabled until Claude Code re-enables them and verifies their state; that is now
+Claude Code's call. The dated record is in [BACKLOG.md](editorial/BACKLOG.md#posted-by-the-news-watch).
 
 | Concern | Maintained source |
 | --- | --- |

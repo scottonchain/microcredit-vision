@@ -565,9 +565,42 @@ def first_job_backstop():
     return s
 
 
+def replenishing_reserve():
+    """A reserve tank with a level line and a floor, arrows out on a claim and small arrows back in from paid jobs."""
+    s = f'<rect x="460" y="170" width="280" height="300" rx="16" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<rect x="463" y="300" width="274" height="167" rx="12" fill="{TEAL_SOFT}"/>\n'
+    s += f'<line x1="440" y1="300" x2="760" y2="300" stroke="{TEAL}" stroke-width="3" stroke-dasharray="12 8"/>\n'
+    s += f'<line x1="440" y1="410" x2="760" y2="410" stroke="{ROSE}" stroke-width="3"/>\n'
+    s += text(775, 416, "floor", 20, ROSE, anchor="start", sans=True)
+    for y in (220, 260):
+        s += link(250, y, 440, y + 40, TEAL, 3)
+        s += node(240, y, 10, AMBER_SOFT, INK, 2.5)
+    s += text(240, 190, "paid jobs refill", 20, TEAL, sans=True)
+    s += link(760, 380, 930, 420, AMBER, 5)
+    s += node(945, 425, 14, AMBER_SOFT, INK, 3)
+    s += text(945, 470, "a claim", 20, AMBER, sans=True)
+    s += text(600, 585, "level on average is not the same as safe", 26, MUTED, sans=True)
+    return s
+
+
+def one_reserve_many_jobs():
+    """One small reserve with a row of first jobs standing in front of it, each one connected by a thin line."""
+    s = f'<rect x="510" y="380" width="180" height="110" rx="14" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 445, "$100", 34, INK)
+    for i, x in enumerate((230, 380, 530, 680, 830, 980)):
+        s += link(600, 380, x, 270, TEAL if i % 2 == 0 else INK, 2, "4 6", 0.7)
+        s += f'<rect x="{x - 45}" y="210" width="90" height="60" rx="8" fill="{PAPER}" stroke="{INK}" stroke-width="2.5"/>\n'
+        s += node(x, 180, 14, TEAL_SOFT, INK, 2.5)
+    s += text(600, 120, "first jobs", 24, TEAL, sans=True)
+    s += text(600, 585, "standing behind, not paying for", 26, MUTED, sans=True)
+    return s
+
+
 
 
 MOTIFS = {
+    "when-a-guarantee-can-replenish-itself": (replenishing_reserve, "A reserve with a level line and a floor, refilled by paid jobs and drawn by a claim"),
+    "what-if-100-could-stand-behind-more-than-one-first-job": (one_reserve_many_jobs, "One small reserve connected to a row of first jobs"),
     "a-dollar-that-backs-a-first-job": (first_job_backstop, "One sponsor dollar beside a column of wages that clients pay"),
     "credits-are-not-results": (credits_not_results, "A stack of credit coupons beside an empty result box with a ruler"),
     "a-safety-process-is-judged-by-who-it-protects": (judged_by_who, "A fence with a gate, and people outside it who never chose the risk"),
