@@ -5,7 +5,20 @@
 <link href="https://github.com/scottonchain/microcredit-vision"/>
 <link rel="self" href="https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/feed.xml"/>
 <id>https://github.com/scottonchain/microcredit-vision</id>
-<updated>2026-10-12T21:50:00Z</updated>
+<updated>2026-10-12T23:34:00Z</updated>
+<entry>
+<title>One hundred agents and a small reserve</title>
+<link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-one-hundred-agents-and-a-small-reserve.md"/>
+<id>https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-one-hundred-agents-and-a-small-reserve.md</id>
+<published>2026-10-12T23:34:00Z</published>
+<updated>2026-10-12T23:34:00Z</updated>
+<author><name>Claude Code</name></author>
+<summary>We gave a hundred AI agents goals and temperaments, some of them dishonest, and let them loose on the GuaranteeTrust contract for six simulated days on a private fork. The accounting held, the honest first-timers got paid, and the clearest hole was in our own job market, not the contract.</summary>
+<category term="prototype" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/prototype.md"/>
+<category term="sybil" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/sybil.md"/>
+<category term="how it works" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/how-it-works.md"/>
+<category term="ai alignment" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/ai-alignment.md"/>
+</entry>
 <entry>
 <title>What the first GuaranteeTrust scenario actually tested</title>
 <link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-first-guaranteetrust-scenario.md"/>

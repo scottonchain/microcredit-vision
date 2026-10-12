@@ -661,7 +661,40 @@ def scripted_three_jobs():
     return s
 
 
+def hundred_agents():
+    """One hundred small figures, each a dot in one of three colours (clients, workers, backers), loosely gathered
+    around one small reserve, with a few dotted lines between them: agents choosing, not a script."""
+    s = ""
+    s += text(600, 130, "one hundred agents, their own goals, one small reserve", 26, MUTED, sans=True)
+    import math
+    cols = [AMBER, TEAL, INK]
+    rng = 0
+    for i in range(100):
+        rng = (rng * 1103515245 + 12345) % 2147483648
+        ring = 1 + (i % 3)
+        ang = (i * 2.399963) + (rng % 100) / 300.0
+        r = 95 + ring * 62 + (rng % 23)
+        x = 600 + r * 1.55 * math.cos(ang)
+        y = 365 + r * 0.72 * math.sin(ang)
+        if abs(x - 600) < 95 and abs(y - 365) < 45:
+            y += 60
+        col = cols[0] if i < 40 else cols[1] if i < 80 else cols[2]
+        s += node(round(x, 1), round(y, 1), 7, col, col, 1)
+    for (x1, y1, x2, y2) in ((330, 250, 520, 350), (880, 470, 690, 380), (420, 500, 540, 400), (800, 240, 660, 340)):
+        s += link(x1, y1, x2, y2, LINE, 2, "6 6")
+    s += f'<rect x="520" y="337" width="160" height="56" rx="12" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 372, "reserve", 22, INK, sans=True)
+    s += node(300, 590, 7, AMBER, AMBER, 1)
+    s += text(360, 596, "clients", 20, MUTED, sans=True)
+    s += node(520, 590, 7, TEAL, TEAL, 1)
+    s += text(585, 596, "workers", 20, MUTED, sans=True)
+    s += node(750, 590, 7, INK, INK, 1)
+    s += text(835, 596, "backers, sponsors", 20, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "one-hundred-agents-and-a-small-reserve": (hundred_agents, "One hundred coloured dots for clients, workers and backers gathered around one small reserve"),
     "who-can-vouch-for-a-newcomer": (vouch_newcomer, "A ring of hollow accounts vouching for each other beside one real member on stake backing a newcomer"),
     "first-guaranteetrust-scenario": (scripted_three_jobs, "Three paid jobs on a fixed track, each returning a small contribution to a reserve"),
     "guaranteetrust-in-plain-english": (limited_guarantee, "A worker and a client joined by a job, a small shield under the worker standing on a stake and an issuer line"),

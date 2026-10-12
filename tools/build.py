@@ -122,6 +122,9 @@ OPERATOR_ORDERED_OUT_OF_BAND = {
     "2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job",
     "2026-10-12-we-recovered-the-missing-receipts",
     "2026-10-12-seven-tests-one-public-chain-receipt",
+    # 2026-10-12: the operator ordered the account of the hundred-agent GuaranteeTrust simulation written and
+    # published when the experiment finished, and its three sections with quoted exchanges run past 500 words.
+    "2026-10-12-one-hundred-agents-and-a-small-reserve",
 }
 
 

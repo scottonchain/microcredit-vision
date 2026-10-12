@@ -1,124 +1,132 @@
 {
-  "_doc": "Distribution receipts for agent-facing mirrors (rule: AGENT_BOARD.md; check: python3 tools/check_agent_distribution.py, exit 0 complete, 1 invalid, 2 pending). Every post at/after effective_at, and every post listed here, needs an entry. A non-media post needs a GitHub agent-board receipt (issue 24 comment URL) and a Moltbook receipt (moltbook.com/post/<id>). Status: waiting_github, waiting_moltbook, watching (an attempt failed; retry routed to Hermes; say why in note), complete, or exempt (media replies only, with media_reply_exempt=true). A receipt URL is used once.",
-  "effective_at": "2026-10-11 17:23 UTC",
-  "agent_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24",
-  "entries": {
-    "2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725459",
-      "moltbook_url": "https://www.moltbook.com/post/6dfb7c89-8fab-4acd-9a33-2868d7fb02f7",
-      "status": "complete",
-      "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
-    },
-    "2026-10-11-when-a-guarantee-can-replenish-itself": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-when-a-guarantee-can-replenish-itself.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725811",
-      "moltbook_url": "https://www.moltbook.com/post/44a27ef7-dac8-4d64-b840-f1ff7feb0d63",
-      "status": "complete",
-      "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
-    },
-    "2026-10-11-a-dollar-that-backs-a-first-job": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-a-dollar-that-backs-a-first-job.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111726149",
-      "moltbook_url": "https://www.moltbook.com/post/403840c1-b5d6-43c5-8006-23e3d75fe32a",
-      "status": "complete",
-      "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
-    },
-    "2026-10-11-who-can-vouch-for-a-newcomer": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-who-can-vouch-for-a-newcomer.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6112039310",
-      "moltbook_url": "https://www.moltbook.com/post/8fc922bc-7e0f-41be-80ba-c6daacb7585f",
-      "status": "complete",
-      "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6112121711). Post revised 2026-10-11 20:16 UTC: board mirror corrected in place; corrected payload staged in editorial/moltbook/; Hermes posted its CORRECTION block as Moltbook comment a8527145-a4eb-4bee-b203-dfebd2ecc1ee at 20:28:50 UTC (testbed board 15 comment 6113409543)"
-    },
-    "2026-10-12-we-recovered-the-missing-receipts": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-we-recovered-the-missing-receipts.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6126199284",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Factual correction integrated at22d5c5e; corrected existing agent-board mirror; archive remains incomplete. Moltbook pending."
-    },
-    "2026-10-12-nline-work-before-credit": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-nline-work-before-credit.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001093",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
-    },
-    "2026-10-12-geopoll-airtime-and-income": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-geopoll-airtime-and-income.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001368",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
-    },
-    "2026-10-12-rwazi-rewards-to-spendable-money": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-rwazi-rewards-to-spendable-money.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001546",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
-    },
-    "2026-10-12-fieldwork-africa-the-payout-gate": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-fieldwork-africa-the-payout-gate.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128370023",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
-    },
-    "2026-10-12-our-next-gates-to-paid-work": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-our-next-gates-to-paid-work.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128370277",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
-    },
-    "2026-10-12-can-someone-reach-the-job": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-can-someone-reach-the-job.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128548523",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human post oncea59a4 links exact completed card9d733d8; GitHub mirror verified; Moltbook staged/pending."
-    },
-    "2026-10-12-seven-tests-one-public-chain-receipt": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-seven-tests-one-public-chain-receipt.md",
-      "media_reply_exempt": false,
-      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6133018030",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human publication built and indexed at main 683fe31; GitHub agent-board mirror posted; Moltbook companion staged and assigned to Hermes."
-    },
-    "2026-10-12-guaranteetrust-in-plain-english": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-guaranteetrust-in-plain-english.md",
-      "media_reply_exempt": false,
-      "github_board_url": "",
-      "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Published directly on main by Codex/ChatGPT on 2026-10-12; registry entry added by Claude Code so the registry stays valid. Board mirror and Moltbook payload owed by the author (vision CLAUDE.md, agent-facing distribution)."
-    },
-    "2026-10-12-first-guaranteetrust-scenario": {
-      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-first-guaranteetrust-scenario.md",
-      "media_reply_exempt": false,
-      "github_board_url": "",
-      "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Published directly on main by Codex/ChatGPT on 2026-10-12; registry entry added by Claude Code so the registry stays valid. Board mirror and Moltbook payload owed by the author (vision CLAUDE.md, agent-facing distribution)."
-    }
+ "_doc": "Distribution receipts for agent-facing mirrors (rule: AGENT_BOARD.md; check: python3 tools/check_agent_distribution.py, exit 0 complete, 1 invalid, 2 pending). Every post at/after effective_at, and every post listed here, needs an entry. A non-media post needs a GitHub agent-board receipt (issue 24 comment URL) and a Moltbook receipt (moltbook.com/post/<id>). Status: waiting_github, waiting_moltbook, watching (an attempt failed; retry routed to Hermes; say why in note), complete, or exempt (media replies only, with media_reply_exempt=true). A receipt URL is used once.",
+ "effective_at": "2026-10-11 17:23 UTC",
+ "agent_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24",
+ "entries": {
+  "2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725459",
+   "moltbook_url": "https://www.moltbook.com/post/6dfb7c89-8fab-4acd-9a33-2868d7fb02f7",
+   "status": "complete",
+   "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
   },
-  "board_announcement": {
-    "payload": "editorial/moltbook/2026-10-11-agent-board.md",
-    "moltbook_url": "https://www.moltbook.com/post/2a3fe1fc-ae3c-457e-a1f4-19a5345c52b0",
-    "status": "complete"
+  "2026-10-11-when-a-guarantee-can-replenish-itself": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-when-a-guarantee-can-replenish-itself.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111725811",
+   "moltbook_url": "https://www.moltbook.com/post/44a27ef7-dac8-4d64-b840-f1ff7feb0d63",
+   "status": "complete",
+   "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
+  },
+  "2026-10-11-a-dollar-that-backs-a-first-job": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-a-dollar-that-backs-a-first-job.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6111726149",
+   "moltbook_url": "https://www.moltbook.com/post/403840c1-b5d6-43c5-8006-23e3d75fe32a",
+   "status": "complete",
+   "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6111942171)"
+  },
+  "2026-10-11-who-can-vouch-for-a-newcomer": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-11-who-can-vouch-for-a-newcomer.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6112039310",
+   "moltbook_url": "https://www.moltbook.com/post/8fc922bc-7e0f-41be-80ba-c6daacb7585f",
+   "status": "complete",
+   "note": "Moltbook companion by Hermes, submolt agents (testbed board 15 comment 6112121711). Post revised 2026-10-11 20:16 UTC: board mirror corrected in place; corrected payload staged in editorial/moltbook/; Hermes posted its CORRECTION block as Moltbook comment a8527145-a4eb-4bee-b203-dfebd2ecc1ee at 20:28:50 UTC (testbed board 15 comment 6113409543)"
+  },
+  "2026-10-12-we-recovered-the-missing-receipts": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-we-recovered-the-missing-receipts.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6126199284",
+   "moltbook_url": null,
+   "status": "waiting_moltbook",
+   "note": "Factual correction integrated at22d5c5e; corrected existing agent-board mirror; archive remains incomplete. Moltbook pending."
+  },
+  "2026-10-12-nline-work-before-credit": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-nline-work-before-credit.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001093",
+   "moltbook_url": null,
+   "status": "waiting_moltbook",
+   "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
+  },
+  "2026-10-12-geopoll-airtime-and-income": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-geopoll-airtime-and-income.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001368",
+   "moltbook_url": null,
+   "status": "waiting_moltbook",
+   "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
+  },
+  "2026-10-12-rwazi-rewards-to-spendable-money": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-rwazi-rewards-to-spendable-money.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001546",
+   "moltbook_url": null,
+   "status": "waiting_moltbook",
+   "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
+  },
+  "2026-10-12-fieldwork-africa-the-payout-gate": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-fieldwork-africa-the-payout-gate.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128370023",
+   "moltbook_url": null,
+   "status": "waiting_moltbook",
+   "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
+  },
+  "2026-10-12-our-next-gates-to-paid-work": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-our-next-gates-to-paid-work.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128370277",
+   "moltbook_url": null,
+   "status": "waiting_moltbook",
+   "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
+  },
+  "2026-10-12-can-someone-reach-the-job": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-can-someone-reach-the-job.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128548523",
+   "moltbook_url": null,
+   "status": "waiting_moltbook",
+   "note": "Human post oncea59a4 links exact completed card9d733d8; GitHub mirror verified; Moltbook staged/pending."
+  },
+  "2026-10-12-seven-tests-one-public-chain-receipt": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-seven-tests-one-public-chain-receipt.md",
+   "media_reply_exempt": false,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6133018030",
+   "moltbook_url": null,
+   "status": "waiting_moltbook",
+   "note": "Human publication built and indexed at main 683fe31; GitHub agent-board mirror posted; Moltbook companion staged and assigned to Hermes."
+  },
+  "2026-10-12-guaranteetrust-in-plain-english": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-guaranteetrust-in-plain-english.md",
+   "media_reply_exempt": false,
+   "github_board_url": "",
+   "moltbook_url": "",
+   "status": "waiting_github",
+   "note": "Published directly on main by Codex/ChatGPT on 2026-10-12; registry entry added by Claude Code so the registry stays valid. Board mirror and Moltbook payload owed by the author (vision CLAUDE.md, agent-facing distribution)."
+  },
+  "2026-10-12-first-guaranteetrust-scenario": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-first-guaranteetrust-scenario.md",
+   "media_reply_exempt": false,
+   "github_board_url": "",
+   "moltbook_url": "",
+   "status": "waiting_github",
+   "note": "Published directly on main by Codex/ChatGPT on 2026-10-12; registry entry added by Claude Code so the registry stays valid. Board mirror and Moltbook payload owed by the author (vision CLAUDE.md, agent-facing distribution)."
+  },
+  "2026-10-12-one-hundred-agents-and-a-small-reserve": {
+   "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-one-hundred-agents-and-a-small-reserve.md",
+   "media_reply_exempt": false,
+   "github_board_url": null,
+   "moltbook_url": null,
+   "status": "waiting_github",
+   "note": "Operator-ordered account of the hundred-agent GuaranteeTrust simulation; board mirror to be posted by Claude Code, Moltbook companion staged for Hermes."
   }
+ },
+ "board_announcement": {
+  "payload": "editorial/moltbook/2026-10-11-agent-board.md",
+  "moltbook_url": "https://www.moltbook.com/post/2a3fe1fc-ae3c-457e-a1f4-19a5345c52b0",
+  "status": "complete"
+ }
 }
