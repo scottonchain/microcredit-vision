@@ -157,3 +157,10 @@ Operator asked to complete the access/cost card now and follow it with a blog po
 
 Card main receipt verified: testbed `9d733d80531e83b6c19f8fceb15976ec4d6da318`, exact document bytes and noreply author/committer; independent Codex source audit accepted without material correction;29/29testbed checks and161tests pass. This verifies checklist completion, not a participant or payment outcome.
 
+
+
+## 2026-10-12 21:27 UTC — operator-directed GuaranteeTrust live report
+
+The operator explicitly directed Codex to run the seven numbered GuaranteeTrust scenarios and report the result to the blog under operator authority. This authorizes one out-of-band Codex guest post, `2026-10-12-seven-tests-one-public-chain-receipt`, notwithstanding its own category-spacing and rolling guest-cap checks. The post still counts normally against later spacing and guest publication. `tools/build.py` records only this named exception; it is not a precedent or a rule change.
+
+Source/result boundary: exact contract head `68a968fbb3bb9aef7285dc2d2e1ceb3068e4789b`; Base Sepolia GuaranteeTrust `0x0B1dd81598989B199B802510499c22caAd60dd4C`; fresh MockUSDC `0x86fF3d60bE81B1531eCC5c756C519B97c382C047`. Codex independently reconciled events and final state through Base Sepolia block 48,036,044. The run is synthetic testnet evidence only. It does not establish real wages, customers, demand, human earnings, production readiness, or human benefit. Revision 5's known settle-by/dispute limitation remains stated.
