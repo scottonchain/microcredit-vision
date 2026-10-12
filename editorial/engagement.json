@@ -1,6 +1,6 @@
 {
  "_doc": "Written by tools/engagement.py; counts only (CLAUDE.md, 'Queue, schedule and evaluation').",
- "updated": "2026-10-09 00:08 UTC",
+ "updated": "2026-10-12 21:08 UTC",
  "config": {
   "owner": "scottonchain",
   "blog_repo": "microcredit-vision",
@@ -32,14 +32,14 @@
  },
  "sources": {
   "github": "ok",
-  "mail": "ok",
+  "mail": "unavailable: ValueError mail response may be truncated; watermark unchanged until a complete export is a",
   "moltbook": "no posts configured yet"
  },
  "blog": {
   "stars": 0,
   "forks": 0,
   "watchers": 0,
-  "read": "2026-10-09 00:08 UTC"
+  "read": "2026-10-12 21:08 UTC"
  },
  "channels": {
   "moltbook_ref": 0,
@@ -48,23 +48,27 @@
  "posts": {},
  "categories": {
   "current-events": {
-   "posts": 6,
+   "posts": 7,
    "events": 0
   },
   "ai-alignment": {
-   "posts": 10,
-   "events": 0
-  },
-  "microcredit": {
-   "posts": 10,
+   "posts": 20,
    "events": 0
   },
   "economics": {
-   "posts": 4,
+   "posts": 17,
+   "events": 0
+  },
+  "team-audio": {
+   "posts": 2,
+   "events": 0
+  },
+  "microcredit": {
+   "posts": 11,
    "events": 0
   },
   "guest-post": {
-   "posts": 3,
+   "posts": 12,
    "events": 0
   },
   "prototype": {
@@ -75,12 +79,16 @@
    "posts": 4,
    "events": 0
   },
-  "team-audio": {
-   "posts": 1,
-   "events": 0
-  },
   "team": {
    "posts": 6,
+   "events": 0
+  },
+  "how-it-works": {
+   "posts": 4,
+   "events": 0
+  },
+  "sybil": {
+   "posts": 4,
    "events": 0
   },
   "team-news": {
@@ -88,14 +96,6 @@
    "events": 0
   },
   "get-involved": {
-   "posts": 3,
-   "events": 0
-  },
-  "sybil": {
-   "posts": 3,
-   "events": 0
-  },
-  "how-it-works": {
    "posts": 3,
    "events": 0
   },
@@ -107,20 +107,20 @@
  "watermarks": {
   "github": {
    "microcredit-vision": {
-    "issue": 14,
-    "comment": 6070322551
+    "issue": 25,
+    "comment": 6128548523
    },
    "microcredit-contract": {
-    "issue": 28,
-    "comment": 6070366673
+    "issue": 34,
+    "comment": 6132581608
    },
    "microcredit-agent-testbed": {
-    "issue": 42,
-    "comment": 6070432983
+    "issue": 65,
+    "comment": 6132639151
    },
    "microcredit-theory": {
-    "issue": 0,
-    "comment": 0
+    "issue": 13,
+    "comment": 6111676363
    }
   },
   "mail": {
@@ -199,10 +199,25 @@
    "events": 0,
    "stars": 0,
    "forks": 0
+  },
+  {
+   "at": "2026-10-12 21:08 UTC",
+   "events": 0,
+   "stars": 0,
+   "forks": 0
   }
  ],
  "total_events": 0,
  "podcast": {
+  "2026-10-10-the-five-dollar-job": {
+   "events": 0,
+   "agent_declared": 0,
+   "github": 0,
+   "mail": 0,
+   "moltbook": 0,
+   "seconds": 252,
+   "published": "2026-10-10 21:42 UTC"
+  },
   "2026-10-08-show-me-the-receipt": {
    "events": 0,
    "agent_declared": 0,

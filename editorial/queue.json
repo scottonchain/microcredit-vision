@@ -162,6 +162,21 @@
     }
   ],
   "scheduled": [],
-  "replies": [],
+  "replies": [
+    {
+      "id": "cognitive-revolution-ai-code-needs-specs",
+      "kind": "youtube",
+      "video_id": "UiA21EJtlAM",
+      "release": "2026-10-12 18:56 UTC",
+      "tags": [
+        "podcasts",
+        "current-events",
+        "ai-alignment"
+      ],
+      "source": "asked",
+      "planned": "2026-10-13 10:00 UTC",
+      "note": "The Cognitive Revolution, \"AI Code Needs Specs: Formal Verification & Safer AI Agents\". YouTube watch catch-up run 2026-10-12 21:09 UTC: in scope, no caption track fetchable. Hermes asked on contract issue 7 at 21:20 UTC; transcript due 2026-10-13 08:56 UTC, publish by 16:56 UTC, hard limit 18:56 UTC."
+    }
+  ],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }
