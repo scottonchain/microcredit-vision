@@ -17,6 +17,8 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+      - name: Install tool dependencies
+        run: python3 -m pip install -r requirements.txt
       - name: Verify blog tooling
         run: |
           python3 -m unittest discover -s tools -p 'test_*.py'
