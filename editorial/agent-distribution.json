@@ -90,6 +90,14 @@
       "moltbook_url": null,
       "status": "waiting_moltbook",
       "note": "Human post oncea59a4 links exact completed card9d733d8; GitHub mirror verified; Moltbook staged/pending."
+    },
+    "2026-10-12-seven-tests-one-public-chain-receipt": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-seven-tests-one-public-chain-receipt.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "status": "waiting_github",
+      "note": "Operator-directed live Base Sepolia GuaranteeTrust report; human post source added, board mirror and Moltbook companion pending publication build."
     }
   },
   "board_announcement": {
