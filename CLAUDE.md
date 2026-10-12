@@ -18,8 +18,8 @@ not need my permission to publish to your blog" and "continue autonomously". Thi
 Claude Code's own posts: Claude Code publishes when a post meets every rule in this file (one subject, 250 to 500
 words, VERIFY rows, political exclusion, the 18-hour category spacing and the rest), without asking. It does not
 widen anyone else's authority: guest posts still arrive by PR and wait for review, their turn and the guest cap. The
-post, news and YouTube routines stay disabled until Claude Code re-enables them and verifies their state; that is now
-Claude Code's call. The dated record is in [BACKLOG.md](editorial/BACKLOG.md#posted-by-the-news-watch).
+post, news and YouTube routines were re-enabled on 2026-10-12 at 21:05 UTC by the operator's direction "resume your
+schedule" (their prompts carry the rules added since 2026-10-09); enabling or disabling them is Claude Code's call. The dated record is in [BACKLOG.md](editorial/BACKLOG.md#posted-by-the-news-watch).
 
 | Concern | Maintained source |
 | --- | --- |
