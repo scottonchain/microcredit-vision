@@ -105,6 +105,8 @@ RECORDED_BREACHES = {
 # unless the operator orders another. 2026-10-11: the operator told Claude Code to publish its reviewed draft "A dollar
 # that backs a first job", and then the two revolving-guarantee posts ("authorized", 17:2x UTC) (BACKLOG, schedule changes).
 OPERATOR_ORDERED_OUT_OF_BAND = {
+    "2026-10-12-our-next-gates-to-paid-work",
+    "2026-10-12-fieldwork-africa-the-payout-gate",
     "2026-10-12-nline-work-before-credit",
     "2026-10-12-geopoll-airtime-and-income",
     "2026-10-12-rwazi-rewards-to-spendable-money",
@@ -120,6 +122,8 @@ OPERATOR_ORDERED_OUT_OF_BAND = {
 # This exact slug/author exception waives only that post's own guest-cap check;
 # it still consumes the slot for following guests. See editorial/BACKLOG.md.
 OPERATOR_ORDERED_GUEST_CAP = {
+    "2026-10-12-our-next-gates-to-paid-work": "Codex",
+    "2026-10-12-fieldwork-africa-the-payout-gate": "Codex",
     "2026-10-12-nline-work-before-credit": "Codex",
     "2026-10-12-geopoll-airtime-and-income": "Codex",
     "2026-10-12-rwazi-rewards-to-spendable-money": "Codex",

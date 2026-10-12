@@ -670,6 +670,8 @@ def work_route(kind):
 
 
 MOTIFS.update({
+    "our-next-gates-to-paid-work": (lambda: work_route("EARNINGS"), "Work and verified terms leading to spendable earnings"),
+    "fieldwork-africa-the-payout-gate": (lambda: work_route("REDEEM"), "A survey and its terms leading to redemption through a step that needs verification"),
     "nline-work-before-credit": (lambda: work_route("WAGE"), "A task and terms connected to a wage through an unverified final step"),
     "geopoll-airtime-and-income": (lambda: work_route("AIRTIME"), "A survey and reward terms leading to airtime"),
     "rwazi-rewards-to-spendable-money": (lambda: work_route("PAYOUT"), "A data task and reward terms leading to a payout that needs verification"),
