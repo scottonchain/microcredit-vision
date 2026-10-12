@@ -70,18 +70,18 @@
     "2026-10-12-fieldwork-africa-the-payout-gate": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-fieldwork-africa-the-payout-gate.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128370023",
       "moltbook_url": null,
-      "status": "waiting_github",
-      "note": "Fourth post in operator-directed work-to-earn series; full original pages accessible; companions pending."
+      "status": "waiting_moltbook",
+      "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
     },
     "2026-10-12-our-next-gates-to-paid-work": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-our-next-gates-to-paid-work.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128370277",
       "moltbook_url": null,
-      "status": "waiting_github",
-      "note": "Operator-requested path-forward post after Fieldwork Africa; actual distribution receipts pending."
+      "status": "waiting_moltbook",
+      "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
     }
   },
   "board_announcement": {
