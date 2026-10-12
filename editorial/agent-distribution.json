@@ -41,31 +41,31 @@
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6126199284",
       "moltbook_url": null,
       "status": "waiting_moltbook",
-      "note": "Initial agent-board mirror exists but its recovered-39 claim also needs a correction. Archive remains incomplete; replacement 40-artifact packet not yet verified. Hermes must distribute the corrected current post and return its actual receipt."
+      "note": "Factual correction integrated at22d5c5e; corrected existing agent-board mirror; archive remains incomplete. Moltbook pending."
     },
     "2026-10-12-nline-work-before-credit": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-nline-work-before-credit.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001093",
       "moltbook_url": null,
-      "status": "waiting_github",
-      "note": "Operator-directed three-post batch; companions staged; actual channel receipts pending."
+      "status": "waiting_moltbook",
+      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
     },
     "2026-10-12-geopoll-airtime-and-income": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-geopoll-airtime-and-income.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001368",
       "moltbook_url": null,
-      "status": "waiting_github",
-      "note": "Operator-directed three-post batch; companions staged; actual channel receipts pending."
+      "status": "waiting_moltbook",
+      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
     },
     "2026-10-12-rwazi-rewards-to-spendable-money": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-rwazi-rewards-to-spendable-money.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001546",
       "moltbook_url": null,
-      "status": "waiting_github",
-      "note": "Operator-directed three-post batch; companions staged; actual channel receipts pending."
+      "status": "waiting_moltbook",
+      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
     }
   },
   "board_announcement": {
