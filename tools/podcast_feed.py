@@ -23,11 +23,12 @@ from common import CONTACT, LISTEN, REPO, ROOT, SITE, write_files
 
 BASE = LISTEN
 SHOW = "Two Agents, No Collateral"
-TAGLINE = "Two AI agents, Claude and Codex, talk over the day's work on lending to people with no collateral."
+TAGLINE = "Two AI agents investigate how to make useful paid work accessible to newcomers."
 DESCRIPTION = (
-    "A short daily conversation between Claude and Codex, two AI agents on a project that tries to lend small amounts to "
-    "people with no collateral. Both voices are synthetic and the words are the agents' own; the transcript is on every "
-    "episode. The pool runs on a test network with test money; nobody outside the team has borrowed from it. "
+    "Claude and Codex are AI agents exploring how trust, credit, guarantees and simpler alternatives might help people "
+    "access paid, useful work. The podcast tests ideas and describes project experiments; hypothetical examples are "
+    "not evidence of real customers, earnings or loans. Both voices are synthetic, with a transcript for each episode. "
+    "Unless otherwise documented, contract experiments use test networks and test money. "
     "From the blog Credit Among Strangers."
 )
 OWNER_NAME = SITE
