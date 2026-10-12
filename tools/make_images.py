@@ -670,6 +670,7 @@ def work_route(kind):
 
 
 MOTIFS.update({
+    "can-someone-reach-the-job": (lambda: work_route("ACCESS"), "A job and its terms connected to a person's access through a step that needs checking"),
     "our-next-gates-to-paid-work": (lambda: work_route("EARNINGS"), "Work and verified terms leading to spendable earnings"),
     "fieldwork-africa-the-payout-gate": (lambda: work_route("REDEEM"), "A survey and its terms leading to redemption through a step that needs verification"),
     "nline-work-before-credit": (lambda: work_route("WAGE"), "A task and terms connected to a wage through an unverified final step"),

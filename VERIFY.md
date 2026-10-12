@@ -404,3 +404,13 @@ The posts' alternatives, incremental-benefit tests and stopping criteria are Cod
 | Fieldwork Africa: the payout gate | Sierra Leone page, reward headline and detailed FAQ: 50–250 Le; 5–15 minute general duration; longer-study 2,500–5,000 points and 50–250 Le; 1,000-point threshold described as Le1,000; local wallets; instant language vs 24–48 business hours. Full page retrieved 2026-10-12 16:26 UTC. | https://panel.fieldworkafrica.com/sierra-leone | Operator claims; inconsistent conversion values prevent a defensible hourly rate or cashout estimate. No specific funded study or actual payout verified. |
 | Fieldwork Africa: the payout gate | Terms §§2,4,5: adult eligibility, free registration, quotas/quality checks, points valued outside platform only after redemption. Disclaimer §§1,2,4: discretionary incentives, no employment relation, variable opportunities, no guarantee of qualification. Same check date. | https://panel.fieldworkafrica.com/terms ; https://panel.fieldworkafrica.com/disclaimer | Reading terms is not enrollment, payout evidence, or legal classification by the project. This repeat owner read does not satisfy the model's independent second-review requirement. |
 
+# nLine access-and-cost follow-up, 2026-10-12
+
+| Claim | Source / exact locator | Check and limit |
+| --- | --- | --- |
+| Job duties, residency/languages/own-phone gates | https://nline-inc.breezy.hr/p/f933afb58414-field-surveyor ; Your Responsibilities, Qualifications & Requirements | Complete original read2026-10-12~16:37UTC; no immutable revision or update time. Employer-advertised requirements, no assessed participant. |
+| Last-day round-trip bus reimbursement; training likely outside Freetown but transport clause names Freetown; unclear full first-day advance; fieldwork schedule unstated; selection conditional; Oct23 deadline | Same original source, Training, Time Commitment & Expectations, Position Compensation, Application Details | No actual fare, destination, amount advanced, hiring or payout inferred. Absence of a payment schedule is not evidence of nonpayment. |
+| Completed card and cost/alternative/stop analysis | https://github.com/scottonchain/microcredit-agent-testbed/blob/main/experiments/nline-access-and-cost-card-2026-10-12.md | Original Codex checklist with explicit unknowns, wages/expense offsets separated. Independent AI source audit checks factual scope; not independent human benefit evidence. Card commit receipt recorded in backlog before publication. |
+
+The post's next steps and outcome test are analysis, not an employer commitment or joint strategy decision. Zero recruitment, expenditure, assisted hires or verified human earnings in this work. Existing source-verification, consent and authority dependencies remain.
+

@@ -148,3 +148,9 @@ At vision main ae51fc3, build failed the guest cap and the distribution registry
 
 The operator explicitly requested a complete nLine post and separate posts for similar organizations, published in sequence at once. This authorizes the exact three-post Codex guest batch dated 16:01, 16:02 and 16:03 UTC: nLine, GeoPoll, Rwazi. The build records exact slug/author timing and guest-cap exceptions; all three still consume category/guest clocks for later publications. This is not a standing waiver. Sources read in full, VERIFY rows and generated illustrations included; Fieldwork Africa excluded because full original pages were inaccessible. Human publication and agent distribution remain separate receipts. Existing recovery-post correction is integrated in the same maintenance batch to remove a false claim and repair its already-authorized publication checks.
 
+# nLine access card and introductory follow-up — 2026-10-12
+
+Operator asked to complete the access/cost card now and follow it with a blog post explaining the work to an unfamiliar reader. Exact Codex post `2026-10-12-can-someone-reach-the-job` receives an operator-directed category/guest timing exception; consumes clocks for subsequent publications. One checklist in testbed is the deliverable, not an additional work queue. Original employer page read fully, independent AI source audit conducted, unknown fares/payment dates retained. Publication waits for verified card main receipt. Illustration, VERIFY, generated feed/index/tags and staged agent companions included. This is a follow-up on actual work, no participant/hiring/spending/impact claimed.
+
+Card main receipt verified: testbed `9d733d80531e83b6c19f8fceb15976ec4d6da318`, exact document bytes and noreply author/committer; independent Codex source audit accepted without material correction;29/29testbed checks and161tests pass. This verifies checklist completion, not a participant or payment outcome.
+

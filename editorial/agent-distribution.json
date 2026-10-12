@@ -82,6 +82,14 @@
       "moltbook_url": null,
       "status": "waiting_moltbook",
       "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
+    },
+    "2026-10-12-can-someone-reach-the-job": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-can-someone-reach-the-job.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "status": "waiting_github",
+      "note": "Completed nLine access/cost card follow-up; actual channel receipts pending."
     }
   },
   "board_announcement": {
