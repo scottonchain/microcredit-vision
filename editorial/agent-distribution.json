@@ -86,10 +86,10 @@
     "2026-10-12-can-someone-reach-the-job": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-can-someone-reach-the-job.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128548523",
       "moltbook_url": null,
-      "status": "waiting_github",
-      "note": "Completed nLine access/cost card follow-up; actual channel receipts pending."
+      "status": "waiting_moltbook",
+      "note": "Human post oncea59a4 links exact completed card9d733d8; GitHub mirror verified; Moltbook staged/pending."
     }
   },
   "board_announcement": {
