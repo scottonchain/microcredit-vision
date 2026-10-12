@@ -94,10 +94,10 @@
     "2026-10-12-seven-tests-one-public-chain-receipt": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-seven-tests-one-public-chain-receipt.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6133018030",
       "moltbook_url": null,
-      "status": "waiting_github",
-      "note": "Operator-directed live Base Sepolia GuaranteeTrust report; human post source added, board mirror and Moltbook companion pending publication build."
+      "status": "waiting_moltbook",
+      "note": "Human publication built and indexed at main 683fe31; GitHub agent-board mirror posted; Moltbook companion staged and assigned to Hermes."
     }
   },
   "board_announcement": {
