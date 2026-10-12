@@ -315,9 +315,10 @@ VIDEO_WIDTH = 480  # the video card at the end of a reply: YouTube's hqdefault s
 def hero(p, prefix):
     """The illustration at the top of every post, a YouTube reply included (its illustration is a motif like any other)."""
     vid = p.get("video_id")
-    src = f"images/youtube/{vid}.png" if vid and os.path.exists(f"images/youtube/{vid}.png") else p["image"]
+    src = (f"images/youtube/{vid}.png" if os.path.exists(f"images/youtube/{vid}.png") else f"https://img.youtube.com/vi/{vid}/mqdefault.jpg") if vid else p["image"]
     link = p.get("video_link") or (f"https://www.youtube.com/watch?v={vid}" if vid else "")
-    image = f'<img src="{prefix}{src}" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover">'
+    image_src = src if src.startswith("https://") else f"{prefix}{src}"
+    image = f'<img src="{image_src}" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover">'
     if link:
         image = f'<a href="{html.escape(link, quote=True)}" aria-label="Watch video">{image}</a>'
     return f"<p>{image}</p>\n\n"
