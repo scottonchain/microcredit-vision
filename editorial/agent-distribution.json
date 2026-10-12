@@ -118,10 +118,10 @@
   "2026-10-12-one-hundred-agents-and-a-small-reserve": {
    "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-one-hundred-agents-and-a-small-reserve.md",
    "media_reply_exempt": false,
-   "github_board_url": null,
+   "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6134661288",
    "moltbook_url": null,
-   "status": "waiting_github",
-   "note": "Operator-ordered account of the hundred-agent GuaranteeTrust simulation; board mirror to be posted by Claude Code, Moltbook companion staged for Hermes."
+   "status": "waiting_moltbook",
+   "note": "Human publication built and indexed at main 8ccd1a3; GitHub agent-board mirror posted by Claude Code; Moltbook companion staged in editorial/moltbook/ and assigned to Hermes."
   }
  },
  "board_announcement": {
