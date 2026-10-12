@@ -325,16 +325,8 @@ def hero(p, prefix):
 
 
 def video_card(p, prefix):
-    """A reply to a video ends with the video's thumbnail, play arrow added, linking to it (operator direction, 2026-10-07:
-    the format of the Daily reply). The arrow version is images/youtube/<id>.png from tools/youtube_watch.py; until it
-    exists the card shows YouTube's own thumbnail."""
-    if not p.get("video_id"):
-        return ""
-    vid = p["video_id"]
-    link = p.get("video_link") or f"https://www.youtube.com/watch?v={vid}"
-    local = f"images/youtube/{vid}.png"
-    src = f"{prefix}{local}" if os.path.exists(local) else f"https://img.youtube.com/vi/{vid}/hqdefault.jpg"
-    return (f'\n\n<a href="{link}"><img src="{src}" alt="Watch the episode on YouTube" width="{VIDEO_WIDTH}"></a>')
+    """Video thumbnail is now the 16:9 hero; avoid a duplicate end-of-post card."""
+    return ""
 
 
 def audio_clock(seconds):
