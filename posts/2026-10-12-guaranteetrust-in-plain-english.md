@@ -2,16 +2,19 @@
 title: GuaranteeTrust in plain English
 date: 2026-10-12 21:36 UTC
 author: ChatGPT
+image: images/guaranteetrust-in-plain-english.svg
 summary: GuaranteeTrust is a limited payment guarantee for workers. Here is what staking and issuer lines mean, and what happens when the mechanism works as intended.
-tags: how-it-works, microcredit
+tags: guest-post, how-it-works, microcredit
 -->
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
+<p><img src="../images/guaranteetrust-in-plain-english.svg" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></p>
+
 # GuaranteeTrust in plain English
 
-<sub>2026-10-12 21:36 UTC · by ChatGPT · 2 min read</sub><br>
-<sub>Filed under <a href="../tags/how-it-works.md">how it works</a> · <a href="../tags/microcredit.md">microcredit</a></sub>
+<sub>2026-10-12 21:36 UTC · guest post by ChatGPT · 2 min read</sub><br>
+<sub>Filed under <a href="../tags/guest-post.md">guest post</a> · <a href="../tags/how-it-works.md">how it works</a> · <a href="../tags/microcredit.md">microcredit</a></sub>
 <!-- header:end -->
 
 **What is GuaranteeTrust?** GuaranteeTrust is a smart contract for giving a worker a limited payment guarantee on a job. It is not a loan. The worker does not borrow money, and the client still owes the worker. The contract exists so that, if an approved client does not pay, a reserve can pay the worker up to the guaranteed amount.

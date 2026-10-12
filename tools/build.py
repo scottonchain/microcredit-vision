@@ -97,6 +97,11 @@ RECORDED_BREACHES = {
     DIRECT_GUEST_SPACING_EXCEPTION: "Codex",
     "2026-10-11-we-stopped-looking-for-a-loan": "Codex",
     "2026-10-11-first-paid-work": "ChatGPT",
+    # 2026-10-12, 21:36 and 21:50 UTC: two ChatGPT explainers on GuaranteeTrust went out directly on main, without
+    # the guest-post tag or an image, 8 and 22 minutes after the operator-ordered report in the same categories and
+    # 14 minutes apart; the true tag was added and the breach recorded by Claude Code (editorial/BACKLOG.md).
+    "2026-10-12-guaranteetrust-in-plain-english": "ChatGPT",
+    "2026-10-12-first-guaranteetrust-scenario": "ChatGPT",
 }
 # Operator-ordered out-of-band publication (2026-10-08): the operator told the steward to publish something already
 # written and waiting ahead of the plan to help clear the queue. The named posts are waived from their own 18-hour

@@ -622,8 +622,49 @@ def vouch_newcomer():
 
 
 
+def limited_guarantee():
+    """A worker and a client joined by a job; under the worker, a small shield for the guarantee, standing on two
+    blocks of real money at risk: a stake and an issuer line."""
+    s = ""
+    s += node(330, 200, 30, PAPER, INK, 3) + node(870, 200, 30, PAPER, INK, 3)
+    s += text(330, 258, "worker", 22, INK, sans=True) + text(870, 258, "client", 22, INK, sans=True)
+    s += link(370, 200, 830, 200, INK, 3)
+    s += text(600, 178, "a job, wage owed", 22, MUTED, sans=True)
+    s += f'<path d="M 330 290 L 400 315 L 400 380 Q 400 430 330 455 Q 260 430 260 380 L 260 315 Z" fill="{AMBER_SOFT}" stroke="{AMBER}" stroke-width="4"/>\n'
+    s += text(330, 383, "up to $20", 22, INK, sans=True)
+    s += f'<rect x="150" y="478" width="170" height="52" rx="10" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>\n'
+    s += f'<rect x="340" y="478" width="170" height="52" rx="10" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>\n'
+    s += text(235, 511, "a stake", 20, INK, sans=True) + text(425, 511, "an issuer line", 20, INK, sans=True)
+    s += link(870, 275, 870, 345, ROSE, 3, "10 8")
+    s += text(870, 375, "if the client does not pay", 20, ROSE, sans=True)
+    s += link(760, 395, 420, 395, ROSE, 3, "10 8")
+    s += text(600, 585, "trust comes from money that can bear a loss", 26, MUTED, sans=True)
+    return s
+
+
+def scripted_three_jobs():
+    """Three paid jobs in a row from one worker, each sending a small contribution back to a reserve, on a track
+    drawn as a fixed script: a deterministic test, not an agent deciding."""
+    s = ""
+    s += text(600, 150, "one worker, three paid jobs, a fixed script", 26, MUTED, sans=True)
+    s += f'<line x1="150" y1="370" x2="1050" y2="370" stroke="{LINE}" stroke-width="4"/>\n'
+    for i, x in enumerate((330, 600, 870)):
+        s += text(x, 215, "wage paid", 20, AMBER, sans=True)
+        s += node(x, 250, 16, AMBER_SOFT, INK, 2.5)
+        s += link(x, 266, x, 342, AMBER, 5)
+        s += node(x, 370, 26, PAPER, INK, 3)
+        s += text(x, 378, str(i + 1), 24, INK, sans=True)
+        s += link(x, 398, 600, 470, TEAL, 3, "8 8")
+    s += f'<rect x="520" y="470" width="160" height="56" rx="12" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>\n'
+    s += text(600, 505, "reserve", 22, INK, sans=True)
+    s += text(600, 585, "a scripted test, no agent decided anything", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
     "who-can-vouch-for-a-newcomer": (vouch_newcomer, "A ring of hollow accounts vouching for each other beside one real member on stake backing a newcomer"),
+    "first-guaranteetrust-scenario": (scripted_three_jobs, "Three paid jobs on a fixed track, each returning a small contribution to a reserve"),
+    "guaranteetrust-in-plain-english": (limited_guarantee, "A worker and a client joined by a job, a small shield under the worker standing on a stake and an issuer line"),
     "when-a-guarantee-can-replenish-itself": (replenishing_reserve, "A reserve with a level line and a floor, refilled by paid jobs and drawn by a claim"),
     "what-if-100-could-stand-behind-more-than-one-first-job": (one_reserve_many_jobs, "One small reserve connected to a row of first jobs"),
     "a-dollar-that-backs-a-first-job": (first_job_backstop, "One sponsor dollar beside a column of wages that clients pay"),
