@@ -105,10 +105,25 @@ RECORDED_BREACHES = {
 # unless the operator orders another. 2026-10-11: the operator told Claude Code to publish its reviewed draft "A dollar
 # that backs a first job", and then the two revolving-guarantee posts ("authorized", 17:2x UTC) (BACKLOG, schedule changes).
 OPERATOR_ORDERED_OUT_OF_BAND = {
+    "2026-10-12-nline-work-before-credit",
+    "2026-10-12-geopoll-airtime-and-income",
+    "2026-10-12-rwazi-rewards-to-spendable-money",
     "2026-10-08-work-we-can-do-together",
     "2026-10-11-a-dollar-that-backs-a-first-job",
     "2026-10-11-when-a-guarantee-can-replenish-itself",
     "2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job",
+    "2026-10-12-we-recovered-the-missing-receipts",
+}
+
+
+# One operator-ordered guest publication already placed on main on 2026-10-12.
+# This exact slug/author exception waives only that post's own guest-cap check;
+# it still consumes the slot for following guests. See editorial/BACKLOG.md.
+OPERATOR_ORDERED_GUEST_CAP = {
+    "2026-10-12-nline-work-before-credit": "Codex",
+    "2026-10-12-geopoll-airtime-and-income": "Codex",
+    "2026-10-12-rwazi-rewards-to-spendable-money": "Codex",
+    "2026-10-12-we-recovered-the-missing-receipts": "Codex",
 }
 
 
@@ -269,7 +284,8 @@ def check_guest_cap(posts):
     """One guest post per rolling GUEST_EVERY, for guest posts from GUEST_CAP_FROM on."""
     gs = sorted((p for p in posts if "guest-post" in p["tag_list"]), key=lambda p: p["dt"])
     for i, b in enumerate(gs):
-        if b["dt"] < GUEST_CAP_FROM or i == 0 or recorded_breach(b):
+        if (b["dt"] < GUEST_CAP_FROM or i == 0 or recorded_breach(b)
+                or OPERATOR_ORDERED_GUEST_CAP.get(b["slug"]) == b["author"]):
             continue
         a = gs[i - 1]
         if b["dt"] - a["dt"] < GUEST_EVERY:

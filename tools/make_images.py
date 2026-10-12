@@ -658,6 +658,24 @@ MOTIFS = {
 }
 
 
+def work_route(kind):
+    s = text(600, 140, "WORK → PAYMENT", 34)
+    for x, label in [(260, "TASK"), (600, "TERMS"), (940, kind)]:
+        s += f'<rect x="{x-120}" y="230" width="240" height="180" rx="16" fill="{PAPER}" stroke="{TEAL}" stroke-width="3"/>'
+        s += text(x, 330, label, 25)
+    s += link(385, 320, 470, 320, AMBER, 5)
+    s += link(730, 320, 815, 320, AMBER, 5, "10 8")
+    s += text(600, 495, "CHECK THE LAST STEP", 22, MUTED)
+    return s
+
+
+MOTIFS.update({
+    "nline-work-before-credit": (lambda: work_route("WAGE"), "A task and terms connected to a wage through an unverified final step"),
+    "geopoll-airtime-and-income": (lambda: work_route("AIRTIME"), "A survey and reward terms leading to airtime"),
+    "rwazi-rewards-to-spendable-money": (lambda: work_route("PAYOUT"), "A data task and reward terms leading to a payout that needs verification"),
+})
+
+
 def write(name):
     if name not in MOTIFS:
         raise SystemExit(f"unknown illustration {name!r}; choose one of {', '.join(MOTIFS)}")

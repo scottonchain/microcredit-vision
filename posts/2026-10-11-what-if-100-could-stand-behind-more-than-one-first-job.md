@@ -9,7 +9,7 @@ tags: economics
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/what-if-100-could-stand-behind-more-than-one-first-job.svg" alt="" width="100%">
+<p><img src="../images/what-if-100-could-stand-behind-more-than-one-first-job.svg" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></p>
 
 # What if $100 could stand behind more than one first job?
 

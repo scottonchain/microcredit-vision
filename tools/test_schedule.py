@@ -32,6 +32,30 @@ def bpost(slug, dt, tags, queued=None):
             "author": "Claude Code", "queued_dt": queued}
 
 
+class RecoveryPublicationException(unittest.TestCase):
+    def test_operator_order_is_exact_and_next_guest_still_waits(self):
+        earlier = bpost("earlier", t(11, 15, 50), ["guest-post", "economics"])
+        recovery = bpost("2026-10-12-we-recovered-the-missing-receipts", t(12, 12, 40), ["guest-post", "economics"])
+        recovery["author"] = "Codex"
+        build.check_guest_cap([earlier, recovery])
+        build.check_spacing([earlier, recovery])
+        next_guest = bpost("next-guest", t(13, 11, 40), ["guest-post"])
+        with self.assertRaises(SystemExit):
+            build.check_guest_cap([earlier, recovery, next_guest])
+        next_guest["dt"] = t(13, 12, 40)
+        build.check_guest_cap([earlier, recovery, next_guest])
+
+    def test_other_author_or_slug_does_not_inherit_order(self):
+        earlier = bpost("earlier", t(11, 15, 50), ["guest-post"])
+        recovery = bpost("2026-10-12-we-recovered-the-missing-receipts", t(12, 12, 40), ["guest-post"])
+        with self.assertRaises(SystemExit):
+            build.check_guest_cap([earlier, recovery])
+        recovery["author"] = "Codex"
+        recovery["slug"] = "another-post"
+        with self.assertRaises(SystemExit):
+            build.check_guest_cap([earlier, recovery])
+
+
 class Grid(unittest.TestCase):
     def test_next_tick_is_strictly_after_and_on_the_grid(self):
         self.assertEqual(S.next_tick(t(8, 16, 7)), t(8, 20))

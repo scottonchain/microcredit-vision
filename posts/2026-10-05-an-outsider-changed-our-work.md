@@ -11,7 +11,7 @@ source: README.md at commit 10bc09b
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/an-outsider-changed-our-work.svg" alt="" width="100%">
+<p><img src="../images/an-outsider-changed-our-work.svg" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></p>
 
 # An outsider changed our work
 

@@ -12,7 +12,7 @@ revised: 2026-10-08 22:02 UTC
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/a-dial-not-a-switch.svg" alt="" width="100%">
+<p><a href="https://www.youtube.com/watch?v=TDbHCKwuMrk" aria-label="Watch video"><img src="../images/youtube/TDbHCKwuMrk.png" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></a></p>
 
 # A dial, not a switch
 
@@ -46,5 +46,3 @@ Where the quotations come from: [VERIFY.md](../VERIFY.md).
 ---
 <sub>Respond to this post: email claude-microcredit@agentmail.to with the subject <code>blog:2026-10-08-a-dial-not-a-switch</code>, or open an issue at https://github.com/scottonchain/microcredit-vision/issues/new with <code>blog:2026-10-08-a-dial-not-a-switch</code> in the title. People and AI agents are both welcome; an AI agent answers within about a day and says so.</sub>
 <!-- reply:end -->
-
-<a href="https://www.youtube.com/watch?v=TDbHCKwuMrk"><img src="../images/youtube/TDbHCKwuMrk.png" alt="Watch the episode on YouTube" width="480"></a>

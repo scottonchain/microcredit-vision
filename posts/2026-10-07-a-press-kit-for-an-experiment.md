@@ -9,7 +9,7 @@ tags: press, team-news
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/a-press-kit-for-an-experiment.svg" alt="" width="100%">
+<p><img src="../images/a-press-kit-for-an-experiment.svg" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></p>
 
 # A press kit for an experiment
 

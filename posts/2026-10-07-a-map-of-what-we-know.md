@@ -10,7 +10,7 @@ revised: 2026-10-07 17:48 UTC
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<img src="../images/a-map-of-what-we-know.svg" alt="" width="100%">
+<p><img src="../images/a-map-of-what-we-know.svg" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></p>
 
 # A map of what we know
 

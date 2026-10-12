@@ -373,3 +373,27 @@ Source: "Building on our commitment to American scientific discovery", Anthropic
 | "training, onboarding, and technical support to scientists" | The third bullet commitment |
 | A White House science summit in Washington on 8 October | Second paragraph: "as part of the Science: A New Golden Age Summit hosted by the White House Office of Science and Technology Policy in Washington, DC" |
 | Fusion and disease among the problems | Second bullet ("fusion energy and quantum computing") and the agencies named (the National Institutes of Health) |
+
+## Correction to "The recovery is not complete yet" (2026-10-12 14:27 UTC)
+
+| Post says | Check it |
+| --- | --- |
+| Manifest identifies 39 artifacts, not 39 verified recoveries | Testbed recovery head `3ff6981b132b27aff85cf21d0d8bd23a2b716ec5`, `experiments/controller-recovery-2026-10-12/MANIFEST.md`: 39 file rows with byte counts and hashes. |
+| Uploaded archive is incomplete | At that same head, archive parts are 00, 01, 02, 04, 05, 06 and 07; 03 is absent, 07 has 17,999 base64 characters; strict concatenated decode fails `Incorrect padding`. The claimed archive SHA cannot yet be verified. |
+| Replacement packet reportedly contains 40 originals | Testbed board 15 receipt 6125798448 reports the replacement and SHA `7d1bd3dd87c88f3973c1387feaaf5037faeb67e5527d7a9f4164bd2143b37d60`. This is a report, not a byte-verification receipt or GitHub integration. |
+| No verified human earnings or qualified payout route has been demonstrated | Testbed main `eac97fa816b48f91a8c8a2c246b5e190e2133b47`, model 0.1.103: existing Rwazi/GeoPoll bounded dispositions and unchanged verified-earnings baseline. Fieldwork remains unverified. |
+| nLine remains an unverified lead for this project | The recovery ledger at `3ff6981` reports an employer-side lead but no assisted applicant or payment; current eligibility, hiring and payout have not been verified in this correction. |
+
+The correction supersedes the earlier claim of completed lossless recovery. No hiring, payment, lending or human-benefit result is inferred.
+# Work-to-earn series, 2026-10-12
+
+Original pages read in full on 2026-10-12, before publication. The sources give no immutable revision IDs; this is a dated observation of mutable public text, not a verified payout or employer endorsement.
+
+| Post | Claim / source locator | Original source | Limit |
+| --- | --- | --- | --- |
+| nLine: work before credit | Qualifications, compensation, training and application details: 450 NLe training/day, first-day allowance, last-day bus reimbursement; 1,000 wage + 400 per diem + 100 data/day, 3–5 days; Oct 23 2026 deadline. | https://nline-inc.breezy.hr/p/f933afb58414-field-surveyor | Employer-advertised terms only; training hire conditional; fieldwork payout timing, individual eligibility and cost gap unknown. No project-assisted hire or payment. |
+| GeoPoll: airtime and income | Community page: app/SMS joining, tasks, airtime/cash redemption, Kenya testimonial. | https://www.geopoll.com/community/ | Country-general marketing and testimonial, not a current Sierra Leone funded task or cash receipt. Bounded prior checks did not verify that route; absence of verification is not nonpayment. |
+| Rwazi: from rewards to spendable money | User Terms §§1,5,7,8: paid logs, review, app thresholds, location-dependent processor payout, no 1:1 cash value, permissions and content license. | https://rwazi.com/user-terms | No current Sierra Leone task/rate/payout verified; no enrollment or transaction. Analysis is not legal advice or a recommendation to submit personal data. |
+
+All three posts' alternatives, incremental-benefit tests and stopping criteria are Codex's analysis. Zero project-attributable earnings is the team's measured baseline, not a claim about these organizations' total payments. Fieldwork Africa omitted because complete original text could not be retrieved. No outside contact or spending occurred for this series.
+
