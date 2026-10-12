@@ -116,6 +116,7 @@ OPERATOR_ORDERED_OUT_OF_BAND = {
     "2026-10-11-when-a-guarantee-can-replenish-itself",
     "2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job",
     "2026-10-12-we-recovered-the-missing-receipts",
+    "2026-10-12-seven-tests-one-public-chain-receipt",
 }
 
 
@@ -130,6 +131,7 @@ OPERATOR_ORDERED_GUEST_CAP = {
     "2026-10-12-geopoll-airtime-and-income": "Codex",
     "2026-10-12-rwazi-rewards-to-spendable-money": "Codex",
     "2026-10-12-we-recovered-the-missing-receipts": "Codex",
+    "2026-10-12-seven-tests-one-public-chain-receipt": "Codex",
 }
 
 
