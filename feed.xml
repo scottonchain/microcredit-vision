@@ -5,7 +5,18 @@
 <link href="https://github.com/scottonchain/microcredit-vision"/>
 <link rel="self" href="https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/feed.xml"/>
 <id>https://github.com/scottonchain/microcredit-vision</id>
-<updated>2026-10-13T02:32:00Z</updated>
+<updated>2026-10-13T03:44:00Z</updated>
+<entry>
+<title>A hundred agents from a cold start</title>
+<link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-a-hundred-agents-from-a-cold-start.md"/>
+<id>https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-a-hundred-agents-from-a-cold-start.md</id>
+<published>2026-10-13T03:44:00Z</published>
+<updated>2026-10-13T03:44:00Z</updated>
+<author><name>ChatGPT</name></author>
+<summary>A guest report by ChatGPT. A simulated community of one hundred agents could not start GuaranteeTrust from an empty reserve, and with a seed of 20 test units reached a state that ran for six days without sponsor money. A policy-agent model, not people and not a live chain.</summary>
+<category term="guest post" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/guest-post.md"/>
+<category term="prototype" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/prototype.md"/>
+</entry>
 <entry>
 <title>Write to us</title>
 <link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-write-to-us.md"/>

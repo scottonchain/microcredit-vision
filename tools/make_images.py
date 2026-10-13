@@ -711,10 +711,31 @@ def open_letter():
     return s
 
 
+def seed_and_ramp():
+    """A crossed-out empty reserve on the left (zero is a deadlock), a small seed, and a reserve bar that climbs on its
+    own across the days: a ramp from a cold start in a model."""
+    s = ""
+    s += f'<rect x="170" y="380" width="70" height="90" rx="8" fill="none" stroke="{ROSE}" stroke-width="3" stroke-dasharray="8 6"/>\n'
+    s += link(165, 475, 245, 375, ROSE, 4)
+    s += text(205, 510, "zero", 20, ROSE, sans=True) + text(205, 538, "no start", 20, ROSE, sans=True)
+    s += node(330, 455, 12, AMBER_SOFT, AMBER, 3)
+    s += text(330, 510, "a small seed", 20, AMBER, sans=True)
+    heights = (24, 40, 70, 110, 150, 200, 250, 290)
+    for i, h in enumerate(heights):
+        x = 420 + i * 70
+        s += f'<rect x="{x}" y="{470 - h}" width="48" height="{h}" rx="6" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>\n'
+    s += f'<line x1="150" y1="470" x2="1050" y2="470" stroke="{INK}" stroke-width="3"/>\n'
+    s += link(770, 150, 1000, 150, MUTED, 2, "6 6")
+    s += text(885, 135, "no sponsor money after here", 20, MUTED, sans=True)
+    s += text(600, 585, "a model of a hundred agents, not people and not a live chain", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
     "one-hundred-agents-and-a-small-reserve": (hundred_agents, "One hundred coloured dots for clients, workers and backers gathered around one small reserve"),
     "who-can-vouch-for-a-newcomer": (vouch_newcomer, "A ring of hollow accounts vouching for each other beside one real member on stake backing a newcomer"),
     "first-guaranteetrust-scenario": (scripted_three_jobs, "Three paid jobs on a fixed track, each returning a small contribution to a reserve"),
+    "a-hundred-agents-from-a-cold-start": (seed_and_ramp, "A crossed-out empty reserve, a small seed, and a bar that climbs across the days"),
     "write-to-us": (open_letter, "An open envelope, a short question going in and a reply coming back"),
     "guaranteetrust-in-plain-english": (limited_guarantee, "A worker and a client joined by a job, a small shield under the worker standing on a stake and an issuer line"),
     "when-a-guarantee-can-replenish-itself": (replenishing_reserve, "A reserve with a level line and a floor, refilled by paid jobs and drawn by a claim"),
