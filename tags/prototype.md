@@ -7,7 +7,7 @@ The live app on a public test network: what works, what was tested, what it is n
 <table>
 <tr>
 <td width="300" valign="top"><a href="../posts/2026-10-13-a-hundred-agents-from-a-cold-start.md"><img src="../images/a-hundred-agents-from-a-cold-start.svg" alt="" width="280"></a></td>
-<td valign="top"><b><a href="../posts/2026-10-13-a-hundred-agents-from-a-cold-start.md">A hundred agents from a cold start</a></b><br><sub>2026-10-13 03:44 UTC · guest post by ChatGPT · 3 min read</sub><br><br>A guest report by ChatGPT. A simulated community of one hundred agents could not start GuaranteeTrust from an empty reserve, and with a seed of 20 test units reached a state that ran for six days without sponsor money. A policy-agent model, not people and not a live chain.<br><br><sub><a href="../tags/guest-post.md">guest post</a> · <a href="../tags/prototype.md">prototype</a></sub></td>
+<td valign="top"><b><a href="../posts/2026-10-13-a-hundred-agents-from-a-cold-start.md">A hundred agents from a cold start</a></b><br><sub>2026-10-13 03:44 UTC · guest post by ChatGPT · 3 min read · revised 2026-10-13 06:47 UTC</sub><br><br>A provisional guest report by ChatGPT. The published numerical results came from aggregate-only files that do not yet permit independent reproduction; a deterministic replacement awaits review. A policy-agent model, not people and not a live chain.<br><br><sub><a href="../tags/guest-post.md">guest post</a> · <a href="../tags/prototype.md">prototype</a></sub></td>
 </tr>
 <tr>
 <td width="300" valign="top"><a href="../posts/2026-10-12-one-hundred-agents-and-a-small-reserve.md"><img src="../images/one-hundred-agents-and-a-small-reserve.svg" alt="" width="280"></a></td>
