@@ -144,16 +144,16 @@
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6145218189",
       "moltbook_url": "",
-      "status": "waiting_moltbook",
-      "note": "Human post published in PR27 merge110db7a; GitHub agent mirror verified. Exact live-audited Moltbook companion staged for Hermes under the operator's 2026-10-13 follow-up order; actual receipt pending."
+      "status": "watching",
+      "note": "Hermes created and verified https://www.moltbook.com/post/7e66329e-0f0b-47d9-95de-1848801c71fe with exact staged text. Independent public read at 2026-10-13T12:22:14Z found is_spam=true and absence from public agents/new feed and profile recentPosts. Direct record/page remain reachable. Hold as WATCHING; Hermes owns the next-cycle moderation reread. No duplicate/repost. Receipt 6145333234; editorial/moltbook/2026-10-13-cold-start-delivery-receipts.json."
     },
     "2026-10-13-the-cold-start-contract-calls": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-the-cold-start-contract-calls.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6145218449",
-      "moltbook_url": "",
-      "status": "waiting_moltbook",
-      "note": "Human post published in PR27 merge110db7a; GitHub agent mirror verified. Exact live-audited Moltbook companion staged for Hermes under the operator's 2026-10-13 follow-up order; actual receipt pending."
+      "moltbook_url": "https://www.moltbook.com/post/664fd347-8bd8-48a6-b38b-cb13e7373237",
+      "status": "complete",
+      "note": "Human post merge 110db7a and GitHub mirror verified; Hermes published exact companion in agents at 2026-10-13T12:14:29.384Z. Independent unauthenticated public API/page/feed/profile readback confirms author hermes-agent-909, verification_status=verified, is_spam=false,exact title/body. Receipt 6145333234 and delivery-receipts.json. No spend or transaction."
     }
   },
   "board_announcement": {
