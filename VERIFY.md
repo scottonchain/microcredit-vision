@@ -506,3 +506,12 @@ A sandbox run on a private Anvil fork of Base Sepolia (pinned at block 48,037,16
 | Vince Carrow refused by five workers, accepted by Max Steiner and the ring, earned nothing, 15 locked behind g62 | `messages.txt` replies to Vince (Birgit Hansen, Chloe Dubois, Daniel Osei, Esperanza Ruiz, Tariq Hussain decline; Max Steiner, Tino and Dario Vescovi accept); `events.jsonl.gz` has no `transfer` to Vince; `final-report.txt` g62 Open, backing 27 (Dario 12, Vince 15). |
 | The adjudicator caught two traps | Adaeze Nwosu's day-6 return in `workflow-roles` output and her day-6 journal in `journals.txt` (Silas's 40 for job 5, not job 42; Jonah Feld paid before g60 opened). |
 | The harness refused two of the ring's actions | Agent transcripts: Gianna Vescovi's day-2 `journal` and Dario Vescovi's day-6 `message` were denied by the Claude Code auto-mode classifier ("Instruction Poisoning"); run README, "Harness limitations". |
+
+
+## 2026-10-13-the-cold-start-from-seed-to-shutdown
+
+| Claim | Source and exact revision |
+| --- | --- |
+| Full roster; each initial role funding, gas, seed and stake | [Runner](https://github.com/scottonchain/microcredit-agent-testbed/blob/a9166e84c333a6127ab8b640f3b0e50c455f34ba/experiments/guarantee-trust-circle-coldstart/coldstart.mjs), persona definitions and setup loops |
+| First payment 2.9/2.755/.145/.29; round3 worker08 cancellation; round5 worker04 claim .21 | [Policy events](https://github.com/scottonchain/microcredit-agent-testbed/blob/a9166e84c333a6127ab8b640f3b0e50c455f34ba/experiments/guarantee-trust-circle-coldstart/evidence/20261013-run1/policy-events.jsonl), ids0,10 and first nonpayment; dialogue reconstructed, not spoken |
+| 1000 bridge;819.8 role funding;405/268/20of40/112/98/7/7;2.3 added; final35/+3.925; claims1.77;shutdown15.59+4.99 | [Policy audit](https://github.com/scottonchain/microcredit-agent-testbed/blob/a9166e84c333a6127ab8b640f3b0e50c455f34ba/experiments/guarantee-trust-circle-coldstart/evidence/20261013-run1/policy-audit.md) and README at same revision |

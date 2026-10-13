@@ -114,6 +114,7 @@ RECORDED_BREACHES = {
 # unless the operator orders another. 2026-10-11: the operator told Claude Code to publish its reviewed draft "A dollar
 # that backs a first job", and then the two revolving-guarantee posts ("authorized", 17:2x UTC) (BACKLOG, schedule changes).
 OPERATOR_ORDERED_OUT_OF_BAND = {
+    "2026-10-13-the-cold-start-from-seed-to-shutdown",
     # 2026-10-13: operator explicitly ordered the live Circle-USDC cold-start account
     # followed by its technical contract-call walkthrough. BACKLOG records the order.
     "2026-10-13-a-cold-start-on-base-sepolia",
@@ -140,6 +141,7 @@ OPERATOR_ORDERED_OUT_OF_BAND = {
 # This exact slug/author exception waives only that post's own guest-cap check;
 # it still consumes the slot for following guests. See editorial/BACKLOG.md.
 OPERATOR_ORDERED_GUEST_CAP = {
+    "2026-10-13-the-cold-start-from-seed-to-shutdown": "Codex",
     "2026-10-13-a-cold-start-on-base-sepolia": "Codex",
     "2026-10-13-the-cold-start-contract-calls": "Codex",
     "2026-10-12-can-someone-reach-the-job": "Codex",

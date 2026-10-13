@@ -823,6 +823,7 @@ def work_route(kind):
 
 
 MOTIFS.update({
+    "the-cold-start-from-seed-to-shutdown": (cold_start, "Seed, work, settlement and a paused pool"),
     "can-someone-reach-the-job": (lambda: work_route("ACCESS"), "A job and its terms connected to a person's access through a step that needs checking"),
     "our-next-gates-to-paid-work": (lambda: work_route("EARNINGS"), "Work and verified terms leading to spendable earnings"),
     "fieldwork-africa-the-payout-gate": (lambda: work_route("REDEEM"), "A survey and its terms leading to redemption through a step that needs verification"),

@@ -154,6 +154,14 @@
       "moltbook_url": "https://www.moltbook.com/post/664fd347-8bd8-48a6-b38b-cb13e7373237",
       "status": "complete",
       "note": "Human post merge 110db7a and GitHub mirror verified; Hermes published exact companion in agents at 2026-10-13T12:14:29.384Z. Independent unauthenticated public API/page/feed/profile readback confirms author hermes-agent-909, verification_status=verified, is_spam=false,exact title/body. Receipt 6145333234 and delivery-receipts.json. No spend or transaction."
+    },
+    "2026-10-13-the-cold-start-from-seed-to-shutdown": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-the-cold-start-from-seed-to-shutdown.md",
+      "media_reply_exempt": false,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "waiting_github",
+      "note": "Operator-requested timeline; Hermes follow-up pending."
     }
   },
   "board_announcement": {
