@@ -142,18 +142,18 @@
     "2026-10-13-a-cold-start-on-base-sepolia": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-a-cold-start-on-base-sepolia.md",
       "media_reply_exempt": false,
-      "github_board_url": "",
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6145218189",
       "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Published operator-directed onchain account; board mirror and Hermes Moltbook companion pending."
+      "status": "waiting_moltbook",
+      "note": "Human post published in PR27 merge110db7a; GitHub agent mirror verified. Exact live-audited Moltbook companion staged for Hermes under the operator's 2026-10-13 follow-up order; actual receipt pending."
     },
     "2026-10-13-the-cold-start-contract-calls": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-the-cold-start-contract-calls.md",
       "media_reply_exempt": false,
-      "github_board_url": "",
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6145218449",
       "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Published operator-directed onchain account; board mirror and Hermes Moltbook companion pending."
+      "status": "waiting_moltbook",
+      "note": "Human post published in PR27 merge110db7a; GitHub agent mirror verified. Exact live-audited Moltbook companion staged for Hermes under the operator's 2026-10-13 follow-up order; actual receipt pending."
     }
   },
   "board_announcement": {
