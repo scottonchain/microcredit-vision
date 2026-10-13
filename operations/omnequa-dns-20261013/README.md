@@ -2,7 +2,7 @@
 
 Written by Codex (AI), October 13, 2026.
 
-The authorized DNS changes were applied at approximately 23:13–23:14 UTC. **The website switch is not yet verified complete.** At 23:15 UTC both Sites attachments progressed to provider status `active`, but overall status remained `pending` with SSL `pending_validation`. HTTPS checks from the execution environment were blocked by its proxy with CONNECT 403. No persistent access or credential configuration was changed.
+The authorized DNS changes were applied at approximately 23:13–23:14 UTC. **The website switch is not yet verified complete.** At 23:18 UTC www reached `active` for overall, provider and SSL status. At 23:19 UTC the apex provider remained `active`, but overall status was `pending` with SSL `pending_validation`. HTTPS checks from the execution environment were blocked by its proxy with CONNECT 403. No persistent access or credential configuration was changed.
 
 This supersedes the credential-access blocker in the [earlier continuation](../omnequa-domain-switch-20261013-2250.md). Authentication succeeded through the existing network-secret proxy. The ordinary vault environment variable was not used, and no credentials are included here.
 
@@ -40,6 +40,8 @@ The export preserves the original provider representation, including `WebsiteBui
 For a rollback, first read the current zone and reconcile against these receipts. Restore the original www CNAME value using its current record ID; remove only the newly created verification records and second apex record identified by the successful receipts; restore the apex through the appropriate supported provider workflow. Preserve concurrent and unrelated changes. This is guidance, not an instruction to execute a rollback now.
 
 ## Outstanding acceptance
+
+The operator reported `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` at the apex at approximately 23:16 UTC. DNS was already changed while the apex certificate was still awaiting validation; this is consistent with reaching the new endpoint before certificate issuance. This diagnosis is based on the reported browser error and Sites state, not a direct TLS handshake from this environment. By 23:18 www's certificate and domain were active, so the two hostnames differed. Sites returned no error and no additional non-null certificate-validation record for the apex. Preserve the correct DNS and allow certificate provisioning/propagation to continue, refreshing the existing attachment. Do not disable certificate checks or remove/recreate attachments as a workaround.
 
 The complete API readback confirms the intended zone configuration, not global DNS propagation. Still required: active Sites ownership and certificates for both hostnames, authoritative/public DNS resolution, valid hostname certificates, and replacement page identity/content at both HTTPS URLs. The replacement origin is https://omnequa.solarghost3.chatgpt.site. The prior replacement title was “More ways to earn. Fewer barriers to start. | Omnequa”; historical September text is not itself a failure.
 

@@ -26,16 +26,16 @@
     ],
     "last_error": null,
     "created_at": "2026-10-13T20:01:08.701250+00:00",
-    "updated_at": "2026-10-13T23:15:44.726748+00:00"
+    "updated_at": "2026-10-13T23:19:23.122685+00:00"
   },
   {
     "id": "appgdom_6ace8e16a1888191babfe9b8d656eec1",
     "project_id": "appgprj_6ace8bfdb0a48191be221a7f84621524",
     "hostname": "www.omnequa.org",
     "worker_name": "site---6ace8bfdb0a48191be221a7f84621524",
-    "status": "pending",
+    "status": "active",
     "provider_status": "active",
-    "ssl_status": "pending_validation",
+    "ssl_status": "active",
     "cname_target": "custom-domains.chatgpt.site.",
     "apex_proxy_ipv4_targets": [
       "162.159.143.30",
@@ -46,15 +46,10 @@
         "record_type": "TXT",
         "name": "_openai-site-verification.www.omnequa.org",
         "value": "openai-site-verification=R2-X_lRl9c7IZHkHBF5ghOJKDuh1SgDHXbB_u44U-xc"
-      },
-      {
-        "record_type": null,
-        "name": null,
-        "value": null
       }
     ],
     "last_error": null,
     "created_at": "2026-10-13T20:01:26.631499+00:00",
-    "updated_at": "2026-10-13T23:15:49.752946+00:00"
+    "updated_at": "2026-10-13T23:18:23.786619+00:00"
   }
 ]
