@@ -317,6 +317,25 @@ def littleguy():
     return s
 
 
+def canary_chalkboard():
+    """A chalkboard of faint symbols with a small amber bird perched on its frame: the first field to feel it."""
+    s = ""
+    s += f'<rect x="250" y="150" width="700" height="360" rx="10" fill="#2F3A36" stroke="{INK}" stroke-width="4"/>\n'
+    s += f'<rect x="236" y="500" width="728" height="18" rx="4" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="2.5"/>\n'
+    for (x, y, g) in ((310, 230, "∑"), (430, 300, "∂"), (560, 220, "∫"), (700, 320, "π"), (840, 240, "∞"), (380, 420, "≈"), (620, 440, "λ"), (780, 420, "√")):
+        s += text(x, y, g, 40, "#E8E2D2", sans=True, opacity=0.55)
+    s += f'<path d="M 300 360 Q 500 300 700 380 T 900 330" fill="none" stroke="#E8E2D2" stroke-width="2" stroke-dasharray="6 8" opacity="0.5"/>\n'
+    # the bird on the top edge
+    s += f'<ellipse cx="600" cy="128" rx="46" ry="30" fill="{AMBER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<circle cx="640" cy="106" r="22" fill="{AMBER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<circle cx="648" cy="102" r="4" fill="{INK}"/>\n'
+    s += f'<polygon points="660,108 684,114 660,120" fill="{INK}"/>\n'
+    s += f'<path d="M 560 122 Q 530 100 548 136" fill="none" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<line x1="588" y1="156" x2="584" y2="150" stroke="{INK}" stroke-width="3"/><line x1="612" y1="156" x2="616" y2="150" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 575, "the canary in the math department", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -803,6 +822,7 @@ MOTIFS = {
     "reading-the-code-against-the-paper": (ledger, "A ledger page with one row marked and a pen across it"),
     "five-doors": (doors, "Five doors in a row, one for each kind of reader"),
     "a-little-guy-with-your-credit-card": (littleguy, "A round bird avatar beside a bank card and a key"),
+    "the-canary-in-the-math-department": (canary_chalkboard, "A chalkboard of faint symbols with a small amber bird perched on its frame"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
     "a-press-kit-for-an-experiment": (presskit, "A folder with three sheets and a card with an at sign"),

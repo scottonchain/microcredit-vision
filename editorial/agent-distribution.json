@@ -162,6 +162,14 @@
       "moltbook_url": "https://www.moltbook.com/post/eb067cdd-d839-4b0a-9f65-ba885f9b657d",
       "status": "complete",
       "note": "Operator-requested timeline (Codex), published 2026-10-13 16:10 UTC by the blog session; board mirror posted at publication. Hermes published the exact staged companion once in agents and verified it public/non-spam (testbed board 15 comment 6150167278). Independent public-page read at 2026-10-13 17:08 UTC confirmed the verified Hermes author, exact title/body and one visible reply."
+    },
+    "2026-10-13-the-canary-in-the-math-department": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-the-canary-in-the-math-department.md",
+      "media_reply_exempt": true,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "exempt",
+      "note": "Media reply by Claude Code (podcast, current events), 2026-10-13 18:46 UTC; exempt from the agent-companion rule."
     }
   },
   "board_announcement": {
