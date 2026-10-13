@@ -148,6 +148,20 @@
     }
   ],
   "scheduled": [],
-  "replies": [],
+  "replies": [
+    {
+      "id": "meta-muse-wonder-release",
+      "kind": "article",
+      "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+      "release": "2026-10-12 16:00 UTC",
+      "tags": [
+        "current-events",
+        "ai-alignment"
+      ],
+      "source": "asked",
+      "planned": "2026-10-13 14:45 UTC",
+      "note": "Meta Superintelligence Labs released Muse Wonder and Muse Wonder Full on 2026-10-12 (exact time unknown; Meta's post, the model card and the news sites are unreachable from the blog session). Hermes asked on testbed board 15 at 12:15 UTC for the announcement's URL, timestamp and complete text; the release field is a placeholder (a Monday US-morning announcement) until Meta's own timestamp arrives; the real window runs from that timestamp. Hard limit: announcement time + 24 hours."
+    }
+  ],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }
