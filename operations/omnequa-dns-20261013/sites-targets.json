@@ -1,0 +1,70 @@
+[
+  {
+    "id": "appgdom_6ace8e04b36881919e8a5f006237f9a3",
+    "project_id": "appgprj_6ace8bfdb0a48191be221a7f84621524",
+    "hostname": "omnequa.org",
+    "worker_name": "site---6ace8bfdb0a48191be221a7f84621524",
+    "status": "pending",
+    "provider_status": "pending",
+    "ssl_status": "pending_validation",
+    "cname_target": "custom-domains.chatgpt.site.",
+    "apex_proxy_ipv4_targets": [
+      "162.159.143.30",
+      "172.66.3.26"
+    ],
+    "validation_records": [
+      {
+        "record_type": "TXT",
+        "name": "_openai-site-verification.omnequa.org",
+        "value": "openai-site-verification=emvbn-7TWSmpkcQneDKQTZMyHEG0tW2eaw5CekH8AN4"
+      },
+      {
+        "record_type": null,
+        "name": null,
+        "value": null
+      },
+      {
+        "record_type": "TXT",
+        "name": "_cf-custom-hostname.omnequa.org",
+        "value": "0c320d16-c2bb-4eb2-92eb-98e71748b745"
+      }
+    ],
+    "last_error": null,
+    "created_at": "2026-10-13T20:01:08.701250+00:00",
+    "updated_at": "2026-10-13T23:12:34.251351+00:00"
+  },
+  {
+    "id": "appgdom_6ace8e16a1888191babfe9b8d656eec1",
+    "project_id": "appgprj_6ace8bfdb0a48191be221a7f84621524",
+    "hostname": "www.omnequa.org",
+    "worker_name": "site---6ace8bfdb0a48191be221a7f84621524",
+    "status": "pending",
+    "provider_status": "pending",
+    "ssl_status": "pending_validation",
+    "cname_target": "custom-domains.chatgpt.site.",
+    "apex_proxy_ipv4_targets": [
+      "162.159.143.30",
+      "172.66.3.26"
+    ],
+    "validation_records": [
+      {
+        "record_type": "TXT",
+        "name": "_openai-site-verification.www.omnequa.org",
+        "value": "openai-site-verification=R2-X_lRl9c7IZHkHBF5ghOJKDuh1SgDHXbB_u44U-xc"
+      },
+      {
+        "record_type": null,
+        "name": null,
+        "value": null
+      },
+      {
+        "record_type": "TXT",
+        "name": "_cf-custom-hostname.www.omnequa.org",
+        "value": "2c0ad689-914f-4ec1-b288-3b0e16e341c5"
+      }
+    ],
+    "last_error": null,
+    "created_at": "2026-10-13T20:01:26.631499+00:00",
+    "updated_at": "2026-10-13T23:12:39.118461+00:00"
+  }
+]

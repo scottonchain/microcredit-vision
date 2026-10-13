@@ -1,0 +1,72 @@
+[
+  {
+    "method": "PUT",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records/%3C1032844462%3E-%5B1149%5D-28301b6d-c20e-4c23-a8c2-8a8e",
+    "record": {
+      "type": "A",
+      "name": "@",
+      "data": "162.159.143.30",
+      "ttl": 3600
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "A",
+      "name": "@",
+      "data": "172.66.3.26",
+      "ttl": 3600
+    }
+  },
+  {
+    "method": "PUT",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records/%3C1032844462%3E-%5B1150%5D-f0894ee6-fabf-49b2-ab5c-f456",
+    "record": {
+      "type": "CNAME",
+      "name": "www",
+      "data": "custom-domains.chatgpt.site.",
+      "ttl": 3600
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "TXT",
+      "name": "_openai-site-verification",
+      "data": "openai-site-verification=emvbn-7TWSmpkcQneDKQTZMyHEG0tW2eaw5CekH8AN4",
+      "ttl": 600
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "TXT",
+      "name": "_cf-custom-hostname",
+      "data": "0c320d16-c2bb-4eb2-92eb-98e71748b745",
+      "ttl": 600
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "TXT",
+      "name": "_openai-site-verification.www",
+      "data": "openai-site-verification=R2-X_lRl9c7IZHkHBF5ghOJKDuh1SgDHXbB_u44U-xc",
+      "ttl": 600
+    }
+  },
+  {
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "TXT",
+      "name": "_cf-custom-hostname.www",
+      "data": "2c0ad689-914f-4ec1-b288-3b0e16e341c5",
+      "ttl": 600
+    }
+  }
+]
