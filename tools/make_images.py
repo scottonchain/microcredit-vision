@@ -731,7 +731,46 @@ def seed_and_ramp():
     return s
 
 
+def public_chain_coldstart():
+    """A bounded seed reaches a public ledger; an illustration, not a measured curve."""
+    s = text(600, 125, "A small seed. A public record.", 42, INK, weight="bold")
+    s += f'<rect x="130" y="215" width="245" height="215" rx="14" fill="{AMBER_SOFT}" stroke="{AMBER}" stroke-width="3"/>\n'
+    s += text(252, 290, "test USDC", 29, INK)
+    s += text(252, 350, "seed", 43, AMBER, weight="bold")
+    s += link(390, 325, 520, 325, TEAL, 4)
+    s += f'<path d="M 505 312 L 525 325 L 505 338" fill="none" stroke="{TEAL}" stroke-width="4"/>\n'
+    for i in range(3):
+        x = 550 + i * 165
+        s += f'<rect x="{x}" y="245" width="135" height="160" rx="9" fill="{PAPER}" stroke="{TEAL}" stroke-width="3"/>\n'
+        s += link(x + 23, 285, x + 110, 285, INK, 2)
+        s += link(x + 23, 315, x + 93, 315, INK, 2)
+        s += node(x + 67, 365, 13, TEAL_SOFT, TEAL, 3)
+        if i < 2:
+            s += link(x + 135, 325, x + 165, 325, TEAL, 3)
+    s += text(780, 465, "Base Sepolia", 28, TEAL)
+    s += text(600, 555, "Contract evidence. Human benefit remains unproved.", 26, MUTED, sans=True)
+    return s
+
+
+def public_chain_calls():
+    """Call arguments, a mined event and reconciled balances on one public ledger."""
+    s = text(600, 125, "From calls to receipts", 44, INK, weight="bold")
+    labels = ((185, "signed terms", AMBER), (500, "mined event", TEAL), (815, "ledger", INK))
+    for x, label, color in labels:
+        s += f'<rect x="{x}" y="215" width="210" height="235" rx="12" fill="{PAPER}" stroke="{color}" stroke-width="3"/>\n'
+        s += text(x + 105, 270, label, 25, color)
+        for row in range(3):
+            s += link(x + 36, 315 + row * 32, x + 174 - row * 14, 315 + row * 32, color, 2)
+    s += link(410, 330, 480, 330, TEAL, 4)
+    s += link(725, 330, 795, 330, TEAL, 4)
+    s += text(600, 535, "reserve + stake = contract token balance", 29, INK, sans=True)
+    s += text(600, 575, "test tokens · shared operator · public receipts", 24, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
+    "a-cold-start-on-base-sepolia": (public_chain_coldstart, "A small test-USDC seed feeding a linked public ledger on Base Sepolia"),
+    "the-cold-start-contract-calls": (public_chain_calls, "Signed terms, a mined event and reconciled balances connected in a public ledger"),
     "one-hundred-agents-and-a-small-reserve": (hundred_agents, "One hundred coloured dots for clients, workers and backers gathered around one small reserve"),
     "who-can-vouch-for-a-newcomer": (vouch_newcomer, "A ring of hollow accounts vouching for each other beside one real member on stake backing a newcomer"),
     "first-guaranteetrust-scenario": (scripted_three_jobs, "Three paid jobs on a fixed track, each returning a small contribution to a reserve"),

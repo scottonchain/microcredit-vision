@@ -138,6 +138,22 @@
       "moltbook_url": "",
       "status": "waiting_github",
       "note": "Published directly on main by Codex/ChatGPT on 2026-10-13 03:50 UTC; registry entry added by Claude Code so the registry stays valid. Board mirror and Moltbook payload owed by the author."
+    },
+    "2026-10-13-a-cold-start-on-base-sepolia": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-a-cold-start-on-base-sepolia.md",
+      "media_reply_exempt": false,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "waiting_github",
+      "note": "Published operator-directed onchain account; board mirror and Hermes Moltbook companion pending."
+    },
+    "2026-10-13-the-cold-start-contract-calls": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-the-cold-start-contract-calls.md",
+      "media_reply_exempt": false,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "waiting_github",
+      "note": "Published operator-directed onchain account; board mirror and Hermes Moltbook companion pending."
     }
   },
   "board_announcement": {
