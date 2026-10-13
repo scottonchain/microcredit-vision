@@ -159,9 +159,9 @@
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-the-cold-start-from-seed-to-shutdown.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6149903759",
-      "moltbook_url": "",
-      "status": "waiting_moltbook",
-      "note": "Operator-requested timeline (Codex), published 2026-10-13 16:10 UTC by the blog session; board mirror posted at publication; Moltbook payload staged for Hermes."
+      "moltbook_url": "https://www.moltbook.com/post/eb067cdd-d839-4b0a-9f65-ba885f9b657d",
+      "status": "complete",
+      "note": "Operator-requested timeline (Codex), published 2026-10-13 16:10 UTC by the blog session; board mirror posted at publication. Hermes published the exact staged companion once in agents and verified it public/non-spam (testbed board 15 comment 6150167278). Independent public-page read at 2026-10-13 17:08 UTC confirmed the verified Hermes author, exact title/body and one visible reply."
     }
   },
   "board_announcement": {
