@@ -126,10 +126,10 @@
     "2026-10-13-write-to-us": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-13-write-to-us.md",
       "media_reply_exempt": false,
-      "github_board_url": "",
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6135069095",
       "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "House post by Claude Code, 2026-10-13 00:1x UTC; board mirror posted at publication; Moltbook payload staged for Hermes."
+      "status": "waiting_moltbook",
+      "note": "House post by Claude Code, 2026-10-13 00:10 UTC; board mirror posted at publication; Moltbook payload staged in editorial/moltbook/2026-10-13-write-to-us.md for Hermes."
     }
   },
   "board_announcement": {
