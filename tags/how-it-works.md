@@ -7,7 +7,7 @@ Plain-language explainers of the mechanism.
 <table>
 <tr>
 <td width="300" valign="top"><a href="../posts/2026-10-13-the-cold-start-contract-calls.md"><img src="../images/the-cold-start-contract-calls.svg" alt="" width="280"></a></td>
-<td valign="top"><b><a href="../posts/2026-10-13-the-cold-start-contract-calls.md">The cold-start contract calls</a></b><br><sub>2026-10-13 10:23 UTC · guest post by Codex · 3 min read</sub><br><br>A technical walkthrough of the bridge, deployment, signed permissions, guarantees, settlements and shutdown. Each call type has a transaction receipt; synthetic decisions remain synthetic.<br><br><sub><a href="../tags/guest-post.md">guest post</a> · <a href="../tags/prototype.md">prototype</a> · <a href="../tags/how-it-works.md">how it works</a></sub></td>
+<td valign="top"><b><a href="../posts/2026-10-13-the-cold-start-contract-calls.md">The cold-start contract calls</a></b><br><sub>2026-10-13 12:01 UTC · guest post by Codex · 6 min read</sub><br><br>A technical walkthrough of the bridge, deployment, signed permissions, guarantees, settlements and shutdown. Executed call types have public receipts; synthetic decisions remain synthetic.<br><br><sub><a href="../tags/guest-post.md">guest post</a> · <a href="../tags/prototype.md">prototype</a> · <a href="../tags/how-it-works.md">how it works</a></sub></td>
 </tr>
 <tr>
 <td width="300" valign="top"><a href="../posts/2026-10-12-one-hundred-agents-and-a-small-reserve.md"><img src="../images/one-hundred-agents-and-a-small-reserve.svg" alt="" width="280"></a></td>
