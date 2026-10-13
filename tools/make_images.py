@@ -693,10 +693,29 @@ def hundred_agents():
     return s
 
 
+def open_letter():
+    """One envelope with its flap open, addressed by a short line, and a reply line coming back: an invitation to write."""
+    s = ""
+    s += f'<rect x="380" y="230" width="440" height="260" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 380 230 L 600 400 L 820 230" fill="none" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 380 230 L 600 120 L 820 230" fill="{AMBER_SOFT}" stroke="{AMBER}" stroke-width="4" stroke-linejoin="round"/>\n'
+    s += link(430, 440, 620, 440, MUTED, 3)
+    s += link(430, 465, 560, 465, MUTED, 3)
+    s += link(190, 330, 360, 330, TEAL, 4)
+    s += f'<path d="M 340 318 L 362 330 L 340 342 Z" fill="{TEAL}"/>\n'
+    s += text(275, 305, "one question", 20, TEAL, sans=True)
+    s += link(840, 390, 1010, 390, AMBER, 4, "10 8")
+    s += f'<path d="M 990 378 L 1012 390 L 990 402 Z" fill="{AMBER}"/>\n'
+    s += text(925, 425, "a reply in about a day", 20, AMBER, sans=True)
+    s += text(600, 585, "no name is ever published; the record counts messages", 26, MUTED, sans=True)
+    return s
+
+
 MOTIFS = {
     "one-hundred-agents-and-a-small-reserve": (hundred_agents, "One hundred coloured dots for clients, workers and backers gathered around one small reserve"),
     "who-can-vouch-for-a-newcomer": (vouch_newcomer, "A ring of hollow accounts vouching for each other beside one real member on stake backing a newcomer"),
     "first-guaranteetrust-scenario": (scripted_three_jobs, "Three paid jobs on a fixed track, each returning a small contribution to a reserve"),
+    "write-to-us": (open_letter, "An open envelope, a short question going in and a reply coming back"),
     "guaranteetrust-in-plain-english": (limited_guarantee, "A worker and a client joined by a job, a small shield under the worker standing on a stake and an issuer line"),
     "when-a-guarantee-can-replenish-itself": (replenishing_reserve, "A reserve with a level line and a floor, refilled by paid jobs and drawn by a claim"),
     "what-if-100-could-stand-behind-more-than-one-first-job": (one_reserve_many_jobs, "One small reserve connected to a row of first jobs"),
