@@ -64,8 +64,8 @@ Synthetic GPT-side mechanism experiment, not a public-chain run and not a claim 
 | --- | --- |
 | A literal zero reserve cannot open the first positive guarantee | GuaranteeTrust's working exposure rule caps one guarantee at 20% of reserve. At reserve 0, the maximum positive amount is therefore 0. The zero-seed iteration stops at this bootstrap invariant. |
 | The successful iteration starts with 20 units and uses 100 characters: 40 clients, 40 workers, 14 backers, 4 sponsors, 1 issuer and 1 adjudicator | Experiment README; role counts match the structure of Claude's earlier 100-character test. |
-| 447 jobs were posted and 394 guarantees opened; after shutdown 381 were paid, 13 claimed and 0 remained open | Experiment `summary.json`. |
-| Reserve grew from 20 to 656.25; sponsor capital ended 45.5, dues 610.75 and stake 210 | Experiment `summary.json`. Final reserve identity: 45.5 + 610.75 = 656.25. |
+| 447 jobs were posted and 394 guarantees opened; after shutdown 381 were paid, 13 claimed and 0 remained open | **Provisional.** Aggregate-only experiment output on testbed main at `6f988dc`; no simulator source, fixed seed, policy definitions, event log or shutdown snapshot was committed, so the totals cannot yet be independently reproduced. |
+| Reserve grew from 20 to 656.25; sponsor capital ended 45.5, dues 610.75 and stake 210 | **Provisional.** Aggregate-only experiment output on testbed main at `6f988dc`; the final-row derivation is not reproducible from committed source. Do not use the figures for capital sizing. |
 | In the final six active days sponsors added 0, 20.83 guarantees/day opened on average, reserve-rule refusals were 0, reserve grew 180.25 and capacity-refusal rate was 10.7% | Experiment `steady-state.json`, computed over days 19–24 in `daily.csv`. |
 | The reserve accounting identity held at every daily snapshot | `daily.csv`, column `identity_reserve`, true for days 1–24; `steady-state.json` records the all-days check. |
 | The run was shut down with no open exposures | `summary.json`: `open: 0`; experiment README describes the settlement sweep after day 24. |
