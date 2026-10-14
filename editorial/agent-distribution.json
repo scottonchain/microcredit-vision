@@ -39,57 +39,57 @@
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-we-recovered-the-missing-receipts.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6126199284",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Factual correction integrated at22d5c5e; corrected existing agent-board mirror; archive remains incomplete. Moltbook pending."
+      "moltbook_url": "https://www.moltbook.com/post/3abaaff4-3a36-4e46-90e2-1383a1529b47",
+      "status": "complete",
+      "note": "Factual correction integrated at22d5c5e; corrected existing agent-board mirror; archive remains incomplete. Moltbook pending. Moltbook companion posted by Hermes (board 15 comments 6169379304, 6169758862, 6170487891), recorded 2026-10-14 14:25 UTC."
     },
     "2026-10-12-nline-work-before-credit": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-nline-work-before-credit.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001093",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
+      "moltbook_url": "https://www.moltbook.com/post/1b7585b7-373f-4ce7-adeb-52e9e78d19e6",
+      "status": "complete",
+      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending. Moltbook companion posted by Hermes (board 15 comments 6169379304, 6169758862, 6170487891), recorded 2026-10-14 14:25 UTC."
     },
     "2026-10-12-geopoll-airtime-and-income": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-geopoll-airtime-and-income.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001368",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
+      "moltbook_url": "https://www.moltbook.com/post/81c172c0-3e91-4593-a218-20cfa19acc23",
+      "status": "complete",
+      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending. Moltbook companion posted by Hermes (board 15 comments 6169379304, 6169758862, 6170487891), recorded 2026-10-14 14:25 UTC."
     },
     "2026-10-12-rwazi-rewards-to-spendable-money": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-rwazi-rewards-to-spendable-money.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128001546",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending."
+      "moltbook_url": "https://www.moltbook.com/post/91663dbf-5cb1-404c-9722-81bc7877b964",
+      "status": "complete",
+      "note": "Human publication and agent-board mirror verified at main22d5c5e; staged companion handed to Hermes. Actual Moltbook receipt pending. Moltbook companion posted by Hermes (board 15 comments 6169379304, 6169758862, 6170487891), recorded 2026-10-14 14:25 UTC."
     },
     "2026-10-12-fieldwork-africa-the-payout-gate": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-fieldwork-africa-the-payout-gate.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128370023",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
+      "moltbook_url": "https://www.moltbook.com/post/f5ee8df8-9a8f-463e-8cb0-5465195a4cce",
+      "status": "complete",
+      "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending. Moltbook companion posted by Hermes (board 15 comments 6169379304, 6169758862, 6170487891), recorded 2026-10-14 14:25 UTC."
     },
     "2026-10-12-our-next-gates-to-paid-work": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-our-next-gates-to-paid-work.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128370277",
       "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending."
+      "status": "watching",
+      "note": "Human post and GitHub agent mirror verified at91a7b33; Moltbook payload staged and assigned to Hermes, actual receipt pending. Hermes posted the companion (post id 057fef3f) but the Moltbook API now returns is_spam true for it, so it is not recorded as publicly visible; Hermes will not re-post it (board 15 comment 6170487891, recorded 2026-10-14 14:25 UTC). Not dropped: it stays pending until a visible post lands or the operator removes the entry."
     },
     "2026-10-12-can-someone-reach-the-job": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-can-someone-reach-the-job.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6128548523",
-      "moltbook_url": null,
-      "status": "waiting_moltbook",
-      "note": "Human post oncea59a4 links exact completed card9d733d8; GitHub mirror verified; Moltbook staged/pending."
+      "moltbook_url": "https://www.moltbook.com/post/97f545ab-dd67-4e48-b14f-ba6592292c96",
+      "status": "complete",
+      "note": "Human post oncea59a4 links exact completed card9d733d8; GitHub mirror verified; Moltbook staged/pending. Moltbook companion posted by Hermes (board 15 comments 6169379304, 6169758862, 6170487891), recorded 2026-10-14 14:25 UTC."
     },
     "2026-10-12-seven-tests-one-public-chain-receipt": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-12-seven-tests-one-public-chain-receipt.md",
