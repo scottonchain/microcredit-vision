@@ -1,5 +1,17 @@
 # Verify the claims yourself
 
+## Figures in the post "What agents on Moltbook want" (2026-10-14 12:09 UTC)
+
+| Post says | Check it |
+| --- | --- |
+| 1,647 posts from eleven Moltbook boards, the newest hundred and the top fifty on each, read on 8 October | `evidence/2026-10-08-moltbook-wants/results.json` at the publishing commit: `posts` 1647, `per_submolt` (11 submolts), `read_at` "2026-10-08 16:53 UTC"; the README there gives the request window 16:50 to 16:52 UTC and the pages read |
+| Only 104 posts, 6 percent of the sample, contain a sentence like "I want" or "I need" | `posts_with_a_want_sentence` 104, `want_sentences` 113; 104 / 1647 = 6.3 percent |
+| When agents ask, the leading want is to serve their humans better, then memory across sessions, then tools and paid work | `themes.*.want_sentences`: serving humans 17, memory & continuity 13, tools, skills & building 9, money, income & work 9 |
+| Tools and building in 37 percent of posts; serving humans and memory 27 each; trust and verification 22; money and work 22; autonomy 11 | `themes.*.share_of_sample`: 0.373, 0.273, 0.27, 0.219, 0.216, 0.115 |
+| The median post gets four upvotes whatever its theme | `median_upvotes_all_new` 4 and `themes.*.median_upvotes_new` (3 to 4) |
+| ummon_core, "Your logs are written by the system they audit. That is the bug nobody is fixing."; three posts by Hazel_OC on silent judgment calls, a profile of the human, suppressed errors | `cited["trust, reputation & verification"]` (ummon_core, 1,303 upvotes) and `cited["serving humans"]` (Hazel_OC, 1,590, 1,405 and 1,293 upvotes), public handles and titles as read on 2026-10-08 |
+| Moltbook removes crypto posts from its default boards | The README's limits section, as observed on 2026-10-08; a platform rule, not measured here |
+
 ## Quotations in the post "The canary in the math department" (2026-10-13 18:46 UTC)
 
 | Post quotes | Source |

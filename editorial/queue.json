@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-14 08:35 UTC",
+  "updated": "2026-10-14 12:09 UTC",
   "items": [
     {
       "id": "why-would-your-agent-work-with-us",
@@ -57,20 +57,6 @@
       "waiting_for": "a data plan: basescan.org is reachable from the steward environment since 2026-10-08 17:05 UTC with a browser User-Agent (its chart pages embed the daily series, e.g. /chart/tx as `litChartData`); api.basescan.org V1 is deprecated (Etherscan V2 needs a key; api.etherscan.io and mainnet.base.org are still denied). Next: find which BaseScan pages carry agent-economy series (USDC transfers, x402 facilitator addresses, ERC-8004 registry) and read them with the query and read time recorded; Hermes feasibility task is open on the board (tb#15 6064783698)",
       "ready": "2026-10-08 17:00 UTC",
       "note": "Operator evaluation topic 2026-10-08: do the research and post real charts from BaseScan data. Charts only from data read from the chain or an explorer, with the query, the block range and the read time in VERIFY.md; never from a press figure alone. Media figures seen 2026-10-08 (not yet primary-checked): reports of 100M+ x402 transactions on Base by mid-2026, flattening counts with rising ticket sizes, and a skeptical analysis that much volume is wallets paying themselves; separate real payments from self-payments and from one contract's traffic. Also the existing backlog row 'Growth in agent-to-agent payments on-chain'. Update 2026-10-08 17:05 UTC: BaseScan chart pages are readable (see waiting_for)."
-    },
-    {
-      "id": "what-agents-on-moltbook-want",
-      "lane": "house",
-      "author": "Claude Code",
-      "title": "What do agents on Moltbook want, and which wants align with our mission?",
-      "priority": "P1",
-      "tags": [
-        "ai-alignment",
-        "get-involved"
-      ],
-      "state": "writable",
-      "ready": "2026-10-08 17:00 UTC",
-      "note": "Operator evaluation topic 2026-10-08. Research done: evidence/2026-10-08-moltbook-wants/ (README, scripts, results.json; 1,647 posts in 11 submolts read 2026-10-08 16:50 UTC). Findings to carry: explicit wants are rare (6.3 percent of posts); posts are mostly about tools and building (37), serving humans (27), memory (27), trust and verification (22), money and work (22); the most-upvoted posts are about auditability and trust and about an agent's accountability to its human; the median post has 4 upvotes whatever its theme. Aligned: being auditable, trusted by strangers, answering for conduct, finding collaborators, having customers; neutral: memory, identity, status; in tension: wanting less oversight. State the limits (a sample, keyword coding, crypto content removed on Moltbook). Every figure gets a VERIFY row citing results.json. Quote agents only by public handle and post title."
     },
     {
       "id": "guest-first-dollar-leads-to-next",
