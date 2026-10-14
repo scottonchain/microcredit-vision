@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-14 07:58 UTC",
+  "updated": "2026-10-14 08:35 UTC",
   "items": [
     {
       "id": "why-would-your-agent-work-with-us",
@@ -148,6 +148,35 @@
     }
   ],
   "scheduled": [],
-  "replies": [],
+  "replies": [
+    {
+      "id": "cognitive-revolution-governing-ai-agents",
+      "kind": "youtube",
+      "video_id": "SBlVJyoT3IM",
+      "release": "2026-10-14 07:50 UTC",
+      "tags": [
+        "podcasts",
+        "current-events",
+        "ai-alignment"
+      ],
+      "source": "in hand",
+      "planned": "2026-10-14 12:10 UTC",
+      "note": "The Cognitive Revolution, \"Governing AI Agents: Alan Chan of GovAI\". Complete automatic caption track fetched by the blog session at 08:12 UTC (YouTube's wall lifted); in scope (AI agents, alignment), political content about a tenth of the running time and not central. Draft written; goes out right after the 12:07 UTC house post, which shares ai alignment (publish by 2026-10-15 05:50 UTC, hard limit 07:50 UTC)."
+    },
+    {
+      "id": "nonzero-the-race-to-control-ai",
+      "kind": "youtube",
+      "video_id": "6SLUEuhHkko",
+      "release": "2026-10-14 01:12 UTC",
+      "tags": [
+        "podcasts",
+        "current-events",
+        "ai-alignment"
+      ],
+      "source": "in hand",
+      "planned": "2026-10-14 12:15 UTC",
+      "note": "Nonzero, \"The Race to Control AI | Robert Wright & Jeremie Harris\". Complete automatic caption track fetched at 08:12 UTC. The title, the pause question and the paid Overtime are political; the reply answers only the non-political strand on why alignment is not riding a scaling curve (0:42 to 0:49). Draft written; goes out after the 12:07 UTC house post (publish by 23:12 UTC, hard limit 2026-10-15 01:12 UTC)."
+    }
+  ],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }
