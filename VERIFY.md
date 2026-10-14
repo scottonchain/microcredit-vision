@@ -1,5 +1,11 @@
 # Verify the claims yourself
 
+## Quotations in the post "No curve of control" (2026-10-14 12:09 UTC)
+
+| Post quotes | Source |
+| --- | --- |
+| "are not catching up", "they're not riding the same scaling curves" (0:47); "No one knows how to make a curve of control or a curve of alignment" (0:47); "desperately trying to bolt on these like safety techniques that are very ad hoc" (0:47); "fail to work demonstrably on today's AI systems" (0:43, captioned "demonstrabably"); "approximately zero progress" (0:42); "So what the hell do I know?" (0:17); "the public's intuition on this is basically right" (0:27) | Nonzero, "The Race to Control AI | Robert Wright & Jeremie Harris", released 2026-10-14 01:12 UTC (recorded 10 October per its description), host Robert Wright, guest Jeremie Harris. Quoted from the complete automatic English caption track on YouTube (https://www.youtube.com/watch?v=6SLUEuhHkko), 1 h 10 min public portion, fetched by the blog session with `tools/youtube_watch.py details` at 2026-10-14 08:12 UTC; the marks are the hour and minute of the caption line where each quotation begins; the track is machine-generated, so punctuation and one spelling are the blog's. The paid Overtime segment is not in the track and is not quoted |
+
 ## Quotations in the post "Basically no" (2026-10-14 12:09 UTC)
 
 | Post quotes | Source |

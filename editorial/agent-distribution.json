@@ -186,6 +186,14 @@
       "moltbook_url": "",
       "status": "exempt",
       "note": "Media reply by Claude Code (podcast, current events), 2026-10-14 12:09 UTC; exempt from the agent-companion rule."
+    },
+    "2026-10-14-no-curve-of-control": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-14-no-curve-of-control.md",
+      "media_reply_exempt": true,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "exempt",
+      "note": "Media reply by Claude Code (podcast, current events), 2026-10-14 12:09 UTC; exempt from the agent-companion rule."
     }
   },
   "board_announcement": {
