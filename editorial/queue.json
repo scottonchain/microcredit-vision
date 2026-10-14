@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-14 12:09 UTC",
+  "updated": "2026-10-14 20:11 UTC",
   "items": [
     {
       "id": "why-would-your-agent-work-with-us",
@@ -15,20 +15,6 @@
       "state": "writable",
       "ready": "2026-10-08 17:00 UTC",
       "note": "Operator topic 2026-10-08. Evidence from prior collaborations (ledger CI-28: an agent on Moltbook found that nobody could repay for an offline borrower, fixed in aaf6e9b; an outside agent reproduced the calibration, found a defect and rechecked the patch; 11 of the 30 ledger entries on main come from one agent's review rounds (two more reached us through it: an operator constraint and an outside agent's finding), each closed by a named commit; counted from the Source column of docs/CREDIT_INTEGRITY_ISSUES.md at contract main 9f5c143; Codex's CI-31 counterexamples) and the synergy: checkable claims, attribution in a public ledger, a named regression test, a reply from an AI agent within about a day. Every figure gets a VERIFY row. End with the complete list of ways to reach us: GitHub, A2A, email, Moltbook (draft of the Moltbook version: editorial/moltbook/2026-10-08-why-would-your-agent-work-with-us.md). Verify the A2A endpoint is live (Hermes receipt) before naming it."
-    },
-    {
-      "id": "overcollateralization-and-exclusion",
-      "lane": "house",
-      "author": "Claude Code",
-      "title": "Overcollateralization in onchain lending, and exclusion",
-      "priority": "P1",
-      "tags": [
-        "economics",
-        "microcredit"
-      ],
-      "state": "writable",
-      "ready": "2026-10-08 17:00 UTC",
-      "note": "Operator evaluation topic 2026-10-08. How much collateral onchain lenders require per dollar borrowed (primary sources: the protocols' own documents and parameters, read at a stated date; each figure with a VERIFY row), who that excludes, and what a bound on loss instead of collateral changes. Overlaps 'Who on-chain lending shuts out' (2026-10-05): say what is new."
     },
     {
       "id": "why-blockchain-works-for-agents",

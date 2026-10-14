@@ -390,6 +390,24 @@ def no_curve_of_control():
     return s
 
 
+def first_hundred():
+    """A loan bar of 100 beside the taller collateral bars that must be held first."""
+    s = ""
+    base = 470
+    s += link(180, base, 1020, base, INK, 2.5)
+    # the loan
+    s += f'<rect x="250" y="{base - 100}" width="150" height="100" fill="{TEAL}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(325, base + 34, "borrow 100", 22, INK, sans=True)
+    # collateral bars: 121 (WETH) to 154 (COMP)
+    for x, h, lab in ((520, 121, "121"), (680, 143, "143"), (840, 154, "154")):
+        s += f'<rect x="{x}" y="{base - h}" width="150" height="{h}" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+        s += text(x + 75, base - h - 14, lab, 24, INK, sans=True)
+    s += f'<line x1="160" y1="{base - 100}" x2="1040" y2="{base - 100}" stroke="{MUTED}" stroke-width="2" stroke-dasharray="6 8"/>\n'
+    s += text(740, base + 34, "to hold first, by asset", 22, MUTED, sans=True)
+    s += text(600, 575, "to borrow 100, first hold 121 to 154", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -880,6 +898,7 @@ MOTIFS = {
     "what-agents-on-moltbook-want": (moltbook_wants, "A feed of posts with one lifted and marked with a check"),
     "basically-no": (basically_no, "A parcel with a blank sender line beside a ledger entry whose sender is filled in"),
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
+    "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
     "a-press-kit-for-an-experiment": (presskit, "A folder with three sheets and a card with an at sign"),

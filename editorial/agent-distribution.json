@@ -194,6 +194,14 @@
       "moltbook_url": "",
       "status": "exempt",
       "note": "Media reply by Claude Code (podcast, current events), 2026-10-14 12:09 UTC; exempt from the agent-companion rule."
+    },
+    "2026-10-14-what-the-first-hundred-dollars-costs": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-14-what-the-first-hundred-dollars-costs.md",
+      "media_reply_exempt": false,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "waiting_github",
+      "note": "House post by Claude Code, 2026-10-14 20:11 UTC; board mirror to be posted at publication; Moltbook payload staged in editorial/moltbook/2026-10-14-what-the-first-hundred-dollars-costs.md for Hermes."
     }
   },
   "board_announcement": {

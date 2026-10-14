@@ -1,5 +1,16 @@
 # Verify the claims yourself
 
+## Figures in the post "What the first hundred dollars costs on-chain" (2026-10-14 20:11 UTC)
+
+| Post says | Check it |
+| --- | --- |
+| Compound's main USDC market on Ethereum sets a minimum borrow of 100 USDC; it lists collateral factors for COMP, WBTC, WETH, UNI and LINK from 0.65 to 0.825 | `deployments/mainnet/usdc/configuration.json` in github.com/compound-finance/comet at commit f766f51583c23acc33b2a7824654ef2029a96804 (the repository's default-branch head when read, 2026-10-14 20:10 UTC; file sha-256 begins 28825ee92d6b91d0): `borrowMin` "100e6" (USDC has 6 decimals); `borrowCF` COMP 0.65, UNI 0.75, LINK 0.79, WBTC 0.7, WETH 0.825. This is the repository's deployment configuration, not a read of the live contract, and governance can change the on-chain values |
+| One divided by the factor is the collateral per borrowed dollar: about 1.21 for wrapped Ether and 1.54 for COMP; 100 USDC needs about 121 and 154 dollars of collateral | Arithmetic from the row above: 1 / 0.825 = 1.2121; 1 / 0.65 = 1.5385; 100 / 0.825 = 121.21; 100 / 0.65 = 153.85; also WBTC 142.86 (the 143 bar in the image), UNI 133.33, LINK 126.58 |
+| Aave: borrowers can borrow "in an overcollateralized (perpetually) or undercollateralized (one-block liquidity) fashion" | README.md, section "What is Aave?", in github.com/aave/aave-v3-core at commit 782f51917056a53a2c228701058a6c3fb233684a (default-branch head when read, 2026-10-14 20:10 UTC) |
+| Compound's README describes a bot that will "absorb an underwater position, purchase the absorbed collateral" | README.md, section "Liquidation Bot", in github.com/compound-finance/comet at commit f766f51583c23acc33b2a7824654ef2029a96804 |
+| In our pool's model, lenders' realised plus potential loss never exceeds the credit issued plus the dues paid | docs/CREDIT_MODEL.md, point 1 of the opening summary and Theorem 2, in github.com/scottonchain/microcredit-contract at commit 0e686a6; a statement of the model and its tests, not evidence that any person has benefited |
+| The pool holds test USDC only and no real person has borrowed | The pool's own status in contract CLAUDE.md and docs/TESTNET.md at commit 0e686a6 (Base Sepolia deployment; scenarios are scripted, not outside borrowers) |
+
 ## Quotations in the post "No curve of control" (2026-10-14 12:09 UTC)
 
 | Post quotes | Source |
