@@ -198,9 +198,8 @@ reply cannot run immediately, arrange its permitted one-off for no later than
 within the ladder; the +22-to-24 buffer is for that ordering, not late sourcing.
 The scan reports stage, deadlines and time left. No transcript retry loop.
 
-Video replies carry `video_id` and `video_link`, their own top SVG, and BOTH a
-hyperlink on the first prose mention and a linked 480×360 video thumbnail at the
-end. `youtube_watch.py thumbnail` produces the play-arrow image in
+Video replies carry `video_id` and `video_link`, a linked 16:9 video thumbnail as their hero, and a
+hyperlink on the first prose mention. `youtube_watch.py thumbnail` produces the 480×270 play-arrow image in
 `images/youtube/<id>.png`; the build falls back to YouTube's thumbnail until it
 exists. Use `podcasts`, `current-events` and all other true tags, including
 `ai-alignment` when it applies.

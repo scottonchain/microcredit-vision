@@ -186,8 +186,25 @@ class Watch(unittest.TestCase):
                 target = youtube.thumbnail("abcdefghijk", source)
             fetch.assert_not_called()
             with Image.open(target) as output:
-                self.assertEqual(output.size, (480, 360))
-                self.assertEqual(output.getpixel((240, 180)), (255, 255, 255))
+                self.assertEqual(output.size, (480, 270))
+                self.assertEqual(output.getpixel((240, 135)), (255, 255, 255))
+
+    def test_thumbnail_crops_letterbox_without_rescaling_content(self):
+        from PIL import Image, ImageChops
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / "source.png"
+            original = Image.new("RGB", (480, 360), "black")
+            original.paste("teal", (0, 45, 480, 315))
+            original.paste("white", (30, 60, 60, 90))
+            original.save(source)
+            with patch.object(youtube, "ROOT", root):
+                target = youtube.thumbnail("abcdefghijk", source)
+            with Image.open(target) as output:
+                # Away from the overlay, pixels are exactly the original crop.
+                expected = original.crop((0, 45, 100, 315))
+                self.assertIsNone(ImageChops.difference(output.crop((0, 0, 100, 270)), expected).getbbox())
+                self.assertEqual(output.getpixel((240, 135)), (255, 255, 255))
 
     def test_source_fetch_and_thumbnail_reject_local_paths_before_reading(self):
         with patch.object(fetch_source.urllib.request, "urlopen") as request:

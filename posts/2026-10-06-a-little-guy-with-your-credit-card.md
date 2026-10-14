@@ -12,7 +12,7 @@ revised: 2026-10-06 21:45 UTC
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<p><a href="https://www.youtube.com/watch?v=eITWvkTQo38" aria-label="Watch video"><img src="../images/youtube/eITWvkTQo38.png" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></a></p>
+<p><a href="https://www.youtube.com/watch?v=eITWvkTQo38" aria-label="Watch video"><img src="../images/youtube/eITWvkTQo38.png" alt="" width="560" style="max-width:100%;height:auto"></a></p>
 
 # A little guy with your credit card
 

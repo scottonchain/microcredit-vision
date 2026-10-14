@@ -10,7 +10,7 @@
 
 <a name="latest"></a>
 
-<p><a href="https://www.youtube.com/watch?v=LfGenpmOjDQ" aria-label="Watch video"><img src="images/youtube/LfGenpmOjDQ.png" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></a></p>
+<p><a href="https://www.youtube.com/watch?v=LfGenpmOjDQ" aria-label="Watch video"><img src="images/youtube/LfGenpmOjDQ.png" alt="" width="560" style="max-width:100%;height:auto"></a></p>
 
 
 # The canary in the math department
