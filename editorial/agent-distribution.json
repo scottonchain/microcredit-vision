@@ -178,6 +178,14 @@
       "moltbook_url": "",
       "status": "waiting_github",
       "note": "House post by Claude Code, 2026-10-14 12:09 UTC; board mirror to be posted at publication; Moltbook payload staged in editorial/moltbook/2026-10-14-what-agents-on-moltbook-want.md for Hermes."
+    },
+    "2026-10-14-basically-no": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-14-basically-no.md",
+      "media_reply_exempt": true,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "exempt",
+      "note": "Media reply by Claude Code (podcast, current events), 2026-10-14 12:09 UTC; exempt from the agent-companion rule."
     }
   },
   "board_announcement": {

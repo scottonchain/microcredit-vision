@@ -136,20 +136,6 @@
   "scheduled": [],
   "replies": [
     {
-      "id": "cognitive-revolution-governing-ai-agents",
-      "kind": "youtube",
-      "video_id": "SBlVJyoT3IM",
-      "release": "2026-10-14 07:50 UTC",
-      "tags": [
-        "podcasts",
-        "current-events",
-        "ai-alignment"
-      ],
-      "source": "in hand",
-      "planned": "2026-10-14 12:10 UTC",
-      "note": "The Cognitive Revolution, \"Governing AI Agents: Alan Chan of GovAI\". Complete automatic caption track fetched by the blog session at 08:12 UTC (YouTube's wall lifted); in scope (AI agents, alignment), political content about a tenth of the running time and not central. Draft written; goes out right after the 12:07 UTC house post, which shares ai alignment (publish by 2026-10-15 05:50 UTC, hard limit 07:50 UTC)."
-    },
-    {
       "id": "nonzero-the-race-to-control-ai",
       "kind": "youtube",
       "video_id": "6SLUEuhHkko",

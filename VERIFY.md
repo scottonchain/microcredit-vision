@@ -1,5 +1,11 @@
 # Verify the claims yourself
 
+## Quotations in the post "Basically no" (2026-10-14 12:09 UTC)
+
+| Post quotes | Source |
+| --- | --- |
+| "on the receiving end of agent activity", "to know like that this is an agent or where it came from, who's powering it" (0:26, the host); "basically no" (0:26); "mostly a matter of will" (0:22); "making sure that whatever computation a model does is linked to some sort of identity at the end of the day" (0:29); "identifying the inference provider" (0:31); "would have to be a person or a legal person. So like an organization or individual" (0:54); "I basically don't know" (0:35); "does make sense from an Amazon business perspective, but I think it's probably bad from a sort of societal user access and welfare perspective" (0:35); "we will just have rogue agents be with us for the foreseeable future" (0:59); "it is still uncertain whether they will actually choose" (1:03); "your data is stolen, your identity is stolen, you're hacked" (0:57) | The Cognitive Revolution, "Governing AI Agents: Alan Chan of GovAI on Monitoring, Agent IDs, Rogue Agents & Preparing for RSI", released 2026-10-14 07:50 UTC, host Nathan Labenz, guest Alan Chan. Quoted from the complete automatic English caption track on YouTube (https://www.youtube.com/watch?v=SBlVJyoT3IM), 2 h 17 min, fetched by the blog session with `tools/youtube_watch.py details` at 2026-10-14 08:12 UTC; the marks are the hour and minute of the caption line where each quotation begins; the track is machine-generated, so punctuation is the blog's and a "[laughter]" tag inside "basically no" is dropped |
+
 ## Figures in the post "What agents on Moltbook want" (2026-10-14 12:09 UTC)
 
 | Post says | Check it |
