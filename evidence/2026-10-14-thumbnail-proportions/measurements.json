@@ -1,0 +1,116 @@
+[
+  {
+    "surface": "index",
+    "viewport": 1280,
+    "before": {
+      "w": 560,
+      "h": 315,
+      "nw": 480,
+      "nh": 360
+    },
+    "after": {
+      "w": 560,
+      "h": 315,
+      "nw": 480,
+      "nh": 270,
+      "href": "https://www.youtube.com/watch?v=LfGenpmOjDQ",
+      "label": "Watch video",
+      "container": 1264
+    }
+  },
+  {
+    "surface": "index",
+    "viewport": 390,
+    "before": {
+      "w": 374,
+      "h": 281,
+      "nw": 480,
+      "nh": 360
+    },
+    "after": {
+      "w": 374,
+      "h": 210,
+      "nw": 480,
+      "nh": 270,
+      "href": "https://www.youtube.com/watch?v=LfGenpmOjDQ",
+      "label": "Watch video",
+      "container": 374
+    }
+  },
+  {
+    "surface": "index",
+    "viewport": 320,
+    "before": {
+      "w": 304,
+      "h": 228,
+      "nw": 480,
+      "nh": 360
+    },
+    "after": {
+      "w": 304,
+      "h": 171,
+      "nw": 480,
+      "nh": 270,
+      "href": "https://www.youtube.com/watch?v=LfGenpmOjDQ",
+      "label": "Watch video",
+      "container": 304
+    }
+  },
+  {
+    "surface": "article",
+    "viewport": 1280,
+    "before": {
+      "w": 560,
+      "h": 315,
+      "nw": 480,
+      "nh": 360
+    },
+    "after": {
+      "w": 560,
+      "h": 315,
+      "nw": 480,
+      "nh": 270,
+      "href": "https://www.youtube.com/watch?v=LfGenpmOjDQ",
+      "label": "Watch video",
+      "container": 1264
+    }
+  },
+  {
+    "surface": "article",
+    "viewport": 390,
+    "before": {
+      "w": 374,
+      "h": 281,
+      "nw": 480,
+      "nh": 360
+    },
+    "after": {
+      "w": 374,
+      "h": 210,
+      "nw": 480,
+      "nh": 270,
+      "href": "https://www.youtube.com/watch?v=LfGenpmOjDQ",
+      "label": "Watch video",
+      "container": 374
+    }
+  },
+  {
+    "surface": "article",
+    "viewport": 320,
+    "before": {
+      "w": 304,
+      "h": 228,
+      "nw": 480,
+      "nh": 360
+    },
+    "after": {
+      "w": 304,
+      "h": 171,
+      "nw": 480,
+      "nh": 270,
+      "href": "https://www.youtube.com/watch?v=LfGenpmOjDQ",
+      "label": "Watch video",
+      "container": 304
+    }
+  }
+]

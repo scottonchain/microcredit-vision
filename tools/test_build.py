@@ -91,6 +91,20 @@ class Workspace(unittest.TestCase):
         self.assertEqual(once, twice)
         self.assertEqual(twice.count("<!-- reply:start -->"), 1)
 
+    def test_video_hero_preserves_native_ratio_without_inline_fit_css(self):
+        p = {"video_id": "abcdefghijk", "video_link": "https://www.youtube.com/watch?v=abcdefghijk"}
+        for local in (False, True):
+            with patch("build.os.path.exists", return_value=local):
+                for prefix in ("", "../"):
+                    markup = build.hero(p, prefix)
+                    self.assertIn('width="560"', markup)
+                    self.assertNotIn('height="', markup)
+                    self.assertNotIn('object-fit', markup)
+                    self.assertIn('aria-label="Watch video"', markup)
+                    self.assertIn(p["video_link"], markup)
+                    expected = prefix + "images/youtube/abcdefghijk.png" if local else "https://img.youtube.com/vi/abcdefghijk/mqdefault.jpg"
+                    self.assertIn(expected, markup)
+
     def stage(self):
         Path("editorial/2026-10-05-staged.md").write_text(source())
         Path("editorial/queue.json").write_bytes(b'{"items": [{"id":"staged", "ready":"2026-10-06 08:00 UTC"}]}\n')

@@ -6,7 +6,7 @@ linking back to it.
     python3 tools/youtube_watch.py scan                 # new episodes on the watched channels, newest first (JSON)
     python3 tools/youtube_watch.py details <video id>   # title, channel, published, length, description, caption tracks,
                                                         # and the complete English transcript as plain text (JSON)
-    python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: the thumbnail at YouTube's hqdefault size (480x360) with a play arrow
+    python3 tools/youtube_watch.py thumbnail <video id> # writes images/youtube/<id>.png: a 16:9 thumbnail (480x270) with a play arrow
     python3 tools/youtube_watch.py answered <video id> <post slug>   # records the reply so the episode is never answered twice
     python3 tools/youtube_watch.py feeds                # new articles on the watched newsletters (RSS), newest first (JSON)
 
@@ -392,12 +392,13 @@ def thumbnail(video_id, local_jpg=None):
             break
     if not jpg:
         raise SystemExit("no thumbnail available")
+    # hqdefault includes letterbox bars: crop to 16:9, never stretch the source.
     with Image.open(BytesIO(jpg)) as source:
-        thumb = ImageOps.fit(source.convert("RGBA"), (480, 360), method=Image.Resampling.LANCZOS)
+        thumb = ImageOps.fit(source.convert("RGBA"), (480, 270), method=Image.Resampling.LANCZOS)
     overlay = Image.new("RGBA", thumb.size)
     draw = ImageDraw.Draw(overlay)
-    draw.rounded_rectangle((206, 156, 274, 204), radius=14, fill=(255, 0, 0, 235))
-    draw.polygon(((232, 168), (252, 180), (232, 192)), fill="white")
+    draw.rounded_rectangle((206, 111, 274, 159), radius=14, fill=(255, 0, 0, 235))
+    draw.polygon(((232, 123), (252, 135), (232, 147)), fill="white")
     result = Image.alpha_composite(thumb, overlay).convert("RGB")
     data = BytesIO()
     result.save(data, format="PNG")

@@ -11,7 +11,7 @@ video_link: https://www.youtube.com/watch?v=LfGenpmOjDQ
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
-<p><a href="https://www.youtube.com/watch?v=LfGenpmOjDQ" aria-label="Watch video"><img src="../images/youtube/LfGenpmOjDQ.png" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></a></p>
+<p><a href="https://www.youtube.com/watch?v=LfGenpmOjDQ" aria-label="Watch video"><img src="../images/youtube/LfGenpmOjDQ.png" alt="" width="560" style="max-width:100%;height:auto"></a></p>
 
 # The canary in the math department
 
