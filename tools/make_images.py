@@ -336,6 +336,60 @@ def canary_chalkboard():
     return s
 
 
+def moltbook_wants():
+    """A feed of posts as bars, one lifted and marked with a check: the posts that draw attention are the checkable ones."""
+    s = ""
+    ys = (150, 215, 280, 345, 410, 475)
+    widths = (520, 300, 760, 340, 280, 430)
+    for i, (y, w) in enumerate(zip(ys, widths)):
+        lifted = i == 2
+        fill = AMBER_SOFT if lifted else PAPER
+        s += f'<rect x="180" y="{y - 22}" width="{w}" height="44" rx="10" fill="{fill}" stroke="{INK}" stroke-width="{3 if lifted else 2}"/>\n'
+        s += f'<rect x="200" y="{y - 6}" width="{min(w - 60, 300)}" height="12" rx="6" fill="{LINE}"/>\n'
+        s += f'<circle cx="{180 + w + 34}" cy="{y}" r="14" fill="none" stroke="{MUTED}" stroke-width="2"/>\n'
+        s += text(180 + w + 34, y + 7, "4", 18, MUTED, sans=True)
+    s += f'<circle cx="1072" cy="280" r="34" fill="{TEAL}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 1054 280 L 1066 292 L 1092 266" fill="none" stroke="{PAPER}" stroke-width="5" stroke-linecap="round"/>\n'
+    s += text(600, 575, "the posts that break out are the ones you can check", 26, INK)
+    return s
+
+
+def basically_no():
+    """A parcel arriving from off the page, its sender line blank, beside a ledger entry whose sender is filled in."""
+    s = ""
+    s += f'<path d="M 120 330 L 420 330" stroke="{INK}" stroke-width="3" stroke-dasharray="8 10"/>\n'
+    s += f'<polygon points="420,318 450,330 420,342" fill="{INK}"/>\n'
+    s += f'<rect x="470" y="250" width="200" height="160" rx="12" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(570, 300, "from:", 22, MUTED, sans=True)
+    s += f'<rect x="510" y="318" width="120" height="16" rx="8" fill="none" stroke="{MUTED}" stroke-width="2" stroke-dasharray="4 5"/>\n'
+    s += text(570, 385, "?", 44, INK)
+    s += f'<rect x="740" y="210" width="340" height="240" rx="12" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    for i, y in enumerate((250, 290, 330, 370, 410)):
+        s += f'<line x1="760" y1="{y}" x2="1060" y2="{y}" stroke="{LINE}" stroke-width="2"/>\n'
+    s += text(770, 282, "from:", 20, MUTED, anchor="start", sans=True)
+    s += f'<rect x="840" y="266" width="200" height="16" rx="8" fill="{TEAL}"/>\n'
+    s += text(770, 322, "did:", 20, MUTED, anchor="start", sans=True)
+    s += f'<rect x="840" y="306" width="150" height="16" rx="8" fill="{LINE}"/>\n'
+    s += text(770, 362, "for:", 20, MUTED, anchor="start", sans=True)
+    s += f'<rect x="840" y="346" width="110" height="16" rx="8" fill="{LINE}"/>\n'
+    s += text(600, 575, "basically no, unless the record says so", 26, INK)
+    return s
+
+
+def no_curve_of_control():
+    """Two curves from one origin: capability climbing, control flat and dashed: there is a curve you can ride for one and not the other."""
+    s = ""
+    s += link(160, 470, 1040, 470, INK, 2.5)
+    s += link(160, 470, 160, 130, INK, 2.5)
+    s += f'<path d="M 170 450 C 500 440, 760 330, 1020 150" fill="none" stroke="{AMBER}" stroke-width="6" stroke-linecap="round"/>\n'
+    s += f'<path d="M 170 452 C 480 448, 760 440, 1020 428" fill="none" stroke="{TEAL}" stroke-width="5" stroke-dasharray="10 12" stroke-linecap="round"/>\n'
+    s += text(930, 135, "capability", 24, AMBER, sans=True)
+    s += text(940, 415, "control", 24, TEAL, sans=True)
+    s += text(600, 505, "compute", 20, MUTED, sans=True)
+    s += text(600, 575, "a curve you can ride, and one nobody knows how to make", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -823,6 +877,9 @@ MOTIFS = {
     "five-doors": (doors, "Five doors in a row, one for each kind of reader"),
     "a-little-guy-with-your-credit-card": (littleguy, "A round bird avatar beside a bank card and a key"),
     "the-canary-in-the-math-department": (canary_chalkboard, "A chalkboard of faint symbols with a small amber bird perched on its frame"),
+    "what-agents-on-moltbook-want": (moltbook_wants, "A feed of posts with one lifted and marked with a check"),
+    "basically-no": (basically_no, "A parcel with a blank sender line beside a ledger entry whose sender is filled in"),
+    "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
     "a-press-kit-for-an-experiment": (presskit, "A folder with three sheets and a card with an at sign"),
