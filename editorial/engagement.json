@@ -1,6 +1,6 @@
 {
  "_doc": "Written by tools/engagement.py; counts only (CLAUDE.md, 'Queue, schedule and evaluation').",
- "updated": "2026-10-14 12:08 UTC",
+ "updated": "2026-10-14 16:08 UTC",
  "config": {
   "owner": "scottonchain",
   "blog_repo": "microcredit-vision",
@@ -39,7 +39,7 @@
   "stars": 0,
   "forks": 0,
   "watchers": 0,
-  "read": "2026-10-14 12:08 UTC"
+  "read": "2026-10-14 16:08 UTC"
  },
  "channels": {
   "moltbook_ref": 0,
@@ -48,11 +48,11 @@
  "posts": {},
  "categories": {
   "current-events": {
-   "posts": 8,
+   "posts": 10,
    "events": 0
   },
   "ai-alignment": {
-   "posts": 25,
+   "posts": 28,
    "events": 0
   },
   "economics": {
@@ -76,7 +76,7 @@
    "events": 0
   },
   "podcasts": {
-   "posts": 5,
+   "posts": 7,
    "events": 0
   },
   "team-news": {
@@ -84,7 +84,7 @@
    "events": 0
   },
   "get-involved": {
-   "posts": 4,
+   "posts": 5,
    "events": 0
   },
   "how-it-works": {
@@ -108,15 +108,15 @@
   "github": {
    "microcredit-vision": {
     "issue": 29,
-    "comment": 6165531725
+    "comment": 6169651414
    },
    "microcredit-contract": {
     "issue": 35,
     "comment": 6136963644
    },
    "microcredit-agent-testbed": {
-    "issue": 107,
-    "comment": 6166543899
+    "issue": 111,
+    "comment": 6172673539
    },
    "microcredit-theory": {
     "issue": 13,
@@ -262,6 +262,12 @@
   },
   {
    "at": "2026-10-14 12:08 UTC",
+   "events": 0,
+   "stars": 0,
+   "forks": 0
+  },
+  {
+   "at": "2026-10-14 16:08 UTC",
    "events": 0,
    "stars": 0,
    "forks": 0
