@@ -1,0 +1,139 @@
+[
+  {
+    "time": "2026-10-13T23:13:52.183677+00:00",
+    "method": "PUT",
+    "record": {
+      "type": "A",
+      "name": "@",
+      "data": "162.159.143.30",
+      "ttl": 3600
+    },
+    "status": 200,
+    "result": {
+      "data": "162.159.143.30",
+      "name": "@",
+      "recordId": "<1032844462>-[1149]-28301b6d-c20e-4c23-a8c2-8a8e",
+      "ttl": 3600,
+      "type": "A"
+    }
+  },
+  {
+    "time": "2026-10-13T23:13:53.262665+00:00",
+    "method": "POST",
+    "record": {
+      "type": "A",
+      "name": "@",
+      "data": "172.66.3.26",
+      "ttl": 3600
+    },
+    "status": 201,
+    "result": {
+      "data": "172.66.3.26",
+      "name": "@",
+      "recordId": "43f79a4e-2a80-4dbc-9e55-791718a854e6",
+      "ttl": 3600,
+      "type": "A"
+    }
+  },
+  {
+    "failed_method": "PUT",
+    "failed_type": "CNAME",
+    "failed_name": "www",
+    "error": "GoDaddy HTTP 404"
+  },
+  {
+    "time": "2026-10-13T23:14:13.518647+00:00",
+    "method": "PUT",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records/8b31857c-fbef-47b4-9940-595989af92c8",
+    "record": {
+      "type": "CNAME",
+      "name": "www",
+      "data": "custom-domains.chatgpt.site.",
+      "ttl": 3600
+    },
+    "status": 200,
+    "result": {
+      "data": "custom-domains.chatgpt.site.",
+      "name": "www",
+      "recordId": "8b31857c-fbef-47b4-9940-595989af92c8",
+      "ttl": 3600,
+      "type": "CNAME"
+    }
+  },
+  {
+    "time": "2026-10-13T23:14:14.576601+00:00",
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "TXT",
+      "name": "_openai-site-verification",
+      "data": "openai-site-verification=emvbn-7TWSmpkcQneDKQTZMyHEG0tW2eaw5CekH8AN4",
+      "ttl": 600
+    },
+    "status": 201,
+    "result": {
+      "data": "openai-site-verification=emvbn-7TWSmpkcQneDKQTZMyHEG0tW2eaw5CekH8AN4",
+      "name": "_openai-site-verification",
+      "recordId": "be2360ba-4bfa-4c9a-850e-75df3ccd7312",
+      "ttl": 600,
+      "type": "TXT"
+    }
+  },
+  {
+    "time": "2026-10-13T23:14:15.433406+00:00",
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "TXT",
+      "name": "_cf-custom-hostname",
+      "data": "0c320d16-c2bb-4eb2-92eb-98e71748b745",
+      "ttl": 600
+    },
+    "status": 201,
+    "result": {
+      "data": "0c320d16-c2bb-4eb2-92eb-98e71748b745",
+      "name": "_cf-custom-hostname",
+      "recordId": "06f1a363-67f6-457e-a554-5cef0c3d26a0",
+      "ttl": 600,
+      "type": "TXT"
+    }
+  },
+  {
+    "time": "2026-10-13T23:14:16.398409+00:00",
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "TXT",
+      "name": "_openai-site-verification.www",
+      "data": "openai-site-verification=R2-X_lRl9c7IZHkHBF5ghOJKDuh1SgDHXbB_u44U-xc",
+      "ttl": 600
+    },
+    "status": 201,
+    "result": {
+      "data": "openai-site-verification=R2-X_lRl9c7IZHkHBF5ghOJKDuh1SgDHXbB_u44U-xc",
+      "name": "_openai-site-verification.www",
+      "recordId": "a686f0ff-1686-48ee-ae4c-4e910b7bd4ec",
+      "ttl": 600,
+      "type": "TXT"
+    }
+  },
+  {
+    "time": "2026-10-13T23:14:17.491736+00:00",
+    "method": "POST",
+    "url": "https://api.godaddy.com/v3/domains/zones/omnequa.org/dns-records",
+    "record": {
+      "type": "TXT",
+      "name": "_cf-custom-hostname.www",
+      "data": "2c0ad689-914f-4ec1-b288-3b0e16e341c5",
+      "ttl": 600
+    },
+    "status": 201,
+    "result": {
+      "data": "2c0ad689-914f-4ec1-b288-3b0e16e341c5",
+      "name": "_cf-custom-hostname.www",
+      "recordId": "f49c353c-6f54-4c2d-887a-61e1762affb9",
+      "ttl": 600,
+      "type": "TXT"
+    }
+  }
+]
