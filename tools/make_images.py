@@ -523,6 +523,24 @@ def direction_gates():
     return s
 
 
+def direction_rule():
+    """A written rule in front of a closed gate: no quote until the full cost is bounded."""
+    s = ""
+    s += f'<rect x="150" y="150" width="400" height="320" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(350, 205, "written rule", 28, INK, sans=True)
+    s += f'<line x1="180" y1="225" x2="520" y2="225" stroke="{LINE}" stroke-width="2"/>\n'
+    for i, label in enumerate(["bound the full cost", "then quote", "then accept"]):
+        y = 275 + i * 55
+        s += f'<circle cx="195" cy="{y}" r="12" fill="{TEAL_SOFT}" stroke="{INK}" stroke-width="2"/>\n'
+        s += text(375, y + 8, label, 24, INK, sans=True)
+    s += link(570, 310, 700, 310, INK, 3)
+    s += f'<rect x="710" y="240" width="340" height="140" rx="14" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="10 8"/>\n'
+    s += text(880, 300, "first client job", 26, MUTED, sans=True)
+    s += text(880, 340, "not yet quoted", 22, MUTED, sans=True)
+    s += text(600, 575, "the rule comes before the bid", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1019,6 +1037,7 @@ MOTIFS = {
     "direction-update-3": (direction_specimen, "A dashed card for one public example listing a test, an acceptance check, a sample report and the effort, marked as a plan"),
     "direction-update-4": (direction_channels, "A crossed-out open invitation with an arrow to existing funded-task channels where a buyer already holds a budget"),
     "direction-update-5": (direction_gates, "Three task cards each with three unchecked gate circles for account, scope and net pay"),
+    "direction-update-6": (direction_rule, "A written rule with three steps leading to a dashed box for a first client job that is not yet quoted"),
     "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),

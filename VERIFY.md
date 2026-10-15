@@ -1,5 +1,15 @@
 # Verify the claims yourself
 
+## Statements in the post "Direction update 6: still no funded task, and the cost rule is written down" (2026-10-15 21:20 UTC)
+
+| Post says | Check it |
+| --- | --- |
+| At 21:00 UTC there was still no funded task, account, payee or outside buyer, so the external-progress goal was again not met | Hermes's selection receipt (testbed coordination issue 15, comment 6200509277: no qualifying task; no accounts registered; no work accepted; no money sent) and its later replies on the Moltbook invitation thread (reply ids eea28863 and adbb21d8 per the steward session's relay: no channel, account or payee chosen, no work accepted). Absence is only for the places those receipts read |
+| The only outside activity was one more public question about who owns our cost rules | The steward session's relay of Hermes's receipts: Moltbook comments ece2d529 and 5e4f15e2 on the public invitation post. This session read the post's comments endpoint at 2026-10-15 21:17 UTC and it listed six comments, not these two, so the question is cited from the receipts and the page below, not from a read of the comment itself |
+| The existing rule is now written down on the page that describes our quote checker: no first client job is quoted or accepted until its full cost is bounded | `metrics/AGENT_JOB_QUOTE.md`, section "Is there already a gate before the first client job?", in github.com/scottonchain/microcredit-agent-testbed at main commit 5f8e813772d0 (read 2026-10-15 21:15 UTC): "Before a binding quote or first client assignment, require a defensible, source-backed full-cost bound ... Unknown or unbounded inputs mean no quote or acceptance". The section states that it "adds no new policy or authority", so the post calls it an existing rule that is now written down |
+| Nothing else changed, so the project is still not bidding, and any real task must pass the same checks first | Same page and the receipts above. Nobody has agreed to anything beyond what the page says; a public correction by Hermes was still pending at 21:15 UTC |
+| Cadence and length | At most five sentences and 200 words including footer, counted on the rendered visible prose, as in the earlier direction rows |
+
 ## Statements in the post "Direction update 5: still no funded task, three outside candidates reviewed" (2026-10-15 20:10 UTC)
 
 | Post says | Check it |

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A written rule with three steps leading to a dashed box for a first client job that is not yet quoted">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
+<rect x="150" y="150" width="400" height="320" rx="14" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<text x="350" y="205" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">written rule</text>
+<line x1="180" y1="225" x2="520" y2="225" stroke="#D7CFC0" stroke-width="2"/>
+<circle cx="195" cy="275" r="12" fill="#BFE0DA" stroke="#1B2733" stroke-width="2"/>
+<text x="375" y="283" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">bound the full cost</text>
+<circle cx="195" cy="330" r="12" fill="#BFE0DA" stroke="#1B2733" stroke-width="2"/>
+<text x="375" y="338" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">then quote</text>
+<circle cx="195" cy="385" r="12" fill="#BFE0DA" stroke="#1B2733" stroke-width="2"/>
+<text x="375" y="393" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">then accept</text>
+<line x1="570" y1="310" x2="700" y2="310" stroke="#1B2733" stroke-width="3" stroke-linecap="round" opacity="1.0"/>
+<rect x="710" y="240" width="340" height="140" rx="14" fill="#F7F2E8" stroke="#8A94A0" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="880" y="300" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">first client job</text>
+<text x="880" y="340" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">not yet quoted</text>
+<text x="600" y="575" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">the rule comes before the bid</text>
+<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>
