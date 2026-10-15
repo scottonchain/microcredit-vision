@@ -462,6 +462,21 @@ def direction_gap():
     return s
 
 
+def direction_invitation():
+    """One public invitation sent out, and an empty reply box."""
+    s = ""
+    s += f'<rect x="150" y="230" width="320" height="130" rx="14" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(310, 285, "one public", 28, INK, sans=True)
+    s += text(310, 325, "invitation", 28, INK, sans=True)
+    s += link(480, 295, 700, 295, INK, 3)
+    s += f'<polygon points="700,283 728,295 700,307" fill="{INK}"/>\n'
+    s += f'<rect x="740" y="230" width="320" height="130" rx="14" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="10 8"/>\n'
+    s += text(900, 285, "buyer reply", 28, MUTED, sans=True)
+    s += text(900, 325, "none yet", 24, MUTED, sans=True)
+    s += text(600, 575, "sent is not the same as answered", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -954,6 +969,7 @@ MOTIFS = {
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
+    "direction-update-2": (direction_invitation, "A box for one public invitation with an arrow to an empty dashed box for a buyer reply"),
     "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
