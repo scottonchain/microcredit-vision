@@ -1,0 +1,24 @@
+{
+  "leads": [
+    {
+      "id": "donorbox-content-4704121005",
+      "employer": "Donorbox",
+      "title": "Content Marketing Specialist",
+      "status": "application_lead_not_recommended",
+      "location": "Remote within South Africa — not worldwide remote",
+      "eligibility": "Relevant degree, 5–7 years of content-marketing experience and B2B SaaS experience; individual eligibility is for the employer to determine.",
+      "work": "Content, email campaigns and search optimization.",
+      "advertised_pay": "USD 40,000–50,000 per year, as stated in the application form; not take-home pay or an offer.",
+      "payment_unknowns": "Pay frequency, South African payment method, settlement currency, conversion and receiving fees are not stated on the inspected pages.",
+      "participation_unknowns": "The process includes an assignment, but its time limit and compensation are not stated; equipment, connectivity costs and local benefit terms need clarification.",
+      "closing_date": "Not stated; the role and application form were present when checked.",
+      "checked_on": "2026-10-15",
+      "review_due": "2026-10-16",
+      "source": "https://job-boards.greenhouse.io/donorbox/jobs/4704121005",
+      "employer_index": "https://job-boards.greenhouse.io/donorbox",
+      "employer_provenance": "https://donorbox.org/explore/about-us",
+      "next_action": "If you already meet the requirements, inspect the employer's original listing and ask about the unresolved terms before accepting screening work; do not send an application to Omnequa.",
+      "evidence": "https://github.com/scottonchain/microcredit-agent-testbed/blob/314b5d3dec4e33cfffb40272b45b957208086659/evidence/donorbox-opportunity-20261015/README.md"
+    }
+  ]
+}
