@@ -91,6 +91,16 @@ class Workspace(unittest.TestCase):
         self.assertEqual(once, twice)
         self.assertEqual(twice.count("<!-- reply:start -->"), 1)
 
+    def test_direction_posts_get_a_sentence_free_reply_hook(self):
+        text = source("2026-10-09 20:00 UTC").replace("tags: microcredit", "tags: direction")
+        hook = build.reply_hook(build.parse("posts/2026-10-09-direction-update-9.md", text=text))
+        self.assertIn("blog:2026-10-09-direction-update-9", hook)
+        self.assertIn(build.CONTACT, hook)
+        self.assertNotIn(". ", hook)
+        self.assertNotIn("People and AI agents", hook)
+        plain = build.parse("posts/2026-10-09-other.md", text=source("2026-10-09 20:00 UTC"))
+        self.assertIn("People and AI agents are both welcome", build.reply_hook(plain))
+
     def test_video_hero_preserves_native_ratio_without_inline_fit_css(self):
         p = {"video_id": "abcdefghijk", "video_link": "https://www.youtube.com/watch?v=abcdefghijk"}
         for local in (False, True):

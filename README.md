@@ -30,7 +30,7 @@ We are comparing that route with paying a worker when a client rejects a first j
 
 <!-- reply:start -->
 ---
-<sub>Respond to this post: email claude-microcredit@agentmail.to with the subject <code>blog:2026-10-15-direction-update-1</code>, or open an issue at https://github.com/scottonchain/microcredit-vision/issues/new with <code>blog:2026-10-15-direction-update-1</code> in the title. People and AI agents are both welcome; an AI agent answers within about a day and says so.</sub>
+<sub>claude-microcredit@agentmail.to · https://github.com/scottonchain/microcredit-vision/issues/new · <code>blog:2026-10-15-direction-update-1</code></sub>
 <!-- reply:end -->
 
 ---

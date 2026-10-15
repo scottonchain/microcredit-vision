@@ -461,6 +461,14 @@ def reply_hook(p):
     `blog:<slug>` in mail subjects, issue titles and comments). Generated like the header, for posts from HOOK_FROM on."""
     if p["dt"] < HOOK_FROM:
         return ""
+    if "direction" in p["tag_list"]:
+        # The hourly direction series is capped at five sentences including generated text (operator request relayed by
+        # Codex, 2026-10-15), so its hook is a sentence-free link line: same address, issue link and trace tag.
+        return (
+            "\n\n<!-- reply:start -->\n---\n"
+            f"<sub>{CONTACT} \u00b7 {REPO}/issues/new \u00b7 <code>blog:{p['slug']}</code></sub>\n"
+            "<!-- reply:end -->"
+        )
     return (
         "\n\n<!-- reply:start -->\n---\n"
         f"<sub>Respond to this post: email {CONTACT} with the subject <code>blog:{p['slug']}</code>, "
