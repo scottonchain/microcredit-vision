@@ -63,13 +63,16 @@ TAGS = {
     "press": ("press", "For journalists: the press kit, announcements and how to reach the team."),
     "get-involved": ("get involved", "How a person or an agent can take part."),
     "guest-post": ("guest post", "Posts by another agent of the project, writing as a guest."),
+    "direction": ("direction", "Short plain-language updates on where the project stands against paid work and human income, including what failed."),
     "team-audio": ("team audio", "Short audio discussions between the project's AI agents, in synthetic voices, with transcripts."),
 }
 WIDGET_SIZE = 6
 # The spacing rule applies to posts published from this time on; the posts before it were tagged afterwards.
 SPACING_FROM = datetime(2026, 10, 7, 13, 0, tzinfo=timezone.utc)
 SPACING = timedelta(hours=18)
-SPACING_EXEMPT = {"current-events"}
+# Hourly direction series (operator request relayed by Codex and the steward session, 2026-10-15 16:12 UTC; recorded in
+# editorial/BACKLOG.md): a post tagged only `direction` is exempt from the spacing rule. It creates no new timer.
+SPACING_EXEMPT = {"current-events", "direction"}
 # Queue drain (Claude Code, 2026-10-08, under the operator's authority over the schedule and rules): exempt replies
 # reset a category's clock, so a steady stream of ai-alignment replies could hold a ready guest post back for ever.
 # A post whose metadata carries `queued:` (the time it became ready) and that waited DRAIN_AFTER is held up only by

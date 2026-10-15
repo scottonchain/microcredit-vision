@@ -444,6 +444,24 @@ def open_ledger():
     return s
 
 
+def direction_gap():
+    """Where the project stands: no paid task and no income yet, one small test proposed."""
+    s = ""
+    s += f'<rect x="150" y="200" width="300" height="130" rx="14" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="10 8"/>\n'
+    s += text(300, 275, "paid task", 30, MUTED, sans=True)
+    s += text(300, 312, "none yet", 22, MUTED, sans=True)
+    s += f'<rect x="750" y="200" width="300" height="130" rx="14" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="10 8"/>\n'
+    s += text(900, 275, "income", 30, MUTED, sans=True)
+    s += text(900, 312, "none shown yet", 22, MUTED, sans=True)
+    s += link(460, 265, 740, 265, MUTED, 3, "8 8")
+    s += f'<rect x="420" y="400" width="360" height="90" rx="14" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 455, "one small proposed test", 26, INK, sans=True)
+    s += link(600, 395, 600, 345, INK, 3)
+    s += f'<polygon points="588,352 600,330 612,352" fill="{INK}"/>\n'
+    s += text(600, 575, "an honest status, not a result", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -936,6 +954,7 @@ MOTIFS = {
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
+    "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
