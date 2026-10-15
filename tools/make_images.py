@@ -408,6 +408,24 @@ def first_hundred():
     return s
 
 
+def replay_blocked():
+    """One signed request sent twice: the first reaches 'paid', the second stops at a used counter."""
+    s = ""
+    s += f'<rect x="170" y="250" width="150" height="110" rx="10" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 170 262 L 245 322 L 320 262" fill="none" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(245, 400, "one signed request", 20, MUTED, sans=True)
+    s += link(330, 290, 760, 190, INK, 3)
+    s += f'<polygon points="760,178 790,190 764,206" fill="{INK}"/>\n'
+    s += f'<rect x="800" y="150" width="220" height="80" rx="12" fill="{TEAL}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(910, 200, "paid once", 26, PAPER, sans=True)
+    s += link(330, 330, 700, 400, INK, 3, "8 8")
+    s += f'<rect x="700" y="340" width="18" height="130" fill="{INK}"/>\n'
+    s += f'<rect x="740" y="380" width="280" height="80" rx="12" fill="{PAPER}" stroke="{INK}" stroke-width="3" stroke-dasharray="8 8"/>\n'
+    s += text(880, 430, "counter already used", 22, MUTED, sans=True)
+    s += text(600, 575, "the second try pays nothing", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -899,6 +917,7 @@ MOTIFS = {
     "basically-no": (basically_no, "A parcel with a blank sender line beside a ledger entry whose sender is filled in"),
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
+    "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
     "a-press-kit-for-an-experiment": (presskit, "A folder with three sheets and a card with an at sign"),

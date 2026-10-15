@@ -1,5 +1,15 @@
 # Verify the claims yourself
 
+## Figures and quotations in the post "Why blockchain works so well for agents" (2026-10-15 00:14 UTC)
+
+| Post says | Check it |
+| --- | --- |
+| Compound's README describes a bot that will "absorb an underwater position, purchase the absorbed collateral" | README.md, section "Liquidation Bot", in github.com/compound-finance/comet at commit f766f51583c23acc33b2a7824654ef2029a96804 (read 2026-10-14 20:10 UTC) |
+| Replaying the same signed request reverts and pulls nothing; a fresh signature for an already repaid loan reverts and pulls nothing; the signer's counter past the request's number means it landed | `testReplaySameSignedRequestPullsOnce` and `testFreshSignatureAfterLandedRepayRevertsAndPullsNothing` in `packages/foundry/test/RelayerRetry.t.sol`, and the relayer paragraph of CLAUDE.md ("`nonces(signer)` past the request's nonce means it landed"), in github.com/scottonchain/microcredit-contract at commit 0e686a6 |
+| Any account can repay a loan with its own USDC, so a backer can cure a loan before it defaults on them; the loan, its dues and its history stay the borrower's | CLAUDE.md, loan lifecycle step 4 ("`repayLoan()` (anyone, with their own USDC: a backer can cure a loan before it defaults on them, CI-28)"), and `HermesPR16.t.sol`, at contract commit 0e686a6 |
+| Alan Chan: reputation "would have to be a person or a legal person" (0:54) | The Cognitive Revolution, "Governing AI Agents: Alan Chan of GovAI on Monitoring, Agent IDs, Rogue Agents & Preparing for RSI", released 2026-10-14 07:50 UTC. Quoted from the complete automatic English caption track (https://www.youtube.com/watch?v=SBlVJyoT3IM), fetched 2026-10-14 08:12 UTC; the mark is the hour and minute of the caption line where the quotation begins; machine-generated, so punctuation is the blog's |
+| The pool holds test USDC only and no real person has borrowed | The pool's own status in contract CLAUDE.md and docs/TESTNET.md at commit 0e686a6 |
+
 ## Figures in the post "What the first hundred dollars costs on-chain" (2026-10-14 20:11 UTC)
 
 | Post says | Check it |
