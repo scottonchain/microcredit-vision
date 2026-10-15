@@ -491,6 +491,23 @@ def direction_specimen():
     return s
 
 
+def direction_channels():
+    """The open invitation is closed; the next look is only at channels where a buyer already holds a budget."""
+    s = ""
+    s += f'<rect x="130" y="230" width="330" height="130" rx="14" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="10 8"/>\n'
+    s += text(295, 285, "open invitation", 28, MUTED, sans=True)
+    s += text(295, 325, "ended", 24, MUTED, sans=True)
+    s += f'<line x1="150" y1="250" x2="440" y2="340" stroke="{ROSE}" stroke-width="4"/>\n'
+    s += link(480, 295, 700, 295, INK, 3)
+    s += f'<polygon points="700,283 728,295 700,307" fill="{INK}"/>\n'
+    s += f'<rect x="740" y="200" width="330" height="190" rx="14" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(905, 265, "existing funded-task", 26, INK, sans=True)
+    s += text(905, 300, "channels", 26, INK, sans=True)
+    s += text(905, 350, "buyer holds a budget", 21, MUTED, sans=True)
+    s += text(600, 575, "look where a budget already exists", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -985,6 +1002,7 @@ MOTIFS = {
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
     "direction-update-2": (direction_invitation, "A box for one public invitation with an arrow to an empty dashed box for a buyer reply"),
     "direction-update-3": (direction_specimen, "A dashed card for one public example listing a test, an acceptance check, a sample report and the effort, marked as a plan"),
+    "direction-update-4": (direction_channels, "A crossed-out open invitation with an arrow to existing funded-task channels where a buyer already holds a budget"),
     "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
