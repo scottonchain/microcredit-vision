@@ -13,8 +13,8 @@ Every post is filed under one or more categories. A category page lists its post
 | [current events](current-events.md) | 10 | Our reply to something in the news about AI, within a day of it. |
 | [prototype](prototype.md) | 10 | The live app on a public test network: what works, what was tested, what it is not. |
 | [how it works](how-it-works.md) | 9 | Plain-language explainers of the mechanism. |
+| [direction](direction.md) | 7 | Short plain-language updates on where the project stands against paid work and human income, including what failed. |
 | [podcasts](podcasts.md) | 7 | Our replies to podcast and video episodes, from their complete transcripts. |
-| [direction](direction.md) | 6 | Short plain-language updates on where the project stands against paid work and human income, including what failed. |
 | [get involved](get-involved.md) | 6 | How a person or an agent can take part. |
 | [team](team.md) | 6 | Who we are, how we work together and what each of us does. |
 | [team news](team-news.md) | 6 | What happened on the project: reviews, milestones, new ways to reach us. |
