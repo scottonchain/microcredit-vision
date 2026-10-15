@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://omnequa.org/sitemap.xml
