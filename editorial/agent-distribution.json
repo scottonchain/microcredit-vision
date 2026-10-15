@@ -224,40 +224,40 @@
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6196759918",
       "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Direction update 1 by Claude Code, 2026-10-15 16:14 UTC; board mirror posted 2026-10-15 16:20 UTC; Moltbook payload staged in editorial/moltbook/2026-10-15-direction-update-1.md. Whether later hourly updates each need a companion is an open question to the operator. The Moltbook companion for this update is the daily digest staged in editorial/moltbook/2026-10-15-direction-digest.md (one digest per day, steward session 2026-10-15 16:17 UTC); the separate per-update payload for update 1 is folded into it."
+      "status": "waiting_moltbook",
+      "note": "Direction update 1 by Claude Code, 2026-10-15 16:14 UTC; board mirror posted 2026-10-15 16:15 UTC; Moltbook payload staged in editorial/moltbook/2026-10-15-direction-update-1.md. Whether later hourly updates each need a companion is an open question to the operator. The Moltbook companion for this update is the daily digest staged in editorial/moltbook/2026-10-15-direction-digest.md (one digest per day, steward session 2026-10-15 16:17 UTC); the separate per-update payload for update 1 is folded into it."
     },
     "2026-10-15-direction-update-2": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-15-direction-update-2.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6197993951",
       "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Direction update 2 by Claude Code, 2026-10-15 17:18 UTC; board mirror posted 2026-10-15 17:22 UTC; Moltbook companion is the daily direction digest staged in editorial/moltbook/2026-10-15-direction-digest.md (steward session, 2026-10-15 16:17 UTC: one digest per day, not one per update)."
+      "status": "waiting_moltbook",
+      "note": "Direction update 2 by Claude Code, 2026-10-15 17:18 UTC; board mirror posted 2026-10-15 17:18 UTC; Moltbook companion is the daily direction digest staged in editorial/moltbook/2026-10-15-direction-digest.md (steward session, 2026-10-15 16:17 UTC: one digest per day, not one per update)."
     },
     "2026-10-15-direction-update-3": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-15-direction-update-3.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6198918226",
       "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Direction update 3 by Claude Code, 2026-10-15 18:06 UTC; board mirror posted 2026-10-15 18:12 UTC; Moltbook companion is the daily direction digest in editorial/moltbook/2026-10-15-direction-digest.md."
+      "status": "waiting_moltbook",
+      "note": "Direction update 3 by Claude Code, 2026-10-15 18:06 UTC; board mirror posted 2026-10-15 18:06 UTC; Moltbook companion is the daily direction digest in editorial/moltbook/2026-10-15-direction-digest.md."
     },
     "2026-10-15-direction-update-4": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-15-direction-update-4.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6200302958",
       "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Direction update 4 by Claude Code, 2026-10-15 19:16 UTC; board mirror posted 2026-10-15 19:22 UTC; Moltbook companion is the daily direction digest in editorial/moltbook/2026-10-15-direction-digest.md."
+      "status": "waiting_moltbook",
+      "note": "Direction update 4 by Claude Code, 2026-10-15 19:16 UTC; board mirror posted 2026-10-15 19:16 UTC; Moltbook companion is the daily direction digest in editorial/moltbook/2026-10-15-direction-digest.md."
     },
     "2026-10-15-direction-update-5": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-15-direction-update-5.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6201288846",
       "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Direction update 5 by Claude Code, 2026-10-15 20:10 UTC; board mirror posted 2026-10-15 20:14 UTC; Moltbook companion is the daily direction digest in editorial/moltbook/2026-10-15-direction-digest.md."
+      "status": "waiting_moltbook",
+      "note": "Direction update 5 by Claude Code, 2026-10-15 20:10 UTC; board mirror posted 2026-10-15 20:10 UTC; Moltbook companion is the daily direction digest in editorial/moltbook/2026-10-15-direction-digest.md."
     }
   },
   "board_announcement": {
