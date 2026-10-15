@@ -102,7 +102,23 @@ def check_pages():
   for name in ['employer','source','task','eligibility','pay','payout','barrier']:
     if f'for="{name}"' not in brief or f'id="{name}"' not in brief:errors.append(f'Employer brief missing associated label: {name}')
   if 'id="prepare-draft" class="button" type="button" disabled' not in brief:errors.append('Draft action must be disabled until JavaScript attaches its handler')
+  if '<label for="plain-draft">' not in brief or 'id="plain-draft" readonly rows="14" aria-describedby="plain-draft-help"' not in brief:errors.append('Plain-text brief needs a labeled, readonly, described copy field')
+  if 'id="plain-draft-panel" hidden' not in brief or 'Nothing has been sent.' not in brief:errors.append('Plain-text brief must start hidden and explain its no-send boundary')
+  if (ROOT/'assets/intake.js').read_text()!=(DIST/'intake.js').read_text():errors.append('Generated intake script differs from its source')
   data=json.loads((ROOT/'content/site.json').read_text())
+  leads=json.loads((ROOT/'content/opportunities.json').read_text())['leads']
+  lead_ids=set()
+  for lead in leads:
+    if lead['id'] in lead_ids:errors.append('Duplicate application lead')
+    lead_ids.add(lead['id'])
+    if lead['status']!='application_lead_not_recommended':errors.append('Lead promotion requires explicit content and evidence review')
+    if not lead['checked_on']<=data['updated']:errors.append('Application lead source check is future-dated')
+    if not lead['checked_on']<=lead['review_due']:errors.append('Application lead review date precedes source check')
+    for key in ['location','eligibility','advertised_pay','payment_unknowns','participation_unknowns','closing_date','next_action']:
+        if not lead.get(key):errors.append(f'Application lead lacks {key}')
+    for key in ['source','employer_index','employer_provenance','evidence']:
+        if urlsplit(lead[key]).scheme!='https':errors.append('Application lead requires secure original/evidence links')
+    if f'id="{lead["id"]}"' not in (DIST/'opportunities/index.html').read_text():errors.append('Application lead missing from generated page')
   for post in data['posts']:
     n=len(post['paragraphs'])
     if not 5<=n<=20:errors.append(f'{post["slug"]}: expected 5–20 sentences, got {n} paragraphs')
