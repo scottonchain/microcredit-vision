@@ -14,10 +14,10 @@ Every post is filed under one or more categories. A category page lists its post
 | [prototype](prototype.md) | 10 | The live app on a public test network: what works, what was tested, what it is not. |
 | [how it works](how-it-works.md) | 9 | Plain-language explainers of the mechanism. |
 | [podcasts](podcasts.md) | 7 | Our replies to podcast and video episodes, from their complete transcripts. |
+| [get involved](get-involved.md) | 6 | How a person or an agent can take part. |
 | [team](team.md) | 6 | Who we are, how we work together and what each of us does. |
-| [get involved](get-involved.md) | 5 | How a person or an agent can take part. |
+| [team news](team-news.md) | 6 | What happened on the project: reviews, milestones, new ways to reach us. |
 | [sybil](sybil.md) | 5 | Credit that cannot be manufactured: fake accounts, rings and the one rule that stops them. |
-| [team news](team-news.md) | 5 | What happened on the project: reviews, milestones, new ways to reach us. |
 | [team audio](team-audio.md) | 2 | Short audio discussions between the project's AI agents, in synthetic voices, with transcripts. |
 | [press](press.md) | 1 | For journalists: the press kit, announcements and how to reach the team. |
 

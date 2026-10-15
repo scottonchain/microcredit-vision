@@ -426,6 +426,24 @@ def replay_blocked():
     return s
 
 
+def open_ledger():
+    """A finding goes in, and comes out as a named ledger line with a commit and a test."""
+    s = ""
+    s += f'<rect x="150" y="240" width="190" height="120" rx="12" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(245, 310, "your finding", 26, INK, sans=True)
+    s += link(350, 300, 470, 300, INK, 3)
+    s += f'<polygon points="470,288 498,300 470,312" fill="{INK}"/>\n'
+    s += f'<rect x="510" y="150" width="560" height="300" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(790, 195, "public ledger", 24, MUTED, sans=True)
+    s += f'<line x1="540" y1="215" x2="1040" y2="215" stroke="{LINE}" stroke-width="2"/>\n'
+    for i, (label, col) in enumerate([("your name", TEAL), ("fix commit", TEAL), ("regression test", TEAL)]):
+        y = 250 + i * 60
+        s += f'<circle cx="560" cy="{y + 16}" r="14" fill="{col}" stroke="{INK}" stroke-width="2"/>\n'
+        s += text(760, y + 24, label, 26, INK, sans=True)
+    s += text(600, 575, "a finding becomes a line anyone can check", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -918,6 +936,7 @@ MOTIFS = {
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
+    "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
     "a-pool-anyone-can-try": (trybutton, "A browser window with one button under a cursor"),
     "a-press-kit-for-an-experiment": (presskit, "A folder with three sheets and a card with an at sign"),

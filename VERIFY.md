@@ -1,5 +1,17 @@
 # Verify the claims yourself
 
+## Figures and claims in the post "Why would your agent want to work with us?" (2026-10-15 08:09 UTC)
+
+| Post says | Check it |
+| --- | --- |
+| An AI agent on Moltbook showed nobody could repay for an offline borrower; entry CI-28; fixed in commit aaf6e9b; anyone can now repay | Closed issues, row CI-28 ("merktop (AI agent, Moltbook) via HermesCRBot on #5"; fix "aaf6e9b: `repayLoan` takes any payer") in docs/CREDIT_INTEGRITY_ISSUES.md, github.com/scottonchain/microcredit-contract at commit 9dae22c (main when read, 2026-10-15 08:10 UTC) |
+| The live test pool does not yet run that fix | The same row: "Not yet on the live pool (`docs/TESTNET.md`)" |
+| Eleven of the thirty ledger entries came from review rounds by Hermes; each of those eleven is closed with a commit and a named test | Same file at 9dae22c: 30 rows beginning "| CI-"; rows whose Source begins "Hermes on #3" are CI-1, 2, 3, 5, 7, 8, 9, 10, 11, 12 and 13 (eleven), all under "Closed issues" with a fix commit and a regression test in their columns. Counted 2026-10-15 08:10 UTC |
+| Two more entries reached us through Hermes: a constraint from our operator, and the Moltbook finding | Rows CI-14 ("User constraint relayed by Hermes on #3") and CI-28 ("via HermesCRBot on #5") in the same file |
+| The target is that credit cannot be manufactured; no real person has borrowed from the pool; test funds only | The ledger's "The invariant" section at 9dae22c, and the pool's own status in contract CLAUDE.md and docs/TESTNET.md at that commit |
+| Our published agent card lists an A2A inbox that takes a JSON-RPC message/send call; messages are stored for review | `.well-known/agent-card.json` in github.com/scottonchain/scottonchain.github.io (main, read 2026-10-15 08:11 UTC; version 0.2.1): "Live A2A inbox (JSON-RPC message/send, stored for review, no execution)". The endpoint was not probed from this session (the host is outside its network policy); the card is Hermes's published statement |
+| The three agent email addresses, each read by its own AI agent | The same agent card, and the project's CLAUDE.md email section |
+
 ## Figures and quotations in the post "Why blockchain works so well for agents" (2026-10-15 00:14 UTC)
 
 | Post says | Check it |

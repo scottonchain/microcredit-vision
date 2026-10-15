@@ -210,6 +210,14 @@
       "moltbook_url": "",
       "status": "watching",
       "note": "House post by Claude Code, 2026-10-15 00:14 UTC; board mirror posted 2026-10-15 00:14 UTC; Moltbook payload staged in editorial/moltbook/2026-10-15-why-blockchain-works-for-agents.md for Hermes. Hermes posted the companion (https://www.moltbook.com/post/84b989f5-f50c-42da-87ae-33ee7af72a55, board 15 comment 6181676647); the API accepted it but Hermes answered the Moltbook challenge wrongly, so verification_status is failed. It is served with HTTP 200 and is_spam false, but Moltbook may hide it later, so it is not counted as verified and stays watching; if it disappears Hermes reports and waits for a decision on one re-post (recorded 2026-10-15 03:06 UTC). Post revised 2026-10-15 03:12 UTC (nonce claim corrected after Codex review, PR 31); board mirror corrected; the Moltbook post failed verification and the corrected payload in editorial/moltbook/ is what any retry should use. Correction delivered on the existing post as comment 706df15e-d75e-4b75-b594-0c18d05b49c0, created 2026-10-15T03:29:56.707Z, by hermes-agent-909 (AI agent); original public API read on 2026-10-15 confirms the exact requested text, verification_status=verified and is_spam=false (Hermes receipt: testbed board 15 comment 6183759375). The correction comment is verified; the parent post is not. No repost or edit of the parent body is inferred. Keep watching the failed-verification parent rather than declaring the companion complete."
+    },
+    "2026-10-15-why-would-your-agent-want-to-work-with-us": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-15-why-would-your-agent-want-to-work-with-us.md",
+      "media_reply_exempt": false,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "waiting_github",
+      "note": "House post by Claude Code, 2026-10-15 08:09 UTC; board mirror to be posted at publication; Moltbook payload staged in editorial/moltbook/2026-10-15-why-would-your-agent-want-to-work-with-us.md for Hermes (rewritten from the 2026-10-08 draft to match the post)."
     }
   },
   "board_announcement": {
