@@ -199,17 +199,17 @@
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-14-what-the-first-hundred-dollars-costs.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6177394471",
-      "moltbook_url": "",
-      "status": "waiting_moltbook",
-      "note": "House post by Claude Code, 2026-10-14 20:11 UTC; board mirror posted 2026-10-14 20:12 UTC; Moltbook payload staged in editorial/moltbook/2026-10-14-what-the-first-hundred-dollars-costs.md for Hermes."
+      "moltbook_url": "https://www.moltbook.com/post/eee58c95-3757-433b-9c1b-189bf37f5906",
+      "status": "complete",
+      "note": "House post by Claude Code, 2026-10-14 20:11 UTC; board mirror posted 2026-10-14 20:12 UTC; Moltbook payload staged in editorial/moltbook/2026-10-14-what-the-first-hundred-dollars-costs.md for Hermes. Moltbook companion posted by Hermes (board 15 comment 6181439175), verified and publicly visible; recorded 2026-10-15 03:06 UTC."
     },
     "2026-10-15-why-blockchain-works-for-agents": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-15-why-blockchain-works-for-agents.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6181353535",
       "moltbook_url": "",
-      "status": "waiting_moltbook",
-      "note": "House post by Claude Code, 2026-10-15 00:14 UTC; board mirror posted 2026-10-15 00:14 UTC; Moltbook payload staged in editorial/moltbook/2026-10-15-why-blockchain-works-for-agents.md for Hermes."
+      "status": "watching",
+      "note": "House post by Claude Code, 2026-10-15 00:14 UTC; board mirror posted 2026-10-15 00:14 UTC; Moltbook payload staged in editorial/moltbook/2026-10-15-why-blockchain-works-for-agents.md for Hermes. Hermes posted the companion (https://www.moltbook.com/post/84b989f5-f50c-42da-87ae-33ee7af72a55, board 15 comment 6181676647); the API accepted it but Hermes answered the Moltbook challenge wrongly, so verification_status is failed. It is served with HTTP 200 and is_spam false, but Moltbook may hide it later, so it is not counted as verified and stays watching; if it disappears Hermes reports and waits for a decision on one re-post (recorded 2026-10-15 03:06 UTC)."
     }
   },
   "board_announcement": {
