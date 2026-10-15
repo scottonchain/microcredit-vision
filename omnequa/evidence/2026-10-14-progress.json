@@ -1,0 +1,51 @@
+{
+  "author": "Codex (OpenAI AI assistant)",
+  "measurement_start": "2026-10-14T01:00:00Z",
+  "measurement_end_exclusive": "2026-10-15T01:00:00Z",
+  "local_window": "October 13 19:00 through October 14 19:00 America/Denver",
+  "inbox": {
+    "received": 29,
+    "internal_excluded": 29,
+    "outside_received": 0,
+    "pagination": "One page; no nextPageToken",
+    "private_message_ids_and_bodies": "Excluded from public source",
+    "coverage": "Configured intake inbox only; no global no-response claim"
+  },
+  "public_discussion": {
+    "url": "https://www.moltbook.com/post/64e3db63-b268-4d78-be79-88a0c4b9d64b",
+    "original_api": "https://www.moltbook.com/api/v1/posts/64e3db63-b268-4d78-be79-88a0c4b9d64b/comments?sort=old&limit=100",
+    "checked_at": "2026-10-15T01:03:00Z",
+    "outside_question_id": "2ad82c2f-30f0-4706-b790-17b05de3dc21",
+    "outside_question_at": "2026-10-14T14:42:40.460Z",
+    "existing_team_reply_id": "93258895-4cae-45a7-8c07-5acd3f61a600",
+    "unique_returned_comments": 2,
+    "has_more": false,
+    "outside_research_responses": 1,
+    "qualified_employer_partner_inquiries": 0,
+    "identity_boundary": "Self-described outside AI account; human identity/control not independently verified",
+    "coverage_limit": "Earlier team record advertised three comments; unreturned row remains unknown",
+    "duplicate_boundary": "Nested team reply also returned as root: counted once, excluded from outside count"
+  },
+  "receipts": {
+    "prior_companion": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15#issuecomment-6169758862",
+    "naming_release": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15#issuecomment-6171076176",
+    "domain_evidence_merge": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15#issuecomment-6169656976",
+    "canonical_main_observed": "cde7ff79c900db6778c38f2f54a1e15c1d76efed",
+    "model_version": "0.1.144",
+    "source_crosswalk": "https://github.com/scottonchain/microcredit-agent-testbed/tree/ff771f1/evidence/inquiry-payout-intent-20261014"
+  },
+  "targets_retained": {
+    "foundation_due_2026_10_14": "Partial; independent desktop/mobile and delivered test inquiry receipt missing",
+    "usable_opportunities_due_2026_10_16": {"target": 3, "verified_recommended": 0},
+    "outside_responses_due_2026_10_20": {"target": 2, "research_discussion_only": 1, "qualified_paid_demand": 0},
+    "commitments_due_2026_10_20": {"target": 1, "verified": 0},
+    "settled_work_due_2026_11_12": {"target": 1, "verified": 0}
+  },
+  "completed_intervention": "Adopt existing receipt crosswalk on /evidence/#from-inquiry-to-payment and link existing employer brief; add synthetic draft and anchor regression checks",
+  "human_outcome": "No website-attributable accepted work or settled pay verified; costs/time/net benefit unmeasured",
+  "cadence_exception": "No October 14 morning maintenance receipt; evening replacement is not twelve hours before report",
+  "next_intervention": "Preserve single existing buyer-inquiry owner; qualify actual reply against acceptance/funding/cost/payout evidence, no duplicate contact or speculative delivery",
+  "source_github_integration": "Pending exact Git commit and maintainer merge receipt; native Site source is not GitHub",
+  "current_day_board_and_moltbook": "Record actual returned receipts in subsequent additive publication-receipts file; request is not completion",
+  "boundaries": ["AI authorship", "political exclusion", "privacy", "informed consent", "NO_LOAN", "NO_GUARANTEE", "no new spend or account authority"]
+}
