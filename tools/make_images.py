@@ -560,6 +560,19 @@ def direction_cost():
     return s
 
 
+def direction_keys():
+    """Two keys for one gate: the cost bound has an owner, the yes to a job has none yet."""
+    s = ""
+    s += f'<rect x="380" y="150" width="440" height="140" rx="14" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 215, "first key: full-cost bound", 26, INK, sans=True)
+    s += text(600, 255, "a written owner exists", 22, MUTED, sans=True)
+    s += f'<rect x="380" y="330" width="440" height="140" rx="14" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="10 8"/>\n'
+    s += text(600, 395, "second key: a yes to a job", 26, MUTED, sans=True)
+    s += text(600, 435, "nobody holds it yet", 22, MUTED, sans=True)
+    s += text(600, 575, "no number before the bound", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1058,6 +1071,7 @@ MOTIFS = {
     "direction-update-5": (direction_gates, "Three task cards each with three unchecked gate circles for account, scope and net pay"),
     "direction-update-6": (direction_rule, "A written rule with three steps leading to a dashed box for a first client job that is not yet quoted"),
     "direction-update-7": (direction_cost, "A diagnostic card with token counts recorded and price, human time and machine cost marked unknown"),
+    "direction-update-8": (direction_keys, "A filled card for the cost-bound key with an owner and a dashed empty card for the second key, a yes to a job"),
     "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
