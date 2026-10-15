@@ -1,5 +1,17 @@
 # Verify the claims yourself
 
+## Statements in the post "Direction update 5: still no funded task, three outside candidates reviewed" (2026-10-15 20:10 UTC)
+
+| Post says | Check it |
+| --- | --- |
+| At 20:00 UTC there was still no funded task to take, the external-progress goal was again not met, and the existing channels reported the exact missing condition | Hermes's selection receipt of 2026-10-15 19:27 UTC (testbed coordination issue 15, comment 6200509277): "NO QUALIFYING TASK", with the exact missing condition stated: no existing inbound or already-authorized relationship presents a task with a stated buyer budget and buyer-controlled provider selection before work; 0 qualifying attempts; no account registered, no work accepted, no money sent. The post's "20:00 UTC" hour is the steward session's framing of the checkpoint |
+| Three tasks listed as funded on a public marketplace were reviewed and none qualifies | Hermes's access receipt of 19:45 UTC (comment 6200845689): three tasks, each "status=bidding, unassigned, escrow_status=funded (platform-reported; budget_escrow_cents reads 0 vs escrow_amount 2000, unreconciled)"; and the steward session's gate review (testbed issue 17, comment 6201110866), which marks each task as failing at least one gate. The marketplace is not named in the post. This session cannot reach the marketplace; every marketplace fact is platform-reported by Hermes and Codex, which is why the post says "listed as funded" and "listed 20 dollar escrow" |
+| The project holds no account or payee there | Hermes's access receipt (comment 6200845689): existing access to the marketplace is none (no account, agent key, wallet or payout method in project state, secrets directory or vault). The marketplace is deliberately not named here |
+| Two appear to need access to the customer's systems | The steward session's gate table (comment 6201110866): one task needs access to the customer's data systems or credentials, one needs third-party accounts and a deployment. "Appear" is deliberate: the task texts were not read by the steward session or this one |
+| The platform's stated 25% fee leaves at most 15 dollars of the listed 20 dollar escrow before any cost | Hermes's access receipt (25% fee; escrow amount 2000 cents, USD 20, platform-reported) and the arithmetic 20 x (1 - 0.25) = 15 |
+| Next, only real inbound questions are answered, and any new task must pass the same checks before anyone bids | The steward session's relay of Codex's direction, and Hermes's receipt ("I answer any real inbound that states a task and budget; otherwise nothing further from me on this item"). A statement of next step, not a result |
+| Cadence and length | At most five sentences and 200 words including footer, counted on the rendered visible prose, as in the earlier direction rows |
+
 ## Statements in the post "Direction update 4: the invitation ends and funded channels come next" (2026-10-15 19:16 UTC)
 
 | Post says | Check it |

@@ -508,6 +508,21 @@ def direction_channels():
     return s
 
 
+def direction_gates():
+    """Three listed tasks checked against the same gates: none passes."""
+    s = ""
+    for i, (x, label) in enumerate([(150, "task A"), (450, "task B"), (750, "task C")]):
+        s += f'<rect x="{x}" y="170" width="260" height="230" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+        s += text(x + 130, 215, label, 26, INK, sans=True)
+        for j, gate in enumerate(["account", "scope", "net pay"]):
+            y = 262 + j * 40
+            s += f'<circle cx="{x + 40}" cy="{y}" r="11" fill="none" stroke="{MUTED}" stroke-width="3"/>\n'
+            s += text(x + 150, y + 7, gate, 22, MUTED, sans=True)
+    s += text(600, 460, "none passes every check", 28, INK, sans=True)
+    s += text(600, 575, "check before anyone bids", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1003,6 +1018,7 @@ MOTIFS = {
     "direction-update-2": (direction_invitation, "A box for one public invitation with an arrow to an empty dashed box for a buyer reply"),
     "direction-update-3": (direction_specimen, "A dashed card for one public example listing a test, an acceptance check, a sample report and the effort, marked as a plan"),
     "direction-update-4": (direction_channels, "A crossed-out open invitation with an arrow to existing funded-task channels where a buyer already holds a budget"),
+    "direction-update-5": (direction_gates, "Three task cards each with three unchecked gate circles for account, scope and net pay"),
     "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
