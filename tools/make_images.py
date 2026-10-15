@@ -541,6 +541,25 @@ def direction_rule():
     return s
 
 
+def direction_cost():
+    """One diagnostic with token counts recorded and price, human time and machine cost still blank."""
+    s = ""
+    s += f'<rect x="300" y="140" width="600" height="340" rx="16" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(600, 192, "one small diagnostic", 28, INK, sans=True)
+    s += f'<line x1="330" y1="212" x2="870" y2="212" stroke="{LINE}" stroke-width="2"/>\n'
+    rows = [("token counts", True), ("price", False), ("human time", False), ("machine cost", False)]
+    for i, (label, known) in enumerate(rows):
+        y = 262 + i * 52
+        fill = TEAL_SOFT if known else PAPER
+        dash = "" if known else ' stroke-dasharray="6 5"'
+        col = INK if known else MUTED
+        s += f'<circle cx="350" cy="{y}" r="12" fill="{fill}" stroke="{col}" stroke-width="3"{dash}/>\n'
+        s += text(560, y + 8, label, 26, col, sans=True)
+        s += text(780, y + 8, "recorded" if known else "unknown", 22, col, sans=True)
+    s += text(600, 575, "unknown is not zero", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1038,6 +1057,7 @@ MOTIFS = {
     "direction-update-4": (direction_channels, "A crossed-out open invitation with an arrow to existing funded-task channels where a buyer already holds a budget"),
     "direction-update-5": (direction_gates, "Three task cards each with three unchecked gate circles for account, scope and net pay"),
     "direction-update-6": (direction_rule, "A written rule with three steps leading to a dashed box for a first client job that is not yet quoted"),
+    "direction-update-7": (direction_cost, "A diagnostic card with token counts recorded and price, human time and machine cost marked unknown"),
     "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
