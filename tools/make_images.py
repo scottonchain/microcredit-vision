@@ -477,6 +477,20 @@ def direction_invitation():
     return s
 
 
+def direction_specimen():
+    """One public example, still only a plan: a dashed card listing what it would show."""
+    s = ""
+    s += f'<rect x="300" y="120" width="600" height="360" rx="16" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="12 9"/>\n'
+    s += text(600, 175, "one public example", 30, INK, sans=True)
+    s += text(600, 210, "a plan, not yet published", 22, MUTED, sans=True)
+    for i, label in enumerate(["reproducible test", "acceptance check", "sample report", "effort it took"]):
+        y = 255 + i * 52
+        s += f'<circle cx="360" cy="{y}" r="12" fill="none" stroke="{MUTED}" stroke-width="3"/>\n'
+        s += text(600, y + 8, label, 26, INK, sans=True)
+    s += text(600, 575, "a plan is not a completed example", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -970,6 +984,7 @@ MOTIFS = {
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
     "direction-update-2": (direction_invitation, "A box for one public invitation with an arrow to an empty dashed box for a buyer reply"),
+    "direction-update-3": (direction_specimen, "A dashed card for one public example listing a test, an acceptance check, a sample report and the effort, marked as a plan"),
     "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
