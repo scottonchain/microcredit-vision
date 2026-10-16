@@ -19,6 +19,26 @@
       "employer_provenance": "https://donorbox.org/explore/about-us",
       "next_action": "If you already meet the requirements, inspect the employer's original listing and ask about the unresolved terms before accepting screening work; do not send an application to Omnequa.",
       "evidence": "https://github.com/scottonchain/microcredit-agent-testbed/blob/314b5d3dec4e33cfffb40272b45b957208086659/evidence/donorbox-opportunity-20261015/README.md"
+    },
+    {
+      "id": "rws-italian-us-3d590a14",
+      "employer": "RWS TrainAI",
+      "title": "General AI Data Annotator — Italian (United States)",
+      "status": "application_lead_not_recommended",
+      "location": "US residents in the states specified in the listing body; not worldwide remote. The header says New Jersey while the body lists multiple states: confirm your location with the employer.",
+      "eligibility": "Excellent Italian and English; suitable computer and internet; 20 hours each week. The first 10 business days require weekday online reachability between 9 a.m. and 5 p.m.; time zone unstated.",
+      "work": "Review and improve AI-generated marketing content; part-time W-2 employment, according to the employer.",
+      "advertised_pay": "USD 21.50 per hour; employer advertises paid training and onboarding, not necessarily paid application assessments.",
+      "payment_unknowns": "Payroll method, first payday, deductions and receiving costs are not stated in the inspected role; individual usable net pay is unverified.",
+      "participation_unknowns": "Assessment compensation, onboarding hours/time zone, equipment costs and permitted tools need clarification before committing time.",
+      "closing_date": "Not stated. Role and application remain readable; the earlier official API record dates the posting October 3, 2025, not a newly announced opening.",
+      "checked_on": "2026-10-15",
+      "review_due": "2026-10-16",
+      "source": "https://jobs.lever.co/rws/3d590a14-c374-48fe-89cc-24d2b6bcc29d",
+      "employer_index": "https://jobs.lever.co/rws",
+      "employer_provenance": "https://www.rws.com/about/careers/",
+      "next_action": "Check the employer's exact state and language requirements, then inspect its application if you choose; do not send a résumé or worker records to Omnequa.",
+      "evidence": "https://github.com/scottonchain/microcredit-agent-testbed/blob/c38c8dd0449002c33cbfaa68d02a8cf308da44f3/evidence/rws-paid-onboarding-20261015/README.md"
     }
   ]
 }
