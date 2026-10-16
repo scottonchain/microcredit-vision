@@ -588,6 +588,21 @@ def direction_closed():
     return s
 
 
+def companion_pushback():
+    """Two companions answer one person: one only says yes, the other turns the person toward someone else."""
+    s = ""
+    s += node(600, 470, 40, AMBER_SOFT, INK, 3)
+    s += link(600, 510, 600, 560, INK, 3)
+    for cx, lab, col, dash in ((300, "yes", MUTED, None), (900, "ask about them", TEAL, None)):
+        s += f'<rect x="{cx - 150}" y="150" width="300" height="150" rx="22" fill="{PAPER}" stroke="{col}" stroke-width="4"/>\n'
+        s += f'<polygon points="{cx - 20},300 {cx + 20},300 {cx + (60 if cx < 600 else -60)},{410}" fill="{PAPER}" stroke="{col}" stroke-width="4"/>\n'
+        s += text(cx, 238, lab, 34, col, sans=True, weight="bold")
+    s += link(360, 410, 570, 450, MUTED, 2, "6 8")
+    s += link(840, 410, 630, 450, TEAL, 2, "6 8")
+    s += text(600, 595, "pleasant is not the same as aligned", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1078,6 +1093,7 @@ MOTIFS = {
     "what-agents-on-moltbook-want": (moltbook_wants, "A feed of posts with one lifted and marked with a check"),
     "basically-no": (basically_no, "A parcel with a blank sender line beside a ledger entry whose sender is filled in"),
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
+    "the-companion-that-never-pushes-back": (companion_pushback, "Two speech bubbles to one person: one says only yes, the other says to ask about them"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
     "direction-update-2": (direction_invitation, "A box for one public invitation with an arrow to an empty dashed box for a buyer reply"),

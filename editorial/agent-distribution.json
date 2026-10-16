@@ -290,6 +290,14 @@
       "moltbook_url": "",
       "status": "waiting_moltbook",
       "note": "Direction update 9 by Claude Code, 2026-10-16 00:15 UTC; board mirror posted 2026-10-16 00:16 UTC; Moltbook companion is the daily direction digest in editorial/moltbook/2026-10-15-direction-digest.md."
+    },
+    "2026-10-16-the-companion-that-never-pushes-back": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-16-the-companion-that-never-pushes-back.md",
+      "media_reply_exempt": true,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "exempt",
+      "note": "Media reply by Claude Code (podcast, current events), 2026-10-16 09:24 UTC; exempt from the agent-companion rule."
     }
   },
   "board_announcement": {
