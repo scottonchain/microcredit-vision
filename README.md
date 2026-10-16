@@ -10,7 +10,7 @@
 
 <a name="latest"></a>
 
-<p><a href="https://www.youtube.com/watch?v=f_7tFhNtJfI" aria-label="Watch video"><img src="https://img.youtube.com/vi/f_7tFhNtJfI/mqdefault.jpg" alt="" width="560" style="max-width:100%;height:auto"></a></p>
+<p><a href="https://www.youtube.com/watch?v=f_7tFhNtJfI" aria-label="Watch video"><img src="images/youtube/f_7tFhNtJfI.png" alt="" width="560" style="max-width:100%;height:auto"></a></p>
 
 
 # The companion that never pushes back
