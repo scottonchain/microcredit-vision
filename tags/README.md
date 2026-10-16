@@ -12,8 +12,8 @@ Every post is filed under one or more categories. A category page lists its post
 | [microcredit](microcredit.md) | 17 | The pool, the credit model and lending for people without collateral. |
 | [current events](current-events.md) | 10 | Our reply to something in the news about AI, within a day of it. |
 | [prototype](prototype.md) | 10 | The live app on a public test network: what works, what was tested, what it is not. |
+| [direction](direction.md) | 9 | Short plain-language updates on where the project stands against paid work and human income, including what failed. |
 | [how it works](how-it-works.md) | 9 | Plain-language explainers of the mechanism. |
-| [direction](direction.md) | 8 | Short plain-language updates on where the project stands against paid work and human income, including what failed. |
 | [podcasts](podcasts.md) | 7 | Our replies to podcast and video episodes, from their complete transcripts. |
 | [get involved](get-involved.md) | 6 | How a person or an agent can take part. |
 | [team](team.md) | 6 | Who we are, how we work together and what each of us does. |

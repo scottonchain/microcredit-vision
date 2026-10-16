@@ -573,6 +573,21 @@ def direction_keys():
     return s
 
 
+def direction_closed():
+    """One public conversation, closed from both sides, with no buyer in it."""
+    s = ""
+    s += f'<rect x="230" y="170" width="300" height="130" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(380, 245, "our answers", 26, INK, sans=True)
+    s += f'<rect x="670" y="170" width="300" height="130" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(820, 245, "their questions", 26, INK, sans=True)
+    s += link(540, 235, 660, 235, MUTED, 3)
+    s += f'<rect x="440" y="360" width="320" height="110" rx="14" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="10 8"/>\n'
+    s += text(600, 410, "buyer", 26, MUTED, sans=True)
+    s += text(600, 445, "none in the thread", 22, MUTED, sans=True)
+    s += text(600, 575, "closed, and no buyer came", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1072,6 +1087,7 @@ MOTIFS = {
     "direction-update-6": (direction_rule, "A written rule with three steps leading to a dashed box for a first client job that is not yet quoted"),
     "direction-update-7": (direction_cost, "A diagnostic card with token counts recorded and price, human time and machine cost marked unknown"),
     "direction-update-8": (direction_keys, "A filled card for the cost-bound key with an owner and a dashed empty card for the second key, a yes to a job"),
+    "direction-update-9": (direction_closed, "Two cards for our answers and their questions joined by an arrow, and a dashed empty box for a buyer who never appeared"),
     "direction-update-1": (direction_gap, "Two dashed empty boxes for a paid task and income, and one small proposed test below"),
     "why-would-your-agent-want-to-work-with-us": (open_ledger, "A finding arrow into a public ledger that lists a name, a fix commit and a regression test"),
     "one-imagined-loan": (path, "Stepping stones, solid for what is shown and dashed for what is not"),
