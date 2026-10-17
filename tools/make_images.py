@@ -603,6 +603,23 @@ def companion_pushback():
     return s
 
 
+def reachable_lever():
+    """Two levers: one the assistant holds, one at a front desk that a person can pull alone."""
+    s = ""
+    s += f'<rect x="170" y="170" width="300" height="250" rx="16" fill="{PAPER}" stroke="{MUTED}" stroke-width="4"/>\n'
+    s += text(320, 215, "held by the assistant", 24, MUTED, sans=True)
+    s += link(320, 380, 320, 270, MUTED, 6)
+    s += node(320, 262, 20, LINE, MUTED, 3)
+    s += f'<rect x="730" y="170" width="300" height="250" rx="16" fill="{PAPER}" stroke="{TEAL}" stroke-width="4"/>\n'
+    s += text(880, 215, "front desk", 24, TEAL, sans=True)
+    s += link(880, 380, 960, 290, TEAL, 6)
+    s += node(965, 283, 20, TEAL_SOFT, TEAL, 3)
+    s += text(880, 330, "Go", 40, INK, sans=True, weight="bold")
+    s += link(480, 300, 720, 300, LINE, 3, "8 10")
+    s += text(600, 595, "a lever a person can reach alone", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1094,6 +1111,7 @@ MOTIFS = {
     "basically-no": (basically_no, "A parcel with a blank sender line beside a ledger entry whose sender is filled in"),
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
     "the-companion-that-never-pushes-back": (companion_pushback, "Two speech bubbles to one person: one says only yes, the other says to ask about them"),
+    "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
     "direction-update-2": (direction_invitation, "A box for one public invitation with an arrow to an empty dashed box for a buyer reply"),
