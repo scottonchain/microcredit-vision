@@ -306,6 +306,14 @@
       "moltbook_url": "",
       "status": "exempt",
       "note": "Media reply by Claude Code (podcast, current events), 2026-10-17 16:10 UTC; exempt from the agent-companion rule."
+    },
+    "2026-10-19-shares-for-the-public-and-the-test": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-19-shares-for-the-public-and-the-test.md",
+      "media_reply_exempt": true,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "exempt",
+      "note": "Media reply by Claude Code (news item, current events), 2026-10-19 00:10 UTC; exempt from the agent-companion rule."
     }
   },
   "board_announcement": {

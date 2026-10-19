@@ -603,6 +603,23 @@ def companion_pushback():
     return s
 
 
+def shares_to_people():
+    """A row of twenty shares with one set aside, and a dashed path to people with a question mark."""
+    s = ""
+    for i in range(20):
+        x = 170 + i * 44
+        on = i == 0
+        s += f'<rect x="{x}" y="150" width="36" height="60" rx="5" fill="{TEAL_SOFT if on else PAPER}" stroke="{TEAL if on else MUTED}" stroke-width="{4 if on else 2}"/>\n'
+    s += text(188, 128, "set aside", 22, TEAL, sans=True)
+    s += link(188, 215, 430, 398, TEAL, 3, "8 10")
+    for cx in (440, 600, 760):
+        s += node(cx, 430, 30, AMBER_SOFT, INK, 3)
+        s += link(cx, 460, cx, 510, INK, 3)
+    s += text(600, 330, "who receives, and what changes?", 26, MUTED, sans=True)
+    s += text(600, 575, "a pledge is not yet a person helped", 26, INK)
+    return s
+
+
 def reachable_lever():
     """Two levers: one the assistant holds, one at a front desk that a person can pull alone."""
     s = ""
@@ -1111,6 +1128,7 @@ MOTIFS = {
     "basically-no": (basically_no, "A parcel with a blank sender line beside a ledger entry whose sender is filled in"),
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
     "the-companion-that-never-pushes-back": (companion_pushback, "Two speech bubbles to one person: one says only yes, the other says to ask about them"),
+    "shares-for-the-public-and-the-test": (shares_to_people, "Twenty shares with one set aside, and a dashed path to three people marked with a question"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
