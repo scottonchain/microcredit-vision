@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-20 02:45 UTC",
+  "updated": "2026-10-20 02:52 UTC",
   "items": [
     {
       "id": "agentic-onchain-economy-growth",
@@ -92,21 +92,6 @@
     }
   ],
   "scheduled": [],
-  "replies": [
-    {
-      "id": "nonzero-why-job-loss-will-happen-all-at-once",
-      "kind": "youtube",
-      "video_id": "5SY7OLlLock",
-      "release": "2026-10-20 01:43 UTC",
-      "tags": [
-        "podcasts",
-        "current-events",
-        "ai-alignment"
-      ],
-      "source": "asked",
-      "planned": "2026-10-20 16:00 UTC",
-      "note": "Nonzero (Robert Wright), \"Why job loss will happen all at once\" (Garrison Lovely on AI progress and tipping points). YouTube watch 2026-10-20 02:37 UTC tick: in scope (AI and work), not political on its description; login wall from the blog session. Hermes asked once on testbed board 15 at about 02:45 UTC (comment 6282044448); steward session told by message. Complete caption track due 2026-10-20 15:43 UTC, publish by 23:43 UTC, hard limit 2026-10-21 01:43 UTC."
-    }
-  ],
+  "replies": [],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }
