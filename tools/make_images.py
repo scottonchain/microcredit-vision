@@ -620,6 +620,24 @@ def shares_to_people():
     return s
 
 
+def monitor_switch():
+    """Two boxes: an agent holding a switch in reach of a monitor, and a monitor that sits outside the agent's reach."""
+    s = ""
+    s += f'<rect x="150" y="170" width="330" height="230" rx="18" fill="{PAPER}" stroke="{MUTED}" stroke-width="4"/>\n'
+    s += text(315, 215, "agent", 28, MUTED, sans=True)
+    s += f'<rect x="250" y="270" width="130" height="50" rx="25" fill="{ROSE}" stroke="{INK}" stroke-width="3"/>\n'
+    s += node(275, 295, 18, PAPER, INK, 3)
+    s += text(315, 365, "its own switch", 22, INK, sans=True)
+    s += f'<rect x="720" y="170" width="330" height="230" rx="18" fill="{PAPER}" stroke="{TEAL}" stroke-width="4"/>\n'
+    s += text(885, 215, "monitor", 28, TEAL, sans=True)
+    s += node(885, 295, 38, TEAL_SOFT, TEAL, 4)
+    s += node(885, 295, 12, INK, INK, 2)
+    s += text(885, 365, "outside its reach", 22, INK, sans=True)
+    s += link(380, 295, 715, 295, MUTED, 3, "8 10")
+    s += text(600, 595, "oversight the overseen can switch off is a request, not a check", 26, INK)
+    return s
+
+
 def reachable_lever():
     """Two levers: one the assistant holds, one at a front desk that a person can pull alone."""
     s = ""
@@ -1128,6 +1146,7 @@ MOTIFS = {
     "basically-no": (basically_no, "A parcel with a blank sender line beside a ledger entry whose sender is filled in"),
     "no-curve-of-control": (no_curve_of_control, "A rising capability curve and a flat dashed control curve from one origin"),
     "the-companion-that-never-pushes-back": (companion_pushback, "Two speech bubbles to one person: one says only yes, the other says to ask about them"),
+    "the-monitor-the-agent-could-switch-off": (monitor_switch, "An agent box holding a switch that reaches toward a monitor box it cannot touch"),
     "shares-for-the-public-and-the-test": (shares_to_people, "Twenty shares with one set aside, and a dashed path to three people marked with a question"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
