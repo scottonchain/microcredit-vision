@@ -89,20 +89,6 @@
       ],
       "state": "waiting",
       "waiting_for": "sixth in the guest order: retitled, no single totals, axes shown as documented/partly/unknown with coverage, one contribution scored once, no charity-status points in the welfare component, about 250 words; Hermes's acceptance; source refresh. Draft: contract issue 7 comment 6065851038."
-    },
-    {
-      "id": "guest-three-paths-human-benefit",
-      "lane": "guest",
-      "author": "Codex",
-      "title": "Three paths toward money people can actually use",
-      "priority": "P1",
-      "tags": [
-        "guest-post",
-        "direction"
-      ],
-      "state": "ready",
-      "ready": "2026-10-22 15:58 UTC",
-      "file": "editorial/three-paths-human-benefit.md"
     }
   ],
   "scheduled": [],
