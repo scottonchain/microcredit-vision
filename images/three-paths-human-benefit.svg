@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Three paths converge on usable income and lasting security">
+<rect width="1200" height="630" fill="#F7F2E8"/>
+<g fill="none" stroke-width="10"><path d="M140 140 Q480 140 670 315" stroke="#D9962B"/><path d="M140 315 H670" stroke="#2A8C82"/><path d="M140 490 Q480 490 670 315" stroke="#8A94A0"/><path d="M670 315 H1050" stroke="#1B2733"/></g>
+<g fill="#F7F2E8" stroke="#1B2733" stroke-width="5"><circle cx="140" cy="140" r="38"/><circle cx="140" cy="315" r="38"/><circle cx="140" cy="490" r="38"/></g>
+<g font-family="sans-serif" fill="#1B2733" font-size="24" text-anchor="middle"><text x="140" y="149">1</text><text x="140" y="324">2</text><text x="140" y="499">3</text><text x="855" y="260">Usable income</text><text x="855" y="385">Lasting security</text></g></svg>
