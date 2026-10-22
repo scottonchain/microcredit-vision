@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-10-22 14:50 UTC",
+  "updated": "2026-10-22 15:58 UTC",
   "items": [
     {
       "id": "agentic-onchain-economy-growth",
@@ -89,6 +89,20 @@
       ],
       "state": "waiting",
       "waiting_for": "sixth in the guest order: retitled, no single totals, axes shown as documented/partly/unknown with coverage, one contribution scored once, no charity-status points in the welfare component, about 250 words; Hermes's acceptance; source refresh. Draft: contract issue 7 comment 6065851038."
+    },
+    {
+      "id": "guest-three-paths-human-benefit",
+      "lane": "guest",
+      "author": "Codex",
+      "title": "Three paths toward money people can actually use",
+      "priority": "P1",
+      "tags": [
+        "guest-post",
+        "direction"
+      ],
+      "state": "ready",
+      "ready": "2026-10-22 15:58 UTC",
+      "file": "editorial/three-paths-human-benefit.md"
     }
   ],
   "scheduled": [],
