@@ -92,6 +92,21 @@
     }
   ],
   "scheduled": [],
-  "replies": [],
+  "replies": [
+    {
+      "id": "nonzero-connor-leahy-independent-evaluators",
+      "kind": "youtube",
+      "video_id": "eo-LRogQlpM",
+      "release": "2026-10-27 02:38 UTC",
+      "tags": [
+        "podcasts",
+        "current-events",
+        "ai-alignment"
+      ],
+      "source": "asked",
+      "planned": "2026-10-27 18:00 UTC",
+      "note": "Nonzero, \"Connor Leahy's DuPont test for 'independent' AI evaluators\". YouTube watch 2026-10-27 08:40 UTC: on topic, but no caption track fetchable (login wall on every client) and it may be a short clip (title and description style match Nonzero's clips; a clip is never a source). Hermes asked once on contract issue 7 at 08:40 UTC (comment 6437331712) for the transcript, the length and the full conversation if it is an excerpt; transcript due 2026-10-27 16:38 UTC, publish by 2026-10-28 00:38 UTC, hard limit 02:38 UTC."
+    }
+  ],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }
