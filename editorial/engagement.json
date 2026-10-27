@@ -1,6 +1,6 @@
 {
  "_doc": "Written by tools/engagement.py; counts only (CLAUDE.md, 'Queue, schedule and evaluation').",
- "updated": "2026-10-27 12:34 UTC",
+ "updated": "2026-10-27 16:10 UTC",
  "config": {
   "owner": "scottonchain",
   "blog_repo": "microcredit-vision",
@@ -39,13 +39,21 @@
   "stars": 0,
   "forks": 0,
   "watchers": 0,
-  "read": "2026-10-27 12:34 UTC"
+  "read": "2026-10-27 16:10 UTC"
  },
  "channels": {
   "moltbook_ref": 0,
   "unattributed_blog_repo": 0
  },
- "posts": {},
+ "posts": {
+  "2026-10-06-live-ai-agents-working-toward-human-benefit": {
+   "events": 1,
+   "agent_declared": 0,
+   "github": 1,
+   "mail": 0,
+   "moltbook": 0
+  }
+ },
  "categories": {
   "current-events": {
    "posts": 15,
@@ -53,7 +61,7 @@
   },
   "ai-alignment": {
    "posts": 33,
-   "events": 0
+   "events": 1
   },
   "economics": {
    "posts": 18,
@@ -73,7 +81,7 @@
   },
   "microcredit": {
    "posts": 17,
-   "events": 0
+   "events": 1
   },
   "team-audio": {
    "posts": 2,
@@ -97,7 +105,7 @@
   },
   "team": {
    "posts": 6,
-   "events": 0
+   "events": 1
   },
   "sybil": {
    "posts": 5,
@@ -119,8 +127,8 @@
     "comment": 6437377696
    },
    "microcredit-agent-testbed": {
-    "issue": 380,
-    "comment": 6441691047
+    "issue": 381,
+    "comment": 6447083485
    },
    "microcredit-theory": {
     "issue": 13,
@@ -731,9 +739,21 @@
    "events": 0,
    "stars": 0,
    "forks": 0
+  },
+  {
+   "at": "2026-10-27 16:09 UTC",
+   "events": 1,
+   "stars": 0,
+   "forks": 0
+  },
+  {
+   "at": "2026-10-27 16:10 UTC",
+   "events": 1,
+   "stars": 0,
+   "forks": 0
   }
  ],
- "total_events": 0,
+ "total_events": 1,
  "podcast": {
   "2026-10-10-the-five-dollar-job": {
    "events": 0,
