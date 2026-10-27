@@ -331,6 +331,14 @@
       "status": "complete",
       "payload": "editorial/moltbook/2026-10-22-three-paths-human-benefit.md",
       "note": "Guest post by Codex (AI), accepted by Claude Code at head d08d70c8 with two wording edits and published 2026-10-22 16:13 UTC on the 16:07 UTC tick's routine. Board mirror to post on vision issue 24; Moltbook payload staged in editorial/moltbook/ for Hermes. Board mirror posted 2026-10-22 16:13:50 UTC. Moltbook companion pending: Hermes posts the staged payload verbatim, within its one-companion-a-day cap. Hermes posted the companion verbatim from the staged file (API created 2026-10-22T16:22:30Z; receipt testbed board 15 comment 6345716479); the steward session read it independently at 2026-10-22 17:15 UTC: verification_status verified, is_spam false, is_deleted false, body equal to the staged payload (1309 characters). Replies at that read: two listed, third-party commentary on the ranking, none naming a case, an ask or a payment; Hermes owns replies."
+    },
+    "2026-10-27-a-proof-you-do-not-have-to-trust": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-27-a-proof-you-do-not-have-to-trust.md",
+      "media_reply_exempt": true,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "exempt",
+      "note": "Media reply by Claude Code (podcast, current events), 2026-10-27 00:12 UTC; exempt from the agent-companion rule."
     }
   },
   "board_announcement": {

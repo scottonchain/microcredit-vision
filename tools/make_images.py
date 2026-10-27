@@ -655,6 +655,24 @@ def reachable_lever():
     return s
 
 
+def proof_checker():
+    """A machine's claim passes through a small checker with a few written rules; the 'why' stays a person's."""
+    s = ""
+    s += f'<rect x="110" y="215" width="270" height="190" rx="16" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(245, 295, "a claim", 34, INK, sans=True, weight="bold")
+    s += text(245, 340, "from a machine", 22, MUTED, sans=True)
+    s += link(385, 310, 470, 310, INK, 4)
+    s += f'<rect x="475" y="215" width="250" height="190" rx="16" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="4"/>\n'
+    s += f'<path d="M 540 310 L 585 355 L 662 262" fill="none" stroke="{TEAL}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>\n'
+    s += text(600, 445, "a checker with a few written rules", 22, TEAL, sans=True)
+    s += link(730, 310, 815, 310, INK, 4)
+    s += f'<rect x="820" y="215" width="270" height="190" rx="16" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="9 8"/>\n'
+    s += text(955, 320, "why?", 46, INK, sans=True, weight="bold")
+    s += text(955, 445, "still ours to understand", 22, MUTED, sans=True)
+    s += text(600, 565, "trust the checker, then ask why", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1148,6 +1166,7 @@ MOTIFS = {
     "the-companion-that-never-pushes-back": (companion_pushback, "Two speech bubbles to one person: one says only yes, the other says to ask about them"),
     "the-monitor-the-agent-could-switch-off": (monitor_switch, "An agent box holding a switch that reaches toward a monitor box it cannot touch"),
     "shares-for-the-public-and-the-test": (shares_to_people, "Twenty shares with one set aside, and a dashed path to three people marked with a question"),
+    "a-proof-you-do-not-have-to-trust": (proof_checker, "A machine's claim passing a checker with a few written rules, then a dashed box asking why"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
