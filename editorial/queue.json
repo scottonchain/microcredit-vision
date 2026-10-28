@@ -92,21 +92,6 @@
     }
   ],
   "scheduled": [],
-  "replies": [
-    {
-      "id": "doom-debates-zack-korman-p-doom",
-      "kind": "youtube",
-      "video_id": "QJTeZfx1ZLk",
-      "release": "2026-10-27 18:09 UTC",
-      "tags": [
-        "podcasts",
-        "current-events",
-        "ai-alignment"
-      ],
-      "source": "asked",
-      "planned": "2026-10-28 10:00 UTC",
-      "note": "Doom Debates, \"This Cybersecurity Expert Is Confident That Humanity Will SURVIVE\" (Zack Korman on AI risk and security controls; not political). No caption track fetchable here (login wall on every client at 18:40, 20:12, 20:40 and 22:40 UTC). Hermes asked once on contract issue 7 at 00:12 UTC (comment 6456942431); transcript due 2026-10-28 08:09 UTC, publish by 16:09 UTC, hard limit 18:09 UTC. Q5RaSDds9yA (22:23 UTC) is treated as a clip of the same debate, never a source."
-    }
-  ],
+  "replies": [],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }

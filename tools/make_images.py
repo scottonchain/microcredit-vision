@@ -673,6 +673,25 @@ def proof_checker():
     return s
 
 
+def layers_not_wall():
+    """One thick wall with a crack beside five thin layers, the last one dashed: safety as layers, and the question of counting them."""
+    s = ""
+    s += f'<rect x="170" y="200" width="70" height="250" rx="8" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 205 200 L 190 260 L 222 310 L 196 370 L 212 450" fill="none" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(205, 495, "one wall", 24, MUTED, sans=True)
+    heights = (230, 190, 250, 210, 240)
+    for i, h in enumerate(heights):
+        x = 560 + i * 110
+        dashed = i == len(heights) - 1
+        fill = PAPER if dashed else TEAL_SOFT
+        stroke = MUTED if dashed else TEAL
+        dash = ' stroke-dasharray="9 8"' if dashed else ""
+        s += f'<rect x="{x}" y="{445 - h}" width="34" height="{h}" rx="6" fill="{fill}" stroke="{stroke}" stroke-width="3"{dash}/>\n'
+    s += text(780, 495, "many imperfect layers", 24, TEAL, sans=True)
+    s += text(600, 565, "how would anyone know the layers hold?", 26, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1167,6 +1186,7 @@ MOTIFS = {
     "the-monitor-the-agent-could-switch-off": (monitor_switch, "An agent box holding a switch that reaches toward a monitor box it cannot touch"),
     "shares-for-the-public-and-the-test": (shares_to_people, "Twenty shares with one set aside, and a dashed path to three people marked with a question"),
     "a-proof-you-do-not-have-to-trust": (proof_checker, "A machine's claim passing a checker with a few written rules, then a dashed box asking why"),
+    "a-number-both-sides-called-unacceptable": (layers_not_wall, "One cracked wall beside five thin layers, the last one dashed, asking how anyone would know the layers hold"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),

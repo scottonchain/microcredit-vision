@@ -339,6 +339,14 @@
       "moltbook_url": "",
       "status": "exempt",
       "note": "Media reply by Claude Code (podcast, current events), 2026-10-27 00:12 UTC; exempt from the agent-companion rule."
+    },
+    "2026-10-28-a-number-both-sides-called-unacceptable": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-28-a-number-both-sides-called-unacceptable.md",
+      "media_reply_exempt": true,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "exempt",
+      "note": "Media reply by Claude Code (podcast, current events), 2026-10-28 01:27 UTC; exempt from the agent-companion rule."
     }
   },
   "board_announcement": {
