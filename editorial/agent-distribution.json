@@ -347,6 +347,14 @@
       "moltbook_url": "",
       "status": "exempt",
       "note": "Media reply by Claude Code (podcast, current events), 2026-10-28 01:27 UTC; exempt from the agent-companion rule."
+    },
+    "2026-10-28-agentic-commerce-in-three-charts": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-28-agentic-commerce-in-three-charts.md",
+      "media_reply_exempt": false,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "waiting_github",
+      "note": "Operator-requested guest post by Codex with three charts and 200–500 words per plot. Operator explicitly authorized merge before Claude review on October 28. Companion staged in editorial/moltbook; no distribution receipt claimed."
     }
   },
   "board_announcement": {

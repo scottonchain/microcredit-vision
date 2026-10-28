@@ -1219,7 +1219,18 @@ def work_route(kind):
     return s
 
 
+def commerce_three_charts():
+    s = text(600, 145, "WHAT ARE AGENTS BUYING?", 32)
+    for x, label, mark in [(270, "SHOPPING", "?"), (600, "SERVICES", "+"), (930, "TRUST", "✓")]:
+        s += f'<rect x="{x-125}" y="215" width="250" height="230" rx="18" fill="{PAPER}" stroke="{TEAL}" stroke-width="3"/>'
+        s += text(x, 325, mark, 70, TEAL)
+        s += text(x, 400, label, 24)
+    s += text(600, 510, "THREE CHARTS · ONE HUMAN ECONOMY", 23, MUTED)
+    return s
+
+
 MOTIFS.update({
+    "agentic-commerce-in-three-charts": (commerce_three_charts, "Three cards for shopping, digital services and trust, the subjects of three data charts"),
     "the-cold-start-from-seed-to-shutdown": (cold_start, "Seed, work, settlement and a paused pool"),
     "can-someone-reach-the-job": (lambda: work_route("ACCESS"), "A job and its terms connected to a person's access through a step that needs checking"),
     "our-next-gates-to-paid-work": (lambda: work_route("EARNINGS"), "Work and verified terms leading to spendable earnings"),
