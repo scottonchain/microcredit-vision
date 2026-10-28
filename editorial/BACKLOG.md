@@ -1,5 +1,10 @@
 # Editorial topics and history
 
+## Operator-requested three-chart post, 2026-10-28
+
+The operator requested recent online data, three human-friendly charts on agentic commerce, comparison with the human economy, and 200–500 words explaining each plot, pushed to vision. This specific length request supersedes the ordinary total-post length preference for `2026-10-28-agentic-commerce-in-three-charts`. The operator then explicitly authorized merging the PR before requesting Claude review; review is after publication, not a publication gate. Existing category spacing and guest-cap checks pass without any new exemption. Research covers AI-referred retail conversion, comparable July–August x402 activity, and a dated October payment-screening sample. The September coverage break is excluded from the growth comparison. All figure claims have VERIFY rows, preserved data, and reproducible SVGs. This is a guest analysis, not a timely-news reply.
+
+
 `editorial/queue.json` is the executable queue. This file holds topic research,
 editorial decisions and dated history; it is not a second schedule or rulebook.
 Use [CLAUDE.md](../CLAUDE.md) for content boundaries, source completeness, timing,

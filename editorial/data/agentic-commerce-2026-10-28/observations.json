@@ -1,0 +1,44 @@
+{
+  "retrieved_on": "2026-10-28",
+  "retail": {
+    "unit": "relative conversion difference versus non-AI referrals, percent",
+    "observations": [
+      {"period": "Mar 2025", "difference_pct": -38, "source": "adobe_april"},
+      {"period": "Mar 2026", "difference_pct": 42, "source": "adobe_april"},
+      {"period": "Jul 2026", "difference_pct": 60, "source": "adobe_august"}
+    ],
+    "scope": "Adobe-observed U.S. retail visits. AI referral does not establish autonomous checkout. Comparison group is non-AI traffic, normalized separately in each period."
+  },
+  "x402": {
+    "observations": [
+      {"period": "Jul 2026", "transactions": 6010540, "settled_usd": 238084, "source": "agent_economy_july"},
+      {"period": "Aug 2026", "transactions": 17855635, "settled_usd": 437476, "source": "agent_economy_august"}
+    ],
+    "edition": 1,
+    "frozen_on": "2026-10-22",
+    "source_revision": "0b1feb51e7f941cee3e20834736f477ceea59864",
+    "scope": "Provider-tracked x402 activity, historical coverage. September is deliberately excluded: Coinbase Base coverage expanded and was backfilled from September 16, so the publisher withholds September month-over-month comparisons. Transfers do not prove AI identity, delivered services, independent demand or profit."
+  },
+  "screening": {
+    "chain": "Base",
+    "token": "USDC",
+    "window_start": "2026-10-09T19:40:00Z",
+    "window_end": "2026-10-16T19:40:00Z",
+    "generated_at": "2026-10-17T10:05:00Z",
+    "payments_total": 442419,
+    "payments_pass": 189329,
+    "usd_total": 270548,
+    "usd_pass": 23150,
+    "source": "agent_pay_tracker",
+    "scope": "Independent tracker, six observed facilitators. Pass means no flag under its heuristics, not independently verified commerce. Single-buyer and tiny-repeat rules can flag legitimate activity. USD amounts are the rounded totals displayed on the page."
+  },
+  "sources": {
+    "adobe_april": {"url": "https://business.adobe.com/blog/ai-traffic-surge-retail-sites-not-machine-readable", "published_on": "2026-04-16"},
+    "adobe_august": {"url": "https://business.adobe.com/blog/us-consumers-are-embracing-llms-to-make-travel-plans", "published_on": "2026-08-19"},
+    "agent_economy_july": {"url": "https://agenteconomy.to/reports/2026-07", "revision_url": "https://github.com/realdora/agenteconomy/tree/0b1feb51e7f941cee3e20834736f477ceea59864"},
+    "agent_economy_august": {"url": "https://agenteconomy.to/reports/2026-08", "revision_url": "https://github.com/realdora/agenteconomy/tree/0b1feb51e7f941cee3e20834736f477ceea59864"},
+    "agent_economy_september": {"url": "https://agenteconomy.to/reports/2026-09", "use": "Coverage-break check only; not plotted"},
+    "agent_pay_tracker": {"url": "https://www.agentpaytracker.com/", "methodology_url": "https://www.agentpaytracker.com/methodology", "revision": "Page generated October 17, 2026, 10:05 UTC; retrieved October 28, 2026"},
+    "x402": {"url": "https://x402.org/", "use": "Primary description of per-request digital-service payments; not a quantitative series"}
+  }
+}

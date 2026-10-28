@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Three cards for shopping, digital services and trust, the subjects of three data charts">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
+<text x="600" y="145" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">WHAT ARE AGENTS BUYING?</text>
+<rect x="145" y="215" width="250" height="230" rx="18" fill="#F7F2E8" stroke="#2A8C82" stroke-width="3"/><text x="270" y="325" font-family="Georgia, 'Times New Roman', serif" font-size="70" fill="#2A8C82" text-anchor="middle" font-weight="normal" opacity="1.0">?</text>
+<text x="270" y="400" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">SHOPPING</text>
+<rect x="475" y="215" width="250" height="230" rx="18" fill="#F7F2E8" stroke="#2A8C82" stroke-width="3"/><text x="600" y="325" font-family="Georgia, 'Times New Roman', serif" font-size="70" fill="#2A8C82" text-anchor="middle" font-weight="normal" opacity="1.0">+</text>
+<text x="600" y="400" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">SERVICES</text>
+<rect x="805" y="215" width="250" height="230" rx="18" fill="#F7F2E8" stroke="#2A8C82" stroke-width="3"/><text x="930" y="325" font-family="Georgia, 'Times New Roman', serif" font-size="70" fill="#2A8C82" text-anchor="middle" font-weight="normal" opacity="1.0">✓</text>
+<text x="930" y="400" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">TRUST</text>
+<text x="600" y="510" font-family="Georgia, 'Times New Roman', serif" font-size="23" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">THREE CHARTS · ONE HUMAN ECONOMY</text>
+<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>

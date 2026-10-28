@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="518.4pt" viewBox="0 0 864 518.4" xmlns="http://www.w3.org/2000/svg" version="1.1" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Payments grew faster than dollars transferred</title>
+<desc id="figure-desc">July: 6,010,540 payments and $238,084. August: 17,855,635 payments and $437,476. Count grew 197.1 percent, dollars 83.7 percent. Mean transfer fell from 3.96 to 2.45 cents. Panels have different labeled units.</desc>
+ <title>Payments grew faster than dollars transferred</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Payments grew faster than dollars transferred</dc:title>
+    <dc:description>July: 6,010,540 payments and $238,084. August: 17,855,635 payments and $437,476. Count grew 197.1 percent, dollars 83.7 percent. Mean transfer fell from 3.96 to 2.45 cents. Panels have different labeled units.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Codex; Matplotlib</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 518.4
+L 864 518.4
+L 864 0
+L 0 0
+z
+" style="fill: #f7f2e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 86.4 352.512
+L 380.16 352.512
+L 380.16 129.6
+L 86.4 129.6
+z
+" style="fill: #f7f2e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="145.43311" y="371.149812" transform="rotate(-0 145.43311 371.149812)">July</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="321.12689" y="371.149812" transform="rotate(-0 321.12689 371.149812)">August</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <path d="M 86.4 352.512
+L 380.16 352.512
+" clip-path="url(#p3884653040)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_3">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="78.4" y="357.830906" transform="rotate(-0 78.4 357.830906)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <path d="M 86.4 296.784
+L 380.16 296.784
+" clip-path="url(#p3884653040)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_4">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="78.4" y="302.102906" transform="rotate(-0 78.4 302.102906)">5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <path d="M 86.4 241.056
+L 380.16 241.056
+" clip-path="url(#p3884653040)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_5">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="78.4" y="246.374906" transform="rotate(-0 78.4 246.374906)">10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <path d="M 86.4 185.328
+L 380.16 185.328
+" clip-path="url(#p3884653040)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_6">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="78.4" y="190.646906" transform="rotate(-0 78.4 190.646906)">15</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <path d="M 86.4 129.6
+L 380.16 129.6
+" clip-path="url(#p3884653040)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="78.4" y="134.918906" transform="rotate(-0 78.4 134.918906)">20</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 99.752727 352.512
+L 191.113493 352.512
+L 191.113493 285.520925
+L 99.752727 285.520925
+z
+" clip-path="url(#p3884653040)" style="fill: #95bab3"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 275.446507 352.512
+L 366.807273 352.512
+L 366.807273 153.500235
+L 275.446507 153.500235
+z
+" clip-path="url(#p3884653040)" style="fill: #207d74"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1b2733" x="145.43311" y="277.719005" transform="rotate(-0 145.43311 277.719005)">6.01M</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1b2733" x="321.12689" y="145.698315" transform="rotate(-0 321.12689 145.698315)">17.86M</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2733" x="86.4" y="109.6" transform="rotate(-0 86.4 109.6)">Payments (millions)</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 527.04 352.512
+L 803.52 352.512
+L 803.52 129.6
+L 527.04 129.6
+z
+" style="fill: #f7f2e8"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_3">
+     <g id="line2d_13"/>
+     <g id="text_11">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="582.600574" y="371.149812" transform="rotate(-0 582.600574 371.149812)">July</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_14"/>
+     <g id="text_12">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="747.959426" y="371.149812" transform="rotate(-0 747.959426 371.149812)">August</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_6">
+     <g id="line2d_15">
+      <path d="M 527.04 352.512
+L 803.52 352.512
+" clip-path="url(#p27aa0b71be)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_13">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="519.04" y="357.830906" transform="rotate(-0 519.04 357.830906)">0</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <path d="M 527.04 307.9296
+L 803.52 307.9296
+" clip-path="url(#p27aa0b71be)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_14">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="519.04" y="313.248506" transform="rotate(-0 519.04 313.248506)">100</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_19">
+      <path d="M 527.04 263.3472
+L 803.52 263.3472
+" clip-path="url(#p27aa0b71be)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_15">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="519.04" y="268.666106" transform="rotate(-0 519.04 268.666106)">200</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21">
+      <path d="M 527.04 218.7648
+L 803.52 218.7648
+" clip-path="url(#p27aa0b71be)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_16">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="519.04" y="224.083706" transform="rotate(-0 519.04 224.083706)">300</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_23">
+      <path d="M 527.04 174.1824
+L 803.52 174.1824
+" clip-path="url(#p27aa0b71be)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24"/>
+     <g id="text_17">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="519.04" y="179.501306" transform="rotate(-0 519.04 179.501306)">400</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_25">
+      <path d="M 527.04 129.6
+L 803.52 129.6
+" clip-path="url(#p27aa0b71be)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26"/>
+     <g id="text_18">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="519.04" y="134.918906" transform="rotate(-0 519.04 134.918906)">500</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 539.607273 352.512
+L 625.593876 352.512
+L 625.593876 246.368439
+L 539.607273 246.368439
+z
+" clip-path="url(#p27aa0b71be)" style="fill: #95bab3"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 704.966124 352.512
+L 790.952727 352.512
+L 790.952727 157.4747
+L 704.966124 157.4747
+z
+" clip-path="url(#p27aa0b71be)" style="fill: #207d74"/>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1b2733" x="582.600574" y="238.566519" transform="rotate(-0 582.600574 238.566519)">$238,084</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1b2733" x="747.959426" y="149.67278" transform="rotate(-0 747.959426 149.67278)">$437,476</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2733" x="527.04" y="109.6" transform="rotate(-0 527.04 109.6)">Dollars transferred (thousands)</text>
+   </g>
+  </g>
+  <g id="text_22">
+   <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2733" x="47.52" y="41.472" transform="rotate(-0 47.52 41.472)">Payments grew faster than the dollars transferred</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #596772" x="47.52" y="69.984" transform="rotate(-0 47.52 69.984)">Tracked x402 activity  |  July to August 2026, comparable frozen editions</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #596772" transform="translate(47.52 463.147234)">Source: agent economy, July and August reports, edition 1, frozen October 22, 2026.</text>
+   <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #596772" transform="translate(47.52 479.52)">September omitted because coverage changed. These transfers do not establish completed services or profit.</text>
+  </g>
+  <g id="text_25">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #207d74" x="86.4" y="412.128" transform="rotate(-0 86.4 412.128)">Count: +197.1%    |    Dollars: +83.7%</text>
+  </g>
+  <g id="text_26">
+   <text style="font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2733" x="86.4" y="438.048" transform="rotate(-0 86.4 438.048)">Mean value per transfer: 3.96¢ → 2.45¢  (not a typical service price)</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3884653040">
+   <rect x="86.4" y="129.6" width="293.76" height="222.912"/>
+  </clipPath>
+  <clipPath id="p27aa0b71be">
+   <rect x="527.04" y="129.6" width="276.48" height="222.912"/>
+  </clipPath>
+ </defs>
+</svg>
