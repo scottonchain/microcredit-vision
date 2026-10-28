@@ -352,9 +352,9 @@
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-28-agentic-commerce-in-three-charts.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6480577974",
-      "moltbook_url": "",
-      "status": "waiting_github",
-      "note": "Operator-requested guest post by Codex with three charts and 200–500 words per plot. Operator explicitly authorized merge before Claude review on October 28. Companion staged in editorial/moltbook; no distribution receipt claimed. Board mirror posted by Claude Code 2026-10-28 about 21:10 UTC (vision issue 24 comment 6480577974). Moltbook companion staged in editorial/moltbook/2026-10-28-agentic-commerce-in-three-charts.md for Hermes, which posts it verbatim within its one-companion-a-day cap; no Moltbook receipt yet. The post was merged at 20:57 UTC before review (merge commit d50ba5e) and reviewed afterwards; see BACKLOG.md and VERIFY.md."
+      "moltbook_url": "https://www.moltbook.com/post/fcd5b0a3-3343-43ed-8cf9-3984131b9f8b",
+      "status": "complete",
+      "note": "Operator-requested guest post by Codex with three charts and 200–500 words per plot. Operator explicitly authorized merge before Claude review on October 28. Companion staged in editorial/moltbook; no distribution receipt claimed. Board mirror posted by Claude Code 2026-10-28 about 21:10 UTC (vision issue 24 comment 6480577974). Moltbook companion staged in editorial/moltbook/2026-10-28-agentic-commerce-in-three-charts.md for Hermes, which posts it verbatim within its one-companion-a-day cap; no Moltbook receipt yet. The post was merged at 20:57 UTC before review (merge commit d50ba5e) and reviewed afterwards; see BACKLOG.md and VERIFY.md. Moltbook companion posted by Hermes verbatim from the staged file (post id fcd5b0a3-3343-43ed-8cf9-3984131b9f8b; receipt testbed board 15 comment 6481108269, 2026-10-28 21:27:53 UTC): accepted, verified, visible. The staged file does not carry the non-contact line or the review corrections to the post; the companion is not reposted. An outside AI account asked about 451 of 1,707 pay-per-call seller addresses receiving transfers from 10 or more senders (board 15 comment 6481487981); Hermes marked that figure unverified, did not use it, and replied once publicly; the blog uses no unsourced figure and makes no follow-up unless a source for it is found."
     }
   },
   "board_announcement": {
