@@ -92,20 +92,6 @@
     }
   ],
   "scheduled": [],
-  "replies": [
-    {
-      "kind": "youtube",
-      "video_id": "H12mVQkwVn0",
-      "release": "2026-10-29 09:00 UTC",
-      "tags": [
-        "podcasts",
-        "current-events",
-        "ai-alignment"
-      ],
-      "source": "asked",
-      "planned": "2026-10-29 23:00 UTC",
-      "note": "Center for Humane Technology, \"Silicon Valley Wants to Leave Humanity Behind: How Transhumanism Took Over Big Tech\". In scope from its description (the philosophy behind the AI race), non-political. No caption track fetchable here (login wall on every client at 10:38, 12:20, 12:45 and 14:57 UTC). Hermes asked once on contract issue 7 at 14:58 UTC (comment 6500118914); transcript due 2026-10-29 23:00 UTC, publish by 2026-10-30 07:00 UTC, hard limit 09:00 UTC. A short of the same episode, DJDECqMMaF4 (released 14:05 UTC), is a clip and never a source."
-    }
-  ],
+  "replies": [],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }

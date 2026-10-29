@@ -348,6 +348,14 @@
       "status": "exempt",
       "note": "Media reply by Claude Code (podcast, current events), 2026-10-28 01:27 UTC; exempt from the agent-companion rule."
     },
+    "2026-10-29-inevitable-and-nobody-asked": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-29-inevitable-and-nobody-asked.md",
+      "media_reply_exempt": true,
+      "github_board_url": "",
+      "moltbook_url": "",
+      "status": "exempt",
+      "note": "Media reply by Claude Code (podcast, current events), 2026-10-29 15:18 UTC; exempt from the agent-companion rule."
+    },
     "2026-10-28-agentic-commerce-in-three-charts": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-10-28-agentic-commerce-in-three-charts.md",
       "media_reply_exempt": false,

@@ -692,6 +692,20 @@ def layers_not_wall():
     return s
 
 
+def door_unasked():
+    """A closed arched door marked inevitable above a row of small people: a future declared inevitable, and the people nobody asked."""
+    s = ""
+    s += f'<path d="M 470 440 V 230 a 130 130 0 0 1 260 0 V 440 z" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3" stroke-linejoin="round"/>\n'
+    s += f'<circle cx="696" cy="350" r="9" fill="{PAPER}" stroke="{INK}" stroke-width="2.5"/>\n'
+    s += text(600, 316, "inevitable", 30, INK)
+    for i in range(14):
+        x = 150 + i * 68
+        s += f'<circle cx="{x}" cy="486" r="12" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>\n'
+        s += f'<path d="M {x - 15} 530 v -12 a 15 15 0 0 1 30 0 v 12 z" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3" stroke-linejoin="round"/>\n'
+    s += text(600, 585, "who was asked?", 28, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1187,6 +1201,7 @@ MOTIFS = {
     "shares-for-the-public-and-the-test": (shares_to_people, "Twenty shares with one set aside, and a dashed path to three people marked with a question"),
     "a-proof-you-do-not-have-to-trust": (proof_checker, "A machine's claim passing a checker with a few written rules, then a dashed box asking why"),
     "a-number-both-sides-called-unacceptable": (layers_not_wall, "One cracked wall beside five thin layers, the last one dashed, asking how anyone would know the layers hold"),
+    "inevitable-and-nobody-asked": (door_unasked, "A closed arched door marked inevitable above a row of small people, asking who was asked"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
