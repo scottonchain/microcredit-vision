@@ -92,6 +92,20 @@
     }
   ],
   "scheduled": [],
-  "replies": [],
+  "replies": [
+    {
+      "kind": "youtube",
+      "video_id": "wkKpPeMVVX8",
+      "release": "2026-10-31 01:09 UTC",
+      "tags": [
+        "podcasts",
+        "current-events",
+        "ai-alignment"
+      ],
+      "source": "asked",
+      "planned": "2026-10-31 15:30 UTC",
+      "note": "Nonzero (Robert Wright), \"Is an AI Bubble Bursting? | Robert Wright & Liron Shapira\". In scope as an AI episode on a named writer's channel; the description lists stock-market jitters, a new interactive world model, one guest's spending on AI agents, a hack at a crypto exchange, an AI audit of two economists, a lab's financial prospects and AI and encryption math; judge the political gate and the one subject from the transcript (a post may use only the non-political strand, or none). No caption track fetchable here (login wall on every client at 02:45 UTC). Hermes asked once on contract issue 7 at 02:50 UTC (comment 6537943727); transcript due 2026-10-31 15:09 UTC, publish by 23:09 UTC, hard limit 2026-11-01 01:09 UTC. The post will name an AI lab that serves the team under an account if the lab's prospects are used, so the non-contact line would then be left out."
+    }
+  ],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }
