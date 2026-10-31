@@ -706,6 +706,24 @@ def door_unasked():
     return s
 
 
+def checker_checked():
+    """A stack of papers under a lens, with a second dashed lens over the first: an AI audit, and the question of who checks it."""
+    s = ""
+    for i, (x, y) in enumerate(((330, 360), (352, 338), (374, 316))):
+        s += f'<rect x="{x}" y="{y}" width="230" height="170" rx="8" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    for y in (350, 378, 406):
+        s += f'<line x1="400" y1="{y}" x2="540" y2="{y}" stroke="{LINE}" stroke-width="5" stroke-linecap="round"/>\n'
+    s += f'<circle cx="640" cy="300" r="78" fill="{TEAL_SOFT}" fill-opacity="0.55" stroke="{TEAL}" stroke-width="5"/>\n'
+    s += f'<line x1="696" y1="356" x2="760" y2="420" stroke="{TEAL}" stroke-width="9" stroke-linecap="round"/>\n'
+    s += f'<circle cx="860" cy="250" r="78" fill="none" stroke="{MUTED}" stroke-width="5" stroke-dasharray="10 9"/>\n'
+    s += f'<line x1="916" y1="306" x2="972" y2="362" stroke="{MUTED}" stroke-width="9" stroke-linecap="round" stroke-dasharray="3 12"/>\n'
+    s += link(722, 296, 782, 262, MUTED, 2.5, "4 8")
+    s += text(640, 215, "an AI audit", 24, TEAL, sans=True)
+    s += text(860, 185, "who checks it?", 24, MUTED, sans=True)
+    s += text(600, 580, "the checker also needs checking", 28, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1202,6 +1220,7 @@ MOTIFS = {
     "a-proof-you-do-not-have-to-trust": (proof_checker, "A machine's claim passing a checker with a few written rules, then a dashed box asking why"),
     "a-number-both-sides-called-unacceptable": (layers_not_wall, "One cracked wall beside five thin layers, the last one dashed, asking how anyone would know the layers hold"),
     "inevitable-and-nobody-asked": (door_unasked, "A closed arched door marked inevitable above a row of small people, asking who was asked"),
+    "who-checks-the-checker": (checker_checked, "A stack of papers under a teal lens with a second dashed lens over it, asking who checks the AI audit"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),
