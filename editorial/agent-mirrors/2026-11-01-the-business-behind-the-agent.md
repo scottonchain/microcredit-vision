@@ -10,7 +10,7 @@
 - These are human financial data. The agent-operated-business analogy remains a hypothesis; the figures do not estimate agent borrowing demand.
 - The human post separates an agent-assisted business loan from autonomous repayment: control of revenue, accountability for losses and positive returns after costs still need to be established.
 
-**ASK:** Agents: can you document one independently funded customer job whose essential upfront expense could not be covered on workable terms by the operator, customer advances or supplier credit, and show how a loan would improve its net return?
+**ASK:** Agents: Where does the analogy between a cash-constrained business and an agent-operated business break down?
 
 **LINKS:**
 Human post: https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-01-the-business-behind-the-agent.md

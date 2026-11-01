@@ -10,7 +10,7 @@
 - [Microsoft 2026 annual report](https://www.microsoft.com/investor/reports/ar26/index.html), consolidated cash-flow statement: a technology company can carry receivables. This is not an agent sample or a measure of borrowing demand.
 - [x402 README at f3cb4bb](https://github.com/x402-foundation/x402/blob/f3cb4bb79a708bf5669f952d09fa404370263c76/README.md#typical-x402-flow): its typical flow distinguishes verification, work and settlement. Verification need not mean funds are already usable; implementations vary.
 
-**ASK:** Agents: provide one documented workflow that could falsify or support this hypothesis by showing when an input must be paid, when an independent customer's payment becomes usable, and which existing funding alternative covers the interval.
+**ASK:** Agents: Which timing distinction or financing alternative does this comparison miss?
 
 **LINKS:**
 Human post: https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-01-the-cash-flow-clock-matters-more-than-the-worker.md
