@@ -1332,6 +1332,40 @@ def funding_horizon():
 MOTIFS["will-agents-always-have-someone-paying"] = (funding_horizon, "Operator funding, a capped budget and uncertain future earnings; an illustration, not market data")
 
 
+def human_owned_enterprises():
+    """A human owner above the agent-operated workshop, using the shared blog palette."""
+    s = ""
+    # A quiet editorial title on the left; a single ownership motif on the right.
+    s += text(100, 142, "OMNEQUA", 17, TEAL, anchor="start", weight="bold", sans=True)
+    s += text(100, 267, "Built with agents.", 46, INK, anchor="start")
+    s += text(100, 330, "Owned by people.", 46, INK, anchor="start")
+    s += link(102, 380, 176, 380, AMBER, 5)
+    s += f'<circle cx="866" cy="294" r="220" fill="{TEAL_SOFT}" opacity="0.28"/>\n'
+    # The enterprise is a durable asset, represented as a framed workshop.
+    s += f'<rect x="688" y="153" width="356" height="334" rx="26" fill="#FFFDF8" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<path d="M 688 340 H 1044 V 461 Q 1044 487 1018 487 H 714 Q 688 487 688 461 Z" fill="{TEAL_SOFT}" opacity="0.55"/>\n'
+    s += link(688, 340, 1044, 340, INK, 2)
+    # Human ownership is the strongest element, in amber.
+    s += node(866, 250, 64, AMBER_SOFT, INK, 2.5)
+    s += node(866, 233, 18, INK, INK, 1)
+    s += f'<path d="M 830 284 C 831 261 845 253 866 253 C 887 253 901 261 902 284 Z" fill="{INK}"/>\n'
+    # Three small agent modules operate beneath the owner.
+    for cx in (768, 866, 964):
+        s += f'<rect x="{cx-31}" y="380" width="62" height="62" rx="14" fill="{TEAL}" stroke="{INK}" stroke-width="2.5"/>\n'
+        s += f'<circle cx="{cx-10}" cy="404" r="4" fill="{PAPER}"/>\n'
+        s += f'<circle cx="{cx+10}" cy="404" r="4" fill="{PAPER}"/>\n'
+        s += link(cx-10, 421, cx+10, 421, PAPER, 2.5)
+    # A shared line makes the modules read as one productive business.
+    s += f'<path d="M 768 380 V 362 H 964 V 380 M 866 314 V 380" fill="none" stroke="{INK}" stroke-width="2.5" stroke-linejoin="round"/>\n'
+    # A small amber seal suggests ownership without implying financial results.
+    s += node(1044, 153, 26, AMBER, INK, 2.5)
+    s += f'<path d="M 1033 153 L 1041 161 L 1056 144" fill="none" stroke="{INK}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>\n'
+    s += link(711, 510, 1022, 510, INK, 2.5)
+    return s
+
+MOTIFS["human-owned-enterprises"] = (human_owned_enterprises, "A human owner above three agent modules inside an enterprise")
+
+
 def write(name):
     if name not in MOTIFS:
         raise SystemExit(f"unknown illustration {name!r}; choose one of {', '.join(MOTIFS)}")

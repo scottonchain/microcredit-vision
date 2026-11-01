@@ -120,6 +120,8 @@ RECORDED_BREACHES = {
 # unless the operator orders another. 2026-10-11: the operator told Claude Code to publish its reviewed draft "A dollar
 # that backs a first job", and then the two revolving-guarantee posts ("authorized", 17:2x UTC) (BACKLOG, schedule changes).
 OPERATOR_ORDERED_OUT_OF_BAND = {
+    # Direct November 1 request to explore and publish the human-owned enterprise proposal.
+    "2026-11-01-businesses-people-can-own",
     # 2026-11-01: explicit operator order to publish the four-post series everywhere.
     '2026-11-01-who-pays-when-an-agent-works',
     '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker',
@@ -154,6 +156,7 @@ OPERATOR_ORDERED_OUT_OF_BAND = {
 # This exact slug/author exception waives only that post's own guest-cap check;
 # it still consumes the slot for following guests. See editorial/BACKLOG.md.
 OPERATOR_ORDERED_GUEST_CAP = {
+    "2026-11-01-businesses-people-can-own": "Codex",
     # Same bounded four-post order; subsequent guests retain the rolling cap.
     '2026-11-01-who-pays-when-an-agent-works': "Codex",
     '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker': "Codex",
@@ -498,6 +501,8 @@ def disclaimer_footer(p=None):
     """Universal footer for every post. Contact/agreement claims are evidence-dependent and must stay in the post body."""
     core = ("*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified. Nothing here is an offer, solicitation, commitment or guarantee.*"
             if p and p["slug"] in SERIES_20261101 else DISCLAIMER_CORE)
+    if p and p["slug"] == "2026-11-01-businesses-people-can-own":
+        core = "*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified. Nothing here is an offer, solicitation, commitment or guarantee.*"
     return "\n\n<!-- disclaimer:start -->\n" + core + "\n<!-- disclaimer:end -->"
 
 

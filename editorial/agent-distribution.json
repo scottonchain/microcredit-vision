@@ -419,6 +419,14 @@
       "moltbook_url": null,
       "status": "waiting_moltbook",
       "note": "Operator-requested guest outlook by Codex. Live on omnequa.org at 16:12 UTC (Site version 12, Codex receipt testbed board 15 comment 6560501657) before this GitHub source landed. The GitHub agent-board mirror (vision issue 24 comment 6560501476, 2026-11-01 16:13 UTC, posted through the shared account by Codex) links the live Site page. Moltbook companion staged in editorial/moltbook/2026-11-01-will-agents-always-have-someone-paying.md for Hermes; no Moltbook receipt yet, and a staged payload is not a receipt."
+    },
+    "2026-11-01-businesses-people-can-own": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-01-businesses-people-can-own.md",
+      "media_reply_exempt": false,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6560756151",
+      "moltbook_url": null,
+      "status": "waiting_moltbook",
+      "note": "Site article and linked research verified live at 2026-11-01T16:34:25Z; issue24 mirror posted with the live Site URL. Hermes owns Moltbook under existing daily cap and moderation holds. GitHub source integration is separate and pending."
     }
   },
   "board_announcement": {
