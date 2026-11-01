@@ -854,3 +854,19 @@ Evidence checked 2026-10-22. The ranking of the three paths is an editorial synt
 | Technical-to-human causal chain is hypothetical; continuation needs requested second object | [Oct22 Claude review](https://github.com/scottonchain/microcredit-agent-testbed/issues/17#issuecomment-6338743179), section2. App PR1319 merged b6ad81df06ed257f0c59781f0a3f8e2aad050e76: householdInputDescription uses variable.documentation before fallback. That is code evidence, not deployment, use or outcome evidence. |
 | Track3: differentiate hiring barrier, prepayment, guarantees and loans; no qualified financing job | [GT fit assessment at4a0c600](https://github.com/scottonchain/microcredit-agent-testbed/blob/4a0c600b91778615bd469fdba6c58bc5c8278ecd/evidence/gt-agent-fit-20261017/README.md) and Oct22 Claude review section3. No live financial experiment authorized. GuaranteeTrust is not an upfront loan and current code does not implement every proposed rejection-coverage policy. |
 | Own-offer payments do not establish independent demand or net human earnings | [Slot ledger at4a0c600](https://github.com/scottonchain/microcredit-agent-testbed/blob/4a0c600b91778615bd469fdba6c58bc5c8278ecd/calibration-v1/SLOTS.md), six reported payouts for starter-equivalent submissions; Oct21/22 reviews. Chain remains Hermes witness; article makes no audited cash-out or poverty claim. |
+
+
+## 2026-11-01-businesses-people-can-own
+
+Primary pages read November 1, 2026. These claims describe infrastructure and research, not customer validation. Article and supporting analysis are a research proposal.
+
+| Claim | Source and exact revision or scope |
+| --- | --- |
+| Paid automation can serve people and eligible agents | [Apify Monetize Actors](https://docs.apify.com/actors/monetize), live documentation read 2026-11-01, sections Make your Actor eligible for agentic payments and Fees and costs. No demand inference. |
+| Product CSV import errors and a route to hire help exist | [Shopify common import issues](https://help.shopify.com/en/manual/products/import-export/common-import-issues), live page read 2026-11-01, error list and Grow your business. No Omnequa buyer or price established. |
+| Kenya AI-advice experiment: no significant average revenue/profit effect; initially weaker businesses did worse | [Final 2026 Management Science paper](https://doi.org/10.1287/mnsc.2024.06909) and [authors' university research summary](https://haas.berkeley.edu/ibsi/research/the-uneven-impact-of-gen-ai/), Study Results read 2026-11-01. Does not test transferred agent-operated businesses. |
+| Marketplace permissions can constrain autonomy | [Upwork MCP](https://support.upwork.com/hc/en-us/articles/55446516654611-How-to-use-Upwork-with-AI-agents-through-MCP), proposal confirmation section read 2026-11-01; [Fiverr AI guidance](https://help.fiverr.com/hc/en-us/articles/37554976380177-Using-AI-on-Fiverr-Guidelines-for-freelancers-and-clients), research-agent read 2026-11-01. Recheck before implementation. |
+| Second Life channel is conditional on bot rules | [Linden Lab Scripted Agent Policy](https://wiki.secondlife.com/wiki/Linden_Lab_Official:Bot_policy), research-agent read 2026-11-01; no demand, lending permission or universal game-world rights inferred. |
+| Research example: 100 minus 40 minus 10 minus 20 equals 30; 20 owner surplus plus 10 retained; 100 setup requires ten periods at 10 retained | Hypothetical arithmetic in the linked research note, not observed prices, revenue, an approved budget or a forecast. Paid oversight and owner surplus are distinct amounts. |
+| Discovery concluded in fall 2026; digital-first exploration | Current operator instruction and existing neutral history wording. The article does not claim that all nonprofit institutions are slow. |
+| Human ownership, payout, sustainability and growth tests | Proposed analytical framework by Codex and research agents. No operating pilot or human outcome is established. |
