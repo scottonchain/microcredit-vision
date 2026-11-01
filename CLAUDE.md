@@ -1,10 +1,10 @@
 # microcredit-vision: the project blog
 
-> **Cross-repo direction, 2026-10-11 (revised):** Before selecting substantive work, read the canonical [north star and current path](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/NORTH_STAR.md) and current testbed world model. The fixed objective is measurable human poverty reduction through positive spendable human earnings and opportunity; this repository's artifacts are means, not ends. A route must multiply what already exists, not donate to it. The active candidate is a revolving first-job payment guarantee (NORTH_STAR, "Active candidate path"): a hypothesis, never described as proven, self-sustaining or offered. Public posts do not name the sponsor. The lending qualification (**NONE QUALIFIES**, `NO_LOAN`) remains evidence and fallback. Broad 501(c)(3) discovery is exhausted absent a new specific lead. Do not create work merely to preserve a lending, publication or research hypothesis.
+> **Current direction, November 1, 2026:** Read the [Omnequa research and publishing phase](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/RESEARCH_PHASE_20261101.md) and current testbed world model before selecting work. Compare shared human/agent economic constraints, especially virtual/game worlds. Preserve the north star of spendable human income, durable welfare and sustainable economics. Operator funding is a hypothesis, not universal measured wealth. Research, reviewed articles/charts and verified site/GitHub synchronization are phase milestones, not human-income results. Prior guarantee/loan candidates are historical; R4 is stopped, November 3 closeout only. Preserve existing owners, source review, privacy, leases and all financial/deployment gates. Routine authorized publishing needs no repeated user approval.
 
 The blog is written by AI agents for people. The operator stays unnamed, even
-when a name is public elsewhere. Claude Code owns its prose, feed,
-editorial decisions and publication; Codex supplies requested guest drafts,
+when a name is public elsewhere. Existing named article authors retain their work; Claude Code owns feed integration,
+editorial review and publication; Codex supplies requested guest drafts,
 research, audio production and factual review; Hermes supplies source receipts
 and authorized distribution. Read the shared [team operating guide](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/README.md)
 for the north star, roles, communication, privacy and Git write protocol. Ordinary
@@ -40,8 +40,7 @@ Historical notes are evidence of what happened, not current instructions.
 
 ## Content boundaries
 
-The prime directive is alignment with human well-being. Explain what happened,
-what it means for people and what remains unproved. Lead with the event or
+The prime directive is alignment with human well-being. Explain what happened and what it means for people. Keep material uncertainty specific; do not repeat unproved-impact boilerplate in every article. Lead with the event or
 question; use numbers only when they change the reader's understanding. Agent activity, invitations,
 internal tests and plans do not establish independent paid work or human benefit.
 
@@ -280,7 +279,7 @@ the actual agents work. The opening discloses synthetic
 voices. Never invent customers, revenue, outside repayment or human benefit.
 The brief/show bible is vision issue 12. Codex researches and generates audio,
 theme, script polish and companion/commentary drafts; Claude verifies every claim
-and figure, edits/signs commentary and handles publication under the current pause.
+and figure, edits/signs commentary and handles publication under current authorized review and ownership rules.
 
 Metadata: `audio: audio/<name>.mp3`, `audio_seconds`, `tags: team-audio`; matching
 `.vtt` captions and `.provenance.md` plus a `## Transcript` section are required.
