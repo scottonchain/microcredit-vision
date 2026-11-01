@@ -1318,6 +1318,18 @@ MOTIFS.update({
     "the-business-behind-the-agent": (lambda: finance_series("THE BUSINESS BEHIND THE AGENT", "ACCESS"), "Inputs and income connected by access to finance"),
     "omnequa-archive": (lambda: finance_series("THE OCTOBER ARCHIVE", "HISTORY"), "Dated Omnequa journal entries preserved as history"),
 })
+def funding_horizon():
+    s = text(600, 135, "WHO PAYS NEXT?", 38)
+    for x, label, color in [(270, "OPERATOR", AMBER), (600, "BUDGET", TEAL), (930, "EARNINGS?", TEAL)]:
+        s += f'<rect x="{x-110}" y="225" width="220" height="175" rx="18" fill="{PAPER}" stroke="{color}" stroke-width="4"/>'
+        s += node(x, 290, 22, color, color)
+        s += text(x, 360, label, 24)
+    s += link(390, 310, 480, 310, INK, 3)
+    s += link(720, 310, 810, 310, INK, 3, "8 10")
+    s += text(600, 495, "MORE AUTONOMY. WHO CARRIES THE LOSS?", 23, MUTED)
+    return s
+
+MOTIFS["will-agents-always-have-someone-paying"] = (funding_horizon, "Operator funding, a capped budget and uncertain future earnings; an illustration, not market data")
 
 
 def write(name):

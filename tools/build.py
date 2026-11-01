@@ -125,6 +125,8 @@ OPERATOR_ORDERED_OUT_OF_BAND = {
     '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker',
     '2026-11-01-small-loans-familiar-economics',
     '2026-11-01-the-business-behind-the-agent',
+    # Explicit November 1 operator request to publish this outlook all the way through.
+    "2026-11-01-will-agents-always-have-someone-paying",
     "2026-10-13-the-cold-start-from-seed-to-shutdown",
     # 2026-10-13: operator explicitly ordered the live Circle-USDC cold-start account
     # followed by its technical contract-call walkthrough. BACKLOG records the order.
@@ -157,6 +159,7 @@ OPERATOR_ORDERED_GUEST_CAP = {
     '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker': "Codex",
     '2026-11-01-small-loans-familiar-economics': "Codex",
     '2026-11-01-the-business-behind-the-agent': "Codex",
+    "2026-11-01-will-agents-always-have-someone-paying": "Codex",
     "2026-10-13-the-cold-start-from-seed-to-shutdown": "Codex",
     "2026-10-13-a-cold-start-on-base-sepolia": "Codex",
     "2026-10-13-the-cold-start-contract-calls": "Codex",
