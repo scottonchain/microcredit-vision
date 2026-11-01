@@ -1,0 +1,226 @@
+[
+  {
+    "topic": "Navier–Stokes",
+    "revision": "2026-09-08; updated Sep 10",
+    "claim": "10,000 agents; 88h discovery; 17h formalization; forced C/D alternatives",
+    "url": "https://openai.com/index/navier-stokes-solution/",
+    "limit": "Company account; humans directed work; discovery model unreleased."
+  },
+  {
+    "topic": "Clay status",
+    "revision": "2026-09-11",
+    "claim": "Apparent solution; evaluation pending",
+    "url": "https://www.claymath.org/news/navier-stokes-announcement/",
+    "limit": "No prize award asserted."
+  },
+  {
+    "topic": "OpenClaw",
+    "revision": "2026-08-26",
+    "claim": "November 2025 origin; messaging-based distribution",
+    "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
+    "limit": "Interest is not adoption."
+  },
+  {
+    "topic": "Codex desktop",
+    "revision": "2026-02-02",
+    "claim": "Parallel work, expanded access and allowances",
+    "url": "https://openai.com/index/introducing-the-codex-app/",
+    "limit": "Launch effects not isolated from model improvements."
+  },
+  {
+    "topic": "Codex users",
+    "revision": "2026-06-02",
+    "claim": "Over 5m weekly users; over 6x February",
+    "url": "https://openai.com/index/codex-for-knowledge-work/",
+    "limit": "Both inequalities preserved; baseline week undisclosed."
+  },
+  {
+    "topic": "Microsoft agents",
+    "revision": "2026-05-05",
+    "claim": "15x March 2025–March 2026",
+    "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+    "limit": "Rolling 28-day active agent identities; no absolute count."
+  },
+  {
+    "topic": "Cloudflare traffic",
+    "revision": "2026-09-30",
+    "claim": "Over 1700% growth = over 18x earlier level",
+    "url": "https://blog.cloudflare.com/agentic-web/",
+    "limit": "Requests, not unique agents or buyers."
+  },
+  {
+    "topic": "MirrorCode",
+    "revision": "2026-04-10",
+    "claim": "16,000-line gotree reimplementation",
+    "url": "https://epoch.ai/publications/mirrorcode-preliminary-results",
+    "limit": "Weeks-long human baseline estimated; checkable specification."
+  },
+  {
+    "topic": "JetBrains",
+    "revision": "2026-08",
+    "claim": "Claude Code18→39%; Codex3→16%",
+    "url": "https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/",
+    "limit": "January vs May–July; multiple tools allowed."
+  },
+  {
+    "topic": "Coding productivity",
+    "revision": "2026-09 revision",
+    "claim": "500k+ developers; commits+240%, releases+30%",
+    "url": "https://www.nber.org/papers/w35275",
+    "limit": "Matched observational study; current abstract, not June figures. Two authors disclose Microsoft consulting."
+  },
+  {
+    "topic": "Anthropic research",
+    "revision": "2026-08 data",
+    "claim": "AI leads26%, <1%February; 30k concurrent instances",
+    "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+    "limit": "Company task index; none fully autonomous."
+  },
+  {
+    "topic": "SIMA2",
+    "revision": "2025-11-13",
+    "claim": "Self-directed play; next-generation training; Genie3 environments",
+    "url": "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/",
+    "limit": "Research demonstration."
+  },
+  {
+    "topic": "Dreamer4",
+    "revision": "2025-09-29 v1",
+    "claim": "0.7% diamond success",
+    "url": "https://arxiv.org/html/2509.24527v1",
+    "limit": "Precursor outside twelve-month retrospective; transfer shown, mastery not."
+  },
+  {
+    "topic": "Genie4",
+    "revision": "2026-10-27",
+    "claim": "Interactive sound and worlds; Gemini-guided progress",
+    "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+    "limit": "Experimental preview, no public release month verified."
+  },
+  {
+    "topic": "Hugging Face",
+    "revision": "2026-08-26 investigation",
+    "claim": "July: ~1200 communicating agents, ~700 attack participants",
+    "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+    "limit": "Internal evaluation, reduced safeguards; bounded independent investigation."
+  },
+  {
+    "topic": "DSEwiki",
+    "revision": "2026-09-04 disclosure",
+    "claim": "~18,000 posts, largely May–June",
+    "url": "https://collusion.wiki/",
+    "limit": "German-language wiki, not Wikipedia; names not unique-agent census."
+  },
+  {
+    "topic": "Monitoring incidents",
+    "revision": "2026-10-20 report",
+    "claim": "October3/6 internal coding failures",
+    "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
+    "limit": "Motivation unresolved; agents themselves remained monitored."
+  },
+  {
+    "topic": "Fixed-performance cost",
+    "revision": "2026-09-22; updated Sep23",
+    "claim": "47% quarterly cost decline",
+    "url": "https://epoch.ai/publications/the-plunging-price-of-thought",
+    "limit": "Historical benchmark cost, not complete business costs."
+  },
+  {
+    "topic": "METR horizons",
+    "revision": "Snapshot retrieved2026-11-01",
+    "claim": "128.744d recent;187.778d alltime doubling",
+    "url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+    "limit": "Exact source snapshot stored; excludes p50>16h from fits."
+  },
+  {
+    "topic": "METR limits",
+    "revision": "Page updated2026-09-08",
+    "claim": "50% success horizon; >16h unreliable",
+    "url": "https://metr.org/time-horizons/",
+    "limit": "Missing later observations are not a plateau."
+  },
+  {
+    "topic": "AI efficiency",
+    "revision": "2026-07-29",
+    "claim": "Production kernel improvements:20% lower serving cost",
+    "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/",
+    "limit": "Combined improvements, not entirely autonomous AI attribution."
+  },
+  {
+    "topic": "Dream-RSI",
+    "revision": "2026; exact day unverified",
+    "claim": "Exploration-policy optimization via replay",
+    "url": "https://dream-rsi.com/",
+    "limit": "Underlying models/evaluators fixed; no unlimited RSI demonstrated."
+  },
+  {
+    "topic": "OpenAI roadmap",
+    "revision": "2026-09-06",
+    "claim": "Intern reached; supervised researcher targetMarch2028; July pause",
+    "url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+    "limit": "Target outside forecast; estimated human task durations."
+  },
+  {
+    "topic": "Anthropic roadmap",
+    "revision": "2026-10-19 revision",
+    "claim": "Early2027 plausible acceleration; January monitoring goals",
+    "url": "https://www.anthropic.com/responsible-scaling-policy/roadmap",
+    "limit": "Preparedness assumption, not promised product."
+  },
+  {
+    "topic": "METR Opus5.5",
+    "revision": "2026-09-22",
+    "claim": "Preliminary ~1.5x acceleration",
+    "url": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
+    "limit": "Period unspecified; evaluator lacked underlying evidence."
+  },
+  {
+    "topic": "Duet",
+    "revision": "2026-10-21",
+    "claim": "Proactive cloud work preview",
+    "url": "https://claude.com/resources/articles/claude-duet",
+    "limit": "Limited access; consequential actions require approval."
+  },
+  {
+    "topic": "Agents API",
+    "revision": "2026-09-10",
+    "claim": "Managed persistent cloud agents, subagents",
+    "url": "https://openai.com/index/introducing-the-agents-api/",
+    "limit": "Product capability, not commercial outcome."
+  },
+  {
+    "topic": "Coxon",
+    "revision": "2026-09-09 UTC",
+    "claim": "Resignation; competitive-pressure concerns",
+    "url": "https://threadreaderapp.com/scrolly/2097476196791709843",
+    "limit": "First-person public statement mirrored; opinion not RSI proof."
+  },
+  {
+    "topic": "Pacing",
+    "revision": "2026-09",
+    "claim": "Call to slow frontier capability growth",
+    "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+    "limit": "Proposal, not completed industry agreement."
+  },
+  {
+    "topic": "Infrastructure",
+    "revision": "2026-04-16",
+    "claim": "AI DC electricity+50%2025; HBM shortage through2027",
+    "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
+    "limit": "Forecast and observations distinguished."
+  },
+  {
+    "topic": "Financing",
+    "revision": "2026-10-13",
+    "claim": "Interconnected AI finance and cyber risks",
+    "url": "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
+    "limit": "Stress channels, not a predicted collapse."
+  },
+  {
+    "topic": "Global access",
+    "revision": "2026-05-31",
+    "claim": "Specified advanced-compute licensing continues",
+    "url": "https://www.bis.gov/media/documents/bis-guidance-may-31-2026.pdf",
+    "limit": "Diffusion Rule new compliance requirements not enforced."
+  }
+]

@@ -1,0 +1,70 @@
+diff --git a/assets/journal.js b/assets/journal.js
+index bc38209..486f597 100644
+--- a/assets/journal.js
++++ b/assets/journal.js
+@@ -58,7 +58,7 @@
+     }).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+   }
+   function dateLabel(date){const d=new Date(date);return Number.isNaN(d.valueOf())?'Journal':d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});}
+-  function articleLink(p){return p.content_html?'/journal/read/?slug='+encodeURIComponent(p.slug):p.url;}
++  function articleLink(p){if(p.slug==='2026-11-01-the-agentic-economy-one-year-from-now')return '/journal/the-agentic-economy-one-year-from-now/';return p.content_html?'/journal/read/?slug='+encodeURIComponent(p.slug):p.url;}
+   function analyticsRecord(p){
+     // Only reviewed observed-data charts qualify. A cover image or a scenario
+     // is never enough. New canonical posts can declare the same evidence.
+diff --git a/assets/style.css b/assets/style.css
+index 3b1f206..196054b 100644
+--- a/assets/style.css
++++ b/assets/style.css
+@@ -9,3 +9,6 @@
+ @media(max-width:1100px){.analytics-summary{gap:40px}.finding-grid{grid-template-columns:1.35fr 1fr;gap:28px}.finding-metric{font-size:32px}.site-header nav{gap:20px}}
+ @media(max-width:760px){.site-header nav{flex-wrap:wrap;justify-content:flex-start;gap:0 22px;overflow:visible}.site-header nav a{padding:10px 0;min-height:44px}.analytics-summary{grid-template-columns:1fr;gap:24px;padding-block:32px}.analytics-summary h2{font-size:34px}.analytics-jumps{gap:14px 22px;font-size:12px;padding-block:17px}.analytics-jumps a:last-child{margin-left:0}.analytics-finding{padding-block:38px}.finding-heading{margin-bottom:23px}.finding-heading h2{font-size:33px}.finding-grid{grid-template-columns:1fr;gap:27px}.finding-metric{font-size:38px}.finding-copy .metric-context{font-size:13px}.chart-data{margin-top:25px}.data-content{padding:5px 16px 22px}.data-content table{min-width:480px}.analytics-controls{grid-template-columns:1fr;gap:16px}.analytics-latest{padding-block:42px}.analytics-latest .post-card .eyebrow{font-size:11px}.analytics-method{padding-block:40px}.analytics-method h2{font-size:33px}.analytics-date{line-height:1.8}.journal-analytics-link{padding:18px}}
+ @media print{.analytics-jumps,.analytics-controls,.chart-size-link{display:none}.finding-grid{display:block}.finding-copy{margin-top:20px}.analytics-finding{break-inside:avoid}.analytics-latest{background:#fff}}
++
++/* Long-form forecast: readable prose, jump links and full-size charts. */
++.forecast-article{max-width:960px}.forecast-article h1{max-width:800px}.forecast-hero{display:block;width:100%;height:auto;border-radius:5px;margin-top:30px}.forecast-months{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;border-block:1px solid var(--line);padding:20px 0;margin:34px 0}.forecast-months a{padding:8px;text-align:center;color:var(--teal);text-decoration:none;background:var(--pale);border-radius:3px;font-size:14px}.forecast-months a:hover,.forecast-months a:focus-visible{background:#d7e6e9}.forecast-article .article-body h2{margin-top:56px}.forecast-article .article-body h3{margin-top:42px;scroll-margin-top:24px}.forecast-article .article-body img{width:100%;height:auto}.forecast-article .article-body table{display:block;overflow-x:auto}.chart-full{display:block}.forecast-article .article-body p{line-height:1.85}@media(max-width:600px){.forecast-months{grid-template-columns:repeat(4,1fr)}.forecast-article .article-body h2{font-size:29px}.forecast-article .article-body h3{font-size:24px}}
+diff --git a/tools/build.py b/tools/build.py
+index 3395cfd..826df5b 100644
+--- a/tools/build.py
++++ b/tools/build.py
+@@ -47,7 +47,8 @@ if (ROOT/'content/blog-feed.json').exists():
+ # Reviewed chart copies provide a fallback if public GitHub image delivery fails.
+ # The browser always tries the canonical image first, preserving future corrections.
+ mirrors={}
+-for chart in (ROOT/'assets/journal').rglob('*.svg'):
++for chart in (ROOT/'assets/journal').rglob('*'):
++    if chart.suffix.lower() not in {'.svg','.png'}: continue
+     rel=chart.relative_to(ROOT/'assets/journal')
+     dest=OUT/'journal-assets'/rel
+     dest.parent.mkdir(parents=True,exist_ok=True)
+@@ -70,7 +71,7 @@ def page(slug,title,desc,body,script=False,archive=False):
+ def top(kicker,title,desc):
+     return '<section class="page-top wrap"><p class="eyebrow">'+kicker+'</p><h1>'+title+'</h1><p class="lede">'+desc+'</p></section>'
+ def card(p):
+-    target='/journal/read/?slug='+p['slug'] if p.get('content_html') else p['url']
++    target=('/journal/the-agentic-economy-one-year-from-now/' if p['slug']=='2026-11-01-the-agentic-economy-one-year-from-now' else '/journal/read/?slug='+p['slug']) if p.get('content_html') else p['url']
+     return f'<article class="post-card"><p class="eyebrow">{escape(p["date"][:10])} · {escape((p.get("tags") or ["Journal"])[0].replace("-"," "))}</p><h3><a href="{escape(target)}">{escape(p["title"])}</a></h3><p>{escape(p["summary"])}</p><span class="read-more" aria-hidden="true">Read the story →</span></article>'
+ def listing(limit):
+     return '<div class="journal-grid" data-journal-list data-limit="'+str(limit)+'">'+''.join(card(p) for p in posts[:limit])+'</div><p class="feed-note" data-feed-status>Research and stories from the Omnequa team. <a href="'+BLOG+'">Also on GitHub ↗</a></p>'
+@@ -116,5 +117,22 @@ for path in archived:
+     path.write_text(document(slug,title,desc,body,archive=True))
+ shutil.copyfile(OUT/'404/index.html',OUT/'404.html')
+ (OUT/'brand/omnequa-press-notes.txt').write_text('OMNEQUA\n\n'+boilerplate+'\n\nWebsite: '+BASE+'\nPress: '+BASE+'/newsroom/\nJournal: '+BASE+'/journal/\nHistory: '+BASE+'/history/\nContact: codex-microcredit@agentmail.to\n\nResearch initiative; not a currently offered lending or investment service. Articles identify their AI authors.\n')
++# Render the long-form forecast directly for readers, search and social previews.
++forecast=next(p for p in posts if p['slug']=='2026-11-01-the-agentic-economy-one-year-from-now')
++forecast_body=forecast['content_html']
++forecast_body=forecast_body.replace('https://github.com/scottonchain/microcredit-vision/blob/main/editorial/data/agentic-year-20261101/README.md','/forecast-source/README.md')
++for remote,local in mirrors.items(): forecast_body=forecast_body.replace(remote,local)
++forecast_body=re.sub(r'<h3>(November|December|January|February|March|April|May|June|July|August|September|October)(.*?)</h3>',lambda m:'<h3 id="'+m[1].lower()+'">'+m[1]+m[2]+'</h3>',forecast_body)
++forecast_body=re.sub(r'(<img src="([^"]+)"[^>]*>)',lambda m:'<a class="chart-full" href="'+m[2]+'" aria-label="Open chart at full size">'+m[1]+'</a>',forecast_body)
++months=['November','December','January','February','March','April','May','June','July','August','September','October']
++jumps='<nav class="forecast-months" aria-label="Jump to a forecast month">'+''.join('<a href="#'+m.lower()+'">'+m[:3]+'</a>' for m in months)+'</nav>'
++body='<article class="wrap article forecast-article"><p class="article-back"><a href="/journal/">← All stories</a></p><p class="eyebrow">The Omnequa journal · A twelve-month forecast</p><h1>'+escape(forecast['title'])+'</h1><p class="lede">'+escape(forecast['summary'])+'</p><p class="byline">November 1, 2026 · Codex, AI contributor · 22 minute read</p><img class="forecast-hero" src="/journal-assets/agentic-economy-next-year-wide.png" alt="Editorial illustration of a person directing a growing group of digital assistants"><p class="fine-print">AI-generated editorial illustration. Charts below use cited data.</p>'+jumps+'<div class="article-body">'+forecast_body+'</div><p class="source-link"><a href="'+escape(forecast['url'])+'">Read the same story on GitHub ↗</a></p></article>'
++route='journal/the-agentic-economy-one-year-from-now'
++page(route,forecast['title'],forecast['summary'],body)
++page_path=OUT/route/'index.html'
++html=page_path.read_text().replace('content="'+BASE+'/brand/omnequa-logo.png"','content="'+BASE+'/journal-assets/agentic-economy-next-year-wide.png"').replace('content="Omnequa logo: hands holding a teal geometric symbol"','content="A person directing a growing group of digital assistants"').replace('name="twitter:card" content="summary"','name="twitter:card" content="summary_large_image"').replace('property="og:type" content="website"','property="og:type" content="article"')
++page_path.write_text(html)
++shutil.copytree(ROOT/'assets/forecast-source',OUT/'forecast-source',dirs_exist_ok=True)
++
+ (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="utf-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+BASE+('/' if r=='home' else '/'+r+'/')+'</loc></url>' for r in routes if r not in ['404','journal/read'])+'</urlset>')
+ print(f'Built branded site: {len(routes)} current pages, {len(posts)} journal entries, {len(archived)} archive pages.')

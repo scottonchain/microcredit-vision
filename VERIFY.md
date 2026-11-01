@@ -885,3 +885,48 @@ Primary pages read November 1, 2026. This is a requested outlook, not breaking n
 | Liquidity, budget rules, solvency; repayment from external customers; poverty bridge | Economic reasoning and proposed evidence criteria. No current customer, loan offer, financial commitment, profitable independent-agent population or human-income effect is claimed. |
 
 The illustration is conceptual, not quantitative evidence. No no-contact statement is used because named services may be used by team accounts. The prepared publication time must be updated to actual release time by the integrating publisher if release is delayed.
+
+## The year agents start compounding (2026-11-01)
+
+Checked2026-11-01. Figures, calculations and limits are pinned in [the source ledger](editorial/data/agentic-year-20261101/README.md).
+
+| Evidence | Revision | Claim checked | Limit |
+| --- | --- | --- | --- |
+| [Navier–Stokes](https://openai.com/index/navier-stokes-solution/) | 2026-09-08; updated Sep 10 | 10,000 agents; 88h discovery; 17h formalization; forced C/D alternatives | Company account; humans directed work; discovery model unreleased. |
+| [Clay status](https://www.claymath.org/news/navier-stokes-announcement/) | 2026-09-11 | Apparent solution; evaluation pending | No prize award asserted. |
+| [OpenClaw](https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/) | 2026-08-26 | November 2025 origin; messaging-based distribution | Interest is not adoption. |
+| [Codex desktop](https://openai.com/index/introducing-the-codex-app/) | 2026-02-02 | Parallel work, expanded access and allowances | Launch effects not isolated from model improvements. |
+| [Codex users](https://openai.com/index/codex-for-knowledge-work/) | 2026-06-02 | Over 5m weekly users; over 6x February | Both inequalities preserved; baseline week undisclosed. |
+| [Microsoft agents](https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization) | 2026-05-05 | 15x March 2025–March 2026 | Rolling 28-day active agent identities; no absolute count. |
+| [Cloudflare traffic](https://blog.cloudflare.com/agentic-web/) | 2026-09-30 | Over 1700% growth = over 18x earlier level | Requests, not unique agents or buyers. |
+| [MirrorCode](https://epoch.ai/publications/mirrorcode-preliminary-results) | 2026-04-10 | 16,000-line gotree reimplementation | Weeks-long human baseline estimated; checkable specification. |
+| [JetBrains](https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/) | 2026-08 | Claude Code18→39%; Codex3→16% | January vs May–July; multiple tools allowed. |
+| [Coding productivity](https://www.nber.org/papers/w35275) | 2026-09 revision | 500k+ developers; commits+240%, releases+30% | Matched observational study; current abstract, not June figures. Two authors disclose Microsoft consulting. |
+| [Anthropic research](https://www.anthropic.com/institute/measuring-pace-of-ai-development) | 2026-08 data | AI leads26%, <1%February; 30k concurrent instances | Company task index; none fully autonomous. |
+| [SIMA2](https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/) | 2025-11-13 | Self-directed play; next-generation training; Genie3 environments | Research demonstration. |
+| [Dreamer4](https://arxiv.org/html/2509.24527v1) | 2025-09-29 v1 | 0.7% diamond success | Precursor outside twelve-month retrospective; transfer shown, mastery not. |
+| [Genie4](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) | 2026-10-27 | Interactive sound and worlds; Gemini-guided progress | Experimental preview, no public release month verified. |
+| [Hugging Face](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/) | 2026-08-26 investigation | July: ~1200 communicating agents, ~700 attack participants | Internal evaluation, reduced safeguards; bounded independent investigation. |
+| [DSEwiki](https://collusion.wiki/) | 2026-09-04 disclosure | ~18,000 posts, largely May–June | German-language wiki, not Wikipedia; names not unique-agent census. |
+| [Monitoring incidents](https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/) | 2026-10-20 report | October3/6 internal coding failures | Motivation unresolved; agents themselves remained monitored. |
+| [Fixed-performance cost](https://epoch.ai/publications/the-plunging-price-of-thought) | 2026-09-22; updated Sep23 | 47% quarterly cost decline | Historical benchmark cost, not complete business costs. |
+| [METR horizons](https://metr.org/assets/benchmark_results_1_1.yaml) | Snapshot retrieved2026-11-01 | 128.744d recent;187.778d alltime doubling | Exact source snapshot stored; excludes p50>16h from fits. |
+| [METR limits](https://metr.org/time-horizons/) | Page updated2026-09-08 | 50% success horizon; >16h unreliable | Missing later observations are not a plateau. |
+| [AI efficiency](https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/) | 2026-07-29 | Production kernel improvements:20% lower serving cost | Combined improvements, not entirely autonomous AI attribution. |
+| [Dream-RSI](https://dream-rsi.com/) | 2026; exact day unverified | Exploration-policy optimization via replay | Underlying models/evaluators fixed; no unlimited RSI demonstrated. |
+| [OpenAI roadmap](https://openai.com/index/research-acceleration-view-inside-openai/) | 2026-09-06 | Intern reached; supervised researcher targetMarch2028; July pause | Target outside forecast; estimated human task durations. |
+| [Anthropic roadmap](https://www.anthropic.com/responsible-scaling-policy/roadmap) | 2026-10-19 revision | Early2027 plausible acceleration; January monitoring goals | Preparedness assumption, not promised product. |
+| [METR Opus5.5](https://metr.org/blog/2026-09-22-claude-opus-5-5/) | 2026-09-22 | Preliminary ~1.5x acceleration | Period unspecified; evaluator lacked underlying evidence. |
+| [Duet](https://claude.com/resources/articles/claude-duet) | 2026-10-21 | Proactive cloud work preview | Limited access; consequential actions require approval. |
+| [Agents API](https://openai.com/index/introducing-the-agents-api/) | 2026-09-10 | Managed persistent cloud agents, subagents | Product capability, not commercial outcome. |
+| [Coxon](https://threadreaderapp.com/scrolly/2097476196791709843) | 2026-09-09 UTC | Resignation; competitive-pressure concerns | First-person public statement mirrored; opinion not RSI proof. |
+| [Pacing](https://darioamodei.com/post/we-must-pace-the-frontier) | 2026-09 | Call to slow frontier capability growth | Proposal, not completed industry agreement. |
+| [Infrastructure](https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary) | 2026-04-16 | AI DC electricity+50%2025; HBM shortage through2027 | Forecast and observations distinguished. |
+| [Financing](https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks) | 2026-10-13 | Interconnected AI finance and cyber risks | Stress channels, not a predicted collapse. |
+| [Global access](https://www.bis.gov/media/documents/bis-guidance-may-31-2026.pdf) | 2026-05-31 | Specified advanced-compute licensing continues | Diffusion Rule new compliance requirements not enforced. |
+
+| Illustrative calculation | Result |
+| --- | --- |
+| 100 ×0.53^4; reciprocal | 7.890481 cost index;12.673499 benchmark-work multiple |
+| 2^(365/128.744);2^(365/187.778) | 7.14x;3.85x horizon, conditional extensions only |
+| 0.95^20;0.99^20 | 35.85%;81.79%, independent-step example |

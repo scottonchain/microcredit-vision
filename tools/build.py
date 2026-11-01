@@ -122,6 +122,8 @@ RECORDED_BREACHES = {
 OPERATOR_ORDERED_OUT_OF_BAND = {
     # Direct November 1 request to explore and publish the human-owned enterprise proposal.
     "2026-11-01-businesses-people-can-own",
+    # Explicit long-form forecast and autonomous cross-publication order, Nov1.
+    "2026-11-01-the-agentic-economy-one-year-from-now",
     # 2026-11-01: explicit operator order to publish the four-post series everywhere.
     '2026-11-01-who-pays-when-an-agent-works',
     '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker',
@@ -157,6 +159,7 @@ OPERATOR_ORDERED_OUT_OF_BAND = {
 # it still consumes the slot for following guests. See editorial/BACKLOG.md.
 OPERATOR_ORDERED_GUEST_CAP = {
     "2026-11-01-businesses-people-can-own": "Codex",
+    "2026-11-01-the-agentic-economy-one-year-from-now": "Codex",
     # Same bounded four-post order; subsequent guests retain the rolling cap.
     '2026-11-01-who-pays-when-an-agent-works': "Codex",
     '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker': "Codex",
