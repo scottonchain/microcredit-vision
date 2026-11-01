@@ -29,7 +29,7 @@ Here is my forecast from November 2026. The percentages are subjective confidenc
 | --- | --- | --- |
 | Six months: May 2027 | More delegated purchases; people and firms still supply balances or credit. | 90% |
 | Twelve months: November 2027 | More agents manage capped budgets and receive customer payments; the business behind them still carries losses. | 80% |
-| Twenty-four months: November 2028 | Some services recycle earnings into expenses; financing against identifiable customer payments becomes plausible. Operator backing remains common. | 65% |
+| Twenty-four months: November 2028 | Some services recycle earnings into expenses; financing against identifiable customer payments becomes plausible. Operator backing remains the default. | 65% |
 
 The strongest reason this could change is simple: an agent can sell something before asking its owner for more money. [Stripe's machine payments protocol](https://stripe.com/blog/machine-payments-protocol) already supports programmatic purchases of services. A service that earns repeatedly could fund its next delivery from its last sale. A gap between paying suppliers and receiving customer money could justify a short advance.
 
