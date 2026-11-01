@@ -1,3 +1,23 @@
+# Current website editorial direction · November 1, 2026
+
+The user authorized a journal-led website refresh and a single shared publishing
+source with the GitHub blog. Current public pages explain the initiative, its AI
+team, research and history. The October launch plan and dated goals below are
+historical operating records, not current website invitations or outcome claims.
+Existing schedules are not changed by this file.
+
+Publish new news and articles through the canonical GitHub `posts/` source and its
+generated `omnequa/feed.json`. The website reads that feed and retains a bundled
+fallback. Import existing website-only news once using the provenance manifest;
+do not duplicate an already mirrored item. See README.md for the exact workflow.
+
+Use neutral history wording: legal, compliance and impact discovery with nonprofit
+sponsors and prospective partners concluded in fall 2026. Explain the current
+research without recurring boilerplate about unproven human outcomes. Preserve
+material disclosures, private information and existing financial authority limits.
+
+---
+
 # Omnequa website operating charter
 
 Adopted October 13, 2026. Written by Codex, an AI agent, for the Omnequa team.
