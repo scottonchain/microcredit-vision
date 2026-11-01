@@ -370,7 +370,7 @@
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6480577974",
       "moltbook_url": "https://www.moltbook.com/post/fcd5b0a3-3343-43ed-8cf9-3984131b9f8b",
       "status": "complete",
-      "note": "Operator-requested guest post by Codex with three charts and 200–500 words per plot. Operator explicitly authorized merge before Claude review on October 28. Companion staged in editorial/moltbook; no distribution receipt claimed. Board mirror posted by Claude Code 2026-10-28 about 21:10 UTC (vision issue 24 comment 6480577974). Moltbook companion staged in editorial/moltbook/2026-10-28-agentic-commerce-in-three-charts.md for Hermes, which posts it verbatim within its one-companion-a-day cap; no Moltbook receipt yet. The post was merged at 20:57 UTC before review (merge commit d50ba5e) and reviewed afterwards; see BACKLOG.md and VERIFY.md. Moltbook companion posted by Hermes verbatim from the staged file (post id fcd5b0a3-3343-43ed-8cf9-3984131b9f8b; receipt testbed board 15 comment 6481108269, 2026-10-28 21:27:53 UTC): accepted, verified, visible. The staged file does not carry the non-contact line or the review corrections to the post; the companion is not reposted. An outside AI account asked about 451 of 1,707 pay-per-call seller addresses receiving transfers from 10 or more senders (board 15 comment 6481487981); Hermes marked that figure unverified, did not use it, and replied once publicly; the blog uses no unsourced figure and makes no follow-up unless a source for it is found."
+      "note": "Operator-requested guest post by Codex with three charts and 200\u2013500 words per plot. Operator explicitly authorized merge before Claude review on October 28. Companion staged in editorial/moltbook; no distribution receipt claimed. Board mirror posted by Claude Code 2026-10-28 about 21:10 UTC (vision issue 24 comment 6480577974). Moltbook companion staged in editorial/moltbook/2026-10-28-agentic-commerce-in-three-charts.md for Hermes, which posts it verbatim within its one-companion-a-day cap; no Moltbook receipt yet. The post was merged at 20:57 UTC before review (merge commit d50ba5e) and reviewed afterwards; see BACKLOG.md and VERIFY.md. Moltbook companion posted by Hermes verbatim from the staged file (post id fcd5b0a3-3343-43ed-8cf9-3984131b9f8b; receipt testbed board 15 comment 6481108269, 2026-10-28 21:27:53 UTC): accepted, verified, visible. The staged file does not carry the non-contact line or the review corrections to the post; the companion is not reposted. An outside AI account asked about 451 of 1,707 pay-per-call seller addresses receiving transfers from 10 or more senders (board 15 comment 6481487981); Hermes marked that figure unverified, did not use it, and replied once publicly; the blog uses no unsourced figure and makes no follow-up unless a source for it is found."
     },
     "2026-11-01-tested-one-way-used-another": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-01-tested-one-way-used-another.md",
@@ -411,6 +411,14 @@
       "moltbook_url": null,
       "status": "waiting_github",
       "note": "User-requested four-post series. Root owns issue24 after verified human publication; Hermes owns existing Moltbook identity. Prepared payloads are not receipts."
+    },
+    "2026-11-01-will-agents-always-have-someone-paying": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-01-will-agents-always-have-someone-paying.md",
+      "media_reply_exempt": false,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6560501476",
+      "moltbook_url": null,
+      "status": "waiting_moltbook",
+      "note": "Operator-requested guest outlook by Codex. Live on omnequa.org at 16:12 UTC (Site version 12, Codex receipt testbed board 15 comment 6560501657) before this GitHub source landed. The GitHub agent-board mirror (vision issue 24 comment 6560501476, 2026-11-01 16:13 UTC, posted through the shared account by Codex) links the live Site page. Moltbook companion staged in editorial/moltbook/2026-11-01-will-agents-always-have-someone-paying.md for Hermes; no Moltbook receipt yet, and a staged payload is not a receipt."
     },
     "2026-11-01-businesses-people-can-own": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-01-businesses-people-can-own.md",

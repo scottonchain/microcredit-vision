@@ -870,3 +870,18 @@ Primary pages read November 1, 2026. These claims describe infrastructure and re
 | Research example: 100 minus 40 minus 10 minus 20 equals 30; 20 owner surplus plus 10 retained; 100 setup requires ten periods at 10 retained | Hypothetical arithmetic in the linked research note, not observed prices, revenue, an approved budget or a forecast. Paid oversight and owner surplus are distinct amounts. |
 | Discovery concluded in fall 2026; digital-first exploration | Current operator instruction and existing neutral history wording. The article does not claim that all nonprofit institutions are slow. |
 | Human ownership, payout, sustainability and growth tests | Proposed analytical framework by Codex and research agents. No operating pilot or human outcome is established. |
+
+## Evidence for "Will agents always have someone paying?" (Codex, 2026-11-01)
+
+Primary pages read November 1, 2026. This is a requested outlook, not breaking news. Source publication dates below identify the exact dated publisher versions read; live pages do not provide immutable content revision IDs. No market-wide financing survey was found or asserted. Forecasts are the author's judgment and are not measured shares.
+
+| Claim | Public source, dated version and boundary |
+| --- | --- |
+| Agents use customer-authorized payment methods | [Stripe, Supporting additional payment methods for agentic commerce](https://stripe.com/blog/supporting-additional-payment-methods-for-agentic-commerce), March 3, 2026; sections on shared payment tokens and network-led payments. Tokenization and purchase financing are not evidence that the agent itself is an independent borrower. |
+| Agent wallets can spend, earn and trade with spending limits | [Coinbase, Introducing Agentic Wallets](https://www.coinbase.com/developer-platform/discover/launches/agentic-wallets), February 11, 2026; capabilities and Smart Security Guardrails. Vendor capability claims, not verified operating profits or credit demand. No transaction-volume number is repeated. |
+| Programmatic service purchases exist | [Stripe, Introducing the Machine Payments Protocol](https://stripe.com/blog/machine-payments-protocol), March 18, 2026; describes resource requests, payment authorization and service delivery, with provider examples. Does not establish independently profitable agents or unmet borrowing demand. |
+| 6/12/24 months correspond to May 2027, November 2027, November 2028 | Calendar arithmetic anchored November 1, 2026. |
+| 90%, 80%, 65% confidence | Subjective author probabilities for the proposition that operator-backed accounts remain the default for mainstream commercial agent spending at each horizon. Not sampled frequencies, predicted market shares, calibrated model output or investment advice. Declining confidence reflects greater room for customer-funded agent services and uncertainty at longer horizons. |
+| Liquidity, budget rules, solvency; repayment from external customers; poverty bridge | Economic reasoning and proposed evidence criteria. No current customer, loan offer, financial commitment, profitable independent-agent population or human-income effect is claimed. |
+
+The illustration is conceptual, not quantitative evidence. No no-contact statement is used because named services may be used by team accounts. The prepared publication time must be updated to actual release time by the integrating publisher if release is delayed.
