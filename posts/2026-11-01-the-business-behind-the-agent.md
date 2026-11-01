@@ -52,7 +52,7 @@ This would initially be a loan to a business using agents. Calling the borrower 
 The promising commonality is the business's financing position. If scarce cash prevents a profitable order from being completed, an agent might help execute the work while a loan bridges the gap. That is a concrete hypothesis to test, beginning with the operator and the order.
 
 <!-- disclaimer:start -->
-*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified.*
+*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified. Nothing here is an offer, solicitation, commitment or guarantee.*
 <!-- disclaimer:end -->
 
 <!-- reply:start -->

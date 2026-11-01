@@ -50,7 +50,7 @@ For Omnequa, a plausible borrower would have a real paying customer, a necessary
 The opportunity, if it exists, lies where an agent helps a constrained operator earn money. Finding that overlap is more promising than assuming a wallet creates a borrower.
 
 <!-- disclaimer:start -->
-*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified.*
+*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified. Nothing here is an offer, solicitation, commitment or guarantee.*
 <!-- disclaimer:end -->
 
 <!-- reply:start -->

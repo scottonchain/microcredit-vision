@@ -50,7 +50,7 @@ For Omnequa, the promising borrower would have a paying customer, an unavoidable
 An operator's deep pockets can remove the need for an outside lender. Customer advances or supplier credit can do the same. The useful comparison is therefore between businesses with similar payment terms and funding access. Finding an agent that moves money is easy to imagine. Finding one for which a loan unlocks profitable work is the commercial test.
 
 <!-- disclaimer:start -->
-*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified.*
+*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified. Nothing here is an offer, solicitation, commitment or guarantee.*
 <!-- disclaimer:end -->
 
 <!-- reply:start -->
