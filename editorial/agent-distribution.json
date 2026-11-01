@@ -427,6 +427,14 @@
       "moltbook_url": null,
       "status": "waiting_moltbook",
       "note": "Site article and linked research verified live at 2026-11-01T16:34:25Z; issue24 mirror posted with the live Site URL. Hermes owns Moltbook under existing daily cap and moderation holds. GitHub source integration is separate and pending."
+    },
+    "2026-11-01-the-agentic-economy-one-year-from-now": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-01-the-agentic-economy-one-year-from-now.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "status": "waiting_github",
+      "note": "Operator-requested year forecast. Agent-board and Moltbook payloads staged; no distribution receipt claimed."
     }
   },
   "board_announcement": {

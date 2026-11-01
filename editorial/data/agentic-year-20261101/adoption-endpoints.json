@@ -1,0 +1,235 @@
+{
+  "title": "Agent adoption: separate endpoint panels",
+  "as_of": "2026-11-01",
+  "prepared_for": "Omnequa agentic-economy research",
+  "chart_rules": [
+    "These four panels measure different populations and units. Never combine them into a global agent count.",
+    "Use categorical interval labels or endpoint dots. Do not invent monthly observations or fit an exponential through the endpoints.",
+    "If joining endpoints, use a thin dotted connector explicitly labelled as a visual guide, not an observed path.",
+    "Preserve inequalities. OpenAI reported more than sixfold growth and more than five million weekly users; exact values are undisclosed.",
+    "Company telemetry is self-reported. JetBrains is a tool vendor surveying other vendors' users; it is not a disinterested census.",
+    "Use November 2026 through October 2027 for the forecast, separate from all historical observations here."
+  ],
+  "panels": [
+    {
+      "id": "microsoft_active_agents",
+      "title": "Active agents inside Microsoft 365",
+      "source_url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+      "source_publication_date": "2026-05-05",
+      "evidence_type": "Vendor telemetry",
+      "unit": "Index, March 2025 = 1",
+      "population": "Microsoft 365 Copilot Agents platform and SharePoint agents; all countries and customer segments",
+      "method": "Unique agent identities active during a rolling 28-day window. Activity requires user-initiated use on at least one day or completion of at least one autonomous run. Creation surfaces: Agent Builder and Microsoft 365 Agents Toolkit.",
+      "caveats": [
+        "Absolute counts undisclosed",
+        "Includes user-invoked assistants and autonomous runs",
+        "Not people, full-time workers, transactions or revenue"
+      ],
+      "observations": [
+        {
+          "period_start": "2025-03",
+          "period_end": "2025-03",
+          "date_precision": "month",
+          "label": "March 2025",
+          "value": 1,
+          "relation": "=",
+          "status": "normalized baseline"
+        },
+        {
+          "period_start": "2026-03",
+          "period_end": "2026-03",
+          "date_precision": "month",
+          "label": "March 2026",
+          "value": 15,
+          "relation": "=",
+          "status": "reported endpoint multiple"
+        }
+      ],
+      "supplementary_metric": {
+        "population": "Large enterprises",
+        "endpoint_multiple": 18,
+        "relation": "="
+      }
+    },
+    {
+      "id": "codex_global_wau",
+      "title": "People using Codex each week",
+      "source_url": "https://openai.com/index/codex-for-knowledge-work/",
+      "source_publication_date": "2026-06-02",
+      "evidence_type": "Vendor telemetry",
+      "unit": "Index, February desktop-app launch = 1",
+      "population": "Codex weekly active users",
+      "method": "OpenAI reports weekly active users but does not disclose the precise qualifying event, week boundaries or baseline count in this article.",
+      "caveats": [
+        "The February baseline is tied to the desktop launch, not a disclosed precise observation week",
+        "Do not calculate an exact baseline by dividing 5 million by six; both are inequalities",
+        "One user can run multiple agents and tasks"
+      ],
+      "observations": [
+        {
+          "period_start": "2026-02",
+          "period_end": "2026-02",
+          "date_precision": "month",
+          "label": "February launch",
+          "value": 1,
+          "relation": "=",
+          "status": "normalized baseline"
+        },
+        {
+          "period_start": null,
+          "period_end": "2026-06-02",
+          "date_precision": "reported as of publication",
+          "label": "By June 2",
+          "value": 6,
+          "relation": ">",
+          "status": "reported lower bound"
+        }
+      ],
+      "absolute_endpoint": {
+        "value": 5000000,
+        "relation": ">",
+        "unit": "weekly active users"
+      },
+      "distribution_event": {
+        "date": "2026-02-02",
+        "description": "Desktop app launched on macOS; temporary Free/Go access and higher paid-plan limits accompanied the launch.",
+        "source_url": "https://openai.com/index/introducing-the-codex-app/"
+      }
+    },
+    {
+      "id": "jetbrains_at_work",
+      "title": "Developers using coding agents at work",
+      "source_url": "https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/",
+      "source_publication_date": "2026-08",
+      "evidence_type": "Developer survey by another developer-tools vendor",
+      "unit": "Percent of professional developers",
+      "population": "Professional developers in JetBrains' Developer Ecosystem research",
+      "method": "The May-July 2026 survey contains more than 15,000 professional developers worldwide. Regional quotas and weighting account for geography, employment, language and JetBrains familiarity. These are survey waves, not a longitudinal panel.",
+      "caveats": [
+        "Respondents can use multiple tools, so series are not mutually exclusive market shares",
+        "Survey estimates, not audited user totals",
+        "Show the May-July interval rather than an invented single date"
+      ],
+      "series": [
+        {
+          "name": "Claude Code",
+          "observations": [
+            {
+              "period_start": "2026-01",
+              "period_end": "2026-01",
+              "date_precision": "month",
+              "label": "January 2026",
+              "value": 18,
+              "relation": "="
+            },
+            {
+              "period_start": "2026-05",
+              "period_end": "2026-07",
+              "date_precision": "three-month fieldwork interval",
+              "label": "May-July 2026",
+              "value": 39,
+              "relation": "approximately"
+            }
+          ]
+        },
+        {
+          "name": "Codex",
+          "observations": [
+            {
+              "period_start": "2026-01",
+              "period_end": "2026-01",
+              "date_precision": "month",
+              "label": "January 2026",
+              "value": 3,
+              "relation": "="
+            },
+            {
+              "period_start": "2026-05",
+              "period_end": "2026-07",
+              "date_precision": "three-month fieldwork interval",
+              "label": "May-July 2026",
+              "value": 16,
+              "relation": "="
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openai_eu_smb_wau",
+      "title": "EU small-business users of Codex or ChatGPT Work",
+      "source_url": "https://agenticeu.openai.chatgpt.site/",
+      "source_publication_date": "2026-10",
+      "evidence_type": "Vendor telemetry",
+      "unit": "Index, May 1-7, 2026 = 1",
+      "population": "EU business accounts with at most 200 associated users",
+      "method": "Weekly active users of either ChatGPT Work or Codex, relative to the May 1-7 baseline. This source's SMB definition is account size, not the standard employee-based legal definition.",
+      "caveats": [
+        "Absolute users undisclosed",
+        "The product set expands when ChatGPT Work launches in July",
+        "Growth reflects availability and distribution as well as changing behavior",
+        "Not all European small businesses"
+      ],
+      "observations": [
+        {
+          "period_start": "2026-05-01",
+          "period_end": "2026-05-07",
+          "date_precision": "week",
+          "label": "May 1-7",
+          "value": 1,
+          "relation": "=",
+          "status": "normalized baseline"
+        },
+        {
+          "period_start": "2026-09-29",
+          "period_end": "2026-10-05",
+          "date_precision": "week",
+          "label": "Sept 29-Oct 5",
+          "value": 8.1,
+          "relation": "=",
+          "status": "reported endpoint multiple"
+        }
+      ],
+      "distribution_event": {
+        "date": "2026-07-09",
+        "description": "ChatGPT Work launched across paid-plan audiences in stages. The EU report attributes much of the growth to its introduction.",
+        "source_url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+      }
+    }
+  ],
+  "additional_cross_checks": [
+    {
+      "source_url": "https://blog.cloudflare.com/agentic-web/",
+      "source_publication_date": "2026-09-30",
+      "metric": "Daily AI-agent requests on Cloudflare's network",
+      "period": "preceding year",
+      "growth_percent_lower_bound": 1700,
+      "endpoint_multiple_lower_bound": 18,
+      "caveat": "Requests, not unique agents, human principals or purchases; network coverage and agent classification matter."
+    },
+    {
+      "source_url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
+      "source_publication_date": "2026-08-27",
+      "metric": "OpenClaw GitHub interest as of August 26",
+      "stars": 388000,
+      "forks": 81000,
+      "caveat": "Approximate repository popularity, not deployed installations. Began as a personal weekend project in November 2025."
+    }
+  ],
+  "cost_evidence": {
+    "source_url": "https://epoch.ai/publications/the-plunging-price-of-thought",
+    "source_publication_date": "2026-09-22",
+    "source_updated_date": "2026-09-23",
+    "metric": "Cost to achieve fixed benchmark performance, including reasoning-token consumption",
+    "period": "since 2023",
+    "average_quarterly_decline_percent": 47,
+    "approximate_annual_cost_reduction_multiple": 13,
+    "method": "Five benchmark families spanning mathematics, science and games; estimates compare price-performance frontiers.",
+    "caveats": [
+      "Benchmark costs are not full business-workflow costs",
+      "The cheapest capable model is not necessarily the customer's chosen model",
+      "A historical average is not a promised forward decline",
+      "Review, integration, errors, latency, tools and acquisition can dominate total costs"
+    ]
+  }
+}
