@@ -724,6 +724,29 @@ def checker_checked():
     return s
 
 
+def tested_vs_used():
+    """A short, tidy test beside a long run of turns whose later part is dashed: behaviour in a check is not behaviour at work."""
+    s = ""
+    s += f'<rect x="170" y="190" width="300" height="260" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    for y in (240, 275, 310):
+        s += f'<line x1="210" y1="{y}" x2="430" y2="{y}" stroke="{LINE}" stroke-width="5" stroke-linecap="round"/>\n'
+    s += f'<path d="M 270 385 l 28 30 l 58 -62" fill="none" stroke="{TEAL}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>\n'
+    s += text(320, 160, "a test", 26, TEAL, sans=True)
+    for i in range(20):
+        x = 560 + (i % 10) * 54
+        y = 250 + (i // 10) * 76
+        if i < 3:
+            s += f'<rect x="{x}" y="{y}" width="40" height="52" rx="7" fill="{TEAL_SOFT}" stroke="{INK}" stroke-width="2.5"/>\n'
+        elif i < 10:
+            s += f'<rect x="{x}" y="{y}" width="40" height="52" rx="7" fill="{PAPER}" stroke="{INK}" stroke-width="2.5"/>\n'
+        else:
+            s += f'<rect x="{x}" y="{y}" width="40" height="52" rx="7" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="2.5" stroke-dasharray="6 5"/>\n'
+    s += text(830, 160, "real work, many turns", 26, INK, sans=True)
+    s += text(830, 440, "what happens late?", 24, MUTED, sans=True)
+    s += text(600, 580, "tested one way, used another", 28, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1221,6 +1244,7 @@ MOTIFS = {
     "a-number-both-sides-called-unacceptable": (layers_not_wall, "One cracked wall beside five thin layers, the last one dashed, asking how anyone would know the layers hold"),
     "inevitable-and-nobody-asked": (door_unasked, "A closed arched door marked inevitable above a row of small people, asking who was asked"),
     "who-checks-the-checker": (checker_checked, "A stack of papers under a teal lens with a second dashed lens over it, asking who checks the AI audit"),
+    "tested-one-way-used-another": (tested_vs_used, "A short tidy test with a tick beside a long run of conversation turns whose later part is dashed, asking what happens late"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
     "why-blockchain-works-for-agents": (replay_blocked, "One signed request sent twice: the first is paid, the second stopped by a used counter"),

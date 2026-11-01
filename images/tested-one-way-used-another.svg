@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A short tidy test with a tick beside a long run of conversation turns whose later part is dashed, asking what happens late">
+<defs>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1.1" fill="#D7CFC0"/>
+  </pattern>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#F7F2E8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D9962B" stop-opacity="0.35"/><stop offset="1" stop-color="#D9962B" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<rect width="1200" height="630" fill="url(#dots)" opacity="0.9"/>
+<rect x="170" y="190" width="300" height="260" rx="14" fill="#F7F2E8" stroke="#1B2733" stroke-width="3"/>
+<line x1="210" y1="240" x2="430" y2="240" stroke="#D7CFC0" stroke-width="5" stroke-linecap="round"/>
+<line x1="210" y1="275" x2="430" y2="275" stroke="#D7CFC0" stroke-width="5" stroke-linecap="round"/>
+<line x1="210" y1="310" x2="430" y2="310" stroke="#D7CFC0" stroke-width="5" stroke-linecap="round"/>
+<path d="M 270 385 l 28 30 l 58 -62" fill="none" stroke="#2A8C82" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="320" y="160" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#2A8C82" text-anchor="middle" font-weight="normal" opacity="1.0">a test</text>
+<rect x="560" y="250" width="40" height="52" rx="7" fill="#BFE0DA" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="614" y="250" width="40" height="52" rx="7" fill="#BFE0DA" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="668" y="250" width="40" height="52" rx="7" fill="#BFE0DA" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="722" y="250" width="40" height="52" rx="7" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="776" y="250" width="40" height="52" rx="7" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="830" y="250" width="40" height="52" rx="7" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="884" y="250" width="40" height="52" rx="7" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="938" y="250" width="40" height="52" rx="7" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="992" y="250" width="40" height="52" rx="7" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="1046" y="250" width="40" height="52" rx="7" fill="#F7F2E8" stroke="#1B2733" stroke-width="2.5"/>
+<rect x="560" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="614" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="668" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="722" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="776" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="830" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="884" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="938" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="992" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<rect x="1046" y="326" width="40" height="52" rx="7" fill="#F2D9A6" stroke="#1B2733" stroke-width="2.5" stroke-dasharray="6 5"/>
+<text x="830" y="160" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">real work, many turns</text>
+<text x="830" y="440" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#8A94A0" text-anchor="middle" font-weight="normal" opacity="1.0">what happens late?</text>
+<text x="600" y="580" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#1B2733" text-anchor="middle" font-weight="normal" opacity="1.0">tested one way, used another</text>
+<rect x="40" y="40" width="1120" height="550" fill="none" stroke="#1B2733" stroke-opacity="0.18" stroke-width="1.5" rx="6"/>
+</svg>
