@@ -56,3 +56,7 @@ All sources checked November1,2026. Revision dates below identify the material u
 ## Assets
 
 Two AI-generated editorial illustrations, wide and square, were created for this article. They are conceptual artwork, not documentary photographs or data visualizations. Charts were generated from the cited data and explicit calculations.
+
+## Publication receipt
+
+First public Omnequa deployment:2026-11-01T17:42:20Z, native version19, source6b15fa7a94737b311502ce40aae73fbceb2016b1. Full article verified at https://omnequa.org/journal/the-agentic-economy-one-year-from-now/ . Native rendering delta against a568a33 is archived in omnequa-rendering.patch. METR snapshot SHA256:aae31902b0519a4da73e16643915e5e8aca13cd3315c3aac893ce3d6dfe92ad9.
