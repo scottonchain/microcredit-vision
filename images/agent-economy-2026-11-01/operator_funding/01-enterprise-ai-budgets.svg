@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="453.6pt" viewBox="0 0 864 453.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T15:57:51.001411</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 453.6 
+L 864 453.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f8f3e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 112.32 353.808 
+L 812.16 353.808 
+L 812.16 117.936 
+L 112.32 117.936 
+z
+" style="fill: #f8f3e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #617578" x="209.772468" y="367.945812" transform="rotate(-0 209.772468 367.945812)">2023</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #617578" x="462.24" y="367.945812" transform="rotate(-0 462.24 367.945812)">2024</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #617578" x="714.707532" y="367.945812" transform="rotate(-0 714.707532 367.945812)">2025</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 112.32 353.808 
+L 812.16 353.808 
+" clip-path="url(#p92e2843c22)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5"/>
+     <g id="text_4">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="359.126906" transform="rotate(-0 108.82 359.126906)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 112.32 297.648 
+L 812.16 297.648 
+" clip-path="url(#p92e2843c22)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_5">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="302.966906" transform="rotate(-0 108.82 302.966906)">10</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 112.32 241.488 
+L 812.16 241.488 
+" clip-path="url(#p92e2843c22)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_6">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="246.806906" transform="rotate(-0 108.82 246.806906)">20</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 112.32 185.328 
+L 812.16 185.328 
+" clip-path="url(#p92e2843c22)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_7">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="190.646906" transform="rotate(-0 108.82 190.646906)">30</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path d="M 112.32 129.168 
+L 812.16 129.168 
+" clip-path="url(#p92e2843c22)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="134.486906" transform="rotate(-0 108.82 134.486906)">40</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173b3f" x="84.093438" y="235.872" transform="rotate(-90 84.093438 235.872)">US$ billions</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 144.130909 353.808 
+L 275.414026 353.808 
+L 275.414026 344.2608 
+L 144.130909 344.2608 
+z
+" clip-path="url(#p92e2843c22)" style="fill: #d39d39"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 396.598442 353.808 
+L 527.881558 353.808 
+L 527.881558 289.224 
+L 396.598442 289.224 
+z
+" clip-path="url(#p92e2843c22)" style="fill: #197c80"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 649.065974 353.808 
+L 780.349091 353.808 
+L 780.349091 146.016 
+L 649.065974 146.016 
+z
+" clip-path="url(#p92e2843c22)" style="fill: #173b3f"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173b3f" x="209.772468" y="338.6448" transform="rotate(-0 209.772468 338.6448)">$1.7B</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173b3f" x="462.24" y="283.608" transform="rotate(-0 462.24 283.608)">$11.5B</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173b3f" x="714.707532" y="140.4" transform="rotate(-0 714.707532 140.4)">$37B</text>
+   </g>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #197c80" x="51.84" y="27.216" transform="rotate(-0 51.84 27.216)">OMNEQUA  /  THE AGENT ECONOMY</text>
+  </g>
+  <g id="text_14">
+   <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="51.84" y="63.504" transform="rotate(-0 51.84 63.504)">AI has buyers with budgets</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #617578" x="51.84" y="90.72" transform="rotate(-0 51.84 90.72)">Estimated enterprise generative AI spending, US$ billions</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #617578" x="51.84" y="401.436" transform="rotate(-0 51.84 401.436)">Source: Menlo Ventures, 2025 State of Generative AI in the Enterprise.</text>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #617578" x="51.84" y="421.848" transform="rotate(-0 51.84 421.848)">Restated series; excludes chips, inference/model serving and AI bundled into existing software. Estimates, not agent balances.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p92e2843c22">
+   <rect x="112.32" y="117.936" width="699.84" height="235.872"/>
+  </clipPath>
+ </defs>
+</svg>

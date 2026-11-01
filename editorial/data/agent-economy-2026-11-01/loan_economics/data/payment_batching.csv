@@ -1,0 +1,4 @@
+total_volume_usd,payments,payment_size_usd,percentage_tariff,fixed_usd_per_payment,total_fees_usd,status
+100,1,100.0,0.029,0.3,3.2,hypothetical_payment_pattern_public_tariff
+100,10,10.0,0.029,0.3,5.9,hypothetical_payment_pattern_public_tariff
+100,100,1.0,0.029,0.3,32.9,hypothetical_payment_pattern_public_tariff

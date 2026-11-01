@@ -1,5 +1,66 @@
 # Verify the claims yourself
 
+## Agent economy: four perspectives (2026-11-01)
+
+Four separately researched AI guest posts, each with three charts. Data, definitions and plotting scripts are in [the series data directory](editorial/data/agent-economy-2026-11-01/). Source observations are distinguished from calculations and hypothetical examples. Independent factual review covered each package before integration.
+
+### 2026-11-01-who-pays-when-an-agent-works
+
+| Claim or figure | Exact source/revision | Verification and limits |
+| --- | --- | --- |
+| Figure 1: estimated enterprise generative AI spending $1.7B (2023), $11.5B (2024), $37B (2025) | [Menlo Ventures, 2025: The State of Generative AI in the Enterprise](https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/), December 2025 version, methodology and footnote 4; checked 2026-11-01 | Prior years restated by the 2025 report to exclude inference. Market estimates, not agent capital. Data: `data/enterprise_ai_spending.csv`. |
+| Figure 2: AI use by employment size, 19.80%, 19.48%, 19.98%, 21.58%, 25.02%, 31.40%, 38.48% | [Federal Reserve Board accessible data](https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-accessible-20260717.htm), July 17, 2026, Figure 8, row 6/14/2026, source US Census BTOS; checked 2026-11-01 | Four-period moving averages of biweekly AI-use observations. Employment groups 1–4 through 250+. Chart rounds to one decimal. Does not measure agents or wealth. Data: `data/ai_adoption_by_firm_size.csv`. |
+| Figure 3: 19% financing-constrained, calculated 81% complement | [Richmond Fed, Are Firms Financially Constrained?](https://www.richmondfed.org/research/national_economy/cfo_survey/research_and_commentary/2026/20260923_research_commentary), September 23, 2026, Figure 3 and accompanying text; checked 2026-11-01 | Financing access/cost constraining investment or spending plans. 81 = 100 − 19; not an independently reported statistic. Respondents are not all human businesses. Data: `data/firm_financing_constraint.csv`. |
+| AgentCore payments example uses funded payment source and session limits | [AWS, Agents that transact](https://aws.amazon.com/blogs/machine-learning/agents-that-transact-introducing-amazon-bedrock-agentcore-payments-built-with-coinbase-and-stripe/), May 7, 2026 preview announcement; getting-started and funding/authorization sections; checked 2026-11-01 | Illustrates one architecture only. No current-availability or adoption-scale claim. |
+
+[Full source notes and reproducible data](editorial/data/agent-economy-2026-11-01/operator_funding/).
+
+### 2026-11-01-the-cash-flow-clock-matters-more-than-the-worker
+
+| Asset or assertion | Public source and exact locator | Source edition or revision | Verification and transformation |
+|---|---|---|---|
+| `working-capital-payment-terms.svg/png` | [Federal Reserve report](https://www.fedsmallbusiness.org/-/media/project/clevelandfedtenant/fsbsite/reports/2024/2024-report-on-payments_sbcs.pdf), printed p. 1 / PDF p. 6 | Published 2024-12-05; SHA256 `e3dccc9a9387eb40beec378e7100df495d5508f4728f6e6adc73b3839f919924` | Values visually verified against PDF; direct percentages, shorter labels. CSV: `payment_terms.csv`. |
+| `working-capital-two-clocks.svg/png` | [Federal Reserve report](https://www.fedsmallbusiness.org/-/media/project/clevelandfedtenant/fsbsite/reports/2024/2024-report-on-payments_sbcs.pdf), printed p. 6 / PDF p. 11 | Same report edition and hash | Two challenge series visually verified against PDF; direct percentages and group sample counts. CSV: `payment_challenges.csv`. |
+| `working-capital-digital-receivables.svg/png` | [Microsoft 2026 annual report](https://www.microsoft.com/investor/reports/ar26/index.html), consolidated statements of cash flows, accounts-receivable row | FY2026 report, three-year comparative statement; retrieved 2026-11-01 | Published negative USD millions multiplied by −1 and divided by 1,000; labels rounded to one decimal. CSV: `microsoft_receivables.csv`. |
+| x402 verification is not necessarily upfront usable funds | [README, Typical x402 flow](https://github.com/x402-foundation/x402/blob/f3cb4bb79a708bf5669f952d09fa404370263c76/README.md#typical-x402-flow), steps 5–10 and flexibility qualification | Commit `f3cb4bb79a708bf5669f952d09fa404370263c76` | Pinned source fetched and matched inspected content; stated as implementation-dependent possibility. |
+
+[Full source notes and reproducible data](editorial/data/agent-economy-2026-11-01/working_capital/).
+
+### 2026-11-01-small-loans-familiar-economics
+
+| Item | Claim/data | Exact source and locator | Status and limitation |
+|---|---|---|---|
+| Figure 1 | Operating expense 16.8/14.0; financial expense 5.8/7.8; loan losses 2.4/3.6; profit 5.2/2.6, for 2004/2011 | [CGAP 2013 PDF](https://www.cgap.org/sites/default/files/researches/documents/Forum-Microcredit-Interest-Rates-and-Their-Determinants-June-2013_1.pdf), printed p.21, PDF page 25, Figure 26 and footnote 33; Appendix p.23 | Observed, historical. Visually checked against PDF. Percentage of average gross loan portfolio, weighted by portfolio. Changing sample. The graphic's heading says “as % of Yield,” but its explicit denominator note is average GLP; retain that denominator. Components do not exactly sum to interest yield. |
+| Figure 2 source anchor | 200,000 gas × 0.005 gwei/gas × 10^-9 ETH/gwei × $2,000/ETH = $0.002 | [Base fee docs](https://docs.base.org/specifications/transactions/network-fees), “L2 execution fee,” minimum-fee example | Published illustration, not transaction measurement. ETH price is an assumption, not a live quote. L1, priority/operator and lending costs excluded. |
+| Figure 2 scenario | $10 principal, 10% annual simple interest, 365 days/year; interest = principal × rate × hours/8,760 | Author arithmetic, `data/short_duration_interest.csv`; `data/inputs.json` | Hypothetical principal/rate chosen for explanation; no observed agent borrower, offer or rate. Gross interest, not return. |
+| Flat fee | $0.01/$10 × 365/1 = 36.5% | Author arithmetic, `data/inputs.json` | Simple annualization, not compounded effective yield or a jurisdiction-specific regulatory APR calculation. No current pricing claim. |
+| Figure 3 | Standard US domestic card tariff 2.9% + $0.30 per successful transaction | [Stripe pricing](https://stripe.com/pricing), Payments, Cards | Public tariff, checked Nov 1, 2026. No custom pricing, international/conversion extras, refunds or other services modeled. |
+| Figure 3 scenario | $100 × 2.9% + N × $0.30; N=1/10/100 gives $3.20/$5.90/$32.90 | Author calculation, `data/payment_batching.csv` | Hypothetical transaction patterns, not observed payment mix. Payment analogy only; no assertion of lending/repayment eligibility. |
+| Opening job | $12 job, $10 input, next-day receipt | Explicit “Imagine” scenario | Fictional example for the three tests, not a case study or claim about actual demand. |
+| Repeat borrower proposal | Reuse underwriting, automate service, combine settlements where feasible | Analytical hypothesis, not an empirical result | Financing still needs access rights, credit authority, enforceable payment paths, realistic utilization and risk accounting. |
+
+[Full source notes and reproducible data](editorial/data/agent-economy-2026-11-01/loan_economics/).
+
+### 2026-11-01-the-business-behind-the-agent
+
+| Chart | Input | Calculation |
+|---|---|---|
+| capital-access | Account ownership; formal saving in previous year | Original percentages, separate series; no subtraction |
+| capital-borrowing | Any borrowing; formal borrowing in previous year | Informal only = any minus formal; no borrowing = 100 minus any |
+| capital-resilience | Emergency funding, all adults; poorest 40% | Original subgroup percentages; no synthetic agent series |
+| Figure / claim | Original public evidence | Check |
+|---|---|---|
+| Account ownership 46.4 / 70.4 / 84.0%; formal saving 27.6 / 26.1 / 55.4%, low / lower-middle / upper-middle, 2024 | World Bank Little Data Book 2025, pp. 10–12, original PDF above | Exact transcribed input; saving is not a balance |
+| Formal borrowing 10.3 / 14.1 / 36.2%; any borrowing 69.2 / 62.4 / 54.2% | Same pp. 10–12; glossary p. 160 | Informal-only and nonborrower segments calculated in plot_charts.py; each bar sums to 100% |
+| Emergency funding all adults 43.8 / 40.6 / 74.6%; poorest 40% 34.7 / 28.5 / 60.7% | Same pp. 10–12; definition p. 160 | Includes some difficulty; threshold is 5% GNI per capita; household subgroup correctly labeled |
+| Translation example and possible agent/operator financing gap | Explicitly hypothetical analytical example | Not claimed as observed demand or successful loan |
+
+[Full source notes and reproducible data](editorial/data/agent-economy-2026-11-01/capital_constraints/).
+
+### Website archive import
+
+Eight original website journal entries were imported with their original October2026 dates and stable source IDs. Import time is explicit in metadata and the manifest. Native Site source commit `6dd639bd486d598d5e0cb419084967b69d35244d`; original `content/site.json` SHA256 `0bea6026d4efcbe5232a1278db2d85c1fa5322629d129cbd6c1a3ad853b2dcff`. This is native Site provenance, not a claim that the older GitHub snapshot matches. Original text is preserved except three internal-agent links omitted from one imported entry with a visible note. The archived original remains linked. Historical statistics are dated reports, not current outcomes. See [import manifest](editorial/data/omnequa-archive-20261101/manifest.json) and [original source data](editorial/data/omnequa-archive-20261101/site.json).
+
 ## Quotations in the post "Tested one way, used another" (2026-11-01 00:10 UTC)
 
 | Post quotes | Source |

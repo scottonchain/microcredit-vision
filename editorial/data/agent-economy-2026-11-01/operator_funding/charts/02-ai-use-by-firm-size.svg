@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="453.6pt" viewBox="0 0 864 453.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T15:57:51.108546</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 453.6 
+L 864 453.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f8f3e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 112.32 353.808 
+L 812.16 353.808 
+L 812.16 117.936 
+L 112.32 117.936 
+z
+" style="fill: #f8f3e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 112.32 353.808 
+L 112.32 117.936 
+" clip-path="url(#p422eed7125)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #617578" x="112.32" y="367.945812" transform="rotate(-0 112.32 367.945812)">0.0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 264.45913 353.808 
+L 264.45913 117.936 
+" clip-path="url(#p422eed7125)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #617578" x="264.45913" y="367.945812" transform="rotate(-0 264.45913 367.945812)">10.0%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 416.598261 353.808 
+L 416.598261 117.936 
+" clip-path="url(#p422eed7125)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #617578" x="416.598261" y="367.945812" transform="rotate(-0 416.598261 367.945812)">20.0%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 568.737391 353.808 
+L 568.737391 117.936 
+" clip-path="url(#p422eed7125)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #617578" x="568.737391" y="367.945812" transform="rotate(-0 568.737391 367.945812)">30.0%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 720.876522 353.808 
+L 720.876522 117.936 
+" clip-path="url(#p422eed7125)" style="fill: none; stroke: #173b3f; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #617578" x="720.876522" y="367.945812" transform="rotate(-0 720.876522 367.945812)">40.0%</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_6">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="144.017602" transform="rotate(-0 108.82 144.017602)">1–4</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="176.408704" transform="rotate(-0 108.82 176.408704)">5–9</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="208.799805" transform="rotate(-0 108.82 208.799805)">10–19</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="241.190906" transform="rotate(-0 108.82 241.190906)">20–49</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="273.582008" transform="rotate(-0 108.82 273.582008)">50–99</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="305.973109" transform="rotate(-0 108.82 305.973109)">100–249</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173b3f" x="108.82" y="338.36421" transform="rotate(-0 108.82 338.36421)">250+</text>
+     </g>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173b3f" x="41.463437" y="235.872" transform="rotate(-90 41.463437 235.872)">Employees</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 112.32 128.657455 
+L 413.555478 128.657455 
+L 413.555478 148.739937 
+L 112.32 148.739937 
+z
+" clip-path="url(#p422eed7125)" style="fill: #197c80"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 112.32 161.048556 
+L 408.687026 161.048556 
+L 408.687026 181.131039 
+L 112.32 181.131039 
+z
+" clip-path="url(#p422eed7125)" style="fill: #197c80"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 112.32 193.439657 
+L 416.293983 193.439657 
+L 416.293983 213.52214 
+L 112.32 213.52214 
+z
+" clip-path="url(#p422eed7125)" style="fill: #197c80"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 112.32 225.830759 
+L 440.636243 225.830759 
+L 440.636243 245.913241 
+L 112.32 245.913241 
+z
+" clip-path="url(#p422eed7125)" style="fill: #197c80"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 112.32 258.22186 
+L 492.972104 258.22186 
+L 492.972104 278.304343 
+L 112.32 278.304343 
+z
+" clip-path="url(#p422eed7125)" style="fill: #197c80"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 112.32 290.612961 
+L 590.03687 290.612961 
+L 590.03687 310.695444 
+L 112.32 310.695444 
+z
+" clip-path="url(#p422eed7125)" style="fill: #197c80"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 112.32 323.004063 
+L 697.751374 323.004063 
+L 697.751374 343.086545 
+L 112.32 343.086545 
+z
+" clip-path="url(#p422eed7125)" style="fill: #d39d39"/>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="425.726609" y="142.285883" transform="rotate(-0 425.726609 142.285883)">19.8%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="420.858157" y="174.676985" transform="rotate(-0 420.858157 174.676985)">19.5%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="428.465113" y="207.068086" transform="rotate(-0 428.465113 207.068086)">20.0%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="452.807374" y="239.459187" transform="rotate(-0 452.807374 239.459187)">21.6%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="505.143235" y="271.850289" transform="rotate(-0 505.143235 271.850289)">25.0%</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="602.208" y="304.24139" transform="rotate(-0 602.208 304.24139)">31.4%</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="709.922504" y="336.632492" transform="rotate(-0 709.922504 336.632492)">38.5%</text>
+   </g>
+  </g>
+  <g id="text_21">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #197c80" x="51.84" y="27.216" transform="rotate(-0 51.84 27.216)">OMNEQUA  /  THE AGENT ECONOMY</text>
+  </g>
+  <g id="text_22">
+   <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173b3f" x="51.84" y="63.504" transform="rotate(-0 51.84 63.504)">AI users are not all large companies</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #617578" x="51.84" y="90.72" transform="rotate(-0 51.84 90.72)">Businesses reporting AI use, by employment size · four-period average to June 14, 2026</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #617578" x="51.84" y="401.436" transform="rotate(-0 51.84 401.436)">Source: U.S. Census BTOS, reproduced in Federal Reserve Board accessible data, Figure 8 (July 17, 2026).</text>
+  </g>
+  <g id="text_25">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #617578" x="51.84" y="421.848" transform="rotate(-0 51.84 421.848)">Each observation concerns a business, not an agent. AI use does not measure operator wealth or credit access.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p422eed7125">
+   <rect x="112.32" y="117.936" width="699.84" height="235.872"/>
+  </clipPath>
+ </defs>
+</svg>

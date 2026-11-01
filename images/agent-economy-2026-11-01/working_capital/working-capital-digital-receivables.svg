@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="504pt" viewBox="0 0 864 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T15:47:37.445212</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 864 504 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f7f3e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 103.68 408.24 
+L 812.16 408.24 
+L 812.16 126 
+L 103.68 126 
+z
+" style="fill: #f7f3e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="205.34246" y="421.617969" transform="rotate(-0 205.34246 421.617969)">2024</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="457.92" y="421.617969" transform="rotate(-0 457.92 421.617969)">2025</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="710.49754" y="421.617969" transform="rotate(-0 710.49754 421.617969)">2026</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 103.68 408.24 
+L 812.16 408.24 
+" clip-path="url(#pae22d98a2b)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5"/>
+     <g id="text_4">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="100.18" y="413.178984" transform="rotate(-0 100.18 413.178984)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 103.68 314.16 
+L 812.16 314.16 
+" clip-path="url(#pae22d98a2b)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_5">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="100.18" y="319.098984" transform="rotate(-0 100.18 319.098984)">5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 103.68 220.08 
+L 812.16 220.08 
+" clip-path="url(#pae22d98a2b)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_6">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="100.18" y="225.018984" transform="rotate(-0 100.18 225.018984)">10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 103.68 126 
+L 812.16 126 
+" clip-path="url(#pae22d98a2b)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_7">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="100.18" y="130.938984" transform="rotate(-0 100.18 130.938984)">15</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="77.141875" y="267.12" transform="rotate(-90 77.141875 267.12)">US$ billions</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 135.883636 408.24 
+L 274.801283 408.24 
+L 274.801283 272.934144 
+L 135.883636 272.934144 
+z
+" clip-path="url(#pae22d98a2b)" style="fill: #167f7e"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 388.461176 408.24 
+L 527.378824 408.24 
+L 527.378824 209.147904 
+L 388.461176 209.147904 
+z
+" clip-path="url(#pae22d98a2b)" style="fill: #167f7e"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 641.038717 408.24 
+L 779.956364 408.24 
+L 779.956364 168.580608 
+L 641.038717 168.580608 
+z
+" clip-path="url(#pae22d98a2b)" style="fill: #b87925"/>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="205.34246" y="266.348544" transform="rotate(-0 205.34246 266.348544)">$7.2bn</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="457.92" y="202.562304" transform="rotate(-0 457.92 202.562304)">$10.6bn</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="710.49754" y="161.995008" transform="rotate(-0 710.49754 161.995008)">$12.7bn</text>
+   </g>
+  </g>
+  <g id="text_12">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #167f7e" x="56.16" y="40.32" transform="rotate(-0 56.16 40.32)">OMNEQUA  /  THE CASH-FLOW CLOCK</text>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="56.16" y="73.08" transform="rotate(-0 56.16 73.08)">Digital business still has receivables</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="56.16" y="103.32" transform="rotate(-0 56.16 103.32)">Microsoft: cash-flow deduction for accounts receivable, shown as cash absorbed</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #536968" transform="translate(56.16 457.762656)">Source: Microsoft 2026 Annual Report, consolidated statements of cash flows. Fiscal years end June 30.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #536968" transform="translate(56.16 471.24)">Calculated display: reported negative USD millions × −1 ÷ 1,000. Not total financing need, borrowing demand or an agent sample.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pae22d98a2b">
+   <rect x="103.68" y="126" width="708.48" height="282.24"/>
+  </clipPath>
+ </defs>
+</svg>

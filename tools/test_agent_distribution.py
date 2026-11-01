@@ -2,7 +2,7 @@ import json
 import unittest
 from pathlib import Path
 
-from check_agent_distribution import HUMAN_PREFIX, REGISTRY, check, load_posts
+from check_agent_distribution import HUMAN_PREFIX, REGISTRY, ARCHIVE_SOURCE_IDS, check, load_posts
 
 BOARD = "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-"
 MOLT = "https://www.moltbook.com/post/"
@@ -89,6 +89,17 @@ class AgentDistributionTest(unittest.TestCase):
         self.assertEqual(pending, ["board_announcement: Moltbook receipt pending (waiting_moltbook)"])
         reg["board_announcement"] = {"moltbook_url": MOLT + "y", "status": "complete"}
         self.assertEqual(check(reg, {}), ([], []))
+
+    def test_exact_archive_migration_does_not_reannounce_old_invitation(self):
+        slug, source_id = next(iter(ARCHIVE_SOURCE_IDS.items()))
+        reg = registry()
+        reg["archive_imports"] = {slug: source_id}
+        text = post("2026-10-13 20:00 UTC", "direction", "source_id: " + source_id + "\n")
+        self.assertEqual(check(reg, {slug: text}), ([], []))
+        errors, _ = check(reg, {slug: text.replace(source_id, "unknown-source")})
+        self.assertIn(slug + ": missing agent-distribution entry", errors)
+        errors, _ = check(reg, {"new-essay": text})
+        self.assertIn("new-essay: missing agent-distribution entry", errors)
 
     def test_repository_registry_is_valid(self):
         errors, _ = check(json.loads(Path(REGISTRY).read_text(encoding="utf-8")), load_posts())

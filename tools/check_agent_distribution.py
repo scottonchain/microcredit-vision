@@ -28,6 +28,8 @@ MEDIA_TAGS = {"podcasts", "current-events"}
 STATUSES = {"waiting_github", "waiting_moltbook", "watching", "complete", "exempt"}
 BOARD_PREFIX = "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-"
 MOLTBOOK_PREFIX = "https://www.moltbook.com/post/"
+ARCHIVE_SOURCE_IDS = {'2026-10-13-omnequa-a-new-chapter-for-omnequa': 'https://omnequa.solarghost3.chatgpt.site/journal/a-new-chapter-for-omnequa/', '2026-10-13-omnequa-a-clearer-path-for-employer-inquiries': 'https://omnequa.solarghost3.chatgpt.site/journal/a-clearer-path-for-employer-inquiries/', '2026-10-14-omnequa-the-domain-is-live-now-the-opportunity-test': 'https://omnequa.org/journal/the-domain-is-live-now-the-opportunity-test/', '2026-10-15-omnequa-what-makes-an-inquiry-payout-ready': 'https://omnequa.org/journal/what-makes-an-inquiry-payout-ready/', '2026-10-15-omnequa-one-outside-question-a-clearer-conversion-test': 'https://omnequa.org/journal/one-outside-question-a-clearer-conversion-test/', '2026-10-15-omnequa-a-real-application-route-with-the-gaps-visible': 'https://omnequa.org/journal/a-real-application-route-with-the-gaps-visible/', '2026-10-16-omnequa-two-application-routes-and-a-clearer-evidence-boundary': 'https://omnequa.org/journal/two-application-routes-and-a-clearer-evidence-boundary/', '2026-10-16-omnequa-making-official-money-access-instructions-easier': 'income-access-launch-20261016T200724Z'}
+
 HUMAN_PREFIX = "https://github.com/scottonchain/microcredit-vision/blob/main/posts/"
 
 
@@ -65,7 +67,10 @@ def check(registry: dict, posts: dict[str, str]) -> tuple[list[str], list[str]]:
         if "date" not in meta:
             errors.append(f"{slug}: missing metadata date")
             continue
-        if parse_utc(meta["date"]) >= effective:
+        archive_id = ARCHIVE_SOURCE_IDS.get(slug)
+        is_archive = (archive_id is not None and meta.get("source_id") == archive_id
+                      and registry.get("archive_imports", {}).get(slug) == archive_id)
+        if parse_utc(meta["date"]) >= effective and not is_archive:
             required.add(slug)
 
     seen: dict[str, str] = {}

@@ -1,0 +1,55 @@
+{
+  "checked_on": "2026-11-01",
+  "article": "Who pays when an agent works?",
+  "sources": [
+    {
+      "id": "menlo-2025",
+      "publisher": "Menlo Ventures",
+      "title": "2025: The State of Generative AI in the Enterprise",
+      "publication_period": "December 2025",
+      "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+      "locators": ["Opening market-size discussion", "Methodology", "Footnote 4"],
+      "values": {"2023_usd_billions": 1.7, "2024_usd_billions": 11.5, "2025_usd_billions": 37.0},
+      "definition": "Estimated enterprise generative AI spending. The 2025 report restates 2023 and 2024 to exclude inference. Scope excludes chips, inference/model serving, and AI features bundled into existing software.",
+      "method": "Market sizing combines public data, a bottom-up market model and a November 7–25, 2025 survey of 495 US enterprise AI decision-makers at companies already using AI. Private-company revenue estimates are uncertain.",
+      "use": "Chart 1; evidence of enterprise purchasing budgets, not agent wealth or operator funding prevalence.",
+      "dataset": "data/enterprise_ai_spending.csv"
+    },
+    {
+      "id": "fed-census-20260717",
+      "publisher": "Federal Reserve Board; underlying data from US Census Bureau BTOS",
+      "title": "The AI Buildout and the Economy: Publicly Available Data to Assess AI’s Impact (Accessible Data)",
+      "published": "2026-07-17",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-accessible-20260717.htm",
+      "locator": "Figure 8: AI Adoption Rates by Firm Size; row dated 6/14/2026",
+      "values_percent": {"1–4": 19.8, "5–9": 19.48, "10–19": 19.98, "20–49": 21.58, "50–99": 25.02, "100–249": 31.4, "250+": 38.48},
+      "definition": "Four-period moving average of biweekly data on businesses reporting AI use in the last two weeks, by employment size. This is not a raw single-period observation.",
+      "use": "Chart 2; AI use exists among small businesses. Neither AI use nor employment size measures agent operation, owner wealth or credit access.",
+      "dataset": "data/ai_adoption_by_firm_size.csv"
+    },
+    {
+      "id": "richmond-cfo-20260923",
+      "publisher": "Federal Reserve Bank of Richmond",
+      "authors": ["Zach Edwards", "Daniel Weitz"],
+      "title": "Are Firms Financially Constrained?",
+      "published": "2026-09-23",
+      "url": "https://www.richmondfed.org/research/national_economy/cfo_survey/research_and_commentary/2026/20260923_research_commentary",
+      "locator": "Figure 3 and accompanying text",
+      "values_percent": {"constrained_published": 19, "not_constrained_calculated": 81},
+      "definition": "Share of respondents reporting that access to financing or its cost constrained investment or spending plans.",
+      "calculation": "Not constrained = 100 minus the rounded published constrained share of 19 = 81. The 81 figure is not independently transcribed.",
+      "use": "Chart 3; financing constraints are not universal among surveyed human businesses. Not a population estimate for all businesses, distressed economies or agent operators.",
+      "dataset": "data/firm_financing_constraint.csv"
+    },
+    {
+      "id": "aws-agentcore-20260507",
+      "publisher": "Amazon Web Services",
+      "author": "Preethi C N",
+      "title": "Agents that transact: Introducing Amazon Bedrock AgentCore payments, built with Coinbase and Stripe",
+      "published": "2026-05-07",
+      "url": "https://aws.amazon.com/blogs/machine-learning/agents-that-transact-introducing-amazon-bedrock-agentcore-payments-built-with-coinbase-and-stripe/",
+      "locators": ["Getting started with AgentCore payments", "Developers register a funded payment source and set session limits", "End-users fund wallets and explicitly authorize access"],
+      "use": "Qualitative example of a funded-delegate payment architecture. Preview announcement; not evidence of adoption scale or universal operator wealth. Article does not claim current product availability."
+    }
+  ]
+}

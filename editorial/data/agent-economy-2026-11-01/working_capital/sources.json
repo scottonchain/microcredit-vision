@@ -1,0 +1,47 @@
+{
+  "prepared_by": "Codex",
+  "retrieved_utc_date": "2026-11-01",
+  "sources": [
+    {
+      "id": "fed-payments-2024",
+      "title": "2024 Report on Payments: Findings from the 2023 Small Business Credit Survey",
+      "publisher": "Federal Reserve Banks",
+      "publication_date": "2024-12-05",
+      "observation_period": "September-November 2023",
+      "landing_url": "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments",
+      "url": "https://www.fedsmallbusiness.org/-/media/project/clevelandfedtenant/fsbsite/reports/2024/2024-report-on-payments_sbcs.pdf",
+      "doi": "https://doi.org/10.55350/sbcs-20241205",
+      "pdf_sha256": "e3dccc9a9387eb40beec378e7100df495d5508f4728f6e6adc73b3839f919924",
+      "license": "Source report identifies CC BY-NC 4.0; charts here redraw factual numeric data with attribution, not source artwork.",
+      "chart_1": {"data_file": "payment_terms.csv", "page_printed": 1, "pdf_page_one_based": 6, "unit": "Percent of employer firms", "n": 4853, "transform": "None; shorter display labels only", "verification": "Visually checked original PDF figure"},
+      "chart_2": {"data_file": "payment_challenges.csv", "page_printed": 6, "pdf_page_one_based": 11, "unit": "Percent of employer firms within each payment arrangement", "transform": "Selected two published challenge series; shorter labels only", "verification": "Visually checked original PDF figure"},
+      "limitations": ["Weighted convenience sample", "Descriptive, not causal", "Payment arrangements reflect main revenue source", "Challenges allow multiple responses", "Not an agent population"]
+    },
+    {
+      "id": "microsoft-ar26",
+      "title": "Microsoft 2026 Annual Report",
+      "publisher": "Microsoft",
+      "report_letter_date": "2026-10-14",
+      "url": "https://www.microsoft.com/investor/reports/ar26/index.html",
+      "section": "Consolidated statements of cash flows; changes in operating assets and liabilities; Accounts receivable",
+      "data_file": "microsoft_receivables.csv",
+      "observation_period": "Fiscal years ended June 30, 2024, 2025, 2026",
+      "source_unit": "USD millions",
+      "transform": "cash_absorbed_usd_billions = -1 * receivables_cash_flow_adjustment_usd_millions / 1000",
+      "display_rounding": "One decimal place",
+      "limitations": ["Consolidated company data, not an agent population", "Cash-flow adjustment, not total receivables", "No borrowing-demand inference", "Includes more than software and cloud services"]
+    },
+    {
+      "id": "x402-readme",
+      "title": "x402 README: Typical x402 flow",
+      "publisher": "x402 Foundation repository",
+      "url": "https://github.com/x402-foundation/x402/blob/f3cb4bb79a708bf5669f952d09fa404370263c76/README.md#typical-x402-flow",
+      "commit_sha": "f3cb4bb79a708bf5669f952d09fa404370263c76",
+      "commit_timestamp": "2026-11-01T06:04:27Z",
+      "file_modified_timestamp_returned": "2026-10-28T15:24:01Z",
+      "section": "Typical x402 flow, steps 5-10 and preceding flexibility statement",
+      "verification": "Fetched pinned README and confirmed identical to inspected main-branch content",
+      "limitations": ["Typical sequence, not a mandatory order for all implementations", "Verification does not equal settled usable funds", "No measured latency or fee claim"]
+    }
+  ]
+}

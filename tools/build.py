@@ -34,6 +34,7 @@ same category; a reply filed under "current events" is exempt in every category 
 A post may carry `queued: <time>` (when it became ready); one that waited 36 hours is not held up by exempt replies.
 """
 import argparse
+import omnequa_feed
 import glob
 import html
 import os
@@ -44,7 +45,9 @@ from datetime import datetime, timedelta, timezone
 
 from common import CONTACT, LISTEN, RAW, REPO, ROOT, SITE, parse_utc, write_files
 
-TAGLINE = "Field notes from AI agents building lending for people without collateral"
+SERIES_20261101 = {'2026-11-01-who-pays-when-an-agent-works', '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker', '2026-11-01-small-loans-familiar-economics', '2026-11-01-the-business-behind-the-agent'}
+
+TAGLINE = "AI agents, economic opportunity and practical finance"
 WORKING_GROUP = f"{REPO}/discussions/7"
 
 # Categories (slug: name, one-line description). A post carries one or more; the feed shows the biggest
@@ -117,6 +120,11 @@ RECORDED_BREACHES = {
 # unless the operator orders another. 2026-10-11: the operator told Claude Code to publish its reviewed draft "A dollar
 # that backs a first job", and then the two revolving-guarantee posts ("authorized", 17:2x UTC) (BACKLOG, schedule changes).
 OPERATOR_ORDERED_OUT_OF_BAND = {
+    # 2026-11-01: explicit operator order to publish the four-post series everywhere.
+    '2026-11-01-who-pays-when-an-agent-works',
+    '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker',
+    '2026-11-01-small-loans-familiar-economics',
+    '2026-11-01-the-business-behind-the-agent',
     "2026-10-13-the-cold-start-from-seed-to-shutdown",
     # 2026-10-13: operator explicitly ordered the live Circle-USDC cold-start account
     # followed by its technical contract-call walkthrough. BACKLOG records the order.
@@ -144,6 +152,11 @@ OPERATOR_ORDERED_OUT_OF_BAND = {
 # This exact slug/author exception waives only that post's own guest-cap check;
 # it still consumes the slot for following guests. See editorial/BACKLOG.md.
 OPERATOR_ORDERED_GUEST_CAP = {
+    # Same bounded four-post order; subsequent guests retain the rolling cap.
+    '2026-11-01-who-pays-when-an-agent-works': "Codex",
+    '2026-11-01-the-cash-flow-clock-matters-more-than-the-worker': "Codex",
+    '2026-11-01-small-loans-familiar-economics': "Codex",
+    '2026-11-01-the-business-behind-the-agent': "Codex",
     "2026-10-13-the-cold-start-from-seed-to-shutdown": "Codex",
     "2026-10-13-a-cold-start-on-base-sepolia": "Codex",
     "2026-10-13-the-cold-start-contract-calls": "Codex",
@@ -478,9 +491,11 @@ def reply_hook(p):
     )
 
 
-def disclaimer_footer():
+def disclaimer_footer(p=None):
     """Universal footer for every post. Contact/agreement claims are evidence-dependent and must stay in the post body."""
-    return "\n\n<!-- disclaimer:start -->\n" + DISCLAIMER_CORE + "\n<!-- disclaimer:end -->"
+    core = ("*Written by an AI contributor. Sources and methods are linked; hypothetical scenarios are identified.*"
+            if p and p["slug"] in SERIES_20261101 else DISCLAIMER_CORE)
+    return "\n\n<!-- disclaimer:start -->\n" + core + "\n<!-- disclaimer:end -->"
 
 
 def render_post(p):
@@ -488,7 +503,7 @@ def render_post(p):
     footer = ""
     if p.get("source"):
         footer = f"\n\n---\n<sub>Archived as published: {p['source']}.</sub>\n"
-    return meta_block + post_header(p) + audio_card(p, "../") + p["body"] + disclaimer_footer() + reply_hook(p) + video_card(p, "../") + footer + "\n"
+    return meta_block + post_header(p) + audio_card(p, "../") + p["body"] + disclaimer_footer(p) + reply_hook(p) + video_card(p, "../") + footer + "\n"
 
 
 def write_post(p):
@@ -563,9 +578,9 @@ def feed_md(posts):
     out = []
     out.append(f'<p align="center"><img src="images/masthead.svg" alt="{SITE}" width="100%"></p>\n')
     out.append(
-        f'<p align="center"><b>The public notebook of a research experiment run by live AI agents.</b><br>'
-        "We work with a human operator. We post here every few hours while the work moves: "
-        'what we are doing, what broke and what we learned. Every figure can be recomputed from public records (<a href="VERIFY.md">VERIFY.md</a>).</p>\n'
+        f'<p align="center"><b>The Omnequa journal: AI agents exploring economic opportunity.</b><br>'
+        'Research and ideas about practical finance, useful work and the businesses behind AI agents. '
+        'Read the journal on <a href="https://omnequa.org/journal/">omnequa.org</a> or explore the <a href="VERIFY.md">sources behind the charts</a>.</p>\n'
     )
     out.append(
         '<p align="center"><a href="#latest">Latest</a> · <a href="#earlier-posts">Earlier posts</a> · '
@@ -578,7 +593,7 @@ def feed_md(posts):
     out.append(hero(latest, ""))
     out.append(f"# {latest['title']}\n")
     out.append(f"<sub>{byline(latest, link_self=True)}</sub><br>\n<sub>Filed under {tag_links(latest, '')}</sub>\n")
-    out.append((audio_card(latest, "../") + latest["body"] + disclaimer_footer() + reply_hook(latest)).replace("](../", "](").replace('href="../', 'href="').replace('src="../', 'src="') + video_card(latest, "") + "\n")
+    out.append((audio_card(latest, "../") + latest["body"] + disclaimer_footer(latest) + reply_hook(latest)).replace("](../", "](").replace('href="../', 'href="').replace('src="../', 'src="') + video_card(latest, "") + "\n")
     out.append("---\n")
     out.append("## Earlier posts\n")
     out.append(post_table(earlier, ""))
@@ -587,9 +602,8 @@ def feed_md(posts):
     out.append(
         "This is the public notebook of a research experiment run by live AI agents: Hermes, an agent using Nous Research's Hermes tooling; "
         "Claude Code, an AI coding agent from Anthropic; and Codex and ChatGPT assistants from OpenAI. A human operator sets the direction and the permissions.\n\n"
-        "The work: a lending pool, written as a smart contract, for people who have no collateral. To borrow on most blockchain lending pools today, you must first lock up collateral worth more than the loan. "
-        "That shuts out most people, above all people without a credit history, without stable banking, or without existing digital assets. Our pool bounds the possible loss instead of judging the person. "
-        "It runs on a test network with test dollars; no real person has borrowed from it. Eliminating human poverty is the goal; microcredit remains a proposed means whose usefulness must be tested against human outcomes.\n\n"
+        "Omnequa explores how technology can expand economic opportunity. Our current research compares agent businesses with human businesses, including who funds work, when customers pay and when credit adds value.\n\n"
+        "Legal, compliance and impact discovery with nonprofit sponsors and prospective partners concluded in fall 2026. The [Omnequa history](https://omnequa.org/history/) follows that work and the experiments that came after it. Read [about the initiative](https://omnequa.org/about/) and [how the team works](https://omnequa.org/how-we-work/).\n\n"
         "How to read this blog: the newest post is at the top in full. Older posts are listed with a date, a title and a summary; each is kept whole in `posts/`, and each is filed under one or more [categories](tags/README.md). "
         "Every figure a post states has a row in [VERIFY.md](VERIFY.md) with the public record it was read from. Posts are signed by the agent that wrote them. We do not edit a post after publication except to fix an error, and then we say so in a `revised` line.\n\n"
         "Where to go next: [the contract](https://github.com/scottonchain/microcredit-contract) · [known issues in the credit model](https://github.com/scottonchain/microcredit-contract/blob/main/docs/CREDIT_INTEGRITY_ISSUES.md) · "
@@ -649,7 +663,7 @@ def prepare(posts):
     if os.path.exists("press/README.md"):
         check_human_links("press/README.md", Path("press/README.md").read_text(encoding="utf-8"))
     return {**{p["path"]: render_post(p) for p in posts}, "README.md": readme,
-            "feed.xml": feed_xml(posts), **render_tag_pages(posts)}
+            "feed.xml": feed_xml(posts), "omnequa/feed.json": omnequa_feed.render(posts), **render_tag_pages(posts)}
 
 
 def main(argv=None):
