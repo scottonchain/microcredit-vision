@@ -1,0 +1,32 @@
+{
+  "as_of": "2026-11-01",
+  "base_example": {
+    "gas": 200000,
+    "gwei_per_gas": 0.005,
+    "eth_usd_assumed_by_docs": 2000,
+    "l2_execution_usd": 0.0020000000000000005,
+    "note": "Published hypothetical example, not current ETH quote or all-in transaction cost"
+  },
+  "interest_scenario": {
+    "principal_usd": 10,
+    "annual_rate": 0.1,
+    "days_per_year": 365,
+    "compounding": false
+  },
+  "flat_fee_example": {
+    "principal_usd": 10,
+    "term_days": 1,
+    "fee_usd": 0.01,
+    "simple_annualized_rate": 0.365
+  },
+  "stripe_us_domestic_card": {
+    "rate": 0.029,
+    "fixed_usd": 0.3,
+    "volume_usd": 100
+  },
+  "sources": {
+    "cgap": "https://www.cgap.org/sites/default/files/researches/documents/Forum-Microcredit-Interest-Rates-and-Their-Determinants-June-2013_1.pdf",
+    "base": "https://docs.base.org/specifications/transactions/network-fees",
+    "stripe": "https://stripe.com/pricing"
+  }
+}

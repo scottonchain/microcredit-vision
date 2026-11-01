@@ -1,0 +1,12 @@
+# Proposed VERIFY.md additions
+
+Adapt column ordering to the repository's existing table. Add these with the article and chart commit.
+
+| Claim or figure | Exact source/revision | Verification and limits |
+| --- | --- | --- |
+| Figure 1: estimated enterprise generative AI spending $1.7B (2023), $11.5B (2024), $37B (2025) | [Menlo Ventures, 2025: The State of Generative AI in the Enterprise](https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/), December 2025 version, methodology and footnote 4; checked 2026-11-01 | Prior years restated by the 2025 report to exclude inference. Market estimates, not agent capital. Data: `data/enterprise_ai_spending.csv`. |
+| Figure 2: AI use by employment size, 19.80%, 19.48%, 19.98%, 21.58%, 25.02%, 31.40%, 38.48% | [Federal Reserve Board accessible data](https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-accessible-20260717.htm), July 17, 2026, Figure 8, row 6/14/2026, source US Census BTOS; checked 2026-11-01 | Four-period moving averages of biweekly AI-use observations. Employment groups 1–4 through 250+. Chart rounds to one decimal. Does not measure agents or wealth. Data: `data/ai_adoption_by_firm_size.csv`. |
+| Figure 3: 19% financing-constrained, calculated 81% complement | [Richmond Fed, Are Firms Financially Constrained?](https://www.richmondfed.org/research/national_economy/cfo_survey/research_and_commentary/2026/20260923_research_commentary), September 23, 2026, Figure 3 and accompanying text; checked 2026-11-01 | Financing access/cost constraining investment or spending plans. 81 = 100 − 19; not an independently reported statistic. Respondents are not all human businesses. Data: `data/firm_financing_constraint.csv`. |
+| AgentCore payments example uses funded payment source and session limits | [AWS, Agents that transact](https://aws.amazon.com/blogs/machine-learning/agents-that-transact-introducing-amazon-bedrock-agentcore-payments-built-with-coinbase-and-stripe/), May 7, 2026 preview announcement; getting-started and funding/authorization sections; checked 2026-11-01 | Illustrates one architecture only. No current-availability or adoption-scale claim. |
+
+All four sources were read as primary publication text. Recheck live pages if publishing substantially after the checked date. Repository asset paths should be updated to the integrated location.

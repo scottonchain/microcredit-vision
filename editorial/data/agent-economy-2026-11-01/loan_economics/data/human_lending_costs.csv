@@ -1,0 +1,9 @@
+component,year,percent_average_gross_loan_portfolio,status
+Operating expense,2004,16.8,observed_historical
+Funding expense,2004,5.8,observed_historical
+Loan losses,2004,2.4,observed_historical
+Profit,2004,5.2,observed_historical
+Operating expense,2011,14.0,observed_historical
+Funding expense,2011,7.8,observed_historical
+Loan losses,2011,3.6,observed_historical
+Profit,2011,2.6,observed_historical

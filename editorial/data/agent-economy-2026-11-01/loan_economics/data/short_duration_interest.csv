@@ -1,0 +1,4 @@
+principal_usd,illustrative_annual_rate,hours,interest_usd,interest_cents,status
+10,0.1,1,0.00011415525114155251,0.01141552511415525,hypothetical_calculation
+10,0.1,24,0.0027397260273972603,0.273972602739726,hypothetical_calculation
+10,0.1,168,0.019178082191780823,1.9178082191780823,hypothetical_calculation

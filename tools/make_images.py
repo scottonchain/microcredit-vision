@@ -1299,6 +1299,27 @@ MOTIFS.update({
 })
 
 
+
+
+def finance_series(label, kind):
+    s = text(600, 132, label, 34)
+    for x, word in [(260, "INPUT"), (600, kind), (940, "INCOME")]:
+        s += f'<rect x="{x-120}" y="225" width="240" height="175" rx="18" fill="{PAPER}" stroke="{TEAL}" stroke-width="4"/>'
+        s += text(x, 325, word, 25)
+    s += link(390, 310, 470, 310, AMBER, 6)
+    s += link(730, 310, 810, 310, AMBER, 6)
+    s += text(600, 500, "THE AGENT ECONOMY", 23, MUTED)
+    return s
+
+MOTIFS.update({
+    "who-pays-when-an-agent-works": (lambda: finance_series("WHO FUNDS THE WORK?", "BUDGET"), "An input, an operating budget and income connected in sequence"),
+    "the-cash-flow-clock-matters-more-than-the-worker": (lambda: finance_series("WHEN MONEY BECOMES USABLE", "TIME"), "Input costs and income separated by time"),
+    "small-loans-familiar-economics": (lambda: finance_series("SMALL LOANS, REAL COSTS", "COST"), "Inputs and income separated by the full cost of lending"),
+    "the-business-behind-the-agent": (lambda: finance_series("THE BUSINESS BEHIND THE AGENT", "ACCESS"), "Inputs and income connected by access to finance"),
+    "omnequa-archive": (lambda: finance_series("THE OCTOBER ARCHIVE", "HISTORY"), "Dated Omnequa journal entries preserved as history"),
+})
+
+
 def write(name):
     if name not in MOTIFS:
         raise SystemExit(f"unknown illustration {name!r}; choose one of {', '.join(MOTIFS)}")

@@ -1,0 +1,135 @@
+{
+  "prepared_at": "2026-11-01 15:56 UTC",
+  "posts": [
+    {
+      "package": "operator_funding",
+      "slug": "2026-11-01-who-pays-when-an-agent-works",
+      "post": "posts/2026-11-01-who-pays-when-an-agent-works.md",
+      "charts": [
+        "images/agent-economy-2026-11-01/operator_funding/01-enterprise-ai-budgets.svg",
+        "images/agent-economy-2026-11-01/operator_funding/02-ai-use-by-firm-size.svg",
+        "images/agent-economy-2026-11-01/operator_funding/03-human-firms-and-finance.svg"
+      ],
+      "author": "Codex",
+      "prepared_at": "2026-11-01 15:56 UTC"
+    },
+    {
+      "package": "working_capital",
+      "slug": "2026-11-01-the-cash-flow-clock-matters-more-than-the-worker",
+      "post": "posts/2026-11-01-the-cash-flow-clock-matters-more-than-the-worker.md",
+      "charts": [
+        "images/agent-economy-2026-11-01/working_capital/working-capital-payment-terms.svg",
+        "images/agent-economy-2026-11-01/working_capital/working-capital-two-clocks.svg",
+        "images/agent-economy-2026-11-01/working_capital/working-capital-digital-receivables.svg"
+      ],
+      "author": "Codex",
+      "prepared_at": "2026-11-01 15:56 UTC"
+    },
+    {
+      "package": "loan_economics",
+      "slug": "2026-11-01-small-loans-familiar-economics",
+      "post": "posts/2026-11-01-small-loans-familiar-economics.md",
+      "charts": [
+        "images/agent-economy-2026-11-01/loan_economics/loan-economics-01-human-costs.svg",
+        "images/agent-economy-2026-11-01/loan_economics/loan-economics-02-short-duration.svg",
+        "images/agent-economy-2026-11-01/loan_economics/loan-economics-03-batching.svg"
+      ],
+      "author": "Codex",
+      "prepared_at": "2026-11-01 15:56 UTC"
+    },
+    {
+      "package": "capital_constraints",
+      "slug": "2026-11-01-the-business-behind-the-agent",
+      "post": "posts/2026-11-01-the-business-behind-the-agent.md",
+      "charts": [
+        "images/agent-economy-2026-11-01/capital_constraints/capital-access.svg",
+        "images/agent-economy-2026-11-01/capital_constraints/capital-borrowing.svg",
+        "images/agent-economy-2026-11-01/capital_constraints/capital-resilience.svg"
+      ],
+      "author": "Codex",
+      "prepared_at": "2026-11-01 15:56 UTC"
+    }
+  ],
+  "archive_imports": [
+    {
+      "source_id": "https://omnequa.solarghost3.chatgpt.site/journal/a-new-chapter-for-omnequa/",
+      "site_url": "https://omnequa.org/journal/a-new-chapter-for-omnequa/",
+      "original_title": "A new chapter, with a clearer test",
+      "related_existing_posts": [],
+      "status": "prepared",
+      "post": "2026-10-13-omnequa-a-new-chapter-for-omnequa",
+      "imported_at": "2026-11-01 15:56 UTC",
+      "omitted_internal_links": 0
+    },
+    {
+      "source_id": "https://omnequa.solarghost3.chatgpt.site/journal/a-clearer-path-for-employer-inquiries/",
+      "site_url": "https://omnequa.org/journal/a-clearer-path-for-employer-inquiries/",
+      "original_title": "A clearer path for employer inquiries",
+      "related_existing_posts": [],
+      "status": "prepared",
+      "post": "2026-10-13-omnequa-a-clearer-path-for-employer-inquiries",
+      "imported_at": "2026-11-01 15:56 UTC",
+      "omitted_internal_links": 0
+    },
+    {
+      "source_id": "https://omnequa.org/journal/the-domain-is-live-now-the-opportunity-test/",
+      "site_url": "https://omnequa.org/journal/the-domain-is-live-now-the-opportunity-test/",
+      "original_title": "The domain is live. Now the opportunity test.",
+      "related_existing_posts": [],
+      "status": "prepared",
+      "post": "2026-10-14-omnequa-the-domain-is-live-now-the-opportunity-test",
+      "imported_at": "2026-11-01 15:56 UTC",
+      "omitted_internal_links": 0
+    },
+    {
+      "source_id": "https://omnequa.org/journal/what-makes-an-inquiry-payout-ready/",
+      "site_url": "https://omnequa.org/journal/what-makes-an-inquiry-payout-ready/",
+      "original_title": "What makes an inquiry payout-ready?",
+      "related_existing_posts": [],
+      "status": "prepared",
+      "post": "2026-10-15-omnequa-what-makes-an-inquiry-payout-ready",
+      "imported_at": "2026-11-01 15:56 UTC",
+      "omitted_internal_links": 0
+    },
+    {
+      "source_id": "https://omnequa.org/journal/one-outside-question-a-clearer-conversion-test/",
+      "site_url": "https://omnequa.org/journal/one-outside-question-a-clearer-conversion-test/",
+      "original_title": "One outside question, a clearer conversion test",
+      "related_existing_posts": [],
+      "status": "prepared",
+      "post": "2026-10-15-omnequa-one-outside-question-a-clearer-conversion-test",
+      "imported_at": "2026-11-01 15:56 UTC",
+      "omitted_internal_links": 3
+    },
+    {
+      "source_id": "https://omnequa.org/journal/a-real-application-route-with-the-gaps-visible/",
+      "site_url": "https://omnequa.org/journal/a-real-application-route-with-the-gaps-visible/",
+      "original_title": "A real application route, with the gaps visible",
+      "related_existing_posts": [],
+      "status": "prepared",
+      "post": "2026-10-15-omnequa-a-real-application-route-with-the-gaps-visible",
+      "imported_at": "2026-11-01 15:56 UTC",
+      "omitted_internal_links": 0
+    },
+    {
+      "source_id": "https://omnequa.org/journal/two-application-routes-and-a-clearer-evidence-boundary/",
+      "site_url": "https://omnequa.org/journal/two-application-routes-and-a-clearer-evidence-boundary/",
+      "original_title": "Two application routes, with the evidence kept separate",
+      "related_existing_posts": [],
+      "status": "prepared",
+      "post": "2026-10-16-omnequa-two-application-routes-and-a-clearer-evidence-boundary",
+      "imported_at": "2026-11-01 15:56 UTC",
+      "omitted_internal_links": 0
+    },
+    {
+      "source_id": "income-access-launch-20261016T200724Z",
+      "site_url": "https://omnequa.org/journal/making-official-money-access-instructions-easier/",
+      "original_title": "A small test: making official money-access instructions easier to use",
+      "related_existing_posts": [],
+      "status": "prepared",
+      "post": "2026-10-16-omnequa-making-official-money-access-instructions-easier",
+      "imported_at": "2026-11-01 15:56 UTC",
+      "omitted_internal_links": 0
+    }
+  ]
+}

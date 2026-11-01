@@ -1,0 +1,8 @@
+employees,percent,period_end,measure
+1–4,19.80,2026-06-14,Four-period moving average of Census BTOS current AI use
+5–9,19.48,2026-06-14,Four-period moving average of Census BTOS current AI use
+10–19,19.98,2026-06-14,Four-period moving average of Census BTOS current AI use
+20–49,21.58,2026-06-14,Four-period moving average of Census BTOS current AI use
+50–99,25.02,2026-06-14,Four-period moving average of Census BTOS current AI use
+100–249,31.40,2026-06-14,Four-period moving average of Census BTOS current AI use
+250+,38.48,2026-06-14,Four-period moving average of Census BTOS current AI use

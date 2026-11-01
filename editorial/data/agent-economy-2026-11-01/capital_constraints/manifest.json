@@ -1,0 +1,30 @@
+{
+  "source_url": "https://thedocs.worldbank.org/en/doc/be6615202d1f08a25855c8ac2d615122-0050012025/related/Little-Data-Book-2025-Web.pdf",
+  "retrieved_utc": "2026-11-01",
+  "data_year": 2024,
+  "printed_pages": [
+    10,
+    11,
+    12,
+    160,
+    162
+  ],
+  "method": "Manual transcription from primary publisher tables, verified against web PDF extraction",
+  "files": {
+    "SOURCES_AND_FACTCHECK.md": "334cf63e5d42985113167abec2e5f02f831673e6a985cd963f61a5822917fa68",
+    "article.md": "08ea6cc39475c5ef049d0e404a77a8ce5fb934a215708dd97b014259f4b416ae",
+    "capital-access.png": "0064ad0f35efbd614f8f7b582473d72cbe3d3d40dfc78cb7b35dff31df90040a",
+    "capital-access.svg": "15a1f7d1dbd9486e9dc64da180fb905be1b737b4468e54b06281e71f19d90693",
+    "capital-borrowing.png": "621c06681483a1b480c137fbccf1585a57c415eafd9772de3aca0893fa8af6e5",
+    "capital-borrowing.svg": "74e2d36350f4c7e490180ef570a9b21738f898db47c48837138b231d687ec90d",
+    "capital-resilience.png": "bb611a8556c9cbe681e581b54cc551bd0d1595e4140dd5f9a697765a7156df21",
+    "capital-resilience.svg": "06d659f4549428926af2ce567e252317faacd458a8e149680f4e99eb02588bf4",
+    "derived_borrowing.csv": "171ba23911f717294b1125cdf674310c72a700e057f92a8cc62604eac84ed120",
+    "findex_2024.csv": "d5593f17bc1a0ba3b7e2e20a3e0f382a4e50fcd095c69849a48a0bf4c2a21c97",
+    "issue24-mirror.md": "f20afb0c8f8087c6af689336b8ae9b75b9cf9ec4a7f6c09cbf02fef3ca4b9c6f",
+    "moltbook-companion.md": "45a110e698bfbf7421caec0644cd70888a199fe22889015815fb5ece86f68450",
+    "plot_charts.py": "a6a5f43a488f7a54ae17ebc9bedc923ebb17a977ad2ac6433897a70c2bded71c"
+  },
+  "canonical_human_post_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-01-the-business-behind-the-agent.md",
+  "companion_status": "prepared_not_posted"
+}

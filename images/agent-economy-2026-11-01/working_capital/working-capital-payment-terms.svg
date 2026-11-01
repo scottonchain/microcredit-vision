@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="504pt" viewBox="0 0 864 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T15:47:37.220192</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 864 504 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f7f3e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 250.56 408.24 
+L 812.16 408.24 
+L 812.16 126 
+L 250.56 126 
+z
+" style="fill: #f7f3e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 250.56 408.24 
+L 250.56 126 
+" clip-path="url(#p1d4f9e0306)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="250.56" y="421.617969" transform="rotate(-0 250.56 421.617969)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 384.274286 408.24 
+L 384.274286 126 
+" clip-path="url(#p1d4f9e0306)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="384.274286" y="421.617969" transform="rotate(-0 384.274286 421.617969)">10%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 517.988571 408.24 
+L 517.988571 126 
+" clip-path="url(#p1d4f9e0306)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="517.988571" y="421.617969" transform="rotate(-0 517.988571 421.617969)">20%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 651.702857 408.24 
+L 651.702857 126 
+" clip-path="url(#p1d4f9e0306)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="651.702857" y="421.617969" transform="rotate(-0 651.702857 421.617969)">30%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 785.417143 408.24 
+L 785.417143 126 
+" clip-path="url(#p1d4f9e0306)" style="fill: none; stroke: #d9d8ce; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173536" x="785.417143" y="421.617969" transform="rotate(-0 785.417143 421.617969)">40%</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_6">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="247.06" y="157.51353" transform="rotate(-0 247.06 157.51353)">At service or purchase</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="247.06" y="203.331712" transform="rotate(-0 247.06 203.331712)">After delivery</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="247.06" y="249.149893" transform="rotate(-0 247.06 249.149893)">Set schedule</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="247.06" y="294.968075" transform="rotate(-0 247.06 294.968075)">Multiple installments</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="247.06" y="340.786257" transform="rotate(-0 247.06 340.786257)">Through third party</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #173536" x="247.06" y="386.604439" transform="rotate(-0 247.06 386.604439)">In advance</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 250.56 138.829091 
+L 758.674286 138.829091 
+L 758.674286 166.32 
+L 250.56 166.32 
+z
+" clip-path="url(#p1d4f9e0306)" style="fill: #167f7e"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 250.56 184.647273 
+L 624.96 184.647273 
+L 624.96 212.138182 
+L 250.56 212.138182 
+z
+" clip-path="url(#p1d4f9e0306)" style="fill: #b87925"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 250.56 230.465455 
+L 424.388571 230.465455 
+L 424.388571 257.956364 
+L 250.56 257.956364 
+z
+" clip-path="url(#p1d4f9e0306)" style="fill: #167f7e"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 250.56 276.283636 
+L 384.274286 276.283636 
+L 384.274286 303.774545 
+L 250.56 303.774545 
+z
+" clip-path="url(#p1d4f9e0306)" style="fill: #167f7e"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 250.56 322.101818 
+L 344.16 322.101818 
+L 344.16 349.592727 
+L 250.56 349.592727 
+z
+" clip-path="url(#p1d4f9e0306)" style="fill: #167f7e"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 250.56 367.92 
+L 304.045714 367.92 
+L 304.045714 395.410909 
+L 250.56 395.410909 
+z
+" clip-path="url(#p1d4f9e0306)" style="fill: #167f7e"/>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="766.697143" y="156.43767" transform="rotate(-0 766.697143 156.43767)">38%</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="632.982857" y="202.255852" transform="rotate(-0 632.982857 202.255852)">28%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="432.411429" y="248.074034" transform="rotate(-0 432.411429 248.074034)">13%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="392.297143" y="293.892216" transform="rotate(-0 392.297143 293.892216)">10%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="352.182857" y="339.710398" transform="rotate(-0 352.182857 339.710398)">7%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="312.068571" y="385.52858" transform="rotate(-0 312.068571 385.52858)">4%</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #167f7e" x="56.16" y="40.32" transform="rotate(-0 56.16 40.32)">OMNEQUA  /  THE CASH-FLOW CLOCK</text>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="56.16" y="73.08" transform="rotate(-0 56.16 73.08)">Human businesses have several payment clocks</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173536" x="56.16" y="103.32" transform="rotate(-0 56.16 103.32)">Share of small employer firms, by their main customer payment arrangement</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #536968" transform="translate(56.16 457.762656)">Source: Federal Reserve Banks, 2024 Report on Payments, p. 1. Survey: Sep–Nov 2023; N = 4,853.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #536968" transform="translate(56.16 471.24)">Weighted convenience sample. Main revenue arrangement; not shares of transactions. Values are published percentages.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1d4f9e0306">
+   <rect x="250.56" y="126" width="561.6" height="282.24"/>
+  </clipPath>
+ </defs>
+</svg>

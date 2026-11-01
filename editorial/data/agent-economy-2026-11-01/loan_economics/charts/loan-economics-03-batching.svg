@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="504pt" viewBox="0 0 864 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T15:46:58.166961</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 864 504 
+L 864 0 
+L 0 0 
+z
+" style="fill: #fbf8f0"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 86.4 403.2 
+L 829.44 403.2 
+L 829.44 136.08 
+L 86.4 136.08 
+z
+" style="fill: #fbf8f0"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="me4c6417e7b" d="M 0 0 
+L 0 3.5 
+" style="stroke: #20312f; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#me4c6417e7b" x="189.868052" y="403.2" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #20312f" transform="translate(157.415552 419.318125)">1 payment</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #20312f" transform="translate(166.907739 432.7555)">of $100</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#me4c6417e7b" x="457.92" y="403.2" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #20312f" transform="translate(418.524375 419.318125)">10 payments</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #20312f" transform="translate(438.777188 432.7555)">of $10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#me4c6417e7b" x="725.971948" y="403.2" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #20312f" transform="translate(682.758823 419.318125)">100 payments</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #20312f" transform="translate(710.646636 432.7555)">of $1</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 86.4 403.2 
+L 829.44 403.2 
+" clip-path="url(#pb8ce41caf8)" style="fill: none; stroke: #dde2d8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="m896032446e" d="M 0 0 
+L -3.5 0 
+" style="stroke: #20312f; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m896032446e" x="86.4" y="403.2" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #20312f" x="79.4" y="407.759063" transform="rotate(-0 79.4 407.759063)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 86.4 368.953846 
+L 829.44 368.953846 
+" clip-path="url(#pb8ce41caf8)" style="fill: none; stroke: #dde2d8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m896032446e" x="86.4" y="368.953846" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #20312f" x="79.4" y="373.512909" transform="rotate(-0 79.4 373.512909)">5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 86.4 334.707692 
+L 829.44 334.707692 
+" clip-path="url(#pb8ce41caf8)" style="fill: none; stroke: #dde2d8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m896032446e" x="86.4" y="334.707692" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #20312f" x="79.4" y="339.266755" transform="rotate(-0 79.4 339.266755)">10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 86.4 300.461538 
+L 829.44 300.461538 
+" clip-path="url(#pb8ce41caf8)" style="fill: none; stroke: #dde2d8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m896032446e" x="86.4" y="300.461538" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #20312f" x="79.4" y="305.020601" transform="rotate(-0 79.4 305.020601)">15</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path d="M 86.4 266.215385 
+L 829.44 266.215385 
+" clip-path="url(#pb8ce41caf8)" style="fill: none; stroke: #dde2d8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m896032446e" x="86.4" y="266.215385" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #20312f" x="79.4" y="270.774447" transform="rotate(-0 79.4 270.774447)">20</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_14">
+      <path d="M 86.4 231.969231 
+L 829.44 231.969231 
+" clip-path="url(#pb8ce41caf8)" style="fill: none; stroke: #dde2d8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m896032446e" x="86.4" y="231.969231" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #20312f" x="79.4" y="236.528293" transform="rotate(-0 79.4 236.528293)">25</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_16">
+      <path d="M 86.4 197.723077 
+L 829.44 197.723077 
+" clip-path="url(#pb8ce41caf8)" style="fill: none; stroke: #dde2d8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m896032446e" x="86.4" y="197.723077" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #20312f" x="79.4" y="202.282139" transform="rotate(-0 79.4 202.282139)">30</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_18">
+      <path d="M 86.4 163.476923 
+L 829.44 163.476923 
+" clip-path="url(#pb8ce41caf8)" style="fill: none; stroke: #dde2d8; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m896032446e" x="86.4" y="163.476923" style="fill: #20312f; stroke: #20312f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #20312f" x="79.4" y="168.035986" transform="rotate(-0 79.4 168.035986)">35</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #20312f" x="57.634375" y="269.64" transform="rotate(-90 57.634375 269.64)">Total processing fees, US dollars</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 120.174545 403.2 
+L 259.561558 403.2 
+L 259.561558 381.282462 
+L 120.174545 381.282462 
+z
+" clip-path="url(#pb8ce41caf8)" style="fill: #176b67"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 388.226494 403.2 
+L 527.613506 403.2 
+L 527.613506 362.789538 
+L 388.226494 362.789538 
+z
+" clip-path="url(#pb8ce41caf8)" style="fill: #176b67"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 656.278442 403.2 
+L 795.665455 403.2 
+L 795.665455 177.860308 
+L 656.278442 177.860308 
+z
+" clip-path="url(#pb8ce41caf8)" style="fill: #dda63a"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 86.4 403.2 
+L 86.4 136.08 
+" style="fill: none; stroke: #ccd3ca; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 86.4 403.2 
+L 829.44 403.2 
+" style="fill: none; stroke: #ccd3ca; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #20312f" x="189.868052" y="372.370899" transform="rotate(-0 189.868052 372.370899)">$3.20</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #20312f" x="457.92" y="353.877976" transform="rotate(-0 457.92 353.877976)">$5.90</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #20312f" x="725.971948" y="168.948745" transform="rotate(-0 725.971948 168.948745)">$32.90</text>
+   </g>
+  </g>
+  <g id="text_16">
+   <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #20312f" x="51.84" y="52.756406" transform="rotate(-0 51.84 52.756406)">Fixed charges reward fewer settlements</text>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #687774" transform="translate(51.84 80.437969)">Same $100 of domestic-card payments, using Stripe’s standard US tariff.</text>
+   <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #687774" transform="translate(51.84 97.958516)">A payment-cost analogy for batching, not a quote for agent lending.</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #687774" transform="translate(51.84 452.722656)">Source: Stripe US pricing, checked Nov 1, 2026: 2.9% + $0.30 per successful domestic-card transaction.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #687774" transform="translate(51.84 466.2)">Calculated fee = $100 × 2.9% + transaction count × $0.30. No international, currency-conversion or other extra fees modeled.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb8ce41caf8">
+   <rect x="86.4" y="136.08" width="743.04" height="267.12"/>
+  </clipPath>
+ </defs>
+</svg>
