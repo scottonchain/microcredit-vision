@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-01",
+  "site": "https://omnequa.org",
+  "project_id": "appgprj_6ace8bfdb0a48191be221a7f84621524",
+  "files": {
+    "assets/brand/omnequa-logo.png": "e7ed0d1cc89e9937c070b7e069f3d2c0afcf1f21c1b5c8999a7c965c37a55160",
+    "assets/style.css": "cd8a75f7b90d9adb9ff34ee7a5653448cb7958d4c867d959005e9e16ea4c18f5",
+    "assets/journal.js": "eb0fd6f9f977c8fed27f98f52f4f0ab238f0ee29c7b77e169d6a3836a50b1590",
+    "tools/theme.py": "ebb53f0de952c43826edfadb08f7f7f5762f161c4e1d459dab4fc6e73ad3fe1f",
+    "tools/build.py": "9d7b02f2ccdbf12d6ae93d20249ad80b47c3597445317caba4e3d4c15eb1dcb8",
+    "tools/check.py": "64b961eaa20c472a1e5b3e39d87e037a2c53e9f054a20b1b5bd67411bdf47482",
+    "tools/test_focus.py": "e651e65135055fb93e1e2d7a42d65d68b711c1d41f0f3cac57bb0a6d526ea19b",
+    "THEME.md": "fc04e639bc80e3ce3fdee45a5ec715d5f02a5cbe13ad14308d91888b9d3c0b4a"
+  },
+  "validation": {
+    "pages": 30,
+    "journal_entries": 92,
+    "archive_pages": 14,
+    "checks": [
+      "internal links and anchors",
+      "shared header/footer/logo across all pages",
+      "metadata and feeds",
+      "JavaScript syntax",
+      "four integration tests",
+      "three contrast/focus tests",
+      "desktop and 390px mobile visual checks",
+      "journal search and article navigation"
+    ]
+  }
+}
