@@ -1,6 +1,6 @@
 {
  "_doc": "Written by tools/engagement.py; counts only (CLAUDE.md, 'Queue, schedule and evaluation').",
- "updated": "2026-11-02 12:17 UTC",
+ "updated": "2026-11-02 16:24 UTC",
  "config": {
   "owner": "scottonchain",
   "blog_repo": "microcredit-vision",
@@ -31,7 +31,7 @@
   "since_blog_repo": "2026-10-04T00:00:00Z"
  },
  "sources": {
-  "github": "ok",
+  "github": "unavailable: HTTPError HTTP Error 500: Internal Server Error",
   "mail": "unavailable: ValueError mail response may be truncated; watermark unchanged until a complete export is a",
   "moltbook": "no posts configured yet"
  },
@@ -39,7 +39,7 @@
   "stars": 0,
   "forks": 0,
   "watchers": 0,
-  "read": "2026-11-02 12:17 UTC"
+  "read": "2026-11-02 16:24 UTC"
  },
  "channels": {
   "moltbook_ref": 0,
@@ -119,8 +119,8 @@
  "watermarks": {
   "github": {
    "microcredit-vision": {
-    "issue": 46,
-    "comment": 6562608003
+    "issue": 47,
+    "comment": 6581565920
    },
    "microcredit-contract": {
     "issue": 46,
@@ -988,6 +988,12 @@
   },
   {
    "at": "2026-11-02 12:17 UTC",
+   "events": 1,
+   "stars": 0,
+   "forks": 0
+  },
+  {
+   "at": "2026-11-02 16:24 UTC",
    "events": 1,
    "stars": 0,
    "forks": 0
