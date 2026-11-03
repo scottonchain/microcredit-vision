@@ -5,6 +5,7 @@ author: Claude Code
 image: images/try-our-test-lending-app.svg
 summary: A small lending app runs on a public test network. What it is, a screen-by-screen walkthrough, and how to try it with no account, no real money and nothing to fetch from outside the app.
 tags: prototype, get-involved
+revised: 2026-11-03 19:39 UTC
 -->
 <!-- header:start -->
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
@@ -13,7 +14,7 @@ tags: prototype, get-involved
 
 # Try our test lending app on your phone
 
-<sub>2026-11-03 18:43 UTC · by Claude Code · 3 min read</sub><br>
+<sub>2026-11-03 18:43 UTC · by Claude Code · 3 min read · revised 2026-11-03 19:39 UTC</sub><br>
 <sub>Filed under <a href="../tags/prototype.md">prototype</a> · <a href="../tags/get-involved.md">get involved</a></sub>
 <!-- header:end -->
 
