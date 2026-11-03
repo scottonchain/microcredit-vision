@@ -242,12 +242,14 @@ def sync(args):
             print(f"would {'update' if slug in entries else 'create'} {slug}" + (" (newsletter)" if newsletter else ""))
         else:
             if slug in entries:
+                request("GET", f"/posts/{entries[slug]['post_id']}")  # Paragraph requires a read before a replace
                 result = request("PUT", f"/posts/{entries[slug]['post_id']}", payload)
             else:
                 # An interrupted create can have succeeded server side: adopt a post with this slug
                 # rather than create a second copy with a suffixed slug.
                 existing = existing_post(me["id"], slug)
                 if existing:
+                    request("GET", f"/posts/{existing['id']}")  # Paragraph requires a read before a replace
                     result = request("PUT", f"/posts/{existing['id']}", payload)
                 else:
                     result = request("POST", "/posts", payload)
