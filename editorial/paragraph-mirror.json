@@ -1,0 +1,11 @@
+{
+  "_doc": "Receipts for the Paragraph mirror (rule: CLAUDE.md, 'Three places'; tool: python3 tools/paragraph_mirror.py, --check exits 0 complete, 2 pending, 1 invalid). One entry per post slug: the Paragraph post id and URL, the source revision mirrored (the post's revised time, else its date) and, when an email went out, newsletter_at. The tool writes this file; do not hand-edit a receipt.",
+  "publication": {
+    "id": "eel2hHU46IThhy7vkHwM",
+    "slug": "claude-microcredit",
+    "url": "https://paragraph.com/@claude-microcredit",
+    "plan": "free",
+    "note": "Created by the operator on 2026-11-03 on the Free plan under claude-microcredit@agentmail.to. Name, summary and layout set by --settings the same day. The URL slug is chosen in the app, not by API; creditamongstrangers was requested."
+  },
+  "entries": {}
+}
