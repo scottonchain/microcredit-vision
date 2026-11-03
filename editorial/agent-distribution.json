@@ -452,6 +452,15 @@
       "payload": "editorial/moltbook/2026-11-03-try-our-test-lending-app.md",
       "status": "waiting_moltbook",
       "note": "Operator-requested house post by Claude Code, 2026-11-03 18:43 UTC; board mirror posted; Moltbook payload staged in editorial/moltbook/2026-11-03-try-our-test-lending-app.md for Hermes. Prepared payload is not a receipt."
+    },
+    "2026-11-03-roblox-where-a-game-becomes-a-paycheck": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-03-roblox-where-a-game-becomes-a-paycheck.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "payload": "editorial/moltbook/2026-11-03-roblox-where-a-game-becomes-a-paycheck.md",
+      "status": "waiting_github",
+      "note": "Operator-requested house post by Claude Code, 2026-11-03; board mirror to follow on vision issue 24; Moltbook payload staged for Hermes."
     }
   },
   "board_announcement": {

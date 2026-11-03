@@ -781,6 +781,22 @@ def test_app_phone():
     return s
 
 
+def roblox_gap():
+    """Players spend game money on the left, a creator's dollars on the right, and a dashed gap of waiting between them."""
+    s = ""
+    s += f'<rect x="150" y="270" width="270" height="150" rx="16" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(285, 332, "players spend", 26, INK, sans=True)
+    s += text(285, 370, "game money", 26, INK, sans=True)
+    s += f'<rect x="780" y="270" width="270" height="150" rx="16" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>\n'
+    s += text(915, 332, "a creator", 26, INK, sans=True)
+    s += text(915, 370, "is paid in dollars", 26, INK, sans=True)
+    s += link(426, 345, 774, 345, MUTED, 4, "10 9")
+    s += text(600, 315, "waiting, not lending", 24, MUTED, sans=True)
+    s += text(600, 390, "30 days  |  $114 minimum", 22, MUTED, sans=True)
+    s += text(600, 580, "between earning and cash there is only waiting", 28, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1278,6 +1294,7 @@ MOTIFS = {
     "a-number-both-sides-called-unacceptable": (layers_not_wall, "One cracked wall beside five thin layers, the last one dashed, asking how anyone would know the layers hold"),
     "inevitable-and-nobody-asked": (door_unasked, "A closed arched door marked inevitable above a row of small people, asking who was asked"),
     "who-checks-the-checker": (checker_checked, "A stack of papers under a teal lens with a second dashed lens over it, asking who checks the AI audit"),
+    "roblox-where-a-game-becomes-a-paycheck": (roblox_gap, "Game money on the left, a creator in dollars on the right, and a dashed gap of waiting between them"),
     "try-our-test-lending-app": (test_app_phone, "A phone with a test-network banner and four stacked steps: wallet, credit desk, borrow, pay back"),
     "a-week-of-big-claims": (claims_and_checks, "Four claim cards each beside a check card, only the first partly checked, the rest dashed asking who checked"),
     "tested-one-way-used-another": (tested_vs_used, "A short tidy test with a tick beside a long run of conversation turns whose later part is dashed, asking what happens late"),
