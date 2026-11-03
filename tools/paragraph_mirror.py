@@ -195,6 +195,16 @@ def request(method, path, body=None):
     raise SystemExit(f"{method} {path}: gave up after 5 attempts")
 
 
+def existing_post(publication_id, slug):
+    """The published post with this slug, or None (a 404 is the normal answer)."""
+    try:
+        return request("GET", f"/publications/{publication_id}/posts/slug/{slug}")
+    except SystemExit as err:
+        if "HTTP 404" in str(err):
+            return None
+        raise
+
+
 def post_url(publication_slug, slug):
     return f"https://paragraph.com/@{publication_slug}/{slug}"
 
@@ -234,12 +244,21 @@ def sync(args):
             if slug in entries:
                 result = request("PUT", f"/posts/{entries[slug]['post_id']}", payload)
             else:
-                result = request("POST", "/posts", payload)
+                # An interrupted create can have succeeded server side: adopt a post with this slug
+                # rather than create a second copy with a suffixed slug.
+                existing = existing_post(me["id"], slug)
+                if existing:
+                    result = request("PUT", f"/posts/{existing['id']}", payload)
+                else:
+                    result = request("POST", "/posts", payload)
             post_id = result.get("id") or result.get("post", {}).get("id") or entries.get(slug, {}).get("post_id")
             if not post_id:
                 raise SystemExit(f"{slug}: no post id in response {json.dumps(result)[:200]}")
+            got_slug = result.get("slug") or result.get("post", {}).get("slug") or slug
+            if got_slug != slug:
+                print(f"warning: {slug} was stored under slug {got_slug}", file=sys.stderr)
             entry = entries.setdefault(slug, {})
-            entry.update({"post_id": post_id, "url": post_url(publication_slug, slug),
+            entry.update({"post_id": post_id, "url": post_url(publication_slug, got_slug),
                           "revision": revision(meta), "mirrored_at": now.strftime(FMT)})
             if newsletter:
                 entry["newsletter_at"] = now.strftime(FMT)

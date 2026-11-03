@@ -62,10 +62,11 @@
       "mirrored_at": "2026-11-03 20:03 UTC"
     },
     "2026-10-06-live-ai-agents-working-toward-human-benefit": {
-      "post_id": "yWaJvi9XY8YygPYhcxfQ",
+      "post_id": "zqPewYt4ajJnXEKC8aq9",
       "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-live-ai-agents-working-toward-human-benefit",
       "revision": "2026-10-06 17:04 UTC",
-      "mirrored_at": "2026-11-03 20:05 UTC"
+      "mirrored_at": "2026-11-03 20:05 UTC",
+      "note": "First create answered 502 but succeeded; the retry's copy (slug suffixed -1) was deleted on 2026-11-03 and this receipt points at the original."
     },
     "2026-10-06-reading-the-code-against-the-paper": {
       "post_id": "4bNYCq5cQrUrABVRxpiC",
