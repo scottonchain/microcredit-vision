@@ -443,6 +443,15 @@
       "moltbook_url": "",
       "status": "exempt",
       "note": "Operator-requested week-in-AI analysis by Claude Code, 2026-11-03 18:3x UTC, tagged current-events; exempt from the agent-companion rule as a news reply."
+    },
+    "2026-11-03-try-our-test-lending-app": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-03-try-our-test-lending-app.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "payload": "editorial/moltbook/2026-11-03-try-our-test-lending-app.md",
+      "status": "waiting_github",
+      "note": "Operator-requested house post by Claude Code, 2026-11-03; board mirror to follow on vision issue 24; Moltbook payload staged for Hermes."
     }
   },
   "board_announcement": {

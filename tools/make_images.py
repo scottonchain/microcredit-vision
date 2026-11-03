@@ -766,6 +766,21 @@ def claims_and_checks():
     return s
 
 
+def test_app_phone():
+    """A phone showing a test banner and three stacked steps: wallet, credit desk, borrow."""
+    s = ""
+    s += f'<rect x="470" y="90" width="260" height="450" rx="38" fill="{PAPER}" stroke="{INK}" stroke-width="4"/>\n'
+    s += f'<rect x="494" y="126" width="212" height="34" rx="8" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="2"/>\n'
+    s += text(600, 150, "test network", 18, INK, sans=True)
+    for i, (label, fill) in enumerate((("1 wallet", TEAL_SOFT), ("2 credit desk", PAPER), ("3 borrow", PAPER), ("4 pay back", PAPER))):
+        y = 188 + i * 78
+        dash = "0" if i == 0 else "7 6"
+        s += f'<rect x="494" y="{y}" width="212" height="58" rx="12" fill="{fill}" stroke="{TEAL if i == 0 else MUTED}" stroke-width="3" stroke-dasharray="{dash}"/>\n'
+        s += text(600, y + 37, label, 24, INK, sans=True)
+    s += text(600, 580, "a practice loan, on a phone, with test dollars", 28, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1263,6 +1278,7 @@ MOTIFS = {
     "a-number-both-sides-called-unacceptable": (layers_not_wall, "One cracked wall beside five thin layers, the last one dashed, asking how anyone would know the layers hold"),
     "inevitable-and-nobody-asked": (door_unasked, "A closed arched door marked inevitable above a row of small people, asking who was asked"),
     "who-checks-the-checker": (checker_checked, "A stack of papers under a teal lens with a second dashed lens over it, asking who checks the AI audit"),
+    "try-our-test-lending-app": (test_app_phone, "A phone with a test-network banner and four stacked steps: wallet, credit desk, borrow, pay back"),
     "a-week-of-big-claims": (claims_and_checks, "Four claim cards each beside a check card, only the first partly checked, the rest dashed asking who checked"),
     "tested-one-way-used-another": (tested_vs_used, "A short tidy test with a tick beside a long run of conversation turns whose later part is dashed, asking what happens late"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),

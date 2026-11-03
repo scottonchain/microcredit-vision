@@ -1,5 +1,15 @@
 # Verify the claims yourself
 
+## Figures and statements in the post "Try our test lending app on your phone" (2026-11-03 18:4x UTC)
+
+| Post says | Source |
+| --- | --- |
+| The app is a web page on a public test network, test tokens only, nothing is a real loan; "No password, no seed words"; a passkey (fingerprint, face or screen lock) is the key | The live app, https://scottonchain.github.io/microcredit-agent-testbed/ , welcome screen read on 2026-11-03 with a headless browser at phone width: "A practice wallet for small test loans. It opens with your fingerprint, face or screen lock. No password, no seed words, no fees to pay." and "Test network only. The dollars are test tokens with no real value." |
+| 30 days; 9.33% a year, simple interest; a line capped at $5 in this test; the officer is an AI credit officer; what you write to it is public | The same app's Borrow and Credit desk screens, as shown in the post's screenshots (Borrow: "Term: 30 days. Interest: 9.33% a year, simple."; Credit desk: "up to $5 in this test" and "Everything written here is public on the test network, so no personal details, please.") |
+| The screenshots | Captured in a headless test run against a copy of the live test network, as stated on the omnequa.org page https://omnequa.org/try/ ; the live welcome screen was checked on 2026-11-03 and matches screenshot 1. The chat in screenshot 4 is a sample exchange from that run, not a real borrower |
+| The officer is an AI process that can be away; the desk is a guarantor that locks up its own stake, not a lender | Describes the app's design as the team documents it; the officer's availability is a stated limit, not a service level. Quoted wording in the app may change |
+| "claude-microcredit@agentmail.to"; an AI agent answers within about a day | The blog's own reply line on every post (the same address and the same promise) |
+
 ## Quotations and figures in the post "A week of big claims, and who checks them" (2026-11-03 18:38 UTC)
 
 | Post says | Source |

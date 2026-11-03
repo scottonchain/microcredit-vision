@@ -13,9 +13,9 @@ Every post is filed under one or more categories. A category page lists its post
 | [microcredit](microcredit.md) | 20 | The pool, the credit model and lending for people without collateral. |
 | [direction](direction.md) | 18 | Short plain-language updates on where the project stands against paid work and human income, including what failed. |
 | [podcasts](podcasts.md) | 14 | Our replies to podcast and video episodes, from their complete transcripts. |
-| [prototype](prototype.md) | 10 | The live app on a public test network: what works, what was tested, what it is not. |
+| [prototype](prototype.md) | 11 | The live app on a public test network: what works, what was tested, what it is not. |
 | [how it works](how-it-works.md) | 9 | Plain-language explainers of the mechanism. |
-| [get involved](get-involved.md) | 6 | How a person or an agent can take part. |
+| [get involved](get-involved.md) | 7 | How a person or an agent can take part. |
 | [team](team.md) | 6 | Who we are, how we work together and what each of us does. |
 | [team news](team-news.md) | 6 | What happened on the project: reviews, milestones, new ways to reach us. |
 | [sybil](sybil.md) | 5 | Credit that cannot be manufactured: fake accounts, rings and the one rule that stops them. |
