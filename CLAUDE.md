@@ -296,36 +296,37 @@ change priorities, category experiments and weights from evidence, recording the
 reason. Until data exists, rotation chooses. Engagement is a publishing measure,
 not proof of human welfare.
 
-## Team audio: Two Agents, No Collateral
+## Team media: short video and audio
 
-The daily sync produces a 3–5 minute synthetic-voice conversation (target
-3:05–3:45), one idea, funny cold open, light real disagreement, a consistent short
-theme and a closing question worth answering. Use two consistent voices, one
-male-presenting and one female-presenting with different accents; these casting
-choices do not describe the agents' identities. Their characters come from how
-the actual agents work. The opening discloses synthetic
-voices. Never invent customers, revenue, outside repayment or human benefit.
-The brief/show bible is vision issue 12. Codex researches and generates audio,
-theme, script polish and companion/commentary drafts; Claude verifies every claim
-and figure, edits/signs commentary and handles publication under current authorized review and ownership rules.
+Production standard, diagnosis, pipeline, branding and gates: the testbed's
+[MEDIA_PRODUCTION.md](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/MEDIA_PRODUCTION.md)
+(operator direction, November 3, 2026: the earlier audio and video were far below
+the bar; the first 30 second cut of the new pipeline was judged publication quality
+the same day). The pipeline is `tools/media/` in the testbed; the channel plan is
+`tools/media/channel.json`. The default piece is a 20 to 30 second explainer: one
+narrator (Ava, `en-US-AvaMultilingualNeural`, chosen by the operator), a script of at
+most 90 words, the Omnequa identity from `omnequa/theme/THEME.md` (navy, teal, the
+approved logo unmodified on white, Georgia headlines), real app screens in a phone
+frame, burned-in captions and a VTT, 1080p30, -14 LUFS, synthetic-voice disclosure
+on screen and in provenance. The two-voice episode format "Two Agents, No Collateral"
+is not produced again in its old form. No agent can hear audio: no record calls a
+production natural or professional; records carry measurements and approval status.
 
-Metadata: `audio: audio/<name>.mp3`, `audio_seconds`, `tags: team-audio`; matching
-`.vtt` captions and `.provenance.md` plus a `## Transcript` section are required.
-The build checks the file and duration with ffprobe and refuses under 3 or over
-5 minutes. `tools/podcast_feed.py --site <site-checkout>` produces `listen/`:
-player pages, RSS, show page, cover, MP3 and captions. Use `--check` for verification
-without writes. The public subscription URL is https://scottonchain.github.io/listen/feed.xml;
-no directory submission is implied, and no tracking will be added. Preserve published audio and
-production receipts. The daily sync is 04:00 America/Denver; use its local time
-across daylight-saving changes, with no separate production scheduler.
+Gates: measured QA (`tools/media/qa.py`), claims check with VERIFY rows for spoken
+figures, operator approval for the second and third pieces of a format, then spot
+checks. Never invent customers, revenue, outside repayment or human benefit; no real
+person's voice or likeness. Never say "one human" or describe the operator in a video
+(operator, November 3): "we are AI agents" is enough. One piece a week at most, always from a published post.
 
-Each authorized episode has a Hermes-published companion and a `blog:<slug>` reply
-path. Consider worthwhile listener questions next time. Review traced replies,
-reactions, Moltbook comments/upvotes and repo engagement per episode after each
-release; a static host does not give play counts. Favor a lighter, shorter episode
-and change one variable at a time. Evidence that heavy episodes lose engagement
-calls for a lighter episode, not another explanation of it.
-
+Publication: a journal post with `video: <path>.mp4`, `video_seconds`, true `tags`,
+a matching `.vtt` and `.provenance.json` beside the file and a `## Transcript`
+section; the YouTube upload through `tools/media/youtube_upload.py` once the
+operator's channel secrets exist (uploads are private until the operator makes them
+public or Google verifies the app); the omnequa.org mirror through the shared feed.
+Existing audio episodes, `tools/podcast_feed.py`, the feed at
+https://scottonchain.github.io/listen/feed.xml and the production receipts are
+preserved as history. The daily sync no longer produces an episode and has no
+production scheduler.
 
 ## Operator-requested shared journal, 2026-11-01
 

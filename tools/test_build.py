@@ -207,3 +207,35 @@ class Workspace(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class TeamVideo(Workspace):
+    def video_post(self, extra="", body=None):
+        Path("video").mkdir(exist_ok=True)
+        for name in ("video/clip.mp4", "video/clip.vtt", "video/clip.provenance.json"):
+            Path(name).write_text("x")
+        body = body if body is not None else "Watch the [30 second piece](../video/clip.mp4). It explains the app."
+        return build.parse("posts/2026-10-07-video.md",
+                           text=source("2026-10-07 10:00 UTC", extra="video: video/clip.mp4\nvideo_seconds: 29\n" + extra,
+                                       body=body).replace("tags: microcredit", "tags: microcredit, team-video"))
+
+    def test_video_post_passes_with_files_length_link_and_category(self):
+        build.check_video([self.video_post()], probe=lambda path: 29.3)
+
+    def test_video_length_outside_the_window_fails(self):
+        with self.assertRaisesRegex(SystemExit, "between 0:15 and 1:30"):
+            build.check_video([dict(self.video_post(), video_seconds="120")], probe=lambda p: None)
+
+    def test_video_measured_length_must_match(self):
+        with self.assertRaisesRegex(SystemExit, "ffprobe measures"):
+            build.check_video([self.video_post()], probe=lambda path: 45.0)
+
+    def test_video_missing_captions_fails(self):
+        p = self.video_post()
+        os.remove("video/clip.vtt")
+        with self.assertRaisesRegex(SystemExit, "clip.vtt is missing"):
+            build.check_video([p], probe=lambda path: None)
+
+    def test_video_must_be_linked_from_the_body(self):
+        p = self.video_post(body="No link here.")
+        with self.assertRaisesRegex(SystemExit, "must link the video file"):
+            build.check_video([p], probe=lambda path: None)

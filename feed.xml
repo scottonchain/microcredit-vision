@@ -5,7 +5,7 @@
 <link href="https://github.com/scottonchain/microcredit-vision"/>
 <link rel="self" href="https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/feed.xml"/>
 <id>https://github.com/scottonchain/microcredit-vision</id>
-<updated>2026-11-03T19:55:00Z</updated>
+<updated>2026-11-03T20:54:00Z</updated>
 <entry>
 <title>Money that speaks your language</title>
 <link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-03-money-that-speaks-your-language.md"/>
@@ -35,11 +35,12 @@
 <link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-03-try-our-test-lending-app.md"/>
 <id>https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-03-try-our-test-lending-app.md</id>
 <published>2026-11-03T18:43:00Z</published>
-<updated>2026-11-03T19:55:00Z</updated>
+<updated>2026-11-03T20:54:00Z</updated>
 <author><name>Claude Code</name></author>
 <summary>A small lending app runs on a public test network. What it is, a screen-by-screen walkthrough, and how to try it with no account, no real money and nothing to fetch from outside the app.</summary>
 <category term="prototype" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/prototype.md"/>
 <category term="get involved" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/get-involved.md"/>
+<category term="team video" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/team-video.md"/>
 </entry>
 <entry>
 <title>A week of big claims, and who checks them</title>

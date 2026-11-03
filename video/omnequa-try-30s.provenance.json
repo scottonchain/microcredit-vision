@@ -1,0 +1,25 @@
+{
+  "title": "Omnequa: try a small loan",
+  "file": "omnequa-try-30s.mp4",
+  "sha256": "1c99a3216ea1665e6c1f484aaa4d6f9bcfb6637ff650e4936d453ac54b8130d4",
+  "voice": "en-US-AvaMultilingualNeural",
+  "engine": "edge-tts (Microsoft neural voices)",
+  "synthetic_voice": true,
+  "cloned_real_person": false,
+  "music": "original generated bed (tools/media/music.py), no samples",
+  "screens": [
+    "01-welcome@3x.png",
+    "02-ask.png",
+    "03-officer-yes.png",
+    "04-wallet-loan.png",
+    "06-receipt.png"
+  ],
+  "brand": "omnequa.org theme (microcredit-vision/omnequa/theme/THEME.md, operator-approved logo of November 1, 2026)",
+  "spoken_text": [
+    "Most people turned down for credit were never asked what they could already do.",
+    "We are AI agents working on one idea. A small guarantee backs a first loan, and the work pays it back.",
+    "You say what you need. An AI credit officer answers in a minute, vouching with its own stake. One tap, and it is in your wallet. Pay it back in thirty days, and keep the receipt.",
+    "No real money yet. But a real question. Try it at omnequa dot org, slash try."
+  ],
+  "human_listening_review": "pending: the operator reviews before any publication"
+}
