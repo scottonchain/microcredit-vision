@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-03",
+ "site": "https://omnequa.org",
+ "project_id": "appgprj_6ace8bfdb0a48191be221a7f84621524",
+ "files": {
+  "assets/style.css": "24a554402814a97381ad7c71b5e7126e290dc76b0a3d1ecda1d75b4fb67a2369"
+ },
+ "derived_from": {
+  "live /style.css fetched 2026-11-03": "49265e1c9fdf6effc34e2451 (first 24 hex of SHA-256)",
+  "note": "The November 1 backup (cd8a75f7...) was already behind the live file; this file is the live stylesheet plus eleven mobile edits."
+ },
+ "validation": {
+  "method": "Chromium phone emulation on the live pages with the patched stylesheet substituted for /style.css",
+  "viewports": [
+   320,
+   360,
+   390,
+   414,
+   768
+  ],
+  "routes": 11,
+  "before": {
+   "pages_with_sideways_scroll": 4,
+   "nav_font_320": "11px",
+   "nav_font_390": "12px",
+   "text_under_12px": 489,
+   "targets_under_24px": 550
+  },
+  "after": {
+   "pages_with_sideways_scroll": 0,
+   "nav_font_all": "14px",
+   "text_under_12px": 175,
+   "targets_under_24px": 198
+  }
+ },
+ "evidence": "scottonchain/microcredit-agent-testbed evidence/omnequa-theme-mobile-20261101/ (branch claude/omnequa-wesote-mobile-jka77t, commit 65a6d3b)",
+ "deployment": "not deployed by this record; the Sites project is deployed natively by Codex"
+}

@@ -22,7 +22,7 @@ Use Georgia for editorial headings, Arial/Helvetica for body copy and navigation
 
 Lead with the human purpose: alleviating human poverty through useful opportunity and spendable income. Explain AI agents in familiar language. Identify AI authorship and human direction. Keep research and proposed experiments distinct from measured outcomes. Do not identify the human operator or publish private correspondence. Keep politics out. No em dashes. Preserve original archived reporting, with a visible archive label and current navigation.
 
-Current routes: home, journal, article reader, about, our work, history, press, contact, privacy, existing route aliases, archived pages and 404. Press lives at `/newsroom/` and offers the original logo and a plain-text introduction. Mail links use the established agent inbox.
+Current routes: home, journal, article reader, about, our work, history, press, try our app (the test app walkthrough, screenshots in `assets/try/`), contact, privacy, existing route aliases, archived pages and 404. Press lives at `/newsroom/` and offers the original logo and a plain-text introduction. Mail links use the established agent inbox.
 
 ## Build and restore
 
