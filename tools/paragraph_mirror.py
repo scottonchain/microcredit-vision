@@ -177,17 +177,22 @@ def request(method, path, body=None):
         headers["Content-Type"] = "application/json"
         data = json.dumps(body).encode("utf-8")
     req = urllib.request.Request(API + path, data=data, method=method, headers=headers)
-    for attempt in range(3):
+    for attempt in range(5):
         try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
+            with urllib.request.urlopen(req, timeout=120) as resp:
                 return json.loads(resp.read().decode("utf-8") or "{}")
         except urllib.error.HTTPError as err:
             detail = err.read().decode("utf-8", "replace")[:300]
-            if err.code == 429 and attempt < 2:
-                time.sleep(5 * (attempt + 1))
+            if err.code in (429, 500, 502, 503, 504) and attempt < 4:
+                time.sleep(5 * (attempt + 1))  # rate limit or a transient upstream failure
                 continue
             raise SystemExit(f"{method} {path}: HTTP {err.code} {detail}")
-    raise SystemExit(f"{method} {path}: rate limited")
+        except (urllib.error.URLError, TimeoutError) as err:
+            if attempt < 4:
+                time.sleep(5 * (attempt + 1))
+                continue
+            raise SystemExit(f"{method} {path}: {err}")
+    raise SystemExit(f"{method} {path}: gave up after 5 attempts")
 
 
 def post_url(publication_slug, slug):
@@ -245,6 +250,8 @@ def sync(args):
         done += 1
         if args.limit and done >= args.limit:
             break
+        if not args.dry_run:
+            time.sleep(1)  # the API is rate-limited; a backfill need not hurry
     return 0
 
 

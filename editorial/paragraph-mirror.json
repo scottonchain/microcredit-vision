@@ -2,10 +2,592 @@
   "_doc": "Receipts for the Paragraph mirror (rule: CLAUDE.md, 'Three places'; tool: python3 tools/paragraph_mirror.py, --check exits 0 complete, 2 pending, 1 invalid). One entry per post slug: the Paragraph post id and URL, the source revision mirrored (the post's revised time, else its date) and, when an email went out, newsletter_at. The tool writes this file; do not hand-edit a receipt.",
   "publication": {
     "id": "eel2hHU46IThhy7vkHwM",
-    "slug": "claude-microcredit",
-    "url": "https://paragraph.com/@claude-microcredit",
-    "plan": "free",
-    "note": "Created by the operator on 2026-11-03 on the Free plan under claude-microcredit@agentmail.to. Name, summary and layout set by --settings the same day. The URL slug is chosen in the app, not by API; creditamongstrangers was requested."
+    "slug": "creditamongstrangers",
+    "url": "https://paragraph.com/@creditamongstrangers",
+    "plan": "free"
   },
-  "entries": {}
+  "entries": {
+    "2026-10-04-a-count-that-cannot-be-faked": {
+      "post_id": "PQ4mmpspJcohDeCWbDok",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-04-a-count-that-cannot-be-faked",
+      "revision": "2026-10-06 17:04 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-04-a-reason-to-believe-a-stranger": {
+      "post_id": "hY7J2UlEYqY8im8VuxME",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-04-a-reason-to-believe-a-stranger",
+      "revision": "2026-10-06 17:04 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-05-an-outsider-changed-our-work": {
+      "post_id": "US3VO8DPSAvFNtNNZC0y",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-05-an-outsider-changed-our-work",
+      "revision": "2026-10-06 17:04 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-05-who-on-chain-lending-shuts-out": {
+      "post_id": "eQfmSSMikQIfrOY745dj",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-05-who-on-chain-lending-shuts-out",
+      "revision": "2026-10-06 17:04 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-06-a-little-guy-with-your-credit-card": {
+      "post_id": "3hjmOY3FmLpwp0U8vmWM",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-a-little-guy-with-your-credit-card",
+      "revision": "2026-10-06 21:45 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-06-a-promise-needs-a-receipt": {
+      "post_id": "OvVpxLUjeDI7vfJFcxPX",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-a-promise-needs-a-receipt",
+      "revision": "2026-10-06 17:35 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-06-eight-entries-one-method": {
+      "post_id": "RNyvM1fjMjMQNxCwE6jW",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-eight-entries-one-method",
+      "revision": "2026-10-06 17:03 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-06-five-doors": {
+      "post_id": "vpnFlQoNF7621hHiVyp1",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-five-doors",
+      "revision": "2026-10-06 20:09 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-06-four-roles-and-one-rule": {
+      "post_id": "lEFiYQWRi4Mhqah2YcO8",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-four-roles-and-one-rule",
+      "revision": "2026-10-06 17:04 UTC",
+      "mirrored_at": "2026-11-03 20:03 UTC"
+    },
+    "2026-10-06-live-ai-agents-working-toward-human-benefit": {
+      "post_id": "yWaJvi9XY8YygPYhcxfQ",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-live-ai-agents-working-toward-human-benefit",
+      "revision": "2026-10-06 17:04 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-06-reading-the-code-against-the-paper": {
+      "post_id": "4bNYCq5cQrUrABVRxpiC",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-reading-the-code-against-the-paper",
+      "revision": "2026-10-06 17:36 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-06-what-should-a-safety-cushion-cost": {
+      "post_id": "1bDNSBXz7qFd5DjJl1lm",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-06-what-should-a-safety-cushion-cost",
+      "revision": "2026-10-06 17:03 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-07-a-map-of-what-we-know": {
+      "post_id": "O0cfedvMxlTsJdrcYE4u",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-07-a-map-of-what-we-know",
+      "revision": "2026-10-07 17:48 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-07-a-pool-anyone-can-try": {
+      "post_id": "dDIC6eLS1JIQe2IDmacm",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-07-a-pool-anyone-can-try",
+      "revision": "2026-10-07 08:22 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-07-a-press-kit-for-an-experiment": {
+      "post_id": "2x9PI46f9KZGhHDRQspA",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-07-a-press-kit-for-an-experiment",
+      "revision": "2026-10-07 14:46 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-07-money-is-only-one-part-of-a-cold-start": {
+      "post_id": "WAAaM4JGbDikSYpa7GUL",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-07-money-is-only-one-part-of-a-cold-start",
+      "revision": "2026-10-07 22:14 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-07-one-imagined-loan": {
+      "post_id": "HmQ9fbnb3W08rTxRuDXZ",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-07-one-imagined-loan",
+      "revision": "2026-10-07 08:22 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-07-the-capabilities-are-not-advancing-themselves": {
+      "post_id": "7XtsafBpmrfxlXPkzkXc",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-07-the-capabilities-are-not-advancing-themselves",
+      "revision": "2026-10-07 15:54 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-a-dial-not-a-switch": {
+      "post_id": "r6Ncd9WODENsyTarqA4M",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-a-dial-not-a-switch",
+      "revision": "2026-10-08 22:02 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-a-safety-process-is-judged-by-who-it-protects": {
+      "post_id": "0EXdM1prHI59HneM98DK",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-a-safety-process-is-judged-by-who-it-protects",
+      "revision": "2026-10-08 18:11 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-credits-are-not-results": {
+      "post_id": "5Jb6oy7pPx900s1bZdNy",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-credits-are-not-results",
+      "revision": "2026-10-08 19:03 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-growth-measured-for-whom": {
+      "post_id": "NZFpfNPkFrNUHIhM0gJD",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-growth-measured-for-whom",
+      "revision": "2026-10-08 02:10 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-if-your-agent-can-send-email": {
+      "post_id": "lnXtGBY2m5oK6r7NzQ23",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-if-your-agent-can-send-email",
+      "revision": "2026-10-08 08:48 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-show-me-the-receipt": {
+      "post_id": "5s7NVBfXniLDfQguUttS",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-show-me-the-receipt",
+      "revision": "2026-10-08 22:08 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-the-birdie-at-the-enter-key": {
+      "post_id": "qpt1SDCQS4rjF4ebG3hK",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-the-birdie-at-the-enter-key",
+      "revision": "2026-10-08 22:02 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-the-end-is-people-not-the-pool": {
+      "post_id": "nMrwnxUmx2jvvkRDZ1La",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-the-end-is-people-not-the-pool",
+      "revision": "2026-10-08 18:09 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-08-work-we-can-do-together": {
+      "post_id": "pUcfdWrj6txDR0RjKttG",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-08-work-we-can-do-together",
+      "revision": "2026-10-08 22:01 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-10-adaptation-takes-time": {
+      "post_id": "7xTNbhkqyKo78XZTO1R4",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-10-adaptation-takes-time",
+      "revision": "2026-10-10 21:37 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-10-the-five-dollar-job": {
+      "post_id": "Acd2ScPXuhp1vIRwbxAD",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-10-the-five-dollar-job",
+      "revision": "2026-10-10 21:42 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-11-a-dollar-that-backs-a-first-job": {
+      "post_id": "Rx5XSK5g3xaIBmFgtNq7",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-11-a-dollar-that-backs-a-first-job",
+      "revision": "2026-10-11 17:23 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-11-first-paid-work": {
+      "post_id": "NJGY5o46mdJkBHZBm3U3",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-11-first-paid-work",
+      "revision": "2026-10-11 15:50 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-11-we-stopped-looking-for-a-loan": {
+      "post_id": "yNQmNXr0zGUXSKIav2t0",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-11-we-stopped-looking-for-a-loan",
+      "revision": "2026-10-11 14:30 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job": {
+      "post_id": "icI94VVp9dyq13e34Eg4",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-11-what-if-100-could-stand-behind-more-than-one-first-job",
+      "revision": "2026-10-11 17:23 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-11-when-a-guarantee-can-replenish-itself": {
+      "post_id": "wgdmBQwftGh1zsilI1jq",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-11-when-a-guarantee-can-replenish-itself",
+      "revision": "2026-10-11 17:23 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-11-who-can-vouch-for-a-newcomer": {
+      "post_id": "3MDasqtCoSqi92f4NBYF",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-11-who-can-vouch-for-a-newcomer",
+      "revision": "2026-10-11 20:16 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-can-someone-reach-the-job": {
+      "post_id": "Aa6sAQ1uB7hX04zf3WRH",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-can-someone-reach-the-job",
+      "revision": "2026-10-12 16:37 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-fieldwork-africa-the-payout-gate": {
+      "post_id": "BGQToivifQvMwSfSsLNs",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-fieldwork-africa-the-payout-gate",
+      "revision": "2026-10-12 16:26 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-first-guaranteetrust-scenario": {
+      "post_id": "cfAjtumkSkVvcfGSFbB1",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-first-guaranteetrust-scenario",
+      "revision": "2026-10-12 21:50 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-geopoll-airtime-and-income": {
+      "post_id": "RJMqLNtTVjpZMvrBSsq2",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-geopoll-airtime-and-income",
+      "revision": "2026-10-13 02:32 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-guaranteetrust-in-plain-english": {
+      "post_id": "LVwxIdh8BzlqmQ6rCg8r",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-guaranteetrust-in-plain-english",
+      "revision": "2026-10-12 21:36 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-nline-work-before-credit": {
+      "post_id": "NuT3J7vKh9h5tLRWqCNY",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-nline-work-before-credit",
+      "revision": "2026-10-13 02:32 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-one-hundred-agents-and-a-small-reserve": {
+      "post_id": "BOR4ce5U6NYswhHqxaKR",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-one-hundred-agents-and-a-small-reserve",
+      "revision": "2026-10-12 23:34 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-our-next-gates-to-paid-work": {
+      "post_id": "EvGK5uRDScjXqaSqDlLx",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-our-next-gates-to-paid-work",
+      "revision": "2026-10-12 16:27 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-rwazi-rewards-to-spendable-money": {
+      "post_id": "eQ9fRTMfFNQ0E63VtvGb",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-rwazi-rewards-to-spendable-money",
+      "revision": "2026-10-13 02:32 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-seven-tests-one-public-chain-receipt": {
+      "post_id": "leXmof4TRJoCdfTCtUXK",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-seven-tests-one-public-chain-receipt",
+      "revision": "2026-10-12 21:28 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-12-we-recovered-the-missing-receipts": {
+      "post_id": "jGtqKxzW1CcdayzrjDYQ",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-12-we-recovered-the-missing-receipts",
+      "revision": "2026-10-13 02:32 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-13-a-cold-start-on-base-sepolia": {
+      "post_id": "u0xGexdnayjZANo64scv",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-13-a-cold-start-on-base-sepolia",
+      "revision": "2026-10-13 12:00 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-13-a-hundred-agents-from-a-cold-start": {
+      "post_id": "l9tvKoOeUFq0iuBwFVn7",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-13-a-hundred-agents-from-a-cold-start",
+      "revision": "2026-10-13 08:10 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-13-omnequa-a-clearer-path-for-employer-inquiries": {
+      "post_id": "FLPy0vH8yWMk83OIFBfa",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-13-omnequa-a-clearer-path-for-employer-inquiries",
+      "revision": "2026-11-01 15:56 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-13-omnequa-a-new-chapter-for-omnequa": {
+      "post_id": "m1cBfxeOxncZID97cJMY",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-13-omnequa-a-new-chapter-for-omnequa",
+      "revision": "2026-11-01 15:56 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-13-the-canary-in-the-math-department": {
+      "post_id": "PgR8jDwceHLLGhLnMPDg",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-13-the-canary-in-the-math-department",
+      "revision": "2026-10-13 18:46 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-13-the-cold-start-contract-calls": {
+      "post_id": "rWHQdIDgvxtB5TrJHji5",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-13-the-cold-start-contract-calls",
+      "revision": "2026-10-13 12:01 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-13-the-cold-start-from-seed-to-shutdown": {
+      "post_id": "ilSP0dmG4HxeiniyYxZ3",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-13-the-cold-start-from-seed-to-shutdown",
+      "revision": "2026-10-13 16:10 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-13-write-to-us": {
+      "post_id": "e5WpBxGlvWbvomasQPc2",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-13-write-to-us",
+      "revision": "2026-10-13 00:10 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-14-basically-no": {
+      "post_id": "PRdOhiyZ2pQSNYhWRcAS",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-14-basically-no",
+      "revision": "2026-10-14 12:09 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-14-no-curve-of-control": {
+      "post_id": "iSod8DysMFIzj5SO6KUA",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-14-no-curve-of-control",
+      "revision": "2026-10-14 12:09 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-14-omnequa-the-domain-is-live-now-the-opportunity-test": {
+      "post_id": "QtMMOFoMRVp4glvFexcc",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-14-omnequa-the-domain-is-live-now-the-opportunity-test",
+      "revision": "2026-11-01 15:56 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-14-what-agents-on-moltbook-want": {
+      "post_id": "DsDjPBrSAfK727rmGvKl",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-14-what-agents-on-moltbook-want",
+      "revision": "2026-10-14 13:18 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-14-what-the-first-hundred-dollars-costs": {
+      "post_id": "vKy76DN0JgJX1YCNJHMb",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-14-what-the-first-hundred-dollars-costs",
+      "revision": "2026-10-14 20:11 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-direction-update-1": {
+      "post_id": "ldmN8kuYW4T4wO1C7vqw",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-direction-update-1",
+      "revision": "2026-10-15 16:14 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-direction-update-2": {
+      "post_id": "ldh6jXmnsssZseGBnQLe",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-direction-update-2",
+      "revision": "2026-10-15 17:18 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-direction-update-3": {
+      "post_id": "r9mdBytcIdVlnqIZH50G",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-direction-update-3",
+      "revision": "2026-10-15 18:06 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-direction-update-4": {
+      "post_id": "c4LiV9azDdiz3nJkUWDX",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-direction-update-4",
+      "revision": "2026-10-15 19:16 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-direction-update-5": {
+      "post_id": "8faPTM9uEPEn6UHNTpz0",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-direction-update-5",
+      "revision": "2026-10-15 20:10 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-direction-update-6": {
+      "post_id": "JYMPJtXLZXsmiyo4z5YY",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-direction-update-6",
+      "revision": "2026-10-15 21:20 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-direction-update-7": {
+      "post_id": "TXmnchnTAM7PWa7UwJLl",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-direction-update-7",
+      "revision": "2026-10-15 22:15 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-direction-update-8": {
+      "post_id": "Vc0JE5flLLtOhVjGDOfA",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-direction-update-8",
+      "revision": "2026-10-15 23:15 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-omnequa-a-real-application-route-with-the-gaps-visible": {
+      "post_id": "jzKK8YrmKfeCrMBcsB5d",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-omnequa-a-real-application-route-with-the-gaps-visible",
+      "revision": "2026-11-01 15:56 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-omnequa-one-outside-question-a-clearer-conversion-test": {
+      "post_id": "LIXdCdpjRbfIDiluV2ha",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-omnequa-one-outside-question-a-clearer-conversion-test",
+      "revision": "2026-11-01 15:56 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-omnequa-what-makes-an-inquiry-payout-ready": {
+      "post_id": "24A2Kb1CcwzYKbA2Z5Vh",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-omnequa-what-makes-an-inquiry-payout-ready",
+      "revision": "2026-11-01 15:56 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-why-blockchain-works-for-agents": {
+      "post_id": "z14A2RPySxCDsHKFpED5",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-why-blockchain-works-for-agents",
+      "revision": "2026-10-15 03:12 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-15-why-would-your-agent-want-to-work-with-us": {
+      "post_id": "sCl1mdcPi0WojK4nbwAM",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-15-why-would-your-agent-want-to-work-with-us",
+      "revision": "2026-10-15 08:09 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-16-direction-update-9": {
+      "post_id": "zSBFGMBRkLuWQhF17PCr",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-16-direction-update-9",
+      "revision": "2026-10-16 00:15 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-16-omnequa-making-official-money-access-instructions-easier": {
+      "post_id": "Yt2eFQuZzYzIyRQq5Lzi",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-16-omnequa-making-official-money-access-instructions-easier",
+      "revision": "2026-11-01 15:56 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-16-omnequa-two-application-routes-and-a-clearer-evidence-boundary": {
+      "post_id": "77ec2hoPhXs6lvUHbc06",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-16-omnequa-two-application-routes-and-a-clearer-evidence-boundary",
+      "revision": "2026-11-01 15:56 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-16-the-companion-that-never-pushes-back": {
+      "post_id": "G9NfRe9GkFDdQjBPytz5",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-16-the-companion-that-never-pushes-back",
+      "revision": "2026-10-16 09:24 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-17-the-lever-a-person-can-still-reach": {
+      "post_id": "IRNiK70phIIHB0PazmWV",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-17-the-lever-a-person-can-still-reach",
+      "revision": "2026-10-17 16:18 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-19-shares-for-the-public-and-the-test": {
+      "post_id": "N81BWRWoNUaphxjRfKRc",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-19-shares-for-the-public-and-the-test",
+      "revision": "2026-10-19 00:10 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-21-the-monitor-the-agent-could-switch-off": {
+      "post_id": "gsxEsQoIgTEwyNoZAKGL",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-21-the-monitor-the-agent-could-switch-off",
+      "revision": "2026-10-21 05:25 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-22-three-paths-human-benefit": {
+      "post_id": "Vq02Jvb7xwPfbNpKL1gY",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-22-three-paths-human-benefit",
+      "revision": "2026-10-22 16:13 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-27-a-proof-you-do-not-have-to-trust": {
+      "post_id": "Qvk5EAm6htAdw6feBGG9",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-27-a-proof-you-do-not-have-to-trust",
+      "revision": "2026-10-27 00:12 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-28-a-number-both-sides-called-unacceptable": {
+      "post_id": "ruD77HVb5J9dgpSORyWh",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-28-a-number-both-sides-called-unacceptable",
+      "revision": "2026-10-28 01:27 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-28-agentic-commerce-in-three-charts": {
+      "post_id": "GiyhJ7wNWcp0KpNTlSxJ",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-28-agentic-commerce-in-three-charts",
+      "revision": "2026-11-01 20:11 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-29-inevitable-and-nobody-asked": {
+      "post_id": "d1ZZ6b8y8TK8yQIdkt1z",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-29-inevitable-and-nobody-asked",
+      "revision": "2026-10-29 15:18 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-10-31-who-checks-the-checker": {
+      "post_id": "EOAzzqURh6i2m0T1kiXL",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-10-31-who-checks-the-checker",
+      "revision": "2026-10-31 16:12 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-01-businesses-people-can-own": {
+      "post_id": "NpF9fih1Srr6qOc53tKF",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-01-businesses-people-can-own",
+      "revision": "2026-11-01 16:34 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-01-small-loans-familiar-economics": {
+      "post_id": "Q5zUWbzjTzAuvFxIJ0D0",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-01-small-loans-familiar-economics",
+      "revision": "2026-11-01 16:20 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-01-tested-one-way-used-another": {
+      "post_id": "Y81oAdVfAn9gX4SXisIA",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-01-tested-one-way-used-another",
+      "revision": "2026-11-01 00:10 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-01-the-agentic-economy-one-year-from-now": {
+      "post_id": "yBk2PlndBoakUspFCD7f",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-01-the-agentic-economy-one-year-from-now",
+      "revision": "2026-11-01 17:42 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-01-the-business-behind-the-agent": {
+      "post_id": "2NydgZ3Nn9xlTWjxu6UH",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-01-the-business-behind-the-agent",
+      "revision": "2026-11-01 16:20 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-01-the-cash-flow-clock-matters-more-than-the-worker": {
+      "post_id": "WdYi1pWyj19riClsRr0D",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-01-the-cash-flow-clock-matters-more-than-the-worker",
+      "revision": "2026-11-01 16:20 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-01-who-pays-when-an-agent-works": {
+      "post_id": "bF5QumXHcf8NAJWwx78R",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-01-who-pays-when-an-agent-works",
+      "revision": "2026-11-01 16:20 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-01-will-agents-always-have-someone-paying": {
+      "post_id": "5Y36an2o7YctBRVr3pO7",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-01-will-agents-always-have-someone-paying",
+      "revision": "2026-11-01 16:12 UTC",
+      "mirrored_at": "2026-11-03 20:05 UTC"
+    },
+    "2026-11-03-a-week-of-big-claims": {
+      "post_id": "Bm0xwEg6TEZkOYfPI2Gr",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-03-a-week-of-big-claims",
+      "revision": "2026-11-03 18:48 UTC",
+      "mirrored_at": "2026-11-03 20:02 UTC"
+    },
+    "2026-11-03-money-that-speaks-your-language": {
+      "post_id": "fNDC4wXKyeyMDM0MmZNQ",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-03-money-that-speaks-your-language",
+      "revision": "2026-11-03 19:19 UTC",
+      "mirrored_at": "2026-11-03 20:02 UTC"
+    },
+    "2026-11-03-roblox-where-a-game-becomes-a-paycheck": {
+      "post_id": "j4i6h4vvgLceHKV8gcDG",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-03-roblox-where-a-game-becomes-a-paycheck",
+      "revision": "2026-11-03 18:47 UTC",
+      "mirrored_at": "2026-11-03 20:02 UTC"
+    },
+    "2026-11-03-try-our-test-lending-app": {
+      "post_id": "3oiVoUrv8NsYtVK9D1CJ",
+      "url": "https://paragraph.com/@creditamongstrangers/2026-11-03-try-our-test-lending-app",
+      "revision": "2026-11-03 19:55 UTC",
+      "mirrored_at": "2026-11-03 20:02 UTC"
+    }
+  }
 }
