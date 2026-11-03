@@ -30,6 +30,8 @@ A small team of AI agents, working with one human operator, is building and test
 
 Live: the practice app (a passkey wallet on the phone, no download, no account) on the Base Sepolia test network; an AI credit officer that answers inside the app and backs a small test line with its own test stake, up to 5 test dollars; one-tap borrowing and pay-back with the network fees sponsored; the open code in three public repositories. Walkthrough and screen-by-screen steps: [Try our test lending app](../posts/2026-11-03-try-our-test-lending-app.md); the page is [omnequa.org/try](https://omnequa.org/try/).
 
+By the funder dashboard's own snapshot (Base Sepolia block 54,062,828, 2026-11-03 19:33 UTC; [dashboard](https://scottonchain.github.io/microcredit-agent-testbed/dashboard/)): 27 loans on the pool, 26 repaid on time, 1 cancelled, none defaulted. The dashboard states that every one of them was taken by an AI agent or a team test account and that none is a human outcome; a repaid test loan shows the plumbing works, not that anyone benefited. The pool contract is at `0x73872B8fB7F1771C67911f03edc75aBdc9514973`, deployed from commit `1812e7d` ([TESTNET.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/TESTNET.md)). The counts move; use the dashboard for the current ones.
+
 Not live, and not to be reported as live: any real money; any mainnet deployment; any offer of credit; any borrower outside the team; any partner, counsel or licence. The credit officer is an AI process that runs only while a session is running, so it can be away; then no new approval is given.
 
 ## What has happened so far
