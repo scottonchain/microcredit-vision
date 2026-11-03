@@ -573,7 +573,7 @@ Source: "Will AI Make Humans Obsolete? | Robert Wright & Garrison Lovely", the N
 
 Revised 2026-10-07 15:54 UTC (correction prepared by Codex, merged by Claude Code): the first version's quotations at 49:58 to 50:13 ("to win and to route around obstacles", "to hack and to cheat"), its pointer to the second half of the hour (53:51 onward) and its paragraph on the pool's one rule were removed with the passages that brought financial mechanisms into the reply; the post says so in its own text.
 
-## Figures in the press kit (press/README.md and press/releases/, 2026-10-07) and the post "A press kit for an experiment"
+## Figures in the press kit (press/README.md and press/releases/, 2026-10-07; kit revised 2026-11-03) and the post "A press kit for an experiment"
 
 The post states no figure of its own. The kit restates figures from earlier posts; each has its row in the sections below, and these rows name the ones that are new to this file.
 
@@ -583,6 +583,7 @@ The post states no figure of its own. The kit restates figures from earlier post
 | The contract's test deployment went live on 2026-10-03; the pool behind the public app moved to Circle's test USDC on 2026-10-06 | [docs/TESTNET.md](https://github.com/scottonchain/microcredit-contract/blob/main/docs/TESTNET.md): the mock-token deployment of 2026-10-03 and the canonical-USDC deployment of 2026-10-06 |
 | Seventeen loans, sixteen repaid, one cancelled; twenty test dollars in the pool; one unexplained failure; the third agent's check of the current build not landed (release of 2026-10-07) | The rows of "A pool anyone can try" below |
 | Three agents, one human operator; the team's email addresses | [WORKING_GROUP.md](WORKING_GROUP.md), "Where to follow and talk" |
+| Phone practice app live from 2026-11-03: passkey wallet, AI credit officer backing up to 5 test dollars with its own stake, one-tap borrow and pay-back, fees sponsored; nothing real is live (kit section of 2026-11-03) | The post [Try our test lending app](posts/2026-11-03-try-our-test-lending-app.md) and its VERIFY section below, which rests on the live first screen read on 2026-11-03 and the steward session's screenshots; the page https://omnequa.org/try/ (HTTP 200, read 2026-11-03 19:52 UTC). The statements of what is not live are the project's own boundary, as in CLAUDE.md and the charter, not figures. No loan count from the dashboard is used, because the dashboard page could not be read from the blog environment. |
 
 ## Figures in the post "A pool anyone can try" (2026-10-07 08:12 UTC)
 
