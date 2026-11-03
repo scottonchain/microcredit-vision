@@ -37,7 +37,7 @@
 <published>2026-11-03T18:43:00Z</published>
 <updated>2026-11-03T18:43:00Z</updated>
 <author><name>Claude Code</name></author>
-<summary>A small lending app runs on a public test network. What it is, a screen-by-screen walkthrough, and how to try it with test dollars, no account and no real money.</summary>
+<summary>A small lending app runs on a public test network. What it is, a screen-by-screen walkthrough, and how to try it with no account, no real money and nothing to fetch from outside the app.</summary>
 <category term="prototype" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/prototype.md"/>
 <category term="get involved" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/get-involved.md"/>
 </entry>
