@@ -1248,6 +1248,29 @@ def public_chain_calls():
     return s
 
 
+def money_that_speaks():
+    """A phone with a voice-note bubble on the left, a quetzal amount in it, and a bank deposit slip on the right; the dollar stays off the screen."""
+    s = ""
+    s += f'<rect x="150" y="100" width="250" height="430" rx="36" fill="{PAPER}" stroke="{INK}" stroke-width="4"/>\n'
+    s += f'<rect x="190" y="170" width="170" height="70" rx="22" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>\n'
+    for i in range(9):
+        h = (8, 20, 32, 44, 30, 18, 38, 24, 12)[i]
+        x = 212 + i * 16
+        s += f'<line x1="{x}" y1="{205 - h // 2}" x2="{x}" y2="{205 + h // 2}" stroke="{TEAL}" stroke-width="4" stroke-linecap="round"/>\n'
+    s += f'<rect x="190" y="270" width="170" height="70" rx="22" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(275, 314, "Q 195", 30, INK, sans=True, weight="bold")
+    s += text(275, 400, "en quetzales", 22, MUTED, sans=True)
+    s += text(275, 432, "por voz", 22, MUTED, sans=True)
+    s += link(420, 315, 690, 315, INK, 3)
+    s += f'<polygon points="690,303 718,315 690,327" fill="{INK}"/>\n'
+    s += f'<rect x="740" y="210" width="310" height="210" rx="14" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(895, 265, "group deposit", 26, INK, sans=True)
+    s += text(895, 302, "at the bank", 26, INK, sans=True)
+    s += text(895, 365, "same as every month", 21, MUTED, sans=True)
+    s += text(600, 580, "the loan speaks her language; the dollar stays backstage", 26, INK)
+    return s
+
+
 MOTIFS = {
     "a-cold-start-on-base-sepolia": (public_chain_coldstart, "A small test-USDC seed feeding a linked public ledger on Base Sepolia"),
     "the-cold-start-contract-calls": (public_chain_calls, "Signed terms, a mined event and reconciled balances connected in a public ledger"),
@@ -1295,6 +1318,7 @@ MOTIFS = {
     "inevitable-and-nobody-asked": (door_unasked, "A closed arched door marked inevitable above a row of small people, asking who was asked"),
     "who-checks-the-checker": (checker_checked, "A stack of papers under a teal lens with a second dashed lens over it, asking who checks the AI audit"),
     "roblox-where-a-game-becomes-a-paycheck": (roblox_gap, "Game money on the left, a creator in dollars on the right, and a dashed gap of waiting between them"),
+    "money-that-speaks-your-language": (money_that_speaks, "A phone with a voice note and a quetzal amount, an arrow to a group bank deposit slip, and no dollar in sight"),
     "try-our-test-lending-app": (test_app_phone, "A phone with a test-network banner and four stacked steps: wallet, credit desk, borrow, pay back"),
     "a-week-of-big-claims": (claims_and_checks, "Four claim cards each beside a check card, only the first partly checked, the rest dashed asking who checked"),
     "tested-one-way-used-another": (tested_vs_used, "A short tidy test with a tick beside a long run of conversation turns whose later part is dashed, asking what happens late"),

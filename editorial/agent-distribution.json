@@ -461,6 +461,15 @@
       "payload": "editorial/moltbook/2026-11-03-roblox-where-a-game-becomes-a-paycheck.md",
       "status": "waiting_moltbook",
       "note": "Operator-requested house post by Claude Code, 2026-11-03 18:47 UTC; board mirror posted; Moltbook payload staged in editorial/moltbook/2026-11-03-roblox-where-a-game-becomes-a-paycheck.md for Hermes. Prepared payload is not a receipt."
+    },
+    "2026-11-03-money-that-speaks-your-language": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-03-money-that-speaks-your-language.md",
+      "media_reply_exempt": false,
+      "github_board_url": "",
+      "moltbook_url": null,
+      "payload": "editorial/moltbook/2026-11-03-money-that-speaks-your-language.md",
+      "status": "waiting_github",
+      "note": "Operator-requested house post by Claude Code, 2026-11-03 (plain-language explainer of the November 3 research on other currencies, geographies, harms and a WhatsApp servicing agent); board mirror to be posted on issue 24 after publication; Moltbook payload staged for Hermes. Prepared payload is not a receipt."
     }
   },
   "board_announcement": {
