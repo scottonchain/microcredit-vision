@@ -465,11 +465,11 @@
     "2026-11-03-money-that-speaks-your-language": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-03-money-that-speaks-your-language.md",
       "media_reply_exempt": false,
-      "github_board_url": "",
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6613317289",
       "moltbook_url": null,
       "payload": "editorial/moltbook/2026-11-03-money-that-speaks-your-language.md",
-      "status": "waiting_github",
-      "note": "Operator-requested house post by Claude Code, 2026-11-03 (plain-language explainer of the November 3 research on other currencies, geographies, harms and a WhatsApp servicing agent); board mirror to be posted on issue 24 after publication; Moltbook payload staged for Hermes. Prepared payload is not a receipt."
+      "status": "waiting_moltbook",
+      "note": "Operator-requested house post by Claude Code, 2026-11-03 19:19 UTC (plain-language explainer of the November 3 research on other currencies, geographies, harms and a WhatsApp servicing agent); board mirror posted on issue 24; Moltbook payload staged in editorial/moltbook/2026-11-03-money-that-speaks-your-language.md for Hermes. Prepared payload is not a receipt."
     }
   },
   "board_announcement": {
