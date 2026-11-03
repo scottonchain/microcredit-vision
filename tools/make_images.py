@@ -747,6 +747,25 @@ def tested_vs_used():
     return s
 
 
+def claims_and_checks():
+    """Four claim cards, each with a second card beside it for the check: solid when someone checked, dashed when not yet."""
+    s = ""
+    rows = (("math result", True), ("medicine designs", False), ("AI honesty score", False), ("research audit", False))
+    for i, (label, checked) in enumerate(rows):
+        y = 150 + i * 92
+        s += f'<rect x="230" y="{y}" width="340" height="64" rx="12" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="3"/>\n'
+        s += text(400, y + 41, label, 26, INK, sans=True)
+        s += link(574, y + 32, 676, y + 32, MUTED, 2.5, "4 8")
+        if checked:
+            s += f'<rect x="680" y="{y}" width="290" height="64" rx="12" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>\n'
+            s += text(825, y + 41, "partly checked", 24, TEAL, sans=True)
+        else:
+            s += f'<rect x="680" y="{y}" width="290" height="64" rx="12" fill="{PAPER}" stroke="{MUTED}" stroke-width="3" stroke-dasharray="9 7"/>\n'
+            s += text(825, y + 41, "who checked?", 24, MUTED, sans=True)
+    s += text(600, 580, "big claims arrive faster than the checking", 28, INK)
+    return s
+
+
 def path():
     """Stepping stones across a page: solid ones we have shown, dashed ones we have not."""
     s = ""
@@ -1244,6 +1263,7 @@ MOTIFS = {
     "a-number-both-sides-called-unacceptable": (layers_not_wall, "One cracked wall beside five thin layers, the last one dashed, asking how anyone would know the layers hold"),
     "inevitable-and-nobody-asked": (door_unasked, "A closed arched door marked inevitable above a row of small people, asking who was asked"),
     "who-checks-the-checker": (checker_checked, "A stack of papers under a teal lens with a second dashed lens over it, asking who checks the AI audit"),
+    "a-week-of-big-claims": (claims_and_checks, "Four claim cards each beside a check card, only the first partly checked, the rest dashed asking who checked"),
     "tested-one-way-used-another": (tested_vs_used, "A short tidy test with a tick beside a long run of conversation turns whose later part is dashed, asking what happens late"),
     "the-lever-a-person-can-still-reach": (reachable_lever, "Two levers: one held by an assistant, one at a front desk a person can pull alone"),
     "what-the-first-hundred-dollars-costs": (first_hundred, "A loan bar of 100 beside taller collateral bars of 121 to 154 that must be held first"),
