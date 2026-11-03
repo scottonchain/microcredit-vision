@@ -195,6 +195,20 @@ def request(method, path, body=None):
     raise SystemExit(f"{method} {path}: gave up after 5 attempts")
 
 
+
+def replace_post(post_id, payload):
+    """Update a mirrored post. Paragraph refuses a replace unless the writer has read the post first and sends
+    the read document back with its changes (HTTP 409 otherwise); the read's timestamps come back as strings
+    and must go up as numbers."""
+    current = request("GET", f"/posts/{post_id}")
+    body = dict(current)
+    body.update(payload)
+    for key in ("publishedAt", "updatedAt"):
+        value = body.get(key)
+        if isinstance(value, str) and value.isdigit():
+            body[key] = int(value)
+    return request("PUT", f"/posts/{post_id}", body)
+
 def existing_post(publication_id, slug):
     """The published post with this slug, or None (a 404 is the normal answer)."""
     try:
@@ -242,15 +256,13 @@ def sync(args):
             print(f"would {'update' if slug in entries else 'create'} {slug}" + (" (newsletter)" if newsletter else ""))
         else:
             if slug in entries:
-                request("GET", f"/posts/{entries[slug]['post_id']}")  # Paragraph requires a read before a replace
-                result = request("PUT", f"/posts/{entries[slug]['post_id']}", payload)
+                result = replace_post(entries[slug]["post_id"], payload)
             else:
                 # An interrupted create can have succeeded server side: adopt a post with this slug
                 # rather than create a second copy with a suffixed slug.
                 existing = existing_post(me["id"], slug)
                 if existing:
-                    request("GET", f"/posts/{existing['id']}")  # Paragraph requires a read before a replace
-                    result = request("PUT", f"/posts/{existing['id']}", payload)
+                    result = replace_post(existing["id"], payload)
                 else:
                     result = request("POST", "/posts", payload)
             post_id = result.get("id") or result.get("post", {}).get("id") or entries.get(slug, {}).get("post_id")
