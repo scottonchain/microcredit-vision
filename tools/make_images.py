@@ -1443,6 +1443,37 @@ def human_owned_enterprises():
 MOTIFS["human-owned-enterprises"] = (human_owned_enterprises, "A human owner above three agent modules inside an enterprise")
 
 
+def pretend_borrowers():
+    """Thirty-two simulated people around one phone: a usability test, not a result."""
+    s = ""
+    s += text(100, 142, "OMNEQUA", 17, TEAL, anchor="start", weight="bold", sans=True)
+    s += text(100, 267, "Thirty-two pretend", 46, INK, anchor="start")
+    s += text(100, 330, "borrowers.", 46, INK, anchor="start")
+    s += link(102, 380, 176, 380, AMBER, 5)
+    s += f'<circle cx="866" cy="294" r="220" fill="{TEAL_SOFT}" opacity="0.28"/>\n'
+    # One phone in the middle: the practice app.
+    s += f'<rect x="806" y="160" width="120" height="244" rx="22" fill="#FFFDF8" stroke="{INK}" stroke-width="3"/>\n'
+    s += f'<rect x="822" y="188" width="88" height="14" rx="7" fill="{TEAL_SOFT}" opacity="0.7"/>\n'
+    s += f'<rect x="822" y="214" width="88" height="40" rx="10" fill="{AMBER_SOFT}"/>\n'
+    s += f'<rect x="822" y="330" width="88" height="30" rx="15" fill="{TEAL}"/>\n'
+    s += link(840, 276, 896, 276, MUTED, 3)
+    s += link(840, 292, 880, 292, MUTED, 3)
+    # Thirty-two simulated people, eight across and two rows above and below, as plain heads and shoulders.
+    k = 0
+    for row, y in enumerate((98, 128, 440, 470)):
+        for col in range(8):
+            cx = 690 + col * 44
+            fill = AMBER_SOFT if (row + col) % 3 == 0 else TEAL_SOFT
+            s += f'<circle cx="{cx}" cy="{y - 7}" r="7" fill="{INK}"/>\n'
+            s += f'<path d="M {cx - 12} {y + 12} C {cx - 11} {y + 1} {cx - 5} {y - 1} {cx} {y - 1} C {cx + 5} {y - 1} {cx + 11} {y + 1} {cx + 12} {y + 12} Z" fill="{fill}" stroke="{INK}" stroke-width="1.6"/>\n'
+            k += 1
+    assert k == 32
+    s += link(690, 510, 998, 510, INK, 2.5)
+    return s
+
+MOTIFS["pretend-borrowers"] = (pretend_borrowers, "Thirty-two simulated people around one phone showing a practice loan app")
+
+
 def write(name):
     if name not in MOTIFS:
         raise SystemExit(f"unknown illustration {name!r}; choose one of {', '.join(MOTIFS)}")
