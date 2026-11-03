@@ -1,6 +1,6 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-11-03 20:58 UTC",
+  "updated": "2026-11-03 21:12 UTC",
   "items": [
     {
       "id": "usability-test-32-pretend-borrowers",
@@ -13,9 +13,10 @@
         "ai-alignment",
         "how-it-works"
       ],
-      "state": "waiting",
-      "waiting_for": "a public record of the persona runs (the run log, the per-run reports or a findings file on a branch or main of the testbed repository, readable from the blog environment). The harness and scenarios are public on branch claude/d7-live-sim-app-20261101, but the p001 to p032 results are not in that tree as of 2026-11-03 20:55 UTC, so no count (32 runs, about 96 findings, 31 desk calls, 1.73 dollars) has a source to put in VERIFY.md. Once public: write the post (what the simulated people found, what changed in the app, what no fix can change: a 5 dollar practice cap does not meet a real need), labelled as AI-played personas, not real borrowers. Categories prototype and ai-alignment are closed until 2026-11-04 12:43 UTC.",
-      "ready": "2026-11-03 20:55 UTC"
+      "state": "ready",
+      "ready": "2026-11-03 20:55 UTC",
+      "draft": "editorial/staged/usability-test-32-pretend-borrowers.md",
+      "note": "Source: results-20261103 at testbed commit 4351d3f5 (FINDINGS.md, LOG.md, officer-calls.csv, reports). Counts re-read: 31 calls, 1.729 USD, 0.026 to 0.140 each. Earliest slot 2026-11-04 12:43 UTC; the 16:07 UTC tick. The staged note lists what to add at publication. Note: FINDINGS.md says every run from batch 3 ended with a loan, but LOG.md shows p013 and p014 (batch 5) got no loan; the draft follows LOG.md."
     }
   ],
   "scheduled": [],
