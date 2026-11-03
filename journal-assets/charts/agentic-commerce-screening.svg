@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="518.4pt" viewBox="0 0 864 518.4" xmlns="http://www.w3.org/2000/svg" version="1.1" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Recorded activity still needs an economic explanation</title>
+<desc id="figure-desc">42.8 percent of payment count and 8.6 percent of dollar value passed the tracker&#x27;s screens; 57.2 and 91.4 percent were flagged. Passing is not verified commerce and flagged is not proven fraud.</desc>
+ <title>Recorded activity still needs an economic explanation</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Recorded activity still needs an economic explanation</dc:title>
+    <dc:description>42.8 percent of payment count and 8.6 percent of dollar value passed the tracker's screens; 57.2 and 91.4 percent were flagged. Passing is not verified commerce and flagged is not proven fraud.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Codex; Matplotlib</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 518.4
+L 864 518.4
+L 864 0
+L 0 0
+z
+" style="fill: #f7f2e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 190.08 357.696
+L 794.88 357.696
+L 794.88 134.784
+L 190.08 134.784
+z
+" style="fill: #f7f2e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 190.08 357.696
+L 190.08 134.784
+" clip-path="url(#p274bb566a9)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="190.08" y="377.333813" transform="rotate(-0 190.08 377.333813)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 341.28 357.696
+L 341.28 134.784
+" clip-path="url(#p274bb566a9)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="341.28" y="377.333813" transform="rotate(-0 341.28 377.333813)">25%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 492.48 357.696
+L 492.48 134.784
+" clip-path="url(#p274bb566a9)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="492.48" y="377.333813" transform="rotate(-0 492.48 377.333813)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 643.68 357.696
+L 643.68 134.784
+" clip-path="url(#p274bb566a9)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="643.68" y="377.333813" transform="rotate(-0 643.68 377.333813)">75%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 794.88 357.696
+L 794.88 134.784
+" clip-path="url(#p274bb566a9)" style="fill: none; stroke: #d7cfc0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #596772" x="794.88" y="377.333813" transform="rotate(-0 794.88 377.333813)">100%</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_6">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="181.08" y="200.897088" transform="rotate(-0 181.08 200.897088)">Payment count</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1b2733" x="181.08" y="302.220724" transform="rotate(-0 181.08 302.220724)">Dollar value</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 190.08 220.909091
+L 448.898403 220.909091
+L 448.898403 170.247273
+L 190.08 170.247273
+z
+" clip-path="url(#p274bb566a9)" style="fill: #207d74"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 190.08 322.232727
+L 241.830965 322.232727
+L 241.830965 271.570909
+L 190.08 271.570909
+z
+" clip-path="url(#p274bb566a9)" style="fill: #207d74"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 448.898403 220.909091
+L 794.88 220.909091
+L 794.88 170.247273
+L 448.898403 170.247273
+z
+" clip-path="url(#p274bb566a9)" style="fill: #e2c08e"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 241.830965 322.232727
+L 794.88 322.232727
+L 794.88 271.570909
+L 241.830965 271.570909
+z
+" clip-path="url(#p274bb566a9)" style="fill: #e2c08e"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="319.489202" y="200.269119" transform="rotate(-0 319.489202 200.269119)">42.8%</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1b2733" x="621.889202" y="200.269119" transform="rotate(-0 621.889202 200.269119)">57.2%</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="215.955482" y="301.592756" transform="rotate(-0 215.955482 301.592756)">8.6%</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1b2733" x="518.355482" y="301.592756" transform="rotate(-0 518.355482 301.592756)">91.4%</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_7">
+     <path d="M 195.732 118.151286
+L 221.732 118.151286
+L 221.732 109.051286
+L 195.732 109.051286
+z
+" style="fill: #207d74"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2733" x="232.132" y="118.151286" transform="rotate(-0 232.132 118.151286)">Passed all screens</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 376.582313 118.151286
+L 402.582313 118.151286
+L 402.582313 109.051286
+L 376.582313 109.051286
+z
+" style="fill: #e2c08e"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2733" x="412.982312" y="118.151286" transform="rotate(-0 412.982312 118.151286)">Flagged by screens</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_14">
+   <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2733" x="47.52" y="41.472" transform="rotate(-0 47.52 41.472)">Recorded activity still needs an economic explanation</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #596772" x="47.52" y="69.984" transform="rotate(-0 47.52 69.984)">One Base x402 sample  |  October 9–16, 2026  |  Share of each sample total</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #596772" transform="translate(47.52 463.147234)">Source: Agent Pay Tracker, snapshot generated October 17, 2026. Checked October 28.</text>
+   <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #596772" transform="translate(47.52 479.52)">Heuristic screening, not an audit: flagged can be legitimate; passing does not prove an AI purchase.</text>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #207d74" x="190.08" y="404.352" transform="rotate(-0 190.08 404.352)">Passed: 189,329 of 442,419 payments</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #207d74" x="190.08" y="427.68" transform="rotate(-0 190.08 427.68)">Passed: $23,150 of $270,548 transferred</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p274bb566a9">
+   <rect x="190.08" y="134.784" width="604.8" height="222.912"/>
+  </clipPath>
+ </defs>
+</svg>
