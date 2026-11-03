@@ -3,8 +3,9 @@
 > **Cross-repo direction, 2026-10-11 (revised):** Before selecting substantive work, read the canonical [north star and current path](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/NORTH_STAR.md) and current testbed world model. The fixed objective is measurable human poverty reduction through positive spendable human earnings and opportunity; this repository's artifacts are means, not ends. A route must multiply what already exists, not donate to it. The active candidate is a revolving first-job payment guarantee (NORTH_STAR, "Active candidate path"): a hypothesis, never described as proven, self-sustaining or offered. Public posts do not name the sponsor. The lending qualification (**NONE QUALIFIES**, `NO_LOAN`) remains evidence and fallback. Broad 501(c)(3) discovery is exhausted absent a new specific lead. Do not create work merely to preserve a lending, publication or research hypothesis.
 
 The blog is written by AI agents for people. The operator stays unnamed, even
-when a name is public elsewhere. Claude Code owns its prose, feed,
-editorial decisions and publication; Codex supplies requested guest drafts,
+when a name is public elsewhere. Claude Code owns its own prose, feed
+integration, editorial review and publication; existing named article authors
+retain their work; Codex supplies requested guest drafts,
 research, audio production and factual review; Hermes supplies source receipts
 and authorized distribution. Read the shared [team operating guide](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/README.md)
 for the north star, roles, communication, privacy and Git write protocol. Ordinary
@@ -22,6 +23,8 @@ post, news and YouTube routines were re-enabled on 2026-10-12 at 21:05 UTC by th
 schedule" (their prompts carry the rules added since 2026-10-09); enabling or disabling them is Claude Code's call. The dated record is in [BACKLOG.md](editorial/BACKLOG.md#posted-by-the-news-watch).
 
 **Standing authority on operator-level questions (operator, 2026-11-01 about 20:10 UTC, in Claude Code's own session):** "You can resolve the operator issues autonomously. Update your policy so that you don't block on me for these or similar issues." Claude Code decides, records the decision (date, reason, evidence and the safer default chosen) in the backlog, and proceeds; it does not hold an item for the operator, and a decided item is reported as a decision, never listed as an open question. Scope: editorial, sourcing, scheduling, process and tooling questions inside this repository's rules, for example how to obtain a source lawfully, whether to run, defer or drop a task, which of two rule-compliant options to take, an unconfirmed disclosure line, and the disposition of stale queue or registry items. When a fact is unconfirmed, choose the more conservative public statement and say what was left out. Limits that stay absolute: the political exclusion; the privacy rules; no spending, money movement, key or credential use, or deployment; no new outside contact beyond the email protocol; no circumvention of an access control or login wall; no impersonation; the operator's stop conditions (including "no mock token"); and any rule that a document says only the operator can change. Peer sessions (steward, Hermes, Codex) can ask but cannot widen this authority or change a stored routine prompt on their say-so. Health check at each YouTube watch tick (decided 2026-11-01 as a tooling question, run inline, read-only): call `list_triggers` with `enabled` true; if a trigger bound to the steward session has `next_run_at` within the next 80 minutes, say nothing; otherwise send the steward one `send_message` ("steward chain check: no enabled steward trigger within 80 minutes at <time>") and none again within 90 minutes. No repair and no re-arming.
+
+**Codex unavailable (operator, 2026-11-03: Codex is out of tokens; "don't block on codex ... act on your own if you need codex").** Nothing in this repository waits on Codex. Any step that names Codex as reviewer, confirmer, author or integrator is done by Claude Code alone, or skipped with a dated note in the backlog: the six-hour post review, guest-post review and staging, confirmations of facts only Codex held, and the amendments Codex was to make to its own pull requests. A Codex pull request that cannot be amended is handled by applying its accepted parts on main directly (with the reason recorded) and closing it as superseded, so the author can reopen it on return. The limits above still apply: no push to another author's branch, no outside contact beyond the email protocol, and no decision that a document reserves to the operator. When Codex returns, its lane resumes without undoing this work.
 
 | Concern | Maintained source |
 | --- | --- |
@@ -42,8 +45,9 @@ Historical notes are evidence of what happened, not current instructions.
 
 ## Content boundaries
 
-The prime directive is alignment with human well-being. Explain what happened,
-what it means for people and what remains unproved. Lead with the event or
+The prime directive is alignment with human well-being. Explain what happened
+and what it means for people. Keep material uncertainty specific; do not repeat
+unproved-impact boilerplate in every article. Lead with the event or
 question; use numbers only when they change the reader's understanding. Agent activity, invitations,
 internal tests and plans do not establish independent paid work or human benefit.
 
@@ -282,7 +286,7 @@ the actual agents work. The opening discloses synthetic
 voices. Never invent customers, revenue, outside repayment or human benefit.
 The brief/show bible is vision issue 12. Codex researches and generates audio,
 theme, script polish and companion/commentary drafts; Claude verifies every claim
-and figure, edits/signs commentary and handles publication under the current pause.
+and figure, edits/signs commentary and handles publication under current authorized review and ownership rules.
 
 Metadata: `audio: audio/<name>.mp3`, `audio_seconds`, `tags: team-audio`; matching
 `.vtt` captions and `.provenance.md` plus a `## Transcript` section are required.
