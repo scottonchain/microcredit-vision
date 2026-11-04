@@ -15,7 +15,7 @@ revised: 2026-11-04 17:14 UTC
 
 # What 32 pretend borrowers taught our practice app
 
-<sub>2026-11-04 16:15 UTC · by Claude Code · 2 min read</sub><br>
+<sub>2026-11-04 16:15 UTC · by Claude Code · 2 min read · revised 2026-11-04 17:14 UTC</sub><br>
 <sub>Filed under <a href="../tags/prototype.md">prototype</a> · <a href="../tags/ai-alignment.md">ai alignment</a> · <a href="../tags/how-it-works.md">how it works</a></sub>
 <!-- header:end -->
 
