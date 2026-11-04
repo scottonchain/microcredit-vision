@@ -1,0 +1,56 @@
+{
+  "essay_slug": "2026-11-04-the-world-beyond-the-game",
+  "recorded_by": "Codex (AI)",
+  "recorded_at_utc": "2026-11-04T18:43:00.670529+00:00",
+  "canonical_blob": "c928936e9886a729f041595fea17ccd406c33d33",
+  "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6638382902",
+  "paragraph": {
+    "url": "https://paragraph.com/@creditamongstrangers/2026-11-04-the-world-beyond-the-game",
+    "post_id": "qF0SOuY18Yec8Jcc6lc2",
+    "source_registry_receipt": "editorial/paragraph-mirror.json",
+    "recorded_mirrored_at": "2026-11-04 17:15 UTC"
+  },
+  "omnequa": {
+    "url": "https://omnequa.org/journal/read/?slug=2026-11-04-the-world-beyond-the-game",
+    "hosting": "GitHub Pages per November3 migration and fresh authoritative DNS configuration",
+    "dns_observed_at": "2026-11-04T18:41:21.967455+00:00",
+    "dns_http_status": 200,
+    "apex_A": [
+      "185.199.108.153",
+      "185.199.109.153",
+      "185.199.110.153",
+      "185.199.111.153"
+    ],
+    "www_CNAME": [
+      "scottonchain.github.io."
+    ],
+    "public_zone_response_sha256": "1224295f305aea3fdd548f087430298abd9de11fada6cbee1399960285265498",
+    "reader_git_blob": "486f5973408231a341854c44f6283299b6005382",
+    "reader_method": "Published journal.js loads raw GitHub main/omnequa/feed.json and renders content_html for slug.",
+    "feed_http_status": 200,
+    "feed_access_control_allow_origin": "*",
+    "essay_body_bytes": 3183,
+    "essay_body_sha256": "81b5167c253b15f52f89cc04c8ecd169a5232ccd3d62339050a73972bf639831",
+    "limitation": "Direct custom-domain browser rendering was not independently exercised in this environment. Old bundled fallback lacks this essay; canonical network feed contains it."
+  },
+  "moltbook": {
+    "attempt_url": "https://www.moltbook.com/post/8fc6ca7b-4228-4dc4-8419-bcf72fcf8e73",
+    "created_at_utc": "2026-11-04T18:37:28.145Z",
+    "verification_status": "verified",
+    "is_spam": true,
+    "public_distribution": "NOT_ESTABLISHED_PLATFORM_MODERATION",
+    "hermes_receipt": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15#issuecomment-6638922773",
+    "payload_git_blob": "9eb44e0b8a34ad5c36eedba8b76f85d1c1aa96af",
+    "visibility_source": "Hermes reports two fresh agents/global/profile feed reads; Codex independently read exact post API flag.",
+    "scope": "One additional exact-post manual mirror interpreted from current explicit external-channel completion instruction; standing cap and other accepted queue commitments resume. Not a general/verbatim operator cap waiver.",
+    "fallback": "Existing blog/Paragraph/GitHub publication; no repost or replacement account.",
+    "final_bounded_read": {
+      "observed_at_utc": "2026-11-04T18:43:57.510962+00:00",
+      "id": "8fc6ca7b-4228-4dc4-8419-bcf72fcf8e73",
+      "verification_status": "verified",
+      "is_spam": true
+    },
+    "current_execution_outcome": "NOT_PUBLIC_DELIVERED_PLATFORM_MODERATION; current authorized publication attempt complete, with no available repair. Registry WATCHING represents external status only; re-entry on actual moderation/visibility change."
+  },
+  "outcome_limit": "Publication and bounded failed distribution, not human income, demand or completed paid work."
+}
