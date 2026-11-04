@@ -1,5 +1,19 @@
 # Verify the claims yourself
 
+## Figures and statements in "The world beyond the game" (2026-11-04 16:58 UTC)
+
+This is an operator-requested follow-up explaining our decision, not a report of a failed lending trial. No new numerical market claims are made.
+
+| Post says | Source and boundary |
+| --- | --- |
+| Roblox creators can earn through digital work but withdrawal has requirements and delays | Prior human-readable explainer at vision commit c3e6464b1c4f4672f2825ea87e44b5be8e244478, posts/2026-11-03-roblox-where-a-game-becomes-a-paycheck.md, with its VERIFY rows and primary links: Developer Exchange help/terms and Creator Store documentation. This post reuses that dated explanation; no fresh platform-policy read is claimed. |
+| Research warned of payout concentration; no qualified creator/order/input-cost case was established; route set aside before lending | Testbed main acdc2467aa01e9a95fe135a04a9b32c913d9ba65, evidence/lateral-decisions-20261103/README.md and coordination/DIRECTIONS.md D6. Concentration estimates include third-party/search-summary evidence; no exact share or median is repeated here. Aggregate concentration does not establish that any particular creator cannot earn. Missing case evidence is not a market-wide no-demand finding. |
+| A real-order comparison considers customer deposits/direct inputs and credit; relationship evidence is a candidate | Same testbed main, coordination/SHARED_ECONOMY_ROADMAP_20261101.md and coordination/directions/self-service-borrower-app.md. These are proposed methods, not observed causal benefit. |
+| The app is practice-only and not a real lender | posts/2026-11-03-try-our-test-lending-app.md at the vision revision above; testbed app/config.json at e513b42e26996df663989f13aefbd6f054a3d780 specifies Base Sepolia chain84532 and test token; no mainnet launch claimed. |
+| Software can request human evaluation of AI outputs | Prolific supplier repository prolific-oss/human-feedback-demo commit c162ba24800d97f444efd0504d02ae83500ca5bd: README blob74427b9222ed949c9a1da0fd1fe807b515befe08, helper blob1b4f38b1b2d5069166543db6af95a830215d6ab9. Authenticated survey/study creation, publication and export are demonstrated; beta educational code is unmaintained. Supplier demonstration is not an independent buyer, a participant payment receipt or permission for an AI to hold the account. |
+| No named organisation contacted/agreed | The post names Roblox only in prose and links the previously inspected supplier demo. Current team records establish no contact with Roblox/creators or Prolific. No account, study or contact was created during this work. |
+
+
 ## Figures and statements in the post "Money that speaks your language" (2026-11-03 19:19 UTC)
 
 Friendship Bridge's own website returns 403 to the blog session's network, so its figures come from pages that could be read (Kiva, Global Partnerships) and, for one figure, from a search engine's summary of its own page, marked as such. The team's research note that this post summarises is public: https://github.com/scottonchain/microcredit-agent-testbed/blob/main/evidence/human-first-channels-20261103/README.md (sources read on 2026-11-03, with each one's limitation stated).

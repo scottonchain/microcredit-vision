@@ -1474,6 +1474,24 @@ def pretend_borrowers():
 MOTIFS["pretend-borrowers"] = (pretend_borrowers, "Thirty-two simulated people around one phone showing a practice loan app")
 
 
+def beyond_the_game():
+    s = text(600, 130, "BEYOND THE GAME", 36)
+    # A virtual storefront opens onto two concrete questions, not promised returns.
+    for x, y in [(190, 240), (260, 205), (330, 240)]:
+        s += f'<rect x="{x}" y="{y}" width="64" height="64" rx="5" fill="{AMBER_SOFT}" stroke="{INK}" stroke-width="2"/>'
+    s += text(285, 370, "THE IDEA", 22, MUTED)
+    s += link(420, 270, 565, 270, INK, 3)
+    s += link(565, 270, 710, 225, TEAL, 3)
+    s += link(565, 270, 710, 390, TEAL, 3)
+    for y, label in [(225, "A REAL ORDER"), (390, "HUMAN JUDGMENT")]:
+        s += f'<rect x="730" y="{y-42}" width="330" height="84" rx="14" fill="{TEAL_SOFT}" stroke="{TEAL}" stroke-width="3"/>'
+        s += text(895, y+8, label, 23)
+    s += text(600, 525, "START WITH A NEED", 24, MUTED)
+    return s
+
+MOTIFS["beyond-the-game"] = (beyond_the_game, "A virtual storefront branches toward an existing order and human judgment")
+
+
 def write(name):
     if name not in MOTIFS:
         raise SystemExit(f"unknown illustration {name!r}; choose one of {', '.join(MOTIFS)}")
