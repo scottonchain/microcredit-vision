@@ -11,6 +11,16 @@ generated `omnequa/feed.json`. The website reads that feed and retains a bundled
 fallback. Import existing website-only news once using the provenance manifest;
 do not duplicate an already mirrored item. See README.md for the exact workflow.
 
+**Hosting correction, November 4, 2026:** the current domain is served by
+GitHub Pages from `scottonchain/microcredit-vision`'s `gh-pages` branch with
+`CNAME` set to `omnequa.org`, following the November 3 DNS migration in
+[testbed PR411](https://github.com/scottonchain/microcredit-agent-testbed/pull/411).
+The published journal reader fetches the current canonical `main/omnequa/feed.json`;
+article publication does not require a hosting deployment. The former Sites
+project is historical rollback context, not the current domain publication
+target. The incomplete source/theme backup and existing November 5 steward
+reconciliation handoff remain as described in [README.md](README.md).
+
 Use neutral history wording: legal, compliance and impact discovery with nonprofit
 sponsors and prospective partners concluded in fall 2026. Explain the current
 research without recurring boilerplate about unproven human outcomes. Preserve
