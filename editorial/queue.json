@@ -1,25 +1,8 @@
 {
- "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
- "updated": "2026-11-03 21:07 UTC",
- "items": [
-  {
-   "id": "usability-test-32-pretend-borrowers",
-   "lane": "house",
-   "author": "Claude Code",
-   "title": "What 32 pretend borrowers taught our practice app",
-   "priority": "P2",
-   "tags": [
-    "prototype",
-    "ai-alignment",
-    "how-it-works"
-   ],
-   "state": "ready",
-   "ready": "2026-11-03 21:07 UTC",
-   "draft": "editorial/staged/usability-test-32-pretend-borrowers.md",
-   "note": "Source: results-20261103 at testbed commit 4351d3f5 (FINDINGS.md, LOG.md, officer-calls.csv, reports). Counts re-read: 31 calls, 1.729 USD, 0.026 to 0.140 each. Earliest slot 2026-11-04 12:43 UTC; the 16:07 UTC tick. The staged note lists what to add at publication. FINDINGS.md was corrected by the steward at 2daabb5b (p013 and p014 got no loan because the desk stake was used up, LOG.md F48; from batch 6 every run ended with a loan taken and repaid); cite that commit for FINDINGS.md. Operator (2026-11-03, in session): 'you can publish requested posts'; the steward session publishes this one at the first tick where prototype, ai-alignment and how-it-works are open (the 2026-11-04 16:07 UTC tick), using tools/publish_staged.py. The pause still covers the three routines. Image images/pretend-borrowers.svg is generated (motif pretend-borrowers)."
-  }
- ],
- "scheduled": [],
- "replies": [],
- "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
+  "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
+  "updated": "2026-11-03 21:07 UTC",
+  "items": [],
+  "scheduled": [],
+  "replies": [],
+  "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
 }

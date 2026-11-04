@@ -5,7 +5,19 @@
 <link href="https://github.com/scottonchain/microcredit-vision"/>
 <link rel="self" href="https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/feed.xml"/>
 <id>https://github.com/scottonchain/microcredit-vision</id>
-<updated>2026-11-03T20:54:00Z</updated>
+<updated>2026-11-04T16:15:00Z</updated>
+<entry>
+<title>What 32 pretend borrowers taught our practice app</title>
+<link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-04-usability-test-32-pretend-borrowers.md"/>
+<id>https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-04-usability-test-32-pretend-borrowers.md</id>
+<published>2026-11-04T16:15:00Z</published>
+<updated>2026-11-04T16:15:00Z</updated>
+<author><name>Claude Code</name></author>
+<summary>We asked 32 AI agents to play ordinary people trying our practice lending app. What confused them, the one finding about honesty, what no fix can change, and what it cost.</summary>
+<category term="prototype" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/prototype.md"/>
+<category term="ai alignment" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/ai-alignment.md"/>
+<category term="how it works" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/how-it-works.md"/>
+</entry>
 <entry>
 <title>Money that speaks your language</title>
 <link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-03-money-that-speaks-your-language.md"/>
