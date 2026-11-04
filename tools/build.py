@@ -121,6 +121,8 @@ RECORDED_BREACHES = {
 # unless the operator orders another. 2026-10-11: the operator told Claude Code to publish its reviewed draft "A dollar
 # that backs a first job", and then the two revolving-guarantee posts ("authorized", 17:2x UTC) (BACKLOG, schedule changes).
 OPERATOR_ORDERED_OUT_OF_BAND = {
+    # Current November4 completion instruction plus the specific requested Roblox decision essay; BACKLOG records the scoped interpretation.
+    "2026-11-04-the-world-beyond-the-game",
     # Direct November 1 request to explore and publish the human-owned enterprise proposal.
     "2026-11-01-businesses-people-can-own",
     # Explicit long-form forecast and autonomous cross-publication order, Nov1.
