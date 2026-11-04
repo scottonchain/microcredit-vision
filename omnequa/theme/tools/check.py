@@ -20,7 +20,7 @@ for p in OUT.rglob('*.html'):
  if p.name.startswith('qa-'):continue
  source=p.read_text()
  obj=Page();obj.feed(source);pages[p]=obj
- if 'class="site-header"' not in source or 'class="site-footer"' not in source or '/brand/omnequa-logo.png' not in source:errors.append(f'{p}: shared theme missing')
+ if 'class="site-header"' not in source or 'class="site-footer"' not in source or '/brand/omnequa-logo-20261104.png' not in source:errors.append(f'{p}: shared theme missing')
  if obj.h1!=1 or obj.lang!='en' or not obj.title or not obj.canonical:errors.append(f'{p}: metadata/headings')
  if len(obj.ids)!=len(set(obj.ids)):errors.append(f'{p}: duplicate IDs')
 for p,obj in pages.items():
@@ -41,6 +41,6 @@ for remote,local in f.get('image_mirrors',{}).items():
 assert set(f.get('pending_publication_slugs',[])).issubset({p['slug'] for p in f['posts']})
 assert (ROOT/'assets/journal.js').read_text()==(OUT/'journal.js').read_text()
 assert 'Legal, compliance and impact discovery with nonprofit sponsors and prospective partners concluded in fall 2026.' in (OUT/'history/index.html').read_text()
-assert (ROOT/'assets/brand/omnequa-logo.png').read_bytes()==(OUT/'brand/omnequa-logo.png').read_bytes()
+assert (ROOT/'assets/brand/omnequa-logo-20261104.png').read_bytes()==(OUT/'brand/omnequa-logo.png').read_bytes()
 if errors:raise SystemExit('\n'.join(errors))
 print(f'PASS: {len(pages)} pages, links and anchors, metadata, feeds, unique posts, neutral history.')

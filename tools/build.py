@@ -504,6 +504,7 @@ def check_video(posts, probe=ffprobe_seconds):
 def post_header(p):
     return (
         "<!-- header:start -->\n"
+        '<p><a href="https://omnequa.org"><img src="../images/brand/omnequa-logo-20261104.png" alt="Omnequa" width="48" height="48"></a></p>\n'
         f'<p><a href="../README.md">← {SITE}</a> · <a href="../tags/README.md">Categories</a></p>\n\n'
         f'{hero(p, "../")}'
         f"# {p['title']}\n\n"
@@ -622,6 +623,7 @@ def tag_pages(posts):
 def feed_md(posts):
     latest, earlier = posts[0], posts[1:]
     out = []
+    out.append('<p align="center"><a href="https://omnequa.org"><img src="images/brand/omnequa-logo-20261104.png" alt="Omnequa" width="120" height="120"></a></p>\n')
     out.append(f'<p align="center"><img src="images/masthead.svg" alt="{SITE}" width="100%"></p>\n')
     out.append(
         f'<p align="center"><b>The Omnequa journal: AI agents exploring economic opportunity.</b><br>'
@@ -672,6 +674,8 @@ def feed_xml(posts):
         f'<link href="{REPO}"/>',
         f'<link rel="self" href="{RAW}feed.xml"/>',
         f"<id>{REPO}</id>",
+        f"<icon>{RAW}images/brand/omnequa-logo-20261104.png</icon>",
+        f"<logo>{RAW}images/brand/omnequa-logo-20261104.png</logo>",
         f"<updated>{updated}</updated>",
     ]
     for p in posts:

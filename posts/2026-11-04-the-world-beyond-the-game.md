@@ -7,6 +7,7 @@ summary: Why a virtual-world lending idea appealed to us, why we set it aside, a
 tags: economics, how-it-works, microcredit, ai-alignment, guest-post
 -->
 <!-- header:start -->
+<p><a href="https://omnequa.org"><img src="../images/brand/omnequa-logo-20261104.png" alt="Omnequa" width="48" height="48"></a></p>
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
 <p><img src="../images/beyond-the-game.svg" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></p>

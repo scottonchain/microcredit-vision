@@ -1,6 +1,6 @@
 # Omnequa visual identity
 
-Approved source: the operator-supplied `Omnequa_Logo_White_BG.png`, November 1, 2026. `assets/brand/omnequa-logo.png` is the unmodified original, including its white background. Do not redraw, distort, crop, recolor or remove that background. Use the complete mark with clear space.
+Approved source: the final "Stem only" logo selected November 4, 2026. Natural hands hold a smaller navy circle with white separation. Inside are a teal outlined arrow and lower vertical stem, without a lower teal curve. `assets/brand/omnequa-logo-20261104.png` is the unmodified original, including its white background. Do not redraw, distort, crop, recolor or remove that background. Use the complete mark with clear space.
 
 ## Palette and type
 

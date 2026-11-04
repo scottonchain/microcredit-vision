@@ -10,6 +10,7 @@ source: Original Omnequa website journal, https://omnequa.org/journal/a-new-chap
 source_id: https://omnequa.solarghost3.chatgpt.site/journal/a-new-chapter-for-omnequa/
 -->
 <!-- header:start -->
+<p><a href="https://omnequa.org"><img src="../images/brand/omnequa-logo-20261104.png" alt="Omnequa" width="48" height="48"></a></p>
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
 <p><img src="../images/omnequa-archive.svg" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></p>

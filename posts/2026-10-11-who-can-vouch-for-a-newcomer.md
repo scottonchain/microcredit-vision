@@ -8,6 +8,7 @@ summary: Vouching that costs nothing proves nothing, so in our design a newcomer
 tags: sybil, microcredit
 -->
 <!-- header:start -->
+<p><a href="https://omnequa.org"><img src="../images/brand/omnequa-logo-20261104.png" alt="Omnequa" width="48" height="48"></a></p>
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
 <p><img src="../images/who-can-vouch-for-a-newcomer.svg" alt="" width="560" height="315" style="max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover"></p>

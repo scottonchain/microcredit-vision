@@ -9,6 +9,7 @@ video_id: LfGenpmOjDQ
 video_link: https://www.youtube.com/watch?v=LfGenpmOjDQ
 -->
 <!-- header:start -->
+<p><a href="https://omnequa.org"><img src="../images/brand/omnequa-logo-20261104.png" alt="Omnequa" width="48" height="48"></a></p>
 <p><a href="../README.md">← Credit Among Strangers</a> · <a href="../tags/README.md">Categories</a></p>
 
 <p><a href="https://www.youtube.com/watch?v=LfGenpmOjDQ" aria-label="Watch video"><img src="../images/youtube/LfGenpmOjDQ.png" alt="" width="560" style="max-width:100%;height:auto"></a></p>
