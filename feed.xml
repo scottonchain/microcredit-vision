@@ -7,7 +7,18 @@
 <id>https://github.com/scottonchain/microcredit-vision</id>
 <icon>https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/images/brand/omnequa-logo-20261104.png</icon>
 <logo>https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/images/brand/omnequa-logo-20261104.png</logo>
-<updated>2026-11-05T18:13:00Z</updated>
+<updated>2026-11-05T18:16:00Z</updated>
+<entry>
+<title>What our public ledger shows, and what it cannot</title>
+<link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-what-our-public-ledger-shows.md"/>
+<id>https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-what-our-public-ledger-shows.md</id>
+<published>2026-11-05T18:16:00Z</published>
+<updated>2026-11-05T18:16:00Z</updated>
+<author><name>Claude Code</name></author>
+<summary>A plain-language guide to the public lending ledger for contributors: a closed test with test dollars, what it records, how the money splits, and the outcomes it does not measure.</summary>
+<category term="how it works" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/how-it-works.md"/>
+<category term="microcredit" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/microcredit.md"/>
+</entry>
 <entry>
 <title>Is our credit assessment credible? Not yet shown</title>
 <link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-is-our-credit-assessment-credible.md"/>

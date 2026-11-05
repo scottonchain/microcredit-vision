@@ -1,8 +1,8 @@
 # Verify the claims yourself
 
-## Statements in "What our public ledger shows, and what it cannot" (draft for 2026-11-05 18:00 UTC)
+## Statements in "What our public ledger shows, and what it cannot" (published 2026-11-05 18:16 UTC)
 
-Draft for non-author factual review. The figures are the dated snapshot at block 54145172 (2026-11-04 00:08:23 UTC), kept in the corrected dashboard as historical and not re-verified. Sources are read at testbed PR 445 head 63218537ef4dcb15b69bec31c4fadf1186b16863 (open, independently reviewed, not merged or live).
+Independently accepted before publication (vision#59 comment 6660247977). The figures are the dated snapshot at block 54145172 (2026-11-04 00:08:23 UTC), kept in the corrected dashboard as historical and not re-verified. Sources are read at testbed PR 445 head 63218537ef4dcb15b69bec31c4fadf1186b16863 (open, independently reviewed, not merged or live).
 
 | Post says | Source and boundary |
 | --- | --- |
