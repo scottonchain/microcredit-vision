@@ -196,16 +196,58 @@ def request(method, path, body=None):
 
 
 
-def replace_post(post_id, payload):
-    """Update a mirrored post. Paragraph refuses a replace unless the writer has read the post first and sends
-    the read document back with its changes (HTTP 409 otherwise); the read's timestamps come back as strings
-    and must go up as numbers."""
-    # The plain read returns metadata only; the replace guard wants the FULL document, which `?includeContent=true`
-    # returns (markdown, staticHtml, json). Read it, refuse to replace a body that carries blocks markdown cannot
-    # express (the conversion is lossy), then send only the fields we mean to change.
+# Structured-content types that a markdown replacement reproduces without loss. Anything else (embeds, cards,
+# buttons, callouts, unknown marks) is lost by a markdown replace, so it needs a person to inspect the post.
+LOSSLESS_NODES = {"doc", "paragraph", "text", "heading", "bulletList", "orderedList", "listItem", "blockquote",
+                  "codeBlock", "hardBreak", "horizontalRule"}
+LOSSLESS_MARKS = {"bold", "italic", "link", "code", "strike"}
+
+
+def lossy_problems(structured):
+    """Why a markdown replacement of this stored document could lose content; an empty list means none found.
+    Fails closed: missing, unparseable or malformed structured content is a problem."""
+    if isinstance(structured, str):
+        try:
+            structured = json.loads(structured)
+        except ValueError:
+            return ["structured content is not valid JSON"]
+    if not isinstance(structured, dict):
+        return ["no structured content to compare against"]
+    problems = []
+
+    def walk(node):
+        if not isinstance(node, dict) or not isinstance(node.get("type"), str):
+            problems.append("malformed node")
+            return
+        if node["type"] not in LOSSLESS_NODES:
+            problems.append(f"node type {node['type']}")
+        for mark in node.get("marks") or []:
+            if not isinstance(mark, dict) or mark.get("type") not in LOSSLESS_MARKS:
+                problems.append("mark " + str(mark.get("type") if isinstance(mark, dict) else mark))
+        content = node.get("content")
+        if content is not None and not isinstance(content, list):
+            problems.append("malformed content")
+            return
+        for child in content or []:
+            walk(child)
+
+    walk(structured)
+    return sorted(set(problems))
+
+
+def replace_post(post_id, payload, accept_lossy=()):
+    """Update a mirrored post. The plain read returns metadata only; the replace guard wants the FULL document, which
+    `?includeContent=true` returns (markdown, staticHtml, json). Read it, fail closed if it cannot be shown that a
+    markdown replacement loses nothing (unsupported blocks or marks, missing or malformed structured content; a
+    person can accept a named post with --accept-lossy POST_ID after inspecting it), then send only the fields we
+    mean to change. The read's timestamps come back as strings and must go up as numbers."""
     current = request("GET", f"/posts/{post_id}?includeContent=true")
     if not isinstance(current.get("markdown"), str):
         raise SystemExit(f"{post_id}: the full document read returned no markdown; not replacing")
+    problems = lossy_problems(current.get("json"))
+    if problems and post_id not in set(accept_lossy):
+        raise SystemExit(f"{post_id}: a markdown replacement could lose content ({'; '.join(problems)}); "
+                         f"inspect the post, then rerun with --accept-lossy {post_id}")
     body = {k: v for k, v in current.items() if k not in ("markdown", "staticHtml", "json")}
     body.update(payload)
     for key in ("publishedAt", "updatedAt"):
@@ -215,6 +257,7 @@ def replace_post(post_id, payload):
     if current.get("status") == "published":
         body["status"] = "published"  # keep a live post live (the API documents this for edits of live posts)
     return request("PUT", f"/posts/{post_id}", body)
+
 
 def existing_post(publication_id, slug):
     """The published post with this slug, or None (a 404 is the normal answer)."""
@@ -263,13 +306,13 @@ def sync(args):
             print(f"would {'update' if slug in entries else 'create'} {slug}" + (" (newsletter)" if newsletter else ""))
         else:
             if slug in entries:
-                result = replace_post(entries[slug]["post_id"], payload)
+                result = replace_post(entries[slug]["post_id"], payload, args.accept_lossy)
             else:
                 # An interrupted create can have succeeded server side: adopt a post with this slug
                 # rather than create a second copy with a suffixed slug.
                 existing = existing_post(me["id"], slug)
                 if existing:
-                    result = replace_post(existing["id"], payload)
+                    result = replace_post(existing["id"], payload, args.accept_lossy)
                 else:
                     result = request("POST", "/posts", payload)
             post_id = result.get("id") or result.get("post", {}).get("id") or entries.get(slug, {}).get("post_id")
@@ -316,6 +359,8 @@ def main(argv=None):
     parser.add_argument("--newsletter", action="store_true")
     parser.add_argument("--newest", action="store_true", help="mirror the newest pending posts first")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--accept-lossy", action="append", default=[], metavar="POST_ID",
+                        help="allow a markdown replace of this post although unsupported blocks were found (inspect it first)")
     args = parser.parse_args(argv)
     if args.render:
         payload, _ = render(args.render, (POSTS / f"{args.render}.md").read_text(encoding="utf-8"))
