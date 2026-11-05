@@ -83,9 +83,6 @@ class CheckTests(unittest.TestCase):
         self.assertEqual(len(errors), 5)
 
 
-if __name__ == "__main__":
-    unittest.main()
-
 
 def doc(*content):
     return json.dumps({"type": "doc", "content": list(content)})
@@ -176,3 +173,44 @@ class ReplaceTests(unittest.TestCase):
         other = FakeApi(RICH)
         with self.assertRaises(SystemExit):
             self.run_replace(other, accept_lossy=["P2"])
+
+
+class GuardShapeTests(unittest.TestCase):
+    """Malformed shapes and unsupported formatting must stop before any PUT (Codex review 6660265011)."""
+    BAD = {
+        "root is a text node": json.dumps({"type": "text", "text": "hello"}),
+        "root is a paragraph": json.dumps({"type": "paragraph", "content": []}),
+        "document without content": json.dumps({"type": "doc"}),
+        "text child without text": doc({"type": "paragraph", "content": [{"type": "text"}]}),
+        "text with a non-string text": doc({"type": "paragraph", "content": [{"type": "text", "text": 5}]}),
+        "text node with children": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "content": []}]}),
+        "text on a paragraph": doc({"type": "paragraph", "text": "a"}),
+        "marks false": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "marks": False}]}),
+        "marks a string": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "marks": "bold"}]}),
+        "mark without a type": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "marks": [{}]}]}),
+        "right-aligned paragraph": doc({"type": "paragraph", "attrs": {"textAlign": "right"}, "content": [{"type": "text", "text": "a"}]}),
+        "centered heading": doc({"type": "heading", "attrs": {"level": 2, "textAlign": "center"}, "content": [{"type": "text", "text": "a"}]}),
+        "custom class on a paragraph": doc({"type": "paragraph", "attrs": {"class": "callout"}, "content": [{"type": "text", "text": "a"}]}),
+        "link with a target": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "marks": [{"type": "link", "attrs": {"href": "https://x", "target": "_blank"}}]}]}),
+        "attrs not an object": doc({"type": "paragraph", "attrs": "x", "content": [{"type": "text", "text": "a"}]}),
+    }
+
+    def test_each_bad_shape_is_reported_and_no_put_is_sent(self):
+        for label, structured in self.BAD.items():
+            self.assertTrue(lossy_problems(structured), label)
+            api = FakeApi(structured)
+            with mock.patch.object(paragraph_mirror, "request", api):
+                with self.assertRaises(SystemExit):
+                    replace_post("P1", {"title": "T2", "markdown": "new body"})
+            self.assertNotIn("PUT", [c[0] for c in api.calls], label)
+
+    def test_defaults_and_supported_attributes_stay_allowed(self):
+        ok = doc({"type": "heading", "attrs": {"level": 2, "textAlign": "left"}, "content": [{"type": "text", "text": "h"}]},
+                 {"type": "paragraph", "attrs": {"textAlign": None, "class": None}, "content": [{"type": "text", "text": "p", "marks": [{"type": "link", "attrs": {"href": "https://x"}}, {"type": "italic"}]}]},
+                 {"type": "codeBlock", "attrs": {"language": "py"}, "content": [{"type": "text", "text": "x"}]},
+                 {"type": "orderedList", "attrs": {"start": 3}, "content": [{"type": "listItem", "content": [{"type": "paragraph"}]}]})
+        self.assertEqual(lossy_problems(ok), [])
+
+
+if __name__ == "__main__":
+    unittest.main()

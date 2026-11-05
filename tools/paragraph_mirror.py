@@ -203,9 +203,22 @@ LOSSLESS_NODES = {"doc", "paragraph", "text", "heading", "bulletList", "orderedL
 LOSSLESS_MARKS = {"bold", "italic", "link", "code", "strike"}
 
 
+# Attributes a markdown replacement carries across, by node or mark type. Any other attribute with a non-default value
+# (a text alignment other than left, a custom class, an id, a link target) is formatting plain Markdown cannot hold.
+SUPPORTED_ATTRS = {"heading": {"level"}, "codeBlock": {"language"}, "orderedList": {"start"}, "link": {"href"}}
+
+
+def _default_attr(key, value):
+    """An empty value, or a left text alignment, is what plain Markdown already produces."""
+    return value in (None, "", False, [], {}) or (key == "textAlign" and value == "left")
+
+
 def lossy_problems(structured):
     """Why a markdown replacement of this stored document could lose content; an empty list means none found.
-    Fails closed: missing, unparseable or malformed structured content is a problem."""
+    Fails closed: missing, unparseable or malformed structured content is a problem. The checks are shapes and
+    values, not just type names: the root must be a document with a list of children, a text node needs a text string
+    and no children, other nodes carry no text, `content` and `marks` must be lists, and an attribute that Markdown
+    cannot preserve counts as loss unless its value is the default."""
     if isinstance(structured, str):
         try:
             structured = json.loads(structured)
@@ -214,16 +227,47 @@ def lossy_problems(structured):
     if not isinstance(structured, dict):
         return ["no structured content to compare against"]
     problems = []
+    if structured.get("type") != "doc":
+        problems.append("root is not a document")
+    elif not isinstance(structured.get("content"), list):
+        problems.append("malformed document content")
+
+    def check_attrs(owner, attrs):
+        if attrs is None:
+            return
+        if not isinstance(attrs, dict):
+            problems.append(f"malformed attrs on {owner}")
+            return
+        for key, value in attrs.items():
+            if key in SUPPORTED_ATTRS.get(owner, ()) or _default_attr(key, value):
+                continue
+            problems.append(f"attribute {key} on {owner}")
 
     def walk(node):
         if not isinstance(node, dict) or not isinstance(node.get("type"), str):
             problems.append("malformed node")
             return
-        if node["type"] not in LOSSLESS_NODES:
-            problems.append(f"node type {node['type']}")
-        for mark in node.get("marks") or []:
-            if not isinstance(mark, dict) or mark.get("type") not in LOSSLESS_MARKS:
-                problems.append("mark " + str(mark.get("type") if isinstance(mark, dict) else mark))
+        kind = node["type"]
+        if kind not in LOSSLESS_NODES:
+            problems.append(f"node type {kind}")
+        if kind == "text":
+            if not isinstance(node.get("text"), str):
+                problems.append("text node without a text string")
+            if node.get("content") is not None:
+                problems.append("text node with children")
+        elif "text" in node:
+            problems.append(f"text on a {kind} node")
+        check_attrs(kind, node.get("attrs"))
+        marks = node.get("marks")
+        if marks is not None and not isinstance(marks, list):
+            problems.append("malformed marks")
+        for mark in marks if isinstance(marks, list) else []:
+            if not isinstance(mark, dict) or not isinstance(mark.get("type"), str):
+                problems.append("malformed mark")
+                continue
+            if mark["type"] not in LOSSLESS_MARKS:
+                problems.append("mark " + mark["type"])
+            check_attrs(mark["type"], mark.get("attrs"))
         content = node.get("content")
         if content is not None and not isinstance(content, list):
             problems.append("malformed content")
