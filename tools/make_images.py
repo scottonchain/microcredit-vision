@@ -1443,6 +1443,28 @@ def human_owned_enterprises():
 MOTIFS["human-owned-enterprises"] = (human_owned_enterprises, "A human owner above three agent modules inside an enterprise")
 
 
+def public_ledger():
+    """A ledger page with a dated stamp and one line marked "not measured"."""
+    s = ""
+    s += text(100, 142, "OMNEQUA", 17, TEAL, anchor="start", weight="bold", sans=True)
+    s += text(100, 267, "What our public", 46, INK, anchor="start")
+    s += text(100, 330, "ledger shows.", 46, INK, anchor="start")
+    s += link(102, 380, 176, 380, AMBER, 5)
+    s += f'<circle cx="866" cy="294" r="220" fill="{TEAL_SOFT}" opacity="0.28"/>\n'
+    s += f'<rect x="716" y="130" width="300" height="340" rx="10" fill="#FFFDF8" stroke="{INK}" stroke-width="3"/>\n'
+    for i, w in enumerate((200, 160, 220, 120)):
+        y = 170 + i * 46
+        s += f'<rect x="742" y="{y}" width="{w}" height="14" rx="7" fill="{TEAL_SOFT}" opacity="0.8"/>\n'
+        s += link(742, y + 28, 990, y + 28, MUTED, 1.5)
+    s += f'<rect x="742" y="360" width="248" height="36" rx="8" fill="none" stroke="{INK}" stroke-width="2" stroke-dasharray="6 6"/>\n'
+    s += text(866, 384, "not measured", 14, INK, anchor="middle", sans=True)
+    s += f'<rect x="742" y="414" width="110" height="26" rx="13" fill="{AMBER_SOFT}"/>\n'
+    s += text(797, 432, "dated", 13, INK, anchor="middle", sans=True)
+    return s
+
+MOTIFS["public-ledger"] = (public_ledger, "A dated ledger page with one line dashed and marked not measured")
+
+
 def pretend_borrowers():
     """Thirty-two simulated people around one phone: a usability test, not a result."""
     s = ""

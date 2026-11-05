@@ -1,5 +1,18 @@
 # Verify the claims yourself
 
+## Statements in "What our public ledger shows, and what it cannot" (draft for 2026-11-05 18:00 UTC)
+
+Draft for non-author factual review. The figures are the dated snapshot at block 54145172 (2026-11-04 00:08:23 UTC), kept in the corrected dashboard as historical and not re-verified. Sources are read at testbed PR 445 head 63218537ef4dcb15b69bec31c4fadf1186b16863 (open, independently reviewed, not merged or live).
+
+| Post says | Source and boundary |
+| --- | --- |
+| 128 test dollars deposited, 45 lent, 45.00152 came back; 27 loans repaid on time, 1 cancelled, none defaulted | `dashboard/data/snapshot.json` at that head: flows deposited 128000000, disbursed 45000000, repaid 45001520 (six decimals); loanStatus Repaid 27, Cancelled 1, Defaulted 0; humanMetrics.repaymentRate onTime 27, defaulted 0. Snapshot block 54145172, chain 84532; labelled historical-not-reverified, with no collection timestamp. |
+| Interest paid was 0.00152 test dollars, of which 0.000684 went to the reserve and 0.000836 raised lenders' value | `dashboard/README.md` "Accounting" at that head: gross interest 0.001520, reserve allocations 0.000684, fees 0.000000, NAV above net lender deposits 0.000836; derived from contract source microcredit-contract@1812e7d. The first reading treated all interest as lender gain (README, same section). |
+| The ledger does not establish that any borrower was a real person; it does not show real people helped, sponsor spending or earnings; those lines read "not measured"; no real-person profiles are collected or shown | README opening paragraph at that head ("NOT MEASURED"; "No real-person profiles are fetched, derived or published"); snapshot humanMetrics humanBorrowers null, sponsorExpenditure null, incrementalHumanBenefit null, profileIngestion "disabled". |
+| The corrected ledger is reviewed but not live; the page open today still carries older labels; a refresh is scheduled daily and a failed refresh keeps the last good data | PR 445 description (independent exact-head review accepted; "no live chain calls or deployment"); live page read 2026-11-05 12:2x UTC at scottonchain.github.io/microcredit-agent-testbed/dashboard/ still says interest "grows the pool" and shows borrower-profile text; README "One existing daily refresh writer" (daily 00:07 UTC, first run under that cadence due 2026-11-06); PR description "Failed collection retains the last-good snapshot". The daily schedule is the owner's report; no successful run under it exists yet. |
+| The practice pool's accounting worked as designed in a small test; it cannot support a claim about repayment, poverty or sponsor value | Editorial judgement of this post: the figures above are the pool's own books for test dollars. Not a measurement of any outcome. |
+| No organisation named | The post names no organisation, so the non-contact line is not needed. |
+
 ## Figures and statements in "The world beyond the game" (2026-11-04 16:58 UTC)
 
 This is an operator-requested follow-up explaining our decision, not a report of a failed lending trial. No new numerical market claims are made.
