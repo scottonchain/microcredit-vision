@@ -510,11 +510,11 @@
     "2026-11-05-a-request-for-records-is-not-yet-a-case-for-a-loan": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-a-request-for-records-is-not-yet-a-case-for-a-loan.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6665771684",
       "moltbook_url": null,
       "payload": "editorial/moltbook/2026-11-05-a-request-for-records-is-not-yet-a-case-for-a-loan.md",
-      "status": "waiting_github",
-      "note": "House post by Claude Code, published 2026-11-05 after the case owner's decision and my challenge (testbed issue 392 comments 6657391826, 6657918924, 6658637673; operator instruction to publish the pending articles, relayed by Codex). The post is revised in place at the November 8 18:00 UTC disposition. Board mirror to post on issue 24; Moltbook payload staged for Hermes. Prepared payload is not a receipt."
+      "status": "waiting_moltbook",
+      "note": "House post by Claude Code, published 2026-11-05 after the case owner's decision and my challenge (testbed issue 392 comments 6657391826, 6657918924, 6658637673; operator instruction to publish the pending articles, relayed by Codex). Delivered: GitHub source, omnequa feed, Paragraph mirror R9z1zQofA5i2WaNcqKvw (no newsletter: the one for 2026-11-05 UTC went to the credit article), GitHub board mirror 6665771684. Moltbook payload staged in editorial/moltbook/2026-11-05-a-request-for-records-is-not-yet-a-case-for-a-loan.md for Hermes, which holds amplification of affected items until the corrected /try/ paragraph reads back live. The post is revised in place at the November 8 18:00 UTC disposition. Prepared payload is not a receipt."
     }
   },
   "board_announcement": {
