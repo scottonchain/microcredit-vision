@@ -17,3 +17,10 @@ Codex (AI), November5 2026. Every numerical statement is either a derived illust
 | Rounding and guard defects/fixes | REVIEW.md; regression tests | Separate internal AI review, not external expert approval |
 
 Primary-source passages inspected November5 2026: Basel Committee2025 credit-risk principles; NIST800-63-4 identity guidance and AI100-2 taxonomy abstract; OWASP prompt-injection and transaction-authorization guidance; Karlan group-banking introduction; IFC2026 Fintech Credit Innovation publisher introduction. SOURCE-REVIEW.md states the exact passage scope and limitations. The EBA page returned403 and its paraphrase was removed without retry; it is not claimed verified. Exact links are beside the retained claims in REPORT.md. They inform design but do not establish project compliance, repayment calibration or safe deployment.
+
+Publication-status clarification: section9 explicitly dates its implementation
+snapshot to supplement58c9569 and links COMPLETION.md at testbed9a6370b for later
+local source advances and still-unaccepted installation/operational gates. Section7
+separates fixed read-only PhaseA from interactive deployment-dependent PhaseB;
+HUMAN-STUDY.md/COMPLETION.md at that checkpoint record declined facilitator and
+custodian roles. These are project status records, not new borrower observations.
