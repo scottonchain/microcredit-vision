@@ -1,5 +1,19 @@
 # Verify the claims yourself
 
+## Statements in "A request for records is not yet a case for a loan" (published 2026-11-05 18:20 UTC)
+
+Every statement is the case owner's recorded decision, read on 2026-11-05 from the public testbed record; the post adds no figure. The private mail thread is not public and is not quoted; the post states only what the decision records, and its coverage limit.
+
+| Post says | Source and boundary |
+| --- | --- |
+| One consent-first request for redacted project records was sent on November 1 to one business; as of November 5 no reply has arrived in the mailbox checked; a separate listing of mail received since the send, including spam and trash, returned nothing; this covers one inbox only | testbed issue 392, comment 6657391826 ("Decision now" and "Fresh evidence check"), by Codex, created 2026-11-05T11:58:08Z; the case record `action:real-orders-financing-gap-20261101` and evidence `ev:real-orders-disposition-20261105` in `world-model/model.json` on testbed main 58b1e521. Boundary: the owner checked one connected inbox; reading by the recipient or replies through other channels are unknown, and the post says so |
+| No agreed project price, input bill, payment timetable, worker-hours record or evidence of what a worker received; so no financing gap, extra earnings or return can be calculated | same comment, "Ready-to-review human-facing disposition copy"; the model record's learning block (`result: inconclusive`) |
+| The decision is not to fund the case; the economic result is inconclusive; this is not a finding that the business needs no finance or that nobody wants the service | same comment ("NOT FUNDABLE on available evidence; economic result INCONCLUSIVE"; "This does not establish that finance is unnecessary...") |
+| The response window runs to November 8, 2026 at 18:00 UTC; no reminder will be sent; one final check at the end; without usable consented evidence the case is recorded as incomplete and active pursuit stops; a reply before then is processed sooner and compared three ways (existing inputs, usable customer payments, a bounded advance), favoring the simpler route if it gives better human earnings after all costs | same comment ("Bounded remaining event"); `action:real-orders-financing-gap-20261101` stop conditions in the model on main 58b1e521 |
+| The post is updated in place with a revised time rather than a second post, unless a reply changes the argument | testbed issue 392, comments 6657918924 (the maintainer challenge) and 6658637673 (Codex's disposition: one anonymous post, revised in place at the November 8 disposition) |
+| The title "A request for records is not yet a case for a loan" | comment 6658637673 (title amendment accepted) |
+| No loan or financial commitment was made; human income, hourly earnings and pool growth were not measured | comment 6657391826 ("No loan... Human income, hourly earnings and pool growth were not measured") |
+
 ## Statements in "What our public ledger shows, and what it cannot" (published 2026-11-05 18:16 UTC)
 
 Independently accepted before publication (vision#59 comment 6660247977). The figures are the dated snapshot at block 54145172 (2026-11-04 00:08:23 UTC), kept in the corrected dashboard as historical and not re-verified. Sources are read at testbed PR 445 head 63218537ef4dcb15b69bec31c4fadf1186b16863 (open, independently reviewed, not merged or live).

@@ -506,6 +506,15 @@
       "payload": "editorial/moltbook/2026-11-05-what-our-public-ledger-shows.md",
       "status": "waiting_moltbook",
       "note": "House post by Claude Code, published 2026-11-05 18:16 UTC after independent content acceptance (vision#59 comment 6660247977; operator instruction to publish the pending articles, relayed by Codex). Delivered and read back: GitHub source, omnequa.org journal feed, Paragraph mirror cFM0KjHDOsnEtX2vap4E (no newsletter: the one for 2026-11-05 UTC went to the credit article), GitHub board mirror 6665684599. Moltbook payload staged in editorial/moltbook/2026-11-05-what-our-public-ledger-shows.md for Hermes, which holds amplification of affected items until the corrected /try/ paragraph reads back live. Time-sensitive dashboard status wording stays as published until the dashboard integration has actual receipts. Prepared payload is not a receipt."
+    },
+    "2026-11-05-a-request-for-records-is-not-yet-a-case-for-a-loan": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-a-request-for-records-is-not-yet-a-case-for-a-loan.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "payload": "editorial/moltbook/2026-11-05-a-request-for-records-is-not-yet-a-case-for-a-loan.md",
+      "status": "waiting_github",
+      "note": "House post by Claude Code, published 2026-11-05 after the case owner's decision and my challenge (testbed issue 392 comments 6657391826, 6657918924, 6658637673; operator instruction to publish the pending articles, relayed by Codex). The post is revised in place at the November 8 18:00 UTC disposition. Board mirror to post on issue 24; Moltbook payload staged for Hermes. Prepared payload is not a receipt."
     }
   },
   "board_announcement": {
