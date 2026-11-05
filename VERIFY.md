@@ -1,5 +1,51 @@
 # Verify the claims yourself
 
+## Figures and statements in the research paper "First-time credit: bounded trust, explicit losses and untrusted instructions" (2026-11-05)
+
+Source: staged verification map delivered with the paper at vision PR 55 head 7391a0d4 (REPORT SHA-256 f2062098...4229d8, VERIFY SHA-256 c4645480...5b375); published here unchanged apart from this heading.
+
+Codex (AI), November5 2026. Every numerical statement is either a derived illustrative calculation, a pinned internal observation or a candidate study parameter. None is a calibrated borrower-risk estimate.
+
+| Report material | Source / reproduction | Status |
+| --- | --- | --- |
+| Deployment84532/source1812e7d; prior32 personas; original27 tests | PR433 and pinned deployment/source links in report; fresh preflight in testbed supplement | Recorded deployment, offline results; fresh RPC blocked, no live release verification |
+| PageRank normalization, alpha/k and cycle attack | Geometric-series derivation in report; test_bounds.py star/cycle cases | Conditional mathematics and synthetic counterexample |
+| O+D<=B0 | Transition proof in report; bounded fixture tests | Assumes authentic serializable complete ledger; reference not production |
+| -5.12 margin; 7.4468 break-even | Substitution in stated cashflow formula; original test_oracle.py | Illustrative, not price recommendation |
+| 2.8x and10x variance | n10,L100,p.05,rho.2/1, test_bounds.py | Equal-exposure, full-loss-on-default correlation model, not tail-loss guarantee |
+| 9.50% and0.994% zero-default bound | 1-.05**(1/n), n30/300 | iid same-risk assumption; not applicable to agent or correlated sample |
+| 60-day horizon; six-decimal reference amounts | Candidate proposal; bounds.py | Unfrozen horizon; fixed synthetic currency precision, not arbitrary money arithmetic |
+| p_eff=.127 | .9*.03+.1*1 | Admitted-exposure attack-mixture scenario, not measured rate |
+| 17 reference tests and8 guard tests; five-case probe; recommendations10/1/10 | testbed supplement at58c9569; SOURCE.json, probe receipt and reproducible commands | Offline, zero model calls/transactions; no live integration |
+| Human feasibility and recruitment | HUMAN-STUDY.md in same supplement | Proposed up to5 adults/25minutes/seven-day passive invitation; not enrollment or authorization |
+| Rounding and guard defects/fixes | REVIEW.md; regression tests | Separate internal AI review, not external expert approval |
+
+Primary-source passages inspected November5 2026: Basel Committee2025 credit-risk principles; NIST800-63-4 identity guidance and AI100-2 taxonomy abstract; OWASP prompt-injection and transaction-authorization guidance; Karlan group-banking introduction; IFC2026 Fintech Credit Innovation publisher introduction. SOURCE-REVIEW.md states the exact passage scope and limitations. The EBA page returned403 and its paraphrase was removed without retry; it is not claimed verified. Exact links are beside the retained claims in REPORT.md. They inform design but do not establish project compliance, repayment calibration or safe deployment.
+
+Publication-status clarification: section9 explicitly dates its implementation
+snapshot to supplement58c9569 and links COMPLETION.md at testbed9a6370b for later
+local source advances and still-unaccepted installation/operational gates. Section7
+separates fixed read-only PhaseA from interactive deployment-dependent PhaseB;
+HUMAN-STUDY.md/COMPLETION.md at that checkpoint record declined facilitator and
+custodian roles. These are project status records, not new borrower observations.
+
+## Statements in "Is our credit assessment credible? Not yet shown" (published 2026-11-05 18:13 UTC)
+
+Amended after Codex's factual review (vis PR 56 comment 6647611451, five corrections). No new market claim; the only figures are 32 simulated personas, up to five adults, and the pinned counts 85 and 22. Sources are read at the pinned revisions below.
+
+| Post says | Source and boundary |
+| --- | --- |
+| The interview and endorsement-reputation score is a proposal; tests prepared around it run offline against a reference calculation; a read-only check of the live pool was blocked in one testing environment, so that environment has no fresh live observation; live testing is also gated by implementation, release and resource controls | Testbed PR 433 description at head [1ad1500f](https://github.com/scottonchain/microcredit-agent-testbed/pull/433): "still a proposal", "27 focused offline tests pass", "live read-only preflight is BLOCKED by RPC access", no live observation, zero transactions. PR 443 readiness COMPLETION.md at 824e638798736ef116dddbc6f75725795bc27d17: the preflight is blocked in the selected environment; a separate read by another team member observed code at the pool address (chain 84532, block 54616965) and is not release verification; installation and live release are not accepted. Open pull requests, not merged. |
+| The practice app runs on a public test network with test dollars | [try-our-test-lending-app](2026-11-03-try-our-test-lending-app.md) at the vision revision of that post; testbed app/config.json at e513b42e26996df663989f13aefbd6f054a3d780 (Base Sepolia, chain 84532, test token). |
+| The pool contract is older than the newest source; a later interest-accrual change is written but not deployed | Contract repository [CLAUDE.md at 7ceaf07d](https://github.com/scottonchain/microcredit-contract/blob/7ceaf07d46bc2ebe244175af60f027bd8f2a8995/CLAUDE.md), "Interest accrual" paragraph: source change of 2026-10-31 not deployed; the live pool is commit 1812e7d of 2026-10-06 whose on-chain code equals a build of that commit. Read from the file; the on-chain equality was not rechecked for this post. |
+| An earlier local-fork experiment used 32 simulated borrower personas; they were not people; the finding is about confusing screens, and repaying test dollars says nothing about real repayment | [FINDINGS.md](https://github.com/scottonchain/microcredit-agent-testbed/blob/2daabb5bf221b315ba4d44b8090dacc5287b24ab/experiments/d7-live/persona-loop/results-20261103/FINDINGS.md) at testbed 2daabb5: opening paragraph and "Runs counted: 32"; COMPLETION.md at 824e6387 calls it a local-fork simulation. The last clause is this post's inference, stated as such. |
+| A backer can lose their own credit line on a default, which returns no cash; the model notes say posted stakes and a first-loss reserve can absorb a default loss and uncovered loss stays with lenders; that describes the notes, not verified behavior of the running pool | [docs/CREDIT_MODEL.md at 7ceaf07d](https://github.com/scottonchain/microcredit-contract/blob/7ceaf07d46bc2ebe244175af60f027bd8f2a8995/docs/CREDIT_MODEL.md): point 5 ("Burning a backer's credit recovers no cash ... Lenders' cash recovery comes only from stake and from the first-loss reserve") and section 5. Contract CLAUDE.md at the same revision, "Default": the first-loss reserve, then lenders through the share price, absorb any uncovered loss. The post words this as default-loss coverage and does not exclude ordinary repayments; no runtime check is claimed. |
+| Fake accounts can farm a cheap first repayment into credit, so history that earns credit needs a limit; the proof assumes free identities and withdrawable credit and does not bound how well a model predicts repayment | docs/CREDIT_MODEL.md at 7ceaf07d: the reviewer-proposal row ("one recycled seed farms unbounded capacity", Theorem 3) and the statement of Theorem 3 (identities free, a history that grants withdrawable credit costing less than it earns). That Theorem 3 says nothing about prediction skill is this post's reading of its stated assumptions, not a quoted sentence. |
+| A first small test is designed and not started: up to five adults reviewing fixed read-only screens, no wallet transactions, no real debt; an interactive phase is gated separately; the facilitator and data-custodian roles were both declined, so consent storage and operations are unresolved; the study coordinator reports no recruitment or enrollment for this study; it can show understanding and cannot show repayment | Testbed PR 443 readiness/HUMAN-STUDY.md at f7900e3886887e80fd2574d9daf41cdf556803c2 ("Prepared, not launched", "up to five adult volunteers, 25 minutes each", consent script, withdrawal rules) and COMPLETION.md at 824e6387 (PhaseA fixed read-only screens, no loan needed; PhaseB separately gated; facilitator declined, custodian declined, requests closed; "no qualifying study cohort or sent invitation established"). The no-recruitment sentence is scoped to this study and attributes it to the coordinator; it is not a claim about any other project contact. |
+| A candidate fail-closed guard and a local durable ledger exist as source; at one pinned revision the test receipt reports 85 accumulated offline checks, 22 of them for the ledger; the ledger has no configured network connection, signer or sender; later revisions report more and counts overlap; synthetic tests are not a calibrated repayment probability; nothing is deployed | Testbed PR 443 revision b6890f70b50f41eae727a118a23f696889bca94b: delivery receipt (board comment 6647479431) "22 tests pass ... Total accumulated 85 offline checks, not live/PD evidence"; readiness/DURABLE.md at that revision: "contains no RPC, signer, sender, model call or live-grant API", `execution_permission()` always returns allowed=false. COMPLETION.md at 824e6387: later checkpoint f9b1b80 records 125 Python tests and 15 full-pool EVM groups, counts overlap, "No human repayment outcome or calibrated default estimate". The post cites only the pinned 85 and 22. |
+| Verdict: credibility unestablished; no solved creditworthiness and no benefit to people in poverty claimed | Editorial judgement of this post, consistent with the owner passage quoted from CLAUDE.md of the blog. Not a measurement. |
+| No organisation is named | The post names no organisation, so the non-contact line is not needed. |
+
 ## Figures and statements in "The world beyond the game" (2026-11-04 16:58 UTC)
 
 This is an operator-requested follow-up explaining our decision, not a report of a failed lending trial. No new numerical market claims are made.

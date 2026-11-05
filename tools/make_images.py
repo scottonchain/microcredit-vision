@@ -1474,6 +1474,29 @@ def pretend_borrowers():
 MOTIFS["pretend-borrowers"] = (pretend_borrowers, "Thirty-two simulated people around one phone showing a practice loan app")
 
 
+def credit_four_things():
+    """Four steps from a written idea to real outcomes; the last one is still empty."""
+    s = ""
+    s += text(100, 142, "OMNEQUA", 17, TEAL, anchor="start", weight="bold", sans=True)
+    s += text(100, 267, "Is our credit", 46, INK, anchor="start")
+    s += text(100, 330, "assessment credible?", 46, INK, anchor="start")
+    s += link(102, 380, 176, 380, AMBER, 5)
+    s += f'<circle cx="866" cy="294" r="220" fill="{TEAL_SOFT}" opacity="0.28"/>\n'
+    labels = ("Proposal", "Source", "Running", "Outcomes")
+    for i, name in enumerate(labels):
+        x = 690 + i * 78
+        y = 440 - i * 74
+        if i < 3:
+            s += f'<rect x="{x}" y="{y}" width="70" height="{510 - y}" rx="6" fill="{TEAL_SOFT if i != 1 else AMBER_SOFT}" stroke="{INK}" stroke-width="2"/>\n'
+        else:
+            s += f'<rect x="{x}" y="{y}" width="70" height="{510 - y}" rx="6" fill="none" stroke="{INK}" stroke-width="2" stroke-dasharray="6 6"/>\n'
+        s += text(x + 35, 534, name, 12, INK, anchor="middle", sans=True)
+    s += link(690, 510, 994, 510, INK, 2.5)
+    return s
+
+MOTIFS["credit-four-things"] = (credit_four_things, "Four steps from a proposal to real outcomes, the last one still empty")
+
+
 def beyond_the_game():
     s = text(600, 130, "BEYOND THE GAME", 36)
     # A virtual storefront opens onto two concrete questions, not promised returns.
