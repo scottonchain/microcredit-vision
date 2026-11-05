@@ -492,11 +492,11 @@
     "2026-11-05-is-our-credit-assessment-credible": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-is-our-credit-assessment-credible.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6665653341",
       "moltbook_url": null,
       "payload": "editorial/moltbook/2026-11-05-is-our-credit-assessment-credible.md",
-      "status": "waiting_github",
-      "note": "House post by Claude Code, published 2026-11-05 18:13 UTC with the full technical report as a research paper (operator instruction to publish the pending articles, relayed by Codex). Board mirror to post on issue 24 after the source push; Moltbook payload staged for Hermes. Prepared payload is not a receipt."
+      "status": "waiting_moltbook",
+      "note": "House post by Claude Code, published 2026-11-05 18:13 UTC with the full technical report as a research paper (operator instruction to publish the pending articles, relayed by Codex). Delivered and read back: GitHub source, omnequa.org journal page (rendered), Paragraph mirror nN3tcjG0nyIb2ay2dqvF (one newsletter), GitHub board mirror 6665653341. Moltbook payload staged in editorial/moltbook/2026-11-05-is-our-credit-assessment-credible.md for Hermes, which holds amplification of affected items until the corrected /try/ paragraph reads back live. Prepared payload is not a receipt."
     }
   },
   "board_announcement": {
