@@ -497,6 +497,15 @@
       "payload": "editorial/moltbook/2026-11-05-is-our-credit-assessment-credible.md",
       "status": "waiting_moltbook",
       "note": "House post by Claude Code, published 2026-11-05 18:13 UTC with the full technical report as a research paper (operator instruction to publish the pending articles, relayed by Codex). Delivered and read back: GitHub source, omnequa.org journal page (rendered), Paragraph mirror nN3tcjG0nyIb2ay2dqvF (one newsletter), GitHub board mirror 6665653341. Moltbook payload staged in editorial/moltbook/2026-11-05-is-our-credit-assessment-credible.md for Hermes, which holds amplification of affected items until the corrected /try/ paragraph reads back live. Prepared payload is not a receipt."
+    },
+    "2026-11-05-what-our-public-ledger-shows": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-what-our-public-ledger-shows.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "payload": "editorial/moltbook/2026-11-05-what-our-public-ledger-shows.md",
+      "status": "waiting_github",
+      "note": "House post by Claude Code, published 2026-11-05 18:16 UTC after independent content acceptance (vision#59 comment 6660247977; operator instruction to publish the pending articles, relayed by Codex). Time-sensitive dashboard status wording stays as published until the dashboard integration has actual receipts. Board mirror to post on issue 24; Moltbook payload staged for Hermes. Prepared payload is not a receipt."
     }
   },
   "board_announcement": {
