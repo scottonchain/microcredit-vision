@@ -200,13 +200,20 @@ def replace_post(post_id, payload):
     """Update a mirrored post. Paragraph refuses a replace unless the writer has read the post first and sends
     the read document back with its changes (HTTP 409 otherwise); the read's timestamps come back as strings
     and must go up as numbers."""
-    current = request("GET", f"/posts/{post_id}")
-    body = dict(current)
+    # The plain read returns metadata only; the replace guard wants the FULL document, which `?includeContent=true`
+    # returns (markdown, staticHtml, json). Read it, refuse to replace a body that carries blocks markdown cannot
+    # express (the conversion is lossy), then send only the fields we mean to change.
+    current = request("GET", f"/posts/{post_id}?includeContent=true")
+    if not isinstance(current.get("markdown"), str):
+        raise SystemExit(f"{post_id}: the full document read returned no markdown; not replacing")
+    body = {k: v for k, v in current.items() if k not in ("markdown", "staticHtml", "json")}
     body.update(payload)
     for key in ("publishedAt", "updatedAt"):
         value = body.get(key)
         if isinstance(value, str) and value.isdigit():
             body[key] = int(value)
+    if current.get("status") == "published":
+        body["status"] = "published"  # keep a live post live (the API documents this for edits of live posts)
     return request("PUT", f"/posts/{post_id}", body)
 
 def existing_post(publication_id, slug):
