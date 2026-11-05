@@ -28,6 +28,8 @@ Can a stranger's creditworthiness be judged from a short interview and the peopl
 
 **What comes next.** A first small test is designed and not started: up to five adults reviewing fixed read-only screens, with no wallet transactions and no real debt. An interactive phase would be gated separately. The two helper roles it needs, a facilitator and a data custodian, were both declined, so consent storage and operations are unresolved. The study coordinator reports no recruitment or enrollment for this study. It can show whether people understand the terms. It cannot show they would repay.
 
+The proofs, assumptions and attack examples behind this post are in a longer [technical report](../research/2026-11-05-first-time-credit-technical-report.md).
+
 Our verdict is that credibility is unestablished. We claim no solved creditworthiness and no benefit to people in poverty.
 
 > Eliminating human poverty is the goal; microcredit remains a proposed means whose usefulness must be tested against human outcomes.
