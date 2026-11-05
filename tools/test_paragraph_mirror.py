@@ -191,7 +191,9 @@ class GuardShapeTests(unittest.TestCase):
         "right-aligned paragraph": doc({"type": "paragraph", "attrs": {"textAlign": "right"}, "content": [{"type": "text", "text": "a"}]}),
         "centered heading": doc({"type": "heading", "attrs": {"level": 2, "textAlign": "center"}, "content": [{"type": "text", "text": "a"}]}),
         "custom class on a paragraph": doc({"type": "paragraph", "attrs": {"class": "callout"}, "content": [{"type": "text", "text": "a"}]}),
-        "link with a target": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "marks": [{"type": "link", "attrs": {"href": "https://x", "target": "_blank"}}]}]}),
+        "link with another target": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "marks": [{"type": "link", "attrs": {"href": "https://x", "target": "_self"}}]}]}),
+        "link with a custom class": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "marks": [{"type": "link", "attrs": {"href": "https://x", "class": "button"}}]}]}),
+        "link with a changed rel": doc({"type": "paragraph", "content": [{"type": "text", "text": "a", "marks": [{"type": "link", "attrs": {"href": "https://x", "rel": "me"}}]}]}),
         "attrs not an object": doc({"type": "paragraph", "attrs": "x", "content": [{"type": "text", "text": "a"}]}),
     }
 
@@ -210,6 +212,11 @@ class GuardShapeTests(unittest.TestCase):
                  {"type": "codeBlock", "attrs": {"language": "py"}, "content": [{"type": "text", "text": "x"}]},
                  {"type": "orderedList", "attrs": {"start": 3}, "content": [{"type": "listItem", "content": [{"type": "paragraph"}]}]})
         self.assertEqual(lossy_problems(ok), [])
+
+    def test_the_editors_own_link_defaults_are_not_loss(self):
+        stored = doc({"type": "paragraph", "attrs": {"textAlign": "left"}, "content": [{"type": "text", "text": "a", "marks": [
+            {"type": "link", "attrs": {"class": "dont-break-out", "href": "https://x", "rel": "noopener noreferrer nofollow ugc", "target": "_blank"}}]}]})
+        self.assertEqual(lossy_problems(stored), [])
 
 
 if __name__ == "__main__":

@@ -208,9 +208,15 @@ LOSSLESS_MARKS = {"bold", "italic", "link", "code", "strike"}
 SUPPORTED_ATTRS = {"heading": {"level"}, "codeBlock": {"language"}, "orderedList": {"start"}, "link": {"href"}}
 
 
-def _default_attr(key, value):
-    """An empty value, or a left text alignment, is what plain Markdown already produces."""
-    return value in (None, "", False, [], {}) or (key == "textAlign" and value == "left")
+# What Paragraph itself stores on a link made from Markdown (read from our own mirrored posts on 2026-11-05): a
+# replacement from Markdown regenerates exactly these, so they are not loss. Any other value is formatting a person set.
+EDITOR_DEFAULT_ATTRS = {"link": {"class": "dont-break-out", "rel": "noopener noreferrer nofollow ugc", "target": "_blank"}}
+
+
+def _default_attr(owner, key, value):
+    """An empty value, a left text alignment, or the editor's own link defaults is what a Markdown replace reproduces."""
+    return (value in (None, "", False, [], {}) or (key == "textAlign" and value == "left")
+            or EDITOR_DEFAULT_ATTRS.get(owner, {}).get(key) == value)
 
 
 def lossy_problems(structured):
@@ -239,7 +245,7 @@ def lossy_problems(structured):
             problems.append(f"malformed attrs on {owner}")
             return
         for key, value in attrs.items():
-            if key in SUPPORTED_ATTRS.get(owner, ()) or _default_attr(key, value):
+            if key in SUPPORTED_ATTRS.get(owner, ()) or _default_attr(owner, key, value):
                 continue
             problems.append(f"attribute {key} on {owner}")
 
