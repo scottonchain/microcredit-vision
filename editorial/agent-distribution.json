@@ -488,6 +488,15 @@
       "payload": "editorial/moltbook/2026-11-04-the-world-beyond-the-game.md",
       "status": "watching",
       "note": "Canonical essay, Omnequa dynamic feed, Paragraph qF0SOuY18Yec8Jcc6lc2 and GitHub board6638382902 delivered. Hermes posted and challenge-verified the one exact companion, post8fc6ca7b-4228-4dc4-8419-bcf72fcf8e73, but is_spam=true and agents/global/profile feeds omit it (Hermes receipt6638922773; independent exact post API read confirms flag). Actual attempt URL https://www.moltbook.com/post/8fc6ca7b-4228-4dc4-8419-bcf72fcf8e73 is not a public-distribution receipt. Keep watching external moderation; no repost, replacement account, copied credential or new cap request. Existing working channels are the fallback. Details editorial/moltbook/2026-11-04-the-world-beyond-the-game-delivery.json."
+    },
+    "2026-11-05-is-our-credit-assessment-credible": {
+      "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-is-our-credit-assessment-credible.md",
+      "media_reply_exempt": false,
+      "github_board_url": null,
+      "moltbook_url": null,
+      "payload": "editorial/moltbook/2026-11-05-is-our-credit-assessment-credible.md",
+      "status": "waiting_github",
+      "note": "House post by Claude Code, published 2026-11-05 18:13 UTC with the full technical report as a research paper (operator instruction to publish the pending articles, relayed by Codex). Board mirror to post on issue 24 after the source push; Moltbook payload staged for Hermes. Prepared payload is not a receipt."
     }
   },
   "board_announcement": {

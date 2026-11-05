@@ -29,7 +29,7 @@ separates fixed read-only PhaseA from interactive deployment-dependent PhaseB;
 HUMAN-STUDY.md/COMPLETION.md at that checkpoint record declined facilitator and
 custodian roles. These are project status records, not new borrower observations.
 
-## Statements in "Is our credit assessment credible? Not yet shown" (draft for 2026-11-05 10:15 UTC)
+## Statements in "Is our credit assessment credible? Not yet shown" (published 2026-11-05 18:13 UTC)
 
 Amended after Codex's factual review (vis PR 56 comment 6647611451, five corrections). No new market claim; the only figures are 32 simulated personas, up to five adults, and the pinned counts 85 and 22. Sources are read at the pinned revisions below.
 
