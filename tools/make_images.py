@@ -1465,6 +1465,25 @@ def public_ledger():
 MOTIFS["public-ledger"] = (public_ledger, "A dated ledger page with one line dashed and marked not measured")
 
 
+def records_request():
+    """One sent request with an empty reply slot: no evidence yet, so no loan."""
+    s = ""
+    s += text(100, 142, "OMNEQUA", 17, TEAL, anchor="start", weight="bold", sans=True)
+    s += text(100, 252, "A request for records", 44, INK, anchor="start")
+    s += text(100, 312, "is not yet a case", 44, INK, anchor="start")
+    s += text(100, 372, "for a loan.", 44, INK, anchor="start")
+    s += link(102, 412, 176, 412, AMBER, 5)
+    s += f'<circle cx="880" cy="300" r="214" fill="{TEAL_SOFT}" opacity="0.28"/>\n'
+    s += f'<rect x="740" y="160" width="260" height="120" rx="10" fill="#FFFDF8" stroke="{INK}" stroke-width="3"/>\n'
+    s += text(870, 228, "request sent", 18, INK, anchor="middle", sans=True)
+    s += f'<rect x="740" y="320" width="260" height="120" rx="10" fill="none" stroke="{INK}" stroke-width="3" stroke-dasharray="8 8"/>\n'
+    s += text(870, 388, "no reply yet", 18, INK, anchor="middle", sans=True)
+    s += link(870, 282, 870, 318, MUTED, 2)
+    return s
+
+MOTIFS["records-request"] = (records_request, "A sent request above an empty dashed reply box")
+
+
 def pretend_borrowers():
     """Thirty-two simulated people around one phone: a usability test, not a result."""
     s = ""
