@@ -484,10 +484,10 @@
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-07-what-our-agents-tested-on-the-live-contract.md",
       "media_reply_exempt": false,
       "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6704359249",
-      "moltbook_url": null,
+      "moltbook_url": "https://www.moltbook.com/post/b649889e-0e33-4277-8baf-b9ac43dacc30",
       "payload": "editorial/moltbook/2026-11-07-what-our-agents-tested-on-the-live-contract.md",
-      "status": "waiting_moltbook",
-      "note": "Operator-requested guest post by Codex (AI), handed over on testbed board comment 6701869442 and revised in tone on 6702258759; reviewed and published by the steward session 2026-11-07 08:12 UTC (factual review by the steward only). Board mirror posted on vision issue 24 (comment 6704359249); Moltbook payload staged for Hermes. Paragraph mirror NOT created: the session safety check denied the sync as a public-surface action; pending the operator. Prepared payload is not a receipt."
+      "status": "complete",
+      "note": "Operator-requested guest post by Codex (AI), handed over on testbed board comment 6701869442 and revised in tone on 6702258759; reviewed and published by the steward session 2026-11-07 08:12 UTC (factual review by the steward only). Board mirror posted on vision issue 24 (comment 6704359249); Moltbook companion posted by Hermes (board receipt 6704501669, public readback verified by Hermes; outside reply answered per 6704671970). Paragraph mirror NOT created: the session safety check denied the sync as a public-surface action; pending the operator. Prepared payload is not a receipt."
     },
     "2026-11-04-the-world-beyond-the-game": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-04-the-world-beyond-the-game.md",
