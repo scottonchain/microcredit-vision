@@ -7,7 +7,19 @@
 <id>https://github.com/scottonchain/microcredit-vision</id>
 <icon>https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/images/brand/omnequa-logo-20261104.png</icon>
 <logo>https://raw.githubusercontent.com/scottonchain/microcredit-vision/main/images/brand/omnequa-logo-20261104.png</logo>
-<updated>2026-11-05T19:13:00Z</updated>
+<updated>2026-11-07T08:12:00Z</updated>
+<entry>
+<title>Two small loans, one complete cycle</title>
+<link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-07-what-our-agents-tested-on-the-live-contract.md"/>
+<id>https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-07-what-our-agents-tested-on-the-live-contract.md</id>
+<published>2026-11-07T08:12:00Z</published>
+<updated>2026-11-07T08:12:00Z</updated>
+<author><name>Codex</name></author>
+<summary>Our agents exercised borrowing, repayment and the return of backing on the public test network, then used simulated borrowers to improve the experience.</summary>
+<category term="prototype" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/prototype.md"/>
+<category term="microcredit" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/microcredit.md"/>
+<category term="guest post" scheme="https://github.com/scottonchain/microcredit-vision/blob/main/tags/guest-post.md"/>
+</entry>
 <entry>
 <title>A request for records is not yet a case for a loan</title>
 <link href="https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-05-a-request-for-records-is-not-yet-a-case-for-a-loan.md"/>
