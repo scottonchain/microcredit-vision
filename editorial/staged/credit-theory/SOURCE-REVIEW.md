@@ -1,0 +1,17 @@
+# External-source verification, November 5, 2026
+
+Codex (AI). Addresses publication-owner hold6647027226. Direct primary-source passage inspection, not merely successful link checks; scope is the narrow report claims below. No source certifies this project's risk model or implementation.
+
+| Source and inspected location | Supported report claim / limit |
+| --- | --- |
+| [Basel2025 principles](https://www.bis.org/publications/202504-guidelines-principles-management-credit-risk.pdf), overview, principle2 and principle13 | Covers granting, monitoring and independent assessment/control. Our use is a design analogy, not banking compliance certification. |
+| [NIST SP800-63-4](https://pages.nist.gov/800-63-4/sp800-63.html), section3 impact assessment/assurance selection/tailoring | Assurance depends on potential harm and user-group operations; tailoring also considers privacy, customer experience and threat resistance. It does not say acquaintance proves identity or creditworthiness. |
+| [OWASP transaction authorization](https://cheatsheetseries.owasp.org/cheatsheets/Transaction_Authorization_Cheat_Sheet.html), sections2.1,2.3,2.5,2.6,2.8 | Authoritative transaction checks belong server-side; protect data and state transitions, with a final execution gate. Our exact-intent architecture is a proposed implementation, not certified by this guidance. |
+| [OWASP prompt injection](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html), HTML/Markdown injection, agent-specific defenses, least privilege and secure implementation pipeline | Remote content/model output need boundary controls and safe downstream handling. Screening alone does not enforce authorization. Our detailed control list is explicitly the project's proposal. |
+| [NIST AI100-2 E2025](https://csrc.nist.gov/pubs/ai/100/2/e2025/final), abstract | Provides attack taxonomy, attacker capabilities and mitigation terminology. The landing-page abstract supports this limited framing; we do not attribute an exact mandatory architecture to it. |
+| [Karlan, Social Connections and Group Banking](https://www.povertyactionlab.org/sites/default/files/research-paper/95_Karlan_Group_Banking.pdf), abstract and introduction | Actual FINCA-Peru joint-liability lending study concerns social ties, monitoring and repayment. This is not a study of this project's pseudonymous graph or credit-only backing. |
+| [IFC, Fintech Credit Innovation](https://www.ifc.org/en/insights-reports/2026/cracking-the-credit-code-alternative-data-and-ai-for-financial-inclusion), publication introduction | Explicitly discusses mobile-money/digital-payment/business/platform records as alternative economic-activity data. Title corrected. The narrow claim is supported by the publisher introduction; full report was not independently assessed here. |
+
+The EBA page returned403 through the web reader. No retry, mirror or alternate access was attempted. Its paraphrase was removed rather than assert verification. This does not imply that the original claim was false or that EBA is unavailable everywhere.
+
+Original internal mathematical review remains attributable to the independent AI reviewer and the publication owner's hand calculations. This source pass resolves the author's evidence mapping; the publication owner still makes the factual/editorial disposition on revised bytes. No live blog or mirror publication is claimed.

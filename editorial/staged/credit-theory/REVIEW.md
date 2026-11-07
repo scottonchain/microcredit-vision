@@ -1,0 +1,24 @@
+# Internal independent challenge and disposition
+
+November5 2026. Separate Codex reviewer; no external expert or human borrower validation. Reviewer read the draft and code independently and reproduced the numerical defect. Author: Codex (AI).
+
+| Challenge | Disposition |
+| --- | --- |
+| Full unit plus1e-30 bypasses Decimal ceiling | ACCEPT/FIXED: reject excess precision and size; regression; production integer minor units specified. |
+| Collateral promise counted as cash recovery | ACCEPT/FIXED: only settled principal cash in recovery; expected collateral belongs in separate LGD/timing model. |
+| Narrative-ignoring helper does not test an actual security boundary | ACCEPT: actual pinned interview source probed; candidate guard tested; live UI/backend/oracle boundary remains a release gate. |
+| Familiarity cannot waive affordability/security | ACCEPT: tier table keeps essential checks; attack-mixture sensitivity and incident hold added. |
+| Single group misses overlapping correlation | ACCEPT: production requires all applicable groups; reference explicitly limited to one partition. |
+| Conservation not security/solvency | ACCEPT: assumptions, unrelated liabilities and limit-decrease behavior stated. |
+| Self-loop ban could appear to repair graph attack | ACCEPT/FIXED: directed cycle test demonstrates same trapped cluster mass. |
+| Crash, broadcast retry, forged recovery and reorg absent | ACCEPT: explicit live-adapter acceptance cases; no unsupported passed claim. |
+| Brier loss is proper, not an incentive to lie | ACCEPT/FIXED: low absolute score can reflect base rate, not incremental skill. |
+| Noninteger n silently truncated | ACCEPT/FIXED with regression. |
+
+Stronger alternative adopted: consented no-debt feasibility study, verified-facts baseline, graph shadow-only, funded maximum-loss envelope for any later separately authorized credit, and an unendorsed application/appeal route. The reviewer does not certify deployed underwriting or human readiness. A factual/technical maintainer review and the existing publication owner remain required before publication.
+
+Delta review accepted report and human protocol as preparation, and required guard amendments: catch extractor exceptions without leaking messages; reject null/malformed results; allowlist diagnostic fields; project only validated inputs; state that an in-process callback is not sandboxed. All four amendments are implemented with two additional regression tests (seven guard tests total). No deployment or outside validation follows.
+
+Final delta verdict: ACCEPT as a bounded offline shadow adapter. The reviewer independently reproduced7/7 guard tests against source SHA2569b71cb055fd4374ec0843786b19c5dbcc2e5c5cdf44b15e0b5c816949f052e9e; a wrong-source selection was rejected. No blocker remains for publishing the artifact with its stated limits. API request validation, provenance, runtime isolation and deployed integration remain unverified; this is not human-test readiness or general injection-resistance certification.
+
+Full exact-head review: testbed24b803c ACCEPT as preparation; vision563fc97 AMEND before publication. Required amendments were explicit LGD=1 (or g-squared scaling) for variance, uniform root allocation for alpha/k, and direct pinned supplement links. All are incorporated. Tracking amendments add the canonical evidence record and clarify14:00UTC as reassessment, not a completion promise. A further guard test handles malformed top-level requests, and a source-only integration patch is prepared; latest testbed head58c9569, eight guard tests. Final delta review requested; no merged/live claim.
