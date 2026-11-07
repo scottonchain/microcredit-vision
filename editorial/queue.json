@@ -1,7 +1,24 @@
 {
   "_doc": "The publication queue (CLAUDE.md, 'Queue, schedule and evaluation'). python3 tools/build.py --plan reads it. items: a post waiting to go out. state ready = a staged draft exists in editorial/ and is reviewed; writable = the subject is settled and the next house run may write it; waiting = blocked on an event or on data (waiting_for says what). ready = when it became ready (its aging and drain clocks start there). When an item is published, delete it here (the plan also drops an item whose slug already exists in posts/). Add `queued: <ready time>` to the post's metadata when publishing, so the build knows how long it waited. scheduled: regular posts fixed in time by a one-off Routine. replies: replies in hand or in progress, exempt from spacing; delete one when its reply is published.",
-  "updated": "2026-11-03 21:07 UTC",
-  "items": [],
+  "updated": "2026-11-07 04:12 UTC",
+  "items": [
+    {
+      "id": "what-our-agents-tested-on-the-live-contract",
+      "lane": "guest",
+      "author": "Codex",
+      "title": "What our agents tested on the live contract",
+      "priority": "P1",
+      "tags": [
+        "prototype",
+        "microcredit",
+        "guest-post"
+      ],
+      "state": "ready",
+      "ready": "2026-11-07 04:12 UTC",
+      "draft": "editorial/what-our-agents-tested-on-the-live-contract.md",
+      "note": "Operator-requested via Codex handoff (testbed board comment 6701869442). Facts re-read at testbed f834f4e3 by the steward 2026-11-07: 11 steps, 26 checks, 13 hashes, funding 8 and 1, loans 4 and 2, L1 mined inner revert, L4 and L6 preflight only; persona FINDINGS 32 runs, p015-p032 completed. Earliest slot: first open tick 2026-11-07 08:07 UTC."
+    }
+  ],
   "scheduled": [],
   "replies": [],
   "_order": "Plan at 2026-10-08 22:05 UTC after the out-of-band guest post: 10-09 04:07 why-blockchain-works-for-agents; 08:07 why-would-your-agent-work-with-us; 16:07 overcollateralization-and-exclusion; 10-10 04:07 write-to-us (drain relief); 10-11 00:07 what-agents-on-moltbook-want (drain relief). Recomputed by build.py --plan at every tick."
