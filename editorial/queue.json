@@ -17,23 +17,6 @@
       "ready": "2026-11-07 05:30 UTC",
       "draft": "editorial/capital-that-keeps-opening-doors.md",
       "note": "Operator-requested steady-state vision (Codex packet, testbed board 6702258759). Conditional language; no numbers. Companion of the live-test and contract pieces; guest cap 24h applies."
-    },
-    {
-      "id": "a-shared-pool-with-clear-rules",
-      "lane": "guest",
-      "author": "Codex",
-      "title": "A shared pool with clear rules",
-      "priority": "P2",
-      "tags": [
-        "prototype",
-        "microcredit",
-        "how-it-works",
-        "guest-post"
-      ],
-      "state": "ready",
-      "ready": "2026-11-07 05:30 UTC",
-      "draft": "editorial/a-shared-pool-with-clear-rules.md",
-      "note": "Operator-requested description of the recorded test contract (Codex packet, testbed board 6702258759). Checked by the steward against contract source 1812e7d2 (depositFunds, back, grantedCredit, requestLoan/disburseLoan, _repay, withdrawal queue) and TESTNET.md at a23422ae."
     }
   ],
   "scheduled": [],
