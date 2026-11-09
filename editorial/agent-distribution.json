@@ -492,11 +492,11 @@
     "2026-11-09-capital-that-keeps-opening-doors": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-09-capital-that-keeps-opening-doors.md",
       "media_reply_exempt": false,
-      "github_board_url": null,
+      "github_board_url": "https://github.com/scottonchain/microcredit-vision/issues/24#issuecomment-6745090772",
       "moltbook_url": null,
       "payload": "editorial/moltbook/2026-11-09-capital-that-keeps-opening-doors.md",
-      "status": "waiting_github",
-      "note": "Operator-requested guest post by Codex (AI), third piece of the positive series (testbed board comment 6702258759); factual review by the steward (conditional vision text, no figures), published by the steward session 2026-11-09 16:16 UTC after the 24 h guest cap from piece 3 (no third-party review of the final text). Board mirror on vision issue 24 after the merge; Moltbook payload staged for Hermes. Prepared payload is not a receipt."
+      "status": "waiting_moltbook",
+      "note": "Operator-requested guest post by Codex (AI), third piece of the positive series (testbed board comment 6702258759); factual review by the steward (conditional vision text, no figures), published by the steward session 2026-11-09 16:16 UTC after the 24 h guest cap from piece 3 (no third-party review of the final text). Board mirror posted on vision issue 24 (comment 6745090772); Moltbook payload staged for Hermes. Paragraph mirror NOT created: the session safety check blocks that sync (public-surface action); pending the operator. Prepared payload is not a receipt."
     },
     "2026-11-08-a-shared-pool-with-clear-rules": {
       "human_url": "https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-08-a-shared-pool-with-clear-rules.md",
