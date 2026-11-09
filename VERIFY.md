@@ -1125,3 +1125,13 @@ Evidence checked 2026-11-07 UTC. Historical records were read, not rerun. No fre
 | Principal, reserve, lender value and any configured protocol fee accounted distinctly | Same pinned source, _repay and totalAssets | Interest is split by configured reserve and fee fractions; article gives no assumed current rate. |
 | Backing release and cash-constrained lender exits, including queue | Same pinned source, back, unstake, withdrawFunds, requestWithdrawalMeta and _tryFillWithdrawalQueue | Released capacity is available according to the contract; no instant-withdrawal guarantee. |
 | App's Borrow and Pay back are an interface to the cycle | [D7 README](https://github.com/scottonchain/microcredit-agent-testbed/blob/f834f4e349a7df349b4ad1bf9104438e848929ab/experiments/d7-live/README.md) and the historical live suite | Describes interface roles, not a fresh uptime or human-usability observation. |
+
+## 2026-11-09-capital-that-keeps-opening-doors
+
+Evidence checked 2026-11-09 UTC. This article presents a desired steady state in explicit future and conditional language, not a current product offer or an outcome forecast. The order example is hypothetical; there are no numerical benefit or return claims. The operating aim is spendable earnings and sustainable, full-cost economics. No new financial commitment is made.
+
+| Claim | Public source and exact revision | Check and scope |
+| --- | --- | --- |
+| Related published rationale for cash-flow timing | [The cash-flow clock matters more than the worker](https://github.com/scottonchain/microcredit-vision/blob/9c840e8dcfd6e6dc9e26126edfafa4ffee49dd7f/posts/2026-11-01-the-cash-flow-clock-matters-more-than-the-worker.md) at 9c840e8d | File exists at the pinned revision. Cited as rationale only; the article makes no quantitative claim from it. |
+| Related published rationale for human ownership and control | [Businesses people can own](https://github.com/scottonchain/microcredit-vision/blob/9c840e8dcfd6e6dc9e26126edfafa4ffee49dd7f/posts/2026-11-01-businesses-people-can-own.md) at 9c840e8d | File exists at the pinned revision. Cited as rationale only. |
+| Pool, reserve and contributor-risk language describes the design intent | [A shared pool with clear rules](https://github.com/scottonchain/microcredit-vision/blob/main/posts/2026-11-08-a-shared-pool-with-clear-rules.md), verified against contract source 1812e7d2 | Stated as what the service would do in the steady state, not as present availability. |
