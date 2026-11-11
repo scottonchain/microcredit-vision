@@ -196,18 +196,118 @@ def request(method, path, body=None):
 
 
 
-def replace_post(post_id, payload):
-    """Update a mirrored post. Paragraph refuses a replace unless the writer has read the post first and sends
-    the read document back with its changes (HTTP 409 otherwise); the read's timestamps come back as strings
-    and must go up as numbers."""
-    current = request("GET", f"/posts/{post_id}")
-    body = dict(current)
+# Structured-content types that a markdown replacement reproduces without loss. Anything else (embeds, cards,
+# buttons, callouts, unknown marks) is lost by a markdown replace, so it needs a person to inspect the post.
+LOSSLESS_NODES = {"doc", "paragraph", "text", "heading", "bulletList", "orderedList", "listItem", "blockquote",
+                  "codeBlock", "hardBreak", "horizontalRule"}
+LOSSLESS_MARKS = {"bold", "italic", "link", "code", "strike"}
+
+
+# Attributes a markdown replacement carries across, by node or mark type. Any other attribute with a non-default value
+# (a text alignment other than left, a custom class, an id, a link target) is formatting plain Markdown cannot hold.
+SUPPORTED_ATTRS = {"heading": {"level"}, "codeBlock": {"language"}, "orderedList": {"start"}, "link": {"href"}}
+
+
+# What Paragraph itself stores on a link made from Markdown (read from our own mirrored posts on 2026-11-05): a
+# replacement from Markdown regenerates exactly these, so they are not loss. Any other value is formatting a person set.
+EDITOR_DEFAULT_ATTRS = {"link": {"class": "dont-break-out", "rel": "noopener noreferrer nofollow ugc", "target": "_blank"}}
+
+
+def _default_attr(owner, key, value):
+    """An empty value, a left text alignment, or the editor's own link defaults is what a Markdown replace reproduces."""
+    return (value in (None, "", False, [], {}) or (key == "textAlign" and value == "left")
+            or EDITOR_DEFAULT_ATTRS.get(owner, {}).get(key) == value)
+
+
+def lossy_problems(structured):
+    """Why a markdown replacement of this stored document could lose content; an empty list means none found.
+    Fails closed: missing, unparseable or malformed structured content is a problem. The checks are shapes and
+    values, not just type names: the root must be a document with a list of children, a text node needs a text string
+    and no children, other nodes carry no text, `content` and `marks` must be lists, and an attribute that Markdown
+    cannot preserve counts as loss unless its value is the default."""
+    if isinstance(structured, str):
+        try:
+            structured = json.loads(structured)
+        except ValueError:
+            return ["structured content is not valid JSON"]
+    if not isinstance(structured, dict):
+        return ["no structured content to compare against"]
+    problems = []
+    if structured.get("type") != "doc":
+        problems.append("root is not a document")
+    elif not isinstance(structured.get("content"), list):
+        problems.append("malformed document content")
+
+    def check_attrs(owner, attrs):
+        if attrs is None:
+            return
+        if not isinstance(attrs, dict):
+            problems.append(f"malformed attrs on {owner}")
+            return
+        for key, value in attrs.items():
+            if key in SUPPORTED_ATTRS.get(owner, ()) or _default_attr(owner, key, value):
+                continue
+            problems.append(f"attribute {key} on {owner}")
+
+    def walk(node):
+        if not isinstance(node, dict) or not isinstance(node.get("type"), str):
+            problems.append("malformed node")
+            return
+        kind = node["type"]
+        if kind not in LOSSLESS_NODES:
+            problems.append(f"node type {kind}")
+        if kind == "text":
+            if not isinstance(node.get("text"), str):
+                problems.append("text node without a text string")
+            if node.get("content") is not None:
+                problems.append("text node with children")
+        elif "text" in node:
+            problems.append(f"text on a {kind} node")
+        check_attrs(kind, node.get("attrs"))
+        marks = node.get("marks")
+        if marks is not None and not isinstance(marks, list):
+            problems.append("malformed marks")
+        for mark in marks if isinstance(marks, list) else []:
+            if not isinstance(mark, dict) or not isinstance(mark.get("type"), str):
+                problems.append("malformed mark")
+                continue
+            if mark["type"] not in LOSSLESS_MARKS:
+                problems.append("mark " + mark["type"])
+            check_attrs(mark["type"], mark.get("attrs"))
+        content = node.get("content")
+        if content is not None and not isinstance(content, list):
+            problems.append("malformed content")
+            return
+        for child in content or []:
+            walk(child)
+
+    walk(structured)
+    return sorted(set(problems))
+
+
+def replace_post(post_id, payload, accept_lossy=()):
+    """Update a mirrored post. The plain read returns metadata only; the replace guard wants the FULL document, which
+    `?includeContent=true` returns (markdown, staticHtml, json). Read it, fail closed if it cannot be shown that a
+    markdown replacement loses nothing (unsupported blocks or marks, missing or malformed structured content; a
+    person can accept a named post with --accept-lossy POST_ID after inspecting it), then send only the fields we
+    mean to change. The read's timestamps come back as strings and must go up as numbers."""
+    current = request("GET", f"/posts/{post_id}?includeContent=true")
+    if not isinstance(current.get("markdown"), str):
+        raise SystemExit(f"{post_id}: the full document read returned no markdown; not replacing")
+    problems = lossy_problems(current.get("json"))
+    if problems and post_id not in set(accept_lossy):
+        raise SystemExit(f"{post_id}: a markdown replacement could lose content ({'; '.join(problems)}); "
+                         f"inspect the post, then rerun with --accept-lossy {post_id}")
+    body = {k: v for k, v in current.items() if k not in ("markdown", "staticHtml", "json")}
     body.update(payload)
     for key in ("publishedAt", "updatedAt"):
         value = body.get(key)
         if isinstance(value, str) and value.isdigit():
             body[key] = int(value)
+    if current.get("status") == "published":
+        body["status"] = "published"  # keep a live post live (the API documents this for edits of live posts)
     return request("PUT", f"/posts/{post_id}", body)
+
 
 def existing_post(publication_id, slug):
     """The published post with this slug, or None (a 404 is the normal answer)."""
@@ -256,13 +356,13 @@ def sync(args):
             print(f"would {'update' if slug in entries else 'create'} {slug}" + (" (newsletter)" if newsletter else ""))
         else:
             if slug in entries:
-                result = replace_post(entries[slug]["post_id"], payload)
+                result = replace_post(entries[slug]["post_id"], payload, args.accept_lossy)
             else:
                 # An interrupted create can have succeeded server side: adopt a post with this slug
                 # rather than create a second copy with a suffixed slug.
                 existing = existing_post(me["id"], slug)
                 if existing:
-                    result = replace_post(existing["id"], payload)
+                    result = replace_post(existing["id"], payload, args.accept_lossy)
                 else:
                     result = request("POST", "/posts", payload)
             post_id = result.get("id") or result.get("post", {}).get("id") or entries.get(slug, {}).get("post_id")
@@ -309,6 +409,8 @@ def main(argv=None):
     parser.add_argument("--newsletter", action="store_true")
     parser.add_argument("--newest", action="store_true", help="mirror the newest pending posts first")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--accept-lossy", action="append", default=[], metavar="POST_ID",
+                        help="allow a markdown replace of this post although unsupported blocks were found (inspect it first)")
     args = parser.parse_args(argv)
     if args.render:
         payload, _ = render(args.render, (POSTS / f"{args.render}.md").read_text(encoding="utf-8"))
